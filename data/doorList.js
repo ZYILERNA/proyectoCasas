@@ -1,63 +1,47 @@
 // data/doorList.js
+
 export const doors = [
+  // ... otros productos ...
   {
-    id: 1,
-    name: "Modelo Cyber-One",
-    category: "01 PUERTA DE SEGURIDAD INTELIGENTE",
-    image: "/images/cat-01.jpg", 
+    id: "x60-pro-smart-door",
+    name: "X60 Pro - Puerta de Seguridad V5.0",
+    category: "PUERTA DE SEGURIDAD INTELIGENTE",
+    price: "Consultar Precio", // O pon un precio si lo tienes
+    description: "La definición de seguridad del futuro. Puerta acorazada con Inteligencia Artificial, apertura y cierre automáticos, y pantalla táctil integrada de 10.1 pulgadas.",
+    
+    // IMPORTANTE: Necesitarás recortar las 3 fotitos de abajo de la imagen que enviaste
+    // y guardarlas como: x60-main.jpg, x60-back.jpg, x60-double.jpg
+    image: "/images/x60-main.jpg", 
+    gallery: [
+      "/images/x60-main.jpg",
+      "/images/x60-back.jpg",
+      "/images/x60-double.jpg"
+    ],
+
+    // Características destacadas (Tags rápidos)
+    features: ["Apertura Automática", "Reconocimiento Facial", "Pantalla 10.1\"", "App Control"],
+
+    // Especificaciones técnicas detalladas (Transcripción de la imagen)
+    specs: {
+      apertura: "Automática (Apertura y Cierre)",
+      inteligencia: "Sensores remotos + Sistema inteligente antiatrapamiento",
+      pantalla: "Táctil trasera de 10.1 pulgadas (1280x800)",
+      camara: "Mirilla 2MP, Gran Angular 120°",
+      desbloqueo: [
+        "Sensor de proximidad",
+        "Reconocimiento facial",
+        "Contraseña",
+        "Tarjeta CPU",
+        "Llave mecánica",
+        "App remota",
+        "Llave de proximidad (Opcional)"
+      ],
+      material: "Tallado en placa de aluminio",
+      estructura: "Marco alto en forma de H, Bisagras expuestas/ocultas",
+      seguridad: "Cilindro patentado nivel Ultra C",
+      energia: "Fuente continua 24V/6A + Batería de litio",
+      almacenamiento: "Nube por 3 días (cobertura en bucle)"
+    }
   },
-  {
-    id: 2,
-    name: "Residencia Premium",
-    category: "02 PUERTA DE ENTRADA DE ACERO",
-    image: "/images/cat-02.jpg",
-  },
-  {
-    id: 3,
-    name: "Bunker Style",
-    category: "03 PUERTA ACORAZADA",
-    image: "/images/cat-03.jpg",
-  },
-  {
-    id: 4,
-    name: "Cast Iron Series",
-    category: "04 PUERTA DE ALUMINIO FUNDIDO",
-    image: "/images/cat-04.jpg",
-  },
-  {
-    id: 5,
-    name: "Roble Natural",
-    category: "05 PUERTA INTERIOR DE MADERA",
-    image: "/images/cat-05.jpg",
-  },
-  {
-    id: 6,
-    name: "Sistema Ignífugo RF-60",
-    category: "06 PUERTA COMERCIAL CORTAFUEGOS",
-    image: "/images/cat-06.jpg",
-  },
-  {
-    id: 7,
-    name: "Clínica Clean",
-    category: "07 PUERTA MÉDICA",
-    image: "/images/cat-07.jpg",
-  },
-  {
-    id: 8,
-    name: "Ventana Panorámica",
-    category: "08 VENTANA DE ALUMINIO",
-    image: "/images/cat-08.jpg",
-  },
-  {
-    id: 9,
-    name: "Smart Lock V5",
-    category: "09 CERRADURA INTELIGENTE",
-    image: "/images/cat-09.jpg",
-  },
-  {
-    id: 10,
-    name: "Kit de Manillas Inox",
-    category: "10 ACCESORIOS DE FERRETERÍA",
-    image: "/images/cat-10.jpg",
-  },
+  // ...
 ];
