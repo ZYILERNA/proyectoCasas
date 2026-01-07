@@ -195,7 +195,7 @@ const PRODUCTOS_ACORAZADA = MODELOS_ACORAZADA.map((nombre, index) => ({
   specs: SPECS_SEGURIDAD_MECANICA,
   features: FEATURES_SEGURIDAD_MECANICA,
   unlock: UNLOCK_MECANICO,
-  img: `/images/door-${nombre.toLowerCase().replace(/\s+/g, '-')}.jpg`
+  img: `/images/ACORAZADA/door-${nombre.toLowerCase().replace(/\s+/g, '-')}.jpg`
 }));
 
 // Generador ALUMINIO
@@ -207,7 +207,7 @@ const PRODUCTOS_ALUMINIO = MODELOS_ALUMINIO.map((nombre, index) => ({
   specs: SPECS_ALUMINIO,
   features: FEATURES_ALUMINIO,
   unlock: UNLOCK_MECANICO,
-  img: `/images/door-${nombre.toLowerCase().replace(/\s+/g, '-')}.jpg`
+  img: `/images/ALUMINIO/door-${nombre.toLowerCase().replace(/\s+/g, '-')}.jpg`
 }));
 
 // --- GENERADORES MADERA ACÚSTICA ---
@@ -221,7 +221,7 @@ const PRODUCTOS_MADERA_J = MODELOS_MADERA_J.map((nombre, index) => ({
   specs: SPECS_MADERA,
   features: FEATURES_MADERA_J,
   unlock: UNLOCK_MADERA,
-  img: `/images/door-${nombre.toLowerCase().replace(/\s+/g, '-')}.jpg`
+  img: `/images/MADERAACÚSTICA/door-${nombre.toLowerCase().replace(/\s+/g, '-')}.jpg`
 }));
 
 // Serie D
