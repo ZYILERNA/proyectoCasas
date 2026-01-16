@@ -83,9 +83,13 @@ export default function Header() {
                   </h3>
                   <ul className="space-y-3">
                     <MenuItem href="/puertas" text="Puertas de Seguridad" />
-                    {/* AQUÍ AGREGAMOS LA NUEVA CATEGORÍA */}
-                    <MenuItem href="/ventanas" text="Ventanas y Cerramientos" />
+                    <MenuItem href="/ventanas" text="Ventanas" />
+                    
+                    {/* --- NUEVO ITEM AQUÍ --- */}
+                    <MenuItem href="/cerraduras" text="Cerraduras Inteligentes" />
+                    
                     <li className="w-full h-px bg-white/10 my-2"></li> {/* Separador */}
+                    
                     <MenuItem href="/sofas" text="Sofás" />
                     <MenuItem href="/mesas-centro" text="Mesas de Centro" />
                     <MenuItem href="/mesas-comedor" text="Mesas de Comedor" />
@@ -143,7 +147,7 @@ export default function Header() {
             >
               Puertas
             </Link>
-            {/* AGREGADO EN MÓVIL TAMBIÉN */}
+            
             <Link 
               href="/ventanas" 
               onClick={closeMobileMenu}
@@ -151,6 +155,16 @@ export default function Header() {
             >
               Ventanas
             </Link>
+
+            {/* --- NUEVO ITEM MOVIL AQUÍ --- */}
+            <Link 
+              href="/cerraduras" 
+              onClick={closeMobileMenu}
+              className="text-2xl font-bold uppercase tracking-widest text-white hover:text-[#00C2FF]"
+            >
+              Cerraduras
+            </Link>
+
             <Link 
               href="/empresa" 
               onClick={closeMobileMenu}

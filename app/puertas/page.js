@@ -15,7 +15,8 @@ const CATEGORIAS = [
   "PUERTA ACÚSTICA DE MADERA",
   "PUERTA DE PVC",
   "PUERTAS CORREDIZAS Y ABATIBLES",
-  "PUERTA COMERCIAL CORTAFUEGO"
+  "PUERTA COMERCIAL CORTAFUEGO",
+  "PUERTA MÉDICA"
 ];
 
 // --- 2. DATOS DE COLORES ---
@@ -160,6 +161,17 @@ const MODELOS_CORTAFUEGOS = [
   "GD-01", "GD-02", "GD-03", "TD-01", "TD-02", "TD-03", "GF026"
 ];
 
+const MODELOS_MEDICAS = [
+  "PUERTA DE SALA1",                 // La azul
+  "PUERTA DE SALA2",            // La madera/beige
+  "PUERTA DE SALA3",
+  "PUERTA DE SALA4",
+  "PUERTA DE SALA5",
+  "PUERTA CORTAFUEGO AISLANTE1",
+  "PUERTA CORTAFUEGO AISLANTE2",
+  "PUERTA AUTOMÁTICA PLANA, HERMÉTICA Y ABATIBLE",
+  "PUERTAS AUTOMÁTICAS HERMÉTICAS"
+];
 
 // --- 5. ESPECIFICACIONES Y CARACTERÍSTICAS ---
 
@@ -282,6 +294,17 @@ const FEATURES_CORTAFUEGOS = [
 ];
 
 const UNLOCK_CORTAFUEGOS = "Barra Antipánico / Manilla Cortafuego";
+
+const SPECS_MEDICAS = [
+  { label: "Material", value: "Panel HPL / Resina / Acero Inox" },
+  { label: "Propiedades", value: "Antibacteriano, Hermético" },
+  { label: "Uso", value: "Hospitales, Laboratorios, Clínicas" },
+  { label: "Certificación", value: "Estándar Hospitalario WONLY" },
+];
+
+const FEATURES_MEDICAS = [
+
+];
 
 // --- 6. GENERACIÓN DE DATOS ---
 
@@ -452,8 +475,20 @@ const PRODUCTOS_CORTAFUEGOS = MODELOS_CORTAFUEGOS.map((nombre, index) => {
     unlock: UNLOCK_CORTAFUEGOS,
     colors: COLORS_CORTAFUEGOS,
     // La ruta debe empezar con /images/...
-    img: `/images/CORTAFUEGOS/door-${nombre}.jpg`
+    img: `/images/CORTAFUEGO/door-${nombre}.jpg`
   };
+});
+
+// --- GENERADOR DE PRODUCTOS (Con lógica de imágenes) ---
+const PRODUCTOS_MEDICAS = MODELOS_MEDICAS.map((nombre, index) => {
+  return {
+    id: `medica-${index}`,
+    name: nombre,
+    category: "PUERTA MÉDICA",
+    specs: SPECS_MEDICAS,
+    features: FEATURES_MEDICAS,
+    img: `/images/MEDICA/door-${nombre}.jpg`
+  }; 
 });
 
 const DATA_PRODUCTOS = [
@@ -466,7 +501,8 @@ const DATA_PRODUCTOS = [
   ...PRODUCTOS_MADERA_S,
   ...PRODUCTOS_PVC,
   ...PRODUCTOS_CORREDIZAS,
-  ...PRODUCTOS_CORTAFUEGOS
+  ...PRODUCTOS_CORTAFUEGOS,
+  ...PRODUCTOS_MEDICAS
 ];
 
 
