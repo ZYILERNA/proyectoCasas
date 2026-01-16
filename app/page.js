@@ -1,7 +1,6 @@
-// app/page.js
 import Link from 'next/link';
-// SOLUCIÓN: Renombramos 'Home' a 'HomeIcon' en la importación para evitar el conflicto
-import { ShieldCheck, Lock, Home as HomeIcon, ChevronRight } from 'lucide-react'; 
+// Añadimos iconos nuevos para la sección de ventanas (Wind, Maximize, Sun)
+import { ShieldCheck, Lock, Home as HomeIcon, ChevronRight, Wind, Maximize2, Sun } from 'lucide-react'; 
 
 export default function Home() {
   return (
@@ -39,7 +38,7 @@ export default function Home() {
           
           <div className="flex gap-4">
             <Link 
-              href="/puertas" 
+              href="/puertas?category=PUERTA DE SEGURIDAD IA" 
               className="bg-[#00C2FF] text-black px-8 py-4 font-bold uppercase tracking-widest hover:bg-white transition duration-300"
             >
               Ver Puertas
@@ -66,7 +65,7 @@ export default function Home() {
               <h2 className="text-[#00C2FF] font-bold tracking-widest uppercase mb-2">Nuestro Enfoque Principal</h2>
               <h3 className="text-4xl md:text-5xl font-bold text-white">SEGURIDAD INTELIGENTE</h3>
             </div>
-            <Link href="/puertas" className="group flex items-center gap-2 text-gray-400 hover:text-white transition">
+            <Link href="/puertas?category=TODAS" className="group flex items-center gap-2 text-gray-400 hover:text-white transition">
               Ver catálogo completo <ChevronRight className="group-hover:translate-x-1 transition-transform"/>
             </Link>
           </div>
@@ -74,9 +73,9 @@ export default function Home() {
           {/* GRID DE CATEGORÍAS DE PUERTAS */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
-            {/* CARD 1: SMART (Destacada) */}
-            <Link href="/puertas?cat=smart" className="group relative h-[500px] overflow-hidden bg-gray-900 border border-white/10 hover:border-[#00C2FF] transition-colors duration-500">
-              <img src="/images/puerta-smart.jpg" alt="Smart Door" className="w-full h-full object-cover opacity-70 group-hover:scale-110 transition-transform duration-700"/>
+            {/* CARD 1: SMART */}
+            <Link href="/puertas?category=PUERTA DE SEGURIDAD IA" className="group relative h-[500px] overflow-hidden bg-gray-900 border border-white/10 hover:border-[#00C2FF] transition-colors duration-500">
+              <img src="/images/AI/door-x60-pro.jpg" alt="Smart Door" className="w-full h-full object-cover opacity-70 group-hover:scale-110 transition-transform duration-700"/>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
               <div className="absolute bottom-0 left-0 p-8">
                 <ShieldCheck className="text-[#00C2FF] w-10 h-10 mb-4" />
@@ -86,8 +85,8 @@ export default function Home() {
             </Link>
 
             {/* CARD 2: ACORAZADAS */}
-            <Link href="/puertas?cat=acorazada" className="group relative h-[500px] overflow-hidden bg-gray-900 border border-white/10 hover:border-white transition-colors">
-              <img src="/images/cat-03.jpg" alt="Acorazada" className="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700"/>
+            <Link href="/puertas?category=PUERTA DE SEGURIDAD ACORAZADA" className="group relative h-[500px] overflow-hidden bg-gray-900 border border-white/10 hover:border-white transition-colors">
+              <img src="/images/ACORAZADA/door-wl001.jpg" alt="Acorazada" className="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700"/>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
               <div className="absolute bottom-0 left-0 p-8">
                 <Lock className="text-white w-10 h-10 mb-4" />
@@ -96,8 +95,8 @@ export default function Home() {
               </div>
             </Link>
 
-            {/* CARD 3: TÉCNICAS / OTRAS */}
-            <Link href="/puertas" className="group relative h-[500px] overflow-hidden bg-gray-900 border border-white/10 hover:border-white transition-colors">
+            {/* CARD 3: COLECCIONES / TODAS */}
+            <Link href="/puertas?category=TODAS" className="group relative h-[500px] overflow-hidden bg-gray-900 border border-white/10 hover:border-white transition-colors">
               <div className="absolute inset-0 flex flex-col justify-center items-center bg-[#1a1a1a] p-8 text-center group-hover:bg-[#222] transition-colors">
                 <div className="border border-white/20 rounded-full p-6 mb-6 group-hover:border-[#00C2FF] transition-colors">
                    <span className="text-3xl font-light text-white">+10</span>
@@ -112,9 +111,76 @@ export default function Home() {
         </div>
       </section>
 
+      {/* =========================================
+          3. NUEVA SECCIÓN: VENTANAS Y CERRAMIENTOS
+          (Diseño ancho, minimalista y limpio)
+         ========================================= */}
+      <section className="py-24 bg-zinc-900 relative overflow-hidden">
+        <div className="container mx-auto px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                {/* LADO IZQUIERDO: IMAGEN GRANDE */}
+                <div className="relative group">
+                    <div className="aspect-[16/10] overflow-hidden border border-white/10">
+                         {/* Asegúrate de tener esta imagen o usa la que subiste renombrada */}
+                        <img 
+                            src="/images/windows-view.jpg" 
+                            alt="Ventanas Panorámicas WONLY" 
+                            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                        />
+                    </div>
+                    {/* Detalle flotante técnico */}
+                    <div className="absolute -bottom-6 -right-6 bg-black border border-[#00C2FF] p-6 hidden md:block z-10">
+                        <p className="text-[#00C2FF] text-3xl font-bold">50<span className="text-sm align-top">mm</span></p>
+                        <p className="text-xs text-gray-400 uppercase tracking-widest">Grosor de Hoja</p>
+                    </div>
+                </div>
+
+                {/* LADO DERECHO: TEXTO TÉCNICO */}
+                <div className="lg:pl-10">
+                    <span className="text-[#00C2FF] font-bold tracking-[0.2em] uppercase text-xs mb-4 block">
+                        Nueva Colección 2025
+                    </span>
+                    <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-none">
+                        VISIÓN <br/>
+                        <span className="text-gray-500">INFINITA</span>
+                    </h2>
+                    <p className="text-gray-300 text-lg mb-8 font-light">
+                        Rompe la barrera entre tu hogar y el mundo. Nuestras ventanas de aluminio combinan un <strong>diseño minimalista</strong> con la revolucionaria tecnología de <strong>sellado de doble escalón</strong> para un aislamiento acústico y térmico absoluto.
+                    </p>
+
+                    {/* Features Icons */}
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10 border-t border-white/10 pt-8">
+                        <div className="flex flex-col gap-2">
+                            <Wind className="text-[#00C2FF] w-6 h-6" />
+                            <h4 className="font-bold uppercase text-sm">Hermético</h4>
+                            <p className="text-xs text-gray-500">A prueba de humo y polvo.</p>
+                        </div>
+                        <div className="flex flex-col gap-2">
+                            <Maximize2 className="text-[#00C2FF] w-6 h-6" />
+                            <h4 className="font-bold uppercase text-sm">Panorámico</h4>
+                            <p className="text-xs text-gray-500">Marcos reducidos, más luz.</p>
+                        </div>
+                        <div className="flex flex-col gap-2">
+                            <Sun className="text-[#00C2FF] w-6 h-6" />
+                            <h4 className="font-bold uppercase text-sm">Térmico</h4>
+                            <p className="text-xs text-gray-500">Eficiencia energética total.</p>
+                        </div>
+                    </div>
+
+                    <Link 
+                        href="/ventanas" 
+                        className="inline-flex items-center gap-3 text-white font-bold uppercase tracking-widest border-b border-white pb-2 hover:text-[#00C2FF] hover:border-[#00C2FF] transition-all"
+                    >
+                        Ver Modelos <ChevronRight size={18} />
+                    </Link>
+                </div>
+            </div>
+        </div>
+      </section>
 
       {/* =========================================
-          3. SECCIÓN SECUNDARIA: SOFÁS Y HOGAR
+          4. SECCIÓN SECUNDARIA: SOFÁS Y HOGAR
          ========================================= */}
       <section className="py-24 bg-black relative overflow-hidden">
         {/* Decoración de fondo */}
@@ -138,7 +204,6 @@ export default function Home() {
               <div className="flex flex-col gap-4">
                 <Link href="/sofas" className="flex items-center gap-4 group">
                   <div className="w-12 h-12 bg-[#1a1a1a] flex items-center justify-center text-white group-hover:bg-[#00C2FF] group-hover:text-black transition-colors">
-                    {/* USAMOS EL ICONO RENOMBRADO AQUÍ */}
                     <HomeIcon size={20}/>
                   </div>
                   <div>
@@ -180,7 +245,7 @@ export default function Home() {
       </section>
 
       {/* =========================================
-          4. BANNER FINAL DE CONTACTO
+          5. BANNER FINAL DE CONTACTO
          ========================================= */}
       <section className="py-20 bg-[#00C2FF]">
         <div className="container mx-auto px-6 text-center">
