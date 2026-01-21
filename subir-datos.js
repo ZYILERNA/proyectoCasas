@@ -1,14 +1,13 @@
 "use client";
 
-import { useState, useMemo, useEffect, Suspense } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion'; 
 import { X, ChevronRight, ScanFace, ShieldCheck, VolumeX, Sparkles, MoveHorizontal, Palette, Settings, Flame, Zap, Filter, Loader2 } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
 
-// --- 1. CONFIGURACIÓN VISUAL Y CATEGORÍAS ---
-
+// --- 1. CONFIGURACIÓN (CONSTANTES ESTÁTICAS) ---
 const CATEGORIAS = [
   "PUERTA DE SEGURIDAD IA",
   "PUERTA DE ACERO REFORZADO",
@@ -66,7 +65,7 @@ const VIDRIOS_CORREDIZAS = [
   { name: "VIDRIO-20", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-20.jpg" },
 ];
 
-// --- 2. COMPONENTES UI ---
+// --- 2. COMPONENTES UI AUXILIARES ---
 
 const FilterButton = ({ label, active, onClick }) => (
   <button
@@ -77,6 +76,7 @@ const FilterButton = ({ label, active, onClick }) => (
         : 'bg-white text-gray-500 border-gray-100 hover:bg-gray-50 hover:text-black hover:pl-6'
       }`}
   >
+    {/* Fondo animado para el botón activo */}
     {active && (
       <motion.div 
         layoutId="activeFilter"
@@ -92,7 +92,6 @@ const FilterButton = ({ label, active, onClick }) => (
   </button>
 );
 
-// --- MODAL CON ANIMACIONES DE FRAMER MOTION ---
 const ProductModal = ({ product, onClose }) => {
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -115,7 +114,7 @@ const ProductModal = ({ product, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-[100] flex justify-end">
-      {/* Backdrop con animación suave */}
+      {/* BACKDROP ANIMADO */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -124,7 +123,7 @@ const ProductModal = ({ product, onClose }) => {
         onClick={onClose}
       />
 
-      {/* Panel deslizante */}
+      {/* PANEL DEL MODAL ANIMADO */}
       <motion.div 
         initial={{ x: "100%" }}
         animate={{ x: 0 }}
@@ -134,7 +133,6 @@ const ProductModal = ({ product, onClose }) => {
       >
         <button onClick={onClose} className="absolute top-4 left-4 z-20 p-2 bg-white/80 backdrop-blur rounded-full hover:bg-black hover:text-white transition"><X size={20} /></button>
 
-        {/* Imagen en Modal */}
         <div className="w-full md:w-1/2 bg-[#F8F8F8] relative min-h-[300px] md:h-full flex items-center justify-center p-10">
            <motion.div 
              initial={{ scale: 0.9, opacity: 0 }}
@@ -146,14 +144,13 @@ const ProductModal = ({ product, onClose }) => {
            </motion.div>
         </div>
 
-        {/* Contenido en Modal */}
         <div className="w-full md:w-1/2 p-8 md:p-12 overflow-y-auto bg-white scrollbar-hide">
             <span className={`text-[10px] font-bold uppercase tracking-widest mb-2 block ${accentColor}`}>{product.category}</span>
             <h2 className="text-3xl font-bold mb-4 text-gray-900 tracking-tight">{product.name}</h2>
             <p className="text-sm text-gray-600 mb-8 leading-relaxed">{product.description}</p>
 
             <div className="space-y-8">
-              {/* Características Animadas */}
+              {/* Características */}
               <div>
                 <h3 className="text-xs font-bold uppercase text-gray-900 mb-3 flex items-center gap-2">
                   <Icon size={14} /> Características
@@ -173,7 +170,7 @@ const ProductModal = ({ product, onClose }) => {
                 </ul>
               </div>
 
-              {/* Colores */}
+              {/* Carta de Colores */}
               {product.colors && (
                 <div className="bg-gray-50 p-6 rounded-xl border border-gray-100">
                     <h3 className={`text-gray-900 text-xs font-bold uppercase mb-4 border-l-4 ${borderColor} pl-3 flex items-center gap-2`}>
@@ -194,7 +191,7 @@ const ProductModal = ({ product, onClose }) => {
                 </div>
               )}
 
-              {/* Specs */}
+              {/* Especificaciones Técnicas */}
               <div className="bg-gray-50 p-5 rounded border border-gray-100">
                  <h3 className="text-xs font-bold uppercase text-gray-400 mb-3">Especificaciones</h3>
                  <div className="grid grid-cols-1 gap-y-2">
@@ -207,38 +204,44 @@ const ProductModal = ({ product, onClose }) => {
                  </div>
               </div>
 
-              {/* Accesorios (Solo Corredizas) */}
+              {/* Sistema de Acceso */}
+              <div className="">
+                 <p className="text-[10px] text-gray-400 uppercase tracking-widest mb-2">Sistema de Acceso</p>
+                 <p className="text-xs font-medium text-gray-800 border inline-block px-2 py-1 rounded bg-gray-50">{product.unlock}</p>
+              </div>
+
+              {/* Accesorios (Corredizas) */}
               {product.category === "PUERTAS CORREDIZAS Y ABATIBLES" && (
                 <div className="pt-6 mt-6 border-t border-gray-100">
                     <h3 className="text-xs font-bold uppercase text-indigo-600 mb-4 flex items-center gap-2">
-                        <Settings size={14} /> Accesorios
+                        <Settings size={14} /> Accesorios Compatibles
                     </h3>
                     <div className="grid grid-cols-2 gap-3">
                         {ACCESORIOS_CORREDIZAS.map((item, idx) => (
-                            <div key={idx} className="bg-gray-50 p-3 rounded border border-gray-100 flex flex-col items-center text-center">
-                                <div className="h-20 w-full relative mb-2 bg-white rounded-sm">
-                                    <Image src={item.img} alt={item.name} fill className="object-contain p-2" onError={(e) => { e.target.style.display='none'; }} />
+                            <div key={idx} className="bg-gray-50 p-3 rounded border border-gray-100 flex flex-col items-center text-center hover:border-indigo-200 transition-colors">
+                                <div className="h-24 w-full flex items-center justify-center mb-2 bg-white rounded-sm">
+                                    <Image src={item.img} alt={item.name} width={80} height={80} className="object-contain max-h-full" onError={(e) => { e.target.style.display='none'; }} />
                                 </div>
-                                <span className="text-[9px] font-bold text-gray-800 leading-tight">{item.name}</span>
+                                <span className="text-[10px] font-bold text-gray-800 leading-tight">{item.name}</span>
                             </div>
                         ))}
                     </div>
                 </div>
               )}
-
-              {/* Vidrios (Solo Corredizas) */}
+              
+              {/* Vidrios (Corredizas) */}
               {product.category === "PUERTAS CORREDIZAS Y ABATIBLES" && (
                 <div className="pt-6 mt-6 border-t border-gray-100">
                     <h3 className="text-xs font-bold uppercase text-indigo-600 mb-4 flex items-center gap-2">
-                        <Settings size={14} /> Vidrios
+                        <Settings size={14} /> Vidrios De Uso Interior
                     </h3>
                     <div className="grid grid-cols-2 gap-3">
                         {VIDRIOS_CORREDIZAS.map((item, idx) => (
-                            <div key={idx} className="bg-gray-50 p-3 rounded border border-gray-100 flex flex-col items-center text-center">
-                                <div className="h-20 w-full relative mb-2 bg-gray-200 rounded-sm">
-                                    <Image src={item.img} alt={item.name} fill className="object-cover" onError={(e) => { e.target.style.display='none'; }} />
+                            <div key={idx} className="bg-gray-50 p-3 rounded border border-gray-100 flex flex-col items-center text-center hover:border-indigo-200 transition-colors">
+                                <div className="h-24 w-full flex items-center justify-center mb-2 relative rounded-sm overflow-hidden bg-gray-50">
+                                  <Image src={item.img} alt={item.name} fill className="object-cover w-full h-full" onError={(e) => { e.target.style.display='none'; }} />
                                 </div>
-                                <span className="text-[9px] font-bold text-gray-800 leading-tight">{item.name}</span>
+                                <span className="text-[10px] font-bold text-gray-800 leading-tight">{item.name}</span>
                             </div>
                         ))}
                     </div>
@@ -251,13 +254,8 @@ const ProductModal = ({ product, onClose }) => {
   );
 };
 
-// --- PRODUCT CARD (ESTILO VISUAL SOLICITADO + ANIMACIONES) ---
+// --- PRODUCT CARD ACTUALIZADO (Con borde y padding) ---
 const ProductCard = ({ product, onClick }) => {
-  const shortCategory = product.category
-    .replace("PUERTA DE ", "")
-    .replace("PUERTA ", "")
-    .replace("SEGURIDAD ", "");
-  
   let highlightClass = "text-gray-400";
   if (product.category.includes("IA")) highlightClass = "text-[#00C2FF]";
   else if (product.category.includes("MADERA")) highlightClass = "text-[#8D6E63]";
@@ -275,64 +273,64 @@ const ProductCard = ({ product, onClick }) => {
       onClick={onClick} 
       className="group cursor-pointer flex flex-col h-full"
     >
-      {/* IMAGEN FLOTANTE CON PADDING Y OVERLAY (Estilo page (1).js) */}
-      <div className="relative aspect-[3/5] bg-[#FCFCFC] mb-4 overflow-hidden border border-transparent group-hover:border-gray-100 transition-all rounded-sm">
-        <Image 
-          src={product.img} 
-          alt={product.name} 
-          fill 
-          className="object-contain p-6 transition-transform duration-700 group-hover:scale-110 mix-blend-multiply" 
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
-        
-        {/* Botón flotante al hacer hover */}
-        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 flex items-end justify-center pb-6">
-           <span className="bg-white text-black text-[9px] font-bold uppercase px-3 py-2 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 shadow-sm tracking-widest">
-             Ver Detalles
-           </span>
+      {/* CAMBIOS AQUÍ:
+          1. Se agrego 'p-6' al contenedor principal (el cuadro gris) para dar el "borde" interno.
+          2. Se añadió un div interno relativo.
+          3. Se cambio 'object-cover' por 'object-contain' en la imagen para que no se recorte.
+      */}
+      <div className="relative aspect-[3/5] w-full overflow-hidden bg-[#F5F5F7] rounded-xl mb-4 border border-transparent group-hover:border-gray-200 transition-all p-6">
+        <div className="relative w-full h-full">
+            <Image 
+            src={product.img} 
+            alt={product.name} 
+            fill 
+            className="object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-700 ease-in-out"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
         </div>
       </div>
-      
-      {/* TEXTO (Alineación dinámica centro -> izquierda) */}
-      <div className="text-center group-hover:text-left transition-all">
-        <h4 className={`font-bold text-base text-gray-900 transition-colors uppercase ${
-          product.category.includes("MADERA") ? "group-hover:text-[#8D6E63]" : 
-          product.category.includes("PVC") ? "group-hover:text-teal-600" :
-          product.category.includes("CORREDIZAS") ? "group-hover:text-indigo-600" :
-          "group-hover:text-[#00C2FF]"}`}>{product.name}</h4>
-        <p className={`text-[9px] uppercase tracking-widest mt-1 ${product.category.includes("IA") ? "text-[#00C2FF] font-semibold" : highlightClass}`}>
-          {shortCategory}
+
+      <div className="relative z-10 flex-1 flex flex-col">
+        <span className={`text-[10px] font-bold uppercase tracking-widest mb-1 ${highlightClass}`}>
+          {product.category.split(" ")[0]} 
+        </span>
+        <h3 className="text-lg font-bold text-gray-900 group-hover:text-black transition-colors mb-1 leading-tight">
+          {product.name}
+        </h3>
+        <p className="text-xs text-gray-500 line-clamp-2 leading-relaxed mb-4 flex-1">
+          {product.description}
         </p>
+        
+        <div className="flex items-center text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-transparent group-hover:border-black self-start transition-all pb-0.5">
+          Ver Detalles <ChevronRight size={12} className="ml-1" />
+        </div>
       </div>
     </motion.div>
   );
 };
 
-// --- PÁGINA PRINCIPAL (LÓGICA SUPABASE) ---
-function PuertasContent() {
+// --- 3. PÁGINA PRINCIPAL UNIFICADA ---
+
+export default function ProductsPage() {
   const searchParams = useSearchParams();
-  const [activeCategory, setActiveCategory] = useState("TODAS");
-  const [products, setProducts] = useState([]);
+  const initialCategory = searchParams.get('category');
+  
+  // ESTADOS PRINCIPALES
+  const [activeCategory, setActiveCategory] = useState(initialCategory || "TODOS");
+  const [products, setProducts] = useState([]); // PRODUCTOS DE SUPABASE
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState("");
 
-  // Inicializar categoría desde URL
-  useEffect(() => {
-    const categoryFromUrl = searchParams.get('category');
-    if (categoryFromUrl) {
-      setActiveCategory(categoryFromUrl);
-    }
-  }, [searchParams]);
-
-  // CARGAR DATOS DE SUPABASE
+  // 1. EFECTO: CARGAR DATOS DE SUPABASE
   useEffect(() => {
     async function fetchProducts() {
       setLoading(true);
+      
       let query = supabase.from('products').select('*');
       
-      if (activeCategory !== "TODAS") {
+      if (activeCategory !== "TODOS") {
         query = query.eq('category', activeCategory);
       }
       
@@ -349,9 +347,10 @@ function PuertasContent() {
     fetchProducts();
   }, [activeCategory]);
 
-  // FILTRADO LOCAL (BUSCADOR)
+  // 2. FILTRO LOCAL (BUSCADOR)
   const displayProducts = useMemo(() => {
     if (searchTerm.trim() === "") return products;
+    
     const term = searchTerm.toLowerCase();
     return products.filter(p => 
       p.name.toLowerCase().includes(term) || 
@@ -360,136 +359,149 @@ function PuertasContent() {
   }, [products, searchTerm]);
 
   return (
-    <main className="bg-white min-h-screen text-black pt-28 pb-20 font-sans">
+    <div className="min-h-screen bg-white font-sans text-gray-900">
       
-      {/* HEADER */}
-      <div className="container mx-auto px-6 mb-16 text-center">
-         <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-bold uppercase tracking-tighter text-black mb-6"
-         >
-            Wonly Collection
-         </motion.h1>
-         <motion.div 
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ delay: 0.2 }}
-            className="w-px h-12 bg-gray-200 mx-auto mb-6"
-         />
-         <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="text-gray-500 max-w-lg mx-auto text-sm font-light leading-relaxed"
-         >
-           Catálogo completo Wonly. Tecnología IA, resistencia extrema, lujo en aluminio, colección acústica de madera y la nueva línea vanguardista en PVC.
-         </motion.p>
+      {/* HEADER DE LA SECCIÓN */}
+      <div className="bg-black text-white pt-32 pb-16 px-6">
+        <div className="max-w-[1400px] mx-auto">
+          <motion.h1 
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            className="text-4xl md:text-6xl font-bold mb-4 tracking-tighter"
+          >
+            Catálogo WONLY
+          </motion.h1>
+          <p className="text-gray-400 max-w-xl text-lg font-light">
+            Innovación en seguridad y diseño arquitectónico.
+          </p>
+        </div>
       </div>
 
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col lg:flex-row gap-12">
-          
-          {/* SIDEBAR (Escritorio) */}
-          <aside className="hidden lg:block w-64 flex-shrink-0 sticky top-32 h-fit">
-             {/* Buscador */}
-             <div className="relative group mb-8">
+      <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row min-h-screen relative">
+        
+        {/* --- SIDEBAR FILTROS --- */}
+        <aside className="w-full md:w-64 flex-shrink-0 border-r border-gray-100 bg-white z-20">
+          <div className="sticky top-20 p-6 space-y-8">
+            
+            {/* Buscador */}
+            <div className="relative group">
               <input 
                 type="text" 
                 placeholder="Buscar modelo..." 
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full bg-[#F9F9F9] border-none rounded-sm py-3 pl-10 pr-4 text-xs font-bold uppercase tracking-wider focus:ring-1 focus:ring-black transition-all outline-none"
+                className="w-full bg-[#F5F5F7] border-none rounded-lg py-3 pl-10 pr-4 text-xs font-medium focus:ring-2 focus:ring-black/5 transition-all outline-none"
               />
               <Sparkles className="absolute left-3 top-3 text-gray-400 group-focus-within:text-black transition-colors" size={14} />
             </div>
 
-             <div className="mb-6 pb-2 border-b border-gray-100">
-               <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Categorías</span>
-             </div>
-             <div className="flex flex-col gap-1">
-                <FilterButton label="Ver Todo" active={activeCategory === "TODAS"} onClick={() => setActiveCategory("TODAS")} />
-                {CATEGORIAS.map((cat) => (
-                  <FilterButton key={cat} label={cat} active={activeCategory === cat} onClick={() => setActiveCategory(cat)} />
-                ))}
-             </div>
-          </aside>
-
-          {/* GRID PRODUCTOS */}
-          <section className="flex-grow">
-            <div className="flex justify-between items-center mb-8 pb-4 border-b border-gray-100">
-               <span className="text-xs font-bold uppercase tracking-widest text-gray-900">
-                 {activeCategory === "TODAS" ? "Catálogo Completo" : activeCategory} <span className="text-gray-400 ml-2">({displayProducts.length})</span>
-               </span>
-               <button onClick={() => setIsMobileMenuOpen(true)} className="lg:hidden flex items-center gap-2 text-[10px] font-bold uppercase bg-black text-white px-3 py-2"><Filter size={12} /> Filtros</button>
+            {/* Lista Categorías Desktop */}
+            <div className="hidden md:block space-y-1">
+              <h3 className="text-[10px] font-bold uppercase text-gray-400 mb-4 tracking-widest px-4">Categorías</h3>
+              <FilterButton 
+                label="Ver Todo" 
+                active={activeCategory === "TODOS"} 
+                onClick={() => setActiveCategory("TODOS")} 
+              />
+              {CATEGORIAS.map((cat) => (
+                <FilterButton 
+                  key={cat} 
+                  label={cat.replace("PUERTA ", "").replace("DE ", "")} 
+                  active={activeCategory === cat} 
+                  onClick={() => setActiveCategory(cat)} 
+                />
+              ))}
             </div>
 
-            {loading ? (
-                <div className="flex h-64 w-full flex-col items-center justify-center text-gray-400 gap-3">
-                    <Loader2 className="animate-spin" size={32} />
-                    <span className="text-xs tracking-widest uppercase">Cargando colección...</span>
-                </div>
-            ) : (
-                <motion.div 
-                    layout 
-                    className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-12"
+            {/* Filtros Móvil */}
+            <div className="md:hidden">
+                <button 
+                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                  className="flex items-center justify-between w-full bg-black text-white p-3 rounded text-xs font-bold uppercase"
                 >
-                    <AnimatePresence mode='popLayout'>
-                        {displayProducts.map((p) => (
-                            <ProductCard key={p.id} product={p} onClick={() => setSelectedProduct(p)} />
-                        ))}
-                    </AnimatePresence>
-                </motion.div>
-            )}
+                  <span className="flex items-center gap-2"><Filter size={14}/> Filtrar por categoría</span>
+                  <ChevronRight className={`transform transition ${isMobileMenuOpen ? 'rotate-90' : ''}`} size={14}/>
+                </button>
+                
+                <AnimatePresence>
+                  {isMobileMenuOpen && (
+                    <motion.div 
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="overflow-hidden mt-2 border rounded-lg"
+                    >
+                       <FilterButton label="Ver Todo" active={activeCategory === "TODOS"} onClick={() => {setActiveCategory("TODOS"); setIsMobileMenuOpen(false)}} />
+                       {CATEGORIAS.map((cat) => (
+                          <FilterButton 
+                            key={cat} 
+                            label={cat.replace("PUERTA ", "")} 
+                            active={activeCategory === cat} 
+                            onClick={() => {setActiveCategory(cat); setIsMobileMenuOpen(false)}} 
+                          />
+                       ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+            </div>
+          </div>
+        </aside>
 
-            {!loading && displayProducts.length === 0 && (
-                <div className="py-24 text-center text-gray-300 text-sm uppercase">
-                    Sin resultados.
-                    {searchTerm && <button onClick={() => setSearchTerm("")} className="block mx-auto mt-2 underline text-black">Limpiar búsqueda</button>}
-                </div>
-            )}
-          </section>
-        </div>
+        {/* --- GRID DE PRODUCTOS --- */}
+        <main className="flex-1 p-6 md:p-12 bg-white">
+          <div className="mb-6 flex justify-between items-end">
+             <div>
+               <h2 className="text-2xl font-bold tracking-tight">{activeCategory === "TODOS" ? "Todos los Productos" : activeCategory}</h2>
+               <p className="text-xs text-gray-400 mt-1">
+                 {loading ? "Cargando..." : `${displayProducts.length} modelos disponibles`}
+               </p>
+             </div>
+          </div>
+
+          {loading ? (
+             <div className="flex h-64 w-full flex-col items-center justify-center text-gray-400 gap-3">
+                <Loader2 className="animate-spin" size={32} />
+                <span className="text-xs tracking-widest uppercase">Cargando catálogo...</span>
+             </div>
+          ) : (
+            <motion.div 
+              layout 
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-12"
+            >
+              <AnimatePresence mode='popLayout'>
+                {displayProducts.map((product) => (
+                  <ProductCard 
+                    key={product.id} 
+                    product={product} 
+                    onClick={() => setSelectedProduct(product)} 
+                  />
+                ))}
+              </AnimatePresence>
+            </motion.div>
+          )}
+
+          {!loading && displayProducts.length === 0 && (
+            <div className="py-20 text-center text-gray-400">
+              <p>No se encontraron productos.</p>
+              {searchTerm && (
+                <button onClick={() => setSearchTerm("")} className="mt-4 text-xs font-bold text-black border-b border-black">
+                   Borrar búsqueda
+                </button>
+              )}
+            </div>
+          )}
+        </main>
       </div>
 
-      {/* MODAL (Con AnimatePresence Global) */}
+      {/* MODAL DETALLE */}
       <AnimatePresence>
-        {selectedProduct && <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />}
-      </AnimatePresence>
-      
-      {/* MENÚ MÓVIL */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-            <motion.div 
-                initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-                className="fixed inset-0 z-50 bg-black/90 backdrop-blur flex items-center justify-center p-6 lg:hidden"
-            >
-            <motion.div 
-                initial={{ y: 50 }} animate={{ y: 0 }} exit={{ y: 50 }}
-                className="bg-white w-full max-w-sm p-6 space-y-4 rounded"
-            >
-                <div className="flex justify-between items-center border-b pb-4">
-                    <span className="font-bold uppercase tracking-widest text-sm">Categorías</span>
-                    <button onClick={() => setIsMobileMenuOpen(false)}><X size={20}/></button>
-                </div>
-                <div className="flex flex-col gap-2 max-h-[60vh] overflow-y-auto">
-                <button onClick={() => {setActiveCategory("TODAS"); setIsMobileMenuOpen(false);}} className="text-left py-3 border-b text-xs font-bold uppercase">Ver Todo</button>
-                {CATEGORIAS.map(cat => (
-                    <button key={cat} onClick={() => {setActiveCategory(cat); setIsMobileMenuOpen(false);}} className="text-left py-3 border-b text-xs font-bold uppercase">{cat}</button>
-                ))}
-                </div>
-            </motion.div>
-            </motion.div>
+        {selectedProduct && (
+          <ProductModal 
+            product={selectedProduct} 
+            onClose={() => setSelectedProduct(null)} 
+          />
         )}
       </AnimatePresence>
-    </main>
-  );
-}
-
-export default function PuertasPage() {
-  return (
-    <Suspense fallback={<div className="min-h-screen bg-white flex items-center justify-center"><Loader2 className="animate-spin"/></div>}>
-      <PuertasContent />
-    </Suspense>
+    </div>
   );
 }

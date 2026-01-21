@@ -6,7 +6,7 @@ import Footer from "@/components/Footer"; // <--- 1. IMPORTAR FOOTER
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Dimoldura - Catálogo",
+  title: "WONLY",
   description: "Muebles de diseño exclusivo",
 };
 

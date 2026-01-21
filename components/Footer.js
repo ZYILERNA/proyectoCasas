@@ -17,7 +17,7 @@ export default function Footer() {
               className="h-8 w-auto mb-6 object-contain" 
             />
             <h4 className="text-sm font-bold text-white mb-2">
-              WONLY Tecnología & Seguridad S. L.
+              Zhongyuankeji S.L
             </h4>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Líderes en diseño y fabricación de puertas y mobiliario de alta tecnología. 
@@ -80,7 +80,7 @@ export default function Footer() {
 
         {/* COPYRIGHT */}
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-          <p>© 2025 WONLY Tecnología & Seguridad S. L. Todos los derechos reservados.</p>
+          <p>© 2025 Zhongyuankeji S.L Todos los derechos reservados.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
             <span className="hover:text-[#00C2FF] cursor-pointer transition">Instagram</span>
             <span className="hover:text-[#00C2FF] cursor-pointer transition">LinkedIn</span>
