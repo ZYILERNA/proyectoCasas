@@ -1,507 +1,192 @@
-"use client";
+// subir-datos.js
+require('dotenv').config({ path: '.env.local' });
+const { createClient } = require('@supabase/supabase-js');
 
-import { useState, useMemo, useEffect } from 'react';
-import { useSearchParams } from 'next/navigation';
-import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion'; 
-import { X, ChevronRight, ScanFace, ShieldCheck, VolumeX, Sparkles, MoveHorizontal, Palette, Settings, Flame, Zap, Filter, Loader2 } from 'lucide-react';
-import { supabase } from '@/lib/supabase';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+const supabase = createClient(supabaseUrl, supabaseKey);
 
-// --- 1. CONFIGURACIÓN (CONSTANTES ESTÁTICAS) ---
-const CATEGORIAS = [
-  "PUERTA DE SEGURIDAD IA",
-  "PUERTA DE ACERO REFORZADO",
-  "PUERTA DE SEGURIDAD ACORAZADA",
-  "PUERTA DE ALUMINIO FUNDIDO",
-  "PUERTA ACÚSTICA DE MADERA",
-  "PUERTA DE PVC",
-  "PUERTAS CORREDIZAS Y ABATIBLES",
-  "PUERTA COMERCIAL CORTAFUEGO",
-  "PUERTA MÉDICA"
+// --------------------------------------------------------------------------------
+// 1. DATOS COMPLETOS (Incluyendo Médicas)
+// --------------------------------------------------------------------------------
+
+// Colores
+const COLORS_GLORY = [{ name: "Black Skin", hex: "#1A1A1A" }, { name: "Moon Light Grey", hex: "#757575" }, { name: "Mixed Glaze White", hex: "#FFFFFF" }, { name: "Enamel Copper", hex: "#5D4037" }];
+const COLORS_FASHION = [{ name: "Black Skin", hex: "#1A1A1A" }, { name: "Moon Light Grey", hex: "#757575" }, { name: "Enamel White", hex: "#F5F5F0" }, { name: "Enamel White (Grey)", hex: "#BDBDBD" }];
+const COLORS_CORTAFUEGOS = [{ name: "Blanco Perla", hex: "#CECFCA" }, { name: "Beige Piedra", hex: "#BFBBB5" }, { name: "Gris Plata", hex: "#ACAFAF" }, { name: "Gris Cemento", hex: "#7C7C78" }, { name: "Gris Grafito", hex: "#77797A" }, { name: "Rojo Óxido", hex: "#5C211E" }, { name: "Verde Musgo", hex: "#47504A" }];
+
+// Listas de Nombres
+const MODELOS_IA = ["X50", "X50 Pro", "X60", "X60 Pro", "S108", "S108 Pro", "Glory", "Glory Pro"];
+const MODELOS_ACERO = ["GL098", "NC9020", "GF091", "CL39", "GF092", "GL123-1", "Mid Night", "Contemporary", "GL099", "GL083", "CL56", "GF090", "CL66", "CL37", "CL36", "CL38", "CJ03", "CL23", "CL50", "CL51", "CL097 Pro", "P101", "GL23", "CL058", "CL65", "CL60", "CL72", "P107", "CL55", "CL62", "CL63", "P105", "GF061", "JD073", "NC9516", "P102"];
+const MODELOS_ACORAZADA = ["WL001", "WL002", "WL003", "WL005", "WL006", "WL007", "WL008", "WL009", "WL010", "WL011", "WL015", "WL016", "WL012", "WL021", "WL029", "WL018", "WL019", "WL020", "WL026", "WL027", "WL022", "WL017", "WL023", "WL028", "WL025"];
+const MODELOS_ALUMINIO = ["Wave", "Castle", "Woodland", "Louis", "Saab", "Senna", "Lange", "Heidelberg", "Prada"];
+const MODELOS_MADERA_J = ["WL-J002", "WL-J008", "WL-J011", "WL-J012", "WL-J001", "WL-J003", "WL-J009", "WL-J006", "WL-J010", "WL-J005"];
+const MODELOS_MADERA_D = ["WL-D003", "WL-D015", "WL-D017", "WL-D011", "WL-D002", "WL-D005", "WL-D006", "WL-D007", "WL-D008", "WL-D010", "WL-D012", "WL-D013", "WL-D016", "WL-D018", "WL-D019", "WL-D020", "WL-D033", "WL-D037", "WL-D001", "WL-D009", "WL-D021", "WL-D022", "WL-D023", "WL-D025", "WL-D026", "WL-D027", "WL-D028", "WL-D029", "WL-D030", "WL-D031", "WL-D032", "WL-D036", "WL-D038", "WL-5103", "WL-5105", "WL-5107", "WL-5109", "WL-5110", "WL-5117", "WL-5203", "WL-5503"];
+const MODELOS_MADERA_S = ["WL-S009", "WL-S108", "WL-S023", "WL-S206", "WL-S003", "WL-S008", "WL-S010", "WL-S011", "WL-S012", "WL-S020", "WL-S027", "WL-S001", "WL-S002", "WL-S005", "WL-S013", "WL-S015", "WL-S016", "WL-S017", "WL-S019", "WL-S021", "WL-S022", "WL-S025", "WL-S026", "WL-S201", "WL-S002", "WL-S205", "WL-S207", "WL-S208", "WL-S209", "WL-S210", "WL-S101B", "WL-S102B", "WL-S103B"];
+const MODELOS_PVC = ["WL-P001", "WL-P002", "WL-P003", "WL-P005", "WL-P006", "WL-P007", "WL-P008", "WL-P009", "WL-P010", "WL-P011", "WL-P015", "WL-P016", "WL-P201"];
+const MODELOS_CORREDIZAS = ["WL-A23001", "WL-A23002", "WL-A23019", "WL-A23020"];
+const MODELOS_CORTAFUEGOS = ["GD-01", "GD-02", "GD-03", "TD-01", "TD-02", "TD-03", "GF026"];
+
+// 🔥 AQUÍ ESTÁN LAS MÉDICAS QUE FALTABAN
+const MODELOS_MEDICAS = [
+  "PUERTA DE SALA1",
+  "PUERTA DE SALA2",
+  "PUERTA DE SALA3",
+  "PUERTA DE SALA4",
+  "PUERTA DE SALA5",
+  "PUERTA CORTAFUEGO AISLANTE1",
+  "PUERTA CORTAFUEGO AISLANTE2",
+  "PUERTA AUTOMÁTICA PLANA, HERMÉTICA Y ABATIBLE",
+  "PUERTAS AUTOMÁTICAS HERMÉTICAS"
 ];
 
-const ACCESORIOS_CORREDIZAS = [
-  { name: "Manilla VBH con base", tag: "Ventana abatible", img: "/images/Asset/Accesorios/manilla_vbh_base.jpg" },
-  { name: "Manilla Runas", tag: "Ventana abatible", img: "/images/Asset/Accesorios/manilla_runas.jpg" },
-  { name: "Manilla VBH sin base", tag: "Ventana", img: "/images/Asset/Accesorios/manilla_vbh_sin_base.jpg" },
-  { name: "Manilla y Accesorios", tag: "Ventana corrediza", img: "/images/Asset/Accesorios/manilla_accesorios_corrediza.jpg" },
-  { name: "Cerradura de Una Línea", tag: "Ventana corrediza", img: "/images/Asset/Accesorios/cerradura_una_linea.jpg" },
-  { name: "Manilla con Cerradura Ultrafina", tag: "Puerta corrediza · 210 mm", img: "/images/Asset/Accesorios/manilla_ultrafina.jpg" },
-  { name: "A01 Manilla", tag: "310 mm", img: "/images/Asset/Accesorios/a01.jpg" },
-  { name: "A03 Manilla", tag: "304 Stainless Steel · 360 mm", img: "/images/Asset/Accesorios/a03.jpg" },
-  { name: "A04 Manilla", tag: "390 mm", img: "/images/Asset/Accesorios/a04.jpg" },
-  { name: "A05 Manilla", tag: "450 mm", img: "/images/Asset/Accesorios/a05.jpg" },
-  { name: "A06 Manilla", tag: "600 mm", img: "/images/Asset/Accesorios/a06.jpg" },
-  { name: "A07 Manilla", tag: "1200 mm", img: "/images/Asset/Accesorios/a07.jpg" },
-  { name: "B01 One-Line Lock", tag: "Vertical", img: "/images/Asset/Accesorios/b01.jpg" },
-  { name: "B02 One-Line Lock", tag: "Vertical", img: "/images/Asset/Accesorios/b02.jpg" },
-  { name: "B03 One-Line Lock", tag: "Vertical", img: "/images/Asset/Accesorios/b03.jpg" },
-  { name: "B04 One-Line Lock", tag: "Vertical", img: "/images/Asset/Accesorios/b04.jpg" },
-  { name: "C01 Flat Lock", tag: "Puerta batiente", img: "/images/Asset/Accesorios/c01.jpg" },
-  { name: "C02 Flat Lock", tag: "Puerta batiente", img: "/images/Asset/Accesorios/c02.jpg" },
-  { name: "Ultra Narrow Swing Door Flat Lock", tag: "Puerta batiente", img: "/images/Asset/Accesorios/ultra_narrow_flat_lock.jpg" }
+// Specs & Features
+const SPECS_IA = [{ label: "Tecnología", value: "IA 3ª Generación" }, { label: "Sistema", value: "Reconocimiento Facial 3D" }, { label: "Pantalla", value: "10.1\" IPS Táctil" }];
+const FEATURES_IA = ["Apertura 100% automática", "Reconocimiento Facial 3D", "Videollamada App"];
+const UNLOCK_IA = "Facial / Huella / App";
+
+const SPECS_MECANICA = [{ label: "Seguridad", value: "9 Capas" }, { label: "Relleno", value: "Panal Aluminio" }, { label: "Núcleo", value: "Acero + Malla" }];
+const FEATURES_MECANICA = ["Seguridad 9 capas", "Malla antirrobo", "Relleno panal aluminio"];
+const UNLOCK_MECANICO = "Llave Seguridad";
+
+const SPECS_ALUMINIO = [{ label: "Material", value: "Aluminio Fundido" }, { label: "Estructura", value: "Hoja una Pieza" }];
+const FEATURES_ALUMINIO = ["Fundición al vacío", "Marco acero resistente", "Aislamiento superior"];
+
+const SPECS_MADERA = [{ label: "Núcleo", value: "Madera Sólida" }, { label: "Aislamiento", value: "Reducción dB" }];
+const FEATURES_MADERA = ["Diseño minimalista", "Aislamiento acústico", "Acabados premium"];
+const UNLOCK_MADERA = "Manilla Magnética";
+
+const SPECS_PVC = [{ label: "Material", value: "PVC Alta Densidad" }, { label: "Estilo", value: "Vanguardista" }];
+const FEATURES_PVC = ["Diseño vanguardista", "Resistente humedad", "Fácil limpieza"];
+const UNLOCK_PVC = "Mecánica";
+
+const SPECS_CORREDIZAS = [{ label: "Perfil", value: "Aleación 6063-T6" }, { label: "Aislamiento", value: "Rotura Puente Térmico" }];
+const FEATURES_CORREDIZAS = ["Gran formato", "Eficiencia energética", "Apertura suave"];
+const UNLOCK_CORREDIZAS = "Multipunto";
+
+const SPECS_CORTAFUEGOS = [{ label: "Certificación", value: "Resistencia Fuego" }, { label: "Material", value: "Acero Galvanizado" }];
+const FEATURES_CORTAFUEGOS = ["Contención fuego/humo", "Estructura robusta", "Certificada"];
+const UNLOCK_CORTAFUEGOS = "Barra Antipánico";
+
+const SPECS_MEDICAS = [{ label: "Material", value: "HPL / Resina / Acero Inox" }, { label: "Propiedades", value: "Antibacteriano, Hermético" }];
+const FEATURES_MEDICAS = ["Certificación Estándar Hospitalario", "Hermeticidad garantizada", "Superficie antibacteriana"];
+
+
+// --- 2. GENERADORES ---
+
+const productos_ia = MODELOS_IA.map(n => ({
+  name: n, category: "PUERTA DE SEGURIDAD IA",
+  description: `Flagship IA modelo ${n}.`,
+  specs: SPECS_IA, features: FEATURES_IA, unlock: UNLOCK_IA,
+  img: `/images/AI/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+}));
+
+const productos_acero = MODELOS_ACERO.map(n => ({
+  name: n, category: "PUERTA DE ACERO REFORZADO",
+  description: `Modelo ${n}. Estructura multicapa reforzada.`,
+  specs: SPECS_MECANICA, features: FEATURES_MECANICA, unlock: UNLOCK_MECANICO,
+  img: `/images/ACERO/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+}));
+
+const productos_acorazada = MODELOS_ACORAZADA.map(n => ({
+  name: n, category: "PUERTA DE SEGURIDAD ACORAZADA",
+  description: `Acorazada Serie WL modelo ${n}.`,
+  specs: SPECS_MECANICA, features: FEATURES_MECANICA, unlock: UNLOCK_MECANICO,
+  img: `/images/ACORAZADA/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+}));
+
+const productos_aluminio = MODELOS_ALUMINIO.map(n => ({
+  name: n, category: "PUERTA DE ALUMINIO FUNDIDO",
+  description: `Modelo ${n} en aluminio fundido.`,
+  specs: SPECS_ALUMINIO, features: FEATURES_ALUMINIO, unlock: UNLOCK_MECANICO,
+  img: `/images/ALUMINIO/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+}));
+
+const productos_madera_j = MODELOS_MADERA_J.map(n => ({
+  name: n, category: "PUERTA ACÚSTICA DE MADERA",
+  description: `Serie J Modelo ${n}.`,
+  specs: SPECS_MADERA, features: FEATURES_MADERA, unlock: UNLOCK_MADERA,
+  img: `/images/MADERAACÚSTICA/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+}));
+
+const productos_madera_d = MODELOS_MADERA_D.map(n => ({
+  name: n, category: "PUERTA ACÚSTICA DE MADERA",
+  description: `Serie D Minimalista ${n}.`,
+  specs: SPECS_MADERA, features: FEATURES_MADERA, unlock: UNLOCK_MADERA,
+  img: `/images/MADERAACÚSTICA/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+}));
+
+const productos_madera_s = [...new Set(MODELOS_MADERA_S)].map(n => ({
+  name: n, category: "PUERTA ACÚSTICA DE MADERA",
+  description: `Serie S Pure ${n}.`,
+  specs: SPECS_MADERA, features: FEATURES_MADERA, unlock: UNLOCK_MADERA,
+  img: `/images/MADERAACÚSTICA/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+}));
+
+const productos_pvc = MODELOS_PVC.map(n => ({
+  name: n, category: "PUERTA DE PVC",
+  description: `Modelo ${n}. Diseño vanguardista.`,
+  specs: SPECS_PVC, features: FEATURES_PVC, unlock: UNLOCK_PVC,
+  img: `/images/PVC/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+}));
+
+const productos_corredizas = MODELOS_CORREDIZAS.map(n => {
+    let colors = null;
+    if (["WL-A23001", "WL-A23002"].includes(n)) colors = COLORS_GLORY;
+    else if (["WL-A23019", "WL-A23020"].includes(n)) colors = COLORS_FASHION;
+    return {
+        name: n, category: "PUERTAS CORREDIZAS Y ABATIBLES",
+        description: `Sistema corredero modelo ${n}.`,
+        specs: SPECS_CORREDIZAS, features: FEATURES_CORREDIZAS, unlock: UNLOCK_CORREDIZAS,
+        colors: colors,
+        img: `/images/CORREDIZA/door-${n}.jpg`
+    };
+});
+
+const productos_cortafuegos = MODELOS_CORTAFUEGOS.map(n => ({
+  name: `Modelo ${n}`, category: "PUERTA COMERCIAL CORTAFUEGO",
+  description: "Puerta cortafuego certificada.",
+  specs: SPECS_CORTAFUEGOS, features: FEATURES_CORTAFUEGOS, unlock: UNLOCK_CORTAFUEGOS,
+  colors: COLORS_CORTAFUEGOS,
+  img: `/images/CORTAFUEGO/door-${n}.jpg`
+}));
+
+// 🔥 GENERADOR DE MÉDICAS
+const productos_medicas = MODELOS_MEDICAS.map(n => ({
+    name: n, 
+    category: "PUERTA MÉDICA",
+    description: "Puerta técnica especializada para uso hospitalario y sanitario.",
+    specs: SPECS_MEDICAS, 
+    features: FEATURES_MEDICAS,
+    // Aseguramos que la ruta de la imagen sea segura (sin espacios, minúsculas)
+    img: `/images/MEDICA/door-${n}.jpg`
+}));
+
+
+// --- 3. UNIFICACIÓN ---
+const DATA_PRODUCTOS = [
+  ...productos_ia, ...productos_acero, ...productos_acorazada,
+  ...productos_aluminio, ...productos_madera_j, ...productos_madera_d,
+  ...productos_madera_s, ...productos_pvc, ...productos_corredizas,
+  ...productos_cortafuegos, 
+  ...productos_medicas // <--- ¡AQUÍ ESTÁN AÑADIDAS!
 ];
 
-const VIDRIOS_CORREDIZAS = [
-  { name: "VIDRIO-01", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-01.jpg" },
-  { name: "VIDRIO-02", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-02.jpg" },
-  { name: "VIDRIO-03", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-03.jpg" },
-  { name: "VIDRIO-04", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-04.jpg" },
-  { name: "VIDRIO-05", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-05.jpg" },
-  { name: "VIDRIO-06", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-06.jpg" },
-  { name: "VIDRIO-07", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-07.jpg" },
-  { name: "VIDRIO-08", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-08.jpg" },
-  { name: "VIDRIO-09", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-09.jpg" },
-  { name: "VIDRIO-10", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-10.jpg" },
-  { name: "VIDRIO-11", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-11.jpg" },
-  { name: "VIDRIO-12", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-12.jpg" },
-  { name: "VIDRIO-13", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-13.jpg" },
-  { name: "VIDRIO-14", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-14.jpg" },
-  { name: "VIDRIO-15", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-15.jpg" },
-  { name: "VIDRIO-16", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-16.jpg" },
-  { name: "VIDRIO-17", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-17.jpg" },
-  { name: "VIDRIO-18", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-18.jpg" },
-  { name: "VIDRIO-19", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-19.jpg" },
-  { name: "VIDRIO-20", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-20.jpg" },
-];
+// --- 4. FUNCIÓN DE SUBIDA ---
+async function subirDatos() {
+  console.log(`🔥 Limpiando base de datos...`);
+  const { error: deleteError } = await supabase.from('products').delete().neq('id', 0);
+  if (deleteError) console.error("Error borrando:", deleteError);
 
-// --- 2. COMPONENTES UI AUXILIARES ---
-
-const FilterButton = ({ label, active, onClick }) => (
-  <button
-    onClick={onClick}
-    className={`w-full text-left px-4 py-3 text-[10px] font-bold uppercase border-b transition-all duration-300 flex justify-between items-center tracking-widest relative overflow-hidden group
-      ${active 
-        ? 'text-white border-black pl-6' 
-        : 'bg-white text-gray-500 border-gray-100 hover:bg-gray-50 hover:text-black hover:pl-6'
-      }`}
-  >
-    {/* Fondo animado para el botón activo */}
-    {active && (
-      <motion.div 
-        layoutId="activeFilter"
-        className="absolute inset-0 bg-black z-0"
-        initial={false}
-        transition={{ type: "spring", stiffness: 300, damping: 30 }}
-      />
-    )}
-    <span className="relative z-10 flex items-center justify-between w-full">
-      {label}
-      {active && <ChevronRight size={12} />}
-    </span>
-  </button>
-);
-
-const ProductModal = ({ product, onClose }) => {
-  useEffect(() => {
-    document.body.style.overflow = 'hidden';
-    return () => { document.body.style.overflow = 'unset'; };
-  }, []);
-
-  if (!product) return null;
-
-  let accentColor = "text-gray-900";
-  let borderColor = "border-gray-900";
-  let Icon = ShieldCheck;
+  console.log(`📦 Subiendo ${DATA_PRODUCTOS.length} productos (incluidas médicas)...`);
   
-  if (product.category.includes("IA")) { accentColor = "text-[#00C2FF]"; borderColor="border-[#00C2FF]"; Icon = ScanFace; }
-  else if (product.category.includes("ACORAZADA")) { accentColor = "text-[#D4AF37]"; borderColor="border-[#D4AF37]"; }
-  else if (product.category.includes("ALUMINIO")) { accentColor = "text-[#718096]"; borderColor="border-[#718096]"; }
-  else if (product.category.includes("MADERA")) { accentColor = "text-[#8D6E63]"; borderColor="border-[#8D6E63]"; Icon = VolumeX; }
-  else if (product.category.includes("PVC")) { accentColor = "text-teal-600"; borderColor="border-teal-600"; Icon = Sparkles; }
-  else if (product.category.includes("CORREDIZAS")) { accentColor = "text-indigo-600"; borderColor="border-indigo-600"; Icon = MoveHorizontal; }
-  else if (product.category.includes("CORTAFUEGO")) { accentColor = "text-orange-600"; borderColor="border-orange-600"; Icon = Flame; }
+  const { data, error } = await supabase.from('products').insert(DATA_PRODUCTOS);
 
-  return (
-    <div className="fixed inset-0 z-[100] flex justify-end">
-      {/* BACKDROP ANIMADO */}
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm" 
-        onClick={onClose}
-      />
-
-      {/* PANEL DEL MODAL ANIMADO */}
-      <motion.div 
-        initial={{ x: "100%" }}
-        animate={{ x: 0 }}
-        exit={{ x: "100%" }}
-        transition={{ type: "spring", damping: 25, stiffness: 200 }}
-        className="relative bg-white w-full max-w-[900px] h-full shadow-2xl flex flex-col md:flex-row z-10"
-      >
-        <button onClick={onClose} className="absolute top-4 left-4 z-20 p-2 bg-white/80 backdrop-blur rounded-full hover:bg-black hover:text-white transition"><X size={20} /></button>
-
-        <div className="w-full md:w-1/2 bg-[#F8F8F8] relative min-h-[300px] md:h-full flex items-center justify-center p-10">
-           <motion.div 
-             initial={{ scale: 0.9, opacity: 0 }}
-             animate={{ scale: 1, opacity: 1 }}
-             transition={{ delay: 0.2 }}
-             className="relative w-full h-full max-h-[500px]"
-           >
-             <Image src={product.img} alt={product.name} fill className="object-contain mix-blend-multiply" />
-           </motion.div>
-        </div>
-
-        <div className="w-full md:w-1/2 p-8 md:p-12 overflow-y-auto bg-white scrollbar-hide">
-            <span className={`text-[10px] font-bold uppercase tracking-widest mb-2 block ${accentColor}`}>{product.category}</span>
-            <h2 className="text-3xl font-bold mb-4 text-gray-900 tracking-tight">{product.name}</h2>
-            <p className="text-sm text-gray-600 mb-8 leading-relaxed">{product.description}</p>
-
-            <div className="space-y-8">
-              {/* Características */}
-              <div>
-                <h3 className="text-xs font-bold uppercase text-gray-900 mb-3 flex items-center gap-2">
-                  <Icon size={14} /> Características
-                </h3>
-                <ul className="space-y-2">
-                  {product.features?.map((feat, i) => (
-                    <motion.li 
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.1 * i }}
-                      key={i} 
-                      className="flex items-start gap-2 text-xs text-gray-600"
-                    >
-                      <span className={`${accentColor} mt-0.5`}>•</span> {feat}
-                    </motion.li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Carta de Colores */}
-              {product.colors && (
-                <div className="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                    <h3 className={`text-gray-900 text-xs font-bold uppercase mb-4 border-l-4 ${borderColor} pl-3 flex items-center gap-2`}>
-                        <Palette size={14}/> Carta de Colores
-                    </h3>
-                    <div className="flex flex-wrap gap-4 justify-start">
-                        {product.colors.map((color, i) => (
-                            <div key={i} className="text-center group flex flex-col items-center gap-2 cursor-pointer">
-                                <div 
-                                    className="w-10 h-10 rounded-full shadow-sm border-2 border-white group-hover:border-gray-300 transition-all transform group-hover:scale-110" 
-                                    style={{backgroundColor: color.hex}}
-                                    title={color.name}
-                                ></div>
-                                <span className="text-[9px] text-gray-500 uppercase font-medium max-w-[60px] leading-tight">{color.name}</span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-              )}
-
-              {/* Especificaciones Técnicas */}
-              <div className="bg-gray-50 p-5 rounded border border-gray-100">
-                 <h3 className="text-xs font-bold uppercase text-gray-400 mb-3">Especificaciones</h3>
-                 <div className="grid grid-cols-1 gap-y-2">
-                   {product.specs?.map((spec, i) => (
-                     <div key={i} className="flex justify-between border-b border-gray-200 pb-1 last:border-0">
-                       <span className="text-[10px] font-bold text-gray-500 uppercase">{spec.label}</span>
-                       <span className="text-[11px] font-semibold text-gray-900 text-right">{spec.value}</span>
-                     </div>
-                   ))}
-                 </div>
-              </div>
-
-              {/* Sistema de Acceso */}
-              <div className="">
-                 <p className="text-[10px] text-gray-400 uppercase tracking-widest mb-2">Sistema de Acceso</p>
-                 <p className="text-xs font-medium text-gray-800 border inline-block px-2 py-1 rounded bg-gray-50">{product.unlock}</p>
-              </div>
-
-              {/* Accesorios (Corredizas) */}
-              {product.category === "PUERTAS CORREDIZAS Y ABATIBLES" && (
-                <div className="pt-6 mt-6 border-t border-gray-100">
-                    <h3 className="text-xs font-bold uppercase text-indigo-600 mb-4 flex items-center gap-2">
-                        <Settings size={14} /> Accesorios Compatibles
-                    </h3>
-                    <div className="grid grid-cols-2 gap-3">
-                        {ACCESORIOS_CORREDIZAS.map((item, idx) => (
-                            <div key={idx} className="bg-gray-50 p-3 rounded border border-gray-100 flex flex-col items-center text-center hover:border-indigo-200 transition-colors">
-                                <div className="h-24 w-full flex items-center justify-center mb-2 bg-white rounded-sm">
-                                    <Image src={item.img} alt={item.name} width={80} height={80} className="object-contain max-h-full" onError={(e) => { e.target.style.display='none'; }} />
-                                </div>
-                                <span className="text-[10px] font-bold text-gray-800 leading-tight">{item.name}</span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-              )}
-              
-              {/* Vidrios (Corredizas) */}
-              {product.category === "PUERTAS CORREDIZAS Y ABATIBLES" && (
-                <div className="pt-6 mt-6 border-t border-gray-100">
-                    <h3 className="text-xs font-bold uppercase text-indigo-600 mb-4 flex items-center gap-2">
-                        <Settings size={14} /> Vidrios De Uso Interior
-                    </h3>
-                    <div className="grid grid-cols-2 gap-3">
-                        {VIDRIOS_CORREDIZAS.map((item, idx) => (
-                            <div key={idx} className="bg-gray-50 p-3 rounded border border-gray-100 flex flex-col items-center text-center hover:border-indigo-200 transition-colors">
-                                <div className="h-24 w-full flex items-center justify-center mb-2 relative rounded-sm overflow-hidden bg-gray-50">
-                                  <Image src={item.img} alt={item.name} fill className="object-cover w-full h-full" onError={(e) => { e.target.style.display='none'; }} />
-                                </div>
-                                <span className="text-[10px] font-bold text-gray-800 leading-tight">{item.name}</span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-              )}
-            </div>
-        </div>
-      </motion.div>
-    </div>
-  );
-};
-
-// --- PRODUCT CARD ACTUALIZADO (Con borde y padding) ---
-const ProductCard = ({ product, onClick }) => {
-  let highlightClass = "text-gray-400";
-  if (product.category.includes("IA")) highlightClass = "text-[#00C2FF]";
-  else if (product.category.includes("MADERA")) highlightClass = "text-[#8D6E63]";
-  else if (product.category.includes("PVC")) highlightClass = "text-teal-600";
-  else if (product.category.includes("CORREDIZAS")) highlightClass = "text-indigo-600";
-  else if (product.category.includes("CORTAFUEGO")) highlightClass = "text-orange-600";
-
-  return (
-    <motion.div 
-      layout
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.9 }}
-      transition={{ duration: 0.3 }}
-      onClick={onClick} 
-      className="group cursor-pointer flex flex-col h-full"
-    >
-      {/* CAMBIOS AQUÍ:
-          1. Se agrego 'p-6' al contenedor principal (el cuadro gris) para dar el "borde" interno.
-          2. Se añadió un div interno relativo.
-          3. Se cambio 'object-cover' por 'object-contain' en la imagen para que no se recorte.
-      */}
-      <div className="relative aspect-[3/5] w-full overflow-hidden bg-[#F5F5F7] rounded-xl mb-4 border border-transparent group-hover:border-gray-200 transition-all p-6">
-        <div className="relative w-full h-full">
-            <Image 
-            src={product.img} 
-            alt={product.name} 
-            fill 
-            className="object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-700 ease-in-out"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
-        </div>
-      </div>
-
-      <div className="relative z-10 flex-1 flex flex-col">
-        <span className={`text-[10px] font-bold uppercase tracking-widest mb-1 ${highlightClass}`}>
-          {product.category.split(" ")[0]} 
-        </span>
-        <h3 className="text-lg font-bold text-gray-900 group-hover:text-black transition-colors mb-1 leading-tight">
-          {product.name}
-        </h3>
-        <p className="text-xs text-gray-500 line-clamp-2 leading-relaxed mb-4 flex-1">
-          {product.description}
-        </p>
-        
-        <div className="flex items-center text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-transparent group-hover:border-black self-start transition-all pb-0.5">
-          Ver Detalles <ChevronRight size={12} className="ml-1" />
-        </div>
-      </div>
-    </motion.div>
-  );
-};
-
-// --- 3. PÁGINA PRINCIPAL UNIFICADA ---
-
-export default function ProductsPage() {
-  const searchParams = useSearchParams();
-  const initialCategory = searchParams.get('category');
-  
-  // ESTADOS PRINCIPALES
-  const [activeCategory, setActiveCategory] = useState(initialCategory || "TODOS");
-  const [products, setProducts] = useState([]); // PRODUCTOS DE SUPABASE
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const [searchTerm, setSearchTerm] = useState("");
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [loading, setLoading] = useState(true);
-
-  // 1. EFECTO: CARGAR DATOS DE SUPABASE
-  useEffect(() => {
-    async function fetchProducts() {
-      setLoading(true);
-      
-      let query = supabase.from('products').select('*');
-      
-      if (activeCategory !== "TODOS") {
-        query = query.eq('category', activeCategory);
-      }
-      
-      const { data, error } = await query;
-      
-      if (error) {
-        console.error("Error cargando productos:", error);
-      } else {
-        setProducts(data || []);
-      }
-      setLoading(false);
-    }
-    
-    fetchProducts();
-  }, [activeCategory]);
-
-  // 2. FILTRO LOCAL (BUSCADOR)
-  const displayProducts = useMemo(() => {
-    if (searchTerm.trim() === "") return products;
-    
-    const term = searchTerm.toLowerCase();
-    return products.filter(p => 
-      p.name.toLowerCase().includes(term) || 
-      (p.description && p.description.toLowerCase().includes(term))
-    );
-  }, [products, searchTerm]);
-
-  return (
-    <div className="min-h-screen bg-white font-sans text-gray-900">
-      
-      {/* HEADER DE LA SECCIÓN */}
-      <div className="bg-black text-white pt-32 pb-16 px-6">
-        <div className="max-w-[1400px] mx-auto">
-          <motion.h1 
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            className="text-4xl md:text-6xl font-bold mb-4 tracking-tighter"
-          >
-            Catálogo WONLY
-          </motion.h1>
-          <p className="text-gray-400 max-w-xl text-lg font-light">
-            Innovación en seguridad y diseño arquitectónico.
-          </p>
-        </div>
-      </div>
-
-      <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row min-h-screen relative">
-        
-        {/* --- SIDEBAR FILTROS --- */}
-        <aside className="w-full md:w-64 flex-shrink-0 border-r border-gray-100 bg-white z-20">
-          <div className="sticky top-20 p-6 space-y-8">
-            
-            {/* Buscador */}
-            <div className="relative group">
-              <input 
-                type="text" 
-                placeholder="Buscar modelo..." 
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full bg-[#F5F5F7] border-none rounded-lg py-3 pl-10 pr-4 text-xs font-medium focus:ring-2 focus:ring-black/5 transition-all outline-none"
-              />
-              <Sparkles className="absolute left-3 top-3 text-gray-400 group-focus-within:text-black transition-colors" size={14} />
-            </div>
-
-            {/* Lista Categorías Desktop */}
-            <div className="hidden md:block space-y-1">
-              <h3 className="text-[10px] font-bold uppercase text-gray-400 mb-4 tracking-widest px-4">Categorías</h3>
-              <FilterButton 
-                label="Ver Todo" 
-                active={activeCategory === "TODOS"} 
-                onClick={() => setActiveCategory("TODOS")} 
-              />
-              {CATEGORIAS.map((cat) => (
-                <FilterButton 
-                  key={cat} 
-                  label={cat.replace("PUERTA ", "").replace("DE ", "")} 
-                  active={activeCategory === cat} 
-                  onClick={() => setActiveCategory(cat)} 
-                />
-              ))}
-            </div>
-
-            {/* Filtros Móvil */}
-            <div className="md:hidden">
-                <button 
-                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                  className="flex items-center justify-between w-full bg-black text-white p-3 rounded text-xs font-bold uppercase"
-                >
-                  <span className="flex items-center gap-2"><Filter size={14}/> Filtrar por categoría</span>
-                  <ChevronRight className={`transform transition ${isMobileMenuOpen ? 'rotate-90' : ''}`} size={14}/>
-                </button>
-                
-                <AnimatePresence>
-                  {isMobileMenuOpen && (
-                    <motion.div 
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      className="overflow-hidden mt-2 border rounded-lg"
-                    >
-                       <FilterButton label="Ver Todo" active={activeCategory === "TODOS"} onClick={() => {setActiveCategory("TODOS"); setIsMobileMenuOpen(false)}} />
-                       {CATEGORIAS.map((cat) => (
-                          <FilterButton 
-                            key={cat} 
-                            label={cat.replace("PUERTA ", "")} 
-                            active={activeCategory === cat} 
-                            onClick={() => {setActiveCategory(cat); setIsMobileMenuOpen(false)}} 
-                          />
-                       ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-            </div>
-          </div>
-        </aside>
-
-        {/* --- GRID DE PRODUCTOS --- */}
-        <main className="flex-1 p-6 md:p-12 bg-white">
-          <div className="mb-6 flex justify-between items-end">
-             <div>
-               <h2 className="text-2xl font-bold tracking-tight">{activeCategory === "TODOS" ? "Todos los Productos" : activeCategory}</h2>
-               <p className="text-xs text-gray-400 mt-1">
-                 {loading ? "Cargando..." : `${displayProducts.length} modelos disponibles`}
-               </p>
-             </div>
-          </div>
-
-          {loading ? (
-             <div className="flex h-64 w-full flex-col items-center justify-center text-gray-400 gap-3">
-                <Loader2 className="animate-spin" size={32} />
-                <span className="text-xs tracking-widest uppercase">Cargando catálogo...</span>
-             </div>
-          ) : (
-            <motion.div 
-              layout 
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-12"
-            >
-              <AnimatePresence mode='popLayout'>
-                {displayProducts.map((product) => (
-                  <ProductCard 
-                    key={product.id} 
-                    product={product} 
-                    onClick={() => setSelectedProduct(product)} 
-                  />
-                ))}
-              </AnimatePresence>
-            </motion.div>
-          )}
-
-          {!loading && displayProducts.length === 0 && (
-            <div className="py-20 text-center text-gray-400">
-              <p>No se encontraron productos.</p>
-              {searchTerm && (
-                <button onClick={() => setSearchTerm("")} className="mt-4 text-xs font-bold text-black border-b border-black">
-                   Borrar búsqueda
-                </button>
-              )}
-            </div>
-          )}
-        </main>
-      </div>
-
-      {/* MODAL DETALLE */}
-      <AnimatePresence>
-        {selectedProduct && (
-          <ProductModal 
-            product={selectedProduct} 
-            onClose={() => setSelectedProduct(null)} 
-          />
-        )}
-      </AnimatePresence>
-    </div>
-  );
+  if (error) {
+    console.error("❌ Error subiendo:", error.message);
+  } else {
+    console.log("✅ ¡ÉXITO! Base de datos actualizada con todas las categorías.");
+  }
 }
+
+subirDatos();
