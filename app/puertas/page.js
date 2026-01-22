@@ -327,15 +327,22 @@ function PuertasContent() {
   }, [searchParams]);
 
   // CARGAR DATOS DE SUPABASE
-  useEffect(() => {
+useEffect(() => {
     async function fetchProducts() {
       setLoading(true);
-      let query = supabase.from('products').select('*');
       
+      // 1. Preparamos la consulta base con el ORDEN
+      let query = supabase
+        .from('products')
+        .select('*')
+        .order('id', { ascending: true }); // <--- CLAVE: Ordena por orden de creación
+
+      // 2. Aplicamos filtro si no es "TODAS"
       if (activeCategory !== "TODAS") {
         query = query.eq('category', activeCategory);
       }
       
+      // 3. Ejecutamos la consulta
       const { data, error } = await query;
       
       if (error) {

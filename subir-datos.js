@@ -7,7 +7,7 @@ const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 // --------------------------------------------------------------------------------
-// 1. DATOS COMPLETOS (Incluyendo Médicas)
+// 1. DATOS COMPLETOS
 // --------------------------------------------------------------------------------
 
 // Colores
@@ -26,21 +26,9 @@ const MODELOS_MADERA_S = ["WL-S009", "WL-S108", "WL-S023", "WL-S206", "WL-S003",
 const MODELOS_PVC = ["WL-P001", "WL-P002", "WL-P003", "WL-P005", "WL-P006", "WL-P007", "WL-P008", "WL-P009", "WL-P010", "WL-P011", "WL-P015", "WL-P016", "WL-P201"];
 const MODELOS_CORREDIZAS = ["WL-A23001", "WL-A23002", "WL-A23019", "WL-A23020"];
 const MODELOS_CORTAFUEGOS = ["GD-01", "GD-02", "GD-03", "TD-01", "TD-02", "TD-03", "GF026"];
+const MODELOS_MEDICAS = ["PUERTA DE SALA1", "PUERTA DE SALA2", "PUERTA DE SALA3", "PUERTA DE SALA4", "PUERTA DE SALA5", "PUERTA CORTAFUEGO AISLANTE1", "PUERTA CORTAFUEGO AISLANTE2", "PUERTA AUTOMÁTICA PLANA, HERMÉTICA Y ABATIBLE", "PUERTAS AUTOMÁTICAS HERMÉTICAS"];
 
-// 🔥 AQUÍ ESTÁN LAS MÉDICAS QUE FALTABAN
-const MODELOS_MEDICAS = [
-  "PUERTA DE SALA1",
-  "PUERTA DE SALA2",
-  "PUERTA DE SALA3",
-  "PUERTA DE SALA4",
-  "PUERTA DE SALA5",
-  "PUERTA CORTAFUEGO AISLANTE1",
-  "PUERTA CORTAFUEGO AISLANTE2",
-  "PUERTA AUTOMÁTICA PLANA, HERMÉTICA Y ABATIBLE",
-  "PUERTAS AUTOMÁTICAS HERMÉTICAS"
-];
-
-// Specs & Features
+// Specs
 const SPECS_IA = [{ label: "Tecnología", value: "IA 3ª Generación" }, { label: "Sistema", value: "Reconocimiento Facial 3D" }, { label: "Pantalla", value: "10.1\" IPS Táctil" }];
 const FEATURES_IA = ["Apertura 100% automática", "Reconocimiento Facial 3D", "Videollamada App"];
 const UNLOCK_IA = "Facial / Huella / App";
@@ -72,7 +60,7 @@ const SPECS_MEDICAS = [{ label: "Material", value: "HPL / Resina / Acero Inox" }
 const FEATURES_MEDICAS = ["Certificación Estándar Hospitalario", "Hermeticidad garantizada", "Superficie antibacteriana"];
 
 
-// --- 2. GENERADORES ---
+// --- 2. GENERADORES (CORREGIDOS) ---
 
 const productos_ia = MODELOS_IA.map(n => ({
   name: n, category: "PUERTA DE SEGURIDAD IA",
@@ -143,23 +131,24 @@ const productos_corredizas = MODELOS_CORREDIZAS.map(n => {
     };
 });
 
+// ✅ CORRECCIÓN 1: Convertir nombres de Cortafuegos a minúsculas y sin espacios
 const productos_cortafuegos = MODELOS_CORTAFUEGOS.map(n => ({
   name: `Modelo ${n}`, category: "PUERTA COMERCIAL CORTAFUEGO",
   description: "Puerta cortafuego certificada.",
   specs: SPECS_CORTAFUEGOS, features: FEATURES_CORTAFUEGOS, unlock: UNLOCK_CORTAFUEGOS,
   colors: COLORS_CORTAFUEGOS,
-  img: `/images/CORTAFUEGO/door-${n}.jpg`
+  img: `/images/CORTAFUEGO/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
 }));
 
-// 🔥 GENERADOR DE MÉDICAS
+// ✅ CORRECCIÓN 2: Convertir nombres Médicos a minúsculas y sin espacios
 const productos_medicas = MODELOS_MEDICAS.map(n => ({
     name: n, 
     category: "PUERTA MÉDICA",
     description: "Puerta técnica especializada para uso hospitalario y sanitario.",
     specs: SPECS_MEDICAS, 
     features: FEATURES_MEDICAS,
-    // Aseguramos que la ruta de la imagen sea segura (sin espacios, minúsculas)
-    img: `/images/MEDICA/door-${n}.jpg`
+    // Esto convierte "PUERTA DE SALA1" -> "door-puerta-de-sala1.jpg"
+    img: `/images/MEDICA/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
 }));
 
 
@@ -168,8 +157,7 @@ const DATA_PRODUCTOS = [
   ...productos_ia, ...productos_acero, ...productos_acorazada,
   ...productos_aluminio, ...productos_madera_j, ...productos_madera_d,
   ...productos_madera_s, ...productos_pvc, ...productos_corredizas,
-  ...productos_cortafuegos, 
-  ...productos_medicas // <--- ¡AQUÍ ESTÁN AÑADIDAS!
+  ...productos_cortafuegos, ...productos_medicas
 ];
 
 // --- 4. FUNCIÓN DE SUBIDA ---
@@ -178,14 +166,14 @@ async function subirDatos() {
   const { error: deleteError } = await supabase.from('products').delete().neq('id', 0);
   if (deleteError) console.error("Error borrando:", deleteError);
 
-  console.log(`📦 Subiendo ${DATA_PRODUCTOS.length} productos (incluidas médicas)...`);
+  console.log(`📦 Subiendo ${DATA_PRODUCTOS.length} productos...`);
   
   const { data, error } = await supabase.from('products').insert(DATA_PRODUCTOS);
 
   if (error) {
     console.error("❌ Error subiendo:", error.message);
   } else {
-    console.log("✅ ¡ÉXITO! Base de datos actualizada con todas las categorías.");
+    console.log("✅ ¡ÉXITO! Datos subidos y rutas de imágenes corregidas.");
   }
 }
 
