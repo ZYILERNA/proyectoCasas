@@ -16,6 +16,7 @@ import {
   Bot,
   ShieldCheck
 } from 'lucide-react';
+import Link from 'next/link';
 
 // Datos de la sección de Fabricación (Extraídos de tus imágenes)
 const factoryModules = [
@@ -323,7 +324,7 @@ const EmpresaPage = () => {
               {/* 1. Sede Central (Cuadrada) */}
               <div className="relative group overflow-hidden rounded-xl aspect-square border border-white/10">
                 <img 
-                  src="/images/rd-central.jpg" 
+                  src="/images/COMPANY/FACTORY/rd-central.jpg" 
                   alt="Base de I+D Sede Central" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -338,7 +339,7 @@ const EmpresaPage = () => {
               {/* 2. Shanghái (Cuadrada) */}
               <div className="relative group overflow-hidden rounded-xl aspect-square border border-white/10">
                 <img 
-                  src="/images/rd-shanghai.jpg" 
+                  src="/images/COMPANY/FACTORY/rd-shanghai.jpg" 
                   alt="Base de I+D Shanghái" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -353,7 +354,7 @@ const EmpresaPage = () => {
               {/* 3. Hangzhou (Cuadrada) */}
               <div className="relative group overflow-hidden rounded-xl aspect-square border border-white/10">
                 <img 
-                  src="/images/rd-hangzhou.jpg" 
+                  src="/images/COMPANY/FACTORY/rd-hangzhou.jpg" 
                   alt="Base de I+D Hangzhou" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -368,7 +369,7 @@ const EmpresaPage = () => {
               {/* 4. Shenzhen (Cuadrada) */}
               <div className="relative group overflow-hidden rounded-xl aspect-square border border-white/10">
                 <img 
-                  src="/images/rd-shenzhen.jpg" 
+                  src="/images/COMPANY/FACTORY/rd-shenzhen.jpg" 
                   alt="Base de I+D Shenzhen" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -383,7 +384,7 @@ const EmpresaPage = () => {
               {/* 5. Alemania (Horizontal - Ocupa 2 columnas) */}
               <div className="relative group overflow-hidden rounded-xl col-span-2 h-48 md:h-64 border border-white/10">
                 <img 
-                  src="/images/rd-germany.jpg" 
+                  src="/images/COMPANY/FACTORY/rd-germany.jpg" 
                   alt="Base de I+D Alemania" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -604,9 +605,11 @@ const EmpresaPage = () => {
             <p className="text-gray-400 max-w-2xl mx-auto mb-10 text-lg">
               Combinamos escala industrial con I+D de vanguardia para dar forma a una vida segura e inteligente para más de 200 millones de usuarios.
             </p>
-            <button className="bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-[#00C2FF] hover:text-white transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-[#00C2FF]/50">
+            <Link 
+            href="/contacto" 
+            className="bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-[#00C2FF] hover:text-white transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-[#00C2FF]/50">
                CONTACTAR CON VENTAS
-            </button>
+            </Link>
          </div>
       </section>
 
