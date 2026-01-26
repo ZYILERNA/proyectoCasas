@@ -268,9 +268,7 @@ export default function ContactoPage() {
 
             <div className="space-y-4">
                 {[
-                    { q: "¿Realizan instalaciones fuera de Barcelona?", a: "Sí, cubrimos proyectos en toda España y colaboramos en proyectos internacionales." },
-                    { q: "¿Cuáles son los plazos de entrega?", a: "Dependiendo del stock y el volumen del pedido, el tiempo de entrega estándar es de 48-72 horas para productos en stock." },
-                    { q: "¿Ofrecen garantía en sus productos?", a: "Todos nuestros productos cuentan con garantía oficial y soporte técnico directo desde España." }
+                    { q: "¿?", a: "e." },
                 ].map((item, index) => (
                     <motion.div 
                         key={index}
@@ -286,15 +284,6 @@ export default function ContactoPage() {
             </div>
         </div>
       </section>
-
-      {/* 4. COPYRIGHT FOOTER */}
-      <footer className="border-t border-white/10 bg-black py-8 text-center">
-          <div className="container mx-auto px-6">
-              <p className="text-gray-500 text-sm">
-                 © 2025 Zhongyuankeji S.L Todos los derechos reservados.
-              </p>
-          </div>
-      </footer>
 
     </main>
   );
