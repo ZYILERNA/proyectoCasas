@@ -817,42 +817,44 @@ export default function CerradurasPage() {
     {/* GRID ASIMÉTRICO (BENTO) */}
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[320px]">
       
-      {/* TARJETA 1: HERO IMAGE (EL CILINDRO) - Ocupa 2 espacios */}
+      {/* TARJETA 1: HERO IMAGE (EL CILINDRO) */}
       <motion.div 
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         className="md:col-span-2 relative group rounded-2xl border border-white/10 bg-[#111] overflow-hidden"
       >
-        {/* Etiqueta Técnica */}
-        <div className="absolute top-6 left-6 z-20">
+        {/* 1. TEXTO (z-20 para que flote ENCIMA de todo) */}
+        <div className="absolute top-6 left-6 z-20 max-w-[280px] md:max-w-[350px]">
           <div className="flex items-center gap-2 mb-2">
             <span className="bg-[#00C2FF] text-black text-xs font-bold px-2 py-1 rounded">PATENTED</span>
             <span className="text-[#00C2FF] font-mono text-xs">REF: C-CLASS-360</span>
           </div>
-          <h3 className="text-2xl font-bold text-white max-w-[200px]">Cilindro Maestro Anti-Taladro</h3>
-          <p className="text-gray-400 text-sm mt-2 max-w-[250px]">
+          <h3 className="text-2xl font-bold text-white mb-2 shadow-black drop-shadow-lg">
+            Cilindro Maestro Anti-Taladro
+          </h3>
+          <p className="text-gray-300 text-sm font-medium leading-relaxed drop-shadow-md">
             Estructura de pines reales y falsos con aleación tratada térmicamente. 360 veces más seguro que un cilindro clase A.
           </p>
         </div>
 
-        {/* IMAGEN DEL CILINDRO CON TRUCO DE INVERSIÓN */}
-        <div className="absolute inset-0 flex items-center justify-end">
-            {/* ⚠️ IMPORTANTE: 
-               1. Guarda tu imagen como "cilindro-core.png" en public/images/
-               2. Fíjate en la clase 'invert hue-rotate-180': 
-                  - invert: vuelve el fondo negro.
-                  - hue-rotate: ajusta el color dorado invertido (azul) al tono exacto que quieras.
-            */}
+        {/* 2. CAPA DE PROTECCIÓN (EL TRUCO MÁGICO) */}
+        {/* Esto crea un degradado de NEGRO (izquierda) a TRANSPARENTE (derecha).
+            Asegura que el texto se lea perfecto aunque el cilindro pase por debajo. */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#111] via-[#111]/80 to-transparent z-10 pointer-events-none"></div>
+
+        {/* 3. IMAGEN DEL CILINDRO (z-0) */}
+        <div className="absolute inset-0 flex items-center justify-end z-0">
             <img 
-              src="/images/CERRADURA/cilindro-core.jpg" 
+              src="/images/CERRADURA/cilindro-core.png" 
               alt="Mecanismo Interno" 
-              className="w-[85%] h-full object-contain object-right opacity-90 transition-transform duration-700 group-hover:scale-105"
+              // Ajustamos opacity-100 para que brille bien (ya no necesitamos ocultarlo tanto)
+              className="w-[85%] md:w-[70%] h-full object-contain object-right transform translate-x-10 group-hover:translate-x-0 transition-transform duration-700"
             />
         </div>
 
-        {/* Efecto Scanline (Opcional, muy cyberpunk) */}
-        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay pointer-events-none"></div>
+        {/* Efecto Scanline (Opcional, z-10 para estar sobre la imagen pero bajo el texto) */}
+        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay pointer-events-none z-10"></div>
       </motion.div>
 
       {/* TARJETA 2: UWB (Ocupa 1 espacio) */}

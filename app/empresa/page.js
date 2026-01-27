@@ -119,32 +119,44 @@ const EmpresaPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
           
           {/* =========================================================
-              FILA 1: IMAGEN IPO (GIGANTE, LIMPIA, SIN SOMBRAS DE FONDO)
+              FILA 1: IMAGEN IPO
              ========================================================= */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            // Aumentamos altura a 600px para que impacte visualmente
-            className="col-span-1 md:col-span-2 lg:col-span-12 bg-[#111] border border-white/10 rounded-2xl overflow-hidden relative group min-h-[600px]"
+            // CAMBIO AQUÍ: 
+            // 1. 'aspect-[4/3]': Mantiene proporción rectangular en móvil (se ve la foto entera).
+            // 2. 'md:aspect-auto': En escritorio vuelve a ser libre.
+            // 3. 'min-h-[auto]': Quita la altura forzada en móvil.
+            // 4. 'md:min-h-[600px]': Mantiene la altura impactante solo en escritorio.
+            className="col-span-1 md:col-span-2 lg:col-span-12 bg-[#111] border border-white/10 rounded-2xl overflow-hidden relative group aspect-[4/3] md:aspect-auto md:min-h-[600px]"
           >
              <img 
             src="/images/COMPANY/ipo-celebration.jpg" 
             alt="Salida a Bolsa 2021" 
-            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+            // CAMBIO: object-center suele funcionar mejor para fotos de grupo que object-top en móvil
+            className="w-full h-full object-cover object-center md:object-top group-hover:scale-105 transition-transform duration-700"
             />
 
              
-             {/* TEXTO: Se lee gracias al drop-shadow, sin oscurecer la foto */}
-             <div className="absolute bottom-0 left-0 p-8 md:p-16 w-full max-w-4xl">
-                <div className="bg-[#00C2FF] text-black text-sm font-bold px-4 py-1.5 inline-block rounded mb-4 shadow-xl border border-white/20">
+             {/* TEXTO: Ajustado para móvil */}
+             <div className="absolute bottom-0 left-0 p-6 md:p-16 w-full max-w-4xl bg-gradient-to-t from-black/80 via-black/40 to-transparent md:bg-none">
+                <div className="bg-[#00C2FF] text-black text-xs md:text-sm font-bold px-3 py-1 md:px-4 md:py-1.5 inline-block rounded mb-2 md:mb-4 shadow-xl border border-white/20">
                   HITO HISTÓRICO 2021
                 </div>
-                <h3 className="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
+                {/* Tamaños de texto reducidos en móvil para que no tapen la foto */}
+                <h3 className="text-2xl md:text-6xl font-bold mb-2 md:mb-4 text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
                   Primera Cotizada del Sector
                 </h3>
-                <p className="text-white font-medium text-lg md:text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] leading-relaxed">
+                <p className="text-white font-medium text-sm md:text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] leading-relaxed hidden md:block">
+                    {/* Ocultamos la descripción larga en móvil si tapa mucho la foto, 
+                        o puedes dejarla visible quitando 'hidden md:block' */}
                   WONLY hizo historia al convertirse en la primera empresa de seguridad inteligente en listar en la Bolsa de Shanghai (Main Board).
+                </p>
+                {/* Versión corta del texto para móvil (opcional) */}
+                <p className="text-white/90 text-sm md:hidden drop-shadow-md">
+                  Primera empresa de seguridad inteligente en la Bolsa de Shanghai.
                 </p>
              </div>
           </motion.div>

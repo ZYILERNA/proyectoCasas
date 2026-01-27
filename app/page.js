@@ -244,21 +244,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* =========================================
-          5. BANNER FINAL DE CONTACTO
-         ========================================= */}
-      <section className="py-20 bg-[#00C2FF]">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-black text-3xl md:text-5xl font-bold uppercase tracking-tighter mb-8">
-            ¿Tienes un proyecto en mente?
-          </h2>
-          <Link 
+{/* 6. FOOTER VISUAL */}
+      <section className="relative py-24 border-t border-white/10 overflow-hidden">
+         <div className="absolute inset-0 opacity-20">
+            <div className="absolute right-0 top-0 w-[500px] h-[500px] bg-[#00C2FF] blur-[150px] rounded-full mix-blend-screen"/>
+         </div>
+         
+         <div className="container mx-auto px-6 text-center relative z-10">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">El Futuro de la Seguridad</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto mb-10 text-lg">
+              Contáctanos para recibir asesoramiento técnico personalizado y catálogos exclusivos.
+            </p>
+            <Link 
             href="/contacto" 
-            className="inline-block bg-black text-white px-10 py-5 font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-300 transform hover:-translate-y-1 shadow-2xl"
-          >
-            Hablemos
-          </Link>
-        </div>
+            className="inline-block bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-[#00C2FF] hover:text-white transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-[#00C2FF]/50">
+               CONTACTAR CON VENTAS
+            </Link>
+         </div>
       </section>
 
     </main>
