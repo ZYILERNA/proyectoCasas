@@ -1071,17 +1071,20 @@ export default function CerradurasPage() {
          {selectedProduct && <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />}
       </AnimatePresence>
 
-      {/* CTA FINAL */}
-      <section className="py-20 bg-[#00C2FF] text-black text-center">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl md:text-5xl font-bold uppercase mb-6">Máxima Seguridad</h2>
-          <Link 
+      {/* 5. FOOTER VISUAL: CALL TO ACTION */}
+      <section className="relative py-24 border-t border-white/10 overflow-hidden">
+         <div className="absolute inset-0 opacity-20">
+            <div className="absolute right-0 top-0 w-[500px] h-[500px] bg-[#00C2FF] blur-[150px] rounded-full mix-blend-screen"/>
+         </div>
+         
+         <div className="container mx-auto px-6 text-center relative z-10">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">El Futuro de la Seguridad</h2>
+            <Link 
             href="/contacto" 
-            className="inline-block bg-black text-white px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-black transition duration-300"
-          >
-            Contactar ahora
-          </Link>
-        </div>
+            className="bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-[#00C2FF] hover:text-white transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-[#00C2FF]/50">
+               CONTACTAR CON VENTAS
+            </Link>
+         </div>
       </section>
 
     </main>
