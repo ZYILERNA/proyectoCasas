@@ -502,7 +502,7 @@ const MODELOS = [
     name: "S922 Full Auto",
     category: "Premium Automática",
     type: "Face ID + Auto Lock",
-    img: "/images/CERRADURA/s922.png",
+    img: "/images/CERRADURA/s922.jpg",
     description: "Cerradura inteligente totalmente automática construida en aleación de aluminio. Experiencia de acceso fluida 'manos libres' gracias a su motorización completa.",
     specs: [
       { value: "Auto", label: "Mecanismo" },
