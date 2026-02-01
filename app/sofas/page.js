@@ -104,31 +104,16 @@ const sofasData = [
         assembly: "Assembled / 1 piece",
         pillows: "3 pieces (500*450)"
     },
-    colors: [
-        { 
-            part: "Main body", 
-            code: "BLRB0015", 
-            material: "Fabric", 
-            interchangeable: true 
-        },
-        { 
-            part: "Waist-position decoration", 
-            code: "PLQQ0004", 
-            material: "Genuine leather", 
-            interchangeable: false 
-        },
-        { 
-            part: "Solid wood foot", 
-            code: "Huayi Red (High gloss)", 
-            material: "Birch wood", 
-            interchangeable: false 
-        }
-    ],
     materials: [
         { part: "Main Body", material: "Fabric (BLMM0122T)", detail: "Interchangeable" },
         { part: "Structure", material: "Ash Wood", detail: "Oil-wax color" },
         { part: "Foot Frame", material: "Stainless Steel", detail: "Brushed Gunmetal" }
     ],
+    colors: {
+        interior: [
+            { name: "Slate Grid Fabric", hex: "#9BA4B1" } 
+        ]
+    },
     configurations: [
         { code: "1D", size: "1120mm", vol: "0.98m³", price: 15850 }, 
         { code: "2D", size: "2000mm", vol: "1.66m³", price: 27850 },
@@ -170,6 +155,11 @@ const sofasData = [
         { part: "Filling", material: "High Density Foam", detail: "Custom Softness avail." },
         { part: "Legs", material: "Hidden Type", detail: "Low Profile" }
     ],
+    colors: {
+    interior: [
+        { name: "Charcoal Soft Matte", hex: "#4A4644" } 
+    ] 
+    },
     configurations: [
         { code: "2LE", size: "Left 2-Seater", vol: "1.18m³", price: 29650 },
         { code: "1S", size: "Single Unit", vol: "0.85m³", price: 19080 },
@@ -210,6 +200,11 @@ const sofasData = [
         { part: "Details", material: "Piping", detail: "Black Nylon Webbing" },
         { part: "Legs", material: "Stainless Steel", detail: "Brushed Space Gold" }
     ],
+    colors: {
+    interior: [
+        { name: "Heather Grey Weave", hex: "#A39E9E" }
+    ]
+    },
     configurations: [
         { code: "2LE", size: "Left 2-Seater", vol: "1.85m³", price: 18500 },
         { code: "LE-A", size: "Curved Corner", vol: "1.65m³", price: 16200 },
@@ -254,6 +249,11 @@ const sofasData = [
         { part: "Wooden box cabinet", material: "Leather", detail: "Color: GLWR0002" },
         { part: "Details", material: "Piping (Nylon)", detail: "Black webbing" }
     ],
+    colors: {
+    interior: [
+        { name: "Cream Textured Bouclé", hex: "#E5E1D9" }
+    ]
+    },
     configurations: [
         { code: "Group", size: "Full Modular Set", vol: "4.17m³", price: 109260 },
         { code: "1RE Soft", size: "Soft Armrest Unit", vol: "1.12m³", price: 29690 },
@@ -294,6 +294,11 @@ const sofasData = [
         { part: "Main body", material: "Genuine leather", detail: "Color: PLBQ0059 (Not washable)" },
         { part: "Legs", material: "Hardware foot", detail: "Brushed Gunmetal" }
     ],
+    colors: {
+    interior: [
+        { name: "Sand Grained Leather", hex: "#A8A292" }
+    ]
+    },
     configurations: [
         { code: "3RE+LS", size: "3-Seater Corner Group", vol: "2.71m³", price: 70460 },
         { code: "3D", size: "3-Seater Standard", vol: "1.78m³", price: 45060 },
@@ -331,6 +336,11 @@ const sofasData = [
         { part: "Details", material: "Leather belt (Saddle leather)", detail: "Color: GLMA0002" },
         { part: "Legs", material: "Stainless steel", detail: "Brushed Gunmetal" }
     ],
+    colors: {
+    interior: [
+        { name: "Anthracite Smooth Leather", hex: "#6D6D6D" }
+    ]
+    },
     configurations: [
         { code: "4D", size: "4-Seater", vol: "2.49m³", price: 43260 },
         { code: "3D", size: "3-Seater Large", vol: "2.23m³", price: 39620 },
@@ -365,38 +375,19 @@ const sofasData = [
         assembly: "Disassembled and Assembled / 5 pieces",
         pillows: "4 pieces (500*500)"
     },
-    colors: [
-        { 
-            part: "Main body", 
-            code: "BLQT0186", 
-            material: "Fabric", 
-            interchangeable: true 
-        },
-        { 
-            part: "Wooden box frame/backrest", 
-            code: "GLBZ0012", 
-            material: "Braided leather", 
-            interchangeable: true 
-        },
-        { 
-            part: "Solid wood foot", 
-            code: "Oil-wax color", 
-            material: "Ash wood", 
-            interchangeable: false 
-        },
-        { 
-            part: "Hardware foot", 
-            code: "Brushed Space Gold", 
-            material: "Stainless steel", 
-            interchangeable: false 
-        }
-    ],
+   
     materials: [
         { part: "Main Body", material: "Fabric (BLQT0186/HY7012-5T)", detail: "Interchangeable" },
         { part: "Frame/Backrest", material: "Braided Leather (GLBZ0012/HY9105)", detail: "Interchangeable" },
         { part: "Structure Foot", material: "Ash Wood", detail: "Oil-wax color" },
         { part: "Hardware", material: "Stainless Steel", detail: "Brushed Space Gold" }
-    ],
+    ], 
+    colors: {
+    interior: [
+        { name: "Obsidian Textured Weave", hex: "#353535" },
+        { name: "Midnight Geometric Matte", hex: "#1A1A1A" }
+    ]
+    },
     configurations: [
         { code: "Main Group", size: "3320*2660mm", vol: "2.38m³", price: 39450 }, 
         { code: "2LE-A", size: "1420mm", vol: "0.72m³", price: 11850 },
@@ -438,6 +429,12 @@ const sofasData = [
         { part: "Main body (Fabric)", material: "Fabric", detail: "Color: BLQT0001 (Modules R-A+1S+1RE-B)" },
         { part: "Quilted edge/Piping", material: "Eco-leather", detail: "Color: PLST0012" }
     ],
+    colors: {
+    interior: [
+        { name: "Mocca Smooth Matte", hex: "#73675B" },
+        { name: "Desert Tweed Weave", hex: "#9E968A" }
+    ]
+    },
     configurations: [
         { code: "Group", size: "L-B+1S+R-A+1S+1RE-B", vol: "6.65m³", price: 62440 },
         { code: "1RE-B", size: "Corner Unit", vol: "1.18m³", price: 16060 },
@@ -477,6 +474,12 @@ const sofasData = [
         { part: "Main body (Mix)", material: "Fabric", detail: "Color: BLMM0046" },
         { part: "Maintenance", material: "Note", detail: "Not washable" }
     ],
+    colors: {
+    interior: [
+        { name: "Obsidian Grained Leather", hex: "#1A1A1B" },
+        { name: "Polar Grid Weave", hex: "#D9D9D9" }
+    ]
+    },
     configurations: [
         { code: "Group", size: "Complete Set", vol: "4.79m³", price: 47480 },
         { code: "1S (Square)", size: "Square Grid Module", vol: "0.87m³", price: 6960 },
@@ -527,6 +530,12 @@ const sofasData = [
         { part: "Metal foot", material: "Stainless steel", detail: "Brushed Gunmetal" },
         { part: "Cabinet/Plate", material: "MDF", detail: "Oil-wax color" }
     ],
+    colors: {
+    interior: [
+        { name: "Stone Texture Weave", hex: "#C2BCB2" },
+        { name: "Storm Grey Matte", hex: "#4E525A" }
+    ]
+    },
     configurations: [
         { code: "Group Set", size: "Complete Set (A+B)", vol: "6.53m³", price: 83710 },
         { code: "A:2RE-D", size: "Right End Module", vol: "1.85m³", price: 26190 },
@@ -588,6 +597,12 @@ const sofasData = [
         { part: "Hardware foot", material: "Stainless steel", detail: "Brushed Antique Bronze" },
         { part: "Decorative buckle", material: "Stainless steel", detail: "Mirror Steel Japanese Gold" }
     ],
+    colors: {
+    interior: [
+        { name: "Earth Texture Bouclé", hex: "#8A8279" },
+        { name: "Chestnut Smooth Matte", hex: "#634734" }
+    ]
+    },
     configurations: [
         { code: "Group", size: "Complete Set", vol: "6.97m³", price: 69560 },
         { code: "LS", size: "Chaise Module", vol: "2.26m³", price: 22260 },
@@ -631,6 +646,12 @@ const sofasData = [
         { part: "Decoration", material: "Stainless steel", detail: "Brushed Space Gold" },
         { part: "Feet", material: "Stainless steel", detail: "Brushed Gunmetal" }
     ],
+    colors: {
+    interior: [
+        { name: "Arctic White Bouclé", hex: "#F2F2F0" },
+        { name: "Onyx Grained Leather", hex: "#2C2C2C" }
+    ]
+    },
     configurations: [
         { code: "Group Set", size: "Complete Set", vol: "6.27m³", price: 80350 },
         { code: "1LE-B", size: "Left End Module", vol: "1.22m³", price: 18060 },
@@ -672,6 +693,11 @@ const sofasData = [
         { part: "Sofa feet", material: "Metal", detail: "Space Gray" },
         { part: "Customization", material: "Note", detail: "Extend/shorten by multiples of 230mm" }
     ],
+    colors: {
+    interior: [
+        { name: "Graphite Melange Weave", hex: "#7E7873" }
+    ]
+    },  
     configurations: [
         { code: "Group", size: "Complete Set", vol: "1.89m³", price: 18580 },
         { code: "2S", size: "2-Seater Module", vol: "1.23m³", price: 10250 },
@@ -713,6 +739,12 @@ const sofasData = [
         { part: "Tabletop", material: "Marble", detail: "Emerald in the Clouds (Oil-bright)" },
         { part: "Metal foot/Base", material: "Stainless steel", detail: "Brushed Gunmetal" }
     ],
+    colors: {
+    interior: [
+        { name: "Pearl Grid Weave", hex: "#D6D3D1" },
+        { name: "Shadow Grey Matte", hex: "#5C5C5C" }
+    ]
+    },
     configurations: [
         { code: "Group Set", size: "Complete Set", vol: "4.81m³", price: 124280 },
         { code: "LE", size: "Corner Module", vol: "1.45m³", price: 27760 },
@@ -756,6 +788,11 @@ const sofasData = [
     materials: [
         { part: "Main body", material: "Matte genuine leather", detail: "Color: PLMS0012" }
     ],
+    colors: {
+    interior: [
+        { name: "Taupe Velvet Weave", hex: "#9B8E85" }
+    ]
+    },
     configurations: [
         { code: "Group", size: "Complete Set", vol: "2.75m³", price: 47300 },
         { code: "2LE", size: "Left Module", vol: "1.37m³", price: 23650 },
@@ -791,6 +828,11 @@ const sofasData = [
         { part: "Sofa feet", material: "Ash wood", detail: "Oil-wax color" },
         { part: "Foot / Bottom frame", material: "Stainless steel", detail: "Brushed Japanese Gold" }
     ],
+    colors: {
+    interior: [
+        { name: "Oatmeal Linen Weave", hex: "#D9D1C5" }
+    ]
+    },
     configurations: [
         { code: "Group", size: "Complete Set", vol: "2.68m³", price: 38980 },
         { code: "3LE", size: "3-Seater Left", vol: "1.67m³", price: 22280 },
@@ -830,6 +872,12 @@ const sofasData = [
         { part: "Main body (LS-A)", material: "Genuine leather", detail: "Color: PLBQ0033" },
         { part: "Decorative piece", material: "Stainless steel", detail: "Brushed Japanese Gold" }
     ],
+    colors: {
+    interior: [
+        { name: "Mineral Texture Weave", hex: "#B8B3AC" },
+        { name: "Pebble Smooth Matte", hex: "#A4998E" }
+    ]
+    },
     configurations: [
         { code: "Group Set", size: "Complete Set (Mix)", vol: "6.12m³", price: 59110 },
         { code: "LS-A", size: "Chaise Module", vol: "1.82m³", price: 12100 },
@@ -871,6 +919,11 @@ const sofasData = [
         { part: "Main body", material: "Fabric", detail: "Color: BLMR0005" },
         { part: "Alternative", material: "Fabric", detail: "Color: BLMR0011 (Price: 15050)" }
     ],
+    colors: {
+    interior: [
+        { name: "Cloud Grey Matte", hex: "#D1D5D9" }
+    ]
+    },
     configurations: [
         { code: "4LS", size: "4-Seater Module", vol: "2.65m³", price: 15900 },
         { code: "3RE", size: "3-Seater Right", vol: "2.07m³", price: 13860 },
@@ -905,6 +958,12 @@ const sofasData = [
         { part: "Decorative leather", material: "Genuine leather", detail: "Color: PLQQ0004" },
         { part: "Solid wood foot", material: "Birch wood", detail: "Huayi Red (High gloss)" }
     ],
+    colors: {
+    interior: [
+        { name: "Sienna Texture Weave", hex: "#63433B" },
+        { name: "Coffee Smooth Matte", hex: "#5C4037" }
+    ]
+    },
     configurations: [
         { code: "1S", size: "Single Seater", vol: "1.28m³", price: 6960 }
     ],
@@ -1169,32 +1228,54 @@ export default function SofasPage() {
                                     </div>
                                 </div>
 
-                                {/* COLORES Y ACABADOS */}
+                                {/* COLORES Y ACABADOS - ACTUALIZADO */}
                                 {selectedSofa.colors && (
-                                    <div>
-                                       <h3 className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-100 pb-2 mb-3 flex items-center gap-2">
-                                         <Palette size={14} /> Acabados y Materiales
-                                       </h3>
-                                       <div className="grid grid-cols-1 gap-3">
-                                         {selectedSofa.colors.map((color, idx) => (
-                                           <div key={idx} className="flex items-center gap-3 p-3 rounded-lg border border-gray-100 bg-white hover:border-gray-300 transition-colors">
-                                             <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 ${color.interchangeable ? 'bg-blue-50 text-blue-600 border border-blue-100' : 'bg-gray-100 text-gray-400'}`}>
-                                                {color.interchangeable ? <RefreshCw size={14} /> : <Lock size={14} />}
-                                             </div>
-                                             <div className="flex-1 min-w-0">
-                                               <div className="flex justify-between items-baseline mb-0.5">
-                                                  <span className="text-[10px] font-bold uppercase text-gray-400 tracking-wide truncate">{color.part}</span>
-                                                  {color.interchangeable && (
-                                                    <span className="text-[9px] font-bold bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded ml-2 whitespace-nowrap">Opcional</span>
-                                                  )}
-                                               </div>
-                                               <div className="text-sm font-bold text-gray-900 truncate" title={color.code}>{color.code}</div>
-                                               <div className="text-xs text-gray-500 truncate">{color.material}</div>
-                                             </div>
-                                           </div>
-                                         ))}
-                                       </div>
+                                <div>
+                                    <h3 className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-100 pb-2 mb-3 flex items-center gap-2">
+                                    <Palette size={14} /> Acabados y Carta de Colores
+                                    </h3>
+                                    
+                                    {/* Visualizador de Muestras Circulares */}
+                                    <div className="flex flex-wrap gap-4 mb-6 p-4 bg-gray-50 rounded-xl justify-center md:justify-start">
+                                    {selectedSofa.colors.interior?.map((color, i) => (
+                                        <div key={i} className="text-center group flex flex-col items-center gap-2 cursor-help">
+                                        <div 
+                                            className="w-12 h-12 rounded-full shadow-md border-2 border-white group-hover:scale-110 transition-transform duration-300" 
+                                            style={{ 
+                                            backgroundColor: color.hex,
+                                            backgroundImage: color.name.includes("Grid") ? 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)' : 'none',
+                                            backgroundSize: '4px 4px'
+                                            }}
+                                            title={color.name}
+                                        ></div>
+                                        <span className="text-[9px] text-gray-500 uppercase font-bold max-w-[60px] leading-tight">
+                                            {color.name}
+                                        </span>
+                                        </div>
+                                    ))}
                                     </div>
+
+                                    {/* Lista Detallada de Materiales (Tu estructura original mejorada) */}
+                                    <div className="grid grid-cols-1 gap-3">
+                                    {selectedSofa.materials?.map((mat, idx) => (
+                                        <div key={idx} className="flex items-center gap-3 p-3 rounded-lg border border-gray-100 bg-white hover:border-gray-300 transition-colors">
+                                        <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 ${mat.detail === 'Interchangeable' ? 'bg-blue-50 text-blue-600 border border-blue-100' : 'bg-gray-100 text-gray-400'}`}>
+                                            {mat.detail === 'Interchangeable' ? <RefreshCw size={14} /> : <Lock size={14} />}
+                                        </div>
+                                        <div className="flex-1 min-w-0">
+                                            <div className="flex justify-between items-baseline mb-0.5">
+                                            <span className="text-[10px] font-bold uppercase text-gray-400 tracking-wide truncate">{mat.part}</span>
+                                            {mat.detail === 'Interchangeable' && (
+                                                <span className="text-[9px] font-bold bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded ml-2 whitespace-nowrap">Opcional</span>
+                                            )}
+                                            </div>
+                                            <div className="text-sm font-bold text-gray-900 truncate">{mat.material}</div>
+                                            <div className="text-xs text-gray-500 truncate">{mat.detail}</div>
+                                        </div>
+                                        </div>
+                                    ))}
+                                    </div>
+                                </div>
                                 )}
 
                                 {/* COMPOSICIÓN */}
