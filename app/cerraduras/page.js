@@ -497,36 +497,6 @@ const MODELOS = [
     ],
     colors: { interior: [{ name: "Negro", hex: "#000000" }] }
   },
-
-  {
-    id: "s958-pro",
-    name: "S958 Pro Capture",
-    category: "Seguridad Visual",
-    type: "Capture + App Control",
-    img: "/images/CERRADURA/s958.png",
-    description: "Seguridad activa con captura automática de imágenes y acabado de precisión. Control remoto total desde la App y cuerpo de aleación reforzado.",
-    specs: [
-      { value: "Foto", label: "Captura" },
-      { value: "App", label: "Control" },
-      { value: "Auto", label: "Cierre" }
-    ],
-    details: {
-      seguridad: "Captura de imágenes de quien llama",
-      reconocimiento: "Facial + Huella + App",
-      acabado: "Aleación de aluminio de precisión",
-      extras: "Incluye mando (Control remoto)",
-      mecanismo: "Totalmente Automático",
-      emergencia: "Puerto USB-C externo"
-    },
-    performance: [
-      { icon: <Smartphone size={20}/>, label: "Control", value: "App", level: "Gestión Total" },
-      { icon: <Camera size={20}/>, label: "Vigilancia", value: "Captura", level: "Foto Auto" },
-      { icon: <Cpu size={20}/>, label: "Mecanismo", value: "Auto", level: "Cierre Suave" },
-      { icon: <ShieldCheck size={20}/>, label: "Cuerpo", value: "Aleación", level: "Reforzado" }
-    ],
-    colors: { interior: [{ name: "Negro", hex: "#000000" }] }
-  },
-
   {
     id: "s922-wonly",
     name: "S922 Full Auto",
