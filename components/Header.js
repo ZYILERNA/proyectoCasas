@@ -84,15 +84,15 @@ export default function Header() {
                   <ul className="space-y-3">
                     <MenuItem href="/puertas" text="Puertas de Seguridad" />
                     <MenuItem href="/ventanas" text="Ventanas" />
-                    
-                    {/* --- NUEVO ITEM AQUÍ --- */}
                     <MenuItem href="/cerraduras" text="Cerraduras Inteligentes" />
                     
                     <li className="w-full h-px bg-white/10 my-2"></li> {/* Separador */}
                     
                     <MenuItem href="/sofas" text="Sofás" />
-                    <MenuItem href="/mesas-centro" text="Mesas de Centro" />
-                    <MenuItem href="/mesas-comedor" text="Mesas de Comedor" />
+                    
+                    {/* --- CAMBIO REALIZADO: Unificado en "Mesas" --- */}
+                    <MenuItem href="/mesas" text="Mesas" />
+                    
                     <MenuItem href="/sillas" text="Sillas y Sillones" />
                     <MenuItem href="/dormitorio" text="Dormitorio" />
                     <MenuItem href="/almacenaje" text="Armarios y Almacenaje" />
@@ -156,7 +156,6 @@ export default function Header() {
               Ventanas
             </Link>
 
-            {/* --- NUEVO ITEM MOVIL AQUÍ --- */}
             <Link 
               href="/cerraduras" 
               onClick={closeMobileMenu}
@@ -190,8 +189,10 @@ export default function Header() {
             </h3>
             <ul className="flex flex-col gap-3 pl-2 border-l border-white/10">
               <MobileMenuItem href="/sofas" text="Sofás" close={closeMobileMenu} />
-              <MobileMenuItem href="/mesas-centro" text="Mesas de Centro" close={closeMobileMenu} />
-              <MobileMenuItem href="/mesas-comedor" text="Mesas de Comedor" close={closeMobileMenu} />
+              
+              {/* --- CAMBIO REALIZADO: Unificado en "Mesas" --- */}
+              <MobileMenuItem href="/mesas" text="Mesas" close={closeMobileMenu} />
+              
               <MobileMenuItem href="/sillas" text="Sillas y Sillones" close={closeMobileMenu} />
               <MobileMenuItem href="/dormitorio" text="Dormitorio" close={closeMobileMenu} />
               <MobileMenuItem href="/almacenaje" text="Armarios" close={closeMobileMenu} />

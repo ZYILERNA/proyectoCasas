@@ -1,11 +1,16 @@
 "use client";
 
-import { useState, useMemo, useEffect, Suspense } from 'react';
+import { useState, useMemo, useEffect, Suspense, useRef } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion'; 
-import { X, ChevronRight, ScanFace, ShieldCheck, VolumeX, Sparkles, MoveHorizontal, Palette, Settings, Flame, Zap, Filter, Loader2 } from 'lucide-react';
-import { supabase } from '@/lib/supabase';
+import { X, ChevronRight, ScanFace, ShieldCheck, VolumeX, Sparkles, MoveHorizontal, Palette, Settings, Flame, Filter, Loader2 } from 'lucide-react';
+import { createClient } from '@supabase/supabase-js';
+
+// --- CONFIGURACIÓN SUPABASE (Para asegurar que funcione al copiar/pegar) ---
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+const supabase = createClient(supabaseUrl, supabaseKey);
 
 // --- 1. CONFIGURACIÓN VISUAL Y CATEGORÍAS ---
 
@@ -92,7 +97,7 @@ const FilterButton = ({ label, active, onClick }) => (
   </button>
 );
 
-// --- MODAL CON ANIMACIONES DE FRAMER MOTION ---
+// --- MODAL OPTIMIZADO PARA VELOCIDAD ---
 const ProductModal = ({ product, onClose }) => {
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -115,21 +120,22 @@ const ProductModal = ({ product, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-[100] flex justify-end">
-      {/* Backdrop con animación suave */}
+      {/* Backdrop: Usamos bg-black/60 sin blur para rendimiento */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm" 
+        className="absolute inset-0 bg-black/60" 
         onClick={onClose}
       />
 
-      {/* Panel deslizante */}
+      {/* Panel deslizante: Acelerado por GPU y con físicas rápidas */}
       <motion.div 
         initial={{ x: "100%" }}
         animate={{ x: 0 }}
         exit={{ x: "100%" }}
-        transition={{ type: "spring", damping: 25, stiffness: 200 }}
+        transition={{ type: "spring", damping: 30, stiffness: 350, mass: 0.8 }}
+        style={{ willChange: "transform" }}
         className="relative bg-white w-full max-w-[900px] h-full shadow-2xl flex flex-col md:flex-row z-10"
       >
         <button onClick={onClose} className="absolute top-4 left-4 z-20 p-2 bg-white/80 backdrop-blur rounded-full hover:bg-black hover:text-white transition"><X size={20} /></button>
@@ -137,12 +143,18 @@ const ProductModal = ({ product, onClose }) => {
         {/* Imagen en Modal */}
         <div className="w-full md:w-1/2 bg-[#F8F8F8] relative min-h-[300px] md:h-full flex items-center justify-center p-10">
            <motion.div 
-             initial={{ scale: 0.9, opacity: 0 }}
+             initial={{ scale: 0.95, opacity: 0 }}
              animate={{ scale: 1, opacity: 1 }}
-             transition={{ delay: 0.2 }}
+             transition={{ delay: 0.1, duration: 0.3 }}
              className="relative w-full h-full max-h-[500px]"
            >
-             <Image src={product.img} alt={product.name} fill className="object-contain mix-blend-multiply" />
+             <Image 
+                src={product.img} 
+                alt={product.name} 
+                fill 
+                priority // Carga prioritaria
+                className="object-contain mix-blend-multiply" 
+             />
            </motion.div>
         </div>
 
@@ -161,9 +173,9 @@ const ProductModal = ({ product, onClose }) => {
                 <ul className="space-y-2">
                   {product.features?.map((feat, i) => (
                     <motion.li 
-                      initial={{ opacity: 0, x: 20 }}
+                      initial={{ opacity: 0, x: 10 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.1 * i }}
+                      transition={{ delay: 0.05 * i }}
                       key={i} 
                       className="flex items-start gap-2 text-xs text-gray-600"
                     >
@@ -251,8 +263,8 @@ const ProductModal = ({ product, onClose }) => {
   );
 };
 
-// --- PRODUCT CARD (ESTILO VISUAL SOLICITADO + ANIMACIONES) ---
-const ProductCard = ({ product, onClick }) => {
+// --- PRODUCT CARD (SIN LAYOUT SHIFT) ---
+const ProductCard = ({ product, onClick, priority = false }) => {
   const shortCategory = product.category
     .replace("PUERTA DE ", "")
     .replace("PUERTA ", "")
@@ -267,20 +279,21 @@ const ProductCard = ({ product, onClick }) => {
 
   return (
     <motion.div 
-      layout
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.9 }}
-      transition={{ duration: 0.3 }}
+      // Eliminado 'layout' para evitar cálculos pesados
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.2 }}
       onClick={onClick} 
       className="group cursor-pointer flex flex-col h-full"
     >
-      {/* IMAGEN FLOTANTE CON PADDING Y OVERLAY (Estilo page (1).js) */}
+      {/* IMAGEN FLOTANTE */}
       <div className="relative aspect-[3/5] bg-[#FCFCFC] mb-4 overflow-hidden border border-transparent group-hover:border-gray-100 transition-all rounded-sm">
         <Image 
           src={product.img} 
           alt={product.name} 
           fill 
+          priority={priority} // Carga prioritaria si es de los primeros
           className="object-contain p-6 transition-transform duration-700 group-hover:scale-110 mix-blend-multiply" 
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
@@ -293,7 +306,7 @@ const ProductCard = ({ product, onClick }) => {
         </div>
       </div>
       
-      {/* TEXTO (Alineación dinámica centro -> izquierda) */}
+      {/* TEXTO */}
       <div className="text-center group-hover:text-left transition-all">
         <h4 className={`font-bold text-base text-gray-900 transition-colors uppercase ${
           product.category.includes("MADERA") ? "group-hover:text-[#8D6E63]" : 
@@ -308,7 +321,7 @@ const ProductCard = ({ product, onClick }) => {
   );
 };
 
-// --- PÁGINA PRINCIPAL (LÓGICA SUPABASE) ---
+// --- PÁGINA PRINCIPAL ---
 function PuertasContent() {
   const searchParams = useSearchParams();
   const [activeCategory, setActiveCategory] = useState("TODAS");
@@ -317,6 +330,7 @@ function PuertasContent() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
+  const gridTopRef = useRef(null);
 
   // Inicializar categoría desde URL
   useEffect(() => {
@@ -327,22 +341,19 @@ function PuertasContent() {
   }, [searchParams]);
 
   // CARGAR DATOS DE SUPABASE
-useEffect(() => {
+  useEffect(() => {
     async function fetchProducts() {
       setLoading(true);
       
-      // 1. Preparamos la consulta base con el ORDEN
       let query = supabase
         .from('products')
         .select('*')
-        .order('id', { ascending: true }); // <--- CLAVE: Ordena por orden de creación
+        .order('id', { ascending: true });
 
-      // 2. Aplicamos filtro si no es "TODAS"
       if (activeCategory !== "TODAS") {
         query = query.eq('category', activeCategory);
       }
       
-      // 3. Ejecutamos la consulta
       const { data, error } = await query;
       
       if (error) {
@@ -356,7 +367,6 @@ useEffect(() => {
     fetchProducts();
   }, [activeCategory]);
 
-  // FILTRADO LOCAL (BUSCADOR)
   const displayProducts = useMemo(() => {
     if (searchTerm.trim() === "") return products;
     const term = searchTerm.toLowerCase();
@@ -366,29 +376,37 @@ useEffect(() => {
     );
   }, [products, searchTerm]);
 
+  // Scroll suave al cambiar categoría
+  const handleCategoryChange = (cat) => {
+    setActiveCategory(cat);
+    if(gridTopRef.current && window.scrollY > 300) {
+        gridTopRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
-    <main className="bg-white min-h-screen text-black pt-28 pb-20 font-sans">
+    <main className="bg-white min-h-screen text-black pt-28 pb-20 font-sans selection:bg-black selection:text-white">
       
       {/* HEADER */}
       <div className="container mx-auto px-6 mb-16 text-center">
          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-bold uppercase tracking-tighter text-black mb-6"
+           initial={{ opacity: 0, y: 20 }}
+           animate={{ opacity: 1, y: 0 }}
+           className="text-4xl md:text-6xl font-bold uppercase tracking-tighter text-black mb-6"
          >
             Wonly Collection
          </motion.h1>
          <motion.div 
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ delay: 0.2 }}
-            className="w-px h-12 bg-gray-200 mx-auto mb-6"
+           initial={{ scaleX: 0 }}
+           animate={{ scaleX: 1 }}
+           transition={{ delay: 0.2 }}
+           className="w-px h-12 bg-gray-200 mx-auto mb-6"
          />
          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="text-gray-500 max-w-lg mx-auto text-sm font-light leading-relaxed"
+           initial={{ opacity: 0 }}
+           animate={{ opacity: 1 }}
+           transition={{ delay: 0.3 }}
+           className="text-gray-500 max-w-lg mx-auto text-sm font-light leading-relaxed"
          >
            Catálogo completo Wonly. Tecnología IA, resistencia extrema, lujo en aluminio, colección acústica de madera y la nueva línea vanguardista en PVC.
          </motion.p>
@@ -399,31 +417,31 @@ useEffect(() => {
           
           {/* SIDEBAR (Escritorio) */}
           <aside className="hidden lg:block w-64 flex-shrink-0 sticky top-32 h-fit">
-             {/* Buscador */}
-             <div className="relative group mb-8">
-              <input 
-                type="text" 
-                placeholder="Buscar modelo..." 
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full bg-[#F9F9F9] border-none rounded-sm py-3 pl-10 pr-4 text-xs font-bold uppercase tracking-wider focus:ring-1 focus:ring-black transition-all outline-none"
-              />
-              <Sparkles className="absolute left-3 top-3 text-gray-400 group-focus-within:text-black transition-colors" size={14} />
-            </div>
+              {/* Buscador */}
+              <div className="relative group mb-8">
+               <input 
+                 type="text" 
+                 placeholder="Buscar modelo..." 
+                 value={searchTerm}
+                 onChange={(e) => setSearchTerm(e.target.value)}
+                 className="w-full bg-[#F9F9F9] border-none rounded-sm py-3 pl-10 pr-4 text-xs font-bold uppercase tracking-wider focus:ring-1 focus:ring-black transition-all outline-none"
+               />
+               <Sparkles className="absolute left-3 top-3 text-gray-400 group-focus-within:text-black transition-colors" size={14} />
+              </div>
 
-             <div className="mb-6 pb-2 border-b border-gray-100">
-               <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Categorías</span>
-             </div>
-             <div className="flex flex-col gap-1">
-                <FilterButton label="Ver Todo" active={activeCategory === "TODAS"} onClick={() => setActiveCategory("TODAS")} />
-                {CATEGORIAS.map((cat) => (
-                  <FilterButton key={cat} label={cat} active={activeCategory === cat} onClick={() => setActiveCategory(cat)} />
-                ))}
-             </div>
+              <div className="mb-6 pb-2 border-b border-gray-100">
+                <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Categorías</span>
+              </div>
+              <div className="flex flex-col gap-1">
+                 <FilterButton label="Ver Todo" active={activeCategory === "TODAS"} onClick={() => handleCategoryChange("TODAS")} />
+                 {CATEGORIAS.map((cat) => (
+                   <FilterButton key={cat} label={cat} active={activeCategory === cat} onClick={() => handleCategoryChange(cat)} />
+                 ))}
+              </div>
           </aside>
 
           {/* GRID PRODUCTOS */}
-          <section className="flex-grow">
+          <section className="flex-grow" ref={gridTopRef}>
             <div className="flex justify-between items-center mb-8 pb-4 border-b border-gray-100">
                <span className="text-xs font-bold uppercase tracking-widest text-gray-900">
                  {activeCategory === "TODAS" ? "Catálogo Completo" : activeCategory} <span className="text-gray-400 ml-2">({displayProducts.length})</span>
@@ -437,16 +455,18 @@ useEffect(() => {
                     <span className="text-xs tracking-widest uppercase">Cargando colección...</span>
                 </div>
             ) : (
-                <motion.div 
-                    layout 
-                    className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-12"
-                >
+                <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-12">
                     <AnimatePresence mode='popLayout'>
-                        {displayProducts.map((p) => (
-                            <ProductCard key={p.id} product={p} onClick={() => setSelectedProduct(p)} />
+                        {displayProducts.map((p, index) => (
+                            <ProductCard 
+                                key={p.id} 
+                                product={p} 
+                                onClick={() => setSelectedProduct(p)} 
+                                priority={index < 8} // Las primeras 8 imágenes cargan YA
+                            />
                         ))}
                     </AnimatePresence>
-                </motion.div>
+                </div>
             )}
 
             {!loading && displayProducts.length === 0 && (
@@ -480,9 +500,9 @@ useEffect(() => {
                     <button onClick={() => setIsMobileMenuOpen(false)}><X size={20}/></button>
                 </div>
                 <div className="flex flex-col gap-2 max-h-[60vh] overflow-y-auto">
-                <button onClick={() => {setActiveCategory("TODAS"); setIsMobileMenuOpen(false);}} className="text-left py-3 border-b text-xs font-bold uppercase">Ver Todo</button>
+                <button onClick={() => {handleCategoryChange("TODAS"); setIsMobileMenuOpen(false);}} className="text-left py-3 border-b text-xs font-bold uppercase">Ver Todo</button>
                 {CATEGORIAS.map(cat => (
-                    <button key={cat} onClick={() => {setActiveCategory(cat); setIsMobileMenuOpen(false);}} className="text-left py-3 border-b text-xs font-bold uppercase">{cat}</button>
+                    <button key={cat} onClick={() => {handleCategoryChange(cat); setIsMobileMenuOpen(false);}} className="text-left py-3 border-b text-xs font-bold uppercase">{cat}</button>
                 ))}
                 </div>
             </motion.div>
