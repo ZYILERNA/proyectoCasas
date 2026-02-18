@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronRight, ScanFace, ShieldCheck, VolumeX, Sparkles, MoveHorizontal, Palette, Settings, Flame, Filter, Loader2 } from 'lucide-react';
 import { createClient } from '@supabase/supabase-js';
 
-// --- CONFIGURACIÓN SUPABASE (Para asegurar que funcione al copiar/pegar) ---
+// --- CONFIGURACIÓN SUPABASE ---
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
@@ -97,6 +97,28 @@ const FilterButton = ({ label, active, onClick }) => (
   </button>
 );
 
+// --- COMPONENTE DE BÚSQUEDA REUTILIZABLE ---
+const SearchInput = ({ value, onChange }) => (
+  <div className="relative group w-full">
+    <input 
+      type="text" 
+      placeholder="BUSCAR MODELO..." 
+      value={value}
+      onChange={onChange}
+      className="w-full bg-[#F9F9F9] border-none rounded-sm py-3 pl-10 pr-8 text-xs font-bold uppercase tracking-wider focus:ring-1 focus:ring-black transition-all outline-none placeholder:text-gray-400"
+    />
+    <Sparkles className="absolute left-3 top-3 text-gray-400 group-focus-within:text-black transition-colors" size={14} />
+    {value && (
+        <button 
+            onClick={() => onChange({ target: { value: "" } })} 
+            className="absolute right-2 top-1/2 -translate-y-1/2 p-1 hover:bg-gray-200 rounded-full text-gray-400 transition-colors"
+        >
+            <X size={14} />
+        </button>
+    )}
+  </div>
+);
+
 // --- MODAL OPTIMIZADO PARA VELOCIDAD ---
 const ProductModal = ({ product, onClose }) => {
   useEffect(() => {
@@ -120,7 +142,7 @@ const ProductModal = ({ product, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-[100] flex justify-end">
-      {/* Backdrop: Usamos bg-black/60 sin blur para rendimiento */}
+      {/* Backdrop */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -129,7 +151,7 @@ const ProductModal = ({ product, onClose }) => {
         onClick={onClose}
       />
 
-      {/* Panel deslizante: Acelerado por GPU y con físicas rápidas */}
+      {/* Panel deslizante */}
       <motion.div 
         initial={{ x: "100%" }}
         animate={{ x: 0 }}
@@ -149,11 +171,11 @@ const ProductModal = ({ product, onClose }) => {
              className="relative w-full h-full max-h-[500px]"
            >
              <Image 
-                src={product.img} 
-                alt={product.name} 
-                fill 
-                priority // Carga prioritaria
-                className="object-contain mix-blend-multiply" 
+               src={product.img} 
+               alt={product.name} 
+               fill 
+               priority // Carga prioritaria
+               className="object-contain mix-blend-multiply" 
              />
            </motion.div>
         </div>
@@ -263,7 +285,7 @@ const ProductModal = ({ product, onClose }) => {
   );
 };
 
-// --- PRODUCT CARD (SIN LAYOUT SHIFT) ---
+// --- PRODUCT CARD ---
 const ProductCard = ({ product, onClick, priority = false }) => {
   const shortCategory = product.category
     .replace("PUERTA DE ", "")
@@ -279,7 +301,6 @@ const ProductCard = ({ product, onClick, priority = false }) => {
 
   return (
     <motion.div 
-      // Eliminado 'layout' para evitar cálculos pesados
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -298,7 +319,6 @@ const ProductCard = ({ product, onClick, priority = false }) => {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         
-        {/* Botón flotante al hacer hover */}
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 flex items-end justify-center pb-6">
            <span className="bg-white text-black text-[9px] font-bold uppercase px-3 py-2 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 shadow-sm tracking-widest">
              Ver Detalles
@@ -417,31 +437,30 @@ function PuertasContent() {
           
           {/* SIDEBAR (Escritorio) */}
           <aside className="hidden lg:block w-64 flex-shrink-0 sticky top-32 h-fit">
-              {/* Buscador */}
-              <div className="relative group mb-8">
-               <input 
-                 type="text" 
-                 placeholder="Buscar modelo..." 
-                 value={searchTerm}
-                 onChange={(e) => setSearchTerm(e.target.value)}
-                 className="w-full bg-[#F9F9F9] border-none rounded-sm py-3 pl-10 pr-4 text-xs font-bold uppercase tracking-wider focus:ring-1 focus:ring-black transition-all outline-none"
-               />
-               <Sparkles className="absolute left-3 top-3 text-gray-400 group-focus-within:text-black transition-colors" size={14} />
+              {/* Buscador Desktop */}
+              <div className="mb-8">
+                <SearchInput value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
               </div>
 
               <div className="mb-6 pb-2 border-b border-gray-100">
                 <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Categorías</span>
               </div>
               <div className="flex flex-col gap-1">
-                 <FilterButton label="Ver Todo" active={activeCategory === "TODAS"} onClick={() => handleCategoryChange("TODAS")} />
-                 {CATEGORIAS.map((cat) => (
-                   <FilterButton key={cat} label={cat} active={activeCategory === cat} onClick={() => handleCategoryChange(cat)} />
-                 ))}
+                  <FilterButton label="Ver Todo" active={activeCategory === "TODAS"} onClick={() => handleCategoryChange("TODAS")} />
+                  {CATEGORIAS.map((cat) => (
+                    <FilterButton key={cat} label={cat} active={activeCategory === cat} onClick={() => handleCategoryChange(cat)} />
+                  ))}
               </div>
           </aside>
 
           {/* GRID PRODUCTOS */}
           <section className="flex-grow" ref={gridTopRef}>
+            
+            {/* BUSCADOR MÓVIL (Añadido Aquí) */}
+            <div className="lg:hidden mb-6">
+                <SearchInput value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+            </div>
+
             <div className="flex justify-between items-center mb-8 pb-4 border-b border-gray-100">
                <span className="text-xs font-bold uppercase tracking-widest text-gray-900">
                  {activeCategory === "TODAS" ? "Catálogo Completo" : activeCategory} <span className="text-gray-400 ml-2">({displayProducts.length})</span>
