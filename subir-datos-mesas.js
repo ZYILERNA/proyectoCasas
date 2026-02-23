@@ -1277,404 +1277,68 @@ const tablesData = [
         { name: "Mesa Rincón Madera Burl", size: "390*320*520", price: 5890 }
     ]
   },
-  // PRODUCTO 40: MESA COMEDOR WYNDHAM GRAY
+  // PRODUCTO 40: MESA RINCÓN PRADA GREEN
   { 
-    id: "mesa-comedor-wyndham-gray", 
-    name: "Mesa Comedor Wyndham Gray", 
-    category: "Mesa de Comedor", 
-    code: "HYTL86101", 
-    priceBase: 25450, // Precio de la medida referencia (2100mm)
-    // RECUERDA: Guardar imagen en: /public/images/MESAS/COMEDOR/MESA40/render.jpg
-    image: "/images/MESAS/COMEDOR/MESA40/render.jpg", 
+    id: "mesa-rincon-prada-green-hg1911", 
+    name: "Mesa Rincón Prada Green", 
+    category: "Mesa Auxiliar", 
+    code: "HYJL82305-A/HG1911", 
+    priceBase: 8490, 
+    // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA40/render.jpg
+    image: "/images/MESAS/AUXILIAR/MESA40/render.jpg", 
     specs: { 
-        dimensions: "2100 * 1000 * 750 mm", 
-        volume: "0.82 m³", 
-        assembly: "Desmontable / 3 Piezas" 
-    },
-    materials: [
-        { part: "Sobre (Tabletop)", material: "Mármol Natural", detail: "Wyndham Gray (Oil-bright)" },
-        { part: "Estructura", material: "Madera de Fresno", detail: "Acabado Oil-wax" },
-        { part: "Zócalo Patas", material: "Acero Inoxidable", detail: "Brushed Gunmetal" }
-    ],
-    colors: {
-        interior: [
-            { name: "Wyndham Gray", hex: "#4A4A4A" },    // Gris oscuro veteado
-            { name: "Calacatta Gray", hex: "#D4D4D4" },  // Gris claro
-            { name: "Zilo Red", hex: "#8B4513" }          // Rojo/Marrón
-        ]
-    },
-    configurations: [
-        { code: "1800", desc: "Largo 1800mm", price: 23660 },
-        { code: "2100", desc: "Largo 2100mm", price: 25450 },
-        { code: "2400", desc: "Largo 2400mm", price: 29260 },
-        { code: "2600", desc: "Largo 2600mm", price: 32450 }
-    ],
-    priceList: [
-        // Variantes Wyndham Gray
-        { name: "Mesa 1800 (Wyndham)", size: "1800*900*750", price: 23660 },
-        { name: "Mesa 2100 (Wyndham)", size: "2100*1000*750", price: 25450 },
-        { name: "Mesa 2400 (Wyndham)", size: "2400*1100*750", price: 29260 },
-        { name: "Mesa 2600 (Wyndham)", size: "2600*1100*750", price: 32450 },
-        // Variantes Calacatta Gray
-        { name: "Mesa 1800 (Calacatta)", size: "1800*900*750", price: 25380 },
-        { name: "Mesa 2100 (Calacatta)", size: "2100*1000*750", price: 27590 },
-        { name: "Mesa 2400 (Calacatta)", size: "2400*1100*750", price: 32050 },
-        { name: "Mesa 2600 (Calacatta)", size: "2600*1100*750", price: 35290 },
-        // Variantes Zilo Red
-        { name: "Mesa 1800 (Zilo Red)", size: "1800*900*750", price: 22250 },
-        { name: "Mesa 2100 (Zilo Red)", size: "2100*1000*750", price: 23390 },
-        { name: "Mesa 2400 (Zilo Red)", size: "2400*1100*750", price: 26880 },
-        { name: "Mesa 2600 (Zilo Red)", size: "2600*1100*750", price: 29850 }
-    ]
-  },
-  // PRODUCTO 41: MESA COMEDOR REDONDA ZILO & WOOD
-  { 
-    id: "mesa-comedor-redonda-zilo", 
-    name: "Mesa Comedor Redonda Zilo", 
-    category: "Mesa de Comedor", 
-    code: "HYTL86102-B", 
-    priceBase: 28190, // Precio medida referencia (Ø1530mm)
-    // RECUERDA: Guardar imagen en: /public/images/MESAS/COMEDOR/MESA41/render.jpg
-    image: "/images/MESAS/COMEDOR/MESA41/render.jpg", 
-    specs: { 
-        dimensions: "Ø1530 * 760 mm (Mesa) + Ø920 mm (Giratorio)", 
-        volume: "1.24 m³", 
-        assembly: "Desmontable / 3 Piezas" 
-    },
-    materials: [
-        { part: "Sobre Principal", material: "MDF Grado E0", detail: "Acabado Oil-wax (Madera Oscura)" },
-        { part: "Plato Giratorio y Pie", material: "Mármol Natural", detail: "Zilo Red (Oil-bright)" },
-        { part: "Estructura Base", material: "Acero Inoxidable", detail: "Brushed Gunmetal" }
-    ],
-    colors: {
-        interior: [
-            { name: "Zilo Red Marble", hex: "#8B4513" },      // Rojo/Marrón veteado
-            { name: "Calacatta Gray", hex: "#D4D4D4" },       // Gris claro mate
-            { name: "French Red", hex: "#A52A2A" },           // Rojo intenso
-            { name: "Ancient Wood Grain", hex: "#2F2F2F" }    // Piedra negra veteada
-        ]
-    },
-    configurations: [
-        { code: "1380", desc: "Diámetro 1380mm", price: 27260 },
-        { code: "1530", desc: "Diámetro 1530mm", price: 28190 },
-        { code: "1800", desc: "Diámetro 1800mm", price: 31080 }
-    ],
-    priceList: [
-        // Variantes Zilo Red / Ancient Wood Grain (Mismo precio)
-        { name: "Mesa Ø1380 (Zilo/Ancient)", size: "Ø1380*760", price: 27260 },
-        { name: "Mesa Ø1530 (Zilo/Ancient)", size: "Ø1530*760", price: 28190 },
-        { name: "Mesa Ø1800 (Zilo/Ancient)", size: "Ø1800*760", price: 31080 },
-        // Variantes Calacatta Gray
-        { name: "Mesa Ø1380 (Calacatta)", size: "Ø1380*760", price: 29960 },
-        { name: "Mesa Ø1530 (Calacatta)", size: "Ø1530*760", price: 31260 },
-        { name: "Mesa Ø1800 (Calacatta)", size: "Ø1800*760", price: 34760 },
-        // Variantes French Red
-        { name: "Mesa Ø1380 (French Red)", size: "Ø1380*760", price: 28550 },
-        { name: "Mesa Ø1530 (French Red)", size: "Ø1530*760", price: 29590 },
-        { name: "Mesa Ø1800 (French Red)", size: "Ø1800*760", price: 32760 }
-    ]
-  },
-  // PRODUCTO 42: MESA COMEDOR MOON VALLEY BRONZE
-  { 
-    id: "mesa-comedor-moon-valley-bronze", 
-    name: "Mesa Comedor Moon Valley Bronze", 
-    category: "Mesa de Comedor", 
-    code: "HYTL86105-B", 
-    priceBase: 25550, 
-    // RECUERDA: Guardar imagen en: /public/images/MESAS/COMEDOR/MESA42/render.jpg
-    image: "/images/MESAS/COMEDOR/MESA42/render.jpg", 
-    specs: { 
-        dimensions: "2100 * 1000 * 750 mm", 
-        volume: "0.81 m³", 
+        dimensions: "980 * 608 * 380 mm", 
+        volume: "0.44 m³", 
         assembly: "Desmontable / 2 Piezas" 
     },
     materials: [
-        { part: "Sobre (Tabletop)", material: "Mármol Natural", detail: "Moon Valley (Oil-bright)" },
-        { part: "Patas Laterales", material: "Acero Inoxidable", detail: "Brushed Antique Bronze" },
-        { part: "Detalles Unión", material: "Acero Inoxidable", detail: "Mirror Steel Japanese Gold" }
+        { part: "Sobre (Tabletop)", material: "Mármol Natural", detail: "Prada Green (Oil-bright)" },
+        { part: "Estructura (Foot frame)", material: "Acero Inoxidable", detail: "Brushed Space Gold" }
     ],
     colors: {
         interior: [
-            { name: "Moon Valley", hex: "#8D7864" },          // Marrón bronce veteado
-            { name: "Snow Mountain Blue", hex: "#DCDFE1" },    // Blanco agrisado
-            { name: "Platinum Diamond", hex: "#8A8A8A" },      // Gris medio
-            { name: "Emerald in the Clouds", hex: "#7C827A" }  // Verde grisáceo
+            { name: "Prada Green", hex: "#1B2821" },       // Verde oscuro con vetas claras
+            { name: "Brushed Space Gold", hex: "#B49B68" } // Dorado cepillado
         ]
     },
     configurations: [
-        { code: "2100", desc: "Largo 2100mm", price: 25550 }
+        { code: "STD", desc: "980*608*380 mm", price: 8490 }
     ],
     priceList: [
-        { name: "Mesa Comedor Bronze Base", size: "2100*1000*750", price: 25550 }
+        { name: "Corner table", size: "980*608*380", price: 8490 }
     ]
   },
-  // PRODUCTO 43: MESA COMEDOR ITALIAN SPACE GRAY
+  // PRODUCTO 41: MESA RINCÓN CILÍNDRICA
   { 
-    id: "mesa-comedor-italian-space-gray", 
-    name: "Mesa Comedor Italian Space Gray", 
-    category: "Mesa de Comedor", 
-    code: "HYTL86108-A", 
-    priceBase: 24450, // Precio medida referencia (2100mm en Italian Space Gray)
-    // RECUERDA: Guardar imagen en: /public/images/MESAS/COMEDOR/MESA43/render.jpg
-    image: "/images/MESAS/COMEDOR/MESA43/render.jpg", 
+    id: "mesa-rincon-cilindrica-hg1913", 
+    name: "Mesa Rincón Cilíndrica", 
+    category: "Mesa Auxiliar", 
+    code: "HYJL82306/HG1913", 
+    priceBase: 5880, 
+    // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA41/render.jpg
+    image: "/images/MESAS/AUXILIAR/MESA41/render.jpg", 
     specs: { 
-        dimensions: "2100 * 1000 * 750 mm", 
-        volume: "0.77 m³", 
-        assembly: "Desmontable / 3 Piezas" 
+        dimensions: "Ø495 * 500 mm", 
+        volume: "0.18 m³", 
+        assembly: "Ensamblado / 1 Pieza" 
     },
     materials: [
-        { part: "Sobre (Tabletop)", material: "Mármol Natural", detail: "Italian Space Gray (Oil-matte)" },
-        { part: "Estructura Patas", material: "Madera de Fresno", detail: "Acabado Oil-wax (Negro)" },
-        { part: "Detalle Zócalo", material: "Acero Inoxidable", detail: "Brushed Space Gold" }
+        { part: "Cuerpo principal (Main body)", material: "Acero Inoxidable", detail: "Brushed Space Gold" },
+        { part: "Hebilla decorativa (Decorative buckle)", material: "Aleación de Zinc", detail: "Mirror Steel Japanese Gold" }
     ],
     colors: {
         interior: [
-            { name: "Italian Space Gray", hex: "#555555" },     // Gris medio mate
-            { name: "Snow White", hex: "#E5E5E5" },             // Blanco mate
-            { name: "Milky Way Starry Sky", hex: "#1A1A1A" },   // Negro con vetas
-            { name: "Wyndham Gray", hex: "#4A4A4A" }            // Gris oscuro veteado
+            { name: "Brushed Space Gold", hex: "#B19B6A" },         // Dorado cepillado (estimado de la muestra)
+            { name: "Mirror Steel Japanese Gold", hex: "#D4AF37" }  // Dorado brillante espejo (estimado)
         ]
     },
     configurations: [
-        { code: "1600", desc: "Largo 1600mm", price: 20950 },
-        { code: "1800", desc: "Largo 1800mm", price: 21650 },
-        { code: "2100", desc: "Largo 2100mm", price: 24450 },
-        { code: "2400", desc: "Largo 2400mm", price: 26880 },
-        { code: "2600", desc: "Largo 2600mm", price: 29750 },
-        { code: "2800", desc: "Largo 2800mm", price: 33560 }
+        { code: "STD", desc: "Ø495*500 mm", price: 5880 }
     ],
     priceList: [
-        // Variantes Italian Space Gray / Milky Way Starry Sky (Mismo precio)
-        { name: "Mesa 1600 (Space/Milky)", size: "1600*900*750", price: 20950 },
-        { name: "Mesa 1800 (Space/Milky)", size: "1800*900*750", price: 21650 },
-        { name: "Mesa 2100 (Space/Milky)", size: "2100*1000*750", price: 24450 },
-        { name: "Mesa 2400 (Space/Milky)", size: "2400*1000*750", price: 26880 },
-        { name: "Mesa 2600 (Space/Milky)", size: "2600*1100*750", price: 29750 },
-        { name: "Mesa 2800 (Space/Milky)", size: "2800*1100*750", price: 33560 },
-        // Variantes Snow White (Premium)
-        { name: "Mesa 1600 (Snow White)", size: "1600*900*750", price: 22590 },
-        { name: "Mesa 1800 (Snow White)", size: "1800*900*750", price: 23650 },
-        { name: "Mesa 2100 (Snow White)", size: "2100*1000*750", price: 26890 },
-        { name: "Mesa 2400 (Snow White)", size: "2400*1000*750", price: 29690 },
-        { name: "Mesa 2600 (Snow White)", size: "2600*1100*750", price: 33090 },
-        { name: "Mesa 2800 (Snow White)", size: "2800*1100*750", price: 37280 },
-        // Variantes Wyndham Gray (Opción más económica)
-        { name: "Mesa 1600 (Wyndham)", size: "1600*900*750", price: 19450 },
-        { name: "Mesa 1800 (Wyndham)", size: "1800*900*750", price: 19890 },
-        { name: "Mesa 2100 (Wyndham)", size: "2100*1000*750", price: 22250 },
-        { name: "Mesa 2400 (Wyndham)", size: "2400*1000*750", price: 24360 },
-        { name: "Mesa 2600 (Wyndham)", size: "2600*1100*750", price: 26780 },
-        { name: "Mesa 2800 (Wyndham)", size: "2800*1100*750", price: 30290 }
+        { name: "Corner table", size: "Ø495*500", price: 5880 }
     ]
   },
-  // PRODUCTO 44: MESA COMEDOR PLATINUM SCULPTURAL
-  { 
-    id: "mesa-comedor-platinum-sculptural", 
-    name: "Mesa Comedor Platinum Sculptural", 
-    category: "Mesa de Comedor", 
-    code: "HYTL86111-A", 
-    priceBase: 40560, // Precio medida referencia (2100mm en Platinum Diamond)
-    // RECUERDA: Guardar imagen en: /public/images/MESAS/COMEDOR/MESA44/render.jpg
-    image: "/images/MESAS/COMEDOR/MESA44/render.jpg", 
-    specs: { 
-        dimensions: "2100 * 1000 * 750 mm", 
-        volume: "0.91 m³", 
-        assembly: "Desmontable / 4 Piezas" 
-    },
-    materials: [
-        { part: "Sobre (Tabletop)", material: "Mármol Natural", detail: "Platinum Diamond (Oil-bright)" },
-        { part: "Estructura Patas", material: "Acero Inoxidable", detail: "Brushed Gunmetal (Escultórico)" }
-    ],
-    colors: {
-        interior: [
-            { name: "Platinum Diamond", hex: "#8A8A8A" },       // Gris texturizado
-            { name: "Prada Green", hex: "#1B2821" },           // Verde oscuro lujo
-            { name: "Snow White", hex: "#E5E5E5" },            // Blanco puro
-            { name: "Milky Way Starry Sky", hex: "#1A1A1A" }   // Negro profundo
-        ]
-    },
-    configurations: [
-        { code: "1600", desc: "Largo 1600mm", price: 36350 },
-        { code: "1800", desc: "Largo 1800mm", price: 37650 },
-        { code: "2100", desc: "Largo 2100mm", price: 40560 },
-        { code: "2400", desc: "Largo 2400mm", price: 45790 },
-        { code: "2600", desc: "Largo 2600mm", price: 48760 }
-    ],
-    priceList: [
-        // Variantes Platinum Diamond / Snow White (Mismo precio)
-        { name: "Mesa 1600 (Plat/Snow)", size: "1600*900*750", price: 36350 },
-        { name: "Mesa 1800 (Plat/Snow)", size: "1800*900*750", price: 37650 },
-        { name: "Mesa 2100 (Plat/Snow)", size: "2100*1000*750", price: 40560 },
-        { name: "Mesa 2400 (Plat/Snow)", size: "2400*1000*750", price: 45790 },
-        { name: "Mesa 2600 (Plat/Snow)", size: "2600*1100*750", price: 48760 },
-        // Variantes Milky Way Starry Sky (Opción más económica)
-        { name: "Mesa 1600 (Milky Way)", size: "1600*900*750", price: 34590 },
-        { name: "Mesa 1800 (Milky Way)", size: "1800*900*750", price: 35660 },
-        { name: "Mesa 2100 (Milky Way)", size: "2100*1000*750", price: 38080 },
-        { name: "Mesa 2400 (Milky Way)", size: "2400*1000*750", price: 42890 },
-        { name: "Mesa 2600 (Milky Way)", size: "2600*1100*750", price: 45360 },
-        // Variantes Prada Green (Premium)
-        { name: "Mesa 1600 (Prada Green)", size: "1600*900*750", price: 39160 },
-        { name: "Mesa 1800 (Prada Green)", size: "1800*900*750", price: 40790 },
-        { name: "Mesa 2100 (Prada Green)", size: "2100*1000*750", price: 44660 },
-        { name: "Mesa 2400 (Prada Green)", size: "2400*1000*750", price: 50580 },
-        { name: "Mesa 2600 (Prada Green)", size: "2600*1100*750", price: 54450 }
-    ]
-  },
-  // PRODUCTO 45: MESA COMEDOR PLATINUM FIBERGLASS
-  { 
-    id: "mesa-comedor-platinum-fiberglass", 
-    name: "Mesa Comedor Platinum Fiberglass", 
-    category: "Mesa de Comedor", 
-    code: "HYTL86111-B", 
-    priceBase: 35450, // Precio medida referencia (2100mm en Platinum Diamond)
-    // RECUERDA: Guardar imagen en: /public/images/MESAS/COMEDOR/MESA45/render.jpg
-    image: "/images/MESAS/COMEDOR/MESA45/render.jpg", 
-    specs: { 
-        dimensions: "2100 * 1000 * 750 mm", 
-        volume: "0.83 m³", 
-        assembly: "Desmontable / 3 Piezas" 
-    },
-    materials: [
-        { part: "Sobre (Tabletop)", material: "Mármol Natural", detail: "Platinum Diamond (Oil-bright)" },
-        { part: "Marco Metal", material: "Acero Inoxidable", detail: "Brushed Gunmetal" },
-        { part: "Patas Laterales", material: "Fibra de Vidrio", detail: "Acabado Brushed Gunmetal" }
-    ],
-    colors: {
-        interior: [
-            { name: "Platinum Diamond", hex: "#8A8A8A" },       // Gris texturizado
-            { name: "Prada Green", hex: "#1B2821" },           // Verde oscuro lujo
-            { name: "Snow White", hex: "#E5E5E5" },            // Blanco puro
-            { name: "Milky Way Starry Sky", hex: "#1A1A1A" }   // Negro profundo
-        ]
-    },
-    configurations: [
-        { code: "1600", desc: "Largo 1600mm", price: 30100 },
-        { code: "1800", desc: "Largo 1800mm", price: 32050 },
-        { code: "2100", desc: "Largo 2100mm", price: 35450 },
-        { code: "2400", desc: "Largo 2400mm", price: 39760 },
-        { code: "2600", desc: "Largo 2600mm", price: 41350 }
-    ],
-    priceList: [
-        // Variantes Platinum Diamond / Snow White (Mismo precio)
-        { name: "Mesa 1600 (Plat/Snow)", size: "1600*900*750", price: 30100 },
-        { name: "Mesa 1800 (Plat/Snow)", size: "1800*900*750", price: 32050 },
-        { name: "Mesa 2100 (Plat/Snow)", size: "2100*1000*750", price: 35450 },
-        { name: "Mesa 2400 (Plat/Snow)", size: "2400*1000*750", price: 39760 },
-        { name: "Mesa 2600 (Plat/Snow)", size: "2600*1100*750", price: 41350 },
-        // Variantes Milky Way Starry Sky (Opción más económica)
-        { name: "Mesa 1600 (Milky Way)", size: "1600*900*750", price: 28290 },
-        { name: "Mesa 1800 (Milky Way)", size: "1800*900*750", price: 30060 },
-        { name: "Mesa 2100 (Milky Way)", size: "2100*1000*750", price: 32860 },
-        { name: "Mesa 2400 (Milky Way)", size: "2400*1000*750", price: 36590 },
-        { name: "Mesa 2600 (Milky Way)", size: "2600*1100*750", price: 37980 },
-        // Variantes Prada Green (Premium)
-        { name: "Mesa 1600 (Prada Green)", size: "1600*900*750", price: 32860 },
-        { name: "Mesa 1800 (Prada Green)", size: "1800*900*750", price: 35190 },
-        { name: "Mesa 2100 (Prada Green)", size: "2100*1000*750", price: 39490 },
-        { name: "Mesa 2400 (Prada Green)", size: "2400*1000*750", price: 44390 },
-        { name: "Mesa 2600 (Prada Green)", size: "2600*1100*750", price: 46990 }
-    ]
-  },
-  // PRODUCTO 46: MESA COMEDOR SNOW WHITE ASH
-  { 
-    id: "mesa-comedor-snow-white-ash", 
-    name: "Mesa Comedor Snow White Ash", 
-    category: "Mesa de Comedor", 
-    code: "HYTL86128-B", 
-    priceBase: 22260, // Precio medida referencia (2100mm en Snow White)
-    // RECUERDA: Guardar imagen en: /public/images/MESAS/COMEDOR/MESA46/render.jpg
-    image: "/images/MESAS/COMEDOR/MESA46/render.jpg", 
-    specs: { 
-        dimensions: "2100 * 950 * 750 mm", 
-        volume: "0.60 m³", 
-        assembly: "Desmontable / 3 Piezas" 
-    },
-    materials: [
-        { part: "Sobre (Tabletop)", material: "Mármol Natural", detail: "Snow White (Oil-bright)" },
-        { part: "Estructura Patas", material: "Madera de Fresno", detail: "Acabado Oil-wax (Tono Oscuro)" }
-    ],
-    colors: {
-        interior: [
-            { name: "Snow White", hex: "#E5E5E5" },             // Blanco brillante
-            { name: "Calacatta Gray", hex: "#D4D4D4" },         // Gris claro mate
-            { name: "Wyndham Gray", hex: "#4A4A4A" }            // Gris oscuro veteado
-        ]
-    },
-    configurations: [
-        { code: "1600", desc: "Largo 1600mm", price: 17790 },
-        { code: "1800", desc: "Largo 1800mm", price: 19080 },
-        { code: "2100", desc: "Largo 2100mm", price: 22260 }
-    ],
-    priceList: [
-        // Variantes Snow White (Premium)
-        { name: "Mesa 1600 (Snow White)", size: "1600*900*750", price: 17790 },
-        { name: "Mesa 1800 (Snow White)", size: "1800*900*750", price: 19080 },
-        { name: "Mesa 2100 (Snow White)", size: "2100*950*750", price: 22260 },
-        // Variantes Imported Calacatta Gray (Opción intermedia)
-        { name: "Mesa 1600 (Calacatta)", size: "1600*900*750", price: 16060 },
-        { name: "Mesa 1800 (Calacatta)", size: "1800*900*750", price: 17090 },
-        { name: "Mesa 2100 (Calacatta)", size: "2100*950*750", price: 19880 },
-        // Variantes Wyndham Gray (Opción más económica)
-        { name: "Mesa 1600 (Wyndham)", size: "1600*900*750", price: 14560 },
-        { name: "Mesa 1800 (Wyndham)", size: "1800*900*750", price: 15360 },
-        { name: "Mesa 2100 (Wyndham)", size: "2100*950*750", price: 17780 }
-    ]
-  },
-  // PRODUCTO 47: MESA COMEDOR EMERALD CYLINDERS
-  { 
-    id: "mesa-comedor-emerald-cylinders", 
-    name: "Mesa Comedor Emerald Cylinders", 
-    category: "Mesa de Comedor", 
-    code: "HYTL86129-A", 
-    priceBase: 24350, // Precio medida referencia (1600mm en Emerald)
-    // RECUERDA: Guardar imagen en: /public/images/MESAS/COMEDOR/MESA47/render.jpg
-    image: "/images/MESAS/COMEDOR/MESA47/render.jpg", 
-    specs: { 
-        dimensions: "1600 * 900 * 750 mm", 
-        volume: "0.63 m³", 
-        assembly: "Desmontable / 2 Piezas" 
-    },
-    materials: [
-        { part: "Sobre (Tabletop)", material: "Mármol Natural", detail: "Emerald in the Clouds (Oil-bright)" },
-        { part: "Bases Cilíndricas", material: "Acero Inoxidable", detail: "Brushed Gunmetal" }
-    ],
-    colors: {
-        interior: [
-            { name: "Emerald in the Clouds", hex: "#7C827A" }, // Verde grisáceo veteado
-            { name: "Snow Mountain Blue", hex: "#DCDFE1" },    // Blanco agrisado premium
-            { name: "Snow White", hex: "#E5E5E5" },            // Blanco puro
-            { name: "Moon Valley", hex: "#8D7864" }            // Marrón bronce tierra
-        ]
-    },
-    configurations: [
-        { code: "1600", desc: "Largo 1600mm", price: 24350 },
-        { code: "1800", desc: "Largo 1800mm", price: 25380 },
-        { code: "2100", desc: "Largo 2100mm", price: 26780 },
-        { code: "2400", desc: "Largo 2400mm", price: 30290 },
-        { code: "2600", desc: "Largo 2600mm", price: 31460 }
-    ],
-    priceList: [
-        // Variantes Emerald in the Clouds / Moon Valley (Mismo precio)
-        { name: "Mesa 1600 (Emerald/Moon)", size: "1600*900*750", price: 24350 },
-        { name: "Mesa 1800 (Emerald/Moon)", size: "1800*900*750", price: 25380 },
-        { name: "Mesa 2100 (Emerald/Moon)", size: "2100*1000*750", price: 26780 },
-        { name: "Mesa 2400 (Emerald/Moon)", size: "2400*1100*750", price: 30290 },
-        { name: "Mesa 2600 (Emerald/Moon)", size: "2600*1100*750", price: 31460 },
-        // Variantes Snow White
-        { name: "Mesa 1600 (Snow White)", size: "1600*900*750", price: 28880 },
-        { name: "Mesa 1800 (Snow White)", size: "1800*900*750", price: 30390 },
-        { name: "Mesa 2100 (Snow White)", size: "2100*1000*750", price: 33450 },
-        { name: "Mesa 2400 (Snow White)", size: "2400*1100*750", price: 38680 },
-        { name: "Mesa 2600 (Snow White)", size: "2600*1100*750", price: 40460 },
-        // Variantes Snow Mountain Blue (Premium)
-        { name: "Mesa 1600 (Snow Mtn)", size: "1600*900*750", price: 33450 },
-        { name: "Mesa 1800 (Snow Mtn)", size: "1800*900*750", price: 35560 },
-        { name: "Mesa 2100 (Snow Mtn)", size: "2100*1000*750", price: 40080 },
-        { name: "Mesa 2400 (Snow Mtn)", size: "2400*1100*750", price: 46860 },
-        { name: "Mesa 2600 (Snow Mtn)", size: "2600*1100*750", price: 49550 }
-    ]
-  }
 ];
 
 // --- 4. FUNCIÓN DE SUBIDA ---
