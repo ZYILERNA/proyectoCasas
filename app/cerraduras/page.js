@@ -41,7 +41,6 @@ const COMPARATIVA_DATA = [
 ];
 
 // --- MAPEO DE ICONOS PARA PERFORMANCE ---
-// Como la BD no guarda componentes React, asignamos iconos según el label
 const getPerformanceIcon = (label) => {
     const l = label.toLowerCase();
     if (l.includes("biometría") || l.includes("acceso")) return <ScanFace size={20}/>;
@@ -105,18 +104,26 @@ const ProductModal = memo(({ product, onClose }) => {
   
   return (
     <div className="fixed inset-0 z-[100] flex justify-end">
+      {/* Fondo optimizado: sin backdrop-blur */}
       <motion.div 
-        initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-        className="absolute inset-0 bg-black/80 backdrop-blur-sm" 
+        initial={{ opacity: 0 }} 
+        animate={{ opacity: 1 }} 
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.2 }}
+        className="absolute inset-0 bg-black/90" 
         onClick={onClose}
       />
       
+      {/* Panel optimizado: animación tween y will-change-transform */}
       <motion.div 
-        initial={{ x: "100%" }} animate={{ x: 0 }} exit={{ x: "100%" }} 
-        transition={{ type: "spring", damping: 25, stiffness: 200 }}
-        className="relative bg-[#111] w-full max-w-[700px] h-full shadow-2xl overflow-y-auto border-l border-white/10"
+        initial={{ x: "100%" }} 
+        animate={{ x: 0 }} 
+        exit={{ x: "100%" }} 
+        transition={{ type: "tween", ease: "easeOut", duration: 0.35 }}
+        className="relative bg-[#0a0a0a] w-full max-w-[700px] h-full shadow-2xl overflow-y-auto border-l border-white/10 will-change-transform"
       >
-        <div className="sticky top-0 bg-[#111]/95 backdrop-blur z-30 p-8 border-b border-white/5 flex justify-between items-start">
+        {/* Encabezado sin backdrop-blur para evitar cálculos de GPU */}
+        <div className="sticky top-0 bg-[#0a0a0a] z-30 p-8 border-b border-white/5 flex justify-between items-start">
             <div>
                 <span className="text-[#00C2FF] text-xs font-bold uppercase tracking-widest">{product.category} / {product.type}</span>
                 <h2 className="text-4xl font-bold text-white mt-2">{product.name}</h2>
@@ -127,7 +134,7 @@ const ProductModal = memo(({ product, onClose }) => {
         </div>
 
         <div className="p-8 space-y-8">
-            <div className="relative w-full h-[500px] rounded-xl overflow-hidden border border-white/10 shadow-2xl bg-white flex items-center justify-center z-0">
+            <div className="relative w-full h-[500px] rounded-xl overflow-hidden border border-white/10 bg-white flex items-center justify-center z-0">
                 <img 
                     src={product.img} 
                     alt={product.name} 
@@ -160,7 +167,6 @@ const ProductModal = memo(({ product, onClose }) => {
                         {product.performance.map((perf, i) => (
                             <div key={i} className="bg-white/5 p-4 rounded border border-white/5 flex flex-col gap-2 hover:bg-white/10 transition-colors">
                                 <div className="text-[#00C2FF] mb-1">
-                                    {/* Aquí usamos la función helper para renderizar el icono correcto */}
                                     {getPerformanceIcon(perf.label)}
                                 </div>
                                 <span className="text-gray-400 text-[10px] uppercase font-bold tracking-wider">{perf.label}</span>
@@ -182,7 +188,7 @@ const ProductModal = memo(({ product, onClose }) => {
                         <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                             {product.colors.interior?.map((color, i) => (
                                 <div key={i} className="text-center group flex flex-col items-center gap-2 cursor-pointer">
-                                    <div className="w-12 h-12 rounded-full shadow-lg border-2 border-transparent group-hover:border-white transition-all transform group-hover:scale-110" style={{backgroundColor: color.hex}}></div>
+                                    <div className="w-12 h-12 rounded-full border-2 border-transparent group-hover:border-white transition-all transform group-hover:scale-110" style={{backgroundColor: color.hex}}></div>
                                     <span className="text-[9px] text-gray-400 uppercase font-medium max-w-[60px] leading-tight">{color.name}</span>
                                 </div>
                             ))}
@@ -208,7 +214,7 @@ export default function CerradurasPage() {
   
   // ESTADOS PARA SUPABASE
   const [locks, setLocks] = useState([]);
-  const [hardware, setHardware] = useState([]); // Array plano de la BD
+  const [hardware, setHardware] = useState([]); 
   const [isLoading, setIsLoading] = useState(true);
 
   // EFECTO DE CARGA
@@ -242,15 +248,13 @@ export default function CerradurasPage() {
     fetchData();
   }, []);
 
-  // Agrupar el hardware plano por categoría para mostrarlo como en el diseño original
+  // Agrupar el hardware plano por categoría
   const hardwareGrouped = useMemo(() => {
     if(!hardware.length) return [];
     
-    // Obtenemos categorías únicas
     const categories = [...new Set(hardware.map(item => item.category))];
     
     return categories.map(cat => {
-        // Encontramos la descripción del primer item de esta categoría (la guardamos en todos)
         const firstItem = hardware.find(h => h.category === cat);
         return {
             title: cat,
@@ -261,7 +265,7 @@ export default function CerradurasPage() {
   }, [hardware]);
 
   return (
-    <main className="bg-black min-h-screen text-white pt-20">
+    <main className="bg-black min-h-screen text-white pt-20 overflow-hidden">
       
       {/* 1. HERO */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
@@ -511,23 +515,23 @@ export default function CerradurasPage() {
           </section>
       )}
 
-      {/* MODAL DETALLE */}
+      {/* MODAL DETALLE (CON ANIMATE PRESENCE PARA CIERRE SUAVE) */}
       <AnimatePresence>
          {selectedProduct && <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />}
       </AnimatePresence>
 
       {/* FOOTER CTA */}
       <section className="relative py-24 border-t border-white/10 overflow-hidden">
-         <div className="absolute inset-0 opacity-20">
+         <div className="absolute inset-0 opacity-20 pointer-events-none">
             <div className="absolute right-0 top-0 w-[500px] h-[500px] bg-[#00C2FF] blur-[150px] rounded-full mix-blend-screen"/>
          </div>
          <div className="container mx-auto px-6 text-center relative z-10">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">El Futuro de la Seguridad</h2>
             <Link 
                 href="/contacto" 
-                className="bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-[#00C2FF] hover:text-white transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-[#00C2FF]/50"
+                className="inline-block bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-[#00C2FF] hover:text-white transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-[#00C2FF]/50"
             >
-               CONTACTAR CON VENTAS
+                CONTACTAR CON VENTAS
             </Link>
          </div>
       </section>

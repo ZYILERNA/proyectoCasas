@@ -7,10 +7,31 @@ import {
   X, Thermometer, Droplets, Wind, Shield, 
   Volume2, CloudRain, Maximize 
 } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+// --- VARIANTES DE ANIMACIÓN (OPTIMIZADAS PARA GPU) ---
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15 }
+  }
+};
+
+// Animación más ligera: curva "tween" en lugar de "spring", solo movemos X
+const slideInRight = {
+  hidden: { x: "100%" },
+  visible: { x: 0, transition: { type: "tween", ease: "easeOut", duration: 0.35 } },
+  exit: { x: "100%", transition: { type: "tween", ease: "easeIn", duration: 0.25 } }
+};
 
 // --- 1. DATOS DE PRODUCTOS (SOLO VENTANAS) ---
 const PRODUCTOS = [
-  
   // ================= VENTANAS - GAMA FASHION =================
   {
     id: "w-fashion-110",
@@ -163,8 +184,12 @@ const PRODUCTOS = [
 ];
 
 // --- 2. COMPONENTES UI ---
-const ProductCard = ({ product, onClick }) => (
-  <div onClick={onClick} className="group cursor-pointer flex flex-col gap-4 bg-[#111] pb-6 border border-transparent hover:border-gray-800 transition-all duration-500">
+const ProductCard = ({ product, onClick, variants }) => (
+  <motion.div 
+    variants={variants}
+    onClick={onClick} 
+    className="group cursor-pointer flex flex-col gap-4 bg-[#111] pb-6 border border-transparent hover:border-[#00C2FF]/30 transition-all duration-500 rounded-lg overflow-hidden"
+  >
     <div className="relative aspect-[4/3] overflow-hidden w-full bg-gray-900">
       <Image 
         src={product.img} 
@@ -174,7 +199,8 @@ const ProductCard = ({ product, onClick }) => (
       />
       <div className="absolute top-4 left-4 flex flex-col items-start gap-1">
         <span className="bg-[#00C2FF] text-black text-[10px] font-bold uppercase px-2 py-1 tracking-widest">{product.category}</span>
-        <span className="bg-black/80 text-white border border-white/20 text-[9px] font-bold uppercase px-2 py-1 tracking-widest backdrop-blur-sm">{product.type}</span>
+        {/* Eliminado el backdrop-blur de esta etiqueta también para maximizar rendimiento */}
+        <span className="bg-black/90 text-white border border-white/20 text-[9px] font-bold uppercase px-2 py-1 tracking-widest">{product.type}</span>
       </div>
     </div>
     <div className="px-6">
@@ -187,149 +213,180 @@ const ProductCard = ({ product, onClick }) => (
          ))}
       </div>
     </div>
-  </div>
+  </motion.div>
 );
 
 // --- COMPONENTE MODAL DE PRODUCTO ---
 const ProductModal = ({ product, onClose }) => {
-  if (!product) return null;
-  
   return (
-    <div className="fixed inset-0 z-[100] flex justify-end">
-      {/* Overlay oscuro de fondo */}
-      <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={onClose}></div>
-      
-      {/* Panel lateral deslizable */}
-      <div className="relative bg-[#111] w-full max-w-[700px] h-full shadow-2xl overflow-y-auto border-l border-white/10 animate-in slide-in-from-right duration-300">
-        
-        {/* Header Fijo */}
-        <div className="sticky top-0 bg-[#111]/95 backdrop-blur z-30 p-8 border-b border-white/5 flex justify-between items-start">
-            <div>
-                <span className="text-[#00C2FF] text-xs font-bold uppercase tracking-widest">{product.category} / {product.type}</span>
-                <h2 className="text-4xl font-bold text-white mt-2">{product.name}</h2>
-            </div>
-            <button onClick={onClose} className="text-white hover:text-[#00C2FF] transition-colors bg-white/5 p-2 rounded-full hover:bg-white/10">
-                <X size={24} />
-            </button>
-        </div>
-
-        <div className="p-8 space-y-8">
+    <AnimatePresence>
+      {product && (
+        <div className="fixed inset-0 z-[100] flex justify-end">
+          {/* Overlay oscuro de fondo sin desenfoque (backdrop-blur eliminado por rendimiento) */}
+          <motion.div 
+            initial={{ opacity: 0 }} 
+            animate={{ opacity: 1 }} 
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="absolute inset-0 bg-black/90" 
+            onClick={onClose}
+          ></motion.div>
+          
+          {/* Panel lateral. Usamos will-change-transform para decirle al navegador que se prepare */}
+          <motion.div 
+            variants={slideInRight}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className="relative bg-[#0a0a0a] w-full max-w-[700px] h-full overflow-y-auto border-l border-white/10 will-change-transform"
+          >
             
-            {/* --- IMAGEN DEL PRODUCTO (MODO VISUALIZACIÓN COMPLETA) --- */}
-            <div className="relative w-full h-[500px] rounded-xl overflow-hidden border border-white/10 shadow-2xl bg-white flex items-center justify-center z-0">
-                <Image 
-                    src={product.img} 
-                    alt={product.name} 
-                    fill 
-                    className="object-contain p-4 z-20" 
-                    priority 
-                />
-            </div>
-            
-            {/* Descripción */}
-            <p className="text-gray-300 text-lg font-light leading-relaxed border-b border-white/5 pb-8">
-                {product.description}
-            </p>
-            
-            {/* Especificaciones Técnicas (Grid) */}
-            <div>
-                <h3 className="text-white font-bold uppercase mb-4 border-l-4 border-[#00C2FF] pl-3">Detalles Técnicos</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
-                    {Object.entries(product.details).map(([key, value]) => (
-                        <div key={key} className="flex justify-between border-b border-white/10 py-3 text-sm hover:bg-white/5 px-2 rounded transition-colors">
-                            <span className="text-gray-500 capitalize">{key.replace('profile', 'Perfil').replace('rubber', 'Goma').replace('hardware', 'Herrajes').replace('insulation', 'Aislamiento').replace('glass', 'Vidrio').replace('finish', 'Acabado').replace('series', 'Serie')}</span>
-                            <span className="text-white text-right font-medium">{value}</span>
-                        </div>
-                    ))}
-                    {product.specs.map((spec, i) => (
-                          <div key={i} className="flex justify-between border-b border-white/10 py-3 text-sm hover:bg-white/5 px-2 rounded transition-colors">
-                            <span className="text-gray-500">{spec.label}</span>
-                            <span className="text-white text-right font-medium">{spec.value}</span>
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-            {/* Sección Rendimiento (Solo si existe) */}
-            {product.performance && (
+            {/* Header Fijo (Fondo sólido sin backdrop-blur) */}
+            <div className="sticky top-0 bg-[#0a0a0a] z-30 p-8 border-b border-white/5 flex justify-between items-start">
                 <div>
-                    <h3 className="text-white font-bold uppercase mb-4 border-l-4 border-[#00C2FF] pl-3">Rendimiento Certificado</h3>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                        {product.performance.map((perf, i) => (
-                            <div key={i} className="bg-white/5 p-4 rounded border border-white/5 flex flex-col gap-2 hover:bg-white/10 transition-colors">
-                                <div className="text-[#00C2FF] mb-1">{perf.icon}</div>
-                                <span className="text-gray-400 text-[10px] uppercase font-bold tracking-wider">{perf.label}</span>
-                                <div className="flex flex-col">
-                                    <span className="text-white font-bold text-sm">{perf.value}</span>
-                                    <span className="text-[10px] text-gray-500">{perf.level}</span>
-                                </div>
+                    <span className="text-[#00C2FF] text-xs font-bold uppercase tracking-widest">{product.category} / {product.type}</span>
+                    <h2 className="text-4xl font-bold text-white mt-2">{product.name}</h2>
+                </div>
+                <button onClick={onClose} className="text-white hover:text-[#00C2FF] transition-colors bg-white/5 p-2 rounded-full hover:bg-white/10">
+                    <X size={24} />
+                </button>
+            </div>
+
+            <div className="p-8 space-y-8">
+                
+                {/* --- IMAGEN DEL PRODUCTO --- */}
+                <div className="relative w-full h-[500px] rounded-xl overflow-hidden border border-white/10 bg-white flex items-center justify-center z-0">
+                    <Image 
+                        src={product.img} 
+                        alt={product.name} 
+                        fill 
+                        className="object-contain p-4 z-20" 
+                        priority 
+                    />
+                </div>
+                
+                {/* Descripción */}
+                <p className="text-gray-300 text-lg font-light leading-relaxed border-b border-white/5 pb-8">
+                    {product.description}
+                </p>
+                
+                {/* Especificaciones Técnicas (Grid) */}
+                <div>
+                    <h3 className="text-white font-bold uppercase mb-4 border-l-4 border-[#00C2FF] pl-3">Detalles Técnicos</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
+                        {Object.entries(product.details).map(([key, value]) => (
+                            <div key={key} className="flex justify-between border-b border-white/10 py-3 text-sm hover:bg-white/5 px-2 rounded transition-colors">
+                                <span className="text-gray-500 capitalize">{key.replace('profile', 'Perfil').replace('rubber', 'Goma').replace('hardware', 'Herrajes').replace('insulation', 'Aislamiento').replace('glass', 'Vidrio').replace('finish', 'Acabado').replace('series', 'Serie')}</span>
+                                <span className="text-white text-right font-medium">{value}</span>
+                            </div>
+                        ))}
+                        {product.specs.map((spec, i) => (
+                              <div key={i} className="flex justify-between border-b border-white/10 py-3 text-sm hover:bg-white/5 px-2 rounded transition-colors">
+                                <span className="text-gray-500">{spec.label}</span>
+                                <span className="text-white text-right font-medium">{spec.value}</span>
                             </div>
                         ))}
                     </div>
                 </div>
-            )}
 
-            {/* Sección Colores */}
-            {product.colors && (
-                <div className="bg-[#1a1a1a] p-6 rounded-xl border border-white/5">
-                    <h3 className="text-white font-bold uppercase mb-6 border-l-4 border-[#00C2FF] pl-3">Carta de Colores</h3>
-                    
-                    <div className="mb-6">
-                        <span className="text-xs text-gray-400 uppercase font-bold tracking-wider block mb-4">Acabados Disponibles</span>
-                        <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                            {product.colors.interior.map((color, i) => (
-                                <div key={i} className="text-center group flex flex-col items-center gap-2 cursor-pointer">
-                                    <div className="w-12 h-12 rounded-full shadow-lg border-2 border-transparent group-hover:border-white transition-all transform group-hover:scale-110" style={{backgroundColor: color.hex}}></div>
-                                    <span className="text-[9px] text-gray-400 uppercase font-medium max-w-[60px] leading-tight">{color.name}</span>
+                {/* Sección Rendimiento */}
+                {product.performance && (
+                    <div>
+                        <h3 className="text-white font-bold uppercase mb-4 border-l-4 border-[#00C2FF] pl-3">Rendimiento Certificado</h3>
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                            {product.performance.map((perf, i) => (
+                                <div key={i} className="bg-white/5 p-4 rounded border border-white/5 flex flex-col gap-2 hover:bg-white/10 transition-colors">
+                                    <div className="text-[#00C2FF] mb-1">{perf.icon}</div>
+                                    <span className="text-gray-400 text-[10px] uppercase font-bold tracking-wider">{perf.label}</span>
+                                    <div className="flex flex-col">
+                                        <span className="text-white font-bold text-sm">{perf.value}</span>
+                                        <span className="text-[10px] text-gray-500">{perf.level}</span>
+                                    </div>
                                 </div>
                             ))}
                         </div>
                     </div>
-                </div>
-            )}
+                )}
 
-            <div className="h-4"></div> {/* Espaciador final */}
-            
-            <Link href="/contacto" className="block w-full text-center bg-[#00C2FF] hover:bg-[#009bcC] transition-colors text-black py-4 font-bold uppercase rounded text-sm tracking-widest sticky bottom-8 shadow-xl shadow-black/50">
-                Solicitar Cotización
-            </Link>
+                {/* Sección Colores */}
+                {product.colors && (
+                    <div className="bg-[#1a1a1a] p-6 rounded-xl border border-white/5">
+                        <h3 className="text-white font-bold uppercase mb-6 border-l-4 border-[#00C2FF] pl-3">Carta de Colores</h3>
+                        
+                        <div className="mb-6">
+                            <span className="text-xs text-gray-400 uppercase font-bold tracking-wider block mb-4">Acabados Disponibles</span>
+                            <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+                                {product.colors.interior.map((color, i) => (
+                                    <div key={i} className="text-center group flex flex-col items-center gap-2 cursor-pointer">
+                                        <div className="w-12 h-12 rounded-full border-2 border-transparent group-hover:border-white transition-all transform group-hover:scale-110" style={{backgroundColor: color.hex}}></div>
+                                        <span className="text-[9px] text-gray-400 uppercase font-medium max-w-[60px] leading-tight">{color.name}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                <div className="h-4"></div>
+                
+                <Link href="/contacto" className="block w-full text-center bg-[#00C2FF] hover:bg-[#009bcC] transition-colors text-black py-4 font-bold uppercase rounded text-sm tracking-widest sticky bottom-8 shadow-xl shadow-black/50">
+                    Solicitar Cotización
+                </Link>
+            </div>
+          </motion.div>
         </div>
-      </div>
-    </div>
+      )}
+    </AnimatePresence>
   );
 };
 
 // --- 3. PÁGINA PRINCIPAL ---
-
 export default function CatalogoPage() {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   return (
-    <main className="bg-black min-h-screen text-white pt-24 pb-20 selection:bg-[#00C2FF] selection:text-black">
+    <main className="bg-black min-h-screen text-white pt-24 pb-20 selection:bg-[#00C2FF] selection:text-black overflow-hidden">
       
       {/* HEADER SECTION */}
-      <section className="container mx-auto px-6 mb-24 text-center">
-         <span className="text-[#00C2FF] font-bold tracking-[0.2em] text-xs uppercase">Wonly Architectural Systems</span>
-         <h1 className="text-5xl md:text-7xl font-bold uppercase text-white mt-4 mb-6">Catálogo <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-600">Fashion & Glory</span></h1>
-         <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base font-light">
+      <motion.section 
+        initial="hidden"
+        animate="visible"
+        variants={staggerContainer}
+        className="container mx-auto px-6 mb-24 text-center"
+      >
+         <motion.span variants={fadeInUp} className="text-[#00C2FF] font-bold tracking-[0.2em] text-xs uppercase">Wonly Architectural Systems</motion.span>
+         <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-bold uppercase text-white mt-4 mb-6">Catálogo <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-600">Fashion & Glory</span></motion.h1>
+         <motion.p variants={fadeInUp} className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base font-light">
            Sistemas arquitectónicos de alto rendimiento. Ventanas de ingeniería alemana y máxima eficiencia energética.
-         </p>
-      </section>
+         </motion.p>
+      </motion.section>
 
       {/* --- SECCIÓN DE INGENIERÍA (Bionic Blocks) --- */}
       <section className="container mx-auto px-6 mb-32">
-        <div className="mb-12 border-l-4 border-[#00C2FF] pl-6">
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={fadeInUp}
+          className="mb-12 border-l-4 border-[#00C2FF] pl-6"
+        >
           <h2 className="text-3xl font-bold uppercase text-white mb-2">Ingeniería Wonly</h2>
           <p className="text-gray-400 text-sm max-w-xl">
             Tecnología aplicada a nuestros sistemas de ventanas térmicas.
           </p>
-        </div>
+        </motion.div>
 
-        {/* GRID LAYOUT DE TECNOLOGÍA (4 BLOQUES COMPLETOS) */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+        {/* GRID LAYOUT DE TECNOLOGÍA */}
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={staggerContainer}
+          className="grid grid-cols-1 md:grid-cols-12 gap-6"
+        >
 
           {/* 1. TÉRMICO */}
-          <div className="md:col-span-7 bg-[#0f0f0f] border border-white/10 rounded-xl relative overflow-hidden group hover:border-[#00C2FF]/30 transition-colors h-[450px]">
+          <motion.div variants={fadeInUp} className="md:col-span-7 bg-[#0f0f0f] border border-white/10 rounded-xl relative overflow-hidden group hover:border-[#00C2FF]/30 transition-colors h-[450px]">
              <Image src="/images/VENTANAS/termico.jpg" alt="Diseño Térmico" fill className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"/>
              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
              <div className="absolute bottom-0 left-0 p-8 z-10 w-full">
@@ -341,10 +398,10 @@ export default function CatalogoPage() {
                    Estructura multicavidad que reduce el coeficiente de transmisión de calor en un 35%.
                 </p>
              </div>
-          </div>
+          </motion.div>
 
           {/* 2. DESAGÜE */}
-          <div className="md:col-span-5 bg-[#0f0f0f] border border-white/10 rounded-xl relative overflow-hidden group hover:border-white/30 transition-colors h-[450px]">
+          <motion.div variants={fadeInUp} className="md:col-span-5 bg-[#0f0f0f] border border-white/10 rounded-xl relative overflow-hidden group hover:border-white/30 transition-colors h-[450px]">
              <Image src="/images/VENTANAS/desague.jpg" alt="Desagüe" fill className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"/>
              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
              <div className="absolute bottom-0 left-0 p-8 z-10">
@@ -356,10 +413,10 @@ export default function CatalogoPage() {
                    Sistema de drenaje de suelo patentado. Flujo fluido y silencioso.
                 </p>
              </div>
-          </div>
+          </motion.div>
 
           {/* 3. TRIPLE SELLADO */}
-          <div className="md:col-span-6 bg-[#0f0f0f] border border-white/10 rounded-xl relative overflow-hidden group hover:border-[#00C2FF]/30 transition-colors h-[400px]">
+          <motion.div variants={fadeInUp} className="md:col-span-6 bg-[#0f0f0f] border border-white/10 rounded-xl relative overflow-hidden group hover:border-[#00C2FF]/30 transition-colors h-[400px]">
               <Image src="/images/VENTANAS/sellado.jpg" alt="Sellado" fill className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"/>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-8 z-10">
@@ -371,10 +428,10 @@ export default function CatalogoPage() {
                    Junta de goma EPDM continua. Garantiza la máxima hermeticidad y estanqueidad.
                  </p>
               </div>
-          </div>
+          </motion.div>
 
           {/* 4. PROTECTOR */}
-          <div className="md:col-span-6 bg-[#0f0f0f] border border-white/10 rounded-xl relative overflow-hidden group hover:border-white/30 transition-colors h-[400px]">
+          <motion.div variants={fadeInUp} className="md:col-span-6 bg-[#0f0f0f] border border-white/10 rounded-xl relative overflow-hidden group hover:border-white/30 transition-colors h-[400px]">
               <Image src="/images/VENTANAS/protector.jpg" alt="Protector" fill className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"/>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-8 z-10 w-full">
@@ -386,28 +443,44 @@ export default function CatalogoPage() {
                    Seguridad integrada para niños y mascotas con función de escape de emergencia rápida.
                  </p>
               </div>
-          </div>
+          </motion.div>
 
-        </div>
+        </motion.div>
       </section>
 
-      {/* --- LISTADO DE PRODUCTOS (SOLO VENTANAS) --- */}
+      {/* --- LISTADO DE PRODUCTOS --- */}
       <section className="container mx-auto px-6">
-        <div className="flex items-end justify-between mb-8 border-b border-gray-800 pb-4">
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          className="flex items-end justify-between mb-8 border-b border-gray-800 pb-4"
+        >
            <h2 className="text-2xl font-bold uppercase text-white">Colección 2025</h2>
-           {/* Filtros eliminados al solo haber una categoría */}
-        </div>
+        </motion.div>
         
         {/* Grid de Productos */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={staggerContainer}
+          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"
+        >
           {PRODUCTOS.map((product) => (
-            <ProductCard key={product.id} product={product} onClick={() => setSelectedProduct(product)} />
+            <ProductCard 
+              key={product.id} 
+              product={product} 
+              onClick={() => setSelectedProduct(product)} 
+              variants={fadeInUp}
+            />
           ))}
-        </div>
+        </motion.div>
       </section>
 
       {/* MODAL DETALLE */}
-      {selectedProduct && <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />}
+      <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
 
     </main>
   );
