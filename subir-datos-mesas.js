@@ -1339,6 +1339,367 @@ const tablesData = [
         { name: "Corner table", size: "Ø495*500", price: 5880 }
     ]
   },
+  // PRODUCTO 42: MESA COMEDOR
+  { 
+    id: "mesa-comedor-hytl86101", 
+    name: "Mesa de Comedor", 
+    category: "Mesa de Comedor", 
+    code: "HYTL86101/HF1823Y-1", 
+    priceBase: 25450, 
+    // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/COMEDOR/MESA42/render.jpg
+    image: "/images/MESAS/COMEDOR/MESA42/render.jpg", 
+    specs: { 
+        dimensions: "2100 * 1000 * 750 mm", 
+        volume: "0.82 m³", 
+        assembly: "Desmontado y Ensamblado / 3 Piezas" 
+    },
+    materials: [
+        { part: "Sobre (Tabletop)", material: "Mármol", detail: "Wyndham Gray (Oil-bright)" },
+        { part: "Estructura inferior (Bottom frame)", material: "Madera de Fresno (Ash wood)", detail: "Color cera de aceite (Oil-wax color)" },
+        { part: "Estructura inferior (Bottom frame)", material: "Acero Inoxidable", detail: "Gunmetal cepillado (Brushed Gunmetal)" }
+    ],
+    colors: {
+        marble: [
+            { name: "Wyndham Gray (Oil-bright)", hex: "#4A4D4E" },          // Gris oscuro (estimado de la muestra)
+            { name: "Imported Calacatta Gray (Oil-bright)", hex: "#A8A9A0" }, // Gris claro (estimado de la muestra)
+            { name: "Zilo Red (Oil-bright)", hex: "#8A4A43" }                 // Rojo marmolado (estimado de la muestra)
+        ]
+    },
+    configurations: [
+        { code: "HYTL86101-A1800", desc: "1800*900*750 mm", price: 23660 },
+        { code: "HYTL86101-A2100", desc: "2100*1000*750 mm", price: 25450 },
+        { code: "HYTL86101-A2400", desc: "2400*1100*750 mm", price: 29260 },
+        { code: "HYTL86101-A2600", desc: "2600*1100*750 mm", price: 32450 }
+    ],
+    priceList: [
+        { name: "Mesa 1800mm (Wyndham Gray)", size: "1800*900*750", price: 23660 },
+        { name: "Mesa 2100mm (Wyndham Gray)", size: "2100*1000*750", price: 25450 },
+        { name: "Mesa 2400mm (Wyndham Gray)", size: "2400*1100*750", price: 29260 },
+        { name: "Mesa 2600mm (Wyndham Gray)", size: "2600*1100*750", price: 32450 }
+    ],
+    customInstructions: {
+        length: "Customizable (1600-2600 mm)",
+        width: "Customizable (900-1100 mm)",
+        height: "Not customizable"
+    }
+  },
+  // PRODUCTO 43: MESA COMEDOR REDONDA
+  { 
+    id: "mesa-comedor-redonda-hytl86102", 
+    name: "Mesa de Comedor Redonda", 
+    category: "Mesa de Comedor", 
+    code: "HYTL86102-B/HF1826Y-2", 
+    priceBase: 28190, 
+    // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/COMEDOR/MESA43/render.jpg
+    image: "/images/MESAS/COMEDOR/MESA43/render.jpg", 
+    specs: { 
+        dimensions: "920 / 1530 * 760 mm", 
+        volume: "1.24 m³", 
+        assembly: "Desmontado y Ensamblado / 3 Piezas" 
+    },
+    materials: [
+        { part: "Plato giratorio y pie de mesa (Turntable/Table foot)", material: "Mármol", detail: "Zilo Red (Oil-bright)" },
+        { part: "Sobre (Tabletop)", material: "MDF grado E0", detail: "Color cera de aceite (Oil-wax color)" },
+        { part: "Estructura inferior (Bottom frame)", material: "Acero Inoxidable", detail: "Gunmetal cepillado (Brushed Gunmetal)" }
+    ],
+    colors: {
+        marble: [
+            { name: "Zilo Red (Oil-bright)", hex: "#7A3532" },                 // Rojo intenso marmolado (estimado)
+            { name: "Imported Calacatta Gray (Oil-matte)", hex: "#B0B3A8" },   // Gris claro mate (estimado)
+            { name: "French Red (Oil-bright)", hex: "#8A3B37" },               // Rojo marmolado claro (estimado)
+            { name: "Ancient wood grain (Oil-bright)", hex: "#2C2B29" }        // Negro veteado (estimado)
+        ]
+    },
+    configurations: [
+        { code: "HYTL86102-B1380", desc: "Ø820 / Ø1380 * 760 mm", price: 27260 },
+        { code: "HYTL86102-B1530", desc: "Ø920 / Ø1530 * 760 mm", price: 28190 },
+        { code: "HYTL86102-B1800", desc: "Ø1020 / Ø1800 * 760 mm", price: 31080 }
+    ],
+    priceList: [
+        { name: "Mesa Ø1380mm (Zilo Red)", size: "Ø820 / Ø1380 * 760", price: 27260 },
+        { name: "Mesa Ø1530mm (Zilo Red)", size: "Ø920 / Ø1530 * 760", price: 28190 },
+        { name: "Mesa Ø1800mm (Zilo Red)", size: "Ø1020 / Ø1800 * 760", price: 31080 }
+    ],
+    customInstructions: {
+        length: "Customizable (Ø1200-Ø1800 mm)",
+        width: "Customizable (Ø1200-Ø1800 mm)",
+        height: "Not customizable"
+    }
+  },
+  // PRODUCTO 44: MESA COMEDOR
+  { 
+    id: "mesa-comedor-hytl86105", 
+    name: "Mesa de Comedor", 
+    category: "Mesa de Comedor", 
+    code: "HYTL86105-B/HF1831", 
+    priceBase: 25550, 
+    // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/COMEDOR/MESA44/render.jpg
+    image: "/images/MESAS/COMEDOR/MESA44/render.jpg", 
+    specs: { 
+        dimensions: "2100 * 1000 * 750 mm", 
+        volume: "0.81 m³", 
+        assembly: "Desmontado y Ensamblado / 2 Piezas" 
+    },
+    materials: [
+        { part: "Sobre (Tabletop)", material: "Mármol", detail: "Moon Valley (Oil-bright)" },
+        { part: "Patas laterales (Side feet)", material: "Acero Inoxidable", detail: "Brushed Antique Bronze" },
+        { part: "Hebilla decorativa lateral (Side-foot decorative buckle)", material: "Acero Inoxidable", detail: "Mirror Steel Japanese Gold" }
+    ],
+    colors: {
+        marble: [
+            { name: "Moon Valley (Oil-bright)", hex: "#8B7D6B" },              // Tono tierra/bronceado (estimado de la muestra)
+            { name: "Snow Mountain Blue (Oil-bright)", hex: "#D0D3D4" },       // Gris claro/azulado (estimado)
+            { name: "Platinum Diamond (Oil-bright)", hex: "#6B5B5A" },         // Gris oscuro/pardo (estimado)
+            { name: "Emerald in the Clouds (Oil-bright)", hex: "#7B8D83" }     // Verde grisáceo (estimado)
+        ]
+    },
+    configurations: [
+        { code: "HYTL86105-B1800", desc: "1800*900*750 mm", price: 23450 },
+        { code: "HYTL86105-B2100", desc: "2100*1000*750 mm", price: 25550 },
+        { code: "HYTL86105-B2400", desc: "2400*1000*750 mm", price: 27260 },
+        { code: "HYTL86105-B2600", desc: "2600*1100*750 mm", price: 29360 }
+    ],
+    priceList: [
+        { name: "Mesa 1800mm (Moon Valley)", size: "1800*900*750", price: 23450 },
+        { name: "Mesa 2100mm (Moon Valley)", size: "2100*1000*750", price: 25550 },
+        { name: "Mesa 2400mm (Moon Valley)", size: "2400*1000*750", price: 27260 },
+        { name: "Mesa 2600mm (Moon Valley)", size: "2600*1100*750", price: 29360 }
+    ],
+    customInstructions: {
+        length: "Customizable (1600-2800 mm)",
+        width: "Customizable (850-1100 mm)",
+        height: "Not customizable"
+    }
+  },
+  // PRODUCTO 45: MESA COMEDOR
+  { 
+    id: "mesa-comedor-hytl86108", 
+    name: "Mesa de Comedor", 
+    category: "Mesa de Comedor", 
+    code: "HYTL86108-A/HF1836Y", 
+    priceBase: 24450, 
+    // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/COMEDOR/MESA45/render.jpg
+    image: "/images/MESAS/COMEDOR/MESA45/render.jpg", 
+    specs: { 
+        dimensions: "2100 * 1000 * 750 mm", 
+        volume: "0.77 m³", 
+        assembly: "Desmontado y Ensamblado / 3 Piezas" 
+    },
+    materials: [
+        { part: "Sobre (Tabletop)", material: "Mármol", detail: "Italian Space Gray (Oil-matte)" },
+        { part: "Estructura de las patas (Foot frame)", material: "Madera de Fresno (Ash wood)", detail: "Color cera de aceite (Oil-wax color)" },
+        { part: "Cubierta decorativa (Decorative cover)", material: "Acero Inoxidable", detail: "Brushed Space Gold" }
+    ],
+    colors: {
+        marble: [
+            { name: "Italian Space Gray (Oil-matte)", hex: "#7A7B76" },       // Gris oscuro veteado mate (estimado)
+            { name: "Snow White (Oil-matte)", hex: "#DCDCDC" },               // Blanco veteado mate (estimado)
+            { name: "Milky Way Starry Sky (Oil-matte)", hex: "#1A1A1A" },     // Negro mate (estimado)
+            { name: "Wyndham Gray (Oil-bright)", hex: "#4A4D4E" }             // Gris oscuro brillante (estimado)
+        ]
+    },
+    configurations: [
+        { code: "HYTL86108-A1600", desc: "1600*900*750 mm", price: 20950 },
+        { code: "HYTL86108-A1800", desc: "1800*900*750 mm", price: 21650 },
+        { code: "HYTL86108-A2100", desc: "2100*1000*750 mm", price: 24450 },
+        { code: "HYTL86108-A2400", desc: "2400*1000*750 mm", price: 26880 },
+        { code: "HYTL86108-A2600", desc: "2600*1100*750 mm", price: 29750 },
+        { code: "HYTL86108-A2800", desc: "2800*1100*750 mm", price: 33560 }
+    ],
+    priceList: [
+        { name: "Mesa 1600mm (Italian Space Gray)", size: "1600*900*750", price: 20950 },
+        { name: "Mesa 1800mm (Italian Space Gray)", size: "1800*900*750", price: 21650 },
+        { name: "Mesa 2100mm (Italian Space Gray)", size: "2100*1000*750", price: 24450 },
+        { name: "Mesa 2400mm (Italian Space Gray)", size: "2400*1000*750", price: 26880 },
+        { name: "Mesa 2600mm (Italian Space Gray)", size: "2600*1100*750", price: 29750 },
+        { name: "Mesa 2800mm (Italian Space Gray)", size: "2800*1100*750", price: 33560 }
+    ],
+    customInstructions: {
+        length: "Customizable (1400-2800 mm)",
+        width: "Customizable (800-1100 mm)",
+        height: "Not customizable"
+    }
+  },
+  // PRODUCTO 46: MESA COMEDOR
+  { 
+    id: "mesa-comedor-hytl86111", 
+    name: "Mesa de Comedor", 
+    category: "Mesa de Comedor", 
+    code: "HYTL86111-A/HF1837", 
+    priceBase: 40560, 
+    // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/COMEDOR/MESA46/render.jpg
+    image: "/images/MESAS/COMEDOR/MESA46/render.jpg", 
+    specs: { 
+        dimensions: "2100 * 1000 * 750 mm", 
+        volume: "0.91 m³", 
+        assembly: "Desmontado y Ensamblado / 4 Piezas" 
+    },
+    materials: [
+        { part: "Sobre (Tabletop)", material: "Mármol", detail: "Platinum Diamond (Oil-bright)" },
+        { part: "Estructura de las patas (Foot frame)", material: "Acero Inoxidable", detail: "Gunmetal cepillado (Brushed Gunmetal)" }
+    ],
+    colors: {
+        marble: [
+            { name: "Platinum Diamond (Oil-bright)", hex: "#5E504A" },        // Marrón oscuro/grisáceo veteado (estimado de la muestra)
+            { name: "Prada Green (Oil-bright)", hex: "#2A3B32" },             // Verde oscuro veteado (estimado de la muestra)
+            { name: "Snow White (Oil-bright)", hex: "#DCDCDC" },              // Blanco veteado (estimado de la muestra)
+            { name: "Milky Way Starry Sky (Oil-bright)", hex: "#1A1A1A" }     // Negro brillante (estimado de la muestra)
+        ]
+    },
+    configurations: [
+        { code: "HYTL86111-A1600", desc: "1600*900*750 mm", price: 36350 },
+        { code: "HYTL86111-A1800", desc: "1800*900*750 mm", price: 37650 },
+        { code: "HYTL86111-A2100", desc: "2100*1000*750 mm", price: 40560 },
+        { code: "HYTL86111-A2400", desc: "2400*1000*750 mm", price: 45790 },
+        { code: "HYTL86111-A2600", desc: "2600*1100*750 mm", price: 48760 }
+    ],
+    priceList: [
+        { name: "Mesa 1600mm (Platinum Diamond)", size: "1600*900*750", price: 36350 },
+        { name: "Mesa 1800mm (Platinum Diamond)", size: "1800*900*750", price: 37650 },
+        { name: "Mesa 2100mm (Platinum Diamond)", size: "2100*1000*750", price: 40560 },
+        { name: "Mesa 2400mm (Platinum Diamond)", size: "2400*1000*750", price: 45790 },
+        { name: "Mesa 2600mm (Platinum Diamond)", size: "2600*1100*750", price: 48760 }
+    ],
+    customInstructions: {
+        length: "Customizable (1600-2600 mm)",
+        width: "Customizable (900-1100 mm)",
+        height: "Not customizable"
+    }
+  },
+  // PRODUCTO 47: MESA COMEDOR
+  { 
+    id: "mesa-comedor-hytl86111-b", 
+    name: "Mesa de Comedor", 
+    category: "Mesa de Comedor", 
+    code: "HYTL86111-B/HF1837-B", 
+    priceBase: 35450, 
+    // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/COMEDOR/MESA47/render.jpg
+    image: "/images/MESAS/COMEDOR/MESA47/render.jpg", 
+    specs: { 
+        dimensions: "2100 * 1000 * 750 mm", 
+        volume: "0.83 m³", 
+        assembly: "Desmontado y Ensamblado / 3 Piezas" 
+    },
+    materials: [
+        { part: "Sobre (Tabletop)", material: "Mármol", detail: "Platinum Diamond (Oil-bright)" },
+        { part: "Estructura metálica (Metal frame)", material: "Acero Inoxidable", detail: "Gunmetal cepillado (Brushed Gunmetal)" },
+        { part: "Patas laterales (Side feet)", material: "Fibra de vidrio (Fiberglass)", detail: "Gunmetal cepillado (Brushed Gunmetal)" }
+    ],
+    colors: {
+        marble: [
+            { name: "Platinum Diamond (Oil-bright)", hex: "#5E504A" },        // Marrón oscuro/grisáceo veteado (estimado)
+            { name: "Prada Green (Oil-bright)", hex: "#2A3B32" },             // Verde oscuro veteado (estimado)
+            { name: "Snow White (Oil-bright)", hex: "#DCDCDC" },              // Blanco veteado (estimado)
+            { name: "Milky Way Starry Sky (Oil-bright)", hex: "#1A1A1A" }     // Negro brillante (estimado)
+        ]
+    },
+    configurations: [
+        { code: "HYTL86111-B1600", desc: "1600*900*750 mm", price: 30100 },
+        { code: "HYTL86111-B1800", desc: "1800*900*750 mm", price: 32050 },
+        { code: "HYTL86111-B2100", desc: "2100*1000*750 mm", price: 35450 },
+        { code: "HYTL86111-B2400", desc: "2400*1000*750 mm", price: 39760 },
+        { code: "HYTL86111-B2600", desc: "2600*1100*750 mm", price: 41350 }
+    ],
+    priceList: [
+        { name: "Mesa 1600mm (Platinum Diamond)", size: "1600*900*750", price: 30100 },
+        { name: "Mesa 1800mm (Platinum Diamond)", size: "1800*900*750", price: 32050 },
+        { name: "Mesa 2100mm (Platinum Diamond)", size: "2100*1000*750", price: 35450 },
+        { name: "Mesa 2400mm (Platinum Diamond)", size: "2400*1000*750", price: 39760 },
+        { name: "Mesa 2600mm (Platinum Diamond)", size: "2600*1100*750", price: 41350 }
+    ],
+    customInstructions: {
+        length: "Customizable (1600-2600 mm)",
+        width: "Customizable (900-1100 mm)",
+        height: "Not customizable"
+    }
+  },
+  // PRODUCTO 48: MESA COMEDOR
+  { 
+    id: "mesa-comedor-hytl86128-b", 
+    name: "Mesa de Comedor", 
+    category: "Mesa de Comedor", 
+    code: "HYTL86128-B", 
+    priceBase: 22260, 
+    // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/COMEDOR/MESA48/render.jpg
+    image: "/images/MESAS/COMEDOR/MESA48/render.jpg", 
+    specs: { 
+        dimensions: "2100 * 950 * 750 mm", 
+        volume: "0.6 m³", 
+        assembly: "Desmontado y Ensamblado / 3 Piezas" 
+    },
+    materials: [
+        { part: "Sobre (Tabletop)", material: "Mármol", detail: "Snow White (Oil-bright)" },
+        { part: "Estructura de las patas (Foot frame)", material: "Madera de Fresno (Ash wood)", detail: "Color cera de aceite (Oil-wax color)" }
+    ],
+    colors: {
+        marble: [
+            { name: "Snow White (Oil-bright)", hex: "#DCDCDC" },              // Blanco veteado (estimado de la muestra)
+            { name: "Imported Calacatta Gray (Oil-matte)", hex: "#B0B3A8" },  // Gris claro mate (estimado de la muestra)
+            { name: "Wyndham Gray (Oil-bright)", hex: "#4A4D4E" }             // Gris oscuro (estimado de la muestra)
+        ]
+    },
+    configurations: [
+        { code: "HYTL86128-B1600", desc: "1600*900*750 mm", price: 17790 },
+        { code: "HYTL86128-B1800", desc: "1800*900*750 mm", price: 19080 },
+        { code: "HYTL86128-B2100", desc: "2100*950*750 mm", price: 22260 }
+    ],
+    priceList: [
+        { name: "Mesa 1600mm (Snow White)", size: "1600*900*750", price: 17790 },
+        { name: "Mesa 1800mm (Snow White)", size: "1800*900*750", price: 19080 },
+        { name: "Mesa 2100mm (Snow White)", size: "2100*950*750", price: 22260 }
+    ],
+    customInstructions: {
+        length: "Customizable (1400-2400 mm)",
+        width: "Customizable (800-1100 mm)",
+        height: "Not customizable"
+    }
+  },
+  // PRODUCTO 49: MESA COMEDOR
+  { 
+    id: "mesa-comedor-hytl86129-a", 
+    name: "Mesa de Comedor", 
+    category: "Mesa de Comedor", 
+    code: "HYTL86129-A/MZL3118", 
+    priceBase: 24350, 
+    // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/COMEDOR/MESA49/render.jpg
+    image: "/images/MESAS/COMEDOR/MESA49/render.jpg", 
+    specs: { 
+        dimensions: "1600 * 900 * 750 mm", 
+        volume: "0.63 m³", 
+        assembly: "Desmontado y Ensamblado / 2 Piezas" 
+    },
+    materials: [
+        { part: "Sobre (Tabletop)", material: "Mármol", detail: "Emerald in the Clouds (Oil-bright)" },
+        { part: "Estructura de las patas (Foot frame)", material: "Acero Inoxidable", detail: "Gunmetal cepillado (Brushed Gunmetal)" }
+    ],
+    colors: {
+        marble: [
+            { name: "Emerald in the Clouds (Oil-bright)", hex: "#7B8D83" },     // Verde grisáceo (estimado de la muestra)
+            { name: "Snow Mountain Blue (Oil-bright)", hex: "#D0D3D4" },       // Gris claro/azulado (estimado de la muestra)
+            { name: "Snow White (Oil-bright)", hex: "#DCDCDC" },              // Blanco veteado (estimado de la muestra)
+            { name: "Moon Valley (Oil-bright)", hex: "#8B7D6B" }               // Tono tierra/bronceado (estimado de la muestra)
+        ]
+    },
+    configurations: [
+        { code: "HYTL86129-A1600", desc: "1600*900*750 mm", price: 24350 },
+        { code: "HYTL86129-A1800", desc: "1800*900*750 mm", price: 25380 },
+        { code: "HYTL86129-A2100", desc: "2100*1000*750 mm", price: 26780 },
+        { code: "HYTL86129-A2400", desc: "2400*1100*750 mm", price: 30290 },
+        { code: "HYTL86129-A2600", desc: "2600*1100*750 mm", price: 31460 }
+    ],
+    priceList: [
+        { name: "Mesa 1600mm (Emerald in the Clouds)", size: "1600*900*750", price: 24350 },
+        { name: "Mesa 1800mm (Emerald in the Clouds)", size: "1800*900*750", price: 25380 },
+        { name: "Mesa 2100mm (Emerald in the Clouds)", size: "2100*1000*750", price: 26780 },
+        { name: "Mesa 2400mm (Emerald in the Clouds)", size: "2400*1100*750", price: 30290 },
+        { name: "Mesa 2600mm (Emerald in the Clouds)", size: "2600*1100*750", price: 31460 }
+    ],
+    customInstructions: {
+        length: "Customizable (1600-2600 mm)",
+        width: "Customizable (900-1100 mm)",
+        height: "Not customizable"
+    }
+  },
 ];
 
 // --- 4. FUNCIÓN DE SUBIDA ---
@@ -1359,7 +1720,7 @@ async function subirMesas() {
   if (error) {
     console.error("❌ Error subiendo datos:", error.message);
   } else {
-    console.log("✅ ¡ÉXITO! Las 47 mesas se han subido correctamente a la tabla 'mesas'.");
+    console.log(`✅ ¡ÉXITO! Las ${tablesData.length} mesas se han subido correctamente a la tabla 'mesas'.`);
   }
 }
 

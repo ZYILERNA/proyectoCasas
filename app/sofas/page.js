@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useMemo, memo } from 'react';
 import Link from 'next/link';
-import Image from 'next/image'; // IMPORTANTE: Importamos Image
+import Image from 'next/image';
 import { createClient } from '@supabase/supabase-js';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight, ScanLine, Ruler, Box, Palette, RefreshCw, Lock, Layers, Armchair, Maximize2, Barcode, Loader2, Search } from 'lucide-react';
@@ -15,6 +15,20 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey);
 // --- CONSTANTES ---
 const EXCHANGE_RATE = 0.13; 
 const AUTOPLAY_INTERVAL = 3000;
+
+// --- VARIANTES DE ANIMACIÓN ---
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1 }
+  }
+};
 
 // Función para formatear precios (CNY -> EUR)
 const formatPrice = (priceCNY) => {
@@ -30,11 +44,11 @@ const formatPrice = (priceCNY) => {
 const PriceTableModal = memo(({ isOpen, onClose, data, title }) => {
     if (!isOpen || !data) return null;
     return (
-        // Quitamos backdrop-blur también aquí para consistencia y rendimiento
-        <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-black/60" onClick={onClose}>
+        <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-black/80" onClick={onClose}>
             <motion.div 
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
+                transition={{ type: "tween", duration: 0.2 }}
                 style={{ willChange: "transform, opacity" }}
                 onClick={(e) => e.stopPropagation()}
                 className="bg-white rounded-xl shadow-2xl w-full max-w-5xl max-h-[90vh] overflow-hidden flex flex-col"
@@ -82,7 +96,7 @@ const PriceTableModal = memo(({ isOpen, onClose, data, title }) => {
 // --- COMPONENTE 2: ITEM DE SOFÁ ---
 const SofaItem = memo(({ sofa, onClick }) => {
     return (
-        <motion.div layout initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <motion.div variants={fadeInUp}>
             <div className="group block h-full flex flex-col relative">
                 <div 
                     onClick={onClick} 
@@ -93,7 +107,6 @@ const SofaItem = memo(({ sofa, onClick }) => {
                             <Barcode size={10} /> {sofa.code}
                         </div>
                     </div>
-                    {/* Usamos Image de Next.js para optimización automática */}
                     <Image 
                         src={sofa.image || "/images/placeholder.jpg"} 
                         alt={sofa.name} 
@@ -112,11 +125,21 @@ const SofaItem = memo(({ sofa, onClick }) => {
     );
 });
 
-// --- COMPONENTE 3: DRAWER / DETALLE DEL PRODUCTO (OPTIMIZADO) ---
+// --- COMPONENTE 3: DRAWER / DETALLE DEL PRODUCTO ---
 const ProductDrawer = memo(({ selectedSofa, onClose }) => {
+    // Estados para Desktop
     const [currentSchematicIndex, setCurrentSchematicIndex] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
+    
+    // Estados Globales
     const [showPriceModal, setShowPriceModal] = useState(false);
+    const [mobileImageIndex, setMobileImageIndex] = useState(0);
+
+    // Unificamos todas las imágenes para el carrusel móvil
+    const allImages = useMemo(() => {
+        if (!selectedSofa) return [];
+        return [selectedSofa.image, ...(selectedSofa.schematics || [])];
+    }, [selectedSofa]);
 
     const hasMultipleImages = selectedSofa?.schematics && selectedSofa.schematics.length > 1;
 
@@ -125,6 +148,7 @@ const ProductDrawer = memo(({ selectedSofa, onClose }) => {
         return () => { document.body.style.overflow = ''; };
     }, []);
 
+    // Autoplay solo para Escritorio
     useEffect(() => {
         if (!hasMultipleImages || isPaused) return;
         const timer = setInterval(() => {
@@ -159,40 +183,79 @@ const ProductDrawer = memo(({ selectedSofa, onClose }) => {
                 animate={{ opacity: 1 }} 
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
-                // OPTIMIZACIÓN CRÍTICA: Quitamos backdrop-blur-sm, usamos solo color sólido
-                className="fixed inset-0 z-50 flex justify-end bg-black/60 h-[100dvh]" 
+                className="fixed inset-0 z-50 flex justify-end bg-black/80 h-[100dvh]" 
                 onClick={onClose}
             >
                 <motion.div 
                     initial={{ x: "100%" }} 
                     animate={{ x: 0 }} 
                     exit={{ x: "100%" }}
-                    // OPTIMIZACIÓN: 'tween' es mucho más ligero para la CPU que 'spring'
-                    transition={{ type: "tween", ease: "circOut", duration: 0.3 }} 
-                    // OPTIMIZACIÓN: will-change prepara la GPU
+                    transition={{ type: "tween", ease: "circOut", duration: 0.35 }} 
                     style={{ willChange: "transform" }}
                     onClick={(e) => e.stopPropagation()} 
                     className="bg-white w-full max-w-5xl h-full shadow-2xl flex flex-col md:flex-row overflow-hidden rounded-l-2xl"
                 >
-                    {/* IZQUIERDA: IMÁGENES */}
-                    <div className="md:w-3/5 bg-gray-50 p-6 md:p-8 flex flex-col gap-6 relative shrink-0 border-b md:border-b-0 border-gray-100">
-                        <button onClick={onClose} className="absolute top-4 right-4 md:hidden bg-white p-2 rounded-full shadow-md border border-gray-100 z-10 text-gray-900"><X size={20} /></button>
+                    {/* IZQUIERDA: GALERÍA DE IMÁGENES */}
+                    <div className="md:w-3/5 bg-gray-50 md:p-8 flex flex-col md:gap-6 relative shrink-0 border-b md:border-b-0 border-gray-100">
+                        {/* Botón cerrar para móvil */}
+                        <button onClick={onClose} className="absolute top-4 right-4 md:hidden bg-white/90 p-2 rounded-full shadow-md border border-gray-100 z-20 text-gray-900">
+                            <X size={20} />
+                        </button>
 
-                        <div className="aspect-video w-full bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden p-4 flex items-center justify-center relative group shrink-0 max-h-[35vh] md:max-h-full">
-                            {/* OPTIMIZACIÓN: Usamos Next Image + priority + decoding async */}
-                            <div className="relative w-full h-full">
-                                <Image 
-                                    src={selectedSofa.image} 
-                                    alt="Render" 
-                                    fill
-                                    priority
-                                    className="object-contain mix-blend-multiply"
-                                    sizes="(max-width: 768px) 100vw, 60vw"
-                                />
+                        {/* --- MÓVIL: CARRUSEL DESLIZABLE (SWIPE) --- */}
+                        <div className="md:hidden relative w-full bg-white h-[45vh]">
+                            <div 
+                                className="flex overflow-x-auto snap-x snap-mandatory h-full w-full scrollbar-hide"
+                                style={{ scrollBehavior: 'smooth' }}
+                                onScroll={(e) => {
+                                    // Calcula qué imagen está activa basándose en el scroll
+                                    const index = Math.round(e.target.scrollLeft / e.target.clientWidth);
+                                    setMobileImageIndex(index);
+                                }}
+                            >
+                                {allImages.map((img, idx) => (
+                                    <div key={idx} className="w-full h-full shrink-0 snap-center relative flex items-center justify-center p-6">
+                                        <Image 
+                                            src={img} 
+                                            alt={`${selectedSofa.name} vista ${idx}`} 
+                                            fill 
+                                            priority={idx === 0}
+                                            sizes="100vw"
+                                            className="object-contain mix-blend-multiply p-4" 
+                                        />
+                                    </div>
+                                ))}
                             </div>
+                            {/* Puntos Indicadores (Dots) para móvil */}
+                            {allImages.length > 1 && (
+                                <div className="absolute bottom-4 left-0 w-full flex justify-center gap-1.5 z-10">
+                                    {allImages.map((_, idx) => (
+                                        <div 
+                                            key={idx} 
+                                            className={`h-1.5 rounded-full transition-all duration-300 ${idx === mobileImageIndex ? 'w-4 bg-black' : 'w-1.5 bg-gray-300'}`} 
+                                        />
+                                    ))}
+                                </div>
+                            )}
                         </div>
-                        
-                        <div className="hidden md:block">
+
+                        {/* --- ESCRITORIO: VISTA ESTÁTICA + ANIMACIÓN TÉCNICA --- */}
+                        <div className="hidden md:flex flex-col gap-6 h-full">
+                            {/* Imagen Principal Desktop */}
+                            <div className="aspect-video w-full bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden p-4 flex items-center justify-center relative group shrink-0">
+                                <div className="relative w-full h-full">
+                                    <Image 
+                                        src={selectedSofa.image} 
+                                        alt="Render" 
+                                        fill
+                                        priority
+                                        className="object-contain mix-blend-multiply"
+                                        sizes="60vw"
+                                    />
+                                </div>
+                            </div>
+                            
+                            {/* Planos Técnicos Desktop */}
                             {selectedSofa.schematics && selectedSofa.schematics.length > 0 && (
                                 <div 
                                     className="bg-white p-4 rounded-lg border border-gray-200 relative group shrink-0"
@@ -214,17 +277,17 @@ const ProductDrawer = memo(({ selectedSofa, onClose }) => {
                                                 animate={{ opacity: 1 }}
                                                 exit={{ opacity: 0 }}
                                                 transition={{ duration: 0.2 }}
-                                                decoding="async" // Importante para no bloquear
+                                                decoding="async"
                                                 className="max-w-full max-h-full object-contain p-4 mix-blend-multiply cursor-crosshair"
                                             />
                                         </AnimatePresence>
 
                                         {hasMultipleImages && (
                                             <>
-                                                <button onClick={prevSchematic} className="absolute left-2 p-2 rounded-full bg-white/80 shadow hover:bg-white transition-all hover:scale-110 opacity-0 group-hover:opacity-100">
+                                                <button onClick={prevSchematic} className="absolute left-2 p-2 rounded-full bg-white/90 shadow hover:bg-white transition-all hover:scale-110 opacity-0 group-hover:opacity-100">
                                                     <ChevronLeft size={20} />
                                                 </button>
-                                                <button onClick={nextSchematic} className="absolute right-2 p-2 rounded-full bg-white/80 shadow hover:bg-white transition-all hover:scale-110 opacity-0 group-hover:opacity-100">
+                                                <button onClick={nextSchematic} className="absolute right-2 p-2 rounded-full bg-white/90 shadow hover:bg-white transition-all hover:scale-110 opacity-0 group-hover:opacity-100">
                                                     <ChevronRight size={20} />
                                                 </button>
                                                 
@@ -283,9 +346,9 @@ const ProductDrawer = memo(({ selectedSofa, onClose }) => {
                                         <div 
                                             className="w-12 h-12 rounded-full shadow-md border-2 border-white group-hover:scale-110 transition-transform duration-300" 
                                             style={{ 
-                                            backgroundColor: color.hex,
-                                            backgroundImage: color.name.includes("Grid") ? 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)' : 'none',
-                                            backgroundSize: '4px 4px'
+                                                backgroundColor: color.hex,
+                                                backgroundImage: color.name.includes("Grid") ? 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)' : 'none',
+                                                backgroundSize: '4px 4px'
                                             }}
                                             title={color.name}
                                         ></div>
@@ -350,7 +413,7 @@ const ProductDrawer = memo(({ selectedSofa, onClose }) => {
                                         {selectedSofa.configurations?.map((conf, idx) => (
                                             <div key={idx} className={`p-2.5 rounded border flex justify-between items-center text-xs ${conf.code === '4D' || conf.code === '2LE' ? 'bg-black text-white border-black' : 'border-gray-100 text-gray-600'}`}>
                                                 <div className="flex items-center gap-2">
-                                                    <span className="font-bold font-mono bg-white/10 px-1.5 rounded">{conf.code}</span>
+                                                    <span className="font-bold font-mono bg-black/10 px-1.5 rounded">{conf.code}</span>
                                                     <span className="opacity-80">{conf.size}</span>
                                                 </div>
                                                 <div className="font-bold font-mono">{formatPrice(conf.price)}</div>
@@ -361,7 +424,7 @@ const ProductDrawer = memo(({ selectedSofa, onClose }) => {
                             </div>
                         </div>
 
-                        <div className="absolute bottom-0 left-0 w-full bg-white/95 backdrop-blur-sm border-t border-gray-100 p-4 md:p-6 z-20">
+                        <div className="absolute bottom-0 left-0 w-full bg-white border-t border-gray-100 p-4 md:p-6 z-20">
                             <div className="bg-gray-900 text-white p-4 rounded-lg flex justify-between items-center shadow-lg">
                                 <div>
                                     <div className="text-[10px] uppercase text-gray-400 tracking-widest">Precio Estimado</div>
@@ -449,10 +512,14 @@ export default function SofasPage() {
         )}
       </AnimatePresence>
 
-      {/* HEADER */}
+      {/* HEADER ANIMADO */}
       <div className="relative h-[50vh] bg-[#0a0a0a] overflow-hidden flex items-end pb-12">
-        <div className="absolute inset-0 opacity-60">
-           {/* Imagen de cabecera con Next Image para mejor carga LCP */}
+        <motion.div 
+            initial={{ scale: 1.1, opacity: 0 }}
+            animate={{ scale: 1, opacity: 0.6 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+            className="absolute inset-0"
+        >
            <Image 
                 src="/images/sofa-header.jpg" 
                 alt="Header" 
@@ -460,16 +527,27 @@ export default function SofasPage() {
                 priority
                 className="w-full h-full object-cover"
            />
-        </div>
+        </motion.div>
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40" />
-        <div className="relative z-10 container mx-auto px-6">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-2 tracking-tighter">SOFAS</h1>
-            <p className="text-gray-300">Ingeniería de confort. Precios directos de fábrica.</p>
-        </div>
+        
+        <motion.div 
+            variants={staggerContainer}
+            initial="hidden"
+            animate="visible"
+            className="relative z-10 container mx-auto px-6"
+        >
+            <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-bold text-white mb-2 tracking-tighter">SOFAS</motion.h1>
+            <motion.p variants={fadeInUp} className="text-gray-300">Ingeniería de confort. Precios directos de fábrica.</motion.p>
+        </motion.div>
       </div>
 
-      {/* BARRA DE CONTROL (Filtros + Buscador) */}
-      <div className="sticky top-0 z-40 bg-white/95 backdrop-blur-lg border-b border-gray-100 shadow-sm transition-all">
+      {/* BARRA DE CONTROL ANIMADA */}
+      <motion.div 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+        className="sticky top-0 z-40 bg-white border-b border-gray-100 shadow-sm transition-all"
+      >
         <div className="container mx-auto px-6 py-4">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 
@@ -508,9 +586,9 @@ export default function SofasPage() {
 
             </div>
         </div>
-      </div>
+      </motion.div>
 
-      {/* GRID PRODUCTOS */}
+      {/* GRID PRODUCTOS CON CASCADA */}
       <div className="container mx-auto px-6 py-16">
         {isLoading ? (
             <div className="flex flex-col items-center justify-center py-20 text-gray-400">
@@ -520,7 +598,12 @@ export default function SofasPage() {
         ) : (
             <>
                 {filteredSofas.length > 0 ? (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+                    <motion.div 
+                        variants={staggerContainer}
+                        initial="hidden"
+                        animate="visible"
+                        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16"
+                    >
                       {filteredSofas.map((sofa) => (
                         <SofaItem 
                           key={sofa.id} 
@@ -528,15 +611,19 @@ export default function SofasPage() {
                           onClick={() => setSelectedSofa(sofa)} 
                         />
                       ))}
-                    </div>
+                    </motion.div>
                 ) : (
-                    <div className="text-center py-20 bg-gray-50 rounded-lg border border-gray-100 border-dashed">
+                    <motion.div 
+                        initial={{ opacity: 0 }} 
+                        animate={{ opacity: 1 }} 
+                        className="text-center py-20 bg-gray-50 rounded-lg border border-gray-100 border-dashed"
+                    >
                         <p className="text-gray-400 text-lg mb-2">No se encontraron resultados para <span className="text-black font-bold">"{searchQuery}"</span></p>
                         <p className="text-gray-400 text-sm">Prueba buscando por el código del producto (ej: HYSF...)</p>
                         <button onClick={() => setSearchQuery("")} className="mt-6 text-xs font-bold uppercase tracking-widest text-black border-b border-black hover:opacity-50 transition-opacity">
                             Limpiar búsqueda
                         </button>
-                    </div>
+                    </motion.div>
                 )}
             </>
         )}
