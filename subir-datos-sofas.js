@@ -12,50 +12,39 @@ const supabase = createClient(SUPABASE_URL, SERVICE_KEY);
 const sofasData = [
   // ... (Tus datos se mantienen igual, solo copio la estructura para referencia) ...
   // PRODUCTO 1: MODENA 88 (SOFÁ ESTÁNDAR)
-  { 
-    id: "hysf88-standard", 
-    name: "Modena 88 Series", 
-    category: "Sofá Estándar", 
-    code: "HYSF88101/2928BS", 
-    modules: "4D (2795mm)", 
-    priceBase: 35580, 
-    image: "/images/SOFA/ESTANDAR/SOFA1/sofa_render.jpg", 
+ { 
+    id: "hyyd85-tea-chair", 
+    name: "Tea Chair Series", 
+    category: "Silla / Tea Chair", 
+    code: "HYYD85101/HX8026B", 
+    priceBase: 9100, 
+    image: "/images/SILLAS/TEA/SILLA1/render.jpg", 
     schematics: [
-        "/images/SOFA/ESTANDAR/SOFA1/plano_vista_frontal.jpg", 
-        "/images/SOFA/ESTANDAR/SOFA1/plano_vista_lateral.jpg",
-        "/images/SOFA/ESTANDAR/SOFA1/plano_vista_superior.jpg"
+        "/images/SILLAS/TEA/SILLA1/img1.jpg", 
+        "/images/SILLAS/TEA/SILLA1/img2.jpg",
+        "/images/SILLAS/TEA/SILLA1/img3.jpg"
     ],
     specs: {
-        dimensions: "2795 * 915 * 790 mm",
-        volume: "2.31 m³",
-        assembly: "Assembled / 1 piece",
-        pillows: "3 pieces (500*450)"
+        dimensions: "640 * 600 * 770 mm",
+        volume: "0.38 m³",
+        assembly: "Assembled / 1 piece"
     },
     materials: [
-        { part: "Main Body", material: "Fabric (BLMM0122T)", detail: "Interchangeable" },
-        { part: "Structure", material: "Ash Wood", detail: "Oil-wax color" },
-        { part: "Foot Frame", material: "Stainless Steel", detail: "Brushed Gunmetal" }
+        { part: "Main body", material: "Genuine leather", detail: "PLBQ0045 (Interchangeable)" },
+        { part: "Foot frame", material: "Ash wood", detail: "Oil-wax color" }
     ],
     colors: {
         interior: [
-            { name: "Slate Grid Fabric", hex: "#9BA4B1" } 
+            { name: "PLBQ0045/HY9029 Genuine Leather", hex: "#455562" } 
         ]
     },
     configurations: [
-        { code: "1D", size: "1120mm", vol: "0.98m³", price: 15850 }, 
-        { code: "2D", size: "2000mm", vol: "1.66m³", price: 27850 },
-        { code: "4D", size: "2795mm", vol: "2.31m³", price: 35580 }, 
-        { code: "3RE", size: "2065mm", vol: "1.97m³", price: 23760 }
+        { code: "STD", size: "640mm", vol: "0.38m³", price: 9100 }
     ],
     priceList: [
-        { name: "1D (1-Seater)", size: "1120*915*790", vol: "0.98", prices: { fa: 15150, fb: 15580, fc: 15850, fd: 16650, fe: 18750, la: 29280, lb: 32080, lc: 34850 } },
-        { name: "2D (2-Seater)", size: "2000*915*790", vol: "1.66", prices: { fa: 26480, fb: 27180, fc: 27850, fd: 29580, fe: 33790, la: 54850, lb: 60780, lc: 66750 } },
-        { name: "4D (4-Seater)", size: "2795*915*790", vol: "2.31", prices: { fa: 33480, fb: 34580, fc: 35580, fd: 37390, fe: 42880, la: 69500, lb: 77250, lc: 84550 } },
-        { name: "4D-1 (Large)", size: "3200*1030*790", vol: "3.02", prices: { fa: 33480, fb: 34580, fc: 35580, fd: 37390, fe: 42880, la: 69500, lb: 77250, lc: 84550 } },
-        { name: "3RE (Chaise)", size: "2065*1030*790", vol: "1.97", prices: { fa: 22360, fb: 23060, fc: 23760, fd: 25160, fe: 28660, la: 46760, lb: 51760, lc: 56660 } },
-        { name: "1LE (Arm Unit)", size: "1135*1030*790", vol: "1.11", prices: { fa: 12790, fb: 13160, fc: 13490, fd: 14180, fe: 15960, la: 26460, lb: 29360, lc: 32160 } },
+        { name: "Tea Chair", size: "640*600*770", vol: "0.38", prices: { fa: 5250, fb: 5460, fc: 5680, fd: 6260, fe: 6960, la: 9100, lb: 9800, lc: 10580 } }
     ]
-  },
+ }
 
   // PRODUCTO 2: NORDIC MODULAR (HYSF88103)
   { 

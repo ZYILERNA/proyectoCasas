@@ -153,7 +153,7 @@ export default function Home() {
       </section>
 
       {/* =========================================
-          3. NUEVA SECCIÓN: VENTANAS Y CERRAMIENTOS
+          3. SECCIÓN: VENTANAS Y CERRAMIENTOS
          ========================================= */}
       <section className="py-24 bg-zinc-900 relative overflow-hidden">
         <div className="container mx-auto px-6">
@@ -174,7 +174,7 @@ export default function Home() {
                             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                         />
                     </div>
-                    {/* Detalle flotante técnico con pequeña animación */}
+                    {/* Detalle flotante técnico */}
                     <motion.div 
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
@@ -239,7 +239,7 @@ export default function Home() {
       </section>
 
       {/* =========================================
-          4. SECCIÓN SECUNDARIA: SOFÁS Y HOGAR
+          4. SECCIÓN SOFÁS
          ========================================= */}
       <section className="py-24 bg-black relative overflow-hidden">
         {/* Decoración de fondo animada */}
@@ -271,24 +271,14 @@ export default function Home() {
                 Más allá de la seguridad, creamos espacios únicos. Descubre nuestra exclusiva línea de sofás modulares y mobiliario de alta gama, diseñados para el confort absoluto.
               </motion.p>
               
-              <motion.div variants={fadeInUp} className="flex flex-col gap-4">
-                <Link href="/sofas" className="flex items-center gap-4 group">
-                  <div className="w-12 h-12 bg-[#1a1a1a] flex items-center justify-center text-white group-hover:bg-[#00C2FF] group-hover:text-black transition-colors duration-300">
-                    <HomeIcon size={20}/>
+              <motion.div variants={fadeInUp}>
+                <Link href="/sofas" className="inline-flex items-center gap-4 group bg-white/5 hover:bg-white/10 px-6 py-4 rounded-lg transition-colors border border-white/10">
+                  <div className="w-10 h-10 bg-[#00C2FF] flex items-center justify-center text-black rounded-full">
+                    <HomeIcon size={18}/>
                   </div>
                   <div>
                     <h5 className="text-white font-bold uppercase text-sm">Colección de Sofás</h5>
-                    <span className="text-gray-500 text-xs">Modelos modulares, piel y tela</span>
-                  </div>
-                </Link>
-                
-                <Link href="/mesas" className="flex items-center gap-4 group">
-                   <div className="w-12 h-12 bg-[#1a1a1a] flex items-center justify-center text-white group-hover:bg-white group-hover:text-black transition-colors duration-300">
-                    <span className="font-serif italic">M</span>
-                  </div>
-                  <div>
-                    <h5 className="text-white font-bold uppercase text-sm">Mesas y Sillas</h5>
-                    <span className="text-gray-500 text-xs">Comedor y centro</span>
+                    <span className="text-[#00C2FF] text-xs font-bold uppercase tracking-widest">Explorar catálogo</span>
                   </div>
                 </Link>
               </motion.div>
@@ -313,6 +303,65 @@ export default function Home() {
                  <p className="font-bold text-2xl mb-1">2025</p>
                  <p className="text-xs font-bold uppercase tracking-widest">Nueva Colección</p>
               </div>
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================
+          5. NUEVA SECCIÓN: MESAS
+         ========================================= */}
+      <section className="py-24 bg-zinc-950 relative overflow-hidden border-t border-white/5">
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            {/* IMAGEN GRANDE (A la izquierda para romper el ritmo visual) */}
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="relative order-2 lg:order-1"
+            >
+              <div className="aspect-[4/3] bg-gray-800 border border-white/10 p-2">
+                 <img 
+                   src="/images/mesas-home.jpg" // Asegúrate de tener esta imagen
+                   alt="Colección Mesas WONLY" 
+                   className="w-full h-full object-cover"
+                 />
+              </div>
+            </motion.div>
+
+            {/* TEXTO (A la derecha) */}
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={staggerContainer}
+              className="order-1 lg:order-2 lg:pl-8"
+            >
+              <motion.span variants={fadeInUp} className="text-gray-500 font-bold tracking-widest uppercase text-sm mb-2 block">
+                Arte & Funcionalidad
+              </motion.span>
+              <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl font-bold text-white mb-6">
+                COLECCIÓN <br/> DE MESAS
+              </motion.h2>
+              <motion.p variants={fadeInUp} className="text-gray-400 text-lg mb-8 leading-relaxed">
+                Diseño escultórico y materiales nobles. Explora nuestra gama de mesas creadas para ser el centro de atención de cualquier espacio, combinando estética minimalista con durabilidad extrema.
+              </motion.p>
+              
+              <motion.div variants={fadeInUp}>
+                <Link href="/mesas" className="inline-flex items-center gap-4 group bg-white/5 hover:bg-white/10 px-6 py-4 rounded-lg transition-colors border border-white/10">
+                  <div className="w-10 h-10 bg-white flex items-center justify-center text-black rounded-full transition-transform group-hover:scale-110">
+                    <span className="font-serif italic font-bold text-lg">M</span>
+                  </div>
+                  <div>
+                    <h5 className="text-white font-bold uppercase text-sm">Ver Mesas</h5>
+                    <span className="text-[#00C2FF] text-xs font-bold uppercase tracking-widest">Descubrir Modelos</span>
+                  </div>
+                </Link>
+              </motion.div>
             </motion.div>
 
           </div>

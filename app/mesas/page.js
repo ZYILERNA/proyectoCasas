@@ -24,26 +24,18 @@ const formatPrice = (priceCNY) => {
     }).format(priceCNY * EXCHANGE_RATE);
 };
 
-// --- VARIANTES DE ANIMACIÓN (Framer Motion) ---
-const fadeInContainer = {
+// --- VARIANTES DE ANIMACIÓN EXACTAS A "SILLAS" ---
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
+
+const staggerContainer = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      duration: 0.6,
-      when: "beforeChildren",
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const itemUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } 
-  },
+    transition: { staggerChildren: 0.1 }
+  }
 };
 
 // --- COMPONENTE MODAL PRECIOS ---
@@ -133,8 +125,9 @@ export default function MesasPage() {
   // --- FILTROS ---
   const categories = useMemo(() => {
     if (!products.length) return ["Todos"];
-    const cats = ["Todos", ...new Set(products.map(p => p.category).filter(Boolean))];
-    return cats.sort();
+    const uniqueCats = [...new Set(products.map(p => p.category).filter(Boolean))];
+    uniqueCats.sort();
+    return ["Todos", ...uniqueCats];
   }, [products]);
 
   const filteredProducts = useMemo(() => {
@@ -184,12 +177,7 @@ export default function MesasPage() {
   };
 
   return (
-    <motion.div 
-      className="bg-white min-h-screen pb-32 font-sans selection:bg-black selection:text-white"
-      initial="hidden"
-      animate="visible"
-      variants={fadeInContainer}
-    >
+    <div className="bg-white min-h-screen pb-32 font-sans selection:bg-black selection:text-white">
       
       <PriceTableModal 
         isOpen={showPriceModal} 
@@ -198,9 +186,14 @@ export default function MesasPage() {
         title={selectedProduct?.name}
       />
 
-      {/* HEADER */}
-      <motion.div variants={itemUp} className="relative h-[40vh] md:h-[50vh] bg-[#0a0a0a] overflow-hidden flex items-end pb-12">
-        <div className="absolute inset-0 opacity-60">
+      {/* HEADER ADAPTADO ESTILO "SILLAS" */}
+      <div className="relative h-[40vh] md:h-[50vh] bg-[#0a0a0a] overflow-hidden flex items-end pb-12">
+        <motion.div 
+            initial={{ scale: 1.1, opacity: 0 }}
+            animate={{ scale: 1, opacity: 0.6 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+            className="absolute inset-0"
+        >
              <Image 
                 src="/images/mesas-header.jpg" 
                 alt="Header Mesas" 
@@ -208,164 +201,166 @@ export default function MesasPage() {
                 priority 
                 className="w-full h-full object-cover"
             />
-        </div>
+        </motion.div>
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40" />
-        <div className="relative z-10 container mx-auto px-6">
-            <motion.h1 
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-4xl md:text-7xl font-bold text-white mb-2 tracking-tighter"
-            >
+        
+        <motion.div 
+            variants={staggerContainer}
+            initial="hidden"
+            animate="visible"
+            className="relative z-10 container mx-auto px-6"
+        >
+            <motion.h1 variants={fadeInUp} className="text-4xl md:text-7xl font-bold text-white mb-2 tracking-tighter">
               COLECCIÓN MESAS
             </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-              className="text-gray-300 max-w-xl text-sm md:text-base"
-            >
+            <motion.p variants={fadeInUp} className="text-gray-300 max-w-xl text-sm md:text-base">
               Diseño escultórico y materiales nobles.
             </motion.p>
+        </motion.div>
+      </div>
+
+      {/* BARRA DE FILTROS ADAPTADA ESTILO "SOFÁS/SILLAS" */}
+      <motion.div 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+        className="sticky top-0 z-40 bg-white/95 backdrop-blur-xl border-b border-gray-100 shadow-sm transition-all duration-300"
+      >
+        <div className="container mx-auto px-6 py-4">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                
+                {/* Contenedor de Categorías (Scroll oculto nativo y sin recortes) */}
+                <div className="flex gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
+                  {categories.map((cat) => (
+                    <button
+                      key={cat}
+                      onClick={() => handleCategoryChange(cat)}
+                      className={`px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 border whitespace-nowrap 
+                        ${activeCategory === cat 
+                            ? 'bg-black text-white border-black' 
+                            : 'bg-transparent text-gray-500 border-gray-200 hover:border-black hover:text-black'}`}
+                    >
+                      {cat}
+                    </button>
+                  ))}
+                </div>
+
+                {/* Buscador Integrado */}
+                <div className="relative group w-full md:w-72 shrink-0">
+                    <SearchIcon className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-black transition-colors" size={16} />
+                    <input 
+                        type="text" 
+                        placeholder="BUSCAR MESA..." 
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        className="w-full bg-[#F5F5F5] border border-transparent focus:bg-white focus:border-gray-200 rounded-full py-2.5 pl-11 pr-4 text-xs font-bold uppercase tracking-wide focus:ring-0 transition-all outline-none placeholder:text-gray-400"
+                    />
+                    {searchTerm && (
+                        <button 
+                            onClick={() => setSearchTerm("")}
+                            className="absolute right-3 top-1/2 -translate-y-1/2 p-1 hover:bg-gray-200 rounded-full text-gray-400 hover:text-black transition-colors"
+                        >
+                            <X size={12} />
+                        </button>
+                    )}
+                </div>
+            </div>
         </div>
       </motion.div>
 
-      <motion.div variants={itemUp}>
-        {/* --- BARRA DE FILTROS --- */}
-        <div className="sticky top-0 z-40 bg-white/95 backdrop-blur-xl border-b border-gray-100 shadow-sm transition-all duration-300">
-          <div className="container mx-auto px-6 py-4">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                  <div className="flex gap-2 overflow-x-auto w-full md:w-auto pb-1 order-2 md:order-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
-                    {categories.map((cat) => (
-                      <button
-                        key={cat}
-                        onClick={() => handleCategoryChange(cat)}
-                        className={`whitespace-nowrap px-5 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-widest transition-all duration-300 border 
-                          ${activeCategory === cat 
-                              ? 'bg-black text-white border-black shadow-lg transform scale-105' 
-                              : 'bg-gray-50 text-gray-500 border-transparent hover:border-gray-200 hover:text-black'}`}
-                      >
-                        {cat}
-                      </button>
-                    ))}
-                  </div>
-
-                  <div className="relative group w-full md:w-72 order-1 md:order-2">
-                      <SearchIcon className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-black transition-colors" size={16} />
-                      <input 
-                          type="text" 
-                          placeholder="BUSCAR MESA..." 
-                          value={searchTerm}
-                          onChange={(e) => setSearchTerm(e.target.value)}
-                          className="w-full bg-[#F5F5F5] border border-transparent focus:bg-white focus:border-gray-200 rounded-full py-2.5 pl-11 pr-4 text-xs font-bold uppercase tracking-wide focus:ring-0 transition-all outline-none placeholder:text-gray-400"
-                      />
-                      {searchTerm && (
-                          <button 
-                              onClick={() => setSearchTerm("")}
-                              className="absolute right-3 top-1/2 -translate-y-1/2 p-1 hover:bg-gray-200 rounded-full text-gray-400 hover:text-black transition-colors"
-                          >
-                              <X size={12} />
-                          </button>
-                      )}
-                  </div>
-              </div>
-          </div>
-        </div>
-
-        {/* GRID PRODUCTOS */}
-        <div className="container mx-auto px-6 py-12" ref={gridTopRef}>
-          {isLoading ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-                  {[1,2,3,4,5,6].map(i => (
-                      <div key={i} className="animate-pulse">
-                          <div className="bg-gray-200 aspect-[4/3] rounded-sm mb-4"></div>
-                          <div className="h-6 bg-gray-200 rounded w-3/4 mb-2"></div>
-                          <div className="h-4 bg-gray-200 rounded w-1/4"></div>
-                      </div>
-                  ))}
-              </div>
-          ) : filteredProducts.length === 0 ? (
-              <div className="text-center py-32 text-gray-400 flex flex-col items-center">
-                  <SearchIcon size={48} className="mb-4 opacity-20" />
-                  <p className="text-lg">No encontramos mesas.</p>
-                  <button onClick={() => {setSearchTerm(""); handleCategoryChange("Todos")}} className="mt-4 text-xs font-bold uppercase border-b border-black pb-0.5 hover:opacity-50">
-                      Limpiar filtros
-                  </button>
-              </div>
-          ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-                  <AnimatePresence mode="popLayout">
-                  {filteredProducts.map((item, index) => (
-                  <motion.div 
-                      layout
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.9 }}
-                      transition={{ duration: 0.3, delay: index * 0.05 }}
-                      key={item.id} 
-                      className="group block h-full flex flex-col relative"
-                  >
-                      <div 
-                          onClick={() => openModal(item)} 
-                          className="relative aspect-[4/3] overflow-hidden rounded-sm bg-white mb-4 cursor-pointer"
-                      >
-                          <div className="absolute top-3 left-3 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                              <div className="bg-white/90 backdrop-blur text-black border border-gray-100 text-[10px] font-mono px-2 py-1 flex items-center gap-2 rounded shadow-sm">
-                                  <Barcode size={10} /> {item.code}
-                              </div>
-                          </div>
-                          
-                          <div className="relative w-full h-full p-8 transition-transform duration-500 ease-out group-hover:scale-105">
-                               <Image 
-                                  src={item.image || "/images/placeholder.jpg"} 
-                                  alt={item.name}
-                                  fill
-                                  priority={index < 6}
-                                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                  className="object-contain"
-                               />
-                          </div>
-                          
-                          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                              <span className="bg-black text-white px-4 py-2 text-[10px] font-bold uppercase tracking-widest shadow-xl rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                                  Ver Detalles
-                              </span>
-                          </div>
-                      </div>
-                      
-                      <div className="flex flex-col gap-1">
-                          <div className="flex justify-between items-baseline">
-                              <h3 className="text-lg font-medium text-gray-900 leading-tight group-hover:text-gray-600 transition-colors cursor-pointer" onClick={() => openModal(item)}>{item.name}</h3>
-                              <span className="text-sm font-bold text-gray-900 whitespace-nowrap ml-4">{formatPrice(item.priceBase)}</span>
-                          </div>
-                          
-                          <div className="flex items-center gap-2 mt-1">
-                              <p className="text-[10px] text-gray-400 uppercase tracking-widest mr-2">{item.category}</p>
-                              {item.colors?.interior && (
-                                  <div className="flex -space-x-1">
-                                      {item.colors.interior.slice(0, 4).map((c, i) => (
-                                          <div 
-                                              key={i} 
-                                              className="w-3 h-3 rounded-full border border-white shadow-sm" 
-                                              style={{ backgroundColor: c.hex }}
-                                          />
-                                      ))}
-                                      {item.colors.interior.length > 4 && (
-                                          <div className="w-3 h-3 rounded-full bg-gray-100 border border-white flex items-center justify-center text-[6px] text-gray-500">
-                                              +
-                                          </div>
-                                      )}
-                                  </div>
-                              )}
-                          </div>
-                      </div>
-                  </motion.div>
-                  ))}
-                  </AnimatePresence>
-              </div>
-          )}
-        </div>
-      </motion.div>
+      {/* GRID PRODUCTOS */}
+      <div className="container mx-auto px-6 py-12" ref={gridTopRef}>
+        {isLoading ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+                {[1,2,3,4,5,6].map(i => (
+                    <div key={i} className="animate-pulse">
+                        <div className="bg-gray-200 aspect-[4/3] rounded-sm mb-4"></div>
+                        <div className="h-6 bg-gray-200 rounded w-3/4 mb-2"></div>
+                        <div className="h-4 bg-gray-200 rounded w-1/4"></div>
+                    </div>
+                ))}
+            </div>
+        ) : filteredProducts.length === 0 ? (
+            <div className="text-center py-32 text-gray-400 flex flex-col items-center">
+                <SearchIcon size={48} className="mb-4 opacity-20" />
+                <p className="text-lg">No encontramos mesas.</p>
+                <button onClick={() => {setSearchTerm(""); handleCategoryChange("Todos")}} className="mt-4 text-xs font-bold uppercase border-b border-black pb-0.5 hover:opacity-50 transition-opacity">
+                    Limpiar filtros
+                </button>
+            </div>
+        ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+                <AnimatePresence mode="popLayout">
+                {filteredProducts.map((item, index) => (
+                <motion.div 
+                    layout
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    transition={{ duration: 0.3, delay: index * 0.05 }}
+                    key={item.id} 
+                    className="group block h-full flex flex-col relative"
+                >
+                    <div 
+                        onClick={() => openModal(item)} 
+                        className="relative aspect-[4/3] overflow-hidden rounded-sm bg-white mb-4 cursor-pointer"
+                    >
+                        <div className="absolute top-3 left-3 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div className="bg-white/90 backdrop-blur text-black border border-gray-100 text-[10px] font-mono px-2 py-1 flex items-center gap-2 rounded shadow-sm">
+                                <Barcode size={10} /> {item.code}
+                            </div>
+                        </div>
+                        
+                        <div className="relative w-full h-full p-8 transition-transform duration-500 ease-out group-hover:scale-105">
+                             <Image 
+                                src={item.image || "/images/placeholder.jpg"} 
+                                alt={item.name}
+                                fill
+                                priority={index < 6}
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                className="object-contain"
+                             />
+                        </div>
+                        
+                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                            <span className="bg-black text-white px-4 py-2 text-[10px] font-bold uppercase tracking-widest shadow-xl rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                Ver Detalles
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div className="flex flex-col gap-1">
+                        <div className="flex justify-between items-baseline">
+                            <h3 className="text-lg font-medium text-gray-900 leading-tight group-hover:text-gray-600 transition-colors cursor-pointer" onClick={() => openModal(item)}>{item.name}</h3>
+                            <span className="text-sm font-bold text-gray-900 whitespace-nowrap ml-4">{formatPrice(item.priceBase)}</span>
+                        </div>
+                        
+                        <div className="flex items-center gap-2 mt-1">
+                            <p className="text-[10px] text-gray-400 uppercase tracking-widest mr-2">{item.category}</p>
+                            {item.colors?.interior && (
+                                <div className="flex -space-x-1">
+                                    {item.colors.interior.slice(0, 4).map((c, i) => (
+                                        <div 
+                                            key={i} 
+                                            className="w-3 h-3 rounded-full border border-white shadow-sm" 
+                                            style={{ backgroundColor: c.hex }}
+                                        />
+                                    ))}
+                                    {item.colors.interior.length > 4 && (
+                                        <div className="w-3 h-3 rounded-full bg-gray-100 border border-white flex items-center justify-center text-[6px] text-gray-500">
+                                            +
+                                        </div>
+                                    )}
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                </motion.div>
+                ))}
+                </AnimatePresence>
+            </div>
+        )}
+      </div>
 
       {/* DRAWER DETALLE */}
       <AnimatePresence>
@@ -450,6 +445,7 @@ export default function MesasPage() {
                                             <div 
                                                 className="w-10 h-10 rounded-full shadow-sm border border-gray-200 cursor-help transition-transform hover:scale-110" 
                                                 style={{ backgroundColor: color.hex }}
+                                                title={color.name}
                                             ></div>
                                         </div>
                                     ))}
@@ -516,6 +512,6 @@ export default function MesasPage() {
             </motion.div>
         )}
       </AnimatePresence>
-    </motion.div>
+    </div>
   );
 }
