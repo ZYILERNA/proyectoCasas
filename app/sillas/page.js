@@ -39,7 +39,7 @@ const staggerContainer = {
   }
 };
 
-// --- COMPONENTE MODAL PRECIOS (AMPLIADO PARA TODAS LAS TELAS/PIELES) ---
+// --- COMPONENTE MODAL PRECIOS ---
 const PriceTableModal = memo(({ isOpen, onClose, data, title }) => {
     if (!isOpen || !data) return null;
     return (
@@ -101,7 +101,7 @@ const PriceTableModal = memo(({ isOpen, onClose, data, title }) => {
 });
 PriceTableModal.displayName = 'PriceTableModal';
 
-// --- COMPONENTE 3: DRAWER / DETALLE DEL PRODUCTO (TU DISEÑO ORIGINAL) ---
+// --- COMPONENTE DRAWER / DETALLE DEL PRODUCTO ---
 const ProductDrawer = memo(({ selectedProduct, onClose }) => {
     const [currentSchematicIndex, setCurrentSchematicIndex] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
@@ -166,7 +166,7 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
                     onClick={(e) => e.stopPropagation()} 
                     className="bg-white w-full max-w-5xl h-full shadow-2xl flex flex-col md:flex-row overflow-hidden md:rounded-l-2xl"
                 >
-                    {/* IZQUIERDA: GALERÍA DE IMÁGENES (DISEÑO ORIGINAL) */}
+                    {/* IZQUIERDA: GALERÍA DE IMÁGENES */}
                     <div className="md:w-3/5 bg-gray-50 md:p-8 flex flex-col md:gap-6 relative shrink-0 border-b md:border-b-0 border-gray-100">
                         <button onClick={onClose} className="absolute top-4 right-4 md:hidden bg-white/90 p-2 rounded-full shadow-md border border-gray-100 z-20 text-gray-900">
                             <X size={20} />
@@ -207,7 +207,7 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
                             )}
                         </div>
 
-                        {/* ESCRITORIO: VISTA ESTÁTICA + ANIMACIÓN TÉCNICA (DISEÑO ORIGINAL) */}
+                        {/* ESCRITORIO: VISTA ESTÁTICA + ANIMACIÓN TÉCNICA */}
                         <div className="hidden md:flex flex-col gap-6 h-full">
                             <div className="aspect-video w-full bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden p-4 flex items-center justify-center relative group shrink-0">
                                 <div className="relative w-full h-full">
@@ -415,7 +415,6 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
 });
 ProductDrawer.displayName = 'ProductDrawer';
 
-
 // --- PÁGINA PRINCIPAL ---
 export default function SillasPage() {
   const [products, setProducts] = useState([]);       
@@ -425,6 +424,28 @@ export default function SillasPage() {
   const [selectedProduct, setSelectedProduct] = useState(null); 
   
   const gridTopRef = useRef(null);
+  const filtersRef = useRef(null);
+
+  // MANEJADOR DE SCROLL HORIZONTAL NATIVO
+  useEffect(() => {
+    const el = filtersRef.current;
+    if (!el) return;
+
+    const handleWheel = (e) => {
+      // Si el usuario hace scroll vertical (rueda del ratón)
+      if (e.deltaY !== 0) {
+        e.preventDefault(); // Evita que la página baje
+        el.scrollLeft += e.deltaY; // Mueve el contenedor horizontalmente
+      }
+    };
+
+    // Añadimos el evento con passive: false para poder usar preventDefault()
+    el.addEventListener("wheel", handleWheel, { passive: false });
+
+    return () => {
+      el.removeEventListener("wheel", handleWheel);
+    };
+  }, []);
 
   // --- FETCH DATOS ---
   useEffect(() => {
@@ -472,7 +493,7 @@ export default function SillasPage() {
     });
   }, [products, activeCategory, searchTerm]);
 
-  // --- SCROLL HANDLE ---
+  // --- SCROLL HANDLE (Para cuando pulsas una categoría) ---
   const handleCategoryChange = (cat) => {
     setActiveCategory(cat);
     setTimeout(() => {
@@ -495,7 +516,7 @@ export default function SillasPage() {
   return (
     <div className="bg-white min-h-screen pb-32 font-sans selection:bg-black selection:text-white">
       
-      {/* HEADER ADAPTADO ESTILO "SILLAS" */}
+      {/* HEADER */}
       <div className="relative h-[40vh] md:h-[50vh] bg-[#0a0a0a] overflow-hidden flex items-end pb-12">
         <motion.div 
             initial={{ scale: 1.1, opacity: 0 }}
@@ -528,7 +549,7 @@ export default function SillasPage() {
         </motion.div>
       </div>
 
-      {/* BARRA DE FILTROS ADAPTADA ESTILO "SOFÁS/SILLAS" */}
+      {/* BARRA DE FILTROS */}
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -538,8 +559,11 @@ export default function SillasPage() {
         <div className="container mx-auto px-6 py-4">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 
-                {/* Contenedor de Categorías */}
-                <div className="flex gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
+                {/* CONTENEDOR DE CATEGORÍAS (Con scroll corregido) */}
+                <div 
+                  ref={filtersRef}
+                  className="flex gap-2 overflow-x-auto flex-1 pb-2 md:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']"
+                >
                   {categories.map((cat) => (
                     <button
                       key={cat}
@@ -671,7 +695,7 @@ export default function SillasPage() {
         )}
       </div>
 
-      {/* RENDERIZADO DEL DRAWER COMPONENTE */}
+      {/* RENDERIZADO DEL DRAWER */}
       <AnimatePresence>
         {selectedProduct && <ProductDrawer selectedProduct={selectedProduct} onClose={() => setSelectedProduct(null)} />}
       </AnimatePresence>

@@ -44,7 +44,7 @@ const sofasData = [
     priceList: [
         { name: "Tea Chair", size: "640*600*770", vol: "0.38", prices: { fa: 5250, fb: 5460, fc: 5680, fd: 6260, fe: 6960, la: 9100, lb: 9800, lc: 10580 } }
     ]
- }
+ },
 
   // PRODUCTO 2: NORDIC MODULAR (HYSF88103)
   { 
