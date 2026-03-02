@@ -422,11 +422,11 @@ const dormitoriosData = [
     category: "Mesas de Noche", 
     code: "HYGL81803-A/HB132Y-CTG", 
     priceBase: 8450, 
-    image: "/images/DORMITORIOS/MESA10/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA10/render.jpg", 
     schematics: [
-        "/images/DORMITORIOS/MESA10/img1.jpg", 
-        "/images/DORMITORIOS/MESA10/img2.jpg",
-        "/images/DORMITORIOS/MESA10/img3.jpg"
+        "/images/DORMITORIOS/CAMA10/img1.jpg", 
+        "/images/DORMITORIOS/CAMA10/img2.jpg",
+        "/images/DORMITORIOS/CAMA10/img3.jpg"
     ],
     specs: { 
         dimensions: "550 * 430 * 500 mm", 
@@ -464,11 +464,11 @@ const dormitoriosData = [
     category: "Mesas de Noche", 
     code: "HYGL81808-B/HB126Y-CTG", 
     priceBase: 5890, 
-    image: "/images/DORMITORIOS/MESA11/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA11/render.jpg", 
     schematics: [
-        "/images/DORMITORIOS/MESA11/img1.jpg", 
-        "/images/DORMITORIOS/MESA11/img2.jpg",
-        "/images/DORMITORIOS/MESA11/img3.jpg"
+        "/images/DORMITORIOS/CAMA11/img1.jpg", 
+        "/images/DORMITORIOS/CAMA11/img2.jpg",
+        "/images/DORMITORIOS/CAMA11/img3.jpg"
     ],
     specs: { 
         dimensions: "500 * 420 * 450 mm", 
@@ -511,11 +511,11 @@ const dormitoriosData = [
     category: "Mesas de Noche", 
     code: "HYGL81810/HB130Y-CTG", 
     priceBase: 7190, 
-    image: "/images/DORMITORIOS/MESA12/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA12/render.jpg", 
     schematics: [
-        "/images/DORMITORIOS/MESA12/img1.jpg", 
-        "/images/DORMITORIOS/MESA12/img2.jpg",
-        "/images/DORMITORIOS/MESA12/img3.jpg"
+        "/images/DORMITORIOS/CAMA12/img1.jpg", 
+        "/images/DORMITORIOS/CAMA12/img2.jpg",
+        "/images/DORMITORIOS/CAMA12/img3.jpg"
     ],
     specs: { 
         dimensions: "500 * 380 * 500 mm", 
@@ -551,11 +551,11 @@ const dormitoriosData = [
     category: "Mesas de Noche", 
     code: "HYGL81811-L/HB135Y-CTGL", 
     priceBase: 5460, 
-    image: "/images/DORMITORIOS/MESA13/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA13/render.jpg", 
     schematics: [
-        "/images/DORMITORIOS/MESA13/img1.jpg", 
-        "/images/DORMITORIOS/MESA13/img2.jpg",
-        "/images/DORMITORIOS/MESA13/img3.jpg"
+        "/images/DORMITORIOS/CAMA13/img1.jpg", 
+        "/images/DORMITORIOS/CAMA13/img2.jpg",
+        "/images/DORMITORIOS/CAMA13/img3.jpg"
     ],
     specs: { 
         dimensions: "550 * 470 * 460 mm", 
@@ -597,11 +597,11 @@ const dormitoriosData = [
     category: "Mesas de Noche", 
     code: "HYGL81811-AL/HB135Y-CTGL", 
     priceBase: 5460, 
-    image: "/images/DORMITORIOS/MESA14/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA14/render.jpg", 
     schematics: [
-        "/images/DORMITORIOS/MESA14/img1.jpg", 
-        "/images/DORMITORIOS/MESA14/img2.jpg",
-        "/images/DORMITORIOS/MESA14/img3.jpg"
+        "/images/DORMITORIOS/CAMA14/img1.jpg", 
+        "/images/DORMITORIOS/CAMA14/img2.jpg",
+        "/images/DORMITORIOS/CAMA14/img3.jpg"
     ],
     specs: { 
         dimensions: "550 * 470 * 460 mm", 
@@ -643,11 +643,11 @@ const dormitoriosData = [
     category: "Mesas de Noche", 
     code: "HYGL81812-A/HB136-CTGA", 
     priceBase: 4760, 
-    image: "/images/DORMITORIOS/MESA15/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA15/render.jpg", 
     schematics: [
-        "/images/DORMITORIOS/MESA15/img1.jpg", 
-        "/images/DORMITORIOS/MESA15/img2.jpg",
-        "/images/DORMITORIOS/MESA15/img3.jpg"
+        "/images/DORMITORIOS/CAMA15/img1.jpg", 
+        "/images/DORMITORIOS/CAMA15/img2.jpg",
+        "/images/DORMITORIOS/CAMA15/img3.jpg"
     ],
     specs: { 
         dimensions: "700 * 440 * 420 mm", 
@@ -691,11 +691,11 @@ const dormitoriosData = [
     category: "Mesas de Noche", 
     code: "HYGL81813/HB137-CTG", 
     priceBase: 6260, 
-    image: "/images/DORMITORIOS/MESA16/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA16/render.jpg", 
     schematics: [
-        "/images/DORMITORIOS/MESA16/img1.jpg", 
-        "/images/DORMITORIOS/MESA16/img2.jpg",
-        "/images/DORMITORIOS/MESA16/img3.jpg"
+        "/images/DORMITORIOS/CAMA16/img1.jpg", 
+        "/images/DORMITORIOS/CAMA16/img2.jpg",
+        "/images/DORMITORIOS/CAMA16/img3.jpg"
     ],
     specs: { 
         dimensions: "530 * 470 * 570 mm", 
@@ -734,11 +734,11 @@ const dormitoriosData = [
     category: "Mesas de Noche", 
     code: "HYGL81818-A", 
     priceBase: 3790, 
-    image: "/images/DORMITORIOS/MESA17/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA17/render.jpg", 
     schematics: [
-        "/images/DORMITORIOS/MESA17/img1.jpg", 
-        "/images/DORMITORIOS/MESA17/img2.jpg",
-        "/images/DORMITORIOS/MESA17/img3.jpg"
+        "/images/DORMITORIOS/CAMA17/img1.jpg", 
+        "/images/DORMITORIOS/CAMA17/img2.jpg",
+        "/images/DORMITORIOS/CAMA17/img3.jpg"
     ],
     specs: { 
         dimensions: "460 * 400 * 450 mm", 
@@ -779,11 +779,11 @@ const dormitoriosData = [
     category: "Mesas de Noche", 
     code: "HYGL81823-AR", 
     priceBase: 6960, 
-    image: "/images/DORMITORIOS/MESA18/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA18/render.jpg", 
     schematics: [
-        "/images/DORMITORIOS/MESA18/img1.jpg", 
-        "/images/DORMITORIOS/MESA18/img2.jpg",
-        "/images/DORMITORIOS/MESA18/img3.jpg"
+        "/images/DORMITORIOS/CAMA18/img1.jpg", 
+        "/images/DORMITORIOS/CAMA18/img2.jpg",
+        "/images/DORMITORIOS/CAMA18/img3.jpg"
     ],
     specs: { 
         dimensions: "545 * 420 * 475 mm", 
@@ -826,11 +826,11 @@ const dormitoriosData = [
     category: "Mesas de Noche", 
     code: "HYGL81823-BR", 
     priceBase: 6260, 
-    image: "/images/DORMITORIOS/MESA19/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA19/render.jpg", 
     schematics: [
-        "/images/DORMITORIOS/MESA19/img1.jpg", 
-        "/images/DORMITORIOS/MESA19/img2.jpg",
-        "/images/DORMITORIOS/MESA19/img3.jpg"
+        "/images/DORMITORIOS/CAMA19/img1.jpg", 
+        "/images/DORMITORIOS/CAMA19/img2.jpg",
+        "/images/DORMITORIOS/CAMA19/img3.jpg"
     ],
     specs: { 
         dimensions: "545 * 420 * 475 mm", 
@@ -872,11 +872,11 @@ const dormitoriosData = [
     category: "Mesas de Noche", 
     code: "HYGL81825/GEGL91807", 
     priceBase: 4160, 
-    image: "/images/DORMITORIOS/MESA20/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA20/render.jpg", 
     schematics: [
-        "/images/DORMITORIOS/MESA20/img1.jpg", 
-        "/images/DORMITORIOS/MESA20/img2.jpg",
-        "/images/DORMITORIOS/MESA20/img3.jpg"
+        "/images/DORMITORIOS/CAMA20/img1.jpg", 
+        "/images/DORMITORIOS/CAMA20/img2.jpg",
+        "/images/DORMITORIOS/CAMA20/img3.jpg"
     ],
     specs: { 
         dimensions: "450 * 420 * 520 mm", 
@@ -916,11 +916,11 @@ const dormitoriosData = [
     category: "Mesas de Noche", 
     code: "HYGL81826-L/MGL8310L", 
     priceBase: 3250, 
-    image: "/images/DORMITORIOS/MESA21/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA21/render.jpg", 
     schematics: [
-        "/images/DORMITORIOS/MESA21/img1.jpg", 
-        "/images/DORMITORIOS/MESA21/img2.jpg",
-        "/images/DORMITORIOS/MESA21/img3.jpg"
+        "/images/DORMITORIOS/CAMA21/img1.jpg", 
+        "/images/DORMITORIOS/CAMA21/img2.jpg",
+        "/images/DORMITORIOS/CAMA21/img3.jpg"
     ],
     specs: { 
         dimensions: "540 * 445 * 525 mm", 
@@ -959,11 +959,11 @@ const dormitoriosData = [
     category: "Mesas de Noche", 
     code: "HYGL81827-AR/MGL8311R", 
     priceBase: 4160, 
-    image: "/images/DORMITORIOS/MESA22/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA22/render.jpg", 
     schematics: [
-        "/images/DORMITORIOS/MESA22/img1.jpg", 
-        "/images/DORMITORIOS/MESA22/img2.jpg",
-        "/images/DORMITORIOS/MESA22/img3.jpg"
+        "/images/DORMITORIOS/CAMA22/img1.jpg", 
+        "/images/DORMITORIOS/CAMA22/img2.jpg",
+        "/images/DORMITORIOS/CAMA22/img3.jpg"
     ],
     specs: { 
         dimensions: "545 * 405 * 470 mm", 
@@ -1005,11 +1005,11 @@ const dormitoriosData = [
     category: "Tocadores", 
     code: "HYGL81605-1 / HYGL81605-2", 
     priceBase: 20550, 
-    image: "/images/DORMITORIOS/MESA23/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA23/render.jpg", 
     schematics: [
-        "/images/DORMITORIOS/MESA23/img1.jpg", 
-        "/images/DORMITORIOS/MESA23/img2.jpg",
-        "/images/DORMITORIOS/MESA23/img3.jpg"
+        "/images/DORMITORIOS/CAMA23/img1.jpg", 
+        "/images/DORMITORIOS/CAMA23/img2.jpg",
+        "/images/DORMITORIOS/CAMA23/img3.jpg"
     ],
     specs: { 
         dimensions: "1300 * 530 * 755 mm (Mesa principal)", 
@@ -1059,11 +1059,11 @@ const dormitoriosData = [
     category: "Tocadores", 
     code: "HYGL81606/MZL3505A", 
     priceBase: 11390, 
-    image: "/images/DORMITORIOS/MESA24/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA24/render.jpg", 
     schematics: [
-        "/images/DORMITORIOS/MESA24/img1.jpg", 
-        "/images/DORMITORIOS/MESA24/img2.jpg",
-        "/images/DORMITORIOS/MESA24/img3.jpg"
+        "/images/DORMITORIOS/CAMA24/img1.jpg", 
+        "/images/DORMITORIOS/CAMA24/img2.jpg",
+        "/images/DORMITORIOS/CAMA24/img3.jpg"
     ],
     specs: { 
         dimensions: "1300 * 450 * 775 mm", 
@@ -1234,7 +1234,7 @@ const dormitoriosData = [
     category: "Colchones", 
     code: "FYRC59207/HMCD-011", 
     priceBase: 18460, 
-    image: "/images/DORMITORIOS/CAMA29/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA29/render.jpg",
     specs: { 
         dimensions: "1800 * 2000 * 330 mm", 
         volume: "1.19 m³", 
@@ -1262,55 +1262,69 @@ const dormitoriosData = [
     }
   },
   { 
-    "id": "bases-cama-tyrc-series", 
-    "name": "Colección de Somieres TYRC", 
-    "category": "Bases de Cama", 
-    "image": "/images/DORMITORIOS/BASE37/render.jpg", 
-    "models": [
-        {
-            "code": "TYRC9303 PGJ-007",
-            "name": "Luxury Colorful Slatted Bed Base",
-            "materials": "Steel frame with POM connectors",
-            "color": "grey",
-            "sizes": [
-                { "dimensions": "1500*2000*70", "vol": "0.21m³", "price": 3690 },
-                { "dimensions": "1800*2000*70", "vol": "0.26m³", "price": 3950 },
-                { "dimensions": "2000*2200*70", "vol": "0.31m³", "price": 4060 }
-            ]
-        },
-        {
-            "code": "TYRC9305 PGJ-008",
-            "name": "Classic Folding Reinforced Slatted Bed Base",
-            "materials": "Steel frame + Poplar Wood",
-            "color": "grey",
-            "sizes": [
-                { "dimensions": "1500*2000*30", "vol": "0.14m³", "price": 1860 },
-                { "dimensions": "1800*2000*30", "vol": "0.17m³", "price": 2050 },
-                { "dimensions": "2000*2200*30", "vol": "0.20m³", "price": 2100 }
-            ]
-        },
-        {
-            "code": "TYRC9306 PGJ-009",
-            "name": "Classic Disassembled Reinforced Slatted Bed Base",
-            "materials": "Steel frame + Birch Wood",
-            "color": "grey",
-            "sizes": [
-                { "dimensions": "1500*2000*30", "vol": "0.14m³", "price": 1860 },
-                { "dimensions": "1800*2000*30", "vol": "0.17m³", "price": 2050 },
-                { "dimensions": "2000*2200*30", "vol": "0.20m³", "price": 2100 }
-            ]
-        },
-        {
-            "code": "TYRC9307",
-            "name": "Slatted Base for Flush-Frame Beds",
-            "materials": "Steel frame + Birch Wood",
-            "color": "grey",
-            "sizes": [
-                { "dimensions": "1380*1940*30", "vol": "0.14m³", "price": 1860 },
-                { "dimensions": "1680*1940*30", "vol": "0.17m³", "price": 2050 },
-                { "dimensions": "1880*2140*30", "vol": "0.20m³", "price": 2100 }
-            ]
-        }
+    id: "somier-tyrc9303-luxury", 
+    name: "Somier Luxury Colorful Slatted Bed Base", 
+    category: "Bases de Cama", 
+    code: "TYRC9303 PGJ-007", 
+    priceBase: 3690, 
+    image: "/images/DORMITORIOS/CAMA30/render.jpg", 
+    specs: { 
+        dimensions: "1800 * 2000 * 70 mm", 
+        volume: "0.26 m³", 
+        assembly: "Assembled / 1 Piece" 
+    },
+    materials: [
+        { part: "Frame", material: "Steel frame", detail: "Grey" },
+        { part: "Connectors", material: "POM connectors", detail: "High durability" }
+    ],
+    configurations: [
+        { code: "1500", size: "1500*2000*70mm", price: 3690 },
+        { code: "1800", size: "1800*2000*70mm", price: 3950 },
+        { code: "2000", size: "2000*2200*70mm", price: 4060 }
+    ]
+  },
+  { 
+    id: "somier-tyrc9305-folding", 
+    name: "Somier Classic Folding Reinforced", 
+    category: "Bases de Cama", 
+    code: "TYRC9305 PGJ-008", 
+    priceBase: 1860, 
+    image: "/images/DORMITORIOS/CAMA31/render.jpg", 
+    specs: { 
+        dimensions: "1800 * 2000 * 30 mm", 
+        volume: "0.17 m³", 
+        assembly: "Foldable / 1 Piece" 
+    },
+    materials: [
+        { part: "Frame", material: "Steel frame", detail: "Grey" },
+        { part: "Slats", material: "Poplar Wood", detail: "Reinforced" }
+    ],
+    configurations: [
+        { code: "1500", size: "1500*2000*30mm", price: 1860 },
+        { code: "1800", size: "1800*2000*30mm", price: 2050 },
+        { code: "2000", size: "2000*2200*30mm", price: 2100 }
+    ]
+  },
+  { 
+    id: "somier-tyrc9306-disassembled", 
+    name: "Somier Classic Disassembled Reinforced", 
+    category: "Bases de Cama", 
+    code: "TYRC9306 PGJ-009", 
+    priceBase: 1860, 
+    image: "/images/DORMITORIOS/CAMA32/render.jpg", 
+    specs: { 
+        dimensions: "1800 * 2000 * 30 mm", 
+        volume: "0.17 m³", 
+        assembly: "Disassembled / 1 Piece" 
+    },
+    materials: [
+        { part: "Frame", material: "Steel frame", detail: "Grey" },
+        { part: "Slats", material: "Birch Wood", detail: "High resistance" }
+    ],
+    configurations: [
+        { code: "1500", size: "1500*2000*30mm", price: 1860 },
+        { code: "1800", size: "1800*2000*30mm", price: 2050 },
+        { code: "2000", size: "2000*2200*30mm", price: 2100 }
     ]
   },
 ];
