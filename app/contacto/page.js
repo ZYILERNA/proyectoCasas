@@ -268,17 +268,37 @@ export default function ContactoPage() {
 
             <div className="space-y-4">
                 {[
-                    { q: "¿?", a: "e." },
+                    { 
+                      q: "¿Cómo puedo realizar una compra?", 
+                      a: "Para garantizar una atención personalizada y asegurarnos de que el producto se adapta perfectamente a su proyecto, las compras no se realizan directamente en la web. Le invitamos a utilizar nuestro formulario de contacto indicando los modelos de su interés, y un asesor le guiará en el proceso." 
+                    },
+                    { 
+                      q: "¿Los precios mostrados en la web son definitivos?", 
+                      a: "No, los importes que visualiza en nuestro catálogo son precios base de referencia. El presupuesto final puede variar dependiendo de las configuraciones elegidas, materiales, dimensiones, gastos de envío y requerimientos de instalación. Solicite su cotización exacta sin compromiso." 
+                    },
+                    { 
+                      q: "¿Ofrecen servicio de envío e instalación?", 
+                      a: "Sí. Debido a la naturaleza de nuestros productos (puertas de alta seguridad, muebles de gran volumen y losas de piedra), contamos con un equipo técnico especializado. Los costes de transporte e instalación se calcularán y añadirán a su presupuesto final según la ubicación de su proyecto." 
+                    },
+                    { 
+                      q: "¿Puedo personalizar las medidas o materiales de un producto?", 
+                      a: "Gran parte de nuestro catálogo, como los gabinetes y escritorios de té, permite ciertas configuraciones (intercambio de paneles de piedra sinterizada, colores de piel o diferentes acabados de madera). Indíquenos sus necesidades en el mensaje y evaluaremos la viabilidad de fabricación a medida." 
+                    },
+                    { 
+                      q: "¿Cuáles son los plazos de entrega estimados?", 
+                      a: "El plazo varía según la disponibilidad en nuestra sede de Barcelona y el nivel de personalización de su pedido. Los artículos en stock estándar tienen un proceso rápido, mientras que las piezas fabricadas bajo demanda requieren plazos de logística que le serán detallados en su presupuesto final." 
+                    },
                 ].map((item, index) => (
                     <motion.div 
                         key={index}
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
                         transition={{ delay: index * 0.1 }}
-                        className="bg-[#111] border border-white/5 p-6 rounded-xl hover:border-[#00C2FF]/30 transition-colors cursor-default"
+                        className="bg-[#111] border border-white/5 p-6 md:p-8 rounded-2xl hover:border-[#00C2FF]/30 transition-colors cursor-default group"
                     >
-                        <h4 className="font-bold text-white mb-2">{item.q}</h4>
-                        <p className="text-gray-400 text-sm">{item.a}</p>
+                        <h4 className="font-bold text-white mb-3 text-lg group-hover:text-[#00C2FF] transition-colors">{item.q}</h4>
+                        <p className="text-gray-400 text-sm md:text-base leading-relaxed">{item.a}</p>
                     </motion.div>
                 ))}
             </div>
