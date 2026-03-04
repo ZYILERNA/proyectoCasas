@@ -1,7 +1,7 @@
 "use client"; // Necesario en Next.js App Router para usar Framer Motion
 
 import Link from 'next/link';
-import { ShieldCheck, Lock, Home as HomeIcon, ChevronRight, Wind, Maximize2, Sun } from 'lucide-react'; 
+import { ShieldCheck, Lock, Home as HomeIcon, ChevronRight, Wind, Maximize2, Sun, BedDouble, Archive } from 'lucide-react'; 
 import { motion } from 'framer-motion';
 
 // --- Variantes de Animación Reutilizables ---
@@ -23,7 +23,7 @@ export default function Home() {
     <main className="bg-black text-white selection:bg-[#00C2FF] selection:text-black overflow-hidden">
       
       {/* =========================================
-          1. HERO SECTION: MARCA Y SEGURIDAD
+         1. HERO SECTION: MARCA Y SEGURIDAD
          ========================================= */}
       <section className="relative w-full h-screen flex items-center">
         
@@ -80,7 +80,7 @@ export default function Home() {
       </section>
 
       {/* =========================================
-          2. SECCIÓN PRIORITARIA: PUERTAS SMART
+         2. SECCIÓN PRIORITARIA: PUERTAS SMART
          ========================================= */}
       <section className="py-24 bg-[#111]">
         <div className="container mx-auto px-6">
@@ -140,7 +140,7 @@ export default function Home() {
               <Link href="/puertas?category=TODAS" className="group relative block h-[500px] overflow-hidden bg-gray-900 border border-white/10 hover:border-white transition-colors duration-500">
                 <div className="absolute inset-0 flex flex-col justify-center items-center bg-[#1a1a1a] p-8 text-center group-hover:bg-[#222] transition-colors">
                   <div className="border border-white/20 rounded-full p-6 mb-6 group-hover:border-[#00C2FF] transition-colors">
-                     <span className="text-3xl font-light text-white">+10</span>
+                      <span className="text-3xl font-light text-white">+10</span>
                   </div>
                   <h4 className="text-xl font-bold uppercase mb-2">Colecciones Especiales</h4>
                   <p className="text-gray-400 text-sm mb-6">Cortafuegos, Médicas, Aluminio y más.</p>
@@ -153,7 +153,7 @@ export default function Home() {
       </section>
 
       {/* =========================================
-          3. SECCIÓN: VENTANAS Y CERRAMIENTOS
+         3. SECCIÓN: VENTANAS Y CERRAMIENTOS
          ========================================= */}
       <section className="py-24 bg-zinc-900 relative overflow-hidden">
         <div className="container mx-auto px-6">
@@ -239,7 +239,7 @@ export default function Home() {
       </section>
 
       {/* =========================================
-          4. SECCIÓN SOFÁS
+         4. SECCIÓN SOFÁS
          ========================================= */}
       <section className="py-24 bg-black relative overflow-hidden">
         {/* Decoración de fondo animada */}
@@ -310,7 +310,7 @@ export default function Home() {
       </section>
 
       {/* =========================================
-          5. NUEVA SECCIÓN: MESAS
+         5. SECCIÓN: MESAS
          ========================================= */}
       <section className="py-24 bg-zinc-950 relative overflow-hidden border-t border-white/5">
         <div className="container mx-auto px-6 relative z-10">
@@ -326,7 +326,7 @@ export default function Home() {
             >
               <div className="aspect-[4/3] bg-gray-800 border border-white/10 p-2">
                  <img 
-                   src="/images/mesas-home.jpg" // Asegúrate de tener esta imagen
+                   src="/images/mesas-home.jpg" 
                    alt="Colección Mesas WONLY" 
                    className="w-full h-full object-cover"
                  />
@@ -369,7 +369,129 @@ export default function Home() {
       </section>
 
       {/* =========================================
-          6. FOOTER VISUAL
+         6. SECCIÓN: DORMITORIOS (NUEVA)
+         ========================================= */}
+      <section className="py-24 bg-[#0a0a0a] relative overflow-hidden border-t border-white/5">
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            {/* TEXTO (Izquierda para continuar el zig-zag) */}
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={staggerContainer}
+            >
+              <motion.span variants={fadeInUp} className="text-gray-500 font-bold tracking-widest uppercase text-sm mb-2 block">
+                Descanso & Elegancia
+              </motion.span>
+              <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl font-bold text-white mb-6">
+                SANTUARIO <br/> PERSONAL
+              </motion.h2>
+              <motion.p variants={fadeInUp} className="text-gray-400 text-lg mb-8 leading-relaxed">
+                Camas tapizadas, bases reforzadas y mesitas de noche diseñadas con precisión arquitectónica. Transforma tu habitación en un espacio de paz con la más alta calidad en materiales y confort.
+              </motion.p>
+              
+              <motion.div variants={fadeInUp}>
+                <Link href="/dormitorios" className="inline-flex items-center gap-4 group bg-white/5 hover:bg-white/10 px-6 py-4 rounded-lg transition-colors border border-white/10">
+                  <div className="w-10 h-10 bg-[#00C2FF] flex items-center justify-center text-black rounded-full transition-transform group-hover:scale-110">
+                    <BedDouble size={18}/>
+                  </div>
+                  <div>
+                    <h5 className="text-white font-bold uppercase text-sm">Dormitorios</h5>
+                    <span className="text-[#00C2FF] text-xs font-bold uppercase tracking-widest">Catálogo de Descanso</span>
+                  </div>
+                </Link>
+              </motion.div>
+            </motion.div>
+
+            {/* IMAGEN GRANDE (Derecha) */}
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="relative"
+            >
+              <div className="aspect-[4/3] bg-gray-800 border border-white/10 p-2 group overflow-hidden">
+                 <img 
+                   src="/images/dormitorios-header.jpg" 
+                   alt="Colección Dormitorios WONLY" 
+                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                 />
+              </div>
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================
+         7. SECCIÓN: GABINETES (NUEVA)
+         ========================================= */}
+      <section className="py-24 bg-zinc-950 relative overflow-hidden border-t border-white/5">
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            {/* IMAGEN GRANDE (Izquierda) */}
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="relative order-2 lg:order-1"
+            >
+              <div className="aspect-[4/3] bg-gray-800 border border-white/10 p-2 group overflow-hidden">
+                 <img 
+                   src="/images/gabinetes-home.jpg" 
+                   alt="Sistemas de Gabinetes WONLY" 
+                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                 />
+              </div>
+              <div className="absolute -bottom-6 -right-6 bg-white text-black p-6 w-48 hidden md:block z-10">
+                 <Archive className="mb-2" size={28} />
+                 <p className="font-bold text-lg mb-1 leading-tight">Módulos a Medida</p>
+                 <p className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Piedra Sinterizada & MDF</p>
+              </div>
+            </motion.div>
+
+            {/* TEXTO (Derecha) */}
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={staggerContainer}
+              className="order-1 lg:order-2 lg:pl-8"
+            >
+              <motion.span variants={fadeInUp} className="text-[#00C2FF] font-bold tracking-widest uppercase text-sm mb-2 block">
+                Organización Inteligente
+              </motion.span>
+              <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl font-bold text-white mb-6">
+                SISTEMAS DE <br/> ALMACENAJE
+              </motion.h2>
+              <motion.p variants={fadeInUp} className="text-gray-400 text-lg mb-8 leading-relaxed">
+                Armarios, vestidores y muebles de TV creados para maximizar tus espacios. La perfección de la piedra sinterizada combinada con la tecnología de iluminación integrada y un diseño minimalista.
+              </motion.p>
+              
+              <motion.div variants={fadeInUp}>
+                <Link href="/gabinetes" className="inline-flex items-center gap-4 group bg-white/5 hover:bg-white/10 px-6 py-4 rounded-lg transition-colors border border-white/10">
+                  <div className="w-10 h-10 bg-white flex items-center justify-center text-black rounded-full transition-transform group-hover:scale-110">
+                    <Archive size={18}/>
+                  </div>
+                  <div>
+                    <h5 className="text-white font-bold uppercase text-sm">Ver Gabinetes</h5>
+                    <span className="text-[#00C2FF] text-xs font-bold uppercase tracking-widest">Explorar Módulos</span>
+                  </div>
+                </Link>
+              </motion.div>
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================
+         8. FOOTER VISUAL
          ========================================= */}
       <section className="relative py-24 border-t border-white/10 overflow-hidden">
          <div className="absolute inset-0 opacity-20 pointer-events-none">
@@ -390,7 +512,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="container mx-auto px-6 text-center relative z-10"
          >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">El Futuro de la Seguridad</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">El Futuro de la Seguridad y el Diseño</h2>
             <p className="text-gray-400 max-w-2xl mx-auto mb-10 text-lg">
               Contáctanos para recibir asesoramiento técnico personalizado y catálogos exclusivos.
             </p>

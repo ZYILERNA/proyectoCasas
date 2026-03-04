@@ -2,7 +2,7 @@
 "use client";
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Search, Menu, ChevronDown, X } from 'lucide-react'; 
+import { Search, Menu, ChevronDown, X, ShieldCheck, Home as HomeIcon } from 'lucide-react'; 
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(true);
@@ -50,15 +50,15 @@ export default function Header() {
 
   return (
     <header 
-      className={`fixed top-0 left-0 w-full z-50 bg-black text-white border-b border-white/10 shadow-lg transition-transform duration-300 ease-in-out ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out border-b border-white/5 ${
         isVisible ? 'translate-y-0' : '-translate-y-full'
-      }`}
+      } ${lastScrollY > 20 ? 'bg-black/90 backdrop-blur-md shadow-2xl shadow-black/50' : 'bg-black'}`}
     >
       <div className="container mx-auto px-6 h-20 flex items-center justify-between relative">
         
         {/* 1. LOGOTIPO */}
         <div className="cursor-pointer z-50">
-          <Link href="/" onClick={closeMobileMenu}>
+          <Link href="/" onClick={closeMobileMenu} className="block transition-transform duration-300 hover:scale-105">
             <img 
               src="/images/logo-wonly.png" 
               alt="WONLY" 
@@ -71,56 +71,71 @@ export default function Header() {
         <nav className="hidden md:flex h-full items-center space-x-10">
           
           <div className="group h-full flex items-center relative cursor-pointer">
-            <span className="text-sm font-bold uppercase tracking-wide flex items-center gap-1 hover:text-[#00C2FF] transition">
-              Productos <ChevronDown size={14} />
+            <span className="text-sm font-semibold uppercase tracking-widest flex items-center gap-1.5 text-gray-200 hover:text-[#00C2FF] transition-colors duration-300">
+              Productos <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
             </span>
-            {/* DESPLEGABLE */}
-            <div className="absolute top-full -left-6 w-72 bg-[#1a1a1a] text-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 shadow-2xl border-t border-[#00C2FF] rounded-none">
-              <div className="p-8 flex flex-col gap-6 text-left">
-                <div>
-                  <h3 className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4">
-                    Catálogo General
-                  </h3>
-                  <ul className="space-y-3">
-                    <MenuItem href="/puertas" text="Puertas de Seguridad" />
-                    <MenuItem href="/ventanas" text="Ventanas" />
-                    <MenuItem href="/cerraduras" text="Cerraduras Inteligentes" />
-                    
-                    <li className="w-full h-px bg-white/10 my-2"></li> {/* Separador */}
-                    
-                    <MenuItem href="/sofas" text="Sofás" />
-                    
-                    {/* --- CAMBIO REALIZADO: Unificado en "Mesas" --- */}
-                    <MenuItem href="/mesas" text="Mesas" />
-                    
-                    <MenuItem href="/sillas" text="Sillas y Sillones" />
-                    <MenuItem href="/dormitorio" text="Dormitorio" />
-                    <MenuItem href="/almacenaje" text="Armarios y Almacenaje" />
-                  </ul>
+            
+            {/* MEGA MENÚ DESPLEGABLE */}
+            <div className="absolute top-[80px] -left-32 w-[600px] bg-[#0a0a0a]/95 backdrop-blur-xl text-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 shadow-2xl border border-white/10 rounded-b-2xl overflow-hidden flex">
+              
+              {/* Columna 1: Seguridad */}
+              <div className="flex-1 p-8 bg-[#111]/50 border-r border-white/5">
+                <div className="flex items-center gap-2 mb-6 text-[#00C2FF]">
+                    <ShieldCheck size={18} />
+                    <h3 className="text-xs font-bold uppercase tracking-widest">
+                    Seguridad & Exterior
+                    </h3>
                 </div>
+                <ul className="space-y-4">
+                  <MenuItem href="/puertas" text="Puertas de Seguridad" />
+                  <MenuItem href="/ventanas" text="Ventanas Panorámicas" />
+                  <MenuItem href="/cerraduras" text="Cerraduras Inteligentes" />
+                </ul>
               </div>
+
+              {/* Columna 2: Interiorismo */}
+              <div className="flex-1 p-8">
+                <div className="flex items-center gap-2 mb-6 text-gray-400">
+                    <HomeIcon size={18} />
+                    <h3 className="text-xs font-bold uppercase tracking-widest">
+                    Interior & Mobiliario
+                    </h3>
+                </div>
+                <ul className="space-y-4">
+                  <MenuItem href="/sofas" text="Colección Sofás" />
+                  <MenuItem href="/mesas" text="Mesas de Diseño" />
+                  <MenuItem href="/sillas" text="Sillas y Sillones" />
+                  <MenuItem href="/dormitorios" text="Dormitorios" />
+                  <MenuItem href="/gabinetes" text="Sistemas de Gabinetes" />
+                </ul>
+              </div>
+
             </div>
           </div>
 
-          <Link href="/empresa" className="text-sm font-medium hover:text-[#00C2FF] uppercase tracking-wide transition">
+          <Link href="/empresa" className="relative text-sm font-semibold text-gray-200 uppercase tracking-widest hover:text-[#00C2FF] transition-colors duration-300 group">
             Empresa
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00C2FF] transition-all duration-300 group-hover:w-full"></span>
           </Link>
-          <Link href="/proyectos" className="text-sm font-medium hover:text-[#00C2FF] uppercase tracking-wide transition">
+          <Link href="/proyectos" className="relative text-sm font-semibold text-gray-200 uppercase tracking-widest hover:text-[#00C2FF] transition-colors duration-300 group">
             Proyectos
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00C2FF] transition-all duration-300 group-hover:w-full"></span>
           </Link>
         </nav>
 
         {/* 3. ICONOS Y BOTÓN */}
         <div className="flex items-center gap-6 z-50">
-          <Search className="w-5 h-5 text-white cursor-pointer hover:text-[#00C2FF] transition" />
+          <button className="group p-2">
+            <Search className="w-5 h-5 text-gray-300 group-hover:text-[#00C2FF] group-hover:scale-110 transition-all duration-300" />
+          </button>
           
-          <Link href="/contacto" className="hidden md:block bg-[#00C2FF] text-black px-5 py-2 text-xs font-bold uppercase tracking-widest hover:bg-white transition duration-300 rounded-none">
+          <Link href="/contacto" className="hidden md:flex items-center justify-center bg-white text-black px-6 py-2.5 text-xs font-bold uppercase tracking-widest hover:bg-[#00C2FF] hover:text-white transition-all duration-300 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-[0_0_20px_rgba(0,194,255,0.3)]">
             Contacto
           </Link>
 
           {/* BOTÓN HAMBURGUESA / CERRAR (Solo Móvil) */}
           <button 
-            className="md:hidden text-white hover:text-[#00C2FF] transition focus:outline-none"
+            className="md:hidden text-gray-300 hover:text-[#00C2FF] transition-colors focus:outline-none p-2"
             onClick={toggleMobileMenu}
           >
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -129,82 +144,57 @@ export default function Header() {
       </div>
 
       {/* =========================================
-          4. MENÚ MÓVIL DESPLEGABLE
+         4. MENÚ MÓVIL DESPLEGABLE (PANTALLA COMPLETA)
          ========================================= */}
       <div 
-        className={`md:hidden absolute top-20 left-0 w-full bg-black border-t border-white/10 flex flex-col overflow-y-auto transition-all duration-300 ease-in-out ${
-          isMobileMenuOpen ? 'h-[calc(100vh-80px)] opacity-100 visible' : 'h-0 opacity-0 invisible'
+        className={`md:hidden fixed top-0 left-0 w-full h-screen bg-black/95 backdrop-blur-xl border-t border-white/10 flex flex-col pt-24 overflow-y-auto transition-all duration-500 ease-in-out ${
+          isMobileMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-8'
         }`}
       >
-        <div className="flex flex-col p-8 gap-8 pb-20">
+        <div className="flex flex-col px-8 pb-20 gap-10">
           
           {/* SECCIÓN 1: PRINCIPAL */}
-          <div className="flex flex-col gap-4">
-            <Link 
-              href="/puertas" 
-              onClick={closeMobileMenu}
-              className="text-2xl font-bold uppercase tracking-widest text-white hover:text-[#00C2FF]"
-            >
+          <div className="flex flex-col gap-6">
+            <Link href="/puertas" onClick={closeMobileMenu} className="text-3xl font-bold uppercase tracking-widest text-white hover:text-[#00C2FF] transition-colors">
               Puertas
             </Link>
-            
-            <Link 
-              href="/ventanas" 
-              onClick={closeMobileMenu}
-              className="text-2xl font-bold uppercase tracking-widest text-white hover:text-[#00C2FF]"
-            >
+            <Link href="/ventanas" onClick={closeMobileMenu} className="text-3xl font-bold uppercase tracking-widest text-white hover:text-[#00C2FF] transition-colors">
               Ventanas
             </Link>
-
-            <Link 
-              href="/cerraduras" 
-              onClick={closeMobileMenu}
-              className="text-2xl font-bold uppercase tracking-widest text-white hover:text-[#00C2FF]"
-            >
+            <Link href="/cerraduras" onClick={closeMobileMenu} className="text-3xl font-bold uppercase tracking-widest text-white hover:text-[#00C2FF] transition-colors">
               Cerraduras
             </Link>
-
-            <Link 
-              href="/empresa" 
-              onClick={closeMobileMenu}
-              className="text-2xl font-bold uppercase tracking-widest text-white hover:text-[#00C2FF]"
-            >
+            <Link href="/empresa" onClick={closeMobileMenu} className="text-3xl font-bold uppercase tracking-widest text-white hover:text-[#00C2FF] transition-colors mt-4">
               Empresa
             </Link>
-            <Link 
-              href="/proyectos" 
-              onClick={closeMobileMenu}
-              className="text-2xl font-bold uppercase tracking-widest text-white hover:text-[#00C2FF]"
-            >
+            <Link href="/proyectos" onClick={closeMobileMenu} className="text-3xl font-bold uppercase tracking-widest text-white hover:text-[#00C2FF] transition-colors">
               Proyectos
             </Link>
           </div>
 
           <hr className="border-white/10" />
 
-          {/* SECCIÓN 2: OTROS PRODUCTOS */}
+          {/* SECCIÓN 2: INTERIORISMO */}
           <div>
-            <h3 className="text-xs font-bold text-[#00C2FF] uppercase tracking-widest mb-4">
-              Hogar y Confort
+            <h3 className="text-xs font-bold text-[#00C2FF] uppercase tracking-widest mb-6 flex items-center gap-2">
+              <HomeIcon size={14}/> Interior & Mobiliario
             </h3>
-            <ul className="flex flex-col gap-3 pl-2 border-l border-white/10">
+            <ul className="flex flex-col gap-4 pl-4 border-l border-white/10">
               <MobileMenuItem href="/sofas" text="Sofás" close={closeMobileMenu} />
-              
-              {/* --- CAMBIO REALIZADO: Unificado en "Mesas" --- */}
               <MobileMenuItem href="/mesas" text="Mesas" close={closeMobileMenu} />
-              
               <MobileMenuItem href="/sillas" text="Sillas y Sillones" close={closeMobileMenu} />
-              <MobileMenuItem href="/dormitorio" text="Dormitorio" close={closeMobileMenu} />
-              <MobileMenuItem href="/almacenaje" text="Armarios" close={closeMobileMenu} />
+              <MobileMenuItem href="/dormitorios" text="Dormitorios" close={closeMobileMenu} />
+              {/* CAMBIO APLICADO AQUÍ */}
+              <MobileMenuItem href="/gabinetes" text="Gabinetes" close={closeMobileMenu} />
             </ul>
           </div>
 
           {/* SECCIÓN 3: BOTÓN CONTACTO EN MÓVIL */}
-          <div className="mt-4">
+          <div className="mt-4 pb-10">
             <Link 
               href="/contacto" 
               onClick={closeMobileMenu}
-              className="block w-full text-center bg-[#00C2FF] text-black py-4 text-sm font-bold uppercase tracking-widest hover:bg-white transition rounded-none"
+              className="flex items-center justify-center w-full bg-[#00C2FF] text-black py-4 text-sm font-bold uppercase tracking-widest hover:bg-white transition-colors rounded-full shadow-[0_0_20px_rgba(0,194,255,0.2)]"
             >
               Contactar Ahora
             </Link>
@@ -212,7 +202,6 @@ export default function Header() {
 
         </div>
       </div>
-
     </header>
   );
 }
@@ -221,7 +210,8 @@ export default function Header() {
 function MenuItem({ text, href }) {
   return (
     <li>
-      <Link href={href} className="block text-sm font-medium hover:text-[#00C2FF] transition-colors">
+      <Link href={href} className="group flex items-center text-sm font-medium text-gray-400 hover:text-white transition-colors">
+        <span className="w-0 h-px bg-[#00C2FF] mr-0 transition-all duration-300 group-hover:w-3 group-hover:mr-2"></span>
         {text}
       </Link>
     </li>
@@ -235,7 +225,7 @@ function MobileMenuItem({ text, href, close }) {
       <Link 
         href={href} 
         onClick={close}
-        className="block text-lg text-gray-400 hover:text-white transition-colors"
+        className="block text-xl font-medium text-gray-400 hover:text-white transition-colors"
       >
         {text}
       </Link>

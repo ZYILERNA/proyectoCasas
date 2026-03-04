@@ -39,9 +39,13 @@ const staggerContainer = {
   }
 };
 
-// --- COMPONENTE MODAL PRECIOS ---
+// --- COMPONENTE MODAL PRECIOS ACTUALIZADO ---
 const PriceTableModal = memo(({ isOpen, onClose, data, title }) => {
     if (!isOpen || !data) return null;
+    
+    // Detectar dinámicamente si es un producto con telas/pieles o si tiene precio único
+    const isSimpleFormat = data.some(row => row.prices?.unique !== undefined);
+
     return (
         <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-black/80" onClick={onClose}>
             <motion.div 
@@ -62,19 +66,28 @@ const PriceTableModal = memo(({ isOpen, onClose, data, title }) => {
                     </button>
                 </div>
                 <div className="overflow-auto p-0 scrollbar-hide">
-                    <table className="w-full text-xs text-left text-gray-600 min-w-[800px]">
+                    {/* Quitamos el min-w-[800px] condicionalmente para que no quede ancha si es simple */}
+                    <table className={`w-full text-xs text-left text-gray-600 ${isSimpleFormat ? 'min-w-[400px]' : 'min-w-[800px]'}`}>
                         <thead className="text-[10px] uppercase bg-white text-gray-700 font-bold sticky top-0 z-10 shadow-sm">
                             <tr>
                                 <th className="p-3 bg-gray-50 border-b">Modelo</th>
                                 <th className="p-3 bg-gray-50 border-b">Medidas (mm)</th>
-                                <th className="p-3 text-center bg-blue-50/50 text-blue-800 border-b border-blue-100">Tela A</th>
-                                <th className="p-3 text-center bg-blue-50/50 text-blue-800 border-b border-blue-100">Tela B</th>
-                                <th className="p-3 text-center bg-blue-100/50 text-blue-900 border-b border-blue-200">Tela C</th>
-                                <th className="p-3 text-center bg-blue-50/50 text-blue-800 border-b border-blue-100">Tela D</th>
-                                <th className="p-3 text-center bg-blue-50/50 text-blue-800 border-b border-blue-100">Tela E</th>
-                                <th className="p-3 text-center bg-orange-50/50 text-orange-800 border-b border-orange-100">Piel A</th>
-                                <th className="p-3 text-center bg-orange-50/50 text-orange-800 border-b border-orange-100">Piel B</th>
-                                <th className="p-3 text-center bg-orange-50/50 text-orange-800 border-b border-orange-100">Piel C</th>
+                                
+                                {/* RENDERIZADO DINÁMICO DE COLUMNAS */}
+                                {isSimpleFormat ? (
+                                    <th className="p-3 text-center bg-emerald-50/50 text-emerald-800 border-b border-emerald-100">Precio Unitario</th>
+                                ) : (
+                                    <>
+                                        <th className="p-3 text-center bg-blue-50/50 text-blue-800 border-b border-blue-100">Tela A</th>
+                                        <th className="p-3 text-center bg-blue-50/50 text-blue-800 border-b border-blue-100">Tela B</th>
+                                        <th className="p-3 text-center bg-blue-100/50 text-blue-900 border-b border-blue-200">Tela C</th>
+                                        <th className="p-3 text-center bg-blue-50/50 text-blue-800 border-b border-blue-100">Tela D</th>
+                                        <th className="p-3 text-center bg-blue-50/50 text-blue-800 border-b border-blue-100">Tela E</th>
+                                        <th className="p-3 text-center bg-orange-50/50 text-orange-800 border-b border-orange-100">Piel A</th>
+                                        <th className="p-3 text-center bg-orange-50/50 text-orange-800 border-b border-orange-100">Piel B</th>
+                                        <th className="p-3 text-center bg-orange-50/50 text-orange-800 border-b border-orange-100">Piel C</th>
+                                    </>
+                                )}
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-gray-100">
@@ -82,14 +95,24 @@ const PriceTableModal = memo(({ isOpen, onClose, data, title }) => {
                                 <tr key={idx} className="hover:bg-gray-50 transition-colors">
                                     <td className="p-3 font-bold text-gray-900 bg-gray-50/30 sticky left-0 z-10">{row.name}</td>
                                     <td className="p-3 font-mono text-gray-400 text-[10px] whitespace-nowrap">{row.size}</td>
-                                    <td className="p-3 text-center font-medium">{formatPrice(row.prices?.fa)}</td>
-                                    <td className="p-3 text-center font-medium">{formatPrice(row.prices?.fb)}</td>
-                                    <td className="p-3 text-center font-bold text-blue-700 bg-blue-50/30">{formatPrice(row.prices?.fc)}</td>
-                                    <td className="p-3 text-center font-medium">{formatPrice(row.prices?.fd)}</td>
-                                    <td className="p-3 text-center font-medium">{formatPrice(row.prices?.fe)}</td>
-                                    <td className="p-3 text-center font-medium text-gray-700 bg-orange-50/10">{formatPrice(row.prices?.la)}</td>
-                                    <td className="p-3 text-center font-medium text-gray-700 bg-orange-50/10">{formatPrice(row.prices?.lb)}</td>
-                                    <td className="p-3 text-center font-medium text-gray-700 bg-orange-50/10">{formatPrice(row.prices?.lc)}</td>
+                                    
+                                    {/* RENDERIZADO DINÁMICO DE DATOS */}
+                                    {isSimpleFormat ? (
+                                        <td className="p-3 text-center font-bold text-emerald-700 bg-emerald-50/30">
+                                            {formatPrice(row.prices?.unique)}
+                                        </td>
+                                    ) : (
+                                        <>
+                                            <td className="p-3 text-center font-medium">{formatPrice(row.prices?.fa)}</td>
+                                            <td className="p-3 text-center font-medium">{formatPrice(row.prices?.fb)}</td>
+                                            <td className="p-3 text-center font-bold text-blue-700 bg-blue-50/30">{formatPrice(row.prices?.fc)}</td>
+                                            <td className="p-3 text-center font-medium">{formatPrice(row.prices?.fd)}</td>
+                                            <td className="p-3 text-center font-medium">{formatPrice(row.prices?.fe)}</td>
+                                            <td className="p-3 text-center font-medium text-gray-700 bg-orange-50/10">{formatPrice(row.prices?.la)}</td>
+                                            <td className="p-3 text-center font-medium text-gray-700 bg-orange-50/10">{formatPrice(row.prices?.lb)}</td>
+                                            <td className="p-3 text-center font-medium text-gray-700 bg-orange-50/10">{formatPrice(row.prices?.lc)}</td>
+                                        </>
+                                    )}
                                 </tr>
                             ))}
                         </tbody>
