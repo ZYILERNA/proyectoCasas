@@ -536,7 +536,7 @@ export default function SofasPage() {
             animate="visible"
             className="relative z-10 container mx-auto px-6"
         >
-            <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-bold text-white mb-2 tracking-tighter">SOFAS</motion.h1>
+            <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-bold text-white mb-2 tracking-tighter">COLECCIÓN SOFÁS</motion.h1>
             <motion.p variants={fadeInUp} className="text-gray-300">Ingeniería de confort. Precios directos de fábrica.</motion.p>
         </motion.div>
       </div>
