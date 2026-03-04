@@ -443,7 +443,7 @@ export default function Home() {
             >
               <div className="aspect-[4/3] bg-gray-800 border border-white/10 p-2 group overflow-hidden">
                  <img 
-                   src="/images/gabinetes-home.jpg" 
+                   src="/images/gabinetes-header.jpg" 
                    alt="Sistemas de Gabinetes WONLY" 
                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                  />
