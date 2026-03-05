@@ -16,14 +16,27 @@ const CookieBanner = () => {
     marketing: false,
   });
 
-  // Comprobar si el usuario ya ha tomado una decisión al cargar la página
+// Comprobar si el usuario ya ha tomado una decisión al cargar la página
   useEffect(() => {
     const consent = localStorage.getItem('wonly_cookie_consent');
+    let timer;
     if (!consent) {
-      // Si no hay registro, mostramos el banner después de 1 segundo para no ser agresivos
-      const timer = setTimeout(() => setIsVisible(true), 1000);
-      return () => clearTimeout(timer);
+      // Si no hay registro, mostramos el banner después de 1 segundo
+      timer = setTimeout(() => setIsVisible(true), 1000);
     }
+
+    // NUEVO: Escuchar el botón de la página de Política de Cookies
+    const handleOpenSettings = () => {
+      setIsVisible(true);
+      setShowConfig(true); // Abre directamente la vista de configuración
+    };
+
+    window.addEventListener('openCookieSettings', handleOpenSettings);
+
+    return () => {
+      if (timer) clearTimeout(timer);
+      window.removeEventListener('openCookieSettings', handleOpenSettings);
+    };
   }, []);
 
   const handleAcceptAll = () => {

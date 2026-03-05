@@ -144,11 +144,11 @@ const CookiesPage = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             {/* Este botón podría abrir tu modal/banner de cookies en el futuro si usas uno */}
             <button 
-              className="inline-flex items-center justify-center gap-2 bg-[#00C2FF] text-black px-8 py-4 rounded-full font-bold hover:bg-white transition-all duration-300"
-              onClick={() => alert("Aquí podrías abrir el panel de configuración de cookies (CMP)")}
+                className="inline-flex items-center justify-center gap-2 bg-[#00C2FF] text-black px-8 py-4 rounded-full font-bold hover:bg-white transition-all duration-300"
+                onClick={() => window.dispatchEvent(new Event('openCookieSettings'))}
             >
-              <Settings size={18} />
-              Configurar Cookies
+                <Settings size={18} />
+                Configurar Cookies
             </button>
             
             <Link 
