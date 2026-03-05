@@ -20,7 +20,7 @@ const legalSections = [
     id: "datos-identificativos",
     title: "1. Datos Identificativos",
     icon: <Building2 size={24} className="text-[#00C2FF]"/>,
-    content: "En cumplimiento con el deber de información recogido en el artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico, se reflejan los siguientes datos: la empresa titular de dominio web es Zhongyuankeji S.L. (operando bajo la marca comercial WONLY, en adelante, La Empresa), con domicilio a estos efectos en Carrer Noi del Sucre, 13, 08840 Viladecans, Barcelona, España, número de C.I.F.: [Tu CIF] inscrita en el Registro Mercantil de Barcelona. Correo electrónico de contacto: Zhongyuankejisl@gmail.com."
+    content: "En cumplimiento con el deber de información recogido en el artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico, se reflejan los siguientes datos: la empresa titular de dominio web es Zhongyuankeji S.L. (operando bajo la marca comercial WONLY, en adelante, La Empresa), con domicilio a estos efectos en Carrer Noi del Sucre, 13, 08840 Viladecans, Barcelona, España, inscrita en el Registro Mercantil de Barcelona. Correo electrónico de contacto: Zhongyuankejisl@gmail.com."
   },
   {
     id: "usuarios",
