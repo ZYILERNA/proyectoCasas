@@ -105,7 +105,7 @@ export default function MesasPage() {
         const { data, error } = await supabase
           .from('mesas')
           .select('*')
-          .order('code', { ascending: true })
+          .order('id', { ascending: true })
           .abortSignal(controller.signal);
 
         if (error) throw error;

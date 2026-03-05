@@ -480,7 +480,7 @@ export default function DormitoriosPage() {
         const { data, error } = await supabase
           .from('dormitorios')
           .select('*')
-          .order('code', { ascending: true })
+          .order('id', { ascending: true })
           .abortSignal(controller.signal);
 
         if (error) throw error;

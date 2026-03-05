@@ -477,11 +477,13 @@ export default function GabinetesPage() {
     async function fetchGabinetes() {
       setIsLoading(true);
       try {
-        const { data, error } = await supabase
-          .from('gabinetes')
-          .select('*')
-          .order('code', { ascending: true })
-          .abortSignal(controller.signal);
+// ✅ OPCIÓN 2: Ordenado por el campo ID
+        // ✅ OPCIÓN 1: Orden de subida (El primero en subir es el primero en aparecer)
+const { data, error } = await supabase
+  .from('gabinetes')
+  .select('*')
+  .order('created_at', { ascending: true }) 
+  .abortSignal(controller.signal);
 
         if (error) throw error;
         if (data) setProducts(data);

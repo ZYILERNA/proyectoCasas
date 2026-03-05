@@ -325,8 +325,8 @@ const gabinetesData = [
     }
 },
 { 
-    id: "consola-hygl81505-b", 
-    name: "Consola HYGL81505-B", 
+    id: "gabinete-hygl81505-b", 
+    name: "Gabinete HYGL81505-B", 
     category: "Gabinete", 
     code: "HYGL81505-B/HE1821Y-B", 
     priceBase: 13060, 
@@ -362,11 +362,11 @@ const gabinetesData = [
     }
 },
 { 
-    id: "gabinete-lateral-hygl81513", 
-    name: "Gabinete HYGL81513", 
+    id: "gabinete-hygl81506", 
+    name: "Gabinete HYGL81506", 
     category: "Gabinete", 
-    code: "HYGL81513/HBG1868Y", 
-    priceBase: 12960, 
+    code: "HYGL81506/HE1835Y", 
+    priceBase: 13260, 
     image: "/images/GABINETES/GAB10/render.jpg", 
     schematics: [
         "/images/GABINETES/GAB10/img1.jpg", 
@@ -374,37 +374,40 @@ const gabinetesData = [
         "/images/GABINETES/GAB10/img3.jpg"
     ],
     specs: { 
-        dimensions: "1600 * 450 * 850 mm", 
-        volume: "0.85 m³", 
-        assembly: "Ensamblado / 1 Pieza" 
+        dimensions: "1500 * 380 * 1000 mm", 
+        volume: "0.65 m³", 
+        assembly: "Desmontado y Ensamblado / 2 Piezas" 
     },
     materials: [
-        { part: "Cuerpo del gabinete (Cabinet body)", material: "MDF Grado E0", detail: "Color cera de aceite (Oil-wax color)" },
-        { part: "Panel", material: "Vidrio (Glass)", detail: "Gris Carbón Mate (Matte Carbon Gray)" },
-        { part: "Patas (Hardware foot)", material: "Aleación de aluminio", detail: "Space Gray" }
+        { part: "Cuerpo del gabinete (Cabinet body)", material: "MDF grado E0", detail: "Oil-wax color" },
+        { part: "Marco interior (Inner frame)", material: "MDF grado E0", detail: "Huayi Red (High gloss)" },
+        { part: "Estructura de patas (Foot frame)", material: "Acero inoxidable", detail: "Brushed Gunmetal" }
     ],
     colors: {
-        body: [
-            { name: "Oil-wax color", hex: "#2C2623" } // Marrón muy oscuro/negro madera
+        wood: [
+            { name: "Oil-wax color", hex: "#1D1C1A" } 
+        ],
+        accent: [
+            { name: "Huayi Red (High gloss)", hex: "#B32428" }
         ]
     },
     configurations: [
-        { code: "HYGL81513", desc: "1600*450*850 mm", price: 12960 }
+        { code: "HYGL81506", desc: "1500*380*1000 mm", price: 13260 }
     ],
     priceList: [
-        { name: "Gabinete Lateral 1600mm (Oil-wax color)", size: "1600*450*850 mm", price: 12960 }
+        { name: "Mesa Consola 1500mm (Oil-wax / Huayi Red)", size: "1500*380*1000 mm", price: 13260 }
     ],
     customInstructions: {
-        material: "Not interchangeable",
+        material: "Not interchangeable (Cabinet body)",
         dimensions: "Not customizable"
     }
 },
 { 
-    id: "gabinete-lateral-hygl81519", 
-    name: "Gabinete HYGL81519", 
+    id: "gabinete-hygl81302", 
+    name: "Gabinete HYGL81302", 
     category: "Gabinete", 
-    code: "HYGL81519/MGL8620", 
-    priceBase: 12060, 
+    code: "HYGL81302/HA1802", 
+    priceBase: 14990, 
     image: "/images/GABINETES/GAB11/render.jpg", 
     schematics: [
         "/images/GABINETES/GAB11/img1.jpg", 
@@ -412,37 +415,44 @@ const gabinetesData = [
         "/images/GABINETES/GAB11/img3.jpg"
     ],
     specs: { 
-        dimensions: "1600 * 450 * 850 mm", 
-        volume: "0.85 m³", 
-        assembly: "Ensamblado / 1 Pieza" 
+        dimensions: "850 * 420 * 1200 mm", 
+        volume: "0.62 m³", 
+        assembly: "Desmontado y Ensamblado / 2 Piezas" 
     },
     materials: [
-        { part: "Cuerpo del gabinete (Cabinet body)", material: "MDF Grado E0", detail: "Color cera de aceite (Oil-wax color)" },
-        { part: "Panel", material: "Vidrio (Glass)", detail: "Gris Carbón Mate (Matte Carbon Gray)" },
-        { part: "Patas (Hardware foot)", material: "Aleación de aluminio", detail: "Space Gray" }
+        { part: "Panel", material: "Vidrio (Glass)", detail: "European Gray" },
+        { part: "Cuerpo del gabinete (Cabinet body)", material: "MDF grado E0", detail: "Oil-wax color" },
+        { part: "Superficie decorativa (Decorative surface)", material: "Cuero de silla (Saddle leather)", detail: "GLMA0004" },
+        { part: "Base del marco de conexión (Connecting frame base)", material: "Acero inoxidable", detail: "Brushed Gunmetal" }
     ],
     colors: {
-        body: [
-            { name: "Oil-wax color", hex: "#2C2623" } 
+        wood: [
+            { name: "Oil-wax color", hex: "#1D1C1A" } 
+        ],
+        leather: [
+            { name: "GLMA0004", hex: "#D2B48C" } 
+        ],
+        glass: [
+            { name: "European Gray", hex: "#5C5C5C" }
         ]
     },
     configurations: [
-        { code: "HYGL81519", desc: "1600*450*850 mm", price: 12060 }
+        { code: "HYGL81302", desc: "850*420*1200 mm", price: 14990 }
     ],
     priceList: [
-        { name: "Gabinete Lateral 1600mm (Oil-wax color)", size: "1600*450*850 mm", price: 12060 }
+        { name: "Cajonera 850mm (Oil-wax / European Gray)", size: "850*420*1200 mm", price: 14990 }
     ],
     customInstructions: {
-        material: "Not interchangeable",
+        material: "Not interchangeable (Cabinet body)",
         dimensions: "Not customizable"
     }
 },
 { 
-    id: "gabinete-lateral-hygl81512", 
-    name: "Gabinete HYGL81512", 
-    category: "Gabinete", 
-    code: "HYGL81512/HBG1867Y", 
-    priceBase: 12160, 
+    id: "mesa-hytl86201", 
+    name: "Mesa de Té HYTL86201", 
+    category: "Mesa", 
+    code: "HYTL86201/HCT1801Y-1", 
+    priceBase: 18760, 
     image: "/images/GABINETES/GAB12/render.jpg", 
     schematics: [
         "/images/GABINETES/GAB12/img1.jpg", 
@@ -450,37 +460,51 @@ const gabinetesData = [
         "/images/GABINETES/GAB12/img3.jpg"
     ],
     specs: { 
-        dimensions: "1600 * 450 * 850 mm", 
-        volume: "0.85 m³", 
-        assembly: "Ensamblado / 1 Pieza" 
+        dimensions: "1500 / 1800 / 2000 / 2400 * 700/750 * 720 mm", 
+        volume: "0.71 - 1.17 m³", 
+        assembly: "Desmontado y Ensamblado / 3 Piezas" 
     },
     materials: [
-        { part: "Cuerpo del gabinete (Cabinet body)", material: "MDF Grado E0", detail: "Color cera de aceite (Oil-wax color)" },
-        { part: "Panel", material: "Vidrio (Glass)", detail: "Gris Carbón Mate (Matte Carbon Gray)" },
-        { part: "Patas (Hardware foot)", material: "Aleación de aluminio", detail: "Space Gray" }
+        { part: "Superficie principal (Main surface)", material: "Piedra sinterizada (Sintered stone)", detail: "Moonlight White" },
+        { part: "Estructura de madera (Wood frame)", material: "Madera de fresno + MDF E0", detail: "Oil-wax color" },
+        { part: "Detalles (Accents)", material: "Obsidiana (Obsidian)", detail: "Obsidian" },
+        { part: "Estructura de patas (Foot frame)", material: "Acero inoxidable", detail: "Brushed Gunmetal" }
     ],
     colors: {
-        body: [
-            { name: "Oil-wax color", hex: "#2C2623" } 
+        wood: [
+            { name: "Oil-wax color", hex: "#1D1C1A" } 
+        ],
+        stone: [
+            { name: "Moonlight White", hex: "#F4F4F0" },
+            { name: "Obsidian", hex: "#0F0F0F" }
+        ],
+        metal: [
+            { name: "Brushed Gunmetal", hex: "#4A4A4A" }
         ]
     },
     configurations: [
-        { code: "HYGL81512", desc: "1600*450*850 mm", price: 12160 }
+        { code: "HYTL86201-1500", desc: "1500*700*720 mm", price: 18760 },
+        { code: "HYTL86201-1800", desc: "1800*700*720 mm", price: 19790 },
+        { code: "HYTL86201-2000", desc: "2000*700*720 mm", price: 20860 },
+        { code: "HYTL86201-2400", desc: "2400*750*720 mm", price: 25390 }
     ],
     priceList: [
-        { name: "Gabinete Lateral 1600mm (Oil-wax color)", size: "1600*450*850 mm", price: 12160 }
+        { name: "Mesa de Té 1500mm", size: "1500*700*720 mm", price: 18760 },
+        { name: "Mesa de Té 1800mm", size: "1800*700*720 mm", price: 19790 },
+        { name: "Mesa de Té 2000mm", size: "2000*700*720 mm", price: 20860 },
+        { name: "Mesa de Té 2400mm", size: "2400*750*720 mm", price: 25390 }
     ],
     customInstructions: {
-        material: "Not interchangeable",
-        dimensions: "Not customizable"
+        material: "Not customizable",
+        dimensions: "Available in multiple sizes (1500/1800/2000/2400mm)"
     }
 },
 { 
-    id: "gabinete-lateral-hygl81514", 
-    name: "Gabinete HYGL81514", 
-    category: "Gabinete", 
-    code: "HYGL81514/HBG1869Y", 
-    priceBase: 12960, 
+    id: "mesa-hytl86202", 
+    name: "Mesa de Té HYTL86202", 
+    category: "Mesa", 
+    code: "HYTL86202/HCT1839", 
+    priceBase: 46480, 
     image: "/images/GABINETES/GAB13/render.jpg", 
     schematics: [
         "/images/GABINETES/GAB13/img1.jpg", 
@@ -488,37 +512,49 @@ const gabinetesData = [
         "/images/GABINETES/GAB13/img3.jpg"
     ],
     specs: { 
-        dimensions: "1600 * 450 * 850 mm", 
-        volume: "0.85 m³", 
-        assembly: "Ensamblado / 1 Pieza" 
+        dimensions: "2400 / 2600 / 2800 / 3130 * 1000 * 820 mm", 
+        volume: "1.27 - 1.40 m³", 
+        assembly: "Desmontado y Ensamblado / 6 Piezas" 
     },
     materials: [
-        { part: "Cuerpo del gabinete (Cabinet body)", material: "MDF Grado E0", detail: "Color cera de aceite (Oil-wax color)" },
-        { part: "Panel", material: "Vidrio (Glass)", detail: "Gris Carbón Mate (Matte Carbon Gray)" },
-        { part: "Patas (Hardware foot)", material: "Aleación de aluminio", detail: "Space Gray" }
+        { part: "Estructura principal (Main structure)", material: "MDF grado E0", detail: "Oil-wax color" },
+        { part: "Base decorativa (Decorative base)", material: "Piedra sinterizada (Sintered stone)", detail: "Cold River Snow" },
+        { part: "Detalles metálicos (Metal accents)", material: "Acero inoxidable", detail: "Brushed Gunmetal" }
     ],
     colors: {
-        body: [
-            { name: "Oil-wax color", hex: "#2C2623" } 
+        wood: [
+            { name: "Oil-wax color", hex: "#1D1C1A" } 
+        ],
+        stone: [
+            { name: "Cold River Snow", hex: "#EAEAEA" }
+        ],
+        metal: [
+            { name: "Brushed Gunmetal", hex: "#4A4A4A" }
         ]
     },
     configurations: [
-        { code: "HYGL81514", desc: "1600*450*850 mm", price: 12960 }
+        { code: "HYTL86202-2400", desc: "2400(2300)*1000*820 mm", price: 46480 },
+        { code: "HYTL86202-2600", desc: "2600(2500)*1000*820 mm", price: 48690 },
+        { code: "HYTL86202-2800", desc: "2800(2700)*1000*820 mm", price: 49290 },
+        { code: "HYTL86202-3130", desc: "3130(3030)*1000*820 mm", price: 49990 }
     ],
     priceList: [
-        { name: "Gabinete Lateral 1600mm (Oil-wax color)", size: "1600*450*850 mm", price: 12960 }
+        { name: "Mesa de Té 2400mm", size: "2400(2300)*1000*820 mm", price: 46480 },
+        { name: "Mesa de Té 2600mm", size: "2600(2500)*1000*820 mm", price: 48690 },
+        { name: "Mesa de Té 2800mm", size: "2800(2700)*1000*820 mm", price: 49290 },
+        { name: "Mesa de Té 3130mm", size: "3130(3030)*1000*820 mm", price: 49990 }
     ],
     customInstructions: {
-        material: "Not interchangeable",
-        dimensions: "Not customizable"
+        material: "Not customizable. Note: Price does not include tea tray stones and green plants.",
+        dimensions: "Available in multiple sizes (2400/2600/2800/3130mm)"
     }
 },
 { 
-    id: "gabinete-lateral-hygl81511", 
-    name: "Gabinete HYGL81511", 
-    category: "Gabinete", 
-    code: "HYGL81511/HBG1866Y", 
-    priceBase: 12160, 
+    id: "mesa-hytl86202-b", 
+    name: "Mesa de Té HYTL86202-B", 
+    category: "Mesa", 
+    code: "HYTL86202-B/HCT1839-B", 
+    priceBase: 37060, 
     image: "/images/GABINETES/GAB14/render.jpg", 
     schematics: [
         "/images/GABINETES/GAB14/img1.jpg", 
@@ -526,37 +562,49 @@ const gabinetesData = [
         "/images/GABINETES/GAB14/img3.jpg"
     ],
     specs: { 
-        dimensions: "1600 * 450 * 850 mm", 
-        volume: "0.85 m³", 
-        assembly: "Ensamblado / 1 Pieza" 
+        dimensions: "2400 / 2600 / 2800 / 3000 * 1000 * 750 mm", 
+        volume: "1.21 - 1.35 m³", 
+        assembly: "Desmontado y Ensamblado / 5 Piezas" 
     },
     materials: [
-        { part: "Cuerpo del gabinete (Cabinet body)", material: "MDF Grado E0", detail: "Color cera de aceite (Oil-wax color)" },
-        { part: "Panel", material: "Vidrio (Glass)", detail: "Gris Carbón Mate (Matte Carbon Gray)" },
-        { part: "Patas (Hardware foot)", material: "Aleación de aluminio", detail: "Space Gray" }
+        { part: "Estructura principal (Main structure)", material: "MDF grado E0", detail: "Oil-wax color" },
+        { part: "Base decorativa (Decorative base)", material: "Piedra sinterizada (Sintered stone)", detail: "Cold River Snow" },
+        { part: "Detalles metálicos (Metal accents)", material: "Acero inoxidable", detail: "Brushed Gunmetal" }
     ],
     colors: {
-        body: [
-            { name: "Oil-wax color", hex: "#2C2623" } 
+        wood: [
+            { name: "Oil-wax color", hex: "#1D1C1A" } 
+        ],
+        stone: [
+            { name: "Cold River Snow", hex: "#EAEAEA" }
+        ],
+        metal: [
+            { name: "Brushed Gunmetal", hex: "#4A4A4A" }
         ]
     },
     configurations: [
-        { code: "HYGL81511", desc: "1600*450*850 mm", price: 12160 }
+        { code: "HYTL86202-B-2400", desc: "2400*1000*750 mm", price: 37060 },
+        { code: "HYTL86202-B-2600", desc: "2600*1000*750 mm", price: 39160 },
+        { code: "HYTL86202-B-2800", desc: "2800*1000*750 mm", price: 40190 },
+        { code: "HYTL86202-B-3000", desc: "3000*1000*750 mm", price: 41260 }
     ],
     priceList: [
-        { name: "Gabinete Lateral 1600mm (Oil-wax color)", size: "1600*450*850 mm", price: 12160 }
+        { name: "Mesa de Té 2400mm", size: "2400*1000*750 mm", price: 37060 },
+        { name: "Mesa de Té 2600mm", size: "2600*1000*750 mm", price: 39160 },
+        { name: "Mesa de Té 2800mm", size: "2800*1000*750 mm", price: 40190 },
+        { name: "Mesa de Té 3000mm", size: "3000*1000*750 mm", price: 41260 }
     ],
     customInstructions: {
-        material: "Not interchangeable",
-        dimensions: "Not customizable"
+        material: "Not customizable. Note: Price does not include tea tray stones.",
+        dimensions: "Available in multiple sizes (2400/2600/2800/3000mm)"
     }
 },
 { 
-    id: "gabinete-lateral-hygl81510", 
-    name: "Gabinete HYGL81510", 
-    category: "Gabinete", 
-    code: "HYGL81510/HBG1865Y", 
-    priceBase: 12960, 
+    id: "mesa-hytl86205", 
+    name: "Mesa de Té HYTL86205", 
+    category: "Mesa", 
+    code: "HYTL86205/MQT7715-C", 
+    priceBase: 44750, 
     image: "/images/GABINETES/GAB15/render.jpg", 
     schematics: [
         "/images/GABINETES/GAB15/img1.jpg", 
@@ -564,37 +612,53 @@ const gabinetesData = [
         "/images/GABINETES/GAB15/img3.jpg"
     ],
     specs: { 
-        dimensions: "1600 * 450 * 850 mm", 
-        volume: "0.85 m³", 
-        assembly: "Ensamblado / 1 Pieza" 
+        dimensions: "2000/2200/2400/2600 * 850 * 720 mm | 2800/3000 * 1000 * 720 mm", 
+        volume: "1.20 - 1.57 m³", 
+        assembly: "Desmontado y Ensamblado / 5 Piezas" 
     },
     materials: [
-        { part: "Cuerpo del gabinete (Cabinet body)", material: "MDF Grado E0", detail: "Color cera de aceite (Oil-wax color)" },
-        { part: "Panel", material: "Vidrio (Glass)", detail: "Gris Carbón Mate (Matte Carbon Gray)" },
-        { part: "Patas (Hardware foot)", material: "Aleación de aluminio", detail: "Space Gray" }
+        { part: "Superficie (Surface)", material: "Mármol (Marble)", detail: "Picasso (Genuine bright)" },
+        { part: "Estructura principal (Main structure)", material: "Madera de fresno + MDF grado E0", detail: "Oil-wax color" },
+        { part: "Detalles metálicos (Metal details)", material: "Acero inoxidable", detail: "Brushed Gunmetal" }
     ],
     colors: {
-        body: [
-            { name: "Oil-wax color", hex: "#2C2623" } 
+        wood: [
+            { name: "Oil-wax color", hex: "#1D1C1A" } 
+        ],
+        stone: [
+            { name: "Picasso (Genuine bright)", hex: "#EBEBEB" }
+        ],
+        metal: [
+            { name: "Brushed Gunmetal", hex: "#4A4A4A" }
         ]
     },
     configurations: [
-        { code: "HYGL81510", desc: "1600*450*850 mm", price: 12960 }
+        { code: "HYTL86205-2000", desc: "2000*850*720 mm", price: 44750 },
+        { code: "HYTL86205-2200", desc: "2200*850*720 mm", price: 45780 },
+        { code: "HYTL86205-2400", desc: "2400*850*720 mm", price: 46850 },
+        { code: "HYTL86205-2600", desc: "2600*850*720 mm", price: 48260 },
+        { code: "HYTL86205-2800", desc: "2800*1000*720 mm", price: 49990 },
+        { code: "HYTL86205-3000", desc: "3000*1000*720 mm", price: 52460 }
     ],
     priceList: [
-        { name: "Gabinete Lateral 1600mm (Oil-wax color)", size: "1600*450*850 mm", price: 12960 }
+        { name: "Mesa de Té 2000mm", size: "2000*850*720 mm", price: 44750 },
+        { name: "Mesa de Té 2200mm", size: "2200*850*720 mm", price: 45780 },
+        { name: "Mesa de Té 2400mm", size: "2400*850*720 mm", price: 46850 },
+        { name: "Mesa de Té 2600mm", size: "2600*850*720 mm", price: 48260 },
+        { name: "Mesa de Té 2800mm", size: "2800*1000*720 mm", price: 49990 },
+        { name: "Mesa de Té 3000mm", size: "3000*1000*720 mm", price: 52460 }
     ],
     customInstructions: {
-        material: "Not interchangeable",
-        dimensions: "Not customizable"
+        material: "Not customizable.",
+        dimensions: "Available in multiple sizes (2000 to 3000mm length). Note the depth change at 2800mm."
     }
 },
 { 
-    id: "gabinete-lateral-hygl81509", 
-    name: "Gabinete HYGL81509", 
-    category: "Gabinete", 
-    code: "HYGL81509/HBG1864Y", 
-    priceBase: 12160, 
+    id: "estanteria-hygl81909", 
+    name: "Estantería HYGL81909", 
+    category: "Estantería", 
+    code: "HYGL81909", 
+    priceBase: 29360, 
     image: "/images/GABINETES/GAB16/render.jpg", 
     schematics: [
         "/images/GABINETES/GAB16/img1.jpg", 
@@ -602,25 +666,27 @@ const gabinetesData = [
         "/images/GABINETES/GAB16/img3.jpg"
     ],
     specs: { 
-        dimensions: "1600 * 450 * 850 mm", 
-        volume: "0.85 m³", 
-        assembly: "Ensamblado / 1 Pieza" 
+        dimensions: "1830 * 435 * 2050 mm", 
+        volume: "1.51 m³", 
+        assembly: "Desmontado y Ensamblado / 3 Piezas" 
     },
     materials: [
-        { part: "Cuerpo del gabinete (Cabinet body)", material: "MDF Grado E0", detail: "Color cera de aceite (Oil-wax color)" },
-        { part: "Panel", material: "Vidrio (Glass)", detail: "Gris Carbón Mate (Matte Carbon Gray)" },
-        { part: "Patas (Hardware foot)", material: "Aleación de aluminio", detail: "Space Gray" }
+        { part: "Estantes (Shelf)", material: "MDF grado E0", detail: "Oil-wax color" },
+        { part: "Estructura de patas (Foot frame)", material: "Acero inoxidable + Madera de fresno", detail: "Brushed Gunmetal + Oil-wax color" }
     ],
     colors: {
-        body: [
-            { name: "Oil-wax color", hex: "#2C2623" } 
+        wood: [
+            { name: "Oil-wax color", hex: "#1D1C1A" } 
+        ],
+        metal: [
+            { name: "Brushed Gunmetal", hex: "#4A4A4A" }
         ]
     },
     configurations: [
-        { code: "HYGL81509", desc: "1600*450*850 mm", price: 12160 }
+        { code: "HYGL81909", desc: "1830*435*2050 mm", price: 29360 }
     ],
     priceList: [
-        { name: "Gabinete Lateral 1600mm (Oil-wax color)", size: "1600*450*850 mm", price: 12160 }
+        { name: "Estantería 1830mm", size: "1830*435*2050 mm", price: 29360 }
     ],
     customInstructions: {
         material: "Not interchangeable",
@@ -628,11 +694,11 @@ const gabinetesData = [
     }
 },
 { 
-    id: "gabinete-lateral-hygl81508", 
-    name: "Gabinete HYGL81508", 
+    id: "gabinete-hygl81705-a", 
+    name: "Gabinete de Té HYGL81705-A", 
     category: "Gabinete", 
-    code: "HYGL81508/HBG1863Y", 
-    priceBase: 12160, 
+    code: "HYGL81705-A/MQT7711A", 
+    priceBase: 42990, 
     image: "/images/GABINETES/GAB17/render.jpg", 
     schematics: [
         "/images/GABINETES/GAB17/img1.jpg", 
@@ -640,37 +706,50 @@ const gabinetesData = [
         "/images/GABINETES/GAB17/img3.jpg"
     ],
     specs: { 
-        dimensions: "1600 * 450 * 850 mm", 
-        volume: "0.85 m³", 
-        assembly: "Ensamblado / 1 Pieza" 
+        dimensions: "2200 / 2400 / 2600 / 2790 * 430 * 1645 mm", 
+        volume: "0.62 - 0.67 m³", 
+        assembly: "Desmontado y Ensamblado / 2 Piezas" 
     },
     materials: [
-        { part: "Cuerpo del gabinete (Cabinet body)", material: "MDF Grado E0", detail: "Color cera de aceite (Oil-wax color)" },
-        { part: "Panel", material: "Vidrio (Glass)", detail: "Gris Carbón Mate (Matte Carbon Gray)" },
-        { part: "Patas (Hardware foot)", material: "Aleación de aluminio", detail: "Space Gray" }
+        { part: "Estructura principal (Main structure)", material: "MDF grado E0", detail: "Oil-wax color + Haoyue Gray (Matte)" },
+        { part: "Panel central (Center panel)", material: "Piedra sinterizada (Sintered stone)", detail: "Calacatta Gold" },
+        { part: "Detalles metálicos (Metal details)", material: "Acero inoxidable", detail: "Brushed Japanese Gold" }
     ],
     colors: {
-        body: [
-            { name: "Oil-wax color", hex: "#2C2623" } 
+        wood: [
+            { name: "Oil-wax color", hex: "#1D1C1A" },
+            { name: "Haoyue Gray (Matte)", hex: "#8A8A8A" }
+        ],
+        stone: [
+            { name: "Calacatta Gold", hex: "#D4CFC9" }
+        ],
+        metal: [
+            { name: "Brushed Japanese Gold", hex: "#C5B358" }
         ]
     },
     configurations: [
-        { code: "HYGL81508", desc: "1600*450*850 mm", price: 12160 }
+        { code: "HYGL81705-A2200", desc: "2200*430*1645 mm", price: 42990 },
+        { code: "HYGL81705-A2400", desc: "2400*430*1645 mm", price: 43360 },
+        { code: "HYGL81705-A2600", desc: "2600*430*1645 mm", price: 43750 },
+        { code: "HYGL81705-A2790", desc: "2790*430*1645 mm", price: 44190 }
     ],
     priceList: [
-        { name: "Gabinete Lateral 1600mm (Oil-wax color)", size: "1600*450*850 mm", price: 12160 }
+        { name: "Gabinete de Té 2200mm", size: "2200*430*1645 mm", price: 42990 },
+        { name: "Gabinete de Té 2400mm", size: "2400*430*1645 mm", price: 43360 },
+        { name: "Gabinete de Té 2600mm", size: "2600*430*1645 mm", price: 43750 },
+        { name: "Gabinete de Té 2790mm", size: "2790*430*1645 mm", price: 44190 }
     ],
     customInstructions: {
-        material: "Not interchangeable",
-        dimensions: "Not customizable"
+        material: "Not customizable.",
+        dimensions: "Available in multiple sizes (2200/2400/2600/2790mm)"
     }
 },
 { 
-    id: "gabinete-lateral-hygl81507-b", 
-    name: "Gabinete HYGL81507-B", 
+    id: "gabinete-hygl81705-b", 
+    name: "Gabinete de Té HYGL81705-B", 
     category: "Gabinete", 
-    code: "HYGL81507-B/HBG1862B", 
-    priceBase: 20160, 
+    code: "HYGL81705-B/MQT7711", 
+    priceBase: 26460, 
     image: "/images/GABINETES/GAB18/render.jpg", 
     schematics: [
         "/images/GABINETES/GAB18/img1.jpg", 
@@ -678,37 +757,50 @@ const gabinetesData = [
         "/images/GABINETES/GAB18/img3.jpg"
     ],
     specs: { 
-        dimensions: "2130 * 450 * 723 mm", 
-        volume: "0.77 m³", 
-        assembly: "Desmontado y Ensamblado / 3 Piezas" 
+        dimensions: "1500 / 1600 / 1700 / 1800 * 425 * 1645 mm", 
+        volume: "0.51 - 0.54 m³", 
+        assembly: "Desmontado y Ensamblado / 2 Piezas" 
     },
     materials: [
-        { part: "Panel", material: "Losa de roca (Rock slab)", detail: "Calacatta White" },
-        { part: "Cuerpo del gabinete (Cabinet body)", material: "MDF Grado E0", detail: "Color roble blanco (White oak color)" },
-        { part: "Estructura de patas (Foot frame)", material: "Aleación de aluminio", detail: "Gunmetal cepillado (Brushed Gunmetal)" }
+        { part: "Estructura principal (Main structure)", material: "MDF grado E0", detail: "Oil-wax color + Haoyue Gray (Matte)" },
+        { part: "Revestimiento/Detalles (Covering/Details)", material: "Cuero (Leather)", detail: "GLMA0020" },
+        { part: "Detalles metálicos (Metal details)", material: "Acero inoxidable", detail: "Brushed Japanese Gold" }
     ],
     colors: {
-        stone: [
-            { name: "Calacatta White", hex: "#EBEAE8" } 
+        wood: [
+            { name: "Oil-wax color", hex: "#1D1C1A" },
+            { name: "Haoyue Gray (Matte)", hex: "#8A8A8A" }
+        ],
+        leather: [
+            { name: "GLMA0020", hex: "#BCA38F" }
+        ],
+        metal: [
+            { name: "Brushed Japanese Gold", hex: "#C5B358" }
         ]
     },
     configurations: [
-        { code: "HYGL81507-B", desc: "2130*450*723 mm", price: 20160 }
+        { code: "HYGL81705-B1500", desc: "1500*425*1645 mm", price: 26460 },
+        { code: "HYGL81705-B1600", desc: "1600*425*1645 mm", price: 26790 },
+        { code: "HYGL81705-B1700", desc: "1700*425*1645 mm", price: 27160 },
+        { code: "HYGL81705-B1800", desc: "1800*425*1645 mm", price: 27560 }
     ],
     priceList: [
-        { name: "Gabinete Lateral 2130mm (Calacatta White)", size: "2130*450*723 mm", price: 20160 }
+        { name: "Gabinete de Té 1500mm", size: "1500*425*1645 mm", price: 26460 },
+        { name: "Gabinete de Té 1600mm", size: "1600*425*1645 mm", price: 26790 },
+        { name: "Gabinete de Té 1700mm", size: "1700*425*1645 mm", price: 27160 },
+        { name: "Gabinete de Té 1800mm", size: "1800*425*1645 mm", price: 27560 }
     ],
     customInstructions: {
-        material: "Interchangeable (Panel)",
-        dimensions: "Not customizable"
+        material: "Not customizable.",
+        dimensions: "Available in multiple sizes (1500/1600/1700/1800mm)"
     }
 },
 { 
-    id: "gabinete-lateral-hygl81503-b", 
-    name: "Gabinete HYGL81503-B", 
-    category: "Gabinete", 
-    code: "HYGL81503/HBG1858Y", 
-    priceBase: 15960, 
+    id: "biombo-hygl81913", 
+    name: "Biombo HYGL81913", 
+    category: "Biombo", 
+    code: "HYGL81913", 
+    priceBase: 39160, 
     image: "/images/GABINETES/GAB19/render.jpg", 
     schematics: [
         "/images/GABINETES/GAB19/img1.jpg", 
@@ -716,42 +808,43 @@ const gabinetesData = [
         "/images/GABINETES/GAB19/img3.jpg"
     ],
     specs: { 
-        dimensions: "2200 * 450 * 575 mm", 
-        volume: "0.58 m³", 
-        assembly: "Desmontado y Ensamblado / 3 Piezas" 
+        dimensions: "2690 * 100 * 1800 mm", 
+        volume: "0.4 m³", 
+        assembly: "Desmontado y Ensamblado / 1 Pieza" 
     },
     materials: [
-        { part: "Panel", material: "Piedra sinterizada (Sintered stone)", detail: "Laurent Black Gold" },
-        { part: "Panel interno", material: "MDF Grado E0", detail: "Color cera de aceite (Oil-wax color)" },
-        { part: "Vidrio laminado", material: "Vidrio", detail: "Gris Carbón (Carbon Gray Glass)" },
-        { part: "Estructura de patas", material: "Aleación de aluminio", detail: "Gunmetal cepillado (Brushed Gunmetal)" },
-        { part: "Cuerpo del gabinete", material: "MDF Grado E0", detail: "Gris azulado oriental (Eastern Blue Gray)" }
+        { part: "Marco (Frame)", material: "Acero inoxidable", detail: "Brushed Gunmetal" },
+        { part: "Cuerda trenzada (Braided cord)", material: "Cuerda trenzada", detail: "PL519 Light Khaki" },
+        { part: "Madera maciza (Solid wood)", material: "Madera de fresno", detail: "Oil-wax color" }
     ],
     colors: {
-        stone: [
-            { name: "Laurent Black Gold", hex: "#2B2A29" } // Negro con vetas doradas/oxido
+        wood: [
+            { name: "Oil-wax color", hex: "#1D1C1A" } 
         ],
-        body: [
-            { name: "Eastern Blue Gray", hex: "#4A525A" } // Gris azulado profundo
+        fabric: [
+            { name: "PL519 Light Khaki", hex: "#D8CDBA" }
+        ],
+        metal: [
+            { name: "Brushed Gunmetal", hex: "#4A4A4A" }
         ]
     },
     configurations: [
-        { code: "HYGL81503", desc: "2200*450*575 mm", price: 15960 }
+        { code: "HYGL81913", desc: "2690*100*1800 mm", price: 39160 }
     ],
     priceList: [
-        { name: "Gabinete Lateral 2200mm (Laurent Black Gold)", size: "2200*450*575 mm", price: 15960 }
+        { name: "Biombo 2690mm", size: "2690*100*1800 mm", price: 39160 }
     ],
     customInstructions: {
-        material: "Interchangeable (6mm Sintered stone)",
-        dimensions: "Not customizable"
+        material: "Not interchangeable.",
+        dimensions: "Not customizable."
     }
 },
 { 
-    id: "gabinete-lateral-hygl81507-b-v2", 
-    name: "Gabinete HYGL81507-A (v2)", 
-    category: "Gabinete", 
-    code: "HYGL81507-A/HBG1862A", 
-    priceBase: 18060, 
+    id: "Estanteria-hygl819098", 
+    name: "Estantería HYGL819098", 
+    category: "Estantería", 
+    code: "HYGL819098", 
+    priceBase: 11550, 
     image: "/images/GABINETES/GAB20/render.jpg", 
     schematics: [
         "/images/GABINETES/GAB20/img1.jpg", 
@@ -759,40 +852,42 @@ const gabinetesData = [
         "/images/GABINETES/GAB20/img3.jpg"
     ],
     specs: { 
-        dimensions: "1730 * 450 * 723 mm", 
-        volume: "0.63 m³", 
-        assembly: "Desmontado y Ensamblado / 3 Piezas" 
+        dimensions: "1500 * 380 * 1000 mm", 
+        volume: "0.65 m³", 
+        assembly: "Desmontado y Ensamblado / 1 Pieza" 
     },
     materials: [
-        { part: "Panel", material: "Losa de roca (Rock slab)", detail: "Calacatta White" },
-        { part: "Cuerpo del gabinete (Cabinet body)", material: "MDF Grado E0", detail: "Color roble blanco (White oak color)" },
-        { part: "Estructura de patas (Foot frame)", material: "Aleación de aluminio", detail: "Gunmetal cepillado (Brushed Gunmetal)" }
+        { part: "Cuerpo del gabinete (Cabinet body)", material: "MDF grado E0", detail: "Oil-wax color" },
+        { part: "Marco interior (Inner frame)", material: "MDF grado E0", detail: "Huayi Red (High gloss)" },
+        { part: "Estructura de patas (Foot frame)", material: "Acero inoxidable", detail: "Brushed Gunmetal" }
     ],
     colors: {
-        stone: [
-            { name: "Calacatta White", hex: "#EBEAE8" } 
+        wood: [
+            { name: "Oil-wax color", hex: "#1D1C1A" },
+            { name: "Huayi Red (High gloss)", hex: "#8A1C1C" }
         ],
-        body: [
-            { name: "White oak color", hex: "#D9C5B2" } // Tono madera clara natural
+        metal: [
+            { name: "Brushed Gunmetal", hex: "#4A4A4A" }
         ]
     },
     configurations: [
-        { code: "HYGL81507-A", desc: "1730*450*723 mm", price: 18060 }
+        { code: "HYGL819098", desc: "1500*380*1000 mm", price: 13260 }
     ],
     priceList: [
-        { name: "Gabinete Lateral 1730mm (Calacatta White)", size: "1730*450*723 mm", price: 18060 }
+        { name: "Consola 1500mm", size: "1500*380*1000 mm", price: 13260 }
     ],
     customInstructions: {
-        material: "Interchangeable (Panel)",
-        dimensions: "Not customizable"
+        material: "Cabinet body material is not interchangeable.",
+        dimensions: "Not customizable."
     }
 },
+// ✅ CÓMO DEBE QUEDAR (Correcto)
 { 
-    id: "gabinete-lateral-hygl81515-b", 
-    name: "Gabinete HYGL81515-B", 
-    category: "Gabinete", 
-    code: "HYGL81515", 
-    priceBase: 13960, 
+    id: "comoda-hygl81906-1", 
+    name: "Cómoda HYGL81906-1", 
+    category: "Cómoda", 
+    code: "HYGL81906", 
+    priceBase: 29800, 
     image: "/images/GABINETES/GAB21/render.jpg", 
     schematics: [
         "/images/GABINETES/GAB21/img1.jpg", 
@@ -800,27 +895,37 @@ const gabinetesData = [
         "/images/GABINETES/GAB21/img3.jpg"
     ],
     specs: { 
-        dimensions: "1550 * 500 * 830 mm", 
-        volume: "0.66 m³", 
-        assembly: "Desmontado y Ensamblado / 1 Pieza" 
+        dimensions: "850 * 420 * 1200 mm", 
+        volume: "0.62 m³", 
+        assembly: "Desmontado y Ensamblado / 2 Piezas" 
     },
     materials: [
-        { part: "Cuerpo del gabinete (Cabinet body)", material: "MDF Grado E0", detail: "Hermès Orange (High gloss)" }
+        { part: "Panel (Panel)", material: "Vidrio (Glass)", detail: "European Gray" },
+        { part: "Superficie decorativa (Decorative surface)", material: "Cuero de silla de montar (Saddle leather)", detail: "GLMA0004" },
+        { part: "Base del marco (Connecting frame base)", material: "Acero inoxidable", detail: "Brushed Gunmetal" }
     ],
     colors: {
-        body: [
-            { name: "Hermès Orange", hex: "#E86C2C" } 
+        glass: [
+            { name: "Light Gray", hex: "#A0A0A0" }
+        ],
+        leather: [
+            { name: "GLMA0004", hex: "#D4C7BA" }
+        ],
+        metal: [
+            { name: "Brushed Gunmetal", hex: "#4A4A4A" }
         ]
     },
     configurations: [
-        { code: "HYGL81515", desc: "1550*500*830 mm", price: 13960 }
+        { code: "HYGL81906-1 (Upper)", desc: "1810*298*599 mm", price: 4750 },
+        { code: "HYGL81906-2 (Lower)", desc: "1810*298*2400 mm", price: 25050 }
     ],
     priceList: [
-        { name: "Gabinete Lateral 1550mm (Hermès Orange)", size: "1550*500*830 mm", price: 13960 }
+        { name: "Gabinete Superior (Upper)", size: "1810*298*599 mm", price: 4750 },
+        { name: "Gabinete Inferior (Lower)", size: "1810*298*2400 mm", price: 25050 }
     ],
     customInstructions: {
-        material: "Not interchangeable",
-        dimensions: "Not customizable"
+        material: "Cabinet body material is not interchangeable.",
+        dimensions: "Not customizable."
     }
 },
 ];

@@ -1,35 +1,45 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+
+// IMPORTACIONES DE COMPONENTES
 import Header from "@/components/Header";
-import Footer from "@/components/Footer"; // <--- 1. IMPORTAR FOOTER
+import Footer from "@/components/Footer";
+import CookieBanner from '@/components/CookieBanner'; // <--- Importación del banner
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  // 1. CONFIGURACIÓN DEL TÍTULO DINÁMICO
+  // CONFIGURACIÓN DEL TÍTULO DINÁMICO
   title: {
-    // %s se reemplaza automáticamente con el título de cada página
     template: "%s | WONLY", 
-    // Título por defecto (para la Home) si una página no especifica título
     default: "WONLY - Seguridad y Diseño Exclusivo", 
   },
   description: "Especialistas en cerraduras inteligentes y muebles de diseño exclusivo.",
   
-  // 2. AQUÍ AGREGAS TU FAVICON (Si usas la opción manual)
+  // FAVICON
   icons: {
-    icon: '/images/wonlylogo.jpg', // Asegúrate de tener este archivo en la carpeta public/
+    icon: '/images/wonlylogo.jpg', 
   },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className={inter.className}>
+      {/* Fusioné las clases de tu fuente Inter con los colores de fondo oscuro */}
+      <body className={`${inter.className} bg-[#050505] text-white`}>
+        
         <Header />
+        
+        {/* Contenido principal de cada página */}
         {children}
-        <Footer /> {/* <--- 2. PONER EL FOOTER AQUÍ AL FINAL */}
+        
+        <Footer /> 
         <SpeedInsights />
+        
+        {/* Aquí agregamos el banner de cookies al final del body */}
+        <CookieBanner />
+        
       </body>
     </html>
   );
