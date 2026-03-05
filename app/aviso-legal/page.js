@@ -20,7 +20,7 @@ const legalSections = [
     id: "datos-identificativos",
     title: "1. Datos Identificativos",
     icon: <Building2 size={24} className="text-[#00C2FF]"/>,
-    content: "En cumplimiento con el deber de información recogido en el artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico, se reflejan los siguientes datos: la empresa titular de dominio web es WONLY (en adelante, La Empresa), con domicilio a estos efectos en [Dirección de la empresa], número de C.I.F.: [Tu CIF] inscrita en el Registro Mercantil de [Ciudad]. Correo electrónico de contacto: legal@wonly.com."
+    content: "En cumplimiento con el deber de información recogido en el artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico, se reflejan los siguientes datos: la empresa titular de dominio web es Zhongyuankeji S.L. (operando bajo la marca comercial WONLY, en adelante, La Empresa), con domicilio a estos efectos en Carrer Noi del Sucre, 13, 08840 Viladecans, Barcelona, España, número de C.I.F.: [Tu CIF] inscrita en el Registro Mercantil de Barcelona. Correo electrónico de contacto: Zhongyuankejisl@gmail.com."
   },
   {
     id: "usuarios",
@@ -50,7 +50,7 @@ const legalSections = [
     id: "legislacion",
     title: "6. Legislación Aplicable y Jurisdicción",
     icon: <Scale size={24} className="text-[#00C2FF]"/>,
-    content: "La relación entre La Empresa y el USUARIO se regirá por la normativa española vigente y cualquier controversia se someterá a los Juzgados y tribunales de la ciudad correspondiente, salvo que la ley aplicable disponga otra cosa."
+    content: "La relación entre La Empresa y el USUARIO se regirá por la normativa española vigente y cualquier controversia se someterá a los Juzgados y tribunales de la ciudad de Barcelona, salvo que la ley aplicable disponga otra cosa."
   }
 ];
 
@@ -132,7 +132,7 @@ const AvisoLegalPage = () => {
         </div>
       </section>
 
-{/* 4. SECCIÓN CONTACTO DPO / LEGAL */}
+      {/* 4. SECCIÓN CONTACTO DPO / LEGAL */}
       <section className="py-16 bg-[#0a0a0a] border-t border-white/10">
         <div className="container mx-auto px-6 max-w-4xl text-center">
           <div className="inline-flex p-4 bg-white/5 rounded-full mb-6">
@@ -151,7 +151,7 @@ const AvisoLegalPage = () => {
         </div>
       </section>
 
-      {/* 5. FOOTER VISUAL: CALL TO ACTION (Opcional para volver al inicio) */}
+      {/* 5. FOOTER VISUAL: CALL TO ACTION */}
       <section className="relative py-20 border-t border-white/10 overflow-hidden bg-[#050505]">
          <div className="absolute inset-0 opacity-20 pointer-events-none">
             <div className="absolute right-0 top-0 w-[500px] h-[500px] bg-[#00C2FF] blur-[150px] rounded-full mix-blend-screen"/>
