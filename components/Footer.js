@@ -33,9 +33,9 @@ export default function Footer() {
             </p>
             {/* Redes Sociales */}
             <div className="flex gap-4 items-center mt-auto">
-              <SocialIcon Icon={Instagram} href="#" />
+              <SocialIcon Icon={Instagram} href="https://www.instagram.com/wonlyspain/" />
+              <SocialIcon Icon={Facebook} href="https://www.facebook.com/people/WONLY/61580719733874/" />
               <SocialIcon Icon={Linkedin} href="#" />
-              <SocialIcon Icon={Facebook} href="#" />
             </div>
           </div>
 

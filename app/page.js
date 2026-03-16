@@ -25,7 +25,11 @@ export default function Home() {
       {/* =========================================
          1. HERO SECTION: MARCA Y SEGURIDAD
          ========================================= */}
-      <section className="relative w-full h-screen flex items-center">
+      {/* CAMBIOS APLICADOS AQUÍ: 
+          - mt-[80px]: Empuja la sección por debajo del header. 
+          - h-[calc(100vh-80px)]: Mantiene el diseño a pantalla completa restando la altura del header. 
+          (Nota: Si tu header es más grande o más pequeño, ajusta el "80px" por tu medida real) */}
+      <section className="relative w-full h-[calc(100vh-80px)] mt-[80px] flex items-center">
         
         {/* FONDO: Imagen del Robot con animación de zoom lento */}
         <motion.div 
@@ -37,17 +41,19 @@ export default function Home() {
           <img 
             src="/images/hero-robot.jpg" 
             alt="WONLY Technology" 
-            className="w-full h-full object-cover object-top opacity-60"
+            className="w-full h-full object-cover"
+            style={{ objectPosition: "top center" }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent"></div>
         </motion.div>
         
         {/* CONTENIDO TEXTO */}
+        {/* He quitado el 'mt-20' que tenías aquí para que el texto quede bien centrado ahora que la sección bajó */}
         <motion.div 
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
-          className="relative z-10 container mx-auto px-6 mt-20"
+          className="relative z-10 container mx-auto px-6"
         >
           <motion.span variants={fadeInUp} className="text-[#00C2FF] font-bold tracking-[0.3em] uppercase text-sm md:text-base">
             Tecnología & Seguridad S.L.
@@ -78,6 +84,8 @@ export default function Home() {
           </motion.div>
         </motion.div>
       </section>
+
+      {/* ... (aquí continúa tu código con la SECCIÓN 2) ... */}
 
       {/* =========================================
          2. SECCIÓN PRIORITARIA: PUERTAS SMART
