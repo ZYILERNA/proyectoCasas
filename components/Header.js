@@ -1,5 +1,4 @@
 // components/Header.js
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -11,7 +10,9 @@ import {
   X,
   ShieldCheck,
   Home as HomeIcon,
+  Activity
 } from "lucide-react";
+import StockTicker from "./StockTicker";
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(true);
@@ -151,8 +152,14 @@ export default function Header() {
           </Link>
         </nav>
 
-        {/* ICONS */}
-        <div className="flex items-center gap-6 z-50">
+        {/* ICONS & DESKTOP TICKER */}
+        <div className="flex items-center gap-4 md:gap-6 z-50">
+          
+          {/* Ticker Desktop (Oculto en móvil) */}
+          <div className="hidden lg:block">
+            <StockTicker />
+          </div>
+
           <button className="group p-2">
             <Search className="w-5 h-5 text-gray-300 group-hover:text-[#00C2FF] group-hover:scale-110 transition-all duration-300" />
           </button>
@@ -182,6 +189,22 @@ export default function Header() {
         }`}
       >
         <div className="flex flex-col px-8 pb-20 gap-10">
+          
+          {/* TICKER EN MÓVIL (Nuevo bloque destacado) */}
+          <div className="bg-white/5 border border-white/10 p-5 rounded-2xl flex flex-col gap-3">
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] text-gray-400 font-bold uppercase tracking-[0.2em] flex items-center gap-2">
+                <Activity size={12} className="text-[#00C2FF]" /> Mercado Shanghai
+              </span>
+              <span className="text-[10px] text-[#00C2FF] font-mono font-bold animate-pulse">LIVE</span>
+            </div>
+            {/* Ocultamos el 'hidden md:flex' interno del StockTicker forzando display flex aquí */}
+            <div className="flex items-center">
+               <StockTicker />
+            </div>
+          </div>
+
+          {/* Links Principales */}
           <div className="flex flex-col gap-6">
             <Link
               href="/puertas"
@@ -226,6 +249,7 @@ export default function Header() {
 
           <hr className="border-white/10" />
 
+          {/* Submenú Interior */}
           <div>
             <h3 className="text-xs font-bold text-[#00C2FF] uppercase tracking-widest mb-6 flex items-center gap-2">
               <HomeIcon size={14} /> Interior & Mobiliario
@@ -260,6 +284,7 @@ export default function Header() {
             </ul>
           </div>
 
+          {/* Botón de Contacto */}
           <div className="mt-4 pb-10">
             <Link
               href="/contacto"
@@ -275,6 +300,7 @@ export default function Header() {
   );
 }
 
+// SUBCOMPONENTES
 function MenuItem({ text, href }) {
   return (
     <li>

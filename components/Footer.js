@@ -38,7 +38,7 @@ export default function Footer() {
               {/* Corregido: Ahora apunta a TikTok y no a Facebook */}
               <SocialIcon Icon={Music2} href="https://www.tiktok.com/@wonlyspain" /> 
               {/* Listo para añadir tu link de LinkedIn */}
-              <SocialIcon Icon={Linkedin} href="https://www.linkedin.com/company/tu-empresa" />
+              <SocialIcon Icon={Linkedin} href="https://www.linkedin.com/in/jack-jiang-a024483a9/" />
             </div>
           </div>
 

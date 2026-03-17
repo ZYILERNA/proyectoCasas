@@ -438,7 +438,7 @@ const EmpresaPage = () => {
         {/* FONDO ESPACIAL Y ROBOT */}
         <div className="absolute inset-0 z-0">
          <img 
-          src="/images/COMPANY/hero-robot.jpg" 
+          src="images/hero-robot.jpg" 
           alt="WONLY Robot Security" 
           className="w-full h-full object-cover opacity-100"
           style={{ objectPosition: "center 0%" }}
