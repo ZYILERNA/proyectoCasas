@@ -435,23 +435,21 @@ const EmpresaPage = () => {
         
         {/* FONDO ESPACIAL Y ROBOT */}
         <div className="absolute inset-0 z-0">
-          {/* Aquí pones la ruta de tu nueva imagen espacial con el robot y la puerta */}
          <img 
           src="/images/COMPANY/hero-robot.jpg" 
           alt="WONLY Robot Security" 
           className="w-full h-full object-cover opacity-100"
           style={{ objectPosition: "center 0%" }}
         />
-          {/* Degradado negro/azul oscuro a la izquierda para asegurar que el texto sea legible */}
+          {/* Degradado para asegurar que el texto sea legible */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/80 to-transparent"></div>
           
-          {/* Brillo inferior para simular la atmósfera del planeta */}
-          <div className="absolute bottom-0 w-full h-1/3 bg-gradient-to-t from-[#00C2FF]/10 to-transparent blur-xl"></div>
+          {/* NUEVO: Degradado inferior oscuro para fusionar con la siguiente sección */}
+          <div className="absolute bottom-0 w-full h-40 bg-gradient-to-t from-[#011425] to-transparent z-10"></div>
         </div>
 
         <div className="container mx-auto px-6 relative z-10 h-full flex items-center">
           
-          {/* CONTENIDO TEXTO Y LOGOS (Alineado a la izquierda como en tu imagen) */}
           <div className="w-full lg:w-3/5 max-w-2xl">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -478,7 +476,7 @@ const EmpresaPage = () => {
                 </div>
               </div>
 
-              {/* LOS 4 LOGOS DE CERTIFICACIÓN (Estilo bloques inferiores) */}
+              {/* LOS 4 LOGOS DE CERTIFICACIÓN */}
               <div className="flex flex-wrap items-center gap-4 md:gap-6 mt-12">
                 {[
                   { img: "cert-ga.png", title: "Norma GA", sub: "Seguridad Pública" },
@@ -487,11 +485,9 @@ const EmpresaPage = () => {
                   { img: "cert-reddot.png", title: "Red Dot", sub: "Best of the Best" }
                 ].map((cert, i) => (
                   <div key={i} className="flex flex-col items-center gap-2 group">
-                    {/* Contenedor del logo: Fondo blanco sólido tal como en tu imagen de referencia */}
                     <div className="h-16 md:h-20 aspect-square flex items-center justify-center bg-white p-2 md:p-3 rounded-lg shadow-[0_0_20px_rgba(255,255,255,0.1)] group-hover:scale-105 transition-transform duration-300">
                       <img src={`/images/COMPANY/LOGO/${cert.img}`} alt={cert.title} className="h-full w-auto object-contain"/>
                     </div>
-                    {/* Texto descriptivo bajo el logo (Opcional, se oculta en móviles muy pequeños para mantener limpieza) */}
                     <div className="text-center text-white hidden sm:block">
                       <p className="text-xs font-bold">{cert.title}</p>
                       <p className="text-[9px] text-gray-400">{cert.sub}</p>
@@ -503,26 +499,32 @@ const EmpresaPage = () => {
             </motion.div>
           </div>
 
-          {/* ESPACIO VACÍO A LA DERECHA */}
-          {/* Aquí es donde visualmente encajará el robot y la puerta de tu imagen de fondo */}
           <div className="hidden lg:block w-2/5"></div>
-
         </div>
       </section>
+
       {/* =========================================================
-          1. HERO SECTION: TOP 500 ASIAN BRANDS (Diseño Ciudad)
+          SEPARADOR VISUAL PARA DAR RESPIRO ENTRE SECCIONES
          ========================================================= */}
-      <section className="relative h-screen min-h-[600px] flex items-center justify-center lg:justify-end overflow-hidden">
+      <div className="w-full bg-[#011425] py-8 flex justify-center items-center relative z-20">
+         <div className="w-1/3 h-px bg-gradient-to-r from-transparent via-[#00C2FF]/30 to-transparent"></div>
+      </div>
+
+      {/* =========================================================
+          8. TOP 500 ASIAN BRANDS (Diseño Ciudad)
+         ========================================================= */}
+      <section className="relative h-screen min-h-[600px] flex items-center justify-center lg:justify-end overflow-hidden bg-[#011425]">
         
         {/* FONDO DE CIUDAD CON EL 500 DORADO */}
         <div className="absolute inset-0 z-0">
-          {/* Asegúrate de guardar la imagen de la ciudad con el 500 en esta ruta */}
+          {/* NUEVO: Degradado superior para suavizar la entrada de la imagen */}
+          <div className="absolute top-0 w-full h-32 bg-gradient-to-b from-[#011425] to-transparent z-10 pointer-events-none"></div>
+          
           <img 
             src="/images/COMPANY/wonly500final.jpg" 
             alt="Top 500 Asian Brands - WONLY" 
             className="w-full h-full object-cover object-center"
           />
-          {/* Degradado adaptativo: En móvil oscurece abajo, en PC oscurece la derecha para leer el texto */}
           <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-[#011425]/90 lg:from-transparent via-[#011425]/40 lg:via-transparent to-[#011425]/90 lg:to-[#011425]/80"></div>
         </div>
 
@@ -534,10 +536,9 @@ const EmpresaPage = () => {
             transition={{ duration: 1, ease: "easeOut" }}
             className="max-w-3xl"
           >
-            {/* Títulos Principales */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)] leading-tight tracking-wide">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)] leading-tight tracking-wide">
               Top 500 Marcas <br className="hidden md:block"/> de Asia
-            </h1>
+            </h2>
             <p className="text-xl md:text-3xl text-[#E5B869] font-bold mb-2 drop-shadow-md tracking-wider">
               Valor de Marca: ¥376.59 Billones
             </p>
@@ -545,37 +546,35 @@ const EmpresaPage = () => {
               Líder indiscutible de la industria por <span className="font-bold text-white">14 años consecutivos</span>
             </p>
 
-            {/* Panel de Estadísticas (Alineado y distribuido como en tu imagen) */}
+            {/* Panel de Estadísticas CORREGIDO */}
             <div className="flex flex-wrap justify-center lg:justify-end items-center gap-6 md:gap-10 mt-8">
               
               {/* Dato 1: 200M Usuarios */}
               <div className="flex flex-col items-center lg:items-end">
                 <div className="flex items-baseline gap-1">
-                  <span className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">2</span>
-                  <span className="text-xl text-white font-bold drop-shadow-lg">亿+</span>
+                  <span className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">200</span>
+                  <span className="text-xl text-white font-bold drop-shadow-lg">M+</span>
                 </div>
                 <span className="text-[10px] md:text-xs text-gray-300 uppercase tracking-widest mt-1">Usuarios Globales</span>
               </div>
 
-              {/* Separador */}
               <div className="w-px h-10 bg-white/30 hidden md:block"></div>
 
               {/* Dato 2: 50M Familias */}
               <div className="flex flex-col items-center lg:items-end">
                 <div className="flex items-baseline gap-1">
-                  <span className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">5000</span>
-                  <span className="text-xl text-white font-bold drop-shadow-lg">W+</span>
+                  <span className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">50</span>
+                  <span className="text-xl text-white font-bold drop-shadow-lg">M+</span>
                 </div>
                 <span className="text-[10px] md:text-xs text-gray-300 uppercase tracking-widest mt-1">Hogares Equipados</span>
               </div>
 
-              {/* Separador */}
               <div className="w-px h-10 bg-white/30 hidden md:block"></div>
 
               {/* Dato 3: 10k Redes */}
               <div className="flex flex-col items-center lg:items-end">
                 <div className="flex items-baseline gap-1">
-                  <span className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">10000</span>
+                  <span className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">10,000</span>
                   <span className="text-xl text-white font-bold drop-shadow-lg">+</span>
                 </div>
                 <span className="text-[10px] md:text-xs text-gray-300 uppercase tracking-widest mt-1">Puntos de Venta</span>
@@ -585,8 +584,105 @@ const EmpresaPage = () => {
           </motion.div>
         </div>
       </section>
+      {/* =========================================================
+          9. PROVEEDOR TOP 500 REAL ESTATE (GRID LOGOS)
+         ========================================================= */}
+      <section className="relative py-24 lg:py-32 min-h-[80vh] flex items-center overflow-hidden bg-[#011425]">
+        {/* FONDO EDIFICIOS */}
+        <div className="absolute inset-0 z-0">
+          {/* Degradado superior para fusionar con la sección anterior */}
+          <div className="absolute top-0 w-full h-32 bg-gradient-to-b from-[#011425] to-transparent z-10 pointer-events-none"></div>
+          
+          <img 
+            src="/images/COMPANY/skyland.jpg" // CAMBIA ESTO POR LA RUTA DE TU IMAGEN DE LOS EDIFICIOS
+            alt="Real Estate Partners WONLY" 
+            className="w-full h-full object-cover object-center"
+          />
+          
+          {/* Degradado oscuro a la izquierda para leer el texto, y tenue a la derecha */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#011425]/95 via-[#011425]/80 to-[#011425]/20 z-0"></div>
+          
+          {/* Degradado inferior para fusionar con el Footer (que es bg-[#111]) */}
+          <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-[#111] to-transparent z-10 pointer-events-none"></div>
+        </div>
 
-      {/* FOOTER CTA */}
+        <div className="container mx-auto px-6 relative z-10 h-full">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* ==========================================
+                TEXTO IZQUIERDA (Adaptación del original)
+                ========================================== */}
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="lg:col-span-5"
+            >
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                Reconocido por <br/>
+                <span className="text-[#00C2FF]">12 años consecutivos</span> <br/>
+                como Proveedor Preferido
+              </h2>
+              
+              <p className="text-xl md:text-2xl text-white font-bold mb-4 drop-shadow-md">
+                Top 500 del Sector Inmobiliario en China
+              </p>
+              
+              <div className="w-12 h-1 bg-[#00C2FF] mb-6"></div>
+              
+              <p className="text-gray-300 text-lg mb-4 leading-relaxed">
+                De las 30 principales empresas inmobiliarias, <span className="font-bold text-white">WONLY colabora activamente con 29</span>.
+              </p>
+              
+              <p className="text-gray-400 text-sm leading-relaxed max-w-md">
+                Como primera empresa cotizada a nivel nacional en la industria, hemos establecido asociaciones estratégicas a largo plazo con gigantes del desarrollo inmobiliario (Greentown, Sunac, Vanke, etc.), consolidándonos como la opción número uno del mercado.
+              </p>
+            </motion.div>
+
+            {/* ==========================================
+                GRID LOGOS DERECHA (Huecos exactos)
+                ========================================== */}
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="lg:col-span-7"
+            >
+              {/* Contenedor tipo cristal para agrupar los logos */}
+              <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-2xl p-4 md:p-8 shadow-2xl">
+                
+                {/* Grid exacto de 4 columnas */}
+                <div className="grid grid-cols-3 sm:grid-cols-4 gap-2 md:gap-3">
+                  
+                  {/* Generamos 28 huecos (7 filas x 4 columnas) tal como en tu imagen */}
+                  {Array.from({ length: 32 }).map((_, i) => (
+                    <div 
+                      key={i} 
+                      className="bg-white rounded hover:scale-105 transition-transform duration-300 flex items-center justify-center aspect-[2.5/1] sm:aspect-[2/1] p-2 relative group overflow-hidden shadow-sm"
+                    >
+                      {/*
+                      AQUÍ INSERTARÁS TUS LOGOS REALES. Ejemplo:
+                          <img src={`/images/COMPANY/LOGOS/inmobiliaria-${i+1}.png`} className="max-w-full max-h-full object-contain" alt={`Partner ${i+1}`} /> 
+                      */}
+                      
+                      {/* Texto placeholder temporal - Puedes borrarlo cuando pongas las imágenes */}
+                      <img src={`/images/COMPANY/LOGO/partner${i+1}.png`} className="max-w-full max-h-full object-contain" alt={`Partner ${i+1}`} /> 
+                    </div>
+                  ))}  
+                  
+                </div>
+              </div>
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================
+          FOOTER CTA
+         ========================================================= */}
       <section className="relative py-24 border-t border-white/10 overflow-hidden bg-[#111]">
          <div className="absolute inset-0 opacity-20">
             <div className="absolute right-0 top-0 w-[500px] h-[500px] bg-[#00C2FF] blur-[150px] rounded-full mix-blend-screen"/>
