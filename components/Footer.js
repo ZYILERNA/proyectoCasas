@@ -1,6 +1,6 @@
 // components/Footer.js
 import Link from 'next/link';
-import { Mail, Phone, MapPin, ChevronRight, Instagram, Linkedin, Facebook, Sparkles } from 'lucide-react'; 
+import { Mail, Phone, MapPin, ChevronRight, Instagram, Linkedin, Facebook, Sparkles, Music2 } from 'lucide-react'; 
 
 export default function Footer() {
   return (
@@ -35,7 +35,10 @@ export default function Footer() {
             <div className="flex gap-4 items-center mt-auto">
               <SocialIcon Icon={Instagram} href="https://www.instagram.com/wonlyspain/" />
               <SocialIcon Icon={Facebook} href="https://www.facebook.com/people/WONLY/61580719733874/" />
-              <SocialIcon Icon={Linkedin} href="#" />
+              {/* Corregido: Ahora apunta a TikTok y no a Facebook */}
+              <SocialIcon Icon={Music2} href="https://www.tiktok.com/@wonlyspain" /> 
+              {/* Listo para añadir tu link de LinkedIn */}
+              <SocialIcon Icon={Linkedin} href="https://www.linkedin.com/company/tu-empresa" />
             </div>
           </div>
 

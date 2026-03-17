@@ -92,7 +92,9 @@ const EmpresaPage = () => {
             </span>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
               Liderazgo a <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00C2FF] to-white">Escala Global</span>
+              <span className="block mt-6 text-transparent bg-clip-text bg-gradient-to-r from-[#00C2FF] to-white">
+                Escala Global
+              </span>
             </h1>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
               Integrando I+D, diseño, fabricación y servicios. Proveedor integral de hogares inteligentes para más de 200 millones de usuarios.
