@@ -119,16 +119,16 @@ const productos_pvc = MODELOS_PVC.map(n => ({
 }));
 
 const productos_corredizas = MODELOS_CORREDIZAS.map(n => {
-    let colors = null;
-    if (["WL-A23001", "WL-A23002"].includes(n)) colors = COLORS_GLORY;
-    else if (["WL-A23019", "WL-A23020"].includes(n)) colors = COLORS_FASHION;
-    return {
-        name: n, category: "PUERTAS CORREDIZAS Y ABATIBLES",
-        description: `Sistema corredero modelo ${n}.`,
-        specs: SPECS_CORREDIZAS, features: FEATURES_CORREDIZAS, unlock: UNLOCK_CORREDIZAS,
-        colors: colors,
-        img: `/images/CORREDIZA/door-${n}.jpg`
-    };
+  let colors = null;
+  if (["WL-A23001", "WL-A23002"].includes(n)) colors = COLORS_GLORY;
+  else if (["WL-A23019", "WL-A23020"].includes(n)) colors = COLORS_FASHION;
+  return {
+    name: n, category: "PUERTAS CORREDIZAS Y ABATIBLES",
+    description: `Sistema corredero modelo ${n}.`,
+    specs: SPECS_CORREDIZAS, features: FEATURES_CORREDIZAS, unlock: UNLOCK_CORREDIZAS,
+    colors: colors,
+    img: `/images/CORREDIZA/door-${n}.jpg`
+  };
 });
 
 // ✅ CORRECCIÓN 1: Convertir nombres de Cortafuegos a minúsculas y sin espacios
@@ -142,13 +142,13 @@ const productos_cortafuegos = MODELOS_CORTAFUEGOS.map(n => ({
 
 // ✅ CORRECCIÓN 2: Convertir nombres Médicos a minúsculas y sin espacios
 const productos_medicas = MODELOS_MEDICAS.map(n => ({
-    name: n, 
-    category: "PUERTA MÉDICA",
-    description: "Puerta técnica especializada para uso hospitalario y sanitario.",
-    specs: SPECS_MEDICAS, 
-    features: FEATURES_MEDICAS,
-    // Esto convierte "PUERTA DE SALA1" -> "door-puerta-de-sala1.jpg"
-    img: `/images/MEDICA/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+  name: n,
+  category: "PUERTA MÉDICA",
+  description: "Puerta técnica especializada para uso hospitalario y sanitario.",
+  specs: SPECS_MEDICAS,
+  features: FEATURES_MEDICAS,
+  // Esto convierte "PUERTA DE SALA1" -> "door-puerta-de-sala1.jpg"
+  img: `/images/MEDICA/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
 }));
 
 
@@ -167,7 +167,7 @@ async function subirDatos() {
   if (deleteError) console.error("Error borrando:", deleteError);
 
   console.log(`📦 Subiendo ${DATA_PRODUCTOS.length} productos...`);
-  
+
   const { data, error } = await supabase.from('products').insert(DATA_PRODUCTOS);
 
   if (error) {
