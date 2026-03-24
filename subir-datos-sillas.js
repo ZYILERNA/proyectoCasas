@@ -18,16 +18,16 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 
 const sillasData = [
 { 
-    id: "hyyd85-tea-chair", 
+    id: "hyyd85-lounge-chair", 
     name: "Silla HYYD85101", 
-    category: "Silla / Tea Chair", 
+    category: "Silla / Lounge chair", 
     code: "HYYD85101/HX8026B", 
     priceBase: 9100, 
-    image: "/images/SILLAS/TEA/SILLA1/render.jpg", 
+    image: "/images/SILLAS/LOUNGE/SILLA1/render.jpg", 
     schematics: [
-        "/images/SILLAS/TEA/SILLA1/img1.jpg", 
-        "/images/SILLAS/TEA/SILLA1/img2.jpg",
-        "/images/SILLAS/TEA/SILLA1/img3.jpg"
+        "/images/SILLAS/LOUNGE/SILLA1/img1.jpg", 
+        "/images/SILLAS/LOUNGE/SILLA1/img2.jpg",
+        "/images/SILLAS/LOUNGE/SILLA1/img3.jpg"
     ],
     specs: {
         dimensions: "640 * 600 * 770 mm",
@@ -581,6 +581,8 @@ const sillasData = [
     priceBase: 20560, 
     image: "/images/SILLAS/LOUNGE/SILLA17/render.jpg", 
     schematics: [
+        "/images/SILLAS/LOUNGE/SILLA17/img4.jpg",
+        "/images/SILLAS/LOUNGE/SILLA17/img5.jpg",
         "/images/SILLAS/LOUNGE/SILLA17/img1.jpg", 
         "/images/SILLAS/LOUNGE/SILLA17/img2.jpg",
         "/images/SILLAS/LOUNGE/SILLA17/img3.jpg"
@@ -1149,7 +1151,7 @@ const sillasData = [
  { 
     id: "hyyd85-chair-305", 
     name: "Silla HYYD85305", 
-    category: "Silla / Chair", 
+    category: "Silla / Lounge chair", 
     code: "HYYD85305/MYD1822", 
     priceBase: 11760, 
     image: "/images/SILLAS/DINING/SILLA34/render.jpg", 
@@ -1181,7 +1183,7 @@ const sillasData = [
  { 
     id: "hyyd85-chin-chair", 
     name: "Silla HYYD85306 (CHIN chair)", 
-    category: "Silla / Chair", 
+    category: "Silla / Lounge chair", 
     code: "HYYD85306/CHIN", 
     priceBase: 10080, 
     image: "/images/SILLAS/DINING/SILLA35/render.jpg", 
@@ -1548,7 +1550,7 @@ const sillasData = [
  { 
     id: "hyyd85-makeup-stool-515a", 
     name: "Makeup stool HYYD85515-A", 
-    category: "Silla / Makeup stool", 
+    category: "Silla / Stool", 
     code: "HYYD85515-A/HD1825A", 
     priceBase: 2660, 
     image: "/images/SILLAS/LOUNGE/SILLA46/render.jpg", 
@@ -1751,8 +1753,8 @@ const sillasData = [
  },
  { 
     id: "hyyd85-tea-stool-525", 
-    name: "Tea Stool HYYD85525", 
-    category: "Silla / Tea Stool", 
+    name: "Silla Stool HYYD85525", 
+    category: "Silla / Stool", 
     code: "HYYD85525/MYD1116", 
     priceBase: 4660, 
     image: "/images/SILLAS/LOUNGE/SILLA52/render.jpg", 
@@ -1850,7 +1852,162 @@ const sillasData = [
         { name: "Stool", size: "400*400*380", vol: "0.11", prices: { standard: 10460 } }
     ]
  },
-  // Puedes agregar más sillas aquí abajo siguiendo esta misma estructura
+{ 
+    id: "hyyd85-egg-119", 
+    name: "Silla HYYD85119 (Egg Chair)", 
+    category: "Silla / Lounge chair", 
+    code: "HYYD85119", 
+    priceBase: null, 
+    image: "/images/SILLAS/LOUNGE/SILLA55/render.jpg", 
+    specs: {
+        dimensions: "1040 * 940 * 800 mm",
+        volume: null,
+        assembly: null
+    },
+    materials: [
+        { part: "Main body", material: "Fabric", detail: "Organic curvature" }
+    ],
+    colors: {
+        interior: [
+            { name: "Terracotta Fabric", hex: "#943A36" } 
+        ]
+    },
+    configurations: [
+        { code: "STD", size: "1040mm", vol: null, price: null }
+    ],
+    priceList: [
+        { name: "Egg Chair", size: "1040*940*800", vol: null, prices: { fa: null, fb: null, fc: null, fd: null, fe: null, la: null, lb: null, lc: null } }
+    ]
+ },
+ { 
+    id: "hyyd85-loong-118", 
+    name: "Silla HYYD85118 (Loong Chair)", 
+    category: "Silla / Lounge chair", 
+    code: "HYYD85118", 
+    priceBase: null, 
+    image: "/images/SILLAS/LOUNGE/SILLA56/img1.jpg", 
+    schematics: [
+        "/images/SILLAS/LOUNGE/SILLA56/img2.jpg",
+        "/images/SILLAS/LOUNGE/SILLA56/img3.jpg",
+        "/images/SILLAS/LOUNGE/SILLA56/img4.jpg",
+        "/images/SILLAS/LOUNGE/SILLA56/img5.jpg"
+    ],
+    specs: {
+        dimensions: "1110 * 960 * 800 mm",
+        volume: null,
+        assembly: "360-degree rotating mechanism"
+    },
+    materials: [
+        { part: "Main body", material: "Genuine leather", detail: "Inspired by the Chinese dragon" }
+    ],
+    colors: {
+        interior: [
+            { name: "Obsidian Black", hex: "#1A1A1B" },
+            { name: "Imperial Gold", hex: "#B79545" },
+            { name: "Royal Purple", hex: "#634981" },
+            { name: "Deep Crimson", hex: "#82162A" },
+            { name: "Midnight Blue", hex: "#1D334A" }
+        ]
+    },
+    configurations: [
+        { code: "ROT-STD", size: "1110mm", vol: null, price: null }
+    ],
+    priceList: [
+        { name: "Loong Chair", size: "1110*960*800", vol: null, prices: { fa: null, fb: null, fc: null, fd: null, fe: null, la: null, lb: null, lc: null } }
+    ]
+ },
+ { 
+    id: "hyyd85-ant-137", 
+    name: "Silla HYYD85137 (Ant Chair)", 
+    category: "Silla / Lounge chair", 
+    code: "HYYD85137", 
+    priceBase: null, 
+    image: "/images/SILLAS/LOUNGE/SILLA57/render.jpg", 
+    schematics: [
+        "/images/SILLAS/LOUNGE/SILLA57/img1.jpg", 
+    ],
+    specs: {
+        dimensions: "630 * 850 * 850 mm",
+        volume: null,
+        assembly: "Stainless steel reinforced frame"
+    },
+    materials: [
+        { part: "Upholstery", material: "Breathable fabric", detail: "Durable and elegant" },
+        { part: "Frame", material: "Stainless Steel", detail: "Reinforced structure" }
+    ],
+    colors: {
+        interior: [
+            { name: "Deep Violet Fabric", hex: "#4B447A" } 
+        ]
+    },
+    configurations: [
+        { code: "STD", size: "630mm", vol: null, price: null }
+    ],
+    priceList: [
+        { name: "Ant Chair", size: "630*850*850", vol: null, prices: { fa: null, fb: null, fc: null, fd: null, fe: null, la: null, lb: null, lc: null } }
+    ]
+ },
+{ 
+    id: "hyyd85-flower-133", 
+    name: "Silla HYYD85133 (Flower Chair)", 
+    category: "Silla / Lounge chair", 
+    code: "HYYD85133", 
+    priceBase: null, 
+    image: "/images/SILLAS/LOUNGE/SILLA58/render.jpg", 
+    schematics: [
+        "/images/SILLAS/LOUNGE/SILLA58/img1.jpg",
+        "/images/SILLAS/LOUNGE/SILLA58/img2.jpg"
+    ],
+    specs: {
+        dimensions: "850 * 800 * 770 mm",
+        volume: null,
+        assembly: "Single pivot point / 150kg load capacity"
+    },
+    materials: [
+        { part: "Upholstery", material: "Breathable fabric + Microfiber", detail: "Petal-inspired design" },
+        { part: "Base", material: "Metal", detail: "Gold finish pivot base" }
+    ],
+    colors: {
+        interior: [
+            { name: "Ruby Red", hex: "#8B0000" },
+            { name: "Midnight Navy", hex: "#1B2A3E" }
+        ]
+    },
+    configurations: [
+        { code: "STD", size: "850mm", vol: null, price: null }
+    ],
+    priceList: [
+        { name: "Flower Chair", size: "850*800*770", vol: null, prices: { fa: null, fb: null, fc: null, fd: null, fe: null, la: null, lb: null, lc: null } }
+    ]
+ },
+ { 
+    id: "hyyd85-heart-518", 
+    name: "Silla HYYD85518 (Heart-Shaped Stool)", 
+    category: "Silla / Stool", 
+    code: "HYYD85518", 
+    priceBase: null, 
+    image: "/images/SILLAS/LOUNGE/SILLA59/render.jpg", 
+    specs: {
+        dimensions: "480 * 445 * 420 mm",
+        volume: null,
+        assembly: "Assembled / Brushed gunmetal steel base"
+    },
+    materials: [
+        { part: "Upholstery", material: "Plush beige fabric", detail: "Cloud-soft texture" },
+        { part: "Base", material: "Steel", detail: "Brushed gunmetal (420mm height)" }
+    ],
+    colors: {
+        interior: [
+            { name: "Plush Beige", hex: "#F5F5DC" } 
+        ]
+    },
+    configurations: [
+        { code: "STD", size: "480mm", vol: null, price: null }
+    ],
+    priceList: [
+        { name: "Heart Stool", size: "480*445*420", vol: null, prices: { fa: null, fb: null, fc: null, fd: null, fe: null, la: null, lb: null, lc: null } }
+    ]
+ },
 ];
 
 // --------------------------------------------------------------------------------

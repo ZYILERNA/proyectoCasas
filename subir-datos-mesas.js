@@ -1703,8 +1703,8 @@ const tablesData = [
     // MESA50
     {
         id: "mesa-centro-hyjl82106-a1",
-        name: "Mesa de Centro Model A",
-        category: "Mesa de Centro",
+        name: "Mesa de Centro CHIN",
+        category: "Sets Completos",
         code: "HYJL82106-A1",
         priceBase: null,
         image: "/images/MESAS/CENTRO/MESA50/render.jpg",
@@ -1729,12 +1729,12 @@ const tablesData = [
     },
     // MESA 51
     {
-        id: "mesa-consola-hyjl82901",
-        name: "Mesa Consola CHIN",
-        category: "Mesa Consola",
+        id: "mesa-comedor-hyjl82901",
+        name: "Mesa Comedor CHIN",
+        category: "Mesa de Comedor",
         code: "HYJL82901",
         priceBase: null,
-        image: "/images/MESAS/CONSOLA/MESA51/render.jpg",
+        image: "/images/MESAS/COMEDOR/MESA51/render.jpg",
         specs: {
             dimensions: "1000 * 430 * 450 mm",
             volume: null,
@@ -1755,38 +1755,12 @@ const tablesData = [
     },
     // MESA 52
     {
-        id: "mesa-consola-hyjl82901",
-        name: "Mesa Consola CHIN",
-        category: "Mesa Consola",
-        code: "HYJL82901",
-        priceBase: null,
-        image: "/images/MESAS/CONSOLA/MESA52/render.jpg",
-        specs: {
-            dimensions: "1000 * 430 * 450 mm",
-            volume: null,
-            assembly: null
-        },
-        materials: [
-            { part: "Sobre (Tabletop)", material: "Mármol Natural", detail: "Estética de 'borde oculto', veteado orgánico inspirado en paisajes de tinta china" },
-            { part: "Estructura (Frame)", material: "Acero Inoxidable", detail: "Marco de líneas limpias, contraste de diseño contemporáneo" }
-        ],
-        colors: null,
-        configurations: [
-            { code: "HYJL82901", desc: "1000*430*450 mm", price: null }
-        ],
-        priceList: [
-            { name: "Mesa Consola CHIN (Diseñador: He Dongxiao)", size: "1000*430*450", price: null }
-        ],
-        customInstructions: null
-    },
-    // MESA 53
-    {
         id: "consola-te-hygl81702-b",
         name: "Consola de Té CHIN",
-        category: "Consola de Té", // o "Mueble de Té" / "Mesa Auxiliar"
+        category: "Mesa Auxiliar",
         code: "HYGL81702-B",
         priceBase: null,
-        image: "/images/MESAS/TE/MESA53/render.jpg",
+        image: "/images/MESAS/AUXILIAR/MESA52/render.jpg",
         specs: {
             dimensions: "630 * 480 * 680 mm",
             volume: null,
@@ -1806,14 +1780,14 @@ const tablesData = [
         ],
         customInstructions: null
     },
-    // MESA 54
+    // MESA 53
     {
         id: "banco-te-hyyd85506",
         name: "Banco Largo de Té CHIN",
-        category: "Banco de Té", // También podría encajar en "Bancos" o "Asientos"
+        category: "Mesa de Centro",
         code: "HYYD85506",
         priceBase: null,
-        image: "/images/MESAS/TE/MESA54/render.jpg",
+        image: "/images/MESAS/CENTRO/MESA53/render.jpg",
         specs: {
             dimensions: "1600 * 450 * 425 mm",
             volume: null,
@@ -1833,14 +1807,14 @@ const tablesData = [
         ],
         customInstructions: null
     },
-    // MESA 55
+    // MESA 54
     {
         id: "escritorio-hytl86303",
         name: "Escritorio Ejecutivo CHIN",
-        category: "Escritorio",
+        category: "Mesa de Centro",
         code: "HYTL86303",
         priceBase: null,
-        image: "/images/MESAS/ESCRITORIO/MESA55/render.jpg",
+        image: "/images/MESAS/CENTRO/MESA54/render.jpg",
         specs: {
             dimensions: "1800 * 730 * 760 mm",
             volume: null,
@@ -1861,14 +1835,14 @@ const tablesData = [
         ],
         customInstructions: null
     },
-    // MESA 56
+    // MESA 55
     {
         id: "escritorio-hytl86301",
         name: "Escritorio CHIN",
-        category: "Escritorio",
+        category: "Mesa de Centro",
         code: "HYTL86301",
         priceBase: null,
-        image: "/images/MESAS/ESCRITORIO/MESA56/render.jpg",
+        image: "/images/MESAS/CENTRO/MESA55/render.jpg",
         specs: {
             dimensions: "1500-1800 * 730-780 * 760 mm",
             volume: null,
