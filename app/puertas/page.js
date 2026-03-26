@@ -3,7 +3,7 @@
 import { useState, useMemo, useEffect, Suspense, useRef } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion'; 
+import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronRight, ScanFace, ShieldCheck, VolumeX, Sparkles, MoveHorizontal, Palette, Settings, Flame, Filter, Loader2 } from 'lucide-react';
 import { createClient } from '@supabase/supabase-js';
 
@@ -25,6 +25,20 @@ const CATEGORIAS = [
   "PUERTA COMERCIAL CORTAFUEGO",
   "PUERTA MÉDICA"
 ];
+
+// NUEVO: Mapa de imágenes para el Hero según la categoría
+const IMAGENES_HERO = {
+  "TODAS": "/images/hero-robot2.jpg", // Imagen por defecto
+  "PUERTA DE SEGURIDAD IA": "/images/family.jpg",
+  "PUERTA DE ACERO REFORZADO": "/images/specs.jpg", // Cambia estas rutas por tus imágenes reales
+  "PUERTA DE SEGURIDAD ACORAZADA": "/images/acorazada.jpg",
+  "PUERTA DE ALUMINIO FUNDIDO": "/images/fundido.jpg",
+  "PUERTA ACÚSTICA DE MADERA": "/images/Asset/Vidrios/vidrio-04.jpg",
+  "PUERTA DE PVC": "/images/Asset/Vidrios/vidrio-05.jpg",
+  "PUERTAS CORREDIZAS Y ABATIBLES": "/images/Asset/Vidrios/vidrio-06.jpg",
+  "PUERTA COMERCIAL CORTAFUEGO": "/images/Asset/Vidrios/vidrio-07.jpg",
+  "PUERTA MÉDICA": "/images/Asset/Vidrios/vidrio-08.jpg"
+};
 
 const ACCESORIOS_CORREDIZAS = [
   { name: "Manilla VBH con base", tag: "Ventana abatible", img: "/images/Asset/Accesorios/manilla_vbh_base.jpg" },
@@ -77,13 +91,13 @@ const FilterButton = ({ label, active, onClick }) => (
   <button
     onClick={onClick}
     className={`w-full text-left px-4 py-3 text-[10px] font-bold uppercase border-b transition-all duration-300 flex justify-between items-center tracking-widest relative overflow-hidden group
-      ${active 
-        ? 'text-white border-black pl-6' 
+      ${active
+        ? 'text-white border-black pl-6'
         : 'bg-white text-gray-500 border-gray-100 hover:bg-gray-50 hover:text-black hover:pl-6'
       }`}
   >
     {active && (
-      <motion.div 
+      <motion.div
         layoutId="activeFilter"
         className="absolute inset-0 bg-black z-0"
         initial={false}
@@ -100,21 +114,21 @@ const FilterButton = ({ label, active, onClick }) => (
 // --- COMPONENTE DE BÚSQUEDA REUTILIZABLE ---
 const SearchInput = ({ value, onChange }) => (
   <div className="relative group w-full">
-    <input 
-      type="text" 
-      placeholder="BUSCAR MODELO..." 
+    <input
+      type="text"
+      placeholder="BUSCAR MODELO..."
       value={value}
       onChange={onChange}
       className="w-full bg-[#F9F9F9] border-none rounded-sm py-3 pl-10 pr-8 text-xs font-bold uppercase tracking-wider focus:ring-1 focus:ring-black transition-all outline-none placeholder:text-gray-400"
     />
     <Sparkles className="absolute left-3 top-3 text-gray-400 group-focus-within:text-black transition-colors" size={14} />
     {value && (
-        <button 
-            onClick={() => onChange({ target: { value: "" } })} 
-            className="absolute right-2 top-1/2 -translate-y-1/2 p-1 hover:bg-gray-200 rounded-full text-gray-400 transition-colors"
-        >
-            <X size={14} />
-        </button>
+      <button
+        onClick={() => onChange({ target: { value: "" } })}
+        className="absolute right-2 top-1/2 -translate-y-1/2 p-1 hover:bg-gray-200 rounded-full text-gray-400 transition-colors"
+      >
+        <X size={14} />
+      </button>
     )}
   </div>
 );
@@ -131,28 +145,28 @@ const ProductModal = ({ product, onClose }) => {
   let accentColor = "text-gray-900";
   let borderColor = "border-gray-900";
   let Icon = ShieldCheck;
-  
-  if (product.category.includes("IA")) { accentColor = "text-[#00C2FF]"; borderColor="border-[#00C2FF]"; Icon = ScanFace; }
-  else if (product.category.includes("ACORAZADA")) { accentColor = "text-[#D4AF37]"; borderColor="border-[#D4AF37]"; }
-  else if (product.category.includes("ALUMINIO")) { accentColor = "text-[#718096]"; borderColor="border-[#718096]"; }
-  else if (product.category.includes("MADERA")) { accentColor = "text-[#8D6E63]"; borderColor="border-[#8D6E63]"; Icon = VolumeX; }
-  else if (product.category.includes("PVC")) { accentColor = "text-teal-600"; borderColor="border-teal-600"; Icon = Sparkles; }
-  else if (product.category.includes("CORREDIZAS")) { accentColor = "text-indigo-600"; borderColor="border-indigo-600"; Icon = MoveHorizontal; }
-  else if (product.category.includes("CORTAFUEGO")) { accentColor = "text-orange-600"; borderColor="border-orange-600"; Icon = Flame; }
+
+  if (product.category.includes("IA")) { accentColor = "text-[#00C2FF]"; borderColor = "border-[#00C2FF]"; Icon = ScanFace; }
+  else if (product.category.includes("ACORAZADA")) { accentColor = "text-[#D4AF37]"; borderColor = "border-[#D4AF37]"; }
+  else if (product.category.includes("ALUMINIO")) { accentColor = "text-[#718096]"; borderColor = "border-[#718096]"; }
+  else if (product.category.includes("MADERA")) { accentColor = "text-[#8D6E63]"; borderColor = "border-[#8D6E63]"; Icon = VolumeX; }
+  else if (product.category.includes("PVC")) { accentColor = "text-teal-600"; borderColor = "border-teal-600"; Icon = Sparkles; }
+  else if (product.category.includes("CORREDIZAS")) { accentColor = "text-indigo-600"; borderColor = "border-indigo-600"; Icon = MoveHorizontal; }
+  else if (product.category.includes("CORTAFUEGO")) { accentColor = "text-orange-600"; borderColor = "border-orange-600"; Icon = Flame; }
 
   return (
     <div className="fixed inset-0 z-[100] flex justify-end">
       {/* Backdrop */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="absolute inset-0 bg-black/60" 
+        className="absolute inset-0 bg-black/60"
         onClick={onClose}
       />
 
       {/* Panel deslizante */}
-      <motion.div 
+      <motion.div
         initial={{ x: "100%" }}
         animate={{ x: 0 }}
         exit={{ x: "100%" }}
@@ -164,121 +178,121 @@ const ProductModal = ({ product, onClose }) => {
 
         {/* Imagen en Modal */}
         <div className="w-full md:w-1/2 bg-[#F8F8F8] relative min-h-[300px] md:h-full flex items-center justify-center p-10">
-           <motion.div 
-             initial={{ scale: 0.95, opacity: 0 }}
-             animate={{ scale: 1, opacity: 1 }}
-             transition={{ delay: 0.1, duration: 0.3 }}
-             className="relative w-full h-full max-h-[500px]"
-           >
-             <Image 
-               src={product.img} 
-               alt={product.name} 
-               fill 
-               priority // Carga prioritaria
-               className="object-contain mix-blend-multiply" 
-             />
-           </motion.div>
+          <motion.div
+            initial={{ scale: 0.95, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.1, duration: 0.3 }}
+            className="relative w-full h-full max-h-[500px]"
+          >
+            <Image
+              src={product.img}
+              alt={product.name}
+              fill
+              priority // Carga prioritaria
+              className="object-contain mix-blend-multiply"
+            />
+          </motion.div>
         </div>
 
         {/* Contenido en Modal */}
         <div className="w-full md:w-1/2 p-8 md:p-12 overflow-y-auto bg-white scrollbar-hide">
-            <span className={`text-[10px] font-bold uppercase tracking-widest mb-2 block ${accentColor}`}>{product.category}</span>
-            <h2 className="text-3xl font-bold mb-4 text-gray-900 tracking-tight">{product.name}</h2>
-            <p className="text-sm text-gray-600 mb-8 leading-relaxed">{product.description}</p>
+          <span className={`text-[10px] font-bold uppercase tracking-widest mb-2 block ${accentColor}`}>{product.category}</span>
+          <h2 className="text-3xl font-bold mb-4 text-gray-900 tracking-tight">{product.name}</h2>
+          <p className="text-sm text-gray-600 mb-8 leading-relaxed">{product.description}</p>
 
-            <div className="space-y-8">
-              {/* Características Animadas */}
-              <div>
-                <h3 className="text-xs font-bold uppercase text-gray-900 mb-3 flex items-center gap-2">
-                  <Icon size={14} /> Características
-                </h3>
-                <ul className="space-y-2">
-                  {product.features?.map((feat, i) => (
-                    <motion.li 
-                      initial={{ opacity: 0, x: 10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.05 * i }}
-                      key={i} 
-                      className="flex items-start gap-2 text-xs text-gray-600"
-                    >
-                      <span className={`${accentColor} mt-0.5`}>•</span> {feat}
-                    </motion.li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Colores */}
-              {product.colors && (
-                <div className="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                    <h3 className={`text-gray-900 text-xs font-bold uppercase mb-4 border-l-4 ${borderColor} pl-3 flex items-center gap-2`}>
-                        <Palette size={14}/> Carta de Colores
-                    </h3>
-                    <div className="flex flex-wrap gap-4 justify-start">
-                        {product.colors.map((color, i) => (
-                            <div key={i} className="text-center group flex flex-col items-center gap-2 cursor-pointer">
-                                <div 
-                                    className="w-10 h-10 rounded-full shadow-sm border-2 border-white group-hover:border-gray-300 transition-all transform group-hover:scale-110" 
-                                    style={{backgroundColor: color.hex}}
-                                    title={color.name}
-                                ></div>
-                                <span className="text-[9px] text-gray-500 uppercase font-medium max-w-[60px] leading-tight">{color.name}</span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-              )}
-
-              {/* Specs */}
-              <div className="bg-gray-50 p-5 rounded border border-gray-100">
-                 <h3 className="text-xs font-bold uppercase text-gray-400 mb-3">Especificaciones</h3>
-                 <div className="grid grid-cols-1 gap-y-2">
-                   {product.specs?.map((spec, i) => (
-                     <div key={i} className="flex justify-between border-b border-gray-200 pb-1 last:border-0">
-                       <span className="text-[10px] font-bold text-gray-500 uppercase">{spec.label}</span>
-                       <span className="text-[11px] font-semibold text-gray-900 text-right">{spec.value}</span>
-                     </div>
-                   ))}
-                 </div>
-              </div>
-
-              {/* Accesorios (Solo Corredizas) */}
-              {product.category === "PUERTAS CORREDIZAS Y ABATIBLES" && (
-                <div className="pt-6 mt-6 border-t border-gray-100">
-                    <h3 className="text-xs font-bold uppercase text-indigo-600 mb-4 flex items-center gap-2">
-                        <Settings size={14} /> Accesorios
-                    </h3>
-                    <div className="grid grid-cols-2 gap-3">
-                        {ACCESORIOS_CORREDIZAS.map((item, idx) => (
-                            <div key={idx} className="bg-gray-50 p-3 rounded border border-gray-100 flex flex-col items-center text-center">
-                                <div className="h-20 w-full relative mb-2 bg-white rounded-sm">
-                                    <Image src={item.img} alt={item.name} fill className="object-contain p-2" onError={(e) => { e.target.style.display='none'; }} />
-                                </div>
-                                <span className="text-[9px] font-bold text-gray-800 leading-tight">{item.name}</span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-              )}
-
-              {/* Vidrios (Solo Corredizas) */}
-              {product.category === "PUERTAS CORREDIZAS Y ABATIBLES" && (
-                <div className="pt-6 mt-6 border-t border-gray-100">
-                    <h3 className="text-xs font-bold uppercase text-indigo-600 mb-4 flex items-center gap-2">
-                        <Settings size={14} /> Vidrios
-                    </h3>
-                    <div className="grid grid-cols-2 gap-3">
-                        {VIDRIOS_CORREDIZAS.map((item, idx) => (
-                            <div key={idx} className="bg-gray-50 p-3 rounded border border-gray-100 flex flex-col items-center text-center">
-                                <div className="h-20 w-full relative mb-2 bg-gray-200 rounded-sm">
-                                    <Image src={item.img} alt={item.name} fill className="object-cover" onError={(e) => { e.target.style.display='none'; }} />
-                                </div>
-                                <span className="text-[9px] font-bold text-gray-800 leading-tight">{item.name}</span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-              )}
+          <div className="space-y-8">
+            {/* Características Animadas */}
+            <div>
+              <h3 className="text-xs font-bold uppercase text-gray-900 mb-3 flex items-center gap-2">
+                <Icon size={14} /> Características
+              </h3>
+              <ul className="space-y-2">
+                {product.features?.map((feat, i) => (
+                  <motion.li
+                    initial={{ opacity: 0, x: 10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.05 * i }}
+                    key={i}
+                    className="flex items-start gap-2 text-xs text-gray-600"
+                  >
+                    <span className={`${accentColor} mt-0.5`}>•</span> {feat}
+                  </motion.li>
+                ))}
+              </ul>
             </div>
+
+            {/* Colores */}
+            {product.colors && (
+              <div className="bg-gray-50 p-6 rounded-xl border border-gray-100">
+                <h3 className={`text-gray-900 text-xs font-bold uppercase mb-4 border-l-4 ${borderColor} pl-3 flex items-center gap-2`}>
+                  <Palette size={14} /> Carta de Colores
+                </h3>
+                <div className="flex flex-wrap gap-4 justify-start">
+                  {product.colors.map((color, i) => (
+                    <div key={i} className="text-center group flex flex-col items-center gap-2 cursor-pointer">
+                      <div
+                        className="w-10 h-10 rounded-full shadow-sm border-2 border-white group-hover:border-gray-300 transition-all transform group-hover:scale-110"
+                        style={{ backgroundColor: color.hex }}
+                        title={color.name}
+                      ></div>
+                      <span className="text-[9px] text-gray-500 uppercase font-medium max-w-[60px] leading-tight">{color.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Specs */}
+            <div className="bg-gray-50 p-5 rounded border border-gray-100">
+              <h3 className="text-xs font-bold uppercase text-gray-400 mb-3">Especificaciones</h3>
+              <div className="grid grid-cols-1 gap-y-2">
+                {product.specs?.map((spec, i) => (
+                  <div key={i} className="flex justify-between border-b border-gray-200 pb-1 last:border-0">
+                    <span className="text-[10px] font-bold text-gray-500 uppercase">{spec.label}</span>
+                    <span className="text-[11px] font-semibold text-gray-900 text-right">{spec.value}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Accesorios (Solo Corredizas) */}
+            {product.category === "PUERTAS CORREDIZAS Y ABATIBLES" && (
+              <div className="pt-6 mt-6 border-t border-gray-100">
+                <h3 className="text-xs font-bold uppercase text-indigo-600 mb-4 flex items-center gap-2">
+                  <Settings size={14} /> Accesorios
+                </h3>
+                <div className="grid grid-cols-2 gap-3">
+                  {ACCESORIOS_CORREDIZAS.map((item, idx) => (
+                    <div key={idx} className="bg-gray-50 p-3 rounded border border-gray-100 flex flex-col items-center text-center">
+                      <div className="h-20 w-full relative mb-2 bg-white rounded-sm">
+                        <Image src={item.img} alt={item.name} fill className="object-contain p-2" onError={(e) => { e.target.style.display = 'none'; }} />
+                      </div>
+                      <span className="text-[9px] font-bold text-gray-800 leading-tight">{item.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Vidrios (Solo Corredizas) */}
+            {product.category === "PUERTAS CORREDIZAS Y ABATIBLES" && (
+              <div className="pt-6 mt-6 border-t border-gray-100">
+                <h3 className="text-xs font-bold uppercase text-indigo-600 mb-4 flex items-center gap-2">
+                  <Settings size={14} /> Vidrios
+                </h3>
+                <div className="grid grid-cols-2 gap-3">
+                  {VIDRIOS_CORREDIZAS.map((item, idx) => (
+                    <div key={idx} className="bg-gray-50 p-3 rounded border border-gray-100 flex flex-col items-center text-center">
+                      <div className="h-20 w-full relative mb-2 bg-gray-200 rounded-sm">
+                        <Image src={item.img} alt={item.name} fill className="object-cover" onError={(e) => { e.target.style.display = 'none'; }} />
+                      </div>
+                      <span className="text-[9px] font-bold text-gray-800 leading-tight">{item.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </motion.div>
     </div>
@@ -291,7 +305,7 @@ const ProductCard = ({ product, onClick, priority = false }) => {
     .replace("PUERTA DE ", "")
     .replace("PUERTA ", "")
     .replace("SEGURIDAD ", "");
-  
+
   let highlightClass = "text-gray-400";
   if (product.category.includes("IA")) highlightClass = "text-[#00C2FF]";
   else if (product.category.includes("MADERA")) highlightClass = "text-[#8D6E63]";
@@ -300,39 +314,38 @@ const ProductCard = ({ product, onClick, priority = false }) => {
   else if (product.category.includes("CORTAFUEGO")) highlightClass = "text-orange-600";
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.2 }}
-      onClick={onClick} 
+      onClick={onClick}
       className="group cursor-pointer flex flex-col h-full"
     >
       {/* IMAGEN FLOTANTE */}
       <div className="relative aspect-[3/5] bg-[#FCFCFC] mb-4 overflow-hidden border border-transparent group-hover:border-gray-100 transition-all rounded-sm">
-        <Image 
-          src={product.img} 
-          alt={product.name} 
-          fill 
+        <Image
+          src={product.img}
+          alt={product.name}
+          fill
           priority={priority} // Carga prioritaria si es de los primeros
-          className="object-contain p-6 transition-transform duration-700 group-hover:scale-110 mix-blend-multiply" 
+          className="object-contain p-6 transition-transform duration-700 group-hover:scale-110 mix-blend-multiply"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
-        
+
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 flex items-end justify-center pb-6">
-           <span className="bg-white text-black text-[9px] font-bold uppercase px-3 py-2 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 shadow-sm tracking-widest">
-             Ver Detalles
-           </span>
+          <span className="bg-white text-black text-[9px] font-bold uppercase px-3 py-2 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 shadow-sm tracking-widest">
+            Ver Detalles
+          </span>
         </div>
       </div>
-      
+
       {/* TEXTO */}
       <div className="text-center group-hover:text-left transition-all">
-        <h4 className={`font-bold text-base text-gray-900 transition-colors uppercase ${
-          product.category.includes("MADERA") ? "group-hover:text-[#8D6E63]" : 
+        <h4 className={`font-bold text-base text-gray-900 transition-colors uppercase ${product.category.includes("MADERA") ? "group-hover:text-[#8D6E63]" :
           product.category.includes("PVC") ? "group-hover:text-teal-600" :
-          product.category.includes("CORREDIZAS") ? "group-hover:text-indigo-600" :
-          "group-hover:text-[#00C2FF]"}`}>{product.name}</h4>
+            product.category.includes("CORREDIZAS") ? "group-hover:text-indigo-600" :
+              "group-hover:text-[#00C2FF]"}`}>{product.name}</h4>
         <p className={`text-[9px] uppercase tracking-widest mt-1 ${product.category.includes("IA") ? "text-[#00C2FF] font-semibold" : highlightClass}`}>
           {shortCategory}
         </p>
@@ -364,7 +377,7 @@ function PuertasContent() {
   useEffect(() => {
     async function fetchProducts() {
       setLoading(true);
-      
+
       let query = supabase
         .from('products')
         .select('*')
@@ -373,9 +386,9 @@ function PuertasContent() {
       if (activeCategory !== "TODAS") {
         query = query.eq('category', activeCategory);
       }
-      
+
       const { data, error } = await query;
-      
+
       if (error) {
         console.error("Error cargando productos:", error);
       } else {
@@ -383,15 +396,15 @@ function PuertasContent() {
       }
       setLoading(false);
     }
-    
+
     fetchProducts();
   }, [activeCategory]);
 
   const displayProducts = useMemo(() => {
     if (searchTerm.trim() === "") return products;
     const term = searchTerm.toLowerCase();
-    return products.filter(p => 
-      p.name.toLowerCase().includes(term) || 
+    return products.filter(p =>
+      p.name.toLowerCase().includes(term) ||
       (p.description && p.description.toLowerCase().includes(term))
     );
   }, [products, searchTerm]);
@@ -399,100 +412,136 @@ function PuertasContent() {
   // Scroll suave al cambiar categoría
   const handleCategoryChange = (cat) => {
     setActiveCategory(cat);
-    if(gridTopRef.current && window.scrollY > 300) {
-        gridTopRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (gridTopRef.current && window.scrollY > 300) {
+      gridTopRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
   return (
-    <main className="bg-white min-h-screen text-black pt-28 pb-20 font-sans selection:bg-black selection:text-white">
-      
-      {/* HEADER */}
-      <div className="container mx-auto px-6 mb-16 text-center">
-         <motion.h1 
-           initial={{ opacity: 0, y: 20 }}
-           animate={{ opacity: 1, y: 0 }}
-           className="text-4xl md:text-6xl font-bold uppercase tracking-tighter text-black mb-6"
-         >
-            Wonly Collection
-         </motion.h1>
-         <motion.div 
-           initial={{ scaleX: 0 }}
-           animate={{ scaleX: 1 }}
-           transition={{ delay: 0.2 }}
-           className="w-px h-12 bg-gray-200 mx-auto mb-6"
-         />
-         <motion.p 
-           initial={{ opacity: 0 }}
-           animate={{ opacity: 1 }}
-           transition={{ delay: 0.3 }}
-           className="text-gray-500 max-w-lg mx-auto text-sm font-light leading-relaxed"
-         >
-           Catálogo completo Wonly. Tecnología IA, resistencia extrema, lujo en aluminio, colección acústica de madera y la nueva línea vanguardista en PVC.
-         </motion.p>
+    // Quitamos el pt-28 para que el Hero pegue bien arriba con el menú transparente (si lo tienes)
+    <main className="bg-white min-h-screen text-black pb-20 font-sans selection:bg-black selection:text-white">
+
+      {/* HERO SECTION DINÁMICO */}
+<div className="w-full h-[30vh] md:h-[90vh] relative mb-16 overflow-hidden bg-black mt-20">{/* mt-20 compensa el header fijo */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeCategory}
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            className="absolute inset-0"
+          >
+            <Image
+              src={IMAGENES_HERO[activeCategory] || IMAGENES_HERO["TODAS"]}
+              alt={`Wonly ${activeCategory}`}
+              fill
+              priority
+              className="object-cover opacity-75" // Opacidad al 50% para que el texto se lea bien
+            />
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Texto superpuesto en el Hero */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 z-10">
+          <AnimatePresence mode="wait">
+            <motion.h1
+              key={`title-${activeCategory}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4 }}
+              className="text-3xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tighter text-white mb-20 drop-shadow-2xl max-w-5xl"
+            >
+              {activeCategory === "TODAS" ? "Wonly Collection" : activeCategory}
+            </motion.h1>
+          </AnimatePresence>
+
+          {/* <motion.div 
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ delay: 0.2 }}
+            className="w-px h-12 bg-[#00C2FF] mx-auto mb-6 shadow-[0_0_10px_#00C2FF]"
+          /> */}
+
+          <AnimatePresence mode="wait">
+            <motion.p
+              key={`desc-${activeCategory}`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
+              className="text-gray-200 max-w-2xl mx-auto text-sm md:text-base font-light leading-relaxed drop-shadow-md"
+            >
+              {activeCategory === "TODAS"
+                ? "Catálogo completo Wonly. Tecnología IA, resistencia extrema, lujo en aluminio, colección acústica de madera y la nueva línea vanguardista en PVC."
+                : `Explora nuestra exclusiva línea de productos clasificados en ${activeCategory.toLowerCase()} con la mejor tecnología, máxima seguridad y diseño de vanguardia.`}
+            </motion.p>
+          </AnimatePresence>
+        </div>
       </div>
 
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row gap-12">
-          
+
           {/* SIDEBAR (Escritorio) */}
           <aside className="hidden lg:block w-64 flex-shrink-0 sticky top-32 h-fit">
-              {/* Buscador Desktop */}
-              <div className="mb-8">
-                <SearchInput value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
-              </div>
+            {/* Buscador Desktop */}
+            <div className="mb-8">
+              <SearchInput value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+            </div>
 
-              <div className="mb-6 pb-2 border-b border-gray-100">
-                <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Categorías</span>
-              </div>
-              <div className="flex flex-col gap-1">
-                  <FilterButton label="Ver Todo" active={activeCategory === "TODAS"} onClick={() => handleCategoryChange("TODAS")} />
-                  {CATEGORIAS.map((cat) => (
-                    <FilterButton key={cat} label={cat} active={activeCategory === cat} onClick={() => handleCategoryChange(cat)} />
-                  ))}
-              </div>
+            <div className="mb-6 pb-2 border-b border-gray-100">
+              <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Categorías</span>
+            </div>
+            <div className="flex flex-col gap-1">
+              <FilterButton label="Ver Todo" active={activeCategory === "TODAS"} onClick={() => handleCategoryChange("TODAS")} />
+              {CATEGORIAS.map((cat) => (
+                <FilterButton key={cat} label={cat} active={activeCategory === cat} onClick={() => handleCategoryChange(cat)} />
+              ))}
+            </div>
           </aside>
 
           {/* GRID PRODUCTOS */}
           <section className="flex-grow" ref={gridTopRef}>
-            
+
             {/* BUSCADOR MÓVIL (Añadido Aquí) */}
             <div className="lg:hidden mb-6">
-                <SearchInput value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+              <SearchInput value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
             </div>
 
             <div className="flex justify-between items-center mb-8 pb-4 border-b border-gray-100">
-               <span className="text-xs font-bold uppercase tracking-widest text-gray-900">
-                 {activeCategory === "TODAS" ? "Catálogo Completo" : activeCategory} <span className="text-gray-400 ml-2">({displayProducts.length})</span>
-               </span>
-               <button onClick={() => setIsMobileMenuOpen(true)} className="lg:hidden flex items-center gap-2 text-[10px] font-bold uppercase bg-black text-white px-3 py-2"><Filter size={12} /> Filtros</button>
+              <span className="text-xs font-bold uppercase tracking-widest text-gray-900">
+                {activeCategory === "TODAS" ? "Catálogo Completo" : activeCategory} <span className="text-gray-400 ml-2">({displayProducts.length})</span>
+              </span>
+              <button onClick={() => setIsMobileMenuOpen(true)} className="lg:hidden flex items-center gap-2 text-[10px] font-bold uppercase bg-black text-white px-3 py-2"><Filter size={12} /> Filtros</button>
             </div>
 
             {loading ? (
-                <div className="flex h-64 w-full flex-col items-center justify-center text-gray-400 gap-3">
-                    <Loader2 className="animate-spin" size={32} />
-                    <span className="text-xs tracking-widest uppercase">Cargando colección...</span>
-                </div>
+              <div className="flex h-64 w-full flex-col items-center justify-center text-gray-400 gap-3">
+                <Loader2 className="animate-spin" size={32} />
+                <span className="text-xs tracking-widest uppercase">Cargando colección...</span>
+              </div>
             ) : (
-                <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-12">
-                    <AnimatePresence mode='popLayout'>
-                        {displayProducts.map((p, index) => (
-                            <ProductCard 
-                                key={p.id} 
-                                product={p} 
-                                onClick={() => setSelectedProduct(p)} 
-                                priority={index < 8} // Las primeras 8 imágenes cargan YA
-                            />
-                        ))}
-                    </AnimatePresence>
-                </div>
+              <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-12">
+                <AnimatePresence mode='popLayout'>
+                  {displayProducts.map((p, index) => (
+                    <ProductCard
+                      key={p.id}
+                      product={p}
+                      onClick={() => setSelectedProduct(p)}
+                      priority={index < 8} // Las primeras 8 imágenes cargan YA
+                    />
+                  ))}
+                </AnimatePresence>
+              </div>
             )}
 
             {!loading && displayProducts.length === 0 && (
-                <div className="py-24 text-center text-gray-300 text-sm uppercase">
-                    Sin resultados.
-                    {searchTerm && <button onClick={() => setSearchTerm("")} className="block mx-auto mt-2 underline text-black">Limpiar búsqueda</button>}
-                </div>
+              <div className="py-24 text-center text-gray-300 text-sm uppercase">
+                Sin resultados.
+                {searchTerm && <button onClick={() => setSearchTerm("")} className="block mx-auto mt-2 underline text-black">Limpiar búsqueda</button>}
+              </div>
             )}
           </section>
         </div>
@@ -502,30 +551,30 @@ function PuertasContent() {
       <AnimatePresence>
         {selectedProduct && <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />}
       </AnimatePresence>
-      
+
       {/* MENÚ MÓVIL */}
       <AnimatePresence>
         {isMobileMenuOpen && (
-            <motion.div 
-                initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-                className="fixed inset-0 z-50 bg-black/90 backdrop-blur flex items-center justify-center p-6 lg:hidden"
+          <motion.div
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/90 backdrop-blur flex items-center justify-center p-6 lg:hidden"
+          >
+            <motion.div
+              initial={{ y: 50 }} animate={{ y: 0 }} exit={{ y: 50 }}
+              className="bg-white w-full max-w-sm p-6 space-y-4 rounded"
             >
-            <motion.div 
-                initial={{ y: 50 }} animate={{ y: 0 }} exit={{ y: 50 }}
-                className="bg-white w-full max-w-sm p-6 space-y-4 rounded"
-            >
-                <div className="flex justify-between items-center border-b pb-4">
-                    <span className="font-bold uppercase tracking-widest text-sm">Categorías</span>
-                    <button onClick={() => setIsMobileMenuOpen(false)}><X size={20}/></button>
-                </div>
-                <div className="flex flex-col gap-2 max-h-[60vh] overflow-y-auto">
-                <button onClick={() => {handleCategoryChange("TODAS"); setIsMobileMenuOpen(false);}} className="text-left py-3 border-b text-xs font-bold uppercase">Ver Todo</button>
+              <div className="flex justify-between items-center border-b pb-4">
+                <span className="font-bold uppercase tracking-widest text-sm">Categorías</span>
+                <button onClick={() => setIsMobileMenuOpen(false)}><X size={20} /></button>
+              </div>
+              <div className="flex flex-col gap-2 max-h-[60vh] overflow-y-auto">
+                <button onClick={() => { handleCategoryChange("TODAS"); setIsMobileMenuOpen(false); }} className="text-left py-3 border-b text-xs font-bold uppercase">Ver Todo</button>
                 {CATEGORIAS.map(cat => (
-                    <button key={cat} onClick={() => {handleCategoryChange(cat); setIsMobileMenuOpen(false);}} className="text-left py-3 border-b text-xs font-bold uppercase">{cat}</button>
+                  <button key={cat} onClick={() => { handleCategoryChange(cat); setIsMobileMenuOpen(false); }} className="text-left py-3 border-b text-xs font-bold uppercase">{cat}</button>
                 ))}
-                </div>
+              </div>
             </motion.div>
-            </motion.div>
+          </motion.div>
         )}
       </AnimatePresence>
     </main>
@@ -534,7 +583,7 @@ function PuertasContent() {
 
 export default function PuertasPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-white flex items-center justify-center"><Loader2 className="animate-spin"/></div>}>
+    <Suspense fallback={<div className="min-h-screen bg-white flex items-center justify-center"><Loader2 className="animate-spin" /></div>}>
       <PuertasContent />
     </Suspense>
   );
