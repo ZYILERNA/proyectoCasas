@@ -16,7 +16,7 @@ const COLORS_FASHION = [{ name: "Black Skin", hex: "#1A1A1A" }, { name: "Moon Li
 const COLORS_CORTAFUEGOS = [{ name: "Blanco Perla", hex: "#CECFCA" }, { name: "Beige Piedra", hex: "#BFBBB5" }, { name: "Gris Plata", hex: "#ACAFAF" }, { name: "Gris Cemento", hex: "#7C7C78" }, { name: "Gris Grafito", hex: "#77797A" }, { name: "Rojo Óxido", hex: "#5C211E" }, { name: "Verde Musgo", hex: "#47504A" }];
 
 // Listas de Nombres
-const MODELOS_IA = ["X50", "X50 Pro", "X60", "X60 Pro", "S108", "S108 Pro", "Glory", "Glory Pro"];
+const MODELOS_IA = ["X50", "X50 Pro", "X50 Max", "X60", "X60 Pro", "X60 Max", "X70 Shunliu", "X70 Jinxiu", "S108", "S108 Pro", "Glory", "Glory Pro"];
 const MODELOS_ACERO = ["GL098", "NC9020", "GF091", "CL39", "GF092", "GL123-1", "Mid Night", "Contemporary", "GL099", "GL083", "CL56", "GF090", "CL66", "CL37", "CL36", "CL38", "CJ03", "CL23", "CL50", "CL51", "CL097 Pro", "P101", "GL23", "CL058", "CL65", "CL60", "CL72", "P107", "CL55", "CL62", "CL63", "P105", "GF061", "JD073", "NC9516", "P102"];
 const MODELOS_ACORAZADA = ["WL001", "WL002", "WL003", "WL005", "WL006", "WL007", "WL008", "WL009", "WL010", "WL011", "WL015", "WL016", "WL012", "WL021", "WL029", "WL018", "WL019", "WL020", "WL026", "WL027", "WL022", "WL017", "WL023", "WL028", "WL025"];
 const MODELOS_ALUMINIO = ["Wave", "Castle", "Woodland", "Louis", "Saab", "Senna", "Lange", "Heidelberg", "Prada"];
@@ -32,6 +32,55 @@ const MODELOS_MEDICAS = ["PUERTA DE SALA1", "PUERTA DE SALA2", "PUERTA DE SALA3"
 const SPECS_IA = [{ label: "Tecnología", value: "IA 3ª Generación" }, { label: "Sistema", value: "Reconocimiento Facial 3D" }, { label: "Pantalla", value: "10.1\" IPS Táctil" }];
 const FEATURES_IA = ["Apertura 100% automática", "Reconocimiento Facial 3D", "Videollamada App"];
 const UNLOCK_IA = "Facial / Huella / App";
+
+const SPECS_X70_SHUNLIU = [
+  { label: "Pantalla", value: "10.1\" IPS Multitáctil" },
+  { label: "Cámara", value: "1080p + IA Privacidad" },
+  { label: "Alimentación", value: "220V/24V + Batería 4200mAh" },
+  { label: "Cerradura", value: "Núcleo Clase C / 0.8s" },
+  { label: "Puerta", value: "Aluminio 6.0mm" }
+];
+
+const SPECS_X70_JINXIU = [
+  { label: "Pantalla", value: "10.1\" IPS Multitáctil" },
+  { label: "Cámara", value: "1080p + IA Privacidad y Cuidado" },
+  { label: "Alimentación", value: "220V/24V + Batería 4200mAh" },
+  { label: "Cerradura", value: "Núcleo Clase C / 0.8s" },
+  { label: "Puerta", value: "Aluminio 4.0mm" } // Diferencia de grosor
+];
+
+// Las características y el desbloqueo son compartidos por ambos X70
+const FEATURES_X70 = [
+  "Apertura 100% automática + Anti-pinzamiento",
+  "Monitorización ambiental (Sensor Formaldehído)",
+  "Integración Smart Home (Aigan)",
+  "Nube de video (3 días cíclicos)"
+];
+
+const SPECS_X60_MAX = [
+  { label: "Pantalla", value: "10.1\" IPS Multitáctil" },
+  { label: "Cámara", value: "1080p + IA Privacidad y Cuidado" },
+  { label: "Alimentación", value: "220V/24V + Batería 4200mAh" },
+  { label: "Cerradura", value: "Núcleo Clase C / 0.8s" },
+  { label: "Puerta", value: "Aluminio 4.0mm" }
+];
+
+const SPECS_X50_MAX = [
+  { label: "Pantalla", value: "10.1\" Multitáctil" },
+  { label: "Cámara", value: "1080p (En marco) + IA Privacidad y Cuidado" },
+  { label: "Alimentación", value: "220V/24V + Batería 4200mAh" },
+  { label: "Cerradura", value: "Núcleo Clase C / 0.8s" },
+  { label: "Puerta", value: "Acero 1.0mm (Imitación Cobre)" }
+];
+
+const FEATURES_X50_MAX = [
+  "Apertura automática + Anti-pinzamiento físico",
+  "Monitorización de calidad del aire",
+  "Integración Smart Home (Aigan)",
+  "Nube de video (3 días cíclicos)"
+];
+
+const UNLOCK_X70 = "Remoto / Facial / Contraseña / Tarjeta CPU / App / Llave";
 
 const SPECS_MECANICA = [{ label: "Seguridad", value: "9 Capas" }, { label: "Relleno", value: "Panal Aluminio" }, { label: "Núcleo", value: "Acero + Malla" }];
 const FEATURES_MECANICA = ["Seguridad 9 capas", "Malla antirrobo", "Relleno panal aluminio"];
@@ -62,12 +111,70 @@ const FEATURES_MEDICAS = ["Certificación Estándar Hospitalario", "Hermeticidad
 
 // --- 2. GENERADORES (CORREGIDOS) ---
 
-const productos_ia = MODELOS_IA.map(n => ({
-  name: n, category: "PUERTA DE SEGURIDAD IA",
-  description: `Flagship IA modelo ${n}.`,
-  specs: SPECS_IA, features: FEATURES_IA, unlock: UNLOCK_IA,
-  img: `/images/AI/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
-}));
+const productos_ia = MODELOS_IA.map(n => {
+  // --- NUEVO: Condicional para el X50 Max ---
+  if (n === "X50 Max") {
+    return {
+      name: "X50 Max",
+      category: "PUERTA DE SEGURIDAD IA",
+      description: "Puerta de seguridad inteligente 5.0 modelo X50 Max con acabado de acero imitación cobre.",
+      specs: SPECS_X50_MAX,
+      features: FEATURES_X50_MAX,
+      unlock: UNLOCK_X70, // Comparten los mismos métodos
+      img: `/images/AI/door-x50-max.jpg`
+    };
+  }
+
+  // --- Condicional para el X60 Max ---
+  if (n === "X60 Max") {
+    return {
+      name: "X60 Max",
+      category: "PUERTA DE SEGURIDAD IA",
+      description: "Puerta de seguridad inteligente 5.0 modelo X60 Max.",
+      specs: SPECS_X60_MAX,
+      features: FEATURES_X70, 
+      unlock: UNLOCK_X70,
+      img: `/images/AI/door-x60-max.jpg`
+    };
+  }
+
+  // --- Condicional para el X70 Shunliu (6.0mm) ---
+  if (n === "X70 Shunliu") {
+    return {
+      name: "X70 Shunliu",
+      category: "PUERTA DE SEGURIDAD IA",
+      description: "Puerta de seguridad inteligente 5.0 modelo X70 Shunliu.",
+      specs: SPECS_X70_SHUNLIU,
+      features: FEATURES_X70,
+      unlock: UNLOCK_X70,
+      img: `/images/AI/door-x70-shunliu.jpg`
+    };
+  }
+  
+  // --- Condicional para el X70 Jinxiu (4.0mm) ---
+  if (n === "X70 Jinxiu") {
+    return {
+      name: "X70 Jinxiu",
+      category: "PUERTA DE SEGURIDAD IA",
+      description: "Puerta de seguridad inteligente 5.0 modelo X70 Jinxiu.",
+      specs: SPECS_X70_JINXIU,
+      features: FEATURES_X70,
+      unlock: UNLOCK_X70,
+      img: `/images/AI/door-x70-jinxiu.jpg`
+    };
+  }
+  
+  // --- Comportamiento por defecto para el resto de puertas IA ---
+  return {
+    name: n,
+    category: "PUERTA DE SEGURIDAD IA",
+    description: `Flagship IA modelo ${n}.`,
+    specs: SPECS_IA,
+    features: FEATURES_IA,
+    unlock: UNLOCK_IA,
+    img: `/images/AI/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+  };
+});
 
 const productos_acero = MODELOS_ACERO.map(n => ({
   name: n, category: "PUERTA DE ACERO REFORZADO",
