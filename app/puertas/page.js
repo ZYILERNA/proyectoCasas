@@ -28,16 +28,16 @@ const CATEGORIAS = [
 
 // NUEVO: Mapa de imágenes para el Hero según la categoría
 const IMAGENES_HERO = {
-  "TODAS": "/images/hero-robot2.jpg", // Imagen por defecto
+  "TODAS": "/images/todas.jpg", // Imagen por defecto
   "PUERTA DE SEGURIDAD IA": "/images/family.jpg",
   "PUERTA DE ACERO REFORZADO": "/images/specs.jpg", // Cambia estas rutas por tus imágenes reales
   "PUERTA DE SEGURIDAD ACORAZADA": "/images/acorazada.jpg",
   "PUERTA DE ALUMINIO FUNDIDO": "/images/fundido.jpg",
-  "PUERTA ACÚSTICA DE MADERA": "/images/Asset/Vidrios/vidrio-04.jpg",
-  "PUERTA DE PVC": "/images/Asset/Vidrios/vidrio-05.jpg",
-  "PUERTAS CORREDIZAS Y ABATIBLES": "/images/Asset/Vidrios/vidrio-06.jpg",
-  "PUERTA COMERCIAL CORTAFUEGO": "/images/Asset/Vidrios/vidrio-07.jpg",
-  "PUERTA MÉDICA": "/images/Asset/Vidrios/vidrio-08.jpg"
+  "PUERTA ACÚSTICA DE MADERA": "/images/madera.jpg",
+  "PUERTA DE PVC": "/images/pvc.jpg",
+  "PUERTAS CORREDIZAS Y ABATIBLES": "/images/corredizas.jpg",
+  "PUERTA COMERCIAL CORTAFUEGO": "/images/cortafuego.jpg",
+  "PUERTA MÉDICA": "/images/medica.jpg"
 };
 
 const ACCESORIOS_CORREDIZAS = [
