@@ -586,7 +586,7 @@ export default function SillasPage() {
                         placeholder="BUSCAR SILLA..." 
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
-                        className="w-full bg-[#F5F5F5] border border-transparent focus:bg-white focus:border-gray-200 rounded-full py-2.5 pl-11 pr-4 text-xs font-bold uppercase tracking-wide focus:ring-0 transition-all outline-none placeholder:text-gray-400"
+                        className="w-full bg-[#F5F5F5] border border-transparent focus:bg-white focus:border-gray-200 rounded-full py-2.5 pl-11 pr-4 text-xs font-bold uppercase tracking-wide focus:ring-0 transition-all outline-none text-gray-900 placeholder:text-gray-400"
                     />
                     {searchTerm && (
                         <button 
@@ -650,7 +650,8 @@ export default function SillasPage() {
                                 alt={item.name}
                                 fill
                                 priority={index < 6}
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                sizes="100px"
+                                unoptimized
                                 className="object-contain"
                              />
                         </div>

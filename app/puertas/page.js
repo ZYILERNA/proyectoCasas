@@ -119,7 +119,7 @@ const SearchInput = ({ value, onChange }) => (
       placeholder="BUSCAR MODELO..."
       value={value}
       onChange={onChange}
-      className="w-full bg-[#F9F9F9] border-none rounded-sm py-3 pl-10 pr-8 text-xs font-bold uppercase tracking-wider focus:ring-1 focus:ring-black transition-all outline-none placeholder:text-gray-400"
+      className="w-full bg-[#F9F9F9] border-none rounded-sm py-3 pl-10 pr-8 text-xs font-bold uppercase tracking-wider focus:ring-1 focus:ring-black transition-all outline-none text-gray-900 placeholder:text-gray-400"
     />
     <Sparkles className="absolute left-3 top-3 text-gray-400 group-focus-within:text-black transition-colors" size={14} />
     {value && (
@@ -330,7 +330,8 @@ const ProductCard = ({ product, onClick, priority = false }) => {
           fill
           priority={priority} // Carga prioritaria si es de los primeros
           className="object-contain p-6 transition-transform duration-700 group-hover:scale-110 mix-blend-multiply"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="100px"
+          unoptimized
         />
 
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 flex items-end justify-center pb-6">

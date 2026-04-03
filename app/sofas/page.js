@@ -111,7 +111,8 @@ const SofaItem = memo(({ sofa, onClick }) => {
                         src={sofa.image || "/images/placeholder.jpg"} 
                         alt={sofa.name} 
                         fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        sizes="100px"
+                        unoptimized
                         className="object-contain p-6 mix-blend-multiply transition-transform duration-700 ease-in-out group-hover:scale-110"
                     />
                 </div>
@@ -572,7 +573,7 @@ export default function SofasPage() {
                         placeholder="Buscar modelo o código..." 
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        className="w-full pl-10 pr-10 py-2 bg-gray-50 border border-gray-200 rounded-full text-sm focus:outline-none focus:bg-white focus:border-black transition-all placeholder:text-gray-400"
+                        className="w-full pl-10 pr-10 py-2 bg-gray-50 border border-gray-200 rounded-full text-sm focus:outline-none focus:bg-white focus:border-black transition-all text-gray-900 placeholder:text-gray-400"
                     />
                     {searchQuery && (
                         <button 
