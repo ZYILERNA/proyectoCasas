@@ -423,7 +423,7 @@ function PuertasContent() {
     <main className="bg-white min-h-screen text-black pb-20 font-sans selection:bg-black selection:text-white">
 
       {/* HERO SECTION DINÁMICO */}
-<div className="w-full h-[30vh] md:h-[90vh] relative mb-16 overflow-hidden bg-black mt-20">{/* mt-20 compensa el header fijo */}
+<div className="w-full h-[45vh] md:h-[62vh] relative mb-16 overflow-hidden bg-black mt-20">{/* mt-20 compensa el header fijo */}
         <AnimatePresence mode="wait">
           <motion.div
             key={activeCategory}
@@ -452,7 +452,7 @@ function PuertasContent() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4 }}
-              className="text-3xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tighter text-white mb-20 drop-shadow-2xl max-w-5xl"
+              className="text-3xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tighter text-white mb-3 md:mb-10 drop-shadow-2xl max-w-5xl"
             >
               {activeCategory === "TODAS" ? "Wonly Collection" : activeCategory}
             </motion.h1>

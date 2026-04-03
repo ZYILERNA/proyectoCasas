@@ -489,7 +489,7 @@ export default function SofasPage() {
             </AnimatePresence>
 
             {/* HEADER */}
-            <div className="relative h-[40vh] md:h-[50vh] bg-[#0a0a0a] overflow-hidden flex items-end pb-12">
+            <div className="relative h-[55vh] md:h-[65vh] bg-[#0a0a0a] overflow-hidden flex items-end pb-12">
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -503,13 +503,12 @@ export default function SofasPage() {
                         playsInline
                         preload="auto"
                         poster="/images/sofa-header.jpg"
-                        className="w-full h-full object-cover opacity-60"
+                        className="w-full h-full object-cover opacity-60 scale-110"
                     >
                         <source src="/videos/sofa-hero.webm" type="video/webm" />
                         <source src="/videos/sofa-hero.mp4" type="video/mp4" />
                     </video>
                 </motion.div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40" />
 
                 <motion.div
                     variants={staggerContainer}

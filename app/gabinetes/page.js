@@ -542,7 +542,7 @@ const { data, error } = await supabase
     <div className="bg-white min-h-screen pb-32 font-sans selection:bg-black selection:text-white">
       
       {/* HEADER */}
-      <div className="relative h-[40vh] md:h-[50vh] bg-[#0a0a0a] overflow-hidden flex items-end pb-12">
+      <div className="relative h-[55vh] md:h-[65vh] bg-[#0a0a0a] overflow-hidden flex items-end pb-12">
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -556,13 +556,12 @@ const { data, error } = await supabase
                 playsInline
                 preload="auto"
                 poster="/images/gabinetes-header.jpg"
-                className="w-full h-full object-cover opacity-60"
+                className="w-full h-full object-cover opacity-60 scale-110"
             >
                 <source src="/videos/gabinetes-hero.webm" type="video/webm" />
                 <source src="/videos/gabinetes-hero.mp4" type="video/mp4" />
             </video>
         </motion.div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40" />
         
         <motion.div 
             variants={staggerContainer}
