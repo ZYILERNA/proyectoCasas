@@ -541,19 +541,24 @@ export default function DormitoriosPage() {
       
       {/* HEADER */}
       <div className="relative h-[40vh] md:h-[50vh] bg-[#0a0a0a] overflow-hidden flex items-end pb-12">
-        <motion.div 
-            initial={{ scale: 1.1, opacity: 0 }}
-            animate={{ scale: 1, opacity: 0.6 }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
             className="absolute inset-0"
         >
-             <Image 
-                src="/images/dormitorios-header.jpg" 
-                alt="Header Dormitorios" 
-                fill
-                priority 
-                className="w-full h-full object-cover"
-            />
+            <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                poster="/images/dormitorios-header.jpg"
+                className="w-full h-full object-cover opacity-60"
+            >
+                <source src="/videos/dormitorios-hero.webm" type="video/webm" />
+                <source src="/videos/dormitorios-hero.mp4" type="video/mp4" />
+            </video>
         </motion.div>
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40" />
         
@@ -601,24 +606,31 @@ export default function DormitoriosPage() {
                   ))}
                 </div>
 
-                {/* Buscador Integrado */}
-                <div className="relative group w-full md:w-72 shrink-0">
+                {/* Contador + Buscador */}
+                <div className="flex items-center gap-3 shrink-0">
+                    {!isLoading && (
+                        <span className="hidden md:block text-[10px] font-bold text-gray-400 uppercase tracking-widest whitespace-nowrap">
+                            {filteredProducts.length} producto{filteredProducts.length !== 1 ? 's' : ''}
+                        </span>
+                    )}
+                <div className="relative group w-full md:w-72">
                     <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-black transition-colors" size={16} />
                     <input 
                         type="text" 
                         placeholder="BUSCAR DORMITORIO..." 
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
-                        className="w-full bg-[#F5F5F5] border border-transparent focus:bg-white focus:border-gray-200 rounded-full py-2.5 pl-11 pr-4 text-xs font-bold uppercase tracking-wide focus:ring-0 transition-all outline-none placeholder:text-gray-400"
+                        className="w-full bg-[#F5F5F5] border border-transparent focus:bg-white focus:border-gray-200 rounded-full py-2.5 pl-11 pr-4 text-xs font-bold uppercase tracking-wide focus:ring-0 transition-all outline-none text-gray-900 placeholder:text-gray-400"
                     />
                     {searchTerm && (
-                        <button 
+                        <button
                             onClick={() => setSearchTerm("")}
                             className="absolute right-3 top-1/2 -translate-y-1/2 p-1 hover:bg-gray-200 rounded-full text-gray-400 hover:text-black transition-colors"
                         >
                             <X size={12} />
                         </button>
                     )}
+                </div>
                 </div>
             </div>
         </div>

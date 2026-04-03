@@ -543,19 +543,24 @@ const { data, error } = await supabase
       
       {/* HEADER */}
       <div className="relative h-[40vh] md:h-[50vh] bg-[#0a0a0a] overflow-hidden flex items-end pb-12">
-        <motion.div 
-            initial={{ scale: 1.1, opacity: 0 }}
-            animate={{ scale: 1, opacity: 0.6 }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
             className="absolute inset-0"
         >
-             <Image 
-                src="/images/gabinetes-header.jpg" 
-                alt="Header Gabinetes" 
-                fill
-                priority 
-                className="w-full h-full object-cover"
-            />
+            <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                poster="/images/gabinetes-header.jpg"
+                className="w-full h-full object-cover opacity-60"
+            >
+                <source src="/videos/gabinetes-hero.webm" type="video/webm" />
+                <source src="/videos/gabinetes-hero.mp4" type="video/mp4" />
+            </video>
         </motion.div>
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40" />
         
