@@ -3,6 +3,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Search,
   Menu,
@@ -75,10 +76,13 @@ export default function Header() {
             onClick={closeMobileMenu}
             className="block transition-transform duration-300 hover:scale-105"
           >
-            <img
+            <Image
               src="/images/logo-wonly.png"
               alt="WONLY"
+              width={160}
+              height={40}
               className="h-8 md:h-10 w-auto object-contain"
+              priority
             />
           </Link>
         </div>
@@ -160,8 +164,8 @@ export default function Header() {
             <StockTicker />
           </div>
 
-          <button className="group p-2">
-            <Search className="w-5 h-5 text-gray-300 group-hover:text-[#00C2FF] group-hover:scale-110 transition-all duration-300" />
+          <button className="group p-2" aria-label="Buscar">
+            <Search className="w-5 h-5 text-gray-300 group-hover:text-[#00C2FF] group-hover:scale-110 transition-all duration-300" aria-hidden="true" />
           </button>
 
           <Link
@@ -174,8 +178,10 @@ export default function Header() {
           <button
             className="md:hidden text-gray-300 hover:text-[#00C2FF] transition-colors focus:outline-none p-2"
             onClick={toggleMobileMenu}
+            aria-label={isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
+            aria-expanded={isMobileMenuOpen}
           >
-            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            {isMobileMenuOpen ? <X size={28} aria-hidden="true" /> : <Menu size={28} aria-hidden="true" />}
           </button>
         </div>
       </div>

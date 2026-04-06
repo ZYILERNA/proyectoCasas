@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm build:*)",
+      "Bash(ls C:/xampp/htdocs/git/proyectoCasas/next.config*)",
+      "Bash(ls C:/xampp/htdocs/git/proyectoCasas/.babel*)"
+    ]
+  }
+}

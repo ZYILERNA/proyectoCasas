@@ -1,7 +1,8 @@
 "use client"; // Necesario en Next.js App Router para usar Framer Motion
 
 import Link from 'next/link';
-import { ShieldCheck, Lock, Home as HomeIcon, ChevronRight, Wind, Maximize2, Sun, BedDouble, Archive } from 'lucide-react'; 
+import Image from 'next/image';
+import { ShieldCheck, Lock, Home as HomeIcon, ChevronRight, Wind, Maximize2, Sun, BedDouble, Archive } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 // --- Variantes de Animación Reutilizables ---
@@ -38,11 +39,14 @@ export default function Home() {
           transition={{ duration: 1.5, ease: "easeOut" }}
           className="absolute inset-0 z-0"
         >
-          <img 
-            src="/images/hero-robot.jpg" 
-            alt="WONLY Technology" 
-            className="w-full h-full object-cover"
+          <Image
+            src="/images/hero-robot.jpg"
+            alt="WONLY Technology"
+            fill
+            priority
+            className="object-cover"
             style={{ objectPosition: "top center" }}
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent"></div>
         </motion.div>
@@ -120,7 +124,7 @@ export default function Home() {
             {/* CARD 1: SMART */}
             <motion.div variants={fadeInUp}>
               <Link href="/puertas?category=PUERTA DE SEGURIDAD IA" className="group relative block h-[500px] overflow-hidden bg-gray-900 border border-white/10 hover:border-[#00C2FF] transition-colors duration-500">
-                <img src="/images/AI/door-x60-pro.jpg" alt="Smart Door" className="w-full h-full object-cover opacity-70 group-hover:scale-110 transition-transform duration-700"/>
+                <Image src="/images/AI/door-x60-pro.jpg" alt="Smart Door" fill className="object-cover opacity-70 group-hover:scale-110 transition-transform duration-700" sizes="(max-width: 768px) 100vw, 33vw"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
                 <div className="absolute bottom-0 left-0 p-8 w-full">
                   <ShieldCheck className="text-[#00C2FF] w-10 h-10 mb-4" />
@@ -133,7 +137,7 @@ export default function Home() {
             {/* CARD 2: ACORAZADAS */}
             <motion.div variants={fadeInUp}>
               <Link href="/puertas?category=PUERTA DE SEGURIDAD ACORAZADA" className="group relative block h-[500px] overflow-hidden bg-gray-900 border border-white/10 hover:border-white transition-colors duration-500">
-                <img src="/images/ACORAZADA/door-wl001.jpg" alt="Acorazada" className="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700"/>
+                <Image src="/images/ACORAZADA/door-wl001.jpg" alt="Acorazada" fill className="object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" sizes="(max-width: 768px) 100vw, 33vw"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
                 <div className="absolute bottom-0 left-0 p-8 w-full">
                   <Lock className="text-white w-10 h-10 mb-4" />
@@ -175,11 +179,13 @@ export default function Home() {
                   transition={{ duration: 0.8, ease: "easeOut" }}
                   className="relative group"
                 >
-                    <div className="aspect-[16/10] overflow-hidden border border-white/10">
-                        <img 
-                            src="/images/windows-view.jpg" 
-                            alt="Ventanas Panorámicas WONLY" 
-                            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                    <div className="relative aspect-[16/10] overflow-hidden border border-white/10">
+                        <Image
+                            src="/images/windows-view.jpg"
+                            alt="Ventanas Panorámicas WONLY"
+                            fill
+                            className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                            sizes="(max-width: 1024px) 100vw, 50vw"
                         />
                     </div>
                     {/* Detalle flotante técnico */}
@@ -217,18 +223,18 @@ export default function Home() {
                     {/* Features Icons */}
                     <motion.div variants={fadeInUp} className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10 border-t border-white/10 pt-8">
                         <div className="flex flex-col gap-2">
-                            <Wind className="text-[#00C2FF] w-6 h-6" />
-                            <h4 className="font-bold uppercase text-sm">Hermético</h4>
+                            <Wind className="text-[#00C2FF] w-6 h-6" aria-hidden="true" />
+                            <h3 className="font-bold uppercase text-sm">Hermético</h3>
                             <p className="text-xs text-gray-500">A prueba de humo y polvo.</p>
                         </div>
                         <div className="flex flex-col gap-2">
-                            <Maximize2 className="text-[#00C2FF] w-6 h-6" />
-                            <h4 className="font-bold uppercase text-sm">Panorámico</h4>
+                            <Maximize2 className="text-[#00C2FF] w-6 h-6" aria-hidden="true" />
+                            <h3 className="font-bold uppercase text-sm">Panorámico</h3>
                             <p className="text-xs text-gray-500">Marcos reducidos, más luz.</p>
                         </div>
                         <div className="flex flex-col gap-2">
-                            <Sun className="text-[#00C2FF] w-6 h-6" />
-                            <h4 className="font-bold uppercase text-sm">Térmico</h4>
+                            <Sun className="text-[#00C2FF] w-6 h-6" aria-hidden="true" />
+                            <h3 className="font-bold uppercase text-sm">Térmico</h3>
                             <p className="text-xs text-gray-500">Eficiencia energética total.</p>
                         </div>
                     </motion.div>
@@ -285,7 +291,7 @@ export default function Home() {
                     <HomeIcon size={18}/>
                   </div>
                   <div>
-                    <h5 className="text-white font-bold uppercase text-sm">Colección de Sofás</h5>
+                    <p className="text-white font-bold uppercase text-sm">Colección de Sofás</p>
                     <span className="text-[#00C2FF] text-xs font-bold uppercase tracking-widest">Explorar catálogo</span>
                   </div>
                 </Link>
@@ -301,11 +307,15 @@ export default function Home() {
               className="relative"
             >
               <div className="aspect-[4/3] bg-gray-800 border border-white/10 p-2">
-                 <img 
-                   src="/images/sofa-home.jpg" 
-                   alt="Sofá WONLY" 
-                   className="w-full h-full object-cover"
-                 />
+                 <div className="relative w-full h-full">
+                   <Image
+                     src="/images/sofa-home.jpg"
+                     alt="Sofá WONLY"
+                     fill
+                     className="object-cover"
+                     sizes="(max-width: 1024px) 100vw, 50vw"
+                   />
+                 </div>
               </div>
               <div className="absolute -bottom-6 -left-6 bg-[#00C2FF] text-black p-6 w-48 hidden md:block">
                  <p className="font-bold text-2xl mb-1">2025</p>
@@ -333,11 +343,15 @@ export default function Home() {
               className="relative order-2 lg:order-1"
             >
               <div className="aspect-[4/3] bg-gray-800 border border-white/10 p-2">
-                 <img 
-                   src="/images/mesas-home.jpg" 
-                   alt="Colección Mesas WONLY" 
-                   className="w-full h-full object-cover"
-                 />
+                 <div className="relative w-full h-full">
+                   <Image
+                     src="/images/mesas-home.jpg"
+                     alt="Colección Mesas WONLY"
+                     fill
+                     className="object-cover"
+                     sizes="(max-width: 1024px) 100vw, 50vw"
+                   />
+                 </div>
               </div>
             </motion.div>
 
@@ -365,7 +379,7 @@ export default function Home() {
                     <span className="font-serif italic font-bold text-lg">M</span>
                   </div>
                   <div>
-                    <h5 className="text-white font-bold uppercase text-sm">Ver Mesas</h5>
+                    <p className="text-white font-bold uppercase text-sm">Ver Mesas</p>
                     <span className="text-[#00C2FF] text-xs font-bold uppercase tracking-widest">Descubrir Modelos</span>
                   </div>
                 </Link>
@@ -406,7 +420,7 @@ export default function Home() {
                     <BedDouble size={18}/>
                   </div>
                   <div>
-                    <h5 className="text-white font-bold uppercase text-sm">Dormitorios</h5>
+                    <p className="text-white font-bold uppercase text-sm">Dormitorios</p>
                     <span className="text-[#00C2FF] text-xs font-bold uppercase tracking-widest">Catálogo de Descanso</span>
                   </div>
                 </Link>
@@ -421,11 +435,13 @@ export default function Home() {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="relative"
             >
-              <div className="aspect-[4/3] bg-gray-800 border border-white/10 p-2 group overflow-hidden">
-                 <img 
-                   src="/images/dormitorios-header.jpg" 
-                   alt="Colección Dormitorios WONLY" 
-                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              <div className="relative aspect-[4/3] bg-gray-800 border border-white/10 p-2 group overflow-hidden">
+                 <Image
+                   src="/images/dormitorios-header.jpg"
+                   alt="Colección Dormitorios WONLY"
+                   fill
+                   className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                   sizes="(max-width: 1024px) 100vw, 50vw"
                  />
               </div>
             </motion.div>
@@ -449,11 +465,13 @@ export default function Home() {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="relative order-2 lg:order-1"
             >
-              <div className="aspect-[4/3] bg-gray-800 border border-white/10 p-2 group overflow-hidden">
-                 <img 
-                   src="/images/gabinetes-header.jpg" 
-                   alt="Sistemas de Gabinetes WONLY" 
-                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              <div className="relative aspect-[4/3] bg-gray-800 border border-white/10 p-2 group overflow-hidden">
+                 <Image
+                   src="/images/gabinetes-header.jpg"
+                   alt="Sistemas de Gabinetes WONLY"
+                   fill
+                   className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                   sizes="(max-width: 1024px) 100vw, 50vw"
                  />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-white text-black p-6 w-48 hidden md:block z-10">
@@ -487,7 +505,7 @@ export default function Home() {
                     <Archive size={18}/>
                   </div>
                   <div>
-                    <h5 className="text-white font-bold uppercase text-sm">Ver Gabinetes</h5>
+                    <p className="text-white font-bold uppercase text-sm">Ver Gabinetes</p>
                     <span className="text-[#00C2FF] text-xs font-bold uppercase tracking-widest">Explorar Módulos</span>
                   </div>
                 </Link>
