@@ -42,6 +42,21 @@ const IMAGENES_HERO = {
   "PUERTA DE COBRE COMPUESTA": "/images/cobrewallaper.jpg"
 };
 
+// --- CARTA DE COLORES (igual para todas las puertas, de más oscuro a más claro) ---
+const DOOR_COLORS = [
+  { name: "Lacado Negro",          hex: "#1A1A1A" },
+  { name: "Tinte Wengué",          hex: "#4A2E1A" },
+  { name: "Tinte Gris Oscuro",     hex: "#3D3530" },
+  { name: "Morado",                hex: "#6A0DAD" },
+  { name: "Lacado Gris Antracita", hex: "#3C3F42" },
+  { name: "Tinte Nogal Oscuro",    hex: "#7B3F1A" },
+  { name: "Azul",                  hex: "#1565C0" },
+  { name: "Tinte Roble",           hex: "#A0522D" },
+  { name: "Tinte Gris Claro",      hex: "#7A6E65" },
+  { name: "Tinte Natural",         hex: "#C47C2B" },
+  { name: "Lacado Blanco",         hex: "#F5F5F5" },
+];
+
 const ACCESORIOS_CORREDIZAS = [
   { name: "Manilla VBH con base", tag: "Ventana abatible", img: "/images/Asset/Accesorios/manilla_vbh_base.jpg" },
   { name: "Manilla Runas", tag: "Ventana abatible", img: "/images/Asset/Accesorios/manilla_runas.jpg" },
@@ -223,26 +238,31 @@ const ProductModal = ({ product, onClose }) => {
               </ul>
             </div>
 
-            {/* Colores */}
-            {product.colors && (
-              <div className="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                <h3 className={`text-gray-900 text-xs font-bold uppercase mb-4 border-l-4 ${borderColor} pl-3 flex items-center gap-2`}>
-                  <Palette size={14} /> Carta de Colores
-                </h3>
-                <div className="flex flex-wrap gap-4 justify-start">
-                  {product.colors.map((color, i) => (
-                    <div key={i} className="text-center group flex flex-col items-center gap-2 cursor-pointer">
-                      <div
-                        className="w-10 h-10 rounded-full shadow-sm border-2 border-white group-hover:border-gray-300 transition-all transform group-hover:scale-110"
-                        style={{ backgroundColor: color.hex }}
-                        title={color.name}
-                      ></div>
-                      <span className="text-[9px] text-gray-500 uppercase font-medium max-w-[60px] leading-tight">{color.name}</span>
-                    </div>
-                  ))}
-                </div>
+            {/* Carta de Colores */}
+            <div>
+              <h3 className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-100 pb-2 mb-3 flex items-center gap-2">
+                <Palette size={14} /> Acabados y Carta de Colores
+              </h3>
+              <div className="flex flex-wrap gap-4 mb-3 p-4 bg-gray-50 rounded-xl justify-center md:justify-start">
+                {DOOR_COLORS.map((color, i) => (
+                  <div key={i} className="text-center group flex flex-col items-center gap-2 cursor-help">
+                    <div
+                      className="w-12 h-12 rounded-full shadow-md border-2 border-white group-hover:scale-110 transition-transform duration-300"
+                      style={{ backgroundColor: color.hex }}
+                      title={color.name}
+                    ></div>
+                    <span className="text-[9px] text-gray-500 uppercase font-bold max-w-[60px] leading-tight">{color.name}</span>
+                  </div>
+                ))}
               </div>
-            )}
+              <div className="flex items-start gap-3 bg-gray-50 rounded-lg p-3 border border-gray-200">
+                <Palette size={16} className="text-gray-400 shrink-0 mt-0.5" />
+                <p className="text-xs text-gray-500 leading-relaxed">
+                  ¿Buscas un color diferente? Disponemos de una amplia gama de acabados y colores personalizados bajo pedido.{" "}
+                  <span className="font-bold text-gray-800">Consúltanos sin compromiso.</span>
+                </p>
+              </div>
+            </div>
 
             {/* Specs */}
             <div className="bg-gray-50 p-5 rounded border border-gray-100">
@@ -349,9 +369,21 @@ const ProductCard = ({ product, onClick, priority = false }) => {
           product.category.includes("PVC") ? "group-hover:text-teal-600" :
             product.category.includes("CORREDIZAS") ? "group-hover:text-indigo-600" :
               "group-hover:text-[#00C2FF]"}`}>{product.name}</h4>
-        <p className={`text-[9px] uppercase tracking-widest mt-1 ${product.category.includes("IA") ? "text-[#00C2FF] font-semibold" : highlightClass}`}>
-          {shortCategory}
-        </p>
+        <div className="flex items-center justify-center group-hover:justify-start gap-2 mt-1">
+          <p className={`text-[9px] uppercase tracking-widest ${product.category.includes("IA") ? "text-[#00C2FF] font-semibold" : highlightClass}`}>
+            {shortCategory}
+          </p>
+          <div className="flex -space-x-1">
+            {DOOR_COLORS.slice(0, 5).map((c, i) => (
+              <div
+                key={i}
+                className="w-3 h-3 rounded-full border border-white shadow-sm"
+                style={{ backgroundColor: c.hex }}
+              />
+            ))}
+            <div className="w-3 h-3 rounded-full bg-gray-100 border border-white flex items-center justify-center text-[6px] text-gray-500">+</div>
+          </div>
+        </div>
       </div>
     </motion.div>
   );
