@@ -23,7 +23,8 @@ const CATEGORIAS = [
   "PUERTA DE PVC",
   "PUERTAS CORREDIZAS Y ABATIBLES",
   "PUERTA COMERCIAL CORTAFUEGO",
-  "PUERTA MÉDICA"
+  "PUERTA MÉDICA",
+  "PUERTA DE COBRE COMPUESTA"
 ];
 
 // NUEVO: Mapa de imágenes para el Hero según la categoría
@@ -37,7 +38,8 @@ const IMAGENES_HERO = {
   "PUERTA DE PVC": "/images/pvc.jpg",
   "PUERTAS CORREDIZAS Y ABATIBLES": "/images/corredizas.jpg",
   "PUERTA COMERCIAL CORTAFUEGO": "/images/cortafuego.jpg",
-  "PUERTA MÉDICA": "/images/medica.jpg"
+  "PUERTA MÉDICA": "/images/medica.jpg",
+  "PUERTA DE COBRE COMPUESTA": "/images/cobrewallaper.jpg"
 };
 
 const ACCESORIOS_CORREDIZAS = [
