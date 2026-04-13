@@ -16,8 +16,8 @@ const COLORS_FASHION = [{ name: "Black Skin", hex: "#1A1A1A" }, { name: "Moon Li
 const COLORS_CORTAFUEGOS = [{ name: "Blanco Perla", hex: "#CECFCA" }, { name: "Beige Piedra", hex: "#BFBBB5" }, { name: "Gris Plata", hex: "#ACAFAF" }, { name: "Gris Cemento", hex: "#7C7C78" }, { name: "Gris Grafito", hex: "#77797A" }, { name: "Rojo Óxido", hex: "#5C211E" }, { name: "Verde Musgo", hex: "#47504A" }];
 
 // Listas de Nombres
-const MODELOS_IA = ["X70 Shunliu", "X70 Jinxiu", "X60", "X60 Pro", "X60 Max", "X50", "X50 Pro", "X50 Max", "S108", "S108 Pro", "Glory", "Glory Pro"];
-const MODELOS_ACERO = ["GL098", "NC9020", "GF091", "CL39", "GF092", "GL123-1", "Mid Night", "Contemporary", "GL099", "GL083", "CL56", "GF090", "CL66", "CL37", "CL36", "CL38", "CJ03", "CL23", "CL50", "CL51", "CL097 Pro", "P101", "GL23", "CL058", "CL65", "CL60", "CL72", "P107", "CL55", "CL62", "CL63", "P105", "GF061", "JD073", "NC9516", "P102"];
+const MODELOS_IA = ["X70 Shunliu", "X70 Jinxiu", "X60", "X60 Pro", "X60 Max", "X50", "X50 Pro", "X50 Max"];
+const MODELOS_ACERO = ["Glory", "Glory Pro", "S108", "S108 Pro", "GL098", "NC9020", "GF091", "CL39", "GF092", "GL123-1", "Mid Night", "Contemporary", "GL099", "GL083", "CL56", "GF090", "CL66", "CL37", "CL36", "CL38", "CJ03", "CL23", "CL50", "CL51", "CL097 Pro", "P101", "GL23", "CL058", "CL65", "CL60", "CL72", "P107", "CL55", "CL62", "CL63", "P105", "GF061", "JD073", "NC9516", "P102"];
 const MODELOS_ACORAZADA = ["WL001", "WL002", "WL003", "WL005", "WL006", "WL007", "WL008", "WL009", "WL010", "WL011", "WL015", "WL016", "WL012", "WL021", "WL029", "WL018", "WL019", "WL020", "WL026", "WL027", "WL022", "WL017", "WL023", "WL028", "WL025"];
 const MODELOS_ALUMINIO = ["Wave", "Castle", "Woodland", "Louis", "Saab", "Senna", "Lange", "Heidelberg", "Prada"];
 const MODELOS_MADERA_J = ["WL-J002", "WL-J008", "WL-J011", "WL-J012", "WL-J001", "WL-J003", "WL-J009", "WL-J006", "WL-J010", "WL-J005"];
@@ -247,7 +247,7 @@ const UNLOCK_S101 = "Manilla Inteligente S935 Pro / App / Llave";
 
 const productos_s101 = MODELOS_S101.map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ACERO REFORZADO",
   description: "Puerta de seguridad inteligente 3.0 modelo S101. Nivel antirrobo 4 con marco de aluminio ensamblado y manilla inteligente S935 Pro.",
   specs: SPECS_S101,
   features: FEATURES_S101,
@@ -283,7 +283,7 @@ const UNLOCK_S119 = "Reconocimiento Facial P10 Pro / App / Llave";
 
 const productos_s119 = MODELOS_S119.map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ACERO REFORZADO",
   description: "Puerta de seguridad inteligente 3.0 modelo S119. Nivel antirrobo 4 con núcleo de embrague eléctrico antimanipulación y reconocimiento facial P10 Pro.",
   specs: SPECS_S119,
   features: FEATURES_S119,
@@ -294,7 +294,7 @@ const productos_s119 = MODELOS_S119.map(n => ({
 // ---- S118 ----
 const productos_s118 = ["S118"].map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ACERO REFORZADO",
   description: "Puerta de seguridad inteligente 3.0 modelo S118. Nivel antirrobo 4 con núcleo de embrague eléctrico antimanipulación y reconocimiento facial P10 Pro.",
   specs: SPECS_S119,      // ✅ Specs idénticas al S119
   features: FEATURES_S119, // ✅ Features idénticas al S119
@@ -327,7 +327,7 @@ const UNLOCK_S116 = "Cerradura Inteligente S50 Pro / App / Llave";
 
 const productos_s116 = ["S116"].map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ACERO REFORZADO",
   description: "Puerta de seguridad inteligente 3.0 modelo S116. Nivel antirrobo 4 con cerradura inteligente S50 Pro y cilindro patentado.",
   specs: SPECS_S116,
   features: FEATURES_S116,
@@ -335,38 +335,6 @@ const productos_s116 = ["S116"].map(n => ({
   img: `/images/AI/door-s116.jpg`
 }));
 
-// ---- P102 (IA 3.0) ----
-const SPECS_P102_IA = [
-  { label: "Nivel", value: "Seguridad 3.0 / Antirrobo Nivel 4" },
-  { label: "Grosor", value: "90mm" },
-  { label: "Marco", value: "T Tipo C Marco Alto Artesanal" },
-  { label: "Cerradura", value: "A5021-80 Supercerradura Patentada" },
-  { label: "Núcleo", value: "Cilindro Patentado" },
-  { label: "Cerradura IA", value: "Manilla Inteligente Negra S922 Pro (Z)" },
-  { label: "Estándar", value: "GB17565-2022" },
-  { label: "Medidas", value: "A Medida / No Estándar" }
-];
-
-const FEATURES_P102_IA = [
-  "Seguridad antirrobo nivel 4",
-  "Marco T tipo C alto artesanal",
-  "Supercerradura patentada A5021-80",
-  "Manilla inteligente negra S922 Pro (Z)",
-  "Cumple norma GB17565-2022",
-  "Fabricación a medida no estándar"
-];
-
-const UNLOCK_P102_IA = "Manilla Inteligente S922 Pro / App / Llave";
-
-const productos_p102_ia = ["P102 IA"].map(n => ({
-  name: n,
-  category: "PUERTA DE SEGURIDAD IA",
-  description: "Puerta de seguridad inteligente 3.0 modelo P102. Nivel antirrobo 4 con marco alto artesanal y manilla inteligente negra S922 Pro.",
-  specs: SPECS_P102_IA,
-  features: FEATURES_P102_IA,
-  unlock: UNLOCK_P102_IA,
-  img: `/images/AI/door-p102-ia.jpg`
-}));
 // ---- P103 ----
 const SPECS_P103 = [
   { label: "Nivel", value: "Seguridad 3.0 / Antirrobo Nivel 4" },
@@ -393,7 +361,7 @@ const UNLOCK_P103 = "Manilla Inteligente S935 / App / Llave";
 
 const productos_p103 = ["P103"].map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ACERO REFORZADO",
   description: "Puerta de seguridad inteligente 3.0 modelo P103. Nivel antirrobo 4 con núcleo de embrague eléctrico plegable y manilla inteligente negra S935.",
   specs: SPECS_P103,
   features: FEATURES_P103,
@@ -427,7 +395,7 @@ const UNLOCK_P108 = "Manilla Inteligente S922 Max / App / Llave";
 
 const productos_p108 = ["P108"].map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ACERO REFORZADO",
   description: "Puerta de seguridad inteligente 2.0 modelo P108. Nivel antirrobo 4 con cerradura de doble acción rápida y núcleo de triple fila antiarranque.",
   specs: SPECS_P108,
   features: FEATURES_P108,
@@ -438,7 +406,7 @@ const productos_p108 = ["P108"].map(n => ({
 // ---- P106 ----
 const productos_p106 = ["P106"].map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ACERO REFORZADO",
   description: "Puerta de seguridad inteligente 2.0 modelo P106. Nivel antirrobo 4 con cerradura de doble acción rápida y núcleo de triple fila antiarranque.",
   specs: SPECS_P108,       // ✅ Idéntico al P108
   features: FEATURES_P108, // ✅ Idéntico al P108
@@ -472,7 +440,7 @@ const UNLOCK_GL097_PRO = "Manilla Inteligente S50 Pro / App / Llave";
 
 const productos_gl097_pro = ["GL097 Pro"].map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ACERO REFORZADO",
   description: "Puerta de seguridad inteligente 3.0 modelo GL097 Pro. Nivel antirrobo 4 con núcleo cilindro súper clase C y manilla inteligente S50 Pro.",
   specs: SPECS_GL097_PRO,
   features: FEATURES_GL097_PRO,
@@ -483,7 +451,7 @@ const productos_gl097_pro = ["GL097 Pro"].map(n => ({
 // ---- GL098 Pro ----
 const productos_gl098_pro = ["GL098 Pro"].map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ACERO REFORZADO",
   description: "Puerta de seguridad inteligente 3.0 modelo GL098 Pro. Nivel antirrobo 4 con núcleo cilindro súper clase C y manilla inteligente S50 Pro.",
   specs: SPECS_GL097_PRO,       // ✅ Idéntico al GL097 Pro
   features: FEATURES_GL097_PRO, // ✅ Idéntico al GL097 Pro
@@ -517,7 +485,7 @@ const UNLOCK_CL96 = "Manilla Inteligente S60 Pro / App / Llave";
 
 const productos_cl96 = ["CL96"].map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ACERO REFORZADO",
   description: "Puerta de seguridad inteligente 3.0 modelo CL96. Nivel antirrobo 4 con marco H alto, núcleo plegable de acero inoxidable y manilla inteligente S60 Pro.",
   specs: SPECS_CL96,
   features: FEATURES_CL96,
@@ -550,7 +518,7 @@ const UNLOCK_N9518 = "Manilla Inteligente S922 Pro / App / Llave";
 
 const productos_n9518 = ["N9518"].map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ACERO REFORZADO",
   description: "Puerta de seguridad inteligente 1.0 Pro modelo N9518. Nivel antirrobo 4 con marco flotante, cerradura antiexplosión y núcleo de triple fila antiarranque.",
   specs: SPECS_N9518,
   features: FEATURES_N9518,
@@ -790,74 +758,6 @@ const productos_n9520 = ["N9520"].map(n => ({
   img: `/images/AI/door-n9520.jpg`
 }));
 
-// ---- P101 IA ----
-const SPECS_P101_IA = [
-  { label: "Nivel", value: "Seguridad 1.0 Pro / Antirrobo Nivel 4" },
-  { label: "Grosor", value: "90mm" },
-  { label: "Marco", value: "T Tipo Alto Plano" },
-  { label: "Cerradura", value: "A7-5 Doble Acción Doble Cierre Rápido + Placa Decorativa Principal y Secundaria" },
-  { label: "Núcleo", value: "Triple Fila Motor Eléctrico Mango Plegable" },
-  { label: "Cerradura IA", value: "Manilla Inteligente S922 Ojo de Pez" },
-  { label: "Estándar", value: "GB17565-2022" },
-  { label: "Medidas", value: "A Medida / No Estándar" }
-];
-
-const FEATURES_P101_IA = [
-  "Seguridad antirrobo nivel 4",
-  "Marco T tipo alto plano",
-  "Cerradura A7-5 doble acción con placa decorativa doble",
-  "Núcleo de triple fila eléctrico con mango plegable",
-  "Manilla inteligente S922 con ojo de pez integrado",
-  "Cumple norma GB17565-2022",
-  "Fabricación a medida no estándar"
-];
-
-const UNLOCK_P101_IA = "Manilla Inteligente S922 / App / Llave";
-
-const productos_p101_ia = ["P101 IA"].map(n => ({
-  name: n,
-  category: "PUERTA DE SEGURIDAD IA",
-  description: "Puerta de seguridad inteligente 1.0 Pro modelo P101. Nivel antirrobo 4 con núcleo plegable eléctrico y manilla inteligente S922 con ojo de pez.",
-  specs: SPECS_P101_IA,
-  features: FEATURES_P101_IA,
-  unlock: UNLOCK_P101_IA,
-  img: `/images/AI/door-p101-ia.jpg`
-}));
-
-// ---- P107 IA ----
-const SPECS_P107_IA = [
-  { label: "Nivel", value: "Seguridad 1.0 Pro / Antirrobo Nivel 4" },
-  { label: "Grosor", value: "90mm" },
-  { label: "Marco", value: "T Tipo C Marco Alto Artesanal" },
-  { label: "Cerradura", value: "A7-5 Doble Acción Doble Cierre Rápido + Placa Decorativa Principal y Secundaria" },
-  { label: "Núcleo", value: "Triple Fila Antiarranque Motor Eléctrico" },
-  { label: "Cerradura IA", value: "Manilla Inteligente Negra S922 Pro" },
-  { label: "Estándar", value: "GB17565-2022" },
-  { label: "Medidas", value: "A Medida / No Estándar" }
-];
-
-const FEATURES_P107_IA = [
-  "Seguridad antirrobo nivel 4",
-  "Marco T tipo C alto artesanal",
-  "Cerradura A7-5 doble acción con placa decorativa doble",
-  "Núcleo de triple fila antiarranque con motor eléctrico",
-  "Manilla inteligente negra S922 Pro",
-  "Cumple norma GB17565-2022",
-  "Fabricación a medida no estándar"
-];
-
-const UNLOCK_P107_IA = "Manilla Inteligente S922 Pro / App / Llave";
-
-const productos_p107_ia = ["P107 IA"].map(n => ({
-  name: n,
-  category: "PUERTA DE SEGURIDAD IA",
-  description: "Puerta de seguridad inteligente 1.0 Pro modelo P107. Nivel antirrobo 4 con marco C alto artesanal y manilla inteligente negra S922 Pro.",
-  specs: SPECS_P107_IA,
-  features: FEATURES_P107_IA,
-  unlock: UNLOCK_P107_IA,
-  img: `/images/AI/door-p107-ia.jpg`
-}));
-
 // ---- Y118 ----
 const SPECS_Y118 = [
   { label: "Nivel", value: "Seguridad 3.0 / Antirrobo Nivel 3" },
@@ -960,7 +860,7 @@ const productos_y106 = ["Y106"].map(n => ({
   img: `/images/AI/door-y106.jpg`
 }));
 
-// ---- 潮和 (Chaohe) ----
+// ---- Chaohe ----
 const SPECS_CHAOHE = [
   { label: "Nivel", value: "Seguridad 2.0" },
   { label: "Grosor", value: "95mm" },
@@ -983,10 +883,10 @@ const FEATURES_CHAOHE = [
 
 const UNLOCK_CHAOHE = "A Elección del Cliente / App / Llave";
 
-const productos_chaohe = ["潮和"].map(n => ({
+const productos_chaohe = ["Chaohe"].map(n => ({
   name: n,
   category: "PUERTA DE SEGURIDAD IA",
-  description: "Puerta de seguridad 2.0 modelo 潮和 (Chaohe). 95mm de grosor, marco artesanal vanguard y cerradura IA personalizable a elección del cliente.",
+  description: "Puerta de seguridad 2.0 modelo Chaohe. 95mm de grosor, marco artesanal vanguard y cerradura IA personalizable a elección del cliente.",
   specs: SPECS_CHAOHE,
   features: FEATURES_CHAOHE,
   unlock: UNLOCK_CHAOHE,
@@ -1058,38 +958,7 @@ const productos_l5601 = ["L5601"].map(n => ({
   img: `/images/AI/door-l5601.jpg`
 }));
 
-// ---- P105 IA ----
-const SPECS_P105_IA = [
-  { label: "Nivel", value: "Seguridad IA / Antirrobo Nivel 4" },
-  { label: "Grosor", value: "90mm" },
-  { label: "Marco", value: "Tipo H Marco Alto" },
-  { label: "Cerradura", value: "Doble Acción Doble Cierre Rápido Antiexplosión + Placa Decorativa Principal y Secundaria" },
-  { label: "Núcleo", value: "Triple Fila Antiarranque Motor Eléctrico" },
-  { label: "Cerradura IA", value: "Manilla Inteligente S922 Pro" },
-  { label: "Medidas", value: "A Medida / No Estándar" }
-];
-
-const FEATURES_P105_IA = [
-  "Marco tipo H alto",
-  "Cerradura doble acción antiexplosión con placa decorativa doble",
-  "Núcleo de triple fila antiarranque con motor eléctrico",
-  "Manilla inteligente S922 Pro",
-  "Fabricación a medida no estándar"
-];
-
-const UNLOCK_P105_IA = "Manilla Inteligente S922 Pro / App / Llave";
-
-const productos_p105_ia = ["P105 IA"].map(n => ({
-  name: n,
-  category: "PUERTA DE SEGURIDAD IA",
-  description: "Puerta de seguridad IA modelo P105. Marco H alto, cerradura antiexplosión con placa decorativa doble y manilla inteligente S922 Pro.",
-  specs: SPECS_P105_IA,
-  features: FEATURES_P105_IA,
-  unlock: UNLOCK_P105_IA,
-  img: `/images/AI/door-p105-ia.jpg`
-}));
-
-// ---- 路易 (Louis) ----
+// ---- Louis ----
 const SPECS_LUYI = [
   { label: "Nivel", value: "Seguridad 4.0" },
   { label: "Grosor", value: "95mm" },
@@ -1111,28 +980,28 @@ const FEATURES_LUYI = [
 
 const UNLOCK_LUYI = "A Elección del Cliente / App / Llave";
 
-const productos_luyi = ["路易"].map(n => ({
+const productos_luyi = ["Louis"].map(n => ({
   name: n,
   category: "PUERTA DE SEGURIDAD IA",
-  description: "Puerta de seguridad 4.0 modelo 路易 (Louis). 95mm, marco vanguard artesanal, cerradura A7-3 antiexplosión y sistema IA a elección del cliente.",
+  description: "Puerta de seguridad 4.0 modelo Louis. 95mm, marco vanguard artesanal, cerradura A7-3 antiexplosión y sistema IA a elección del cliente.",
   specs: SPECS_LUYI,
   features: FEATURES_LUYI,
   unlock: UNLOCK_LUYI,
   img: `/images/AI/door-luyi.jpg`
 }));
 
-// ---- 潮普 (Chaopu) ----
-const productos_chaopu = ["潮普"].map(n => ({
+// ---- Chaopu ----
+const productos_chaopu = ["Chaopu"].map(n => ({
   name: n,
   category: "PUERTA DE SEGURIDAD IA",
-  description: "Puerta de seguridad 4.0 modelo 潮普 (Chaopu). 95mm, marco vanguard artesanal, cerradura A7-3 antiexplosión y sistema IA a elección del cliente.",
-  specs: SPECS_LUYI,       // ✅ Idéntico al 路易
-  features: FEATURES_LUYI, // ✅ Idéntico al 路易
-  unlock: UNLOCK_LUYI,     // ✅ Idéntico al 路易
+  description: "Puerta de seguridad 4.0 modelo Chaopu. 95mm, marco vanguard artesanal, cerradura A7-3 antiexplosión y sistema IA a elección del cliente.",
+  specs: SPECS_LUYI,       // ✅ Idéntico al Louis
+  features: FEATURES_LUYI, // ✅ Idéntico al Louis
+  unlock: UNLOCK_LUYI,     // ✅ Idéntico al Louis
   img: `/images/AI/door-chaopu.jpg`
 }));
 
-// ---- 帝华 (Dihua) ----
+// ---- Dihua ----
 const SPECS_DIHUA = [
   { label: "Nivel", value: "Seguridad 4.0" },
   { label: "Grosor", value: "95mm" },
@@ -1154,39 +1023,39 @@ const FEATURES_DIHUA = [
 
 const UNLOCK_DIHUA = "A Elección del Cliente / App / Llave";
 
-const productos_dihua = ["帝华"].map(n => ({
+const productos_dihua = ["Dihua"].map(n => ({
   name: n,
   category: "PUERTA DE SEGURIDAD IA",
-  description: "Puerta de seguridad 4.0 modelo 帝华 (Dihua). 95mm, marco T alto, supercerradura A5021-80 y sistema IA a elección del cliente.",
+  description: "Puerta de seguridad 4.0 modelo Dihua. 95mm, marco T alto, supercerradura A5021-80 y sistema IA a elección del cliente.",
   specs: SPECS_DIHUA,
   features: FEATURES_DIHUA,
   unlock: UNLOCK_DIHUA,
   img: `/images/AI/door-dihua.jpg`
 }));
 
-// ---- 塞纳 (Saina) ----
-const productos_saina = ["塞纳"].map(n => ({
+// ---- Saina ----
+const productos_saina = ["Saina"].map(n => ({
   name: n,
   category: "PUERTA DE SEGURIDAD IA",
-  description: "Puerta de seguridad 4.0 modelo 塞纳 (Saina). 95mm, marco T alto, supercerradura A5021-80 y sistema IA a elección del cliente.",
-  specs: SPECS_DIHUA,       // ✅ Idéntico al 帝华
-  features: FEATURES_DIHUA, // ✅ Idéntico al 帝华
-  unlock: UNLOCK_DIHUA,     // ✅ Idéntico al 帝华
+  description: "Puerta de seguridad 4.0 modelo Saina. 95mm, marco T alto, supercerradura A5021-80 y sistema IA a elección del cliente.",
+  specs: SPECS_DIHUA,       // ✅ Idéntico al Dihua
+  features: FEATURES_DIHUA, // ✅ Idéntico al Dihua
+  unlock: UNLOCK_DIHUA,     // ✅ Idéntico al Dihua
   img: `/images/AI/door-saina.jpg`
 }));
 
-// ---- 迈凯伦 (Makailen) ----
-const productos_makailen = ["迈凯伦"].map(n => ({
+// ---- Makailen ----
+const productos_makailen = ["Makailen"].map(n => ({
   name: n,
   category: "PUERTA DE SEGURIDAD IA",
-  description: "Puerta de seguridad 4.0 modelo 迈凯伦 (Makailen). 95mm, marco vanguard artesanal, cerradura A7-3 antiexplosión y sistema IA a elección del cliente.",
-  specs: SPECS_LUYI,       // ✅ Idéntico al 路易/潮普
-  features: FEATURES_LUYI, // ✅ Idéntico al 路易/潮普
-  unlock: UNLOCK_LUYI,     // ✅ Idéntico al 路易/潮普
+  description: "Puerta de seguridad 4.0 modelo Makailen. 95mm, marco vanguard artesanal, cerradura A7-3 antiexplosión y sistema IA a elección del cliente.",
+  specs: SPECS_LUYI,       // ✅ Idéntico al Louis/Chaopu
+  features: FEATURES_LUYI, // ✅ Idéntico al Louis/Chaopu
+  unlock: UNLOCK_LUYI,     // ✅ Idéntico al Louis/Chaopu
   img: `/images/AI/door-makailen.jpg`
 }));
 
-// ---- 萨博 (Sabo) ----
+// ---- Sabo ----
 const SPECS_SABO = [
   { label: "Nivel", value: "Seguridad 4.0" },
   { label: "Grosor", value: "95mm" },
@@ -1208,35 +1077,35 @@ const FEATURES_SABO = [
 
 const UNLOCK_SABO = "Manilla Inteligente S60 Max / App / Llave";
 
-const productos_sabo = ["萨博"].map(n => ({
+const productos_sabo = ["Sabo"].map(n => ({
   name: n,
   category: "PUERTA DE SEGURIDAD IA",
-  description: "Puerta de seguridad 4.0 modelo 萨博 (Sabo). 95mm, marco T alto, supercerradura A5021-80 y manilla inteligente S60 Max.",
+  description: "Puerta de seguridad 4.0 modelo Sabo. 95mm, marco T alto, supercerradura A5021-80 y manilla inteligente S60 Max.",
   specs: SPECS_SABO,
   features: FEATURES_SABO,
   unlock: UNLOCK_SABO,
   img: `/images/AI/door-sabo.jpg`
 }));
 
-// ---- 潮领 (Chaoling) ----
-const productos_chaoling = ["潮领"].map(n => ({
+// ---- Chaoling ----
+const productos_chaoling = ["Chaoling"].map(n => ({
   name: n,
   category: "PUERTA DE SEGURIDAD IA",
-  description: "Puerta de seguridad 4.0 modelo 潮领 (Chaoling). 95mm, marco T alto, supercerradura A5021-80 y sistema IA a elección del cliente.",
-  specs: SPECS_DIHUA,       // ✅ Idéntico al 帝华/塞纳
-  features: FEATURES_DIHUA, // ✅ Idéntico al 帝华/塞纳
-  unlock: UNLOCK_DIHUA,     // ✅ Idéntico al 帝华/塞纳
+  description: "Puerta de seguridad 4.0 modelo Chaoling. 95mm, marco T alto, supercerradura A5021-80 y sistema IA a elección del cliente.",
+  specs: SPECS_DIHUA,       // ✅ Idéntico al Dihua/Saina
+  features: FEATURES_DIHUA, // ✅ Idéntico al Dihua/Saina
+  unlock: UNLOCK_DIHUA,     // ✅ Idéntico al Dihua/Saina
   img: `/images/AI/door-chaoling.jpg`
 }));
 
-// ---- 普拉达 (Pulada) ----
-const productos_pulada = ["普拉达"].map(n => ({
+// ---- Pulada ----
+const productos_pulada = ["Pulada"].map(n => ({
   name: n,
   category: "PUERTA DE SEGURIDAD IA",
-  description: "Puerta de seguridad 4.0 modelo 普拉达 (Pulada). 95mm, marco T alto, supercerradura A5021-80 y sistema IA a elección del cliente.",
-  specs: SPECS_DIHUA,       // ✅ Idéntico al 帝华/塞纳/潮领
-  features: FEATURES_DIHUA, // ✅ Idéntico al 帝华/塞纳/潮领
-  unlock: UNLOCK_DIHUA,     // ✅ Idéntico al 帝华/塞纳/潮领
+  description: "Puerta de seguridad 4.0 modelo Pulada. 95mm, marco T alto, supercerradura A5021-80 y sistema IA a elección del cliente.",
+  specs: SPECS_DIHUA,       // ✅ Idéntico al Dihua/Saina/Chaoling
+  features: FEATURES_DIHUA, // ✅ Idéntico al Dihua/Saina/Chaoling
+  unlock: UNLOCK_DIHUA,     // ✅ Idéntico al Dihua/Saina/Chaoling
   img: `/images/AI/door-pulada.jpg`
 }));
 
@@ -1305,11 +1174,11 @@ const productos_tdf2003 = ["TDF-2003"].map(n => ({
   img: `/images/COBRE/door-tdf-2003.jpg`
 }));
 
-// ---- 盛世 (Shengshi) ----
-const productos_shengshi = ["盛世"].map(n => ({
+// ---- Shengshi ----
+const productos_shengshi = ["Shengshi"].map(n => ({
   name: n,
   category: "PUERTA DE SEGURIDAD IA",
-  description: "Puerta de seguridad inteligente 3.0 modelo 盛世 (Shengshi). Nivel antirrobo 4 con marco de suelo a techo, cerradura antiexplosión y manilla inteligente S922 Pro.",
+  description: "Puerta de seguridad inteligente 3.0 modelo Shengshi. Nivel antirrobo 4 con marco de suelo a techo, cerradura antiexplosión y manilla inteligente S922 Pro.",
   specs: SPECS_N9519,       // ✅ Idéntico al N9519
   features: FEATURES_N9518, // ✅ Idéntico al N9519
   unlock: UNLOCK_N9518,     // ✅ Idéntico al N9519
@@ -1318,7 +1187,7 @@ const productos_shengshi = ["盛世"].map(n => ({
 
 // --- 3. UNIFICACIÓN ---
 const DATA_PRODUCTOS = [
-  ...productos_ia, ...productos_t200, ...productos_k300_max, ...productos_k300_pro, ...productos_s121, ...productos_s101, ...productos_s119, ...productos_s118, ...productos_s116, ...productos_p102_ia, ...productos_p103, ...productos_p108, ...productos_p106, ...productos_gl097_pro, ...productos_gl098_pro, ...productos_cl96, ...productos_n9518, ...productos_n9519, ...productos_n9520, ...productos_p101_ia, ...productos_p107_ia, ...productos_y118, ...productos_y119, ...productos_y106, ...productos_chaohe, ...productos_l5859, ...productos_l5857, ...productos_l5601, ...productos_p105_ia, ...productos_luyi, ...productos_chaopu, ...productos_dihua, ...productos_saina, ...productos_makailen, ...productos_sabo, ...productos_chaoling, ...productos_pulada, ...productos_shengshi,
+  ...productos_ia, ...productos_t200, ...productos_k300_max, ...productos_k300_pro, ...productos_s121, ...productos_s101, ...productos_s119, ...productos_s118, ...productos_s116, ...productos_p103, ...productos_p108, ...productos_p106, ...productos_gl097_pro, ...productos_gl098_pro, ...productos_cl96, ...productos_n9518, ...productos_n9519, ...productos_n9520, ...productos_y118, ...productos_y119, ...productos_y106, ...productos_chaohe, ...productos_l5859, ...productos_l5857, ...productos_l5601, ...productos_luyi, ...productos_chaopu, ...productos_dihua, ...productos_saina, ...productos_makailen, ...productos_sabo, ...productos_chaoling, ...productos_pulada, ...productos_shengshi,
   ...productos_acero, ...productos_acorazada,
   ...productos_aluminio, ...productos_madera_j, ...productos_madera_d,
   ...productos_madera_s, ...productos_pvc, ...productos_corredizas,
