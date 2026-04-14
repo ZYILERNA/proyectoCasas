@@ -17,15 +17,19 @@ const COLORS_CORTAFUEGOS = [{ name: "Blanco Perla", hex: "#CECFCA" }, { name: "B
 
 // Listas de Nombres
 const MODELOS_IA = ["X70 Shunliu", "X70 Jinxiu", "X60", "X60 Pro", "X60 Max", "X50", "X50 Pro", "X50 Max"];
-const MODELOS_ACERO = ["Glory", "Glory Pro", "S108", "S108 Pro", "GL098", "NC9020", "GF091", "CL39", "GF092", "GL123-1", "Mid Night", "Contemporary", "GL099", "GL083", "CL56", "GF090", "CL66", "CL37", "CL36", "CL38", "CJ03", "CL23", "CL50", "CL51", "CL097 Pro", "P101", "GL23", "CL058", "CL65", "CL60", "CL72", "P107", "CL55", "CL62", "CL63", "P105", "GF061", "JD073", "NC9516", "P102"];
-const MODELOS_ACORAZADA = ["WL001", "WL002", "WL003", "WL005", "WL006", "WL007", "WL008", "WL009", "WL010", "WL011", "WL015", "WL016", "WL012", "WL021", "WL029", "WL018", "WL019", "WL020", "WL026", "WL027", "WL022", "WL017", "WL023", "WL028", "WL025"];
-const MODELOS_ALUMINIO = ["Wave", "Castle", "Woodland", "Louis", "Saab", "Senna", "Lange", "Heidelberg", "Prada"];
-const MODELOS_MADERA_J = ["WL-J002", "WL-J008", "WL-J011", "WL-J012", "WL-J001", "WL-J003", "WL-J009", "WL-J006", "WL-J010", "WL-J005"];
-const MODELOS_MADERA_D = ["WL-D003", "WL-D015", "WL-D017", "WL-D011", "WL-D002", "WL-D005", "WL-D006", "WL-D007", "WL-D008", "WL-D010", "WL-D012", "WL-D013", "WL-D016", "WL-D018", "WL-D019", "WL-D020", "WL-D033", "WL-D037", "WL-D001", "WL-D009", "WL-D021", "WL-D022", "WL-D023", "WL-D025", "WL-D026", "WL-D027", "WL-D028", "WL-D029", "WL-D030", "WL-D031", "WL-D032", "WL-D036", "WL-D038", "WL-5103", "WL-5105", "WL-5107", "WL-5109", "WL-5110", "WL-5117", "WL-5203", "WL-5503"];
-const MODELOS_MADERA_S = ["WL-S009", "WL-S108", "WL-S023", "WL-S206", "WL-S003", "WL-S008", "WL-S010", "WL-S011", "WL-S012", "WL-S020", "WL-S027", "WL-S001", "WL-S002", "WL-S005", "WL-S013", "WL-S015", "WL-S016", "WL-S017", "WL-S019", "WL-S021", "WL-S022", "WL-S025", "WL-S026", "WL-S201", "WL-S205", "WL-S207", "WL-S208", "WL-S209", "WL-S210", "WL-S101B", "WL-S102B", "WL-S103B"];
+const MODELOS_ACERO = ["CJ03", "CL23", "CL36", "CL37", "CL38", "CL39", "CL50", "CL51", "CL55", "CL058", "CL60", "CL62", "CL63", "CL65", "CL72", "CL097 Pro", "GF061", "GF090", "GF091", "GF092", "GL23", "GL083", "GL098", "GL099", "GL123-1", "JD073", "NC9020", "NC9516", "P101", "P102", "P105", "P107", "S108", "S108 Pro", "Contemporary", "Glory", "Glory Pro", "Mid Night"];
+const MODELOS_ACORAZADA = ["WL001", "WL002", "WL003", "WL005", "WL006", "WL007", "WL008", "WL009", "WL010", "WL011", "WL012", "WL013", "WL015", "WL016", "WL017", "WL018", "WL019", "WL020", "WL021", "WL022", "WL023", "WL025", "WL026", "WL027", "WL028", "WL029"];
+const MODELOS_ALUMINIO = ["Castle", "Chaose", "Dongseliunian", "Heidelberg", "Jinghong", "Lange", "Louis", "Mingmenguizu", "Prada", "Ruihe", "Ruoyin", "Saab", "Senna", "Wave", "Woodland", "Yashang"];
+const MODELOS_MADERA_J = ["WL-J001", "WL-J002", "WL-J003", "WL-J005", "WL-J006", "WL-J008", "WL-J009", "WL-J010", "WL-J011", "WL-J012"];
+const MODELOS_MADERA_D = ["WL-D001", "WL-D002", "WL-D003", "WL-D005", "WL-D006", "WL-D007", "WL-D008", "WL-D009", "WL-D010", "WL-D011", "WL-D012", "WL-D013", "WL-D015", "WL-D016", "WL-D017", "WL-D018", "WL-D019", "WL-D020", "WL-D021", "WL-D022", "WL-D023", "WL-D025", "WL-D026", "WL-D027", "WL-D028", "WL-D029", "WL-D030", "WL-D031", "WL-D032", "WL-D033", "WL-D036", "WL-D037", "WL-D038", "WL-5103", "WL-5105", "WL-5107", "WL-5109", "WL-5110", "WL-5117", "WL-5203", "WL-5503"];
+const MODELOS_MADERA_S = ["WL-S001", "WL-S002", "WL-S003", "WL-S005", "WL-S008", "WL-S009", "WL-S010", "WL-S011", "WL-S012", "WL-S013", "WL-S015", "WL-S016", "WL-S017", "WL-S019", "WL-S020", "WL-S021", "WL-S022", "WL-S023", "WL-S025", "WL-S026", "WL-S027", "WL-S101B", "WL-S102B", "WL-S103B", "WL-S108", "WL-S201", "WL-S205", "WL-S206", "WL-S207", "WL-S208", "WL-S209", "WL-S210"];
+const MODELOS_MADERA_S203 = ["S203"];
+const MODELOS_MINIMALISTA_UME = ["UME-103", "UME-114", "UME-117", "UME-105", "UME-102", "UME-120"];
+const MODELOS_BAJO_CARBONO = ["WL-DT107", "WL-DT103", "WL-DT08"];
 const MODELOS_PVC = ["WL-P001", "WL-P002", "WL-P003", "WL-P005", "WL-P006", "WL-P007", "WL-P008", "WL-P009", "WL-P010", "WL-P011", "WL-P015", "WL-P016", "WL-P201"];
 const MODELOS_CORREDIZAS = ["WL-A23001", "WL-A23002", "WL-A23019", "WL-A23020"];
 const MODELOS_CORTAFUEGOS = ["GD-01", "GD-02", "GD-03", "TD-01", "TD-02", "TD-03", "GF026"];
+const MODELOS_EVACUACION = ["GK-01", "GK-02", "GK-03", "MK-01", "MK-02", "MK-03"];
 const MODELOS_MEDICAS = ["PUERTA DE SALA1", "PUERTA DE SALA2", "PUERTA DE SALA3", "PUERTA DE SALA4", "PUERTA DE SALA5", "PUERTA CORTAFUEGO AISLANTE1", "PUERTA CORTAFUEGO AISLANTE2", "PUERTA AUTOMÁTICA PLANA, HERMÉTICA Y ABATIBLE", "PUERTAS AUTOMÁTICAS HERMÉTICAS"];
 
 // Specs
@@ -212,7 +216,7 @@ const UNLOCK_S121 = "Manilla Inteligente P16 Pro / App / Llave";
 
 const productos_s121 = MODELOS_S121.map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ACERO FUNDIDO",
   description: "Puerta de seguridad inteligente 3.0 modelo S121. Nivel antirrobo 4 con manilla inteligente empotrada P16 Pro.",
   specs: SPECS_S121,
   features: FEATURES_S121,
@@ -414,6 +418,40 @@ const productos_p106 = ["P106"].map(n => ({
   img: `/images/AI/door-p106.jpg`
 }));
 
+// ---- GL097 ----
+const SPECS_GL097 = [
+  { label: "Nivel", value: "Seguridad 3.0 / Antirrobo Nivel 4" },
+  { label: "Grosor", value: "90mm" },
+  { label: "Marco", value: "T Tipo C Marco Alto Artesanal" },
+  { label: "Cerradura", value: "A5021-80 Supercerradura Patentada" },
+  { label: "Núcleo", value: "Cilindro Patentado" },
+  { label: "Cerradura IA", value: "Manilla Inteligente S935" },
+  { label: "Estándar", value: "GB17565-2022" },
+  { label: "Medidas", value: "A Medida / No Estándar" }
+];
+
+const FEATURES_GL097 = [
+  "Seguridad antirrobo nivel 4",
+  "Marco T tipo C alto artesanal",
+  "Supercerradura patentada A5021-80",
+  "Cilindro patentado",
+  "Manilla inteligente S935",
+  "Cumple norma GB17565-2022",
+  "Fabricación a medida no estándar"
+];
+
+const UNLOCK_GL097 = "Manilla Inteligente S935 / App / Llave";
+
+const productos_gl097 = ["GL097"].map(n => ({
+  name: n,
+  category: "PUERTA DE ACERO REFORZADO",
+  description: "Puerta de seguridad inteligente 3.0 modelo GL097. Nivel antirrobo 4 con marco T tipo C alto artesanal y manilla inteligente S935.",
+  specs: SPECS_GL097,
+  features: FEATURES_GL097,
+  unlock: UNLOCK_GL097,
+  img: `/images/ACERO/door-gl097.jpg`
+}));
+
 // ---- GL097 Pro ----
 const SPECS_GL097_PRO = [
   { label: "Nivel", value: "Seguridad 3.0 / Antirrobo Nivel 4" },
@@ -490,8 +528,42 @@ const productos_cl96 = ["CL96"].map(n => ({
   specs: SPECS_CL96,
   features: FEATURES_CL96,
   unlock: UNLOCK_CL96,
-  img: `/images/AI/door-cl96.jpg`
+  img: `/images/ACERO/door-cl96.jpg`
 }));
+
+// ---- CL56 ----
+const productos_cl56 = ["CL56"].map(n => ({
+  name: n,
+  category: "PUERTA DE ACERO REFORZADO",
+  description: "Puerta de seguridad inteligente 3.0 modelo CL56. Nivel antirrobo 4 con marco H alto, núcleo plegable de acero inoxidable y manilla inteligente S60 Pro.",
+  specs: SPECS_CL96,     // ✅ Idéntico al CL96
+  features: FEATURES_CL96,
+  unlock: UNLOCK_CL96,
+  img: `/images/ACERO/door-cl56.jpg`
+}));
+
+// ---- CL59 ----
+const productos_cl59 = ["CL59"].map(n => ({
+  name: n,
+  category: "PUERTA DE ACERO REFORZADO",
+  description: "Puerta de seguridad inteligente 3.0 modelo CL59. Nivel antirrobo 4 con marco H alto, núcleo plegable de acero inoxidable y manilla inteligente S60 Pro.",
+  specs: SPECS_CL96,     // ✅ Idéntico al CL96
+  features: FEATURES_CL96,
+  unlock: UNLOCK_CL96,
+  img: `/images/ACERO/door-cl59.jpg`
+}));
+
+// ---- CL66 ----
+const productos_cl66 = ["CL66"].map(n => ({
+  name: n,
+  category: "PUERTA DE ACERO REFORZADO",
+  description: "Puerta de seguridad inteligente 3.0 modelo CL66. Nivel antirrobo 4 con marco H alto, núcleo plegable de acero inoxidable y manilla inteligente S60 Pro.",
+  specs: SPECS_CL96,     // ✅ Idéntico al CL96
+  features: FEATURES_CL96,
+  unlock: UNLOCK_CL96,
+  img: `/images/ACERO/door-cl66.jpg`
+}));
+
 // ---- N9518 ----
 const SPECS_N9518 = [
   { label: "Nivel", value: "Seguridad 1.0 Pro / Antirrobo Nivel 4" },
@@ -540,7 +612,7 @@ const SPECS_N9519 = [
 
 const productos_n9519 = ["N9519"].map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ACERO FUNDIDO",
   description: "Puerta de seguridad inteligente 1.0 Pro modelo N9519. Nivel antirrobo 4 con marco de suelo a techo, cerradura antiexplosión y núcleo de triple fila antiarranque.",
   specs: SPECS_N9519,
   features: FEATURES_N9518, // ✅ Features idénticas al N9518
@@ -562,6 +634,14 @@ const SPECS_MADERA = [{ label: "Núcleo", value: "Madera Sólida" }, { label: "A
 const FEATURES_MADERA = ["Diseño minimalista", "Aislamiento acústico", "Acabados premium"];
 const UNLOCK_MADERA = "Manilla Magnética";
 
+const SPECS_MINIMALISTA = [{ label: "Estilo", value: "Minimalista Contemporáneo" }, { label: "Material", value: "Madera de Ingeniería" }, { label: "Acabado", value: "Premium" }];
+const FEATURES_MINIMALISTA = ["Diseño minimalista contemporáneo", "Líneas limpias y elegantes", "Acabados premium"];
+const UNLOCK_MINIMALISTA = "Manilla Magnética";
+
+const SPECS_BAJO_CARBONO = [{ label: "Serie", value: "Bajo Carbono WL-DT" }, { label: "Sostenibilidad", value: "Huella de Carbono Reducida" }, { label: "Certificación", value: "Eco-Premium" }];
+const FEATURES_BAJO_CARBONO = ["Fabricación sostenible bajo carbono", "Materiales eco-certificados", "Acabados premium responsables"];
+const UNLOCK_BAJO_CARBONO = "Mecánica";
+
 const SPECS_PVC = [{ label: "Material", value: "PVC Alta Densidad" }, { label: "Estilo", value: "Vanguardista" }];
 const FEATURES_PVC = ["Diseño vanguardista", "Resistente humedad", "Fácil limpieza"];
 const UNLOCK_PVC = "Mecánica";
@@ -573,6 +653,10 @@ const UNLOCK_CORREDIZAS = "Multipunto";
 const SPECS_CORTAFUEGOS = [{ label: "Certificación", value: "Resistencia Fuego" }, { label: "Material", value: "Acero Galvanizado" }];
 const FEATURES_CORTAFUEGOS = ["Contención fuego/humo", "Estructura robusta", "Certificada"];
 const UNLOCK_CORTAFUEGOS = "Barra Antipánico";
+
+const SPECS_EVACUACION = [{ label: "Función", value: "Evacuación de Emergencia" }, { label: "Material", value: "Acero Galvanizado" }, { label: "Apertura", value: "Sentido Evacuación" }];
+const FEATURES_EVACUACION = ["Apertura en sentido de evacuación", "Barra antipánico certificada", "Resistente al fuego", "Señalización normalizada"];
+const UNLOCK_EVACUACION = "Barra Antipánico";
 
 const SPECS_MEDICAS = [{ label: "Material", value: "HPL / Resina / Acero Inox" }, { label: "Propiedades", value: "Antibacteriano, Hermético" }];
 const FEATURES_MEDICAS = ["Certificación Estándar Hospitalario", "Hermeticidad garantizada", "Superficie antibacteriana"];
@@ -684,6 +768,27 @@ const productos_madera_s = [...new Set(MODELOS_MADERA_S)].map(n => ({
   img: `/images/MADERAACÚSTICA/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
 }));
 
+const productos_madera_s203 = MODELOS_MADERA_S203.map(n => ({
+  name: n, category: "PUERTA ACÚSTICA DE MADERA",
+  description: `Modelo ${n}. Puerta acústica de madera con diseño minimalista y acabados premium.`,
+  specs: SPECS_MADERA, features: FEATURES_MADERA, unlock: UNLOCK_MADERA,
+  img: `/images/MADERAACÚSTICA/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+}));
+
+const productos_minimalista_ume = MODELOS_MINIMALISTA_UME.map(n => ({
+  name: n, category: "PUERTA MINIMALISTA",
+  description: `Serie UME Modelo ${n}. Diseño minimalista contemporáneo con acabados premium.`,
+  specs: SPECS_MINIMALISTA, features: FEATURES_MINIMALISTA, unlock: UNLOCK_MINIMALISTA,
+  img: `/images/MINIMALISTA/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+}));
+
+const productos_bajo_carbono = MODELOS_BAJO_CARBONO.map(n => ({
+  name: n, category: "PUERTA DE BAJO CARBONO",
+  description: `Serie WL-DT Modelo ${n}. Puerta de bajo carbono con fabricación sostenible y eco-certificada.`,
+  specs: SPECS_BAJO_CARBONO, features: FEATURES_BAJO_CARBONO, unlock: UNLOCK_BAJO_CARBONO,
+  img: `/images/BAJOCARBONO/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+}));
+
 const productos_pvc = MODELOS_PVC.map(n => ({
   name: n, category: "PUERTA DE PVC",
   description: `Modelo ${n}. Diseño vanguardista.`,
@@ -706,11 +811,18 @@ const productos_corredizas = MODELOS_CORREDIZAS.map(n => {
 
 // ✅ CORRECCIÓN 1: Convertir nombres de Cortafuegos a minúsculas y sin espacios
 const productos_cortafuegos = MODELOS_CORTAFUEGOS.map(n => ({
-  name: `Modelo ${n}`, category: "PUERTA COMERCIAL CORTAFUEGO",
+  name: n, category: "PUERTA COMERCIAL CORTAFUEGO",
   description: "Puerta cortafuego certificada.",
   specs: SPECS_CORTAFUEGOS, features: FEATURES_CORTAFUEGOS, unlock: UNLOCK_CORTAFUEGOS,
   colors: COLORS_CORTAFUEGOS,
   img: `/images/CORTAFUEGO/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+}));
+
+const productos_evacuacion = MODELOS_EVACUACION.map(n => ({
+  name: n, category: "PUERTA DE EVACUACIÓN",
+  description: "Puerta de evacuación de emergencia certificada con apertura en sentido de evacuación.",
+  specs: SPECS_EVACUACION, features: FEATURES_EVACUACION, unlock: UNLOCK_EVACUACION,
+  img: `/images/EVACUACION/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
 }));
 
 // ✅ CORRECCIÓN 2: Convertir nombres Médicos a minúsculas y sin espacios
@@ -750,7 +862,7 @@ const UNLOCK_N9520 = "Cerradura Inteligente Externa S922 Pro / App / Llave";
 
 const productos_n9520 = ["N9520"].map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ACERO FUNDIDO",
   description: "Puerta de seguridad inteligente 1.0 Pro modelo N9520. Nivel antirrobo 4 con cerradura A7-5 de doble acción y cerradura inteligente externa S922 Pro.",
   specs: SPECS_N9520,
   features: FEATURES_N9520,
@@ -784,12 +896,23 @@ const UNLOCK_Y118 = "Manilla Mecánica P10 Pro / Llave";
 
 const productos_y118 = ["Y118"].map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ACERO FUNDIDO",
   description: "Puerta de seguridad 3.0 modelo Y118. Antirrobo nivel 3 con marco flotante de borde tridimensional y manilla mecánica P10 Pro.",
   specs: SPECS_Y118,
   features: FEATURES_Y118,
   unlock: UNLOCK_Y118,
   img: `/images/AI/door-y118.jpg`
+}));
+
+// ---- Y116 ----
+const productos_y116 = ["Y116"].map(n => ({
+  name: n,
+  category: "PUERTA DE ACERO FUNDIDO",
+  description: "Puerta de seguridad 3.0 modelo Y116. Antirrobo nivel 3 con marco flotante de borde tridimensional y manilla mecánica P10 Pro.",
+  specs: SPECS_Y118,       // ✅ Idéntico al Y118
+  features: FEATURES_Y118,
+  unlock: UNLOCK_Y118,
+  img: `/images/ACERO/door-y116.jpg`
 }));
 
 // ---- Y119 ----
@@ -818,7 +941,7 @@ const UNLOCK_Y119 = "Manilla Mecánica P10 Pro / Llave";
 
 const productos_y119 = ["Y119"].map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ACERO FUNDIDO",
   description: "Puerta de seguridad 3.0 modelo Y119. Antirrobo nivel 3 con marco T ángulo recto y flotante, manilla mecánica P10 Pro.",
   specs: SPECS_Y119,
   features: FEATURES_Y119,
@@ -852,7 +975,7 @@ const UNLOCK_Y106 = "Manilla Mecánica T007 / Llave";
 
 const productos_y106 = ["Y106"].map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ACERO FUNDIDO",
   description: "Puerta de seguridad 3.0 modelo Y106. Antirrobo nivel 3 con marco flotante 85 borde plegado, cerradura A7-3 antiexplosión y manilla gris metálico T007.",
   specs: SPECS_Y106,
   features: FEATURES_Y106,
@@ -885,7 +1008,7 @@ const UNLOCK_CHAOHE = "A Elección del Cliente / App / Llave";
 
 const productos_chaohe = ["Chaohe"].map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ALUMINIO FUNDIDO",
   description: "Puerta de seguridad 2.0 modelo Chaohe. 95mm de grosor, marco artesanal vanguard y cerradura IA personalizable a elección del cliente.",
   specs: SPECS_CHAOHE,
   features: FEATURES_CHAOHE,
@@ -950,7 +1073,7 @@ const productos_l5857 = ["L5857"].map(n => ({
 // ---- L5601 ----
 const productos_l5601 = ["L5601"].map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ACERO FUNDIDO",
   description: "Puerta de seguridad 3.0 Max modelo L5601. 95mm, marco T-C bisel 50° de suelo a techo y cerradura IA personalizable a elección del cliente.",
   specs: productos_l5857[0].specs,       // ✅ Idéntico al L5857
   features: productos_l5857[0].features, // ✅ Idéntico al L5857
@@ -982,7 +1105,7 @@ const UNLOCK_LUYI = "A Elección del Cliente / App / Llave";
 
 const productos_luyi = ["Louis"].map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ALUMINIO FUNDIDO",
   description: "Puerta de seguridad 4.0 modelo Louis. 95mm, marco vanguard artesanal, cerradura A7-3 antiexplosión y sistema IA a elección del cliente.",
   specs: SPECS_LUYI,
   features: FEATURES_LUYI,
@@ -993,7 +1116,7 @@ const productos_luyi = ["Louis"].map(n => ({
 // ---- Chaopu ----
 const productos_chaopu = ["Chaopu"].map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ALUMINIO FUNDIDO",
   description: "Puerta de seguridad 4.0 modelo Chaopu. 95mm, marco vanguard artesanal, cerradura A7-3 antiexplosión y sistema IA a elección del cliente.",
   specs: SPECS_LUYI,       // ✅ Idéntico al Louis
   features: FEATURES_LUYI, // ✅ Idéntico al Louis
@@ -1090,7 +1213,7 @@ const productos_sabo = ["Sabo"].map(n => ({
 // ---- Chaoling ----
 const productos_chaoling = ["Chaoling"].map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ALUMINIO FUNDIDO",
   description: "Puerta de seguridad 4.0 modelo Chaoling. 95mm, marco T alto, supercerradura A5021-80 y sistema IA a elección del cliente.",
   specs: SPECS_DIHUA,       // ✅ Idéntico al Dihua/Saina
   features: FEATURES_DIHUA, // ✅ Idéntico al Dihua/Saina
@@ -1187,11 +1310,13 @@ const productos_shengshi = ["Shengshi"].map(n => ({
 
 // --- 3. UNIFICACIÓN ---
 const DATA_PRODUCTOS = [
-  ...productos_ia, ...productos_t200, ...productos_k300_max, ...productos_k300_pro, ...productos_s121, ...productos_s101, ...productos_s119, ...productos_s118, ...productos_s116, ...productos_p103, ...productos_p108, ...productos_p106, ...productos_gl097_pro, ...productos_gl098_pro, ...productos_cl96, ...productos_n9518, ...productos_n9519, ...productos_n9520, ...productos_y118, ...productos_y119, ...productos_y106, ...productos_chaohe, ...productos_l5859, ...productos_l5857, ...productos_l5601, ...productos_luyi, ...productos_chaopu, ...productos_dihua, ...productos_saina, ...productos_makailen, ...productos_sabo, ...productos_chaoling, ...productos_pulada, ...productos_shengshi,
+  ...productos_ia, ...productos_t200, ...productos_k300_max, ...productos_k300_pro, ...productos_s101, ...productos_s116, ...productos_s118, ...productos_s119, ...productos_s121, ...productos_p103, ...productos_p106, ...productos_p108, ...productos_gl097, ...productos_gl097_pro, ...productos_gl098_pro, ...productos_cl56, ...productos_cl59, ...productos_cl66, ...productos_cl96, ...productos_n9518, ...productos_n9519, ...productos_n9520, ...productos_y106, ...productos_y116, ...productos_y118, ...productos_y119, ...productos_chaohe, ...productos_l5859, ...productos_l5857, ...productos_l5601, ...productos_luyi, ...productos_chaopu, ...productos_dihua, ...productos_saina, ...productos_makailen, ...productos_sabo, ...productos_chaoling, ...productos_pulada, ...productos_shengshi,
   ...productos_acero, ...productos_acorazada,
   ...productos_aluminio, ...productos_madera_j, ...productos_madera_d,
-  ...productos_madera_s, ...productos_pvc, ...productos_corredizas,
-  ...productos_cortafuegos, ...productos_medicas,
+  ...productos_madera_s, ...productos_madera_s203,
+  ...productos_minimalista_ume, ...productos_bajo_carbono,
+  ...productos_pvc, ...productos_corredizas,
+  ...productos_cortafuegos, ...productos_evacuacion, ...productos_medicas,
   ...productos_tdf2003, ...productos_tdf2009
 ];
 

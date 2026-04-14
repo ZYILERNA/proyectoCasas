@@ -20,9 +20,12 @@ const CATEGORIAS = [
   "PUERTA DE ACERO REFORZADO",
   "PUERTA DE SEGURIDAD ACORAZADA",
   "PUERTA ACÚSTICA DE MADERA",
+  "PUERTA MINIMALISTA",
+  "PUERTA DE BAJO CARBONO",
   "PUERTA DE PVC",
   "PUERTAS CORREDIZAS Y ABATIBLES",
   "PUERTA COMERCIAL CORTAFUEGO",
+  "PUERTA DE EVACUACIÓN",
   "PUERTA DE COBRE COMPUESTA",
   "PUERTA MÉDICA",
 ];
@@ -38,6 +41,9 @@ const IMAGENES_HERO = {
   "PUERTA DE PVC": "/images/pvc.jpg",
   "PUERTAS CORREDIZAS Y ABATIBLES": "/images/corredizas.jpg",
   "PUERTA COMERCIAL CORTAFUEGO": "/images/cortafuego.jpg",
+  "PUERTA DE EVACUACIÓN": "/images/evacuacion.jpg",
+  "PUERTA MINIMALISTA": "/images/minimalista.jpg",
+  "PUERTA DE BAJO CARBONO": "/images/bajocarbono.jpg",
   "PUERTA MÉDICA": "/images/medica.jpg",
   "PUERTA DE COBRE COMPUESTA": "/images/cobrewallaper.jpg"
 };
@@ -170,6 +176,9 @@ const ProductModal = ({ product, onClose }) => {
   else if (product.category.includes("PVC")) { accentColor = "text-teal-600"; borderColor = "border-teal-600"; Icon = Sparkles; }
   else if (product.category.includes("CORREDIZAS")) { accentColor = "text-indigo-600"; borderColor = "border-indigo-600"; Icon = MoveHorizontal; }
   else if (product.category.includes("CORTAFUEGO")) { accentColor = "text-orange-600"; borderColor = "border-orange-600"; Icon = Flame; }
+  else if (product.category.includes("EVACUACIÓN")) { accentColor = "text-red-600"; borderColor = "border-red-600"; Icon = Flame; }
+  else if (product.category.includes("MINIMALISTA")) { accentColor = "text-stone-500"; borderColor = "border-stone-500"; Icon = Sparkles; }
+  else if (product.category.includes("BAJO CARBONO")) { accentColor = "text-green-600"; borderColor = "border-green-600"; Icon = Sparkles; }
 
   return (
     <div className="fixed inset-0 z-[100] flex justify-end">
@@ -334,6 +343,9 @@ const ProductCard = ({ product, onClick, priority = false }) => {
   else if (product.category.includes("PVC")) highlightClass = "text-teal-600";
   else if (product.category.includes("CORREDIZAS")) highlightClass = "text-indigo-600";
   else if (product.category.includes("CORTAFUEGO")) highlightClass = "text-orange-600";
+  else if (product.category.includes("EVACUACIÓN")) highlightClass = "text-red-600";
+  else if (product.category.includes("MINIMALISTA")) highlightClass = "text-stone-500";
+  else if (product.category.includes("BAJO CARBONO")) highlightClass = "text-green-600";
 
   return (
     <motion.div
