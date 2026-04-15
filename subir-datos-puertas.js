@@ -19,7 +19,7 @@ const COLORS_CORTAFUEGOS = [{ name: "Blanco Perla", hex: "#CECFCA" }, { name: "B
 const MODELOS_IA = ["X70 Shunliu", "X70 Jinxiu", "X60", "X60 Pro", "X60 Max", "X50", "X50 Pro", "X50 Max"];
 const MODELOS_ACERO = ["CJ03", "CL23", "CL36", "CL37", "CL38", "CL39", "CL50", "CL51", "CL55", "CL058", "CL60", "CL62", "CL63", "CL65", "CL72", "CL097 Pro", "GF061", "GF090", "GF091", "GF092", "GL23", "GL083", "GL098", "GL099", "GL123-1", "JD073", "NC9020", "NC9516", "P101", "P102", "P105", "P107", "S108", "S108 Pro", "Contemporary", "Glory", "Glory Pro", "Mid Night"];
 const MODELOS_ACORAZADA = ["WL001", "WL002", "WL003", "WL005", "WL006", "WL007", "WL008", "WL009", "WL010", "WL011", "WL012", "WL013", "WL015", "WL016", "WL017", "WL018", "WL019", "WL020", "WL021", "WL022", "WL023", "WL025", "WL026", "WL027", "WL028", "WL029"];
-const MODELOS_ALUMINIO = ["Castle", "Chaose", "Dongseliunian", "Heidelberg", "Jinghong", "Lange", "Louis", "Mingmenguizu", "Prada", "Ruihe", "Ruoyin", "Saab", "Senna", "Wave", "Woodland", "Yashang"];
+const MODELOS_ALUMINIO = ["Castle", "Chaose", "Dongseliunian", "Heidelberg", "Jinghong", "Lange", "Louis", "Mingmenguizu", "Prada", "Ruihe", "Ruoyin", "Senna", "Wave", "Woodland", "Yashang"];
 const MODELOS_MADERA_J = ["WL-J001", "WL-J002", "WL-J003", "WL-J005", "WL-J006", "WL-J008", "WL-J009", "WL-J010", "WL-J011", "WL-J012"];
 const MODELOS_MADERA_D = ["WL-D001", "WL-D002", "WL-D003", "WL-D005", "WL-D006", "WL-D007", "WL-D008", "WL-D009", "WL-D010", "WL-D011", "WL-D012", "WL-D013", "WL-D015", "WL-D016", "WL-D017", "WL-D018", "WL-D019", "WL-D020", "WL-D021", "WL-D022", "WL-D023", "WL-D025", "WL-D026", "WL-D027", "WL-D028", "WL-D029", "WL-D030", "WL-D031", "WL-D032", "WL-D033", "WL-D036", "WL-D037", "WL-D038", "WL-5103", "WL-5105", "WL-5107", "WL-5109", "WL-5110", "WL-5117", "WL-5203", "WL-5503"];
 const MODELOS_MADERA_S = ["WL-S001", "WL-S002", "WL-S003", "WL-S005", "WL-S008", "WL-S009", "WL-S010", "WL-S011", "WL-S012", "WL-S013", "WL-S015", "WL-S016", "WL-S017", "WL-S019", "WL-S020", "WL-S021", "WL-S022", "WL-S023", "WL-S025", "WL-S026", "WL-S027", "WL-S101B", "WL-S102B", "WL-S103B", "WL-S108", "WL-S201", "WL-S205", "WL-S206", "WL-S207", "WL-S208", "WL-S209", "WL-S210"];
@@ -221,7 +221,7 @@ const productos_s121 = MODELOS_S121.map(n => ({
   specs: SPECS_S121,
   features: FEATURES_S121,
   unlock: UNLOCK_S121,
-  img: `/images/AI/door-s121.jpg`
+  img: `/images/ACERO/door-s121.jpg`
 }));
 
 // ---- S101 ----
@@ -256,7 +256,7 @@ const productos_s101 = MODELOS_S101.map(n => ({
   specs: SPECS_S101,
   features: FEATURES_S101,
   unlock: UNLOCK_S101,
-  img: `/images/AI/door-s101.jpg`
+  img: `/images/ACERO/door-s101.jpg`
 }));
 
 // ---- S119 ----
@@ -292,7 +292,7 @@ const productos_s119 = MODELOS_S119.map(n => ({
   specs: SPECS_S119,
   features: FEATURES_S119,
   unlock: UNLOCK_S119,
-  img: `/images/AI/door-s119.jpg`
+  img: `/images/ACERO/door-s119.jpg`
 }));
 
 // ---- S118 ----
@@ -303,7 +303,7 @@ const productos_s118 = ["S118"].map(n => ({
   specs: SPECS_S119,      // ✅ Specs idénticas al S119
   features: FEATURES_S119, // ✅ Features idénticas al S119
   unlock: UNLOCK_S119,     // ✅ Desbloqueo idéntico al S119
-  img: `/images/AI/door-s118.jpg`
+  img: `/images/ACERO/door-s118.jpg`
 }));
 
 // ---- S116 ----
@@ -336,7 +336,7 @@ const productos_s116 = ["S116"].map(n => ({
   specs: SPECS_S116,
   features: FEATURES_S116,
   unlock: UNLOCK_S116,
-  img: `/images/AI/door-s116.jpg`
+  img: `/images/ACERO/door-s116.jpg`
 }));
 
 // ---- P103 ----
@@ -370,7 +370,7 @@ const productos_p103 = ["P103"].map(n => ({
   specs: SPECS_P103,
   features: FEATURES_P103,
   unlock: UNLOCK_P103,
-  img: `/images/AI/door-p103.jpg`
+  img: `/images/ACERO/door-p103.jpg`
 }));
 
 // ---- P108 ----
@@ -404,7 +404,7 @@ const productos_p108 = ["P108"].map(n => ({
   specs: SPECS_P108,
   features: FEATURES_P108,
   unlock: UNLOCK_P108,
-  img: `/images/AI/door-p108.jpg`
+  img: `/images/ACERO/door-p108.jpg`
 }));
 
 // ---- P106 ----
@@ -415,7 +415,7 @@ const productos_p106 = ["P106"].map(n => ({
   specs: SPECS_P108,       // ✅ Idéntico al P108
   features: FEATURES_P108, // ✅ Idéntico al P108
   unlock: UNLOCK_P108,     // ✅ Idéntico al P108
-  img: `/images/AI/door-p106.jpg`
+  img: `/images/ACERO/door-p106.jpg`
 }));
 
 // ---- GL097 ----
@@ -483,7 +483,7 @@ const productos_gl097_pro = ["GL097 Pro"].map(n => ({
   specs: SPECS_GL097_PRO,
   features: FEATURES_GL097_PRO,
   unlock: UNLOCK_GL097_PRO,
-  img: `/images/AI/door-gl097-pro.jpg`
+  img: `/images/ACERO/door-gl097-pro.jpg`
 }));
 
 // ---- GL098 Pro ----
@@ -494,7 +494,7 @@ const productos_gl098_pro = ["GL098 Pro"].map(n => ({
   specs: SPECS_GL097_PRO,       // ✅ Idéntico al GL097 Pro
   features: FEATURES_GL097_PRO, // ✅ Idéntico al GL097 Pro
   unlock: UNLOCK_GL097_PRO,     // ✅ Idéntico al GL097 Pro
-  img: `/images/AI/door-gl098-pro.jpg`
+  img: `/images/ACERO/door-gl098-pro.jpg`
 }));
 
 // ---- CL96 ----
@@ -595,7 +595,7 @@ const productos_n9518 = ["N9518"].map(n => ({
   specs: SPECS_N9518,
   features: FEATURES_N9518,
   unlock: UNLOCK_N9518,
-  img: `/images/AI/door-n9518.jpg`
+  img: `/images/ACERO/door-n9518.jpg`
 }));
 
 // ---- N9519 ----
@@ -617,7 +617,7 @@ const productos_n9519 = ["N9519"].map(n => ({
   specs: SPECS_N9519,
   features: FEATURES_N9518, // ✅ Features idénticas al N9518
   unlock: UNLOCK_N9518,     // ✅ Desbloqueo idéntico al N9518
-  img: `/images/AI/door-n9519.jpg`
+  img: `/images/ACERO/door-n9519.jpg`
 }));
 
 // --- 2. GENERADORES ---
@@ -867,7 +867,7 @@ const productos_n9520 = ["N9520"].map(n => ({
   specs: SPECS_N9520,
   features: FEATURES_N9520,
   unlock: UNLOCK_N9520,
-  img: `/images/AI/door-n9520.jpg`
+  img: `/images/ACERO/door-n9520.jpg`
 }));
 
 // ---- Y118 ----
@@ -901,7 +901,7 @@ const productos_y118 = ["Y118"].map(n => ({
   specs: SPECS_Y118,
   features: FEATURES_Y118,
   unlock: UNLOCK_Y118,
-  img: `/images/AI/door-y118.jpg`
+  img: `/images/ACERO/door-y118.jpg`
 }));
 
 // ---- Y116 ----
@@ -946,7 +946,7 @@ const productos_y119 = ["Y119"].map(n => ({
   specs: SPECS_Y119,
   features: FEATURES_Y119,
   unlock: UNLOCK_Y119,
-  img: `/images/AI/door-y119.jpg`
+  img: `/images/ACERO/door-y119.jpg`
 }));
 
 // ---- Y106 ----
@@ -980,7 +980,7 @@ const productos_y106 = ["Y106"].map(n => ({
   specs: SPECS_Y106,
   features: FEATURES_Y106,
   unlock: UNLOCK_Y106,
-  img: `/images/AI/door-y106.jpg`
+  img: `/images/ACERO/door-y106.jpg`
 }));
 
 // ---- Chaohe ----
@@ -1013,7 +1013,7 @@ const productos_chaohe = ["Chaohe"].map(n => ({
   specs: SPECS_CHAOHE,
   features: FEATURES_CHAOHE,
   unlock: UNLOCK_CHAOHE,
-  img: `/images/AI/door-chaohe.jpg`
+  img: `/images/ALUMINIO/door-chaohe.jpg`
 }));
 
 // ---- L5859 ----
@@ -1078,7 +1078,7 @@ const productos_l5601 = ["L5601"].map(n => ({
   specs: productos_l5857[0].specs,       // ✅ Idéntico al L5857
   features: productos_l5857[0].features, // ✅ Idéntico al L5857
   unlock: productos_l5857[0].unlock,     // ✅ Idéntico al L5857
-  img: `/images/AI/door-l5601.jpg`
+  img: `/images/ACERO/door-l5601.jpg`
 }));
 
 // ---- Louis ----
@@ -1110,7 +1110,7 @@ const productos_luyi = ["Louis"].map(n => ({
   specs: SPECS_LUYI,
   features: FEATURES_LUYI,
   unlock: UNLOCK_LUYI,
-  img: `/images/AI/door-luyi.jpg`
+  img: `/images/ALUMINIO/door-luyi.jpg`
 }));
 
 // ---- Chaopu ----
@@ -1121,7 +1121,7 @@ const productos_chaopu = ["Chaopu"].map(n => ({
   specs: SPECS_LUYI,       // ✅ Idéntico al Louis
   features: FEATURES_LUYI, // ✅ Idéntico al Louis
   unlock: UNLOCK_LUYI,     // ✅ Idéntico al Louis
-  img: `/images/AI/door-chaopu.jpg`
+  img: `/images/ALUMINIO/door-chaopu.jpg`
 }));
 
 // ---- Dihua ----
@@ -1148,34 +1148,34 @@ const UNLOCK_DIHUA = "A Elección del Cliente / App / Llave";
 
 const productos_dihua = ["Dihua"].map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ALUMINIO FUNDIDO",
   description: "Puerta de seguridad 4.0 modelo Dihua. 95mm, marco T alto, supercerradura A5021-80 y sistema IA a elección del cliente.",
   specs: SPECS_DIHUA,
   features: FEATURES_DIHUA,
   unlock: UNLOCK_DIHUA,
-  img: `/images/AI/door-dihua.jpg`
+  img: `/images/ALUMINIO/door-dihua.jpg`
 }));
 
 // ---- Saina ----
 const productos_saina = ["Saina"].map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ALUMINIO FUNDIDO",
   description: "Puerta de seguridad 4.0 modelo Saina. 95mm, marco T alto, supercerradura A5021-80 y sistema IA a elección del cliente.",
   specs: SPECS_DIHUA,       // ✅ Idéntico al Dihua
   features: FEATURES_DIHUA, // ✅ Idéntico al Dihua
   unlock: UNLOCK_DIHUA,     // ✅ Idéntico al Dihua
-  img: `/images/AI/door-saina.jpg`
+  img: `/images/ALUMINIO/door-saina.jpg`
 }));
 
 // ---- Makailen ----
 const productos_makailen = ["Makailen"].map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ALUMINIO FUNDIDO",
   description: "Puerta de seguridad 4.0 modelo Makailen. 95mm, marco vanguard artesanal, cerradura A7-3 antiexplosión y sistema IA a elección del cliente.",
   specs: SPECS_LUYI,       // ✅ Idéntico al Louis/Chaopu
   features: FEATURES_LUYI, // ✅ Idéntico al Louis/Chaopu
   unlock: UNLOCK_LUYI,     // ✅ Idéntico al Louis/Chaopu
-  img: `/images/AI/door-makailen.jpg`
+  img: `/images/ALUMINIO/door-makailen.jpg`
 }));
 
 // ---- Sabo ----
@@ -1202,12 +1202,12 @@ const UNLOCK_SABO = "Manilla Inteligente S60 Max / App / Llave";
 
 const productos_sabo = ["Sabo"].map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ALUMINIO FUNDIDO",
   description: "Puerta de seguridad 4.0 modelo Sabo. 95mm, marco T alto, supercerradura A5021-80 y manilla inteligente S60 Max.",
   specs: SPECS_SABO,
   features: FEATURES_SABO,
   unlock: UNLOCK_SABO,
-  img: `/images/AI/door-sabo.jpg`
+  img: `/images/ALUMINIO/door-sabo.jpg`
 }));
 
 // ---- Chaoling ----
@@ -1218,18 +1218,18 @@ const productos_chaoling = ["Chaoling"].map(n => ({
   specs: SPECS_DIHUA,       // ✅ Idéntico al Dihua/Saina
   features: FEATURES_DIHUA, // ✅ Idéntico al Dihua/Saina
   unlock: UNLOCK_DIHUA,     // ✅ Idéntico al Dihua/Saina
-  img: `/images/AI/door-chaoling.jpg`
+  img: `/images/ALUMINIO/door-chaoling.jpg`
 }));
 
 // ---- Pulada ----
 const productos_pulada = ["Pulada"].map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ALUMINIO FUNDIDO",
   description: "Puerta de seguridad 4.0 modelo Pulada. 95mm, marco T alto, supercerradura A5021-80 y sistema IA a elección del cliente.",
   specs: SPECS_DIHUA,       // ✅ Idéntico al Dihua/Saina/Chaoling
   features: FEATURES_DIHUA, // ✅ Idéntico al Dihua/Saina/Chaoling
   unlock: UNLOCK_DIHUA,     // ✅ Idéntico al Dihua/Saina/Chaoling
-  img: `/images/AI/door-pulada.jpg`
+  img: `/images/ALUMINIO/door-pulada.jpg`
 }));
 
 // ---- TDF-2009 ----
@@ -1300,24 +1300,44 @@ const productos_tdf2003 = ["TDF-2003"].map(n => ({
 // ---- Shengshi ----
 const productos_shengshi = ["Shengshi"].map(n => ({
   name: n,
-  category: "PUERTA DE SEGURIDAD IA",
+  category: "PUERTA DE ALUMINIO FUNDIDO",
   description: "Puerta de seguridad inteligente 3.0 modelo Shengshi. Nivel antirrobo 4 con marco de suelo a techo, cerradura antiexplosión y manilla inteligente S922 Pro.",
   specs: SPECS_N9519,       // ✅ Idéntico al N9519
   features: FEATURES_N9518, // ✅ Idéntico al N9519
   unlock: UNLOCK_N9518,     // ✅ Idéntico al N9519
-  img: `/images/AI/door-shengshi.jpg`
+  img: `/images/ALUMINIO/door-shengshi.jpg`
 }));
 
 // --- 3. UNIFICACIÓN ---
 const DATA_PRODUCTOS = [
-  ...productos_ia, ...productos_t200, ...productos_k300_max, ...productos_k300_pro, ...productos_s101, ...productos_s116, ...productos_s118, ...productos_s119, ...productos_s121, ...productos_p103, ...productos_p106, ...productos_p108, ...productos_gl097, ...productos_gl097_pro, ...productos_gl098_pro, ...productos_cl56, ...productos_cl59, ...productos_cl66, ...productos_cl96, ...productos_n9518, ...productos_n9519, ...productos_n9520, ...productos_y106, ...productos_y116, ...productos_y118, ...productos_y119, ...productos_chaohe, ...productos_l5859, ...productos_l5857, ...productos_l5601, ...productos_luyi, ...productos_chaopu, ...productos_dihua, ...productos_saina, ...productos_makailen, ...productos_sabo, ...productos_chaoling, ...productos_pulada, ...productos_shengshi,
-  ...productos_acero, ...productos_acorazada,
-  ...productos_aluminio, ...productos_madera_j, ...productos_madera_d,
-  ...productos_madera_s, ...productos_madera_s203,
-  ...productos_minimalista_ume, ...productos_bajo_carbono,
-  ...productos_pvc, ...productos_corredizas,
-  ...productos_cortafuegos, ...productos_evacuacion, ...productos_medicas,
-  ...productos_tdf2003, ...productos_tdf2009
+  // PUERTA DE SEGURIDAD IA
+  ...productos_ia, ...productos_t200, ...productos_k300_max, ...productos_k300_pro, ...productos_l5859, ...productos_l5857,
+  // PUERTA DE ACERO FUNDIDO
+  ...productos_s121, ...productos_n9519, ...productos_n9520, ...productos_y106, ...productos_y116, ...productos_y118, ...productos_y119, ...productos_l5601,
+  // PUERTA DE ACERO REFORZADO
+  ...productos_s101, ...productos_s116, ...productos_s118, ...productos_s119, ...productos_p103, ...productos_p106, ...productos_p108, ...productos_gl097, ...productos_gl097_pro, ...productos_gl098_pro, ...productos_cl56, ...productos_cl59, ...productos_cl66, ...productos_cl96, ...productos_n9518, ...productos_acero,
+  // PUERTA DE SEGURIDAD ACORAZADA
+  ...productos_acorazada,
+  // PUERTA DE ALUMINIO FUNDIDO
+  ...productos_chaohe, ...productos_luyi, ...productos_chaopu, ...productos_dihua, ...productos_saina, ...productos_makailen, ...productos_sabo, ...productos_chaoling, ...productos_pulada, ...productos_shengshi, ...productos_aluminio,
+  // PUERTA DE COBRE COMPUESTA
+  ...productos_tdf2003, ...productos_tdf2009,
+  // PUERTA ACÚSTICA DE MADERA
+  ...productos_madera_j, ...productos_madera_d, ...productos_madera_s, ...productos_madera_s203,
+  // PUERTA MINIMALISTA
+  ...productos_minimalista_ume,
+  // PUERTA DE BAJO CARBONO
+  ...productos_bajo_carbono,
+  // PUERTA DE PVC
+  ...productos_pvc,
+  // PUERTAS CORREDIZAS Y ABATIBLES
+  ...productos_corredizas,
+  // PUERTA COMERCIAL CORTAFUEGO
+  ...productos_cortafuegos,
+  // PUERTA DE EVACUACIÓN
+  ...productos_evacuacion,
+  // PUERTA MÉDICA
+  ...productos_medicas,
 ];
 
 // --- 4. FUNCIÓN DE SUBIDA ---

@@ -3,7 +3,21 @@
     "allow": [
       "Bash(pnpm build:*)",
       "Bash(ls C:/xampp/htdocs/git/proyectoCasas/next.config*)",
-      "Bash(ls C:/xampp/htdocs/git/proyectoCasas/.babel*)"
+      "Bash(ls C:/xampp/htdocs/git/proyectoCasas/.babel*)",
+      "Bash(mv AI/door-s121.jpg ACERO/)",
+      "Bash(mv AI/door-s101.jpg ACERO/)",
+      "Bash(mv AI/door-s119.jpg ACERO/)",
+      "Bash(mv AI/door-s118.jpg ACERO/)",
+      "Bash(mv AI/door-s116.jpg ACERO/)",
+      "Bash(mv AI/door-chaohe.jpg ALUMINIO/)",
+      "Bash(mv AI/door-luyi.jpg ALUMINIO/)",
+      "Bash(mv AI/door-chaopu.jpg ALUMINIO/)",
+      "Bash(mv AI/door-chaoling.jpg ALUMINIO/)",
+      "Bash(mv AI/door-dihua.jpg ALUMINIO/)",
+      "Bash(mv AI/door-saina.jpg ALUMINIO/)",
+      "Bash(mv AI/door-makailen.jpg ALUMINIO/)",
+      "Bash(mv AI/door-sabo.jpg ALUMINIO/)",
+      "Bash(mv AI/door-pulada.jpg ALUMINIO/)"
     ]
   }
 }
