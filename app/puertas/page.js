@@ -43,7 +43,7 @@ const IMAGENES_HERO = {
   "PUERTA COMERCIAL CORTAFUEGO": "/images/cortafuego.jpg",
   "PUERTA DE EVACUACIÓN": "/images/evacuacion.jpg",
   "PUERTA MINIMALISTA": "/images/minimalista.jpg",
-  "PUERTA DE BAJO CARBONO": "/images/bajocarbono.jpg",
+  "PUERTA DE BAJO CARBONO": "/images/carbono.jpg",
   "PUERTA MÉDICA": "/images/medica.jpg",
   "PUERTA DE COBRE COMPUESTA": "/images/cobrewallaper.jpg"
 };
