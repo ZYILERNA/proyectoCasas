@@ -5,6 +5,8 @@ import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import CookieBanner from '../components/CookieBanner';
+import WhatsAppButton from '../components/WhatsAppButton';
+import VisitTracker from '../components/VisitTracker';
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next"; 
 
@@ -40,6 +42,8 @@ export default function RootLayout({ children }) {
         <SpeedInsights />
         <Analytics /> 
         <CookieBanner />
+        <WhatsAppButton />
+        <VisitTracker />
         
       </body>
     </html>

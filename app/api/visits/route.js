@@ -1,0 +1,48 @@
+import { createClient } from '@supabase/supabase-js';
+import { NextResponse } from 'next/server';
+
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL,
+  process.env.SUPABASE_SERVICE_ROLE_KEY
+);
+
+export async function GET(request) {
+  const { searchParams } = new URL(request.url);
+  const password = searchParams.get('pw');
+
+  if (password !== process.env.ADMIN_PASSWORD) {
+    return NextResponse.json({ error: 'No autorizado' }, { status: 401 });
+  }
+
+  const { data: visits, error } = await supabase
+    .from('page_visits')
+    .select('*')
+    .order('visited_at', { ascending: false })
+    .limit(1000);
+
+  if (error) {
+    return NextResponse.json({ error: error.message }, { status: 500 });
+  }
+
+  // Estadísticas resumidas
+  const total = visits.length;
+
+  const byPage = visits.reduce((acc, v) => {
+    acc[v.page] = (acc[v.page] || 0) + 1;
+    return acc;
+  }, {});
+
+  const byDevice = visits.reduce((acc, v) => {
+    acc[v.device] = (acc[v.device] || 0) + 1;
+    return acc;
+  }, {});
+
+  // Visitas por día (últimos 30 días)
+  const byDay = visits.reduce((acc, v) => {
+    const day = v.visited_at?.slice(0, 10);
+    if (day) acc[day] = (acc[day] || 0) + 1;
+    return acc;
+  }, {});
+
+  return NextResponse.json({ total, byPage, byDevice, byDay, recent: visits.slice(0, 50) });
+}

@@ -496,99 +496,6 @@ const MODELOS = [
     }
   },
   {
-    id: "s60max-standard",
-    name: "S60 Max",
-    category: "Smart Lock",
-    type: "Telesensado Estándar",
-    img: "/images/CERRADURA/lock-s60max-standard.jpg",
-    description: "Cerradura inteligente de telesensado con reconocimiento facial 3D, apertura remota y visión remota. Incluye ojo de buey digital con captura por intrusión y pantalla trasera de 5 pulgadas.",
-    specs: [
-      { label: "Mecanismo", value: "Telesensado" },
-      { label: "Biometría", value: "Facial 3D" },
-      { label: "Pantalla", value: "5.0''" }
-    ],
-    details: {
-      Tipo: "Inteligente con Sensor Remoto",
-      Versión: "Estándar",
-      Características: "Facial 3D + Apertura Remota + Visión Remota + Ojo de Buey + Captura Intrusión",
-      Pantalla: "5 Pulgadas",
-      Color: "Negro Xuanwu",
-      Cuerpo_Compatible: "Mecánica WONLY Auto/Rápido Serie 1/2×5",
-      Cilindro_Compatible: "Electrónico Wang Li / Eléctrico 3 filas"
-    },
-    performance: [
-      { label: "Detección", value: "Telesensado", level: "Apertura Automática" },
-      { label: "Biometría", value: "Facial 3D", level: "Anti-falsificación" },
-      { label: "Remote", value: "Apertura + Vista", level: "Control Total" },
-      { label: "Vigilancia", value: "Ojo de Buey", level: "Captura Intrusión" },
-      { label: "Acceso", value: "Huella + Clave", level: "6 Métodos" },
-      { label: "Respaldo", value: "Llave / M1", level: "Emergencia" }
-    ],
-    colors: { interior: [{ name: "Negro Xuanwu", hex: "#2b2520" }] }
-  },
-  {
-    id: "s60max-max",
-    name: "S60 Max",
-    category: "Smart Lock",
-    type: "Telesensado Max",
-    img: "/images/CERRADURA/lock-s60max-max.jpg",
-    description: "Versión Max con pantalla HD de 4.5\", ojo de buey inteligente con cámara visible, doble verificación y contraseña virtual. La experiencia más completa de la línea S60.",
-    specs: [
-      { label: "Pantalla", value: "4.5''" },
-      { label: "Biometría", value: "Facial 3D" },
-      { label: "Seguridad", value: "Doble Verif." }
-    ],
-    details: {
-      Tipo: "Inteligente con Sensor Remoto",
-      Versión: "Max",
-      Características: "Facial 3D + Pantalla HD 4.5\" + Ojo de Buey con Cámara + Doble Verificación + Contraseña Virtual",
-      Pantalla: "4.5 Pulgadas HD",
-      Color: "Negro Espacial",
-      Cuerpo_Compatible: "Superpatentada / Doble Rápido / Wang Li A5001/A5002/A5007/A2000",
-      Cilindro_Compatible: "Super C Patentado / Eléctrico 3 filas / Antipick"
-    },
-    performance: [
-      { label: "Pantalla", value: "4.5'' HD", level: "Alta Definición" },
-      { label: "Biometría", value: "Facial 3D", level: "Anti-falsificación" },
-      { label: "Seguridad", value: "Doble Verif.", level: "Dual Auth" },
-      { label: "Vigilancia", value: "Ojo de Buey", level: "Cámara Visible" },
-      { label: "Acceso", value: "Huella + Clave", level: "Multimétodo" },
-      { label: "Respaldo", value: "Llave / M1 / APP", level: "Emergencia" }
-    ],
-    colors: { interior: [{ name: "Negro Espacial", hex: "#0a0a0a" }] }
-  },
-  {
-    id: "s935pro-black",
-    name: "S935 Pro",
-    category: "Smart Lock",
-    type: "Serie Pro",
-    img: "/images/CERRADURA/lock-s935pro-black.jpg",
-    description: "Cerradura inteligente facial con ojo de buey integrado y videoportero de visión remota. Captura automática al pulsar el timbre, apertura remota y acceso por WeChat/QR.",
-    specs: [
-      { label: "Pantalla", value: "4.0''" },
-      { label: "Comunicación", value: "Video Portero" },
-      { label: "Tarjeta", value: "CPU" }
-    ],
-    details: {
-      Tipo: "Inteligente Facial + Video",
-      Versión: "Pro",
-      Características: "Ojo de Buey + Videoportero Remoto + Apertura Remota + Captura al Timbre",
-      Pantalla: "4 Pulgadas",
-      Color: "Negro",
-      Cuerpo_Compatible: "Mecánica WONLY Auto/Rápido Serie 1/2×5",
-      Cilindro_Compatible: "Electrónico Wang Li / Eléctrico 3 filas"
-    },
-    performance: [
-      { label: "Comunicación", value: "Video Portero", level: "Intercomunicador Visual" },
-      { label: "Biometría", value: "Facial 3D", level: "Alta Precisión" },
-      { label: "Remoto", value: "App Control", level: "Desbloqueo a Distancia" },
-      { label: "Seguridad", value: "Tarjeta CPU", level: "Anti-copia Avanzado" },
-      { label: "Vigilancia", value: "Ojo de Buey", level: "Captura al Timbre" },
-      { label: "Respaldo", value: "Llave / WeChat", level: "Emergencia" }
-    ],
-    colors: { interior: [{ name: "Negro", hex: "#1a1a1a" }] }
-  },
-  {
     id: "p10-pro-black",
     name: "P10",
     category: "Smart Lock",
@@ -770,126 +677,6 @@ const MODELOS = [
     colors: { interior: [{ name: "Gris Pizarra", hex: "#4a4a4a" }, { name: "Negro", hex: "#111111" }] }
   },
   {
-    id: "s932-round-standard",
-    name: "S932",
-    category: "Smart Lock",
-    type: "Facial — Redondo Estándar",
-    img: "/images/CERRADURA/lock-s932-round-standard.jpg",
-    description: "Variante de manija redonda de la S932 en versión estándar. Ojo de buey con captura por timbre, apertura remota y pantalla posterior.",
-    specs: [
-      { label: "Manija", value: "Redonda" },
-      { label: "Acceso", value: "Facial + CPU" },
-      { label: "Pantalla", value: "Posterior" }
-    ],
-    details: {
-      Tipo: "Inteligente Facial",
-      Versión: "Estándar — Manija Redonda",
-      Características: "Ojo de Buey (Timbre + Captura) + Apertura Remota + Pantalla Posterior",
-      Color: "Gris Pizarra / Negro",
-      Cuerpo_Compatible: "Mecánica WONLY Auto/Rápido Serie 1/2×5",
-      Cilindro_Compatible: "Electrónico Wang Li / Eléctrico 3 filas"
-    },
-    performance: [
-      { label: "Biometría", value: "Facial + Huella", level: "Doble Biometría" },
-      { label: "Vigilancia", value: "Ojo de Buey", level: "Captura al Timbre" },
-      { label: "Remoto", value: "App Control", level: "Apertura a Distancia" },
-      { label: "Seguridad", value: "Tarjeta CPU", level: "Anti-copia Avanzado" },
-      { label: "Acceso", value: "Huella + Clave", level: "5 Métodos + WeChat" },
-      { label: "Respaldo", value: "Llave Mecánica", level: "Emergencia" }
-    ],
-    colors: { interior: [{ name: "Gris Pizarra", hex: "#4a4a4a" }, { name: "Negro", hex: "#111111" }] }
-  },
-  {
-    id: "s932-round-pro",
-    name: "S932 Pro",
-    category: "Smart Lock",
-    type: "Facial — Redondo Pro",
-    img: "/images/CERRADURA/lock-s932-round-pro.jpg",
-    description: "Versión Pro de la S932 con manija redonda. Reconocimiento facial 3D completo, ojo de buey con captura mejorada y pantalla trasera HD.",
-    specs: [
-      { label: "Manija", value: "Redonda" },
-      { label: "Biometría", value: "Facial 3D" },
-      { label: "Pantalla", value: "Posterior HD" }
-    ],
-    details: {
-      Tipo: "Inteligente Facial",
-      Versión: "Pro — Manija Redonda",
-      Características: "Facial 3D + Ojo de Buey (Timbre + Captura) + Apertura Remota + Pantalla HD",
-      Color: "Gris Pizarra / Negro",
-      Cuerpo_Compatible: "Mecánica WONLY Auto/Rápido Serie 1/2×5",
-      Cilindro_Compatible: "Electrónico Wang Li / Eléctrico 3 filas"
-    },
-    performance: [
-      { label: "Biometría", value: "Facial 3D", level: "Alta Precisión" },
-      { label: "Vigilancia", value: "Ojo de Buey", level: "Captura al Timbre" },
-      { label: "Remoto", value: "App Control", level: "Apertura a Distancia" },
-      { label: "Seguridad", value: "Tarjeta CPU", level: "Anti-copia Avanzado" },
-      { label: "Pantalla", value: "Posterior HD", level: "Monitor Trasero" },
-      { label: "Respaldo", value: "Llave Mecánica", level: "Emergencia" }
-    ],
-    colors: { interior: [{ name: "Gris Pizarra", hex: "#4a4a4a" }, { name: "Negro", hex: "#111111" }] }
-  },
-  {
-    id: "xd515-v2",
-    name: "XD515",
-    category: "Smart Lock",
-    type: "Ingeniería — Versión 2",
-    img: "/images/CERRADURA/lock-xd515-v2.jpg",
-    description: "Versión 2 de la XD515 con pantalla display simplificada y sin apertura remota. Disponible en negro y champán dorado. Acceso por huella, contraseña, llave y tarjeta IC.",
-    specs: [
-      { label: "Mecanismo", value: "Semi-Auto" },
-      { label: "Acceso", value: "Huella + IC" },
-      { label: "Línea", value: "Ingeniería" }
-    ],
-    details: {
-      Tipo: "Semi-Automática de Ingeniería",
-      Versión: "Versión 2",
-      Características: "Pantalla Display",
-      Color: "Negro / Champán Dorado",
-      Cuerpo_Compatible: "Doble Rápido Mecánico",
-      Cilindro_Compatible: "Lunar Doble Fila Cabeza Simple / Antipalanca Triple Cabeza Simple"
-    },
-    performance: [
-      { label: "Biometría", value: "Huella Dactilar", level: "Acceso Rápido" },
-      { label: "Pantalla", value: "Display", level: "Indicador Visual" },
-      { label: "Seguridad", value: "Tarjeta IC", level: "Cifrado Estándar" },
-      { label: "Uso", value: "Intensivo", level: "Grado Ingeniería" },
-      { label: "Acceso", value: "4 Métodos", level: "Huella + Clave + IC" },
-      { label: "Respaldo", value: "Llave Mecánica", level: "Emergencia" }
-    ],
-    colors: { interior: [{ name: "Negro", hex: "#111111" }, { name: "Champán Dorado", hex: "#b8975a" }] }
-  },
-  {
-    id: "s936-standard",
-    name: "S936",
-    category: "Smart Lock",
-    type: "Ingeniería Estándar",
-    img: "/images/CERRADURA/lock-s936-engineering.jpg",
-    description: "Cerradura de ingeniería sin facial en versión estándar. Acceso por huella, contraseña, tarjeta IC y llave de emergencia. Cuerpo rápido simple para instalación ágil en obra.",
-    specs: [
-      { label: "Mecanismo", value: "Semi-Auto" },
-      { label: "Acceso", value: "Huella + IC" },
-      { label: "Línea", value: "Ingeniería" }
-    ],
-    details: {
-      Tipo: "Inteligente de Ingeniería",
-      Versión: "Estándar",
-      Características: "Huella + Contraseña + Tarjeta IC + Llave de Emergencia",
-      Color: "Negro",
-      Cuerpo_Compatible: "Rápido Simple Mecánico",
-      Cilindro_Compatible: "Lunar Doble Fila Cabeza Simple / Antipalanca Triple Cabeza Simple"
-    },
-    performance: [
-      { label: "Biometría", value: "Huella Dactilar", level: "Acceso Rápido" },
-      { label: "Mecanismo", value: "Semi-Auto", level: "Instalación Ágil" },
-      { label: "Seguridad", value: "Tarjeta IC", level: "Cifrado Estándar" },
-      { label: "Uso", value: "Intensivo", level: "Grado Ingeniería" },
-      { label: "Acceso", value: "4 Métodos", level: "Sin Facial" },
-      { label: "Respaldo", value: "Llave Emergencia", level: "Seguridad Total" }
-    ],
-    colors: { interior: [{ name: "Negro", hex: "#111111" }] }
-  },
-  {
     id: "s80-standard",
     name: "S80",
     category: "Smart Lock",
@@ -993,11 +780,14 @@ HARDWARE_RAW.forEach(cat => {
 async function uploadData() {
   console.log(`📡 Conectando a Supabase...`);
 
-  // 1. SUBIR MODELOS
+  // 1. SUBIR MODELOS (borrar todo primero para eliminar registros huérfanos)
   console.log(`Subiendo ${MODELOS.length} Cerraduras...`);
-  const { error: err1 } = await supabase
-    .from('locks')
-    .upsert(MODELOS, { onConflict: 'id' });
+  const { error: errDeleteLocks } = await supabase.from('locks').delete().neq('id', '');
+  if (errDeleteLocks) {
+    console.error('❌ Error al limpiar locks:', errDeleteLocks.message);
+    return;
+  }
+  const { error: err1 } = await supabase.from('locks').insert(MODELOS);
 
   if (err1) {
     console.error('❌ Error locks:', err1.message);

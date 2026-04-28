@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   Fingerprint, GripHorizontal, ShieldCheck, Key, Radio, ScanFace,
   Smartphone, Video, Wifi, Eye, Cpu, Scan, Activity, Zap, Globe,
-  CheckCircle, X, Loader2, ChevronRight, Lock, Star
+  CheckCircle, X, Loader2, ChevronRight, Lock, Star, Search
 } from 'lucide-react';
 import Link from 'next/link';
 import { createClient } from '@supabase/supabase-js';
@@ -236,6 +236,7 @@ export default function CerradurasPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [activeFilter, setActiveFilter] = useState("Todos");
   const [activeHardwareTab, setActiveHardwareTab] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     async function fetchData() {
@@ -266,9 +267,18 @@ export default function CerradurasPage() {
   }, [locks]);
 
   const filteredLocks = useMemo(() => {
-    if (activeFilter === "Todos") return locks;
-    return locks.filter(l => l.type === activeFilter);
-  }, [locks, activeFilter]);
+    let result = activeFilter === "Todos" ? locks : locks.filter(l => l.type === activeFilter);
+    if (searchQuery.trim()) {
+      const q = searchQuery.toLowerCase();
+      result = result.filter(l =>
+        l.name?.toLowerCase().includes(q) ||
+        l.description?.toLowerCase().includes(q) ||
+        l.type?.toLowerCase().includes(q) ||
+        l.category?.toLowerCase().includes(q)
+      );
+    }
+    return result;
+  }, [locks, activeFilter, searchQuery]);
 
   const hardwareGrouped = useMemo(() => {
     if (!hardware.length) return [];
@@ -565,6 +575,28 @@ export default function CerradurasPage() {
             )}
           </div>
 
+          {/* Buscador */}
+          {!isLoading && locks.length > 0 && (
+            <div className="relative mb-6 max-w-md">
+              <Search size={15} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none" />
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={e => setSearchQuery(e.target.value)}
+                placeholder="Buscar cerradura..."
+                className="w-full bg-[#0d0d0d] border border-white/10 rounded-full pl-10 pr-10 py-2.5 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#00C2FF]/50 transition-colors"
+              />
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery("")}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white transition-colors"
+                >
+                  <X size={14} />
+                </button>
+              )}
+            </div>
+          )}
+
           {/* Filtros */}
           {!isLoading && filterCategories.length > 1 && (
             <div className="flex flex-wrap gap-2 mb-10">
@@ -599,7 +631,13 @@ export default function CerradurasPage() {
                 transition={{ duration: 0.2 }}
                 className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5"
               >
-                {filteredLocks.map((product, i) => (
+                {filteredLocks.length === 0 ? (
+                  <div className="col-span-full flex flex-col items-center py-24 text-gray-600">
+                    <Search size={36} className="mb-4 opacity-30" />
+                    <p className="text-sm">Sin resultados para <span className="text-white/50">"{searchQuery}"</span></p>
+                    <button onClick={() => setSearchQuery("")} className="mt-3 text-[#00C2FF] text-xs hover:underline">Limpiar búsqueda</button>
+                  </div>
+                ) : filteredLocks.map((product, i) => (
                   <ProductCard
                     key={product.id}
                     product={product}
