@@ -5,13 +5,13 @@ export const dynamic = 'force-dynamic';
 
 export async function GET(request) {
   const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL,
-    process.env.SUPABASE_SERVICE_ROLE_KEY
+    'https://nmcnyrjwbbhhzbajztfs.supabase.co',
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5tY255cmp3YmJoaHpiYWp6dGZzIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2MjEyNDU0MCwiZXhwIjoyMDc3NzAwNTQwfQ.t8RzAXqUBCo8K9WpI_W76GxCDYVzY1Ft9LGywHW123M'
   );
   const { searchParams } = new URL(request.url);
   const password = searchParams.get('pw');
 
-  if (password !== process.env.ADMIN_PASSWORD) {
+  if (password !== 'wonly2024') {
     return NextResponse.json({ error: 'No autorizado' }, { status: 401 });
   }
 
