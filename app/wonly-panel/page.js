@@ -1,45 +1,46 @@
-'use client';
+import { createClient } from '@supabase/supabase-js';
 
-import { useState, useEffect } from 'react';
+export const dynamic = 'force-dynamic';
 
-export default function AdminPanel() {
-  const [data, setData] = useState(null);
-  const [error, setError] = useState('');
-  const [loading, setLoading] = useState(true);
+async function getData() {
+  const supabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL,
+    process.env.SUPABASE_SERVICE_ROLE_KEY
+  );
 
-  useEffect(() => {
-    fetch('/api/visits')
-      .then((res) => res.json())
-      .then((json) => setData(json))
-      .catch(() => setError('Error al cargar los datos'))
-      .finally(() => setLoading(false));
-  }, []);
+  const { data: visits, error } = await supabase
+    .from('page_visits')
+    .select('*')
+    .order('visited_at', { ascending: false })
+    .limit(1000);
 
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-[#050505] flex items-center justify-center text-white">
-        Cargando...
-      </div>
-    );
-  }
+  if (error) throw new Error(error.message);
 
-  if (error || !data) {
-    return (
-      <div className="min-h-screen bg-[#050505] flex items-center justify-center text-red-400">
-        {error || 'Error desconocido'}
-      </div>
-    );
-  }
+  const total = visits.length;
+  const byPage = visits.reduce((acc, v) => { acc[v.page] = (acc[v.page] || 0) + 1; return acc; }, {});
+  const byDevice = visits.reduce((acc, v) => { acc[v.device] = (acc[v.device] || 0) + 1; return acc; }, {});
+  const byDay = visits.reduce((acc, v) => {
+    const day = v.visited_at?.slice(0, 10);
+    if (day) acc[day] = (acc[day] || 0) + 1;
+    return acc;
+  }, {});
 
-  const pageEntries = Object.entries(data.byPage || {}).sort((a, b) => b[1] - a[1]);
-  const dayEntries = Object.entries(data.byDay || {}).sort((a, b) => a[0].localeCompare(b[0])).slice(-14);
+  return { total, byPage, byDevice, byDay, recent: visits.slice(0, 50) };
+}
+
+export default async function AdminPanel() {
+  const data = await getData();
+
+  const pageEntries = Object.entries(data.byPage).sort((a, b) => b[1] - a[1]);
+  const dayEntries = Object.entries(data.byDay).sort((a, b) => a[0].localeCompare(b[0])).slice(-14);
   const maxDay = Math.max(...dayEntries.map(([, v]) => v), 1);
+
+  const today = new Date().toISOString().slice(0, 10);
+  const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
 
   return (
     <div className="min-h-screen bg-[#050505] text-white p-6 max-w-4xl mx-auto">
-      <div className="flex items-center justify-between mb-8">
-        <h1 className="text-2xl font-bold">Panel de Visitas — WONLY</h1>
-      </div>
+      <h1 className="text-2xl font-bold mb-8">Panel de Visitas — WONLY</h1>
 
       {/* Tarjetas resumen */}
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
@@ -47,14 +48,11 @@ export default function AdminPanel() {
         <StatCard label="Páginas únicas" value={pageEntries.length} />
         <StatCard label="Móvil" value={data.byDevice?.['móvil'] || 0} />
         <StatCard label="Escritorio" value={data.byDevice?.['escritorio'] || 0} />
-        <StatCard label="Hoy" value={data.byDay?.[new Date().toISOString().slice(0, 10)] || 0} />
-        <StatCard
-          label="Ayer"
-          value={data.byDay?.[new Date(Date.now() - 86400000).toISOString().slice(0, 10)] || 0}
-        />
+        <StatCard label="Hoy" value={data.byDay?.[today] || 0} />
+        <StatCard label="Ayer" value={data.byDay?.[yesterday] || 0} />
       </div>
 
-      {/* Gráfico de barras últimos 14 días */}
+      {/* Gráfico últimos 14 días */}
       <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 mb-6">
         <h2 className="text-sm font-semibold text-zinc-400 mb-4 uppercase tracking-wider">
           Últimos 14 días
@@ -87,10 +85,7 @@ export default function AdminPanel() {
               <div key={page} className="flex items-center gap-3">
                 <span className="text-sm text-zinc-300 w-40 truncate">{page}</span>
                 <div className="flex-1 bg-zinc-800 rounded-full h-2">
-                  <div
-                    className="bg-white h-2 rounded-full"
-                    style={{ width: `${pct}%` }}
-                  />
+                  <div className="bg-white h-2 rounded-full" style={{ width: `${pct}%` }} />
                 </div>
                 <span className="text-sm text-zinc-400 w-10 text-right">{count}</span>
               </div>
@@ -115,13 +110,11 @@ export default function AdminPanel() {
               </tr>
             </thead>
             <tbody>
-              {(data.recent || []).map((v) => (
+              {data.recent.map((v) => (
                 <tr key={v.id} className="border-b border-zinc-800/50 hover:bg-zinc-800/30">
                   <td className="py-2 pr-4 text-white">{v.page}</td>
                   <td className="py-2 pr-4 text-zinc-400">{v.device}</td>
-                  <td className="py-2 pr-4 text-zinc-500 max-w-[160px] truncate">
-                    {v.referrer || '—'}
-                  </td>
+                  <td className="py-2 pr-4 text-zinc-500 max-w-[160px] truncate">{v.referrer || '—'}</td>
                   <td className="py-2 text-zinc-500 whitespace-nowrap">
                     {new Date(v.visited_at).toLocaleString('es-ES')}
                   </td>
