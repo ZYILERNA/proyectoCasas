@@ -1,72 +1,32 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function AdminPanel() {
-  const [password, setPassword] = useState('');
-  const [authed, setAuthed] = useState(false);
   const [data, setData] = useState(null);
   const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
-
-  const fetchData = useCallback(async (pw) => {
-    setLoading(true);
-    setError('');
-    try {
-      const res = await fetch(`/api/visits?pw=${encodeURIComponent(pw)}`);
-      if (res.status === 401) {
-        setError('Contraseña incorrecta');
-        setAuthed(false);
-        return;
-      }
-      const json = await res.json();
-      setData(json);
-      setAuthed(true);
-      sessionStorage.setItem('admin_pw', pw);
-    } catch {
-      setError('Error al cargar los datos');
-    } finally {
-      setLoading(false);
-    }
-  }, []);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const saved = sessionStorage.getItem('admin_pw');
-    if (saved) {
-      setPassword(saved);
-      fetchData(saved);
-    }
-  }, [fetchData]);
+    fetch('/api/visits')
+      .then((res) => res.json())
+      .then((json) => setData(json))
+      .catch(() => setError('Error al cargar los datos'))
+      .finally(() => setLoading(false));
+  }, []);
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-    fetchData(password);
-  };
-
-  if (!authed) {
+  if (loading) {
     return (
-      <div className="min-h-screen bg-[#050505] flex items-center justify-center">
-        <form
-          onSubmit={handleLogin}
-          className="bg-zinc-900 border border-zinc-700 rounded-2xl p-8 w-full max-w-sm flex flex-col gap-4"
-        >
-          <h1 className="text-white text-xl font-semibold text-center">Panel WONLY</h1>
-          <input
-            type="password"
-            placeholder="Contraseña"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="bg-zinc-800 text-white rounded-lg px-4 py-2 outline-none border border-zinc-600 focus:border-zinc-400"
-          />
-          {error && <p className="text-red-400 text-sm text-center">{error}</p>}
-          <button
-            type="submit"
-            disabled={loading}
-            className="bg-white text-black rounded-lg py-2 font-semibold hover:bg-zinc-200 transition"
-          >
-            {loading ? 'Cargando...' : 'Entrar'}
-          </button>
-        </form>
+      <div className="min-h-screen bg-[#050505] flex items-center justify-center text-white">
+        Cargando...
+      </div>
+    );
+  }
+
+  if (error || !data) {
+    return (
+      <div className="min-h-screen bg-[#050505] flex items-center justify-center text-red-400">
+        {error || 'Error desconocido'}
       </div>
     );
   }
@@ -79,12 +39,6 @@ export default function AdminPanel() {
     <div className="min-h-screen bg-[#050505] text-white p-6 max-w-4xl mx-auto">
       <div className="flex items-center justify-between mb-8">
         <h1 className="text-2xl font-bold">Panel de Visitas — WONLY</h1>
-        <button
-          onClick={() => { setAuthed(false); sessionStorage.removeItem('admin_pw'); }}
-          className="text-zinc-400 hover:text-white text-sm"
-        >
-          Cerrar sesión
-        </button>
       </div>
 
       {/* Tarjetas resumen */}

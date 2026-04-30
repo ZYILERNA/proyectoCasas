@@ -8,13 +8,6 @@ export async function GET(request) {
     process.env.NEXT_PUBLIC_SUPABASE_URL,
     process.env.SUPABASE_SERVICE_ROLE_KEY
   );
-  const { searchParams } = new URL(request.url);
-  const password = searchParams.get('pw');
-
-  if (password !== 'wonly2025') {
-    return NextResponse.json({ error: 'No autorizado' }, { status: 401 });
-  }
-
   const { data: visits, error } = await supabase
     .from('page_visits')
     .select('*')
