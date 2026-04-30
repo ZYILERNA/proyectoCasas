@@ -1,11 +1,14 @@
 import { createClient } from '@supabase/supabase-js';
+import { cookies } from 'next/headers';
+import LoginForm from './LoginForm';
+import { logout } from './actions';
 
 export const dynamic = 'force-dynamic';
 
 async function getData() {
   const supabase = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL,
-    process.env.SUPABASE_SERVICE_ROLE_KEY
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
   );
 
   const { data: visits, error } = await supabase
@@ -14,7 +17,7 @@ async function getData() {
     .order('visited_at', { ascending: false })
     .limit(1000);
 
-  if (error) throw new Error(error.message);
+  if (error) throw new Error(`Supabase error: ${error.message}`);
 
   const total = visits.length;
   const byPage = visits.reduce((acc, v) => { acc[v.page] = (acc[v.page] || 0) + 1; return acc; }, {});
@@ -29,6 +32,10 @@ async function getData() {
 }
 
 export default async function AdminPanel() {
+  const cookieStore = await cookies();
+  const authed = cookieStore.get('wonly_auth')?.value === 'ok';
+  if (!authed) return <LoginForm />;
+
   const data = await getData();
 
   const pageEntries = Object.entries(data.byPage).sort((a, b) => b[1] - a[1]);
@@ -40,7 +47,12 @@ export default async function AdminPanel() {
 
   return (
     <div className="min-h-screen bg-[#050505] text-white p-6 max-w-4xl mx-auto">
-      <h1 className="text-2xl font-bold mb-8">Panel de Visitas — WONLY</h1>
+      <div className="flex items-center justify-between mb-8">
+        <h1 className="text-2xl font-bold">Panel de Visitas — WONLY</h1>
+        <form action={logout}>
+          <button type="submit" className="text-zinc-400 hover:text-white text-sm">Cerrar sesión</button>
+        </form>
+      </div>
 
       {/* Tarjetas resumen */}
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
