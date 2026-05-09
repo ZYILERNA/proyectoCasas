@@ -368,7 +368,6 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
                                                     <span className="font-bold font-mono bg-black/10 px-1.5 rounded">{conf.code}</span>
                                                     <span className="opacity-80">{conf.desc || conf.size}</span>
                                                 </div>
-                                                <div className="font-bold font-mono">{formatPrice(conf.price)}</div>
                                             </div>
                                         ))}
                                     </div>
@@ -377,15 +376,9 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
                         </div>
 
                         <div className="absolute bottom-0 left-0 w-full bg-white border-t border-gray-100 p-4 md:p-6 z-20">
-                            <div className="bg-gray-900 text-white p-4 rounded-lg flex justify-between items-center shadow-lg">
-                                <div>
-                                    <div className="text-[10px] uppercase text-gray-400 tracking-widest">Precio Estimado</div>
-                                    <div className="text-xl font-bold font-mono">{formatPrice(selectedProduct.priceBase)}</div>
-                                </div>
-                                <Link href="/contacto" className="bg-white text-black px-4 py-2 rounded text-[10px] font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors">
-                                    Cotizar
-                                </Link>
-                            </div>
+                            <Link href="/contacto" className="block w-full bg-black text-white text-center px-6 py-4 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-gray-800 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-lg shadow-black/20">
+                                Solicitar Cotización
+                            </Link>
                         </div>
                     </div>
                 </motion.div>
@@ -650,7 +643,6 @@ export default function SofasPage() {
                                     <div className="flex flex-col gap-1">
                                         <div className="flex justify-between items-baseline">
                                             <h3 className="text-lg font-medium text-gray-900 leading-tight group-hover:text-gray-600 transition-colors cursor-pointer" onClick={() => setSelectedProduct(item)}>{item.name}</h3>
-                                            <span className="text-sm font-bold text-gray-900 whitespace-nowrap ml-4">{formatPrice(item.priceBase)}</span>
                                         </div>
 
                                         <div className="flex items-center gap-2 mt-1">
