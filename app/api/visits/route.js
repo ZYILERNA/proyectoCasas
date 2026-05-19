@@ -11,7 +11,7 @@ export async function GET(request) {
   const { data: visits, error } = await supabase
     .from('page_visits')
     .select('*')
-    .order('visited_at', { ascending: false }
+    .order('visited_at', { ascending: false })
     .limit(1000);
 
   if (error) {
