@@ -220,12 +220,16 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
                             </div>
                             {allImages.length > 1 && (
                                 <div className="absolute bottom-4 left-0 w-full flex justify-center gap-1.5 z-10">
-                                    {allImages.map((_, idx) => (
-                                        <div 
-                                            key={idx} 
-                                            className={`h-1.5 rounded-full transition-all duration-300 ${idx === mobileImageIndex ? 'w-4 bg-black' : 'w-1.5 bg-gray-300'}`} 
+                                    {allImages.length <= 5 ? allImages.map((_, idx) => (
+                                        <div
+                                            key={idx}
+                                            className={`h-1.5 rounded-full transition-all duration-300 ${idx === mobileImageIndex ? 'w-4 bg-black' : 'w-1.5 bg-gray-300'}`}
                                         />
-                                    ))}
+                                    )) : (
+                                        <span className="bg-black/60 text-white text-[10px] font-mono px-2 py-0.5 rounded-full">
+                                            {mobileImageIndex + 1} / {allImages.length}
+                                        </span>
+                                    )}
                                 </div>
                             )}
                         </div>
@@ -281,13 +285,17 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
                                                 </button>
                                                 
                                                 <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
-                                                    {selectedProduct.schematics.map((_, index) => (
-                                                        <div 
-                                                            key={index} 
+                                                    {selectedProduct.schematics.length <= 5 ? selectedProduct.schematics.map((_, index) => (
+                                                        <div
+                                                            key={index}
                                                             onClick={() => setCurrentSchematicIndex(index)}
-                                                            className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${index === currentSchematicIndex ? 'w-4 bg-black' : 'w-1.5 bg-gray-300 hover:bg-gray-400'}`} 
+                                                            className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${index === currentSchematicIndex ? 'w-4 bg-black' : 'w-1.5 bg-gray-300 hover:bg-gray-400'}`}
                                                         />
-                                                    ))}
+                                                    )) : (
+                                                        <span className="bg-black/60 text-white text-[10px] font-mono px-2 py-0.5 rounded-full cursor-default">
+                                                            {currentSchematicIndex + 1} / {selectedProduct.schematics.length}
+                                                        </span>
+                                                    )}
                                                 </div>
                                             </>
                                         )}

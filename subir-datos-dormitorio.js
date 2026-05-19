@@ -74,7 +74,8 @@ const dormitoriosData = [
     schematics: [
         "/images/DORMITORIOS/CAMA2/img1.jpg", 
         "/images/DORMITORIOS/CAMA2/img2.jpg",
-        "/images/DORMITORIOS/CAMA2/img3.jpg"
+        "/images/DORMITORIOS/CAMA2/img3.jpg",
+        "/images/DORMITORIOS/CAMA2/img4.jpg"
     ],
     specs: { 
         dimensions: "1800 * 2000 mm", 
@@ -117,7 +118,8 @@ const dormitoriosData = [
     schematics: [
         "/images/DORMITORIOS/CAMA3/img1.jpg", 
         "/images/DORMITORIOS/CAMA3/img2.jpg",
-        "/images/DORMITORIOS/CAMA3/img3.jpg"
+        "/images/DORMITORIOS/CAMA3/img3.jpg",
+        "/images/DORMITORIOS/CAMA3/img4.jpg"
     ],
     specs: { 
         dimensions: "1800 * 2000 mm", 
@@ -162,7 +164,9 @@ const dormitoriosData = [
     schematics: [
         "/images/DORMITORIOS/CAMA4/img1.jpg", 
         "/images/DORMITORIOS/CAMA4/img2.jpg",
-        "/images/DORMITORIOS/CAMA4/img3.jpg"
+        "/images/DORMITORIOS/CAMA4/img3.jpg",
+        "/images/DORMITORIOS/CAMA4/img4.jpg",
+        "/images/DORMITORIOS/CAMA4/img5.jpg"
     ],
     specs: { 
         dimensions: "1800 * 2000 mm", 
@@ -208,7 +212,9 @@ const dormitoriosData = [
     schematics: [
         "/images/DORMITORIOS/CAMA5/img1.jpg", 
         "/images/DORMITORIOS/CAMA5/img2.jpg",
-        "/images/DORMITORIOS/CAMA5/img3.jpg"
+        "/images/DORMITORIOS/CAMA5/img3.jpg",
+         "/images/DORMITORIOS/CAMA5/img4.jpg",
+        "/images/DORMITORIOS/CAMA5/img5.jpg"
     ],
     specs: { 
         dimensions: "1800 * 2000 mm", 
@@ -249,9 +255,11 @@ const dormitoriosData = [
     priceBase: 41550, 
     image: "/images/DORMITORIOS/CAMA6/render.jpg", 
     schematics: [
-        "/images/DORMITORIOS/CAMA6/img1.jpg", 
+        "/images/DORMITORIOS/CAMA6/img1.jpg",
         "/images/DORMITORIOS/CAMA6/img2.jpg",
-        "/images/DORMITORIOS/CAMA6/img3.jpg"
+        "/images/DORMITORIOS/CAMA6/img3.jpg",
+        "/images/DORMITORIOS/CAMA6/img4.jpg",
+        "/images/DORMITORIOS/CAMA6/img5.jpg"
     ],
     specs: { 
         dimensions: "1800 * 2000 mm", 
@@ -294,9 +302,11 @@ const dormitoriosData = [
     priceBase: 32860, 
     image: "/images/DORMITORIOS/CAMA7/render.jpg", 
     schematics: [
-        "/images/DORMITORIOS/CAMA7/img1.jpg", 
+        "/images/DORMITORIOS/CAMA7/img1.jpg",
         "/images/DORMITORIOS/CAMA7/img2.jpg",
-        "/images/DORMITORIOS/CAMA7/img3.jpg"
+        "/images/DORMITORIOS/CAMA7/img3.jpg",
+        "/images/DORMITORIOS/CAMA7/img4.jpg",
+        "/images/DORMITORIOS/CAMA7/img5.jpg"
     ],
     specs: { 
         dimensions: "1800 * 2000 mm", 
@@ -336,9 +346,12 @@ const dormitoriosData = [
     priceBase: 34480, 
     image: "/images/DORMITORIOS/CAMA8/render.jpg", 
     schematics: [
-        "/images/DORMITORIOS/CAMA8/img1.jpg", 
+        "/images/DORMITORIOS/CAMA8/img1.jpg",
         "/images/DORMITORIOS/CAMA8/img2.jpg",
-        "/images/DORMITORIOS/CAMA8/img3.jpg"
+        "/images/DORMITORIOS/CAMA8/img3.jpg",
+        "/images/DORMITORIOS/CAMA8/img4.jpg",
+        "/images/DORMITORIOS/CAMA8/img5.jpg",
+        "/images/DORMITORIOS/CAMA8/img6.jpg"
     ],
     specs: { 
         dimensions: "1800 * 2000 mm", 
@@ -381,9 +394,12 @@ const dormitoriosData = [
     priceBase: 23460, 
     image: "/images/DORMITORIOS/CAMA9/render.jpg", 
     schematics: [
-        "/images/DORMITORIOS/CAMA9/img1.jpg", 
+        "/images/DORMITORIOS/CAMA9/img1.jpg",
         "/images/DORMITORIOS/CAMA9/img2.jpg",
-        "/images/DORMITORIOS/CAMA9/img3.jpg"
+        "/images/DORMITORIOS/CAMA9/img3.jpg",
+        "/images/DORMITORIOS/CAMA9/img4.jpg",
+        "/images/DORMITORIOS/CAMA9/img5.jpg",
+        "/images/DORMITORIOS/CAMA9/img6.jpg"
     ],
     specs: { 
         dimensions: "1800 * 2000 mm", 
@@ -426,7 +442,11 @@ const dormitoriosData = [
     schematics: [
         "/images/DORMITORIOS/CAMA10/img1.jpg", 
         "/images/DORMITORIOS/CAMA10/img2.jpg",
-        "/images/DORMITORIOS/CAMA10/img3.jpg"
+        "/images/DORMITORIOS/CAMA10/img3.jpg",
+        "/images/DORMITORIOS/CAMA10/img4.jpg",
+        "/images/DORMITORIOS/CAMA10/img5.jpg",
+        "/images/DORMITORIOS/CAMA10/img6.jpg",
+        "/images/DORMITORIOS/CAMA10/img7.jpg"
     ],
     specs: { 
         dimensions: "550 * 430 * 500 mm", 
@@ -468,7 +488,9 @@ const dormitoriosData = [
     schematics: [
         "/images/DORMITORIOS/CAMA11/img1.jpg", 
         "/images/DORMITORIOS/CAMA11/img2.jpg",
-        "/images/DORMITORIOS/CAMA11/img3.jpg"
+        "/images/DORMITORIOS/CAMA11/img3.jpg",
+        "/images/DORMITORIOS/CAMA11/img4.jpg",
+        "/images/DORMITORIOS/CAMA11/img5.jpg"
     ],
     specs: { 
         dimensions: "500 * 420 * 450 mm", 
@@ -555,7 +577,8 @@ const dormitoriosData = [
     schematics: [
         "/images/DORMITORIOS/CAMA13/img1.jpg", 
         "/images/DORMITORIOS/CAMA13/img2.jpg",
-        "/images/DORMITORIOS/CAMA13/img3.jpg"
+        "/images/DORMITORIOS/CAMA13/img3.jpg",
+        "/images/DORMITORIOS/CAMA13/img4.jpg"
     ],
     specs: { 
         dimensions: "550 * 470 * 460 mm", 
@@ -601,7 +624,8 @@ const dormitoriosData = [
     schematics: [
         "/images/DORMITORIOS/CAMA14/img1.jpg", 
         "/images/DORMITORIOS/CAMA14/img2.jpg",
-        "/images/DORMITORIOS/CAMA14/img3.jpg"
+        "/images/DORMITORIOS/CAMA14/img3.jpg",
+        "/images/DORMITORIOS/CAMA14/img4.jpg"
     ],
     specs: { 
         dimensions: "550 * 470 * 460 mm", 
@@ -647,7 +671,10 @@ const dormitoriosData = [
     schematics: [
         "/images/DORMITORIOS/CAMA15/img1.jpg", 
         "/images/DORMITORIOS/CAMA15/img2.jpg",
-        "/images/DORMITORIOS/CAMA15/img3.jpg"
+        "/images/DORMITORIOS/CAMA15/img3.jpg",
+        "/images/DORMITORIOS/CAMA15/img4.jpg",
+        "/images/DORMITORIOS/CAMA15/img5.jpg",
+        "/images/DORMITORIOS/CAMA15/img6.jpg"
     ],
     specs: { 
         dimensions: "700 * 440 * 420 mm", 
@@ -695,7 +722,8 @@ const dormitoriosData = [
     schematics: [
         "/images/DORMITORIOS/CAMA16/img1.jpg", 
         "/images/DORMITORIOS/CAMA16/img2.jpg",
-        "/images/DORMITORIOS/CAMA16/img3.jpg"
+        "/images/DORMITORIOS/CAMA16/img3.jpg",
+        "/images/DORMITORIOS/CAMA16/img4.jpg"
     ],
     specs: { 
         dimensions: "530 * 470 * 570 mm", 
@@ -738,7 +766,8 @@ const dormitoriosData = [
     schematics: [
         "/images/DORMITORIOS/CAMA17/img1.jpg", 
         "/images/DORMITORIOS/CAMA17/img2.jpg",
-        "/images/DORMITORIOS/CAMA17/img3.jpg"
+        "/images/DORMITORIOS/CAMA17/img3.jpg",
+        "/images/DORMITORIOS/CAMA17/img4.jpg"
     ],
     specs: { 
         dimensions: "460 * 400 * 450 mm", 
@@ -783,7 +812,8 @@ const dormitoriosData = [
     schematics: [
         "/images/DORMITORIOS/CAMA18/img1.jpg", 
         "/images/DORMITORIOS/CAMA18/img2.jpg",
-        "/images/DORMITORIOS/CAMA18/img3.jpg"
+        "/images/DORMITORIOS/CAMA18/img3.jpg",
+        "/images/DORMITORIOS/CAMA18/img4.jpg"
     ],
     specs: { 
         dimensions: "545 * 420 * 475 mm", 
@@ -830,7 +860,8 @@ const dormitoriosData = [
     schematics: [
         "/images/DORMITORIOS/CAMA19/img1.jpg", 
         "/images/DORMITORIOS/CAMA19/img2.jpg",
-        "/images/DORMITORIOS/CAMA19/img3.jpg"
+        "/images/DORMITORIOS/CAMA19/img3.jpg",
+        "/images/DORMITORIOS/CAMA19/img4.jpg"
     ],
     specs: { 
         dimensions: "545 * 420 * 475 mm", 
@@ -920,7 +951,9 @@ const dormitoriosData = [
     schematics: [
         "/images/DORMITORIOS/CAMA21/img1.jpg", 
         "/images/DORMITORIOS/CAMA21/img2.jpg",
-        "/images/DORMITORIOS/CAMA21/img3.jpg"
+        "/images/DORMITORIOS/CAMA21/img3.jpg",
+        "/images/DORMITORIOS/CAMA21/img4.jpg",
+        "/images/DORMITORIOS/CAMA21/img5.jpg"
     ],
     specs: { 
         dimensions: "540 * 445 * 525 mm", 
@@ -963,7 +996,9 @@ const dormitoriosData = [
     schematics: [
         "/images/DORMITORIOS/CAMA22/img1.jpg", 
         "/images/DORMITORIOS/CAMA22/img2.jpg",
-        "/images/DORMITORIOS/CAMA22/img3.jpg"
+        "/images/DORMITORIOS/CAMA22/img3.jpg",
+        "/images/DORMITORIOS/CAMA22/img4.jpg",
+        "/images/DORMITORIOS/CAMA22/img5.jpg"
     ],
     specs: { 
         dimensions: "545 * 405 * 470 mm", 
@@ -1305,9 +1340,240 @@ const dormitoriosData = [
         { code: "2000", size: "2000*2200*30mm", price: 2100 }
     ]
   },
-  { 
-    id: "somier-tyrc9306-disassembled", 
-    name: "Somier Classic Disassembled Reinforced", 
+  {
+    id: "cama-hyrc89125",
+    name: "ZEN Bed HYRC89125",
+    category: "Camas",
+    code: "HYRC89125",
+    priceBase: null,
+    image: "/images/DORMITORIOS/CAMA33/render.jpg",
+    schematics: [
+        "/images/DORMITORIOS/CAMA33/img1.jpg",
+        "/images/DORMITORIOS/CAMA33/img2.jpg",
+        "/images/DORMITORIOS/CAMA33/img3.jpg"
+    ],
+    specs: {
+        dimensions: "1800 * 2000 mm",
+        volume: "0.60 m³",
+        assembly: "Desmontable y Ensamblable / 3 Piezas"
+    },
+    materials: [
+        { part: "Cabecero", material: "Eco-leather", detail: "Taupe (Interchangeable)" },
+        { part: "Estructura", material: "Aluminum alloy", detail: "Graphite baking finish" },
+        { part: "Canto", material: "Aluminum alloy", detail: "Brushed Silver — Aligned edges" }
+    ],
+    colors: {
+        interior: [
+            { name: "Eco-leather Taupe", hex: "#A89B8C" },
+            { name: "Graphite Frame", hex: "#2A2A2A" },
+            { name: "Brushed Silver", hex: "#9E9E9E" }
+        ]
+    },
+    configurations: [
+        { code: "1500", size: "1500*2000mm", vol: "0.53m³", price: null },
+        { code: "1800", size: "1800*2000mm", vol: "0.60m³", price: null }
+    ],
+    priceList: []
+  },
+  {
+    id: "cama-hyrc89119",
+    name: "WhisperArc Bed HYRC89119",
+    category: "Camas",
+    code: "HYRC89119",
+    priceBase: null,
+    image: "/images/DORMITORIOS/CAMA34/render.jpg",
+    schematics: [
+        "/images/DORMITORIOS/CAMA34/img1.jpg",
+        "/images/DORMITORIOS/CAMA34/img2.jpg",
+        "/images/DORMITORIOS/CAMA34/img3.jpg"
+    ],
+    specs: {
+        dimensions: "1800 * 2000 mm",
+        volume: "0.62 m³",
+        assembly: "Desmontable y Ensamblable / 3 Piezas"
+    },
+    materials: [
+        { part: "Cabecero", material: "Boucle fabric", detail: "Cream / Off-white (Interchangeable)" },
+        { part: "Base", material: "Boucle fabric", detail: "Cream / Off-white" },
+        { part: "Patas", material: "Metal", detail: "Matte Black" }
+    ],
+    colors: {
+        interior: [
+            { name: "Cream Boucle", hex: "#EDE9E1" },
+            { name: "Rust Brown", hex: "#7A2E15" }
+        ]
+    },
+    configurations: [
+        { code: "1500", size: "1500*2000mm", vol: "0.55m³", price: null },
+        { code: "1800", size: "1800*2000mm", vol: "0.62m³", price: null }
+    ],
+    priceList: []
+  },
+  {
+    id: "cama-hyrc89115-b",
+    name: "ZEN Bed HYRC89115-B",
+    category: "Camas",
+    code: "HYRC89115-B",
+    priceBase: null,
+    image: "/images/DORMITORIOS/CAMA35/render.jpg",
+    schematics: [],
+    specs: {
+        dimensions: "1800 * 2000 mm",
+        volume: "0.55 m³",
+        assembly: "Desmontable y Ensamblable / 2 Piezas"
+    },
+    materials: [
+        { part: "Base", material: "Eco-leather", detail: "Burgundy / Wine Brown" },
+        { part: "Patas", material: "Acrylic", detail: "Transparent con LED" }
+    ],
+    colors: {
+        interior: [
+            { name: "Burgundy", hex: "#5C1F1F" },
+            { name: "Acrylic Clear", hex: "#D6D6D6" }
+        ]
+    },
+    configurations: [
+        { code: "1500", size: "1500*2000mm", vol: "0.48m³", price: null },
+        { code: "1800", size: "1800*2000mm", vol: "0.55m³", price: null }
+    ],
+    priceList: []
+  },
+  {
+    id: "cama-hyrc89115-a",
+    name: "ZEN Bed HYRC89115-A",
+    category: "Camas",
+    code: "HYRC89115-A",
+    priceBase: null,
+    image: "/images/DORMITORIOS/CAMA36/render.jpg",
+    schematics: [
+        "/images/DORMITORIOS/CAMA36/img1.jpg",
+        "/images/DORMITORIOS/CAMA36/img2.jpg"
+    ],
+    specs: {
+        dimensions: "1800 * 2000 mm",
+        volume: "0.55 m³",
+        assembly: "Desmontable y Ensamblable / 2 Piezas"
+    },
+    materials: [
+        { part: "Base", material: "Eco-leather", detail: "Interchangeable" },
+        { part: "Patas", material: "Acrylic", detail: "Transparent con LED" }
+    ],
+    colors: {
+        interior: [
+            { name: "Burgundy", hex: "#5C1F1F" },
+            { name: "Acrylic Clear", hex: "#D6D6D6" }
+        ]
+    },
+    configurations: [
+        { code: "1500", size: "1500*2000mm", vol: "0.48m³", price: null },
+        { code: "1800", size: "1800*2000mm", vol: "0.55m³", price: null }
+    ],
+    priceList: []
+  },
+  {
+    id: "mesa-noche-hygl81815",
+    name: "Blending Bedside Table HYGL81815",
+    category: "Mesas de Noche",
+    code: "HYGL81815/HB133-CTG",
+    priceBase: null,
+    image: "/images/DORMITORIOS/CAMA37/render.jpg",
+    schematics: [
+        "/images/DORMITORIOS/CAMA37/img1.jpg"
+    ],
+    specs: {
+        dimensions: "500 * 500 * 550 mm",
+        volume: "0.18 m³",
+        assembly: "Ensamblado / 1 Pieza"
+    },
+    materials: [
+        { part: "Upper drawer section", material: "E0-grade MDF", detail: "Haoyue Gray (Matte)" },
+        { part: "Cabinet body", material: "E0-grade MDF", detail: "Oil-wax color (Dark)" },
+        { part: "Hardware accent", material: "Stainless steel", detail: "Brushed Space Gold" }
+    ],
+    colors: {
+        body: [
+            { name: "Oil-wax color (Dark)", hex: "#1A1A1A" }
+        ],
+        top: [
+            { name: "Haoyue Gray (Matte)", hex: "#9EA1A3" }
+        ],
+        hardware: [
+            { name: "Brushed Space Gold", hex: "#C5B358" }
+        ]
+    },
+    configurations: [
+        { code: "STD", size: "500*500*550mm", vol: "0.18m³", price: null }
+    ],
+    priceList: [
+        {
+            name: "Mesa de Noche Estándar",
+            size: "500*500*550",
+            prices: { unique: null }
+        }
+    ],
+    customInstructions: {
+        design_note: "Cylindrical bedside table with arched open lower section and upper drawer cabinet",
+        material_note: "Blending design with contrasting dark wood base and light upper drawer"
+    }
+  },
+  {
+    id: "mesa-noche-hygl81801-r",
+    name: "Blending Bedside Table HYGL81801-R",
+    category: "Mesas de Noche",
+    code: "HYGL81801-R/HB129Y-CTG & HB131Y-CTG",
+    priceBase: null,
+    image: "/images/DORMITORIOS/CAMA38/render.jpg",
+    schematics: [
+        "/images/DORMITORIOS/CAMA38/img1.jpg",
+        "/images/DORMITORIOS/CAMA38/img2.jpg",
+        "/images/DORMITORIOS/CAMA38/img3.jpg"
+    ],
+    specs: {
+        dimensions: "530 * 530 * 600 mm",
+        volume: "0.20 m³",
+        assembly: "Ensamblado / 1 Pieza"
+    },
+    materials: [
+        { part: "Cabinet body", material: "E0-grade MDF", detail: "Light Gray High Gloss / Dark Brown Oak / Black Oak (Interchangeable)" },
+        { part: "Top panel", material: "Sintered stone", detail: "Snow White" },
+        { part: "Door handle", material: "Stainless steel", detail: "Brushed Space Gold" },
+        { part: "Base ring", material: "Stainless steel", detail: "Brushed Space Gold" }
+    ],
+    colors: {
+        body: [
+            { name: "Light Gray (High gloss)", hex: "#C8C5C0" },
+            { name: "Dark Brown Oak", hex: "#3B2A1A" },
+            { name: "Black Oak", hex: "#1A1A1A" }
+        ],
+        top: [
+            { name: "Snow White Sintered Stone", hex: "#F5F5F3" }
+        ],
+        hardware: [
+            { name: "Brushed Space Gold", hex: "#C5B358" }
+        ]
+    },
+    configurations: [
+        { code: "R-GRAY", size: "530*530*600mm", vol: "0.20m³", price: null },
+        { code: "R-BROWN", size: "530*530*600mm", vol: "0.20m³", price: null },
+        { code: "R-BLACK", size: "530*530*600mm", vol: "0.20m³", price: null }
+    ],
+    priceList: [
+        {
+            name: "Mesa de Noche Cilíndrica (R)",
+            size: "530*530*600",
+            prices: { unique: null }
+        }
+    ],
+    customInstructions: {
+        design_note: "Cylindrical two-door bedside cabinet with sintered stone top and gold base ring",
+        orientation: "Right-side configuration (R)",
+        color_options: "Available in Light Gray High Gloss, Dark Brown Oak, and Black Oak",
+        material_note: "Cabinet body color is interchangeable; sintered stone top is non-interchangeable"
+    }
+  },
+  {
+    id: "somier-tyrc9306-disassembled",
+    name: "Somier Classic Disassembled Reinforced",
     category: "Bases de Cama", 
     code: "TYRC9306 PGJ-009", 
     priceBase: 1860, 
