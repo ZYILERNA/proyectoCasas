@@ -1808,66 +1808,7 @@ const tablesData = [
         customInstructions: null
     },
     // MESA 54
-    {
-        id: "escritorio-hytl86303",
-        name: "Escritorio Ejecutivo CHIN",
-        category: "Mesa de Centro",
-        code: "HYTL86303",
-        priceBase: null,
-        image: "/images/MESAS/CENTRO/MESA54/render.jpg",
-        specs: {
-            dimensions: "1800 * 730 * 760 mm",
-            volume: null,
-            assembly: null
-        },
-        materials: [
-            { part: "Superficie de Trabajo", material: "Madera de Fresno + Cuero", detail: "Madera perimetral de grano natural con inserción central de cuero para calidez táctil" },
-            { part: "Estructura Principal", material: "MDF Grado E0", detail: "Diseño optimizado con estanterías abiertas para artículos de uso frecuente" },
-            { part: "Ribetes y Acentos", material: "Acero Inoxidable", detail: "Acero cepillado que evoca la antigua artesanía de incrustaciones metálicas" },
-            { part: "Inteligencia Funcional", material: "Tecnología Oculta", detail: "Integración de carga inalámbrica y módulo de enchufes emergente multidispositivo" }
-        ],
-        colors: null,
-        configurations: [
-            { code: "HYTL86303", desc: "1800*730*760 mm", price: null }
-        ],
-        priceList: [
-            { name: "Escritorio Ejecutivo CHIN (Diseñador: He Dongxiao)", size: "1800*730*760", price: null }
-        ],
-        customInstructions: null
-    },
-    // MESA 55
-    {
-        id: "escritorio-hytl86301",
-        name: "Escritorio CHIN",
-        category: "Mesa de Centro",
-        code: "HYTL86301",
-        priceBase: null,
-        image: "/images/MESAS/CENTRO/MESA55/render.jpg",
-        specs: {
-            dimensions: "1500-1800 * 730-780 * 760 mm",
-            volume: null,
-            assembly: null
-        },
-        materials: [
-            { part: "Superficie de Trabajo", material: "Madera de Fresno oscura + Cuero PU", detail: "Bordes de madera con inserción central de cuero, evocando los antiguos pergaminos de bambú" },
-            { part: "Estructura y Almacenaje", material: "MDF Grado E0 + Acero Inox", detail: "Estructura inspirada en armas de la era Qin con almacenaje discreto de 'borde oculto'" },
-            { part: "Funciones Inteligentes", material: "Tecnología Oculta", detail: "Carga inalámbrica integrada y hub de energía emergente multidispositivo" }
-        ],
-        colors: null,
-        configurations: [
-            { code: "HYTL86301-1500", desc: "1500*780*760 mm", price: null },
-            { code: "HYTL86301-1800", desc: "1800*730*760 mm", price: null }
-        ],
-        priceList: [
-            { name: "Escritorio CHIN 1500mm", size: "1500*780*760", price: null },
-            { name: "Escritorio CHIN 1800mm (Diseñador: He Dongxiao)", size: "1800*730*760", price: null }
-        ],
-        customInstructions: {
-            length: "Customizable (1500-1800 mm)",
-            width: "Customizable (730-780 mm)",
-            height: "Not customizable (760 mm)"
-        }
-    },
+    // MESA 55 → movida a gabinetes (escritorio-hytl86301)
 
 ];
 

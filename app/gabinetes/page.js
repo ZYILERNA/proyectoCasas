@@ -699,22 +699,26 @@ const { data, error } = await supabase
                         
                         <div className="flex items-center gap-2 mt-1">
                             <p className="text-[10px] text-gray-400 uppercase tracking-widest mr-2">{item.category}</p>
-                            {item.colors?.interior && (
-                                <div className="flex -space-x-1">
-                                    {item.colors.marble.slice(0, 4).map((c, i) => (
-                                        <div    
-                                            key={i} 
-                                            className="w-3 h-3 rounded-full border border-white shadow-sm" 
-                                            style={{ backgroundColor: c.hex }}
-                                        />
-                                    ))}
-                                    {item.colors.marble.length > 4 && (
-                                        <div className="w-3 h-3 rounded-full bg-gray-100 border border-white flex items-center justify-center text-[6px] text-gray-500">
-                                            +
-                                        </div>
-                                    )}
-                                </div>
-                            )}
+                            {item.colors && (() => {
+                                const colorArray = Object.values(item.colors).find(v => Array.isArray(v) && v.length > 0);
+                                if (!colorArray) return null;
+                                return (
+                                    <div className="flex -space-x-1">
+                                        {colorArray.slice(0, 4).map((c, i) => (
+                                            <div
+                                                key={i}
+                                                className="w-3 h-3 rounded-full border border-white shadow-sm"
+                                                style={{ backgroundColor: c.hex }}
+                                            />
+                                        ))}
+                                        {colorArray.length > 4 && (
+                                            <div className="w-3 h-3 rounded-full bg-gray-100 border border-white flex items-center justify-center text-[6px] text-gray-500">
+                                                +
+                                            </div>
+                                        )}
+                                    </div>
+                                );
+                            })()}
                         </div>
                     </div>
                 </motion.div>

@@ -537,7 +537,9 @@ const dormitoriosData = [
     schematics: [
         "/images/DORMITORIOS/CAMA12/img1.jpg", 
         "/images/DORMITORIOS/CAMA12/img2.jpg",
-        "/images/DORMITORIOS/CAMA12/img3.jpg"
+        "/images/DORMITORIOS/CAMA12/img3.jpg",
+        "/images/DORMITORIOS/CAMA12/img4.jpg",
+        "/images/DORMITORIOS/CAMA12/img5.jpg"
     ],
     specs: { 
         dimensions: "500 * 380 * 500 mm", 
@@ -1034,106 +1036,8 @@ const dormitoriosData = [
         material_note: "Cabinet body material is non-interchangeable"
     }
   },
-  { 
-    id: "mesa-tocador-hygl81605", 
-    name: "Tocador HYGL81605 (Set)", 
-    category: "Tocadores", 
-    code: "HYGL81605-1 / HYGL81605-2", 
-    priceBase: 20550, 
-    image: "/images/DORMITORIOS/CAMA23/render.jpg", 
-    schematics: [
-        "/images/DORMITORIOS/CAMA23/img1.jpg", 
-        "/images/DORMITORIOS/CAMA23/img2.jpg",
-        "/images/DORMITORIOS/CAMA23/img3.jpg"
-    ],
-    specs: { 
-        dimensions: "1300 * 530 * 755 mm (Mesa principal)", 
-        volume: "0.55 m³", 
-        assembly: "Ensamblado y Desmontado / 3 Piezas" 
-    },
-    materials: [
-        { part: "Cabinet Top", material: "Sintered stone", detail: "Saint Laurent Gold" },
-        { part: "Cabinet Body", material: "E0-grade MDF", detail: "Haoyue Gray (High gloss)" },
-        { part: "Table Surface", material: "Saddle leather", detail: "PLMA0001" }
-    ],
-    colors: {
-        body: [
-            { name: "Haoyue Gray (High gloss)", hex: "#9EA1A3" }
-        ],
-        leather: [
-            { name: "Saddle leather PLMA0001", hex: "#7B3F00" }
-        ]
-    },
-    configurations: [
-        { 
-            code: "SET-23", 
-            name: "Gabinete + Mesa Tocador", 
-            price: 20550 
-        }
-    ],
-    priceList: [
-        { 
-            name: "HYGL81605-1 (Cabinet)", 
-            size: "900*470*515", 
-            prices: { unit: 8690 }
-        },
-        { 
-            name: "HYGL81605-2 (Table)", 
-            size: "1300*530*755", 
-            prices: { unit: 11860 }
-        }
-    ],
-    customInstructions: {
-        note: "HYGL81605-2 Dressing table cannot be ordered separately",
-        options: "Customizable door opening ways"
-    }
-  },
-  { 
-    id: "mesa-tocador-hygl81606", 
-    name: "Tocador HYGL81606", 
-    category: "Tocadores", 
-    code: "HYGL81606/MZL3505A", 
-    priceBase: 11390, 
-    image: "/images/DORMITORIOS/CAMA24/render.jpg", 
-    schematics: [
-        "/images/DORMITORIOS/CAMA24/img1.jpg", 
-        "/images/DORMITORIOS/CAMA24/img2.jpg",
-        "/images/DORMITORIOS/CAMA24/img3.jpg"
-    ],
-    specs: { 
-        dimensions: "1300 * 450 * 775 mm", 
-        volume: "0.32 m³", 
-        assembly: "Desmontado y Ensamblado / 3 Piezas" 
-    },
-    materials: [
-        { part: "Panel / Right foot", material: "E0-grade MDF", detail: "Oil-wax color" },
-        { part: "Left round cabinet", material: "E0-grade MDF", detail: "Haoyue Gray (High gloss)" },
-        { part: "Foot frame / Pull-bar foot stand", material: "Stainless steel", detail: "Brushed Japanese Gold" }
-    ],
-    colors: {
-        body: [
-            { name: "Haoyue Gray (High gloss)", hex: "#9EA1A3" },
-            { name: "Oil-wax color", hex: "#2B2A29" }
-        ],
-        hardware: [
-            { name: "Brushed Japanese Gold", hex: "#C5B358" }
-        ]
-    },
-    configurations: [
-        { code: "STD", size: "1300*450*775mm", vol: "0.32m³", price: 11390 }
-    ],
-    priceList: [
-        { 
-            name: "Tocador Estándar", 
-            size: "1300*450*775", 
-            prices: { unique: 11390 } 
-        }
-    ],
-    customInstructions: {
-        design_note: "Features a distinctive circular left cabinet and a minimalist right foot support",
-        material_note: "Main body materials are non-interchangeable"
-    }
-  },
+  // CAMA23 → movido a gabinetes (mesa-tocador-hygl81605 → GAB31)
+  // CAMA24 → movido a gabinetes (mesa-tocador-hygl81606 → GAB30)
   { 
     id: "colchon-fyrc59201-hmcd-006", 
     name: "Colchón FYRC59201", 
@@ -1526,7 +1430,11 @@ const dormitoriosData = [
     schematics: [
         "/images/DORMITORIOS/CAMA38/img1.jpg",
         "/images/DORMITORIOS/CAMA38/img2.jpg",
-        "/images/DORMITORIOS/CAMA38/img3.jpg"
+        "/images/DORMITORIOS/CAMA38/img3.jpg",
+        "/images/DORMITORIOS/CAMA38/img4.jpg",
+        "/images/DORMITORIOS/CAMA38/img5.jpg",
+        "/images/DORMITORIOS/CAMA38/img6.jpg",
+        "/images/DORMITORIOS/CAMA38/img7.jpg"
     ],
     specs: {
         dimensions: "530 * 530 * 600 mm",
@@ -1569,6 +1477,46 @@ const dormitoriosData = [
         orientation: "Right-side configuration (R)",
         color_options: "Available in Light Gray High Gloss, Dark Brown Oak, and Black Oak",
         material_note: "Cabinet body color is interchangeable; sintered stone top is non-interchangeable"
+    }
+  },
+  {
+    id: "mesa-noche-hygl81605-1",
+    name: "Diamond Bedside Table HYGL81605-1",
+    category: "Mesas de Noche",
+    code: "HYGL81605-1",
+    priceBase: 8690,
+    image: "/images/DORMITORIOS/CAMA39/render.jpg",
+    schematics: [
+        "/images/DORMITORIOS/CAMA39/img1.jpg"
+    ],
+    specs: {
+        dimensions: "900 * 470 * 515 mm",
+        volume: "0.28 m³",
+        assembly: "Ensamblado / 1 Pieza"
+    },
+    materials: [
+        { part: "Cabinet body & drawer fronts", material: "E0-grade MDF", detail: "Haoyue Gray (High gloss)" },
+        { part: "Open shelving interior", material: "E0-grade MDF", detail: "Dark Gray (Matte)" }
+    ],
+    colors: {
+        body: [
+            { name: "Haoyue Gray (High gloss)", hex: "#9EA1A3" }
+        ]
+    },
+    configurations: [
+        { code: "STD", size: "900*470*515mm", vol: "0.28m³", price: 8690 }
+    ],
+    priceList: [
+        {
+            name: "Diamond Bedside Table",
+            size: "900*470*515",
+            prices: { unique: 8690 }
+        }
+    ],
+    customInstructions: {
+        design_note: "Wave-front drawer design with integrated open shelving on the right side",
+        set_note: "Also available as part of the HYGL81605 Tocador Set (HYGL81605-1 + HYGL81605-2) — see Tocadores category",
+        material_note: "Cabinet body material is non-interchangeable"
     }
   },
   {
