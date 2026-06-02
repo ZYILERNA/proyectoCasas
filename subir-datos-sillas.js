@@ -20,14 +20,14 @@ const sillasData = [
 { 
     id: "hyyd85-lounge-chair", 
     name: "Silla HYYD85101", 
-    category: "Silla / Lounge chair", 
+    category: "Lounge chair", 
     code: "HYYD85101/HX8026B", 
     priceBase: 9100, 
-    image: "/images/SILLAS/LOUNGE/SILLA1/render.jpg", 
+    image: "/images/SILLAS/SILLA1/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA1/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA1/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA1/img3.jpg"
+        "/images/SILLAS/SILLA1/img1.jpg", 
+        "/images/SILLAS/SILLA1/img2.jpg",
+        "/images/SILLAS/SILLA1/img3.jpg"
     ],
     specs: {
         dimensions: "640 * 600 * 770 mm",
@@ -53,14 +53,14 @@ const sillasData = [
 { 
     id: "hyyd85102-lounge-chair", 
     name: "Silla HYYD85102", 
-    category: "Silla / Lounge chair", 
+    category: "Lounge chair", 
     code: "HYYD85102/HX8025Y", 
     priceBase: 14200, 
-    image: "/images/SILLAS/LOUNGE/SILLA2/render.jpg", 
+    image: "/images/SILLAS/SILLA2/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA2/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA2/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA2/img3.jpg"
+        "/images/SILLAS/SILLA2/img1.jpg", 
+        "/images/SILLAS/SILLA2/img2.jpg",
+        "/images/SILLAS/SILLA2/img3.jpg"
     ],
     specs: {
         dimensions: "685 * 800 * 770 mm",
@@ -87,14 +87,14 @@ const sillasData = [
 { 
     id: "hyyd85-lounge-chair-red", 
     name: "Silla HYYD85103", 
-    category: "Silla / Lounge chair", 
+    category: "Lounge chair", 
     code: "HYYD85103/HX8055", 
     priceBase: 16660, 
-    image: "/images/SILLAS/LOUNGE/SILLA3/render.jpg", 
+    image: "/images/SILLAS/SILLA3/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA3/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA3/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA3/img3.jpg"
+        "/images/SILLAS/SILLA3/img1.jpg", 
+        "/images/SILLAS/SILLA3/img2.jpg",
+        "/images/SILLAS/SILLA3/img3.jpg"
     ],
     specs: {
         dimensions: "810 * 840 * 700 mm",
@@ -122,14 +122,14 @@ const sillasData = [
 { 
     id: "hyyd85-lounge-chair-bicolor", 
     name: "Silla HYYD85106", 
-    category: "Silla / Lounge chair", 
+    category: "Lounge chair", 
     code: "HYYD85106/HX8050", 
     priceBase: 14780, 
-    image: "/images/SILLAS/LOUNGE/SILLA4/render.jpg", 
+    image: "/images/SILLAS/SILLA4/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA4/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA4/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA4/img3.jpg"
+        "/images/SILLAS/SILLA4/img1.jpg", 
+        "/images/SILLAS/SILLA4/img2.jpg",
+        "/images/SILLAS/SILLA4/img3.jpg"
     ],
     specs: {
         dimensions: "740 * 850 * 855 mm",
@@ -158,14 +158,14 @@ const sillasData = [
 { 
     id: "hyyd85-lounge-chair-pattern", 
     name: "Silla HYYD85107", 
-    category: "Silla / Lounge chair", 
+    category: "Lounge chair", 
     code: "HYYD85107/HX8051", 
     priceBase: 12890, 
-    image: "/images/SILLAS/LOUNGE/SILLA5/render.jpg", 
+    image: "/images/SILLAS/SILLA5/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA5/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA5/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA5/img3.jpg"
+        "/images/SILLAS/SILLA5/img1.jpg", 
+        "/images/SILLAS/SILLA5/img2.jpg",
+        "/images/SILLAS/SILLA5/img3.jpg"
     ],
     specs: {
         dimensions: "730 * 720 * 660 mm",
@@ -194,14 +194,14 @@ const sillasData = [
 { 
     id: "hyyd85-lounge-chair-comfy", 
     name: "Silla HYYD85108", 
-    category: "Silla / Lounge chair", 
+    category: "Lounge chair", 
     code: "HYYD85108/HX8056", 
     priceBase: 9760, 
-    image: "/images/SILLAS/LOUNGE/SILLA6/render.jpg", 
+    image: "/images/SILLAS/SILLA6/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA6/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA6/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA6/img3.jpg"
+        "/images/SILLAS/SILLA6/img1.jpg", 
+        "/images/SILLAS/SILLA6/img2.jpg",
+        "/images/SILLAS/SILLA6/img3.jpg"
     ],
     specs: {
         dimensions: "930 * 850 * 730 mm",
@@ -226,14 +226,14 @@ const sillasData = [
 { 
     id: "hyyd85-lounge-chair-swivel", 
     name: "Silla HYYD85115", 
-    category: "Silla / Lounge chair", 
+    category: "Lounge chair", 
     code: "HYYD85115/HX8058", 
     priceBase: 13650, 
-    image: "/images/SILLAS/LOUNGE/SILLA7/render.jpg", 
+    image: "/images/SILLAS/SILLA7/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA7/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA7/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA7/img3.jpg"
+        "/images/SILLAS/SILLA7/img1.jpg", 
+        "/images/SILLAS/SILLA7/img2.jpg",
+        "/images/SILLAS/SILLA7/img3.jpg"
     ],
     specs: {
         dimensions: "860 * 695 * 725 mm",
@@ -259,14 +259,14 @@ const sillasData = [
  { 
     id: "hyyd85-lounge-chair-wrap", 
     name: "Silla HYYD85117", 
-    category: "Silla / Lounge chair", 
+    category: "Lounge chair", 
     code: "HYYD85117/HX8065", 
     priceBase: 10460, 
-    image: "/images/SILLAS/LOUNGE/SILLA8/render.jpg", 
+    image: "/images/SILLAS/SILLA8/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA8/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA8/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA8/img3.jpg"
+        "/images/SILLAS/SILLA8/img1.jpg", 
+        "/images/SILLAS/SILLA8/img2.jpg",
+        "/images/SILLAS/SILLA8/img3.jpg"
     ],
     specs: {
         dimensions: "770 * 730 * 720 mm",
@@ -293,14 +293,23 @@ const sillasData = [
  { 
     id: "hyyd85-lounge-chair-draped", 
     name: "Silla HYYD85120", 
-    category: "Silla / Lounge chair", 
+    category: "Lounge chair", 
     code: "HYYD85120/HX8068", 
     priceBase: 13160, 
-    image: "/images/SILLAS/LOUNGE/SILLA9/render.jpg", 
+    image: "/images/SILLAS/SILLA9/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA9/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA9/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA9/img3.jpg"
+        "/images/SILLAS/SILLA9/img1.jpg", 
+        "/images/SILLAS/SILLA9/img2.jpg",
+        "/images/SILLAS/SILLA9/img3.jpg",
+        "/images/SILLAS/SILLA9/img4.jpg", 
+        "/images/SILLAS/SILLA9/img5.jpg",
+        "/images/SILLAS/SILLA9/img6.jpg",
+        "/images/SILLAS/SILLA9/img7.jpg", 
+        "/images/SILLAS/SILLA9/img8.jpg",
+        "/images/SILLAS/SILLA9/img9.jpg",
+        "/images/SILLAS/SILLA9/img10.jpg", 
+        "/images/SILLAS/SILLA9/img11.jpg",
+        "/images/SILLAS/SILLA9/img12.jpg"
     ],
     specs: {
         dimensions: "910 * 920 * 795 mm",
@@ -324,17 +333,28 @@ const sillasData = [
         { name: "Lounge chair", size: "910*920*795", vol: "0.81", prices: { fa: 9190, fb: 9750, fc: 10360, fd: 11160, fe: 13160, la: 14890, lb: 17460, lc: 19790 } }
     ]
  },
- { 
-    id: "hyyd85-lounge-chair-beech", 
-    name: "Silla HYYD85122", 
-    category: "Silla / Lounge chair", 
-    code: "HYYD85122", 
-    priceBase: 9650, 
-    image: "/images/SILLAS/LOUNGE/SILLA10/render.jpg", 
+ {
+    id: "hyyd85-lounge-chair-85122",
+    name: "Silla HYYD85122",
+    category: "Lounge chair",
+    code: "HYYD85122 / HYYD85122A",
+    priceBase: 13250,
+    image: "/images/SILLAS/SILLA10/render.jpg",
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA10/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA10/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA10/img3.jpg"
+        "/images/SILLAS/SILLA10/img1.jpg",
+        "/images/SILLAS/SILLA10/img2.jpg",
+        "/images/SILLAS/SILLA10/img3.jpg",
+        "/images/SILLAS/SILLA10/img4.jpg",
+        "/images/SILLAS/SILLA10/img5.jpg",
+        "/images/SILLAS/SILLA10/img6.jpg",
+        "/images/SILLAS/SILLA10/img7.jpg",
+        "/images/SILLAS/SILLA10/img8.jpg",
+        "/images/SILLAS/SILLA10/img9.jpg",
+        "/images/SILLAS/SILLA10/img10.jpg",
+        "/images/SILLAS/SILLA10/img11.jpg",
+        "/images/SILLAS/SILLA10/img12.jpg",
+        "/images/SILLAS/SILLA10/img13.jpg",
+        "/images/SILLAS/SILLA10/img14.jpg"
     ],
     specs: {
         dimensions: "780 * 855 * 890 mm",
@@ -342,52 +362,21 @@ const sillasData = [
         assembly: "Assembled / 1 piece"
     },
     materials: [
-        { part: "Main body", material: "Fabric", detail: "BLMM0195 (Not washable)" },
-        { part: "Wooden frame", material: "Beech wood", detail: "Ochre color" },
+        { part: "Main body (variant A)", material: "Genuine leather", detail: "PLQQ0005 (Interchangeable)" },
+        { part: "Wooden frame (variant A)", material: "Ash wood", detail: "Oil-wax color (Black)" },
+        { part: "Main body (variant B)", material: "Fabric", detail: "BLMM0195 (Not washable)" },
+        { part: "Wooden frame (variant B)", material: "Beech wood", detail: "Ochre color" },
         { part: "Metal decorative sheet", material: "Stainless steel", detail: "Brushed Space Gold" }
     ],
     colors: {
         interior: [
-            { name: "Main Fabric Ochre", hex: "#A0522D" } 
+            { name: "Genuine Leather Tan", hex: "#A46D4D" },
+            { name: "Fabric Ochre", hex: "#A0522D" }
         ]
     },
     configurations: [
-        { code: "STD", size: "780mm", vol: "0.73m³", price: 9650 }
-    ],
-    priceList: [
-        { name: "Lounge chair", size: "780*855*890", vol: "0.73", prices: { fa: 8260, fb: 8590, fc: 9060, fd: 9650, fe: 10360, la: 11860, lb: 13250, lc: 14650 } }
-    ]
- },
-
-{ 
-    id: "hyyd85-lounge-chair-122a", 
-    name: "Silla HYYD85122A", 
-    category: "Silla / Lounge chair", 
-    code: "HYYD85122A", 
-    priceBase: 13250, 
-    image: "/images/SILLAS/LOUNGE/SILLA11/render.jpg", 
-    schematics: [
-        "/images/SILLAS/LOUNGE/SILLA11/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA11/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA11/img3.jpg"
-    ],
-    specs: {
-        dimensions: "780 * 855 * 890 mm",
-        volume: "0.73 m³",
-        assembly: "Assembled / 1 piece"
-    },
-    materials: [
-        { part: "Main body", material: "Genuine leather", detail: "PLQQ0005 (Interchangeable)" },
-        { part: "Wooden frame", material: "Ash wood", detail: "Oil-wax color (Black)" },
-        { part: "Metal decorative sheet", material: "Stainless steel", detail: "Brushed Space Gold" }
-    ],
-    colors: {
-        interior: [
-            { name: "Genuine Leather Tan", hex: "#A46D4D" } 
-        ]
-    },
-    configurations: [
-        { code: "STD", size: "780mm", vol: "0.73m³", price: 13250 }
+        { code: "HYYD85122A", size: "780mm", vol: "0.73m³", price: 13250 },
+        { code: "HYYD85122", size: "780mm", vol: "0.73m³", price: 9650 }
     ],
     priceList: [
         { name: "Lounge chair", size: "780*855*890", vol: "0.73", prices: { fa: 8260, fb: 8590, fc: 9060, fd: 9650, fe: 10360, la: 11860, lb: 13250, lc: 14650 } }
@@ -396,14 +385,14 @@ const sillasData = [
  { 
     id: "hyyd85-cigar-chair", 
     name: "Silla HYYD85125 (Cigar chair)", 
-    category: "Silla / Lounge chair", 
+    category: "Lounge chair", 
     code: "HYYD85125", 
     priceBase: 35740, 
-    image: "/images/SILLAS/LOUNGE/SILLA12/render.jpg", 
+    image: "/images/SILLAS/SILLA12/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA12/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA12/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA12/img3.jpg"
+        "/images/SILLAS/SILLA12/img1.jpg", 
+        "/images/SILLAS/SILLA12/img2.jpg",
+        "/images/SILLAS/SILLA12/img3.jpg"
     ],
     specs: {
         dimensions: "940 * 950 * 1020 mm",
@@ -441,14 +430,14 @@ const sillasData = [
  { 
     id: "hyyd85-lounge-chair-127", 
     name: "Silla HYYD85127", 
-    category: "Silla / Lounge chair", 
+    category: "Lounge chair", 
     code: "HYYD85127/HX8061", 
     priceBase: 13960, 
-    image: "/images/SILLAS/LOUNGE/SILLA13/render.jpg", 
+    image: "/images/SILLAS/SILLA13/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA13/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA13/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA13/img3.jpg"
+        "/images/SILLAS/SILLA13/img1.jpg", 
+        "/images/SILLAS/SILLA13/img2.jpg",
+        "/images/SILLAS/SILLA13/img3.jpg"
     ],
     specs: {
         dimensions: "880 * 900 * 770 mm",
@@ -475,14 +464,14 @@ const sillasData = [
  { 
     id: "hyyd85-rabbit-chair", 
     name: "Silla HYYD85131-B (Rabbit chair)", 
-    category: "Silla / Lounge chair", 
+    category: "Lounge chair", 
     code: "HYYD85131-B/MXX6650B", 
     priceBase: 8260, 
-    image: "/images/SILLAS/LOUNGE/SILLA14/render.jpg", 
+    image: "/images/SILLAS/SILLA14/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA14/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA14/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA14/img3.jpg"
+        "/images/SILLAS/SILLA14/img1.jpg", 
+        "/images/SILLAS/SILLA14/img2.jpg",
+        "/images/SILLAS/SILLA14/img3.jpg"
     ],
     specs: {
         dimensions: "680 * 780 * 820 mm",
@@ -508,14 +497,14 @@ const sillasData = [
  { 
     id: "hyyd85-rabbit-chair-black", 
     name: "Silla HYYD85131-A (Rabbit chair)", 
-    category: "Silla / Lounge chair", 
+    category: "Lounge chair", 
     code: "HYYD85131-A/MXX6650", 
     priceBase: 6580, 
-    image: "/images/SILLAS/LOUNGE/SILLA15/render.jpg", 
+    image: "/images/SILLAS/SILLA15/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA15/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA15/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA15/img3.jpg"
+        "/images/SILLAS/SILLA15/img1.jpg", 
+        "/images/SILLAS/SILLA15/img2.jpg",
+        "/images/SILLAS/SILLA15/img3.jpg"
     ],
     specs: {
         dimensions: "760 * 700 * 730 mm",
@@ -541,14 +530,14 @@ const sillasData = [
  { 
     id: "hyyd85-lounge-chair-132", 
     name: "Silla HYYD85132", 
-    category: "Silla / Lounge chair", 
+    category: "Lounge chair", 
     code: "HYYD85132/MXX6638", 
     priceBase: 9980, 
-    image: "/images/SILLAS/LOUNGE/SILLA16/render.jpg", 
+    image: "/images/SILLAS/SILLA16/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA16/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA16/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA16/img3.jpg"
+        "/images/SILLAS/SILLA16/img1.jpg", 
+        "/images/SILLAS/SILLA16/img2.jpg",
+        "/images/SILLAS/SILLA16/img3.jpg"
     ],
     specs: {
         dimensions: "980 * 840 * 700 mm",
@@ -576,16 +565,16 @@ const sillasData = [
  { 
     id: "hyyd85-butterfly-chair", 
     name: "Silla HYYD85135 (Butterfly chair)", 
-    category: "Silla / Lounge chair", 
+    category: "Lounge chair", 
     code: "HYYD85135/MXX6652", 
     priceBase: 20560, 
-    image: "/images/SILLAS/LOUNGE/SILLA17/render.jpg", 
+    image: "/images/SILLAS/SILLA17/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA17/img4.jpg",
-        "/images/SILLAS/LOUNGE/SILLA17/img5.jpg",
-        "/images/SILLAS/LOUNGE/SILLA17/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA17/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA17/img3.jpg"
+        "/images/SILLAS/SILLA17/img4.jpg",
+        "/images/SILLAS/SILLA17/img5.jpg",
+        "/images/SILLAS/SILLA17/img1.jpg", 
+        "/images/SILLAS/SILLA17/img2.jpg",
+        "/images/SILLAS/SILLA17/img3.jpg"
     ],
     specs: {
         dimensions: "910 * 745 * 890 mm",
@@ -611,14 +600,14 @@ const sillasData = [
  { 
     id: "hyyd85-knot-chair", 
     name: "Silla HYYD85136-A (Knot Chair)", 
-    category: "Silla / Lounge chair", 
+    category: "Lounge chair", 
     code: "HYYD85136-A/MXX6658", 
     priceBase: 13860, 
-    image: "/images/SILLAS/LOUNGE/SILLA18/render.jpg", 
+    image: "/images/SILLAS/SILLA18/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA18/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA18/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA18/img3.jpg"
+        "/images/SILLAS/SILLA18/img1.jpg", 
+        "/images/SILLAS/SILLA18/img2.jpg",
+        "/images/SILLAS/SILLA18/img3.jpg"
     ],
     specs: {
         dimensions: "1010 * 930 * 810 mm",
@@ -644,14 +633,14 @@ const sillasData = [
  { 
     id: "hyyd85-knot-chair-art", 
     name: "Silla HYYD85136-B (Knot Chair)", 
-    category: "Silla / Lounge chair", 
+    category: "Lounge chair", 
     code: "HYYD85136-B/MXX6658B", 
     priceBase: 13790, 
-    image: "/images/SILLAS/LOUNGE/SILLA19/render.jpg", 
+    image: "/images/SILLAS/SILLA19/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA19/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA19/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA19/img3.jpg"
+        "/images/SILLAS/SILLA19/img1.jpg", 
+        "/images/SILLAS/SILLA19/img2.jpg",
+        "/images/SILLAS/SILLA19/img3.jpg"
     ],
     specs: {
         dimensions: "1010 * 930 * 810 mm",
@@ -677,14 +666,14 @@ const sillasData = [
  { 
     id: "hyyd85-monkey-chair", 
     name: "Silla HYYD85138 (Monkey chair)", 
-    category: "Silla / Lounge chair", 
+    category: "Lounge chair", 
     code: "HYYD85138/GEYD95113", 
     priceBase: 11760, 
-    image: "/images/SILLAS/LOUNGE/SILLA20/render.jpg", 
+    image: "/images/SILLAS/SILLA20/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA20/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA20/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA20/img3.jpg"
+        "/images/SILLAS/SILLA20/img1.jpg", 
+        "/images/SILLAS/SILLA20/img2.jpg",
+        "/images/SILLAS/SILLA20/img3.jpg"
     ],
     specs: {
         dimensions: "840 * 910 * 660 mm",
@@ -714,14 +703,14 @@ const sillasData = [
  { 
     id: "hyyd85-dining-chair-201", 
     name: "Silla HYYD85201 (Dining chair)", 
-    category: "Silla / Dining chair", 
+    category: "Dining chair", 
     code: "HYYD85201/HI8039", 
     priceBase: 6860, 
-    image: "/images/SILLAS/DINING/SILLA21/render.jpg", 
+    image: "/images/SILLAS/SILLA21/render.jpg", 
     schematics: [
-        "/images/SILLAS/DINING/SILLA21/img1.jpg", 
-        "/images/SILLAS/DINING/SILLA21/img2.jpg",
-        "/images/SILLAS/DINING/SILLA21/img3.jpg"
+        "/images/SILLAS/SILLA21/img1.jpg", 
+        "/images/SILLAS/SILLA21/img2.jpg",
+        "/images/SILLAS/SILLA21/img3.jpg"
     ],
     specs: {
         dimensions: "610 * 615 * 835 mm",
@@ -749,14 +738,14 @@ const sillasData = [
  { 
     id: "hyyd85-dining-chair-202", 
     name: "Silla HYYD85202 (Dining chair)", 
-    category: "Silla / Dining chair", 
+    category: "Dining chair", 
     code: "HYYD85202/HI1910Y-A", 
     priceBase: 6490, 
-    image: "/images/SILLAS/DINING/SILLA22/render.jpg", 
+    image: "/images/SILLAS/SILLA22/render.jpg", 
     schematics: [
-        "/images/SILLAS/DINING/SILLA22/img1.jpg", 
-        "/images/SILLAS/DINING/SILLA22/img2.jpg",
-        "/images/SILLAS/DINING/SILLA22/img3.jpg"
+        "/images/SILLAS/SILLA22/img1.jpg", 
+        "/images/SILLAS/SILLA22/img2.jpg",
+        "/images/SILLAS/SILLA22/img3.jpg"
     ],
     specs: {
         dimensions: "620 * 635 * 780 mm",
@@ -782,14 +771,14 @@ const sillasData = [
  { 
     id: "hyyd85-dining-chair-203", 
     name: "Silla HYYD85203 (Dining chair)", 
-    category: "Silla / Dining chair", 
+    category: "Dining chair", 
     code: "HYYD85203/HI8051", 
     priceBase: 4760, 
-    image: "/images/SILLAS/DINING/SILLA23/render.jpg", 
+    image: "/images/SILLAS/SILLA23/render.jpg", 
     schematics: [
-        "/images/SILLAS/DINING/SILLA23/img1.jpg", 
-        "/images/SILLAS/DINING/SILLA23/img2.jpg",
-        "/images/SILLAS/DINING/SILLA23/img3.jpg"
+        "/images/SILLAS/SILLA23/img1.jpg", 
+        "/images/SILLAS/SILLA23/img2.jpg",
+        "/images/SILLAS/SILLA23/img3.jpg"
     ],
     specs: {
         dimensions: "580 * 635 * 790 mm",
@@ -818,14 +807,14 @@ const sillasData = [
  { 
     id: "hyyd85-dining-chair-211b", 
     name: "Silla HYYD85211-B (Dining chair)", 
-    category: "Silla / Dining chair", 
+    category: "Dining chair", 
     code: "HYYD85211-B/HI8057-B", 
     priceBase: 4490, 
-    image: "/images/SILLAS/DINING/SILLA24/render.jpg", 
+    image: "/images/SILLAS/SILLA24/render.jpg", 
     schematics: [
-        "/images/SILLAS/DINING/SILLA24/img1.jpg", 
-        "/images/SILLAS/DINING/SILLA24/img2.jpg",
-        "/images/SILLAS/DINING/SILLA24/img3.jpg"
+        "/images/SILLAS/SILLA24/img1.jpg", 
+        "/images/SILLAS/SILLA24/img2.jpg",
+        "/images/SILLAS/SILLA24/img3.jpg"
     ],
     specs: {
         dimensions: "620 * 650 * 800 mm",
@@ -853,14 +842,14 @@ const sillasData = [
  { 
     id: "hyyd85-dining-chair-212a", 
     name: "Silla HYYD85212-A (Dining chair)", 
-    category: "Silla / Dining chair", 
+    category: "Dining chair", 
     code: "HYYD85212-A/HI8059-A", 
     priceBase: 3460, 
-    image: "/images/SILLAS/DINING/SILLA25/render.jpg", 
+    image: "/images/SILLAS/SILLA25/render.jpg", 
     schematics: [
-        "/images/SILLAS/DINING/SILLA25/img1.jpg", 
-        "/images/SILLAS/DINING/SILLA25/img2.jpg",
-        "/images/SILLAS/DINING/SILLA25/img3.jpg"
+        "/images/SILLAS/SILLA25/img1.jpg", 
+        "/images/SILLAS/SILLA25/img2.jpg",
+        "/images/SILLAS/SILLA25/img3.jpg"
     ],
     specs: {
         dimensions: "610 * 595 * 835 mm",
@@ -886,14 +875,14 @@ const sillasData = [
  { 
     id: "hyyd85-dining-chair-212b", 
     name: "Silla HYYD85212-B (Dining chair)", 
-    category: "Silla / Dining chair", 
+    category: "Dining chair", 
     code: "HYYD85212-B/HI8059-B", 
     priceBase: 3250, 
-    image: "/images/SILLAS/DINING/SILLA26/render.jpg", 
+    image: "/images/SILLAS/SILLA26/render.jpg", 
     schematics: [
-        "/images/SILLAS/DINING/SILLA26/img1.jpg", 
-        "/images/SILLAS/DINING/SILLA26/img2.jpg",
-        "/images/SILLAS/DINING/SILLA26/img3.jpg"
+        "/images/SILLAS/SILLA26/img1.jpg", 
+        "/images/SILLAS/SILLA26/img2.jpg",
+        "/images/SILLAS/SILLA26/img3.jpg"
     ],
     specs: {
         dimensions: "540 * 595 * 835 mm",
@@ -919,14 +908,14 @@ const sillasData = [
  { 
     id: "hyyd85-dining-chair-213b", 
     name: "Silla HYYD85213-B (Dining chair)", 
-    category: "Silla / Dining chair", 
+    category: "Dining chair", 
     code: "HYYD85213-B/HI8058-B", 
     priceBase: 3950, 
-    image: "/images/SILLAS/DINING/SILLA27/render.jpg", 
+    image: "/images/SILLAS/SILLA27/render.jpg", 
     schematics: [
-        "/images/SILLAS/DINING/SILLA27/img1.jpg", 
-        "/images/SILLAS/DINING/SILLA27/img2.jpg",
-        "/images/SILLAS/DINING/SILLA27/img3.jpg"
+        "/images/SILLAS/SILLA27/img1.jpg", 
+        "/images/SILLAS/SILLA27/img2.jpg",
+        "/images/SILLAS/SILLA27/img3.jpg"
     ],
     specs: {
         dimensions: "575 * 555 * 770 mm",
@@ -952,14 +941,14 @@ const sillasData = [
  { 
     id: "hyyd85-dining-chair-213a", 
     name: "Silla HYYD85213-A (Dining chair)", 
-    category: "Silla / Dining chair", 
+    category: "Dining chair", 
     code: "HYYD85213-A/HI8058-A", 
     priceBase: 4860, 
-    image: "/images/SILLAS/DINING/SILLA28/render.jpg", 
+    image: "/images/SILLAS/SILLA28/render.jpg", 
     schematics: [
-        "/images/SILLAS/DINING/SILLA28/img1.jpg", 
-        "/images/SILLAS/DINING/SILLA28/img2.jpg",
-        "/images/SILLAS/DINING/SILLA28/img3.jpg"
+        "/images/SILLAS/SILLA28/img1.jpg", 
+        "/images/SILLAS/SILLA28/img2.jpg",
+        "/images/SILLAS/SILLA28/img3.jpg"
     ],
     specs: {
         dimensions: "575 * 555 * 770 mm",
@@ -985,14 +974,14 @@ const sillasData = [
  { 
     id: "hyyd85-dining-chair-215", 
     name: "Silla HYYD85215 (Dining chair)", 
-    category: "Silla / Dining chair", 
+    category: "Dining chair", 
     code: "HYYD85215", 
     priceBase: 3080, 
-    image: "/images/SILLAS/DINING/SILLA29/render.jpg", 
+    image: "/images/SILLAS/SILLA29/render.jpg", 
     schematics: [
-        "/images/SILLAS/DINING/SILLA29/img1.jpg", 
-        "/images/SILLAS/DINING/SILLA29/img2.jpg",
-        "/images/SILLAS/DINING/SILLA29/img3.jpg"
+        "/images/SILLAS/SILLA29/img1.jpg", 
+        "/images/SILLAS/SILLA29/img2.jpg",
+        "/images/SILLAS/SILLA29/img3.jpg"
     ],
     specs: {
         dimensions: "490 * 545 * 800 mm",
@@ -1019,14 +1008,14 @@ const sillasData = [
  { 
     id: "hyyd85-dining-chair-216", 
     name: "Silla HYYD85216 (Dining chair)", 
-    category: "Silla / Dining chair", 
+    category: "Dining chair", 
     code: "HYYD85216", 
     priceBase: 4860, 
-    image: "/images/SILLAS/DINING/SILLA30/render.jpg", 
+    image: "/images/SILLAS/SILLA30/render.jpg", 
     schematics: [
-        "/images/SILLAS/DINING/SILLA30/img1.jpg", 
-        "/images/SILLAS/DINING/SILLA30/img2.jpg",
-        "/images/SILLAS/DINING/SILLA30/img3.jpg"
+        "/images/SILLAS/SILLA30/img1.jpg", 
+        "/images/SILLAS/SILLA30/img2.jpg",
+        "/images/SILLAS/SILLA30/img3.jpg"
     ],
     specs: {
         dimensions: "600 * 560 * 780 mm",
@@ -1052,14 +1041,14 @@ const sillasData = [
  { 
     id: "hyyd85-dining-chair-217", 
     name: "Silla HYYD85217 (Dining chair)", 
-    category: "Silla / Dining chair", 
+    category: "Dining chair", 
     code: "HYYD85217", 
     priceBase: 4160, 
-    image: "/images/SILLAS/DINING/SILLA31/render.jpg", 
+    image: "/images/SILLAS/SILLA31/render.jpg", 
     schematics: [
-        "/images/SILLAS/DINING/SILLA31/img1.jpg", 
-        "/images/SILLAS/DINING/SILLA31/img2.jpg",
-        "/images/SILLAS/DINING/SILLA31/img3.jpg"
+        "/images/SILLAS/SILLA31/img1.jpg", 
+        "/images/SILLAS/SILLA31/img2.jpg",
+        "/images/SILLAS/SILLA31/img3.jpg"
     ],
     specs: {
         dimensions: "620 * 540 * 740 mm",
@@ -1085,14 +1074,14 @@ const sillasData = [
  { 
     id: "hyyd85-dining-chair-219", 
     name: "Silla HYYD85219 (Dining chair)", 
-    category: "Silla / Dining chair", 
+    category: "Dining chair", 
     code: "HYYD85219/MYD1818", 
     priceBase: 4060, 
-    image: "/images/SILLAS/DINING/SILLA32/render.jpg", 
+    image: "/images/SILLAS/SILLA32/render.jpg", 
     schematics: [
-        "/images/SILLAS/DINING/SILLA32/img1.jpg", 
-        "/images/SILLAS/DINING/SILLA32/img2.jpg",
-        "/images/SILLAS/DINING/SILLA32/img3.jpg"
+        "/images/SILLAS/SILLA32/img1.jpg", 
+        "/images/SILLAS/SILLA32/img2.jpg",
+        "/images/SILLAS/SILLA32/img3.jpg"
     ],
     specs: {
         dimensions: "520 * 675 * 800 mm",
@@ -1117,14 +1106,14 @@ const sillasData = [
  { 
     id: "hyyd85-bar-chair-301c", 
     name: "Silla HYYD85301-C (Bar chair)", 
-    category: "Silla / Bar chair", 
+    category: "Bar chair", 
     code: "HYYD85301-C/WHB1802Y-C", 
     priceBase: 5090, 
-    image: "/images/SILLAS/BAR/SILLA33/render.jpg", 
+    image: "/images/SILLAS/SILLA33/render.jpg", 
     schematics: [
-        "/images/SILLAS/BAR/SILLA33/img1.jpg", 
-        "/images/SILLAS/BAR/SILLA33/img2.jpg",
-        "/images/SILLAS/BAR/SILLA33/img3.jpg"
+        "/images/SILLAS/SILLA33/img1.jpg", 
+        "/images/SILLAS/SILLA33/img2.jpg",
+        "/images/SILLAS/SILLA33/img3.jpg"
     ],
     specs: {
         dimensions: "470 * 470 * 840 mm",
@@ -1151,14 +1140,14 @@ const sillasData = [
  { 
     id: "hyyd85-chair-305", 
     name: "Silla HYYD85305", 
-    category: "Silla / Lounge chair", 
+    category: "Lounge chair", 
     code: "HYYD85305/MYD1822", 
     priceBase: 11760, 
-    image: "/images/SILLAS/DINING/SILLA34/render.jpg", 
+    image: "/images/SILLAS/SILLA34/render.jpg", 
     schematics: [
-        "/images/SILLAS/DINING/SILLA34/img1.jpg", 
-        "/images/SILLAS/DINING/SILLA34/img2.jpg",
-        "/images/SILLAS/DINING/SILLA34/img3.jpg"
+        "/images/SILLAS/SILLA34/img1.jpg", 
+        "/images/SILLAS/SILLA34/img2.jpg",
+        "/images/SILLAS/SILLA34/img3.jpg"
     ],
     specs: {
         dimensions: "720 * 680 * 995 mm",
@@ -1183,14 +1172,14 @@ const sillasData = [
  { 
     id: "hyyd85-chin-chair", 
     name: "Silla HYYD85306 (CHIN chair)", 
-    category: "Silla / Lounge chair", 
+    category: "Lounge chair", 
     code: "HYYD85306/CHIN", 
     priceBase: 10080, 
-    image: "/images/SILLAS/DINING/SILLA35/render.jpg", 
+    image: "/images/SILLAS/SILLA35/render.jpg", 
     schematics: [
-        "/images/SILLAS/DINING/SILLA35/img1.jpg", 
-        "/images/SILLAS/DINING/SILLA35/img2.jpg",
-        "/images/SILLAS/DINING/SILLA35/img3.jpg"
+        "/images/SILLAS/SILLA35/img1.jpg", 
+        "/images/SILLAS/SILLA35/img2.jpg",
+        "/images/SILLAS/SILLA35/img3.jpg"
     ],
     specs: {
         dimensions: "640 * 730 * 890 mm",
@@ -1217,14 +1206,14 @@ const sillasData = [
  { 
     id: "hyyd85-bar-chair-307", 
     name: "Silla HYYD85307 (Bar chair)", 
-    category: "Silla / Bar chair", 
+    category: "Bar chair", 
     code: "HYYD85307", 
     priceBase: 4860, 
-    image: "/images/SILLAS/BAR/SILLA36/render.jpg", 
+    image: "/images/SILLAS/SILLA36/render.jpg", 
     schematics: [
-        "/images/SILLAS/BAR/SILLA36/img1.jpg", 
-        "/images/SILLAS/BAR/SILLA36/img2.jpg",
-        "/images/SILLAS/BAR/SILLA36/img3.jpg"
+        "/images/SILLAS/SILLA36/img1.jpg", 
+        "/images/SILLAS/SILLA36/img2.jpg",
+        "/images/SILLAS/SILLA36/img3.jpg"
     ],
     specs: {
         dimensions: "410 * 460 * 740 mm",
@@ -1251,14 +1240,14 @@ const sillasData = [
  { 
     id: "hyyd85-chaise-lounge-501b", 
     name: "Chaise lounge HYYD85501-B", 
-    category: "Silla / Chaise lounge", 
+    category: "Chaise lounge", 
     code: "HYYD85501-B/HZD118B", 
     priceBase: 12860, 
-    image: "/images/SILLAS/LOUNGE/SILLA37/render.jpg", 
+    image: "/images/SILLAS/SILLA37/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA37/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA37/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA37/img3.jpg"
+        "/images/SILLAS/SILLA37/img1.jpg", 
+        "/images/SILLAS/SILLA37/img2.jpg",
+        "/images/SILLAS/SILLA37/img3.jpg"
     ],
     specs: {
         dimensions: "1600 * 500 * 570 mm",
@@ -1285,14 +1274,14 @@ const sillasData = [
  { 
     id: "hyyd85-chaise-lounge-501c", 
     name: "Chaise lounge HYYD85501-C", 
-    category: "Silla / Chaise lounge", 
+    category: "Chaise lounge", 
     code: "HYYD85501-C/HZD118C", 
     priceBase: 12460, 
-    image: "/images/SILLAS/LOUNGE/SILLA38/render.jpg", 
+    image: "/images/SILLAS/SILLA38/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA38/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA38/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA38/img3.jpg"
+        "/images/SILLAS/SILLA38/img1.jpg", 
+        "/images/SILLAS/SILLA38/img2.jpg",
+        "/images/SILLAS/SILLA38/img3.jpg"
     ],
     specs: {
         dimensions: "1600 * 500 * 430 mm",
@@ -1319,14 +1308,14 @@ const sillasData = [
  { 
     id: "hyyd85-footrest-505", 
     name: "Footrest HYYD85505", 
-    category: "Silla / Footrest", 
+    category: "Footrest", 
     code: "HYYD85505/HZD01A", 
     priceBase: 4060, 
-    image: "/images/SILLAS/LOUNGE/SILLA39/render.jpg", 
+    image: "/images/SILLAS/SILLA39/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA39/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA39/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA39/img3.jpg"
+        "/images/SILLAS/SILLA39/img1.jpg", 
+        "/images/SILLAS/SILLA39/img2.jpg",
+        "/images/SILLAS/SILLA39/img3.jpg"
     ],
     specs: {
         dimensions: "Φ440 * 450 mm",
@@ -1352,14 +1341,14 @@ const sillasData = [
  { 
     id: "hyyd85-footrest-506", 
     name: "Footrest HYYD85506", 
-    category: "Silla / Footrest", 
+    category: "Footrest", 
     code: "HYYD85506/HZD02Y", 
     priceBase: 12460, 
-    image: "/images/SILLAS/LOUNGE/SILLA40/render.jpg", 
+    image: "/images/SILLAS/SILLA40/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA40/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA40/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA40/img3.jpg"
+        "/images/SILLAS/SILLA40/img1.jpg", 
+        "/images/SILLAS/SILLA40/img2.jpg",
+        "/images/SILLAS/SILLA40/img3.jpg"
     ],
     specs: {
         dimensions: "1600 * 450 * 425 mm",
@@ -1386,14 +1375,14 @@ const sillasData = [
  { 
     id: "hyyd85-footrest-507", 
     name: "Footrest HYYD85507", 
-    category: "Silla / Footrest", 
+    category: "Footrest", 
     code: "HYYD85507/HZD03", 
     priceBase: 8260, 
-    image: "/images/SILLAS/LOUNGE/SILLA41/render.jpg", 
+    image: "/images/SILLAS/SILLA41/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA41/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA41/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA41/img3.jpg"
+        "/images/SILLAS/SILLA41/img1.jpg", 
+        "/images/SILLAS/SILLA41/img2.jpg",
+        "/images/SILLAS/SILLA41/img3.jpg"
     ],
     specs: {
         dimensions: "1700 * 450 * 450 mm",
@@ -1419,14 +1408,14 @@ const sillasData = [
  { 
     id: "hyyd85-footrest-510", 
     name: "Footrest HYYD85510", 
-    category: "Silla / Footrest", 
+    category: "Footrest", 
     code: "HYYD85510/D21", 
     priceBase: 2060, 
-    image: "/images/SILLAS/LOUNGE/SILLA42/render.jpg", 
+    image: "/images/SILLAS/SILLA42/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA42/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA42/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA42/img3.jpg"
+        "/images/SILLAS/SILLA42/img1.jpg", 
+        "/images/SILLAS/SILLA42/img2.jpg",
+        "/images/SILLAS/SILLA42/img3.jpg"
     ],
     specs: {
         dimensions: "750 * 750 * 350 mm",
@@ -1451,14 +1440,14 @@ const sillasData = [
  { 
     id: "hyyd85-footrest-512b", 
     name: "Footrest HYYD85512-B", 
-    category: "Silla / Footrest", 
+    category: "Footrest", 
     code: "HYYD85512-B/D19-B", 
     priceBase: 4760, 
-    image: "/images/SILLAS/LOUNGE/SILLA43/render.jpg", 
+    image: "/images/SILLAS/SILLA43/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA43/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA43/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA43/img3.jpg"
+        "/images/SILLAS/SILLA43/img1.jpg", 
+        "/images/SILLAS/SILLA43/img2.jpg",
+        "/images/SILLAS/SILLA43/img3.jpg"
     ],
     specs: {
         dimensions: "ø1000 * 410 mm",
@@ -1484,14 +1473,14 @@ const sillasData = [
  { 
     id: "hyyd85-footrest-512c", 
     name: "Footrest HYYD85512-C", 
-    category: "Silla / Footrest", 
+    category: "Footrest", 
     code: "HYYD85512-C/D19-C", 
     priceBase: 3080, 
-    image: "/images/SILLAS/LOUNGE/SILLA44/render.jpg", 
+    image: "/images/SILLAS/SILLA44/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA44/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA44/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA44/img3.jpg"
+        "/images/SILLAS/SILLA44/img1.jpg", 
+        "/images/SILLAS/SILLA44/img2.jpg",
+        "/images/SILLAS/SILLA44/img3.jpg"
     ],
     specs: {
         dimensions: "Φ530 * 410 mm",
@@ -1517,14 +1506,14 @@ const sillasData = [
  { 
     id: "hyyd85-footrest-512d", 
     name: "Footrest HYYD85512-D", 
-    category: "Silla / Footrest", 
+    category: "Footrest", 
     code: "HYYD85512-D/D19-D", 
     priceBase: 2990, 
-    image: "/images/SILLAS/LOUNGE/SILLA45/render.jpg", 
+    image: "/images/SILLAS/SILLA45/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA45/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA45/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA45/img3.jpg"
+        "/images/SILLAS/SILLA45/img1.jpg", 
+        "/images/SILLAS/SILLA45/img2.jpg",
+        "/images/SILLAS/SILLA45/img3.jpg"
     ],
     specs: {
         dimensions: "450 * 450 * 410 mm",
@@ -1550,14 +1539,14 @@ const sillasData = [
  { 
     id: "hyyd85-makeup-stool-515a", 
     name: "Makeup stool HYYD85515-A", 
-    category: "Silla / Stool", 
+    category: "Stool", 
     code: "HYYD85515-A/HD1825A", 
     priceBase: 2660, 
-    image: "/images/SILLAS/LOUNGE/SILLA46/render.jpg", 
+    image: "/images/SILLAS/SILLA46/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA46/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA46/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA46/img3.jpg"
+        "/images/SILLAS/SILLA46/img1.jpg", 
+        "/images/SILLAS/SILLA46/img2.jpg",
+        "/images/SILLAS/SILLA46/img3.jpg"
     ],
     specs: {
         dimensions: "470 * 440 * 500 mm",
@@ -1583,14 +1572,14 @@ const sillasData = [
  { 
     id: "hyyd85-stool-519a", 
     name: "Stool HYYD85519-A", 
-    category: "Silla / Stool", 
+    category: "Stool", 
     code: "HYYD85519-A/HZD121A", 
     priceBase: 6660, 
-    image: "/images/SILLAS/LOUNGE/SILLA47/render.jpg", 
+    image: "/images/SILLAS/SILLA47/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA47/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA47/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA47/img3.jpg"
+        "/images/SILLAS/SILLA47/img1.jpg", 
+        "/images/SILLAS/SILLA47/img2.jpg",
+        "/images/SILLAS/SILLA47/img3.jpg"
     ],
     specs: {
         dimensions: "1600 * 450 * 410 mm",
@@ -1616,14 +1605,14 @@ const sillasData = [
  { 
     id: "hyyd85-footrest-520", 
     name: "Footrest HYYD85520", 
-    category: "Silla / Footrest", 
+    category: "Footrest", 
     code: "HYYD85520/D22", 
     priceBase: 9390, 
-    image: "/images/SILLAS/LOUNGE/SILLA48/render.jpg", 
+    image: "/images/SILLAS/SILLA48/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA48/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA48/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA48/img3.jpg"
+        "/images/SILLAS/SILLA48/img1.jpg", 
+        "/images/SILLAS/SILLA48/img2.jpg",
+        "/images/SILLAS/SILLA48/img3.jpg"
     ],
     specs: {
         dimensions: "935 * 920 * 380 mm",
@@ -1650,14 +1639,14 @@ const sillasData = [
  { 
     id: "hyyd85-stool-521", 
     name: "Stool HYYD85521", 
-    category: "Silla / Stool", 
+    category: "Stool", 
     code: "HYYD85521/MYD1125", 
     priceBase: 2080, 
-    image: "/images/SILLAS/LOUNGE/SILLA49/render.jpg", 
+    image: "/images/SILLAS/SILLA49/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA49/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA49/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA49/img3.jpg"
+        "/images/SILLAS/SILLA49/img1.jpg", 
+        "/images/SILLAS/SILLA49/img2.jpg",
+        "/images/SILLAS/SILLA49/img3.jpg"
     ],
     specs: {
         dimensions: "Φ420 * 440 mm",
@@ -1685,14 +1674,14 @@ const sillasData = [
  { 
     id: "hyyd85-footrest-522", 
     name: "Footrest HYYD85522", 
-    category: "Silla / Footrest", 
+    category: "Footrest", 
     code: "HYYD85522/MYD1115", 
     priceBase: 8500, 
-    image: "/images/SILLAS/LOUNGE/SILLA50/render.jpg", 
+    image: "/images/SILLAS/SILLA50/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA50/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA50/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA50/img3.jpg"
+        "/images/SILLAS/SILLA50/img1.jpg", 
+        "/images/SILLAS/SILLA50/img2.jpg",
+        "/images/SILLAS/SILLA50/img3.jpg"
     ],
     specs: {
         dimensions: "1500 * 400 * 420 mm",
@@ -1721,14 +1710,14 @@ const sillasData = [
  { 
     id: "hyyd85-footrest-523", 
     name: "Footrest HYYD85523", 
-    category: "Silla / Footrest", 
+    category: "Footrest", 
     code: "HYYD85523/MYD1122", 
     priceBase: 2560, 
-    image: "/images/SILLAS/LOUNGE/SILLA51/render.jpg", 
+    image: "/images/SILLAS/SILLA51/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA51/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA51/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA51/img3.jpg"
+        "/images/SILLAS/SILLA51/img1.jpg", 
+        "/images/SILLAS/SILLA51/img2.jpg",
+        "/images/SILLAS/SILLA51/img3.jpg"
     ],
     specs: {
         dimensions: "750 * 750 * 360 mm",
@@ -1754,14 +1743,14 @@ const sillasData = [
  { 
     id: "hyyd85-tea-stool-525", 
     name: "Silla Stool HYYD85525", 
-    category: "Silla / Stool", 
+    category: "Stool", 
     code: "HYYD85525/MYD1116", 
     priceBase: 4660, 
-    image: "/images/SILLAS/LOUNGE/SILLA52/render.jpg", 
+    image: "/images/SILLAS/SILLA52/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA52/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA52/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA52/img3.jpg"
+        "/images/SILLAS/SILLA52/img1.jpg", 
+        "/images/SILLAS/SILLA52/img2.jpg",
+        "/images/SILLAS/SILLA52/img3.jpg"
     ],
     specs: {
         dimensions: "430 * 420 * 420 mm",
@@ -1790,14 +1779,14 @@ const sillasData = [
  { 
     id: "hyyd85-bench-526", 
     name: "Bench HYYD85526", 
-    category: "Silla / Bench", 
+    category: "Bench", 
     code: "HYYD85526/GEYD95518", 
     priceBase: 7800, 
-    image: "/images/SILLAS/LOUNGE/SILLA53/render.jpg", 
+    image: "/images/SILLAS/SILLA53/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA53/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA53/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA53/img3.jpg"
+        "/images/SILLAS/SILLA53/img1.jpg", 
+        "/images/SILLAS/SILLA53/img2.jpg",
+        "/images/SILLAS/SILLA53/img3.jpg"
     ],
     specs: {
         dimensions: "1580 * 485 * 450 mm",
@@ -1823,14 +1812,14 @@ const sillasData = [
  { 
     id: "hyyd85-stool-905", 
     name: "Stool HYYD85905", 
-    category: "Silla / Stool", 
+    category: "Stool", 
     code: "HYYD85905", 
     priceBase: 10460, 
-    image: "/images/SILLAS/LOUNGE/SILLA54/render.jpg", 
+    image: "/images/SILLAS/SILLA54/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA54/img1.jpg", 
-        "/images/SILLAS/LOUNGE/SILLA54/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA54/img3.jpg"
+        "/images/SILLAS/SILLA54/img1.jpg", 
+        "/images/SILLAS/SILLA54/img2.jpg",
+        "/images/SILLAS/SILLA54/img3.jpg"
     ],
     specs: {
         dimensions: "400 * 400 * 380 mm",
@@ -1855,10 +1844,10 @@ const sillasData = [
 { 
     id: "hyyd85-egg-119", 
     name: "Silla HYYD85119 (Egg Chair)", 
-    category: "Silla / Lounge chair", 
+    category: "Lounge chair", 
     code: "HYYD85119", 
     priceBase: null, 
-    image: "/images/SILLAS/LOUNGE/SILLA55/render.jpg", 
+    image: "/images/SILLAS/SILLA55/render.jpg", 
     specs: {
         dimensions: "1040 * 940 * 800 mm",
         volume: null,
@@ -1882,15 +1871,15 @@ const sillasData = [
  { 
     id: "hyyd85-loong-118", 
     name: "Silla HYYD85118 (Loong Chair)", 
-    category: "Silla / Lounge chair", 
+    category: "Lounge chair", 
     code: "HYYD85118", 
     priceBase: null, 
-    image: "/images/SILLAS/LOUNGE/SILLA56/img1.jpg", 
+    image: "/images/SILLAS/SILLA56/img1.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA56/img2.jpg",
-        "/images/SILLAS/LOUNGE/SILLA56/img3.jpg",
-        "/images/SILLAS/LOUNGE/SILLA56/img4.jpg",
-        "/images/SILLAS/LOUNGE/SILLA56/img5.jpg"
+        "/images/SILLAS/SILLA56/img2.jpg",
+        "/images/SILLAS/SILLA56/img3.jpg",
+        "/images/SILLAS/SILLA56/img4.jpg",
+        "/images/SILLAS/SILLA56/img5.jpg"
     ],
     specs: {
         dimensions: "1110 * 960 * 800 mm",
@@ -1919,12 +1908,12 @@ const sillasData = [
  { 
     id: "hyyd85-ant-137", 
     name: "Silla HYYD85137 (Ant Chair)", 
-    category: "Silla / Lounge chair", 
+    category: "Lounge chair", 
     code: "HYYD85137", 
     priceBase: null, 
-    image: "/images/SILLAS/LOUNGE/SILLA57/render.jpg", 
+    image: "/images/SILLAS/SILLA57/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA57/img1.jpg", 
+        "/images/SILLAS/SILLA57/img1.jpg", 
     ],
     specs: {
         dimensions: "630 * 850 * 850 mm",
@@ -1950,13 +1939,13 @@ const sillasData = [
 { 
     id: "hyyd85-flower-133", 
     name: "Silla HYYD85133 (Flower Chair)", 
-    category: "Silla / Lounge chair", 
+    category: "Lounge chair", 
     code: "HYYD85133", 
     priceBase: null, 
-    image: "/images/SILLAS/LOUNGE/SILLA58/render.jpg", 
+    image: "/images/SILLAS/SILLA58/render.jpg", 
     schematics: [
-        "/images/SILLAS/LOUNGE/SILLA58/img1.jpg",
-        "/images/SILLAS/LOUNGE/SILLA58/img2.jpg"
+        "/images/SILLAS/SILLA58/img1.jpg",
+        "/images/SILLAS/SILLA58/img2.jpg"
     ],
     specs: {
         dimensions: "850 * 800 * 770 mm",
@@ -1983,10 +1972,10 @@ const sillasData = [
  { 
     id: "hyyd85-heart-518", 
     name: "Silla HYYD85518 (Heart-Shaped Stool)", 
-    category: "Silla / Stool", 
+    category: "Stool", 
     code: "HYYD85518", 
     priceBase: null, 
-    image: "/images/SILLAS/LOUNGE/SILLA59/render.jpg", 
+    image: "/images/SILLAS/SILLA59/render.jpg", 
     specs: {
         dimensions: "480 * 445 * 420 mm",
         volume: null,
