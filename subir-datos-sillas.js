@@ -94,7 +94,20 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA3/img1.jpg", 
         "/images/SILLAS/SILLA3/img2.jpg",
-        "/images/SILLAS/SILLA3/img3.jpg"
+        "/images/SILLAS/SILLA3/img3.jpg",
+        "/images/SILLAS/SILLA3/img4.jpg", 
+        "/images/SILLAS/SILLA3/img5.jpg",
+        "/images/SILLAS/SILLA3/img6.jpg",
+        "/images/SILLAS/SILLA3/img7.jpg", 
+        "/images/SILLAS/SILLA3/img8.jpg",
+        "/images/SILLAS/SILLA3/img9.jpg",
+        "/images/SILLAS/SILLA3/img10.jpg", 
+        "/images/SILLAS/SILLA3/img11.jpg",
+        "/images/SILLAS/SILLA3/img12.jpg",
+        "/images/SILLAS/SILLA3/img13.jpg", 
+        "/images/SILLAS/SILLA3/img14.jpg",
+        "/images/SILLAS/SILLA3/img15.jpg",
+        "/images/SILLAS/SILLA3/img16.jpg"
     ],
     specs: {
         dimensions: "810 * 840 * 700 mm",
@@ -129,7 +142,11 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA4/img1.jpg", 
         "/images/SILLAS/SILLA4/img2.jpg",
-        "/images/SILLAS/SILLA4/img3.jpg"
+        "/images/SILLAS/SILLA4/img3.jpg",
+        "/images/SILLAS/SILLA4/img4.jpg", 
+        "/images/SILLAS/SILLA4/img5.jpg",
+        "/images/SILLAS/SILLA4/img6.jpg",
+        "/images/SILLAS/SILLA4/img7.jpg"
     ],
     specs: {
         dimensions: "740 * 850 * 855 mm",
@@ -165,7 +182,14 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA5/img1.jpg", 
         "/images/SILLAS/SILLA5/img2.jpg",
-        "/images/SILLAS/SILLA5/img3.jpg"
+        "/images/SILLAS/SILLA5/img3.jpg",
+        "/images/SILLAS/SILLA5/img4.jpg", 
+        "/images/SILLAS/SILLA5/img5.jpg",
+        "/images/SILLAS/SILLA5/img6.jpg",
+        "/images/SILLAS/SILLA5/img7.jpg", 
+        "/images/SILLAS/SILLA5/img8.jpg",
+        "/images/SILLAS/SILLA5/img10.jpg",
+        "/images/SILLAS/SILLA5/img11.jpg"
     ],
     specs: {
         dimensions: "730 * 720 * 660 mm",
@@ -201,7 +225,14 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA6/img1.jpg", 
         "/images/SILLAS/SILLA6/img2.jpg",
-        "/images/SILLAS/SILLA6/img3.jpg"
+        "/images/SILLAS/SILLA6/img3.jpg",
+        "/images/SILLAS/SILLA6/img4.jpg", 
+        "/images/SILLAS/SILLA6/img5.jpg",
+        "/images/SILLAS/SILLA6/img6.jpg",
+        "/images/SILLAS/SILLA6/img7.jpg", 
+        "/images/SILLAS/SILLA6/img8.jpg",
+        "/images/SILLAS/SILLA6/img9.jpg",
+        "/images/SILLAS/SILLA6/img10.jpg"
     ],
     specs: {
         dimensions: "930 * 850 * 730 mm",
@@ -233,7 +264,12 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA7/img1.jpg", 
         "/images/SILLAS/SILLA7/img2.jpg",
-        "/images/SILLAS/SILLA7/img3.jpg"
+        "/images/SILLAS/SILLA7/img3.jpg",
+        "/images/SILLAS/SILLA7/img4.jpg", 
+        "/images/SILLAS/SILLA7/img5.jpg",
+        "/images/SILLAS/SILLA7/img6.jpg",
+        "/images/SILLAS/SILLA7/img7.jpg",
+        "/images/SILLAS/SILLA7/img8.jpg"
     ],
     specs: {
         dimensions: "860 * 695 * 725 mm",
@@ -266,7 +302,10 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA8/img1.jpg", 
         "/images/SILLAS/SILLA8/img2.jpg",
-        "/images/SILLAS/SILLA8/img3.jpg"
+        "/images/SILLAS/SILLA8/img3.jpg",
+        "/images/SILLAS/SILLA8/img4.jpg", 
+        "/images/SILLAS/SILLA8/img5.jpg",
+        "/images/SILLAS/SILLA8/img6.jpg"
     ],
     specs: {
         dimensions: "770 * 730 * 720 mm",
@@ -1848,6 +1887,19 @@ const sillasData = [
     code: "HYYD85119", 
     priceBase: null, 
     image: "/images/SILLAS/SILLA55/render.jpg", 
+    schematics: [
+        "/images/SILLAS/SILLA55/img1.jpg", 
+        "/images/SILLAS/SILLA55/img2.jpg",
+        "/images/SILLAS/SILLA55/img3.jpg",
+        "/images/SILLAS/SILLA55/img4.jpg", 
+        "/images/SILLAS/SILLA55/img5.jpg",
+        "/images/SILLAS/SILLA55/img6.jpg",
+        "/images/SILLAS/SILLA55/img7.jpg", 
+        "/images/SILLAS/SILLA55/img8.jpg",
+        "/images/SILLAS/SILLA55/img9.jpg",
+        "/images/SILLAS/SILLA55/img10.jpg", 
+        "/images/SILLAS/SILLA55/img11.jpg"
+    ],
     specs: {
         dimensions: "1040 * 940 * 800 mm",
         volume: null,
@@ -1879,7 +1931,11 @@ const sillasData = [
         "/images/SILLAS/SILLA56/img2.jpg",
         "/images/SILLAS/SILLA56/img3.jpg",
         "/images/SILLAS/SILLA56/img4.jpg",
-        "/images/SILLAS/SILLA56/img5.jpg"
+        "/images/SILLAS/SILLA56/img5.jpg",
+        "/images/SILLAS/SILLA56/img6.jpg",
+        "/images/SILLAS/SILLA56/img7.jpg",
+        "/images/SILLAS/SILLA56/img8.jpg",
+        "/images/SILLAS/SILLA56/img9.jpg"
     ],
     specs: {
         dimensions: "1110 * 960 * 800 mm",
