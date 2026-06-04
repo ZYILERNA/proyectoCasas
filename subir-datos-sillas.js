@@ -27,7 +27,9 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA1/img1.jpg", 
         "/images/SILLAS/SILLA1/img2.jpg",
-        "/images/SILLAS/SILLA1/img3.jpg"
+        "/images/SILLAS/SILLA1/img3.jpg",
+        "/images/SILLAS/SILLA1/img4.jpg",
+        "/images/SILLAS/SILLA1/img5.jpg"
     ],
     specs: {
         dimensions: "640 * 600 * 770 mm",
@@ -60,7 +62,15 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA2/img1.jpg", 
         "/images/SILLAS/SILLA2/img2.jpg",
-        "/images/SILLAS/SILLA2/img3.jpg"
+        "/images/SILLAS/SILLA2/img3.jpg",
+        "/images/SILLAS/SILLA2/img4.jpg", 
+        "/images/SILLAS/SILLA2/img5.jpg",
+        "/images/SILLAS/SILLA2/img6.jpg",
+        "/images/SILLAS/SILLA2/img7.jpg", 
+        "/images/SILLAS/SILLA2/img8.jpg",
+        "/images/SILLAS/SILLA2/img9.jpg",
+        "/images/SILLAS/SILLA2/img10.jpg",
+        "/images/SILLAS/SILLA2/img11.jpg"
     ],
     specs: {
         dimensions: "685 * 800 * 770 mm",
@@ -431,7 +441,15 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA12/img1.jpg", 
         "/images/SILLAS/SILLA12/img2.jpg",
-        "/images/SILLAS/SILLA12/img3.jpg"
+        "/images/SILLAS/SILLA12/img3.jpg",
+        "/images/SILLAS/SILLA12/img4.jpg", 
+        "/images/SILLAS/SILLA12/img5.jpg",
+        "/images/SILLAS/SILLA12/img6.jpg",
+        "/images/SILLAS/SILLA12/img7.jpg", 
+        "/images/SILLAS/SILLA12/img8.jpg",
+        "/images/SILLAS/SILLA12/img9.jpg",
+        "/images/SILLAS/SILLA12/img10.jpg", 
+        "/images/SILLAS/SILLA12/img11.jpg"
     ],
     specs: {
         dimensions: "940 * 950 * 1020 mm",
@@ -476,7 +494,11 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA13/img1.jpg", 
         "/images/SILLAS/SILLA13/img2.jpg",
-        "/images/SILLAS/SILLA13/img3.jpg"
+        "/images/SILLAS/SILLA13/img3.jpg",
+        "/images/SILLAS/SILLA13/img4.jpg", 
+        "/images/SILLAS/SILLA13/img5.jpg",
+        "/images/SILLAS/SILLA13/img6.jpg",
+        "/images/SILLAS/SILLA13/img7.jpg"
     ],
     specs: {
         dimensions: "880 * 900 * 770 mm",
@@ -543,7 +565,17 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA15/img1.jpg", 
         "/images/SILLAS/SILLA15/img2.jpg",
-        "/images/SILLAS/SILLA15/img3.jpg"
+        "/images/SILLAS/SILLA15/img3.jpg",
+        "/images/SILLAS/SILLA15/img4.jpg", 
+        "/images/SILLAS/SILLA15/img5.jpg",
+        "/images/SILLAS/SILLA15/img6.jpg",
+        "/images/SILLAS/SILLA15/img7.jpg", 
+        "/images/SILLAS/SILLA15/img8.jpg",
+        "/images/SILLAS/SILLA15/img9.jpg",
+        "/images/SILLAS/SILLA15/img10.jpg", 
+        "/images/SILLAS/SILLA15/img11.jpg",
+        "/images/SILLAS/SILLA15/img12.jpg",
+        "/images/SILLAS/SILLA15/img13.jpg"
     ],
     specs: {
         dimensions: "760 * 700 * 730 mm",
@@ -576,7 +608,17 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA16/img1.jpg", 
         "/images/SILLAS/SILLA16/img2.jpg",
-        "/images/SILLAS/SILLA16/img3.jpg"
+        "/images/SILLAS/SILLA16/img3.jpg",
+        "/images/SILLAS/SILLA16/img4.jpg", 
+        "/images/SILLAS/SILLA16/img5.jpg",
+        "/images/SILLAS/SILLA16/img6.jpg",
+        "/images/SILLAS/SILLA16/img7.jpg", 
+        "/images/SILLAS/SILLA16/img8.jpg",
+        "/images/SILLAS/SILLA16/img9.jpg",
+        "/images/SILLAS/SILLA16/img10.jpg", 
+        "/images/SILLAS/SILLA16/img11.jpg",
+        "/images/SILLAS/SILLA16/img12.jpg",
+        "/images/SILLAS/SILLA16/img13.jpg"
     ],
     specs: {
         dimensions: "980 * 840 * 700 mm",
@@ -609,11 +651,13 @@ const sillasData = [
     priceBase: 20560, 
     image: "/images/SILLAS/SILLA17/render.jpg", 
     schematics: [
+        "/images/SILLAS/SILLA17/img1.jpg",
+        "/images/SILLAS/SILLA17/img2.jpg",
+        "/images/SILLAS/SILLA17/img3.jpg", 
         "/images/SILLAS/SILLA17/img4.jpg",
         "/images/SILLAS/SILLA17/img5.jpg",
-        "/images/SILLAS/SILLA17/img1.jpg", 
-        "/images/SILLAS/SILLA17/img2.jpg",
-        "/images/SILLAS/SILLA17/img3.jpg"
+        "/images/SILLAS/SILLA17/img6.jpg",
+        "/images/SILLAS/SILLA17/img7.jpg"
     ],
     specs: {
         dimensions: "910 * 745 * 890 mm",
@@ -712,7 +756,11 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA20/img1.jpg", 
         "/images/SILLAS/SILLA20/img2.jpg",
-        "/images/SILLAS/SILLA20/img3.jpg"
+        "/images/SILLAS/SILLA20/img3.jpg",
+        "/images/SILLAS/SILLA20/img4.jpg", 
+        "/images/SILLAS/SILLA20/img5.jpg",
+        "/images/SILLAS/SILLA20/img6.jpg",
+        "/images/SILLAS/SILLA20/img7.jpg"
     ],
     specs: {
         dimensions: "840 * 910 * 660 mm",
@@ -749,7 +797,10 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA21/img1.jpg", 
         "/images/SILLAS/SILLA21/img2.jpg",
-        "/images/SILLAS/SILLA21/img3.jpg"
+        "/images/SILLAS/SILLA21/img3.jpg",
+        "/images/SILLAS/SILLA21/img4.jpg", 
+        "/images/SILLAS/SILLA21/img5.jpg",
+        "/images/SILLAS/SILLA21/img6.jpg"
     ],
     specs: {
         dimensions: "610 * 615 * 835 mm",
@@ -784,7 +835,12 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA22/img1.jpg", 
         "/images/SILLAS/SILLA22/img2.jpg",
-        "/images/SILLAS/SILLA22/img3.jpg"
+        "/images/SILLAS/SILLA22/img3.jpg",
+        "/images/SILLAS/SILLA22/img4.jpg", 
+        "/images/SILLAS/SILLA22/img5.jpg",
+        "/images/SILLAS/SILLA22/img6.jpg",
+        "/images/SILLAS/SILLA22/img7.jpg",
+        "/images/SILLAS/SILLA22/img8.jpg"
     ],
     specs: {
         dimensions: "620 * 635 * 780 mm",
@@ -817,7 +873,11 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA23/img1.jpg", 
         "/images/SILLAS/SILLA23/img2.jpg",
-        "/images/SILLAS/SILLA23/img3.jpg"
+        "/images/SILLAS/SILLA23/img3.jpg",
+        "/images/SILLAS/SILLA23/img4.jpg", 
+        "/images/SILLAS/SILLA23/img5.jpg",
+        "/images/SILLAS/SILLA23/img6.jpg",
+        "/images/SILLAS/SILLA23/img7.jpg"
     ],
     specs: {
         dimensions: "580 * 635 * 790 mm",
@@ -1651,6 +1711,7 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA48/img1.jpg", 
         "/images/SILLAS/SILLA48/img2.jpg",
+        "/images/SILLAS/SILLA48/img4.jpg",
         "/images/SILLAS/SILLA48/img3.jpg"
     ],
     specs: {
@@ -1720,7 +1781,8 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA50/img1.jpg", 
         "/images/SILLAS/SILLA50/img2.jpg",
-        "/images/SILLAS/SILLA50/img3.jpg"
+        "/images/SILLAS/SILLA50/img3.jpg",
+        "/images/SILLAS/SILLA50/img4.jpg"
     ],
     specs: {
         dimensions: "1500 * 400 * 420 mm",
@@ -1756,7 +1818,8 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA51/img1.jpg", 
         "/images/SILLAS/SILLA51/img2.jpg",
-        "/images/SILLAS/SILLA51/img3.jpg"
+        "/images/SILLAS/SILLA51/img3.jpg",
+        "/images/SILLAS/SILLA51/img4.jpg"
     ],
     specs: {
         dimensions: "750 * 750 * 360 mm",
@@ -1789,7 +1852,9 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA52/img1.jpg", 
         "/images/SILLAS/SILLA52/img2.jpg",
-        "/images/SILLAS/SILLA52/img3.jpg"
+        "/images/SILLAS/SILLA52/img3.jpg",
+        "/images/SILLAS/SILLA52/img4.jpg",
+        "/images/SILLAS/SILLA52/img5.jpg"
     ],
     specs: {
         dimensions: "430 * 420 * 420 mm",
@@ -1858,7 +1923,9 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA54/img1.jpg", 
         "/images/SILLAS/SILLA54/img2.jpg",
-        "/images/SILLAS/SILLA54/img3.jpg"
+        "/images/SILLAS/SILLA54/img3.jpg",
+        "/images/SILLAS/SILLA54/img4.jpg",
+        "/images/SILLAS/SILLA54/img5.jpg"
     ],
     specs: {
         dimensions: "400 * 400 * 380 mm",
@@ -1970,6 +2037,8 @@ const sillasData = [
     image: "/images/SILLAS/SILLA57/render.jpg", 
     schematics: [
         "/images/SILLAS/SILLA57/img1.jpg", 
+        "/images/SILLAS/SILLA57/img2.jpg", 
+        "/images/SILLAS/SILLA57/img3.jpg"
     ],
     specs: {
         dimensions: "630 * 850 * 850 mm",
@@ -2001,7 +2070,10 @@ const sillasData = [
     image: "/images/SILLAS/SILLA58/render.jpg", 
     schematics: [
         "/images/SILLAS/SILLA58/img1.jpg",
-        "/images/SILLAS/SILLA58/img2.jpg"
+        "/images/SILLAS/SILLA58/img2.jpg",
+        "/images/SILLAS/SILLA58/img3.jpg",
+        "/images/SILLAS/SILLA58/img4.jpg",
+        "/images/SILLAS/SILLA58/img5.jpg"
     ],
     specs: {
         dimensions: "850 * 800 * 770 mm",
@@ -2051,6 +2123,156 @@ const sillasData = [
     ],
     priceList: [
         { name: "Heart Stool", size: "480*445*420", vol: null, prices: { fa: null, fb: null, fc: null, fd: null, fe: null, la: null, lb: null, lc: null } }
+    ]
+ },
+ {
+    id: "hyyd85210-cornice-dining-chair",
+    name: "Cornice Dining Chair HYYD85210",
+    category: "Dining chair",
+    code: "HYYD85210/HI8053",
+    priceBase: null,
+    image: "/images/SILLAS/SILLA60/render.jpg",
+    schematics: [
+        "/images/SILLAS/SILLA60/img1.jpg",
+        "/images/SILLAS/SILLA60/img2.jpg",
+        "/images/SILLAS/SILLA60/img3.jpg"
+    ],
+    specs: {
+        dimensions: null,
+        volume: null,
+        assembly: "Assembled / 1 piece"
+    },
+    materials: [
+        { part: "Seat & backrest", material: "Genuine leather / PU", detail: "Gray (Interchangeable)" },
+        { part: "Frame & legs", material: "Ash wood", detail: "Oil-wax color (Dark Gray)" },
+        { part: "Armrests", material: "Ash wood", detail: "Integrated — Dark Gray" }
+    ],
+    colors: {
+        interior: [
+            { name: "Gray Leather", hex: "#808080" }
+        ],
+        frame: [
+            { name: "Dark Gray Ash (Oil-wax)", hex: "#3A3835" }
+        ]
+    },
+    configurations: [
+        { code: "HYYD85210/HI8053", size: null, vol: null, price: null }
+    ],
+    priceList: [
+        { name: "Cornice Dining Chair", size: null, vol: null, prices: { fa: null, fb: null, fc: null, fd: null, fe: null, la: null, lb: null, lc: null } }
+    ]
+ },
+ {
+    id: "hyyd85209-a-dining-chair",
+    name: "Dining Chair HYYD85209-A",
+    category: "Dining chair",
+    code: "HYYD85209-A/HI8052-A",
+    priceBase: null,
+    image: "/images/SILLAS/SILLA61/render.jpg",
+    schematics: [
+        "/images/SILLAS/SILLA61/img1.jpg",
+        "/images/SILLAS/SILLA61/img2.jpg",
+        "/images/SILLAS/SILLA61/img3.jpg",
+        "/images/SILLAS/SILLA61/img4.jpg",
+        "/images/SILLAS/SILLA61/img5.jpg"
+    ],
+    specs: {
+        dimensions: null,
+        volume: null,
+        assembly: "Assembled / 1 piece"
+    },
+    materials: [
+        { part: "Seat & backrest (full wrap)", material: "Genuine leather / PU", detail: "Interchangeable — Beige/Taupe or Steel Blue" },
+        { part: "Frame & legs", material: "Metal", detail: "Brushed Gunmetal — slim tapered legs" }
+    ],
+    colors: {
+        interior: [
+            { name: "Beige / Taupe", hex: "#C4B49A" },
+            { name: "Steel Blue / Slate", hex: "#6B7A8D" }
+        ],
+        frame: [
+            { name: "Brushed Gunmetal", hex: "#5A5755" }
+        ]
+    },
+    configurations: [
+        { code: "HYYD85209-A/HI8052-A", size: null, vol: null, price: null }
+    ],
+    priceList: [
+        { name: "Dining Chair (no armrests)", size: null, vol: null, prices: { fa: null, fb: null, fc: null, fd: null, fe: null, la: null, lb: null, lc: null } }
+    ]
+ },
+ {
+    id: "hyyd85129-change-tea-chair",
+    name: "Change Tea Chair HYYD85129",
+    category: "Lounge chair",
+    code: "HYYD85129",
+    priceBase: null,
+    image: "/images/SILLAS/SILLA62/render.jpg",
+    schematics: [
+        "/images/SILLAS/SILLA62/img1.jpg"
+    ],
+    specs: {
+        dimensions: null,
+        volume: null,
+        assembly: "Assembled / 1 piece"
+    },
+    materials: [
+        { part: "Seat, backrest & exterior", material: "Genuine leather / PU", detail: "Warm Gray / Taupe (Interchangeable)" },
+        { part: "Headrest (detachable)", material: "Genuine leather / PU", detail: "Matching — gathered top detail" },
+        { part: "Armrest caps", material: "Ash wood", detail: "Oil-wax color (Dark)" },
+        { part: "Base & casters", material: "Metal", detail: "Matte Black — 4 rolling casters" }
+    ],
+    colors: {
+        interior: [
+            { name: "Warm Gray / Taupe", hex: "#9E9590" }
+        ],
+        frame: [
+            { name: "Dark Ash (Oil-wax)", hex: "#2A2A2A" },
+            { name: "Matte Black (casters)", hex: "#1C1C1C" }
+        ]
+    },
+    configurations: [
+        { code: "HYYD85129", size: null, vol: null, price: null }
+    ],
+    priceList: [
+        { name: "Change Tea Chair", size: null, vol: null, prices: { fa: null, fb: null, fc: null, fd: null, fe: null, la: null, lb: null, lc: null } }
+    ]
+ },
+ {
+    id: "hyyd85128-wabi-sabi-lounge-chair",
+    name: "Wabi-Sabi Lounge Chair HYYD85128",
+    category: "Lounge chair",
+    code: "HYYD85128",
+    priceBase: null,
+    image: "/images/SILLAS/SILLA63/render.jpg",
+    schematics: [
+        "/images/SILLAS/SILLA63/img1.jpg",
+        "/images/SILLAS/SILLA63/img2.jpg"
+    ],
+    specs: {
+        dimensions: null,
+        volume: null,
+        assembly: "Assembled / 1 piece"
+    },
+    materials: [
+        { part: "Cushions & upholstery (seat, back, armrests)", material: "Velvet / Fabric", detail: "Blush Pink / Rose (Interchangeable)" },
+        { part: "Base frame", material: "Acrylic", detail: "Transparent — curved sled base" },
+        { part: "Center bar", material: "Metal", detail: "Taupe / Warm Gray matte" }
+    ],
+    colors: {
+        interior: [
+            { name: "Blush Pink / Rose Velvet", hex: "#D4A09A" }
+        ],
+        frame: [
+            { name: "Transparent Acrylic", hex: "#E8E8E8" },
+            { name: "Taupe Matte (bar)", hex: "#9E9590" }
+        ]
+    },
+    configurations: [
+        { code: "HYYD85128", size: null, vol: null, price: null }
+    ],
+    priceList: [
+        { name: "Wabi-Sabi Lounge Chair", size: null, vol: null, prices: { fa: null, fb: null, fc: null, fd: null, fe: null, la: null, lb: null, lc: null } }
     ]
  },
 ];
