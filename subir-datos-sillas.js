@@ -913,7 +913,12 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA24/img1.jpg", 
         "/images/SILLAS/SILLA24/img2.jpg",
-        "/images/SILLAS/SILLA24/img3.jpg"
+        "/images/SILLAS/SILLA24/img3.jpg",
+        "/images/SILLAS/SILLA24/img4.jpg", 
+        "/images/SILLAS/SILLA24/img5.jpg",
+        "/images/SILLAS/SILLA24/img6.jpg",
+        "/images/SILLAS/SILLA24/img7.jpg", 
+        "/images/SILLAS/SILLA24/img8.jpg"
     ],
     specs: {
         dimensions: "620 * 650 * 800 mm",
@@ -981,7 +986,10 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA26/img1.jpg", 
         "/images/SILLAS/SILLA26/img2.jpg",
-        "/images/SILLAS/SILLA26/img3.jpg"
+        "/images/SILLAS/SILLA26/img3.jpg",
+        "/images/SILLAS/SILLA26/img4.jpg", 
+        "/images/SILLAS/SILLA26/img5.jpg",
+        "/images/SILLAS/SILLA26/img6.jpg"
     ],
     specs: {
         dimensions: "540 * 595 * 835 mm",
@@ -1004,50 +1012,22 @@ const sillasData = [
         { name: "Dining chair", size: "540*595*835", vol: "0.35", prices: { fa: 2880, fb: 2980, fc: 3080, fd: 3250, fe: 3680, la: 5190, lb: 5880, lc: 6490 } }
     ]
  },
- { 
-    id: "hyyd85-dining-chair-213b", 
-    name: "Silla HYYD85213-B (Dining chair)", 
-    category: "Dining chair", 
-    code: "HYYD85213-B/HI8058-B", 
-    priceBase: 3950, 
-    image: "/images/SILLAS/SILLA27/render.jpg", 
+ {
+    id: "hyyd85-dining-chair-213a",
+    name: "Silla HYYD85213-A (Dining chair)",
+    category: "Dining chair",
+    code: "HYYD85213-A/HI8058-A / HYYD85213-B/HI8058-B",
+    priceBase: 4860,
+    image: "/images/SILLAS/SILLA28/render.jpg",
     schematics: [
-        "/images/SILLAS/SILLA27/img1.jpg", 
-        "/images/SILLAS/SILLA27/img2.jpg",
-        "/images/SILLAS/SILLA27/img3.jpg"
-    ],
-    specs: {
-        dimensions: "575 * 555 * 770 mm",
-        volume: "0.32 m³",
-        assembly: "Assembled / 1 piece"
-    },
-    materials: [
-        { part: "Main body", material: "Eco-leather", detail: "PLST0006" },
-        { part: "Hardware foot", material: "Stainless steel", detail: "Brushed Gunmetal" }
-    ],
-    colors: {
-        interior: [
-            { name: "Eco-leather Grey/Stone", hex: "#938E85" } 
-        ]
-    },
-    configurations: [
-        { code: "STD", size: "575mm", vol: "0.32m³", price: 3950 }
-    ],
-    priceList: [
-        { name: "Dining chair", size: "575*555*770", vol: "0.32", prices: { fa: 3350, fb: 3460, fc: 3690, fd: 3950, fe: 4490, la: 4860, lb: 5560, lc: 6480 } }
-    ]
- },
- { 
-    id: "hyyd85-dining-chair-213a", 
-    name: "Silla HYYD85213-A (Dining chair)", 
-    category: "Dining chair", 
-    code: "HYYD85213-A/HI8058-A", 
-    priceBase: 4860, 
-    image: "/images/SILLAS/SILLA28/render.jpg", 
-    schematics: [
-        "/images/SILLAS/SILLA28/img1.jpg", 
+        "/images/SILLAS/SILLA28/img1.jpg",
         "/images/SILLAS/SILLA28/img2.jpg",
-        "/images/SILLAS/SILLA28/img3.jpg"
+        "/images/SILLAS/SILLA28/img3.jpg",
+        "/images/SILLAS/SILLA28/img4.jpg",
+        "/images/SILLAS/SILLA28/img5.jpg",
+        "/images/SILLAS/SILLA28/img6.jpg",
+        "/images/SILLAS/SILLA28/img7.jpg",
+        "/images/SILLAS/SILLA28/img8.jpg"
     ],
     specs: {
         dimensions: "575 * 555 * 770 mm",
@@ -1055,19 +1035,24 @@ const sillasData = [
         assembly: "Assembled / 1 piece"
     },
     materials: [
-        { part: "Main body", material: "Genuine leather", detail: "PLQS0020" },
-        { part: "Hardware foot", material: "Stainless steel", detail: "Brushed Space Gold" }
+        { part: "Main body (A)", material: "Genuine leather", detail: "PLQS0020" },
+        { part: "Hardware foot (A)", material: "Stainless steel", detail: "Brushed Space Gold" },
+        { part: "Main body (B)", material: "Eco-leather", detail: "PLST0006" },
+        { part: "Hardware foot (B)", material: "Stainless steel", detail: "Brushed Gunmetal" }
     ],
     colors: {
         interior: [
-            { name: "Genuine Leather Brown", hex: "#7E524A" } 
+            { name: "Genuine Leather Brown (A)", hex: "#7E524A" },
+            { name: "Eco-leather Grey/Stone (B)", hex: "#938E85" }
         ]
     },
     configurations: [
-        { code: "STD", size: "575mm", vol: "0.32m³", price: 4860 }
+        { code: "HYYD85213-A", size: "575*555*770mm", vol: "0.32m³", price: 4860 },
+        { code: "HYYD85213-B", size: "575*555*770mm", vol: "0.32m³", price: 3950 }
     ],
     priceList: [
-        { name: "Dining chair", size: "575*555*770", vol: "0.32", prices: { fa: 3350, fb: 3460, fc: 3690, fd: 3950, fe: 4490, la: 4860, lb: 5560, lc: 6480 } }
+        { name: "Dining chair (A)", size: "575*555*770", vol: "0.32", prices: { fa: 3350, fb: 3460, fc: 3690, fd: 3950, fe: 4490, la: 4860, lb: 5560, lc: 6480 } },
+        { name: "Dining chair (B)", size: "575*555*770", vol: "0.32", prices: { fa: 3350, fb: 3460, fc: 3690, fd: 3950, fe: 4490, la: 4860, lb: 5560, lc: 6480 } }
     ]
  },
  { 
@@ -1080,7 +1065,9 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA29/img1.jpg", 
         "/images/SILLAS/SILLA29/img2.jpg",
-        "/images/SILLAS/SILLA29/img3.jpg"
+        "/images/SILLAS/SILLA29/img3.jpg",
+        "/images/SILLAS/SILLA29/img4.jpg",
+        "/images/SILLAS/SILLA29/img5.jpg"
     ],
     specs: {
         dimensions: "490 * 545 * 800 mm",
@@ -1114,7 +1101,11 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA30/img1.jpg", 
         "/images/SILLAS/SILLA30/img2.jpg",
-        "/images/SILLAS/SILLA30/img3.jpg"
+        "/images/SILLAS/SILLA30/img3.jpg",
+        "/images/SILLAS/SILLA30/img4.jpg", 
+        "/images/SILLAS/SILLA30/img5.jpg",
+        "/images/SILLAS/SILLA30/img6.jpg",
+        "/images/SILLAS/SILLA30/img7.jpg"
     ],
     specs: {
         dimensions: "600 * 560 * 780 mm",
@@ -1147,7 +1138,8 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA31/img1.jpg", 
         "/images/SILLAS/SILLA31/img2.jpg",
-        "/images/SILLAS/SILLA31/img3.jpg"
+        "/images/SILLAS/SILLA31/img3.jpg",
+        "/images/SILLAS/SILLA31/img4.jpg"
     ],
     specs: {
         dimensions: "620 * 540 * 740 mm",
@@ -1180,7 +1172,14 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA32/img1.jpg", 
         "/images/SILLAS/SILLA32/img2.jpg",
-        "/images/SILLAS/SILLA32/img3.jpg"
+        "/images/SILLAS/SILLA32/img3.jpg",
+        "/images/SILLAS/SILLA32/img4.jpg", 
+        "/images/SILLAS/SILLA32/img5.jpg",
+        "/images/SILLAS/SILLA32/img6.jpg",
+        "/images/SILLAS/SILLA32/img7.jpg", 
+        "/images/SILLAS/SILLA32/img8.jpg",
+        "/images/SILLAS/SILLA32/img9.jpg",
+        "/images/SILLAS/SILLA32/img10.jpg"
     ],
     specs: {
         dimensions: "520 * 675 * 800 mm",
@@ -1212,7 +1211,8 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA33/img1.jpg", 
         "/images/SILLAS/SILLA33/img2.jpg",
-        "/images/SILLAS/SILLA33/img3.jpg"
+        "/images/SILLAS/SILLA33/img3.jpg",
+        "/images/SILLAS/SILLA33/img4.jpg"
     ],
     specs: {
         dimensions: "470 * 470 * 840 mm",
@@ -1246,7 +1246,8 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA34/img1.jpg", 
         "/images/SILLAS/SILLA34/img2.jpg",
-        "/images/SILLAS/SILLA34/img3.jpg"
+        "/images/SILLAS/SILLA34/img3.jpg",
+        "/images/SILLAS/SILLA34/img4.jpg"
     ],
     specs: {
         dimensions: "720 * 680 * 995 mm",
@@ -1278,7 +1279,11 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA35/img1.jpg", 
         "/images/SILLAS/SILLA35/img2.jpg",
-        "/images/SILLAS/SILLA35/img3.jpg"
+        "/images/SILLAS/SILLA35/img3.jpg",
+        "/images/SILLAS/SILLA35/img4.jpg", 
+        "/images/SILLAS/SILLA35/img5.jpg",
+        "/images/SILLAS/SILLA35/img6.jpg",
+        "/images/SILLAS/SILLA35/img7.jpg", 
     ],
     specs: {
         dimensions: "640 * 730 * 890 mm",
@@ -1336,17 +1341,18 @@ const sillasData = [
         { name: "Bar chair", size: "410*460*740", vol: "0.17", prices: { fa: 4660, fb: 4660, fc: 4660, fd: 4760, fe: 4860, la: 4860, lb: 4990, lc: 5160 } }
     ]
  },
- { 
-    id: "hyyd85-chaise-lounge-501b", 
-    name: "Chaise lounge HYYD85501-B", 
-    category: "Chaise lounge", 
-    code: "HYYD85501-B/HZD118B", 
-    priceBase: 12860, 
-    image: "/images/SILLAS/SILLA37/render.jpg", 
+ {
+    id: "hyyd85-chaise-lounge-501b",
+    name: "Chaise lounge HYYD85501-B",
+    category: "Chaise lounge",
+    code: "HYYD85501-B/HZD118B",
+    priceBase: 12860,
+    image: "/images/SILLAS/SILLA37/render.jpg",
     schematics: [
-        "/images/SILLAS/SILLA37/img1.jpg", 
+        "/images/SILLAS/SILLA37/img1.jpg",
         "/images/SILLAS/SILLA37/img2.jpg",
-        "/images/SILLAS/SILLA37/img3.jpg"
+        "/images/SILLAS/SILLA37/img4.jpg",
+        "/images/SILLAS/SILLA37/img5.jpg"
     ],
     specs: {
         dimensions: "1600 * 500 * 570 mm",
@@ -1360,7 +1366,7 @@ const sillasData = [
     ],
     colors: {
         interior: [
-            { name: "Genuine Leather Slate Grey", hex: "#4E5764" } 
+            { name: "Genuine Leather Slate Grey", hex: "#4E5764" }
         ]
     },
     configurations: [
@@ -1370,17 +1376,18 @@ const sillasData = [
         { name: "Chaise lounge", size: "1600*500*570", vol: "0.58", prices: { fa: 8600, fb: 8960, fc: 9300, fd: 9990, fe: 10460, la: 12860, lb: 14260, lc: 15660 } }
     ]
  },
- { 
-    id: "hyyd85-chaise-lounge-501c", 
-    name: "Chaise lounge HYYD85501-C", 
-    category: "Chaise lounge", 
-    code: "HYYD85501-C/HZD118C", 
-    priceBase: 12460, 
-    image: "/images/SILLAS/SILLA38/render.jpg", 
+ {
+    id: "hyyd85-chaise-lounge-501c",
+    name: "Chaise lounge HYYD85501-C",
+    category: "Chaise lounge",
+    code: "HYYD85501-C/HZD118C",
+    priceBase: 12460,
+    image: "/images/SILLAS/SILLA38/render.jpg",
     schematics: [
-        "/images/SILLAS/SILLA38/img1.jpg", 
+        "/images/SILLAS/SILLA38/img1.jpg",
         "/images/SILLAS/SILLA38/img2.jpg",
-        "/images/SILLAS/SILLA38/img3.jpg"
+        "/images/SILLAS/SILLA38/img3.jpg",
+        "/images/SILLAS/SILLA38/img4.jpg"
     ],
     specs: {
         dimensions: "1600 * 500 * 430 mm",
@@ -1394,7 +1401,7 @@ const sillasData = [
     ],
     colors: {
         interior: [
-            { name: "Genuine Leather Charcoal", hex: "#5A5A5E" } 
+            { name: "Genuine Leather Charcoal", hex: "#5A5A5E" }
         ]
     },
     configurations: [
@@ -1414,7 +1421,11 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA39/img1.jpg", 
         "/images/SILLAS/SILLA39/img2.jpg",
-        "/images/SILLAS/SILLA39/img3.jpg"
+        "/images/SILLAS/SILLA39/img3.jpg",
+        "/images/SILLAS/SILLA39/img4.jpg",
+        "/images/SILLAS/SILLA39/img5.jpg",
+        "/images/SILLAS/SILLA39/img6.jpg"
+
     ],
     specs: {
         dimensions: "Φ440 * 450 mm",
@@ -1447,7 +1458,8 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA40/img1.jpg", 
         "/images/SILLAS/SILLA40/img2.jpg",
-        "/images/SILLAS/SILLA40/img3.jpg"
+        "/images/SILLAS/SILLA40/img3.jpg",
+        "/images/SILLAS/SILLA40/img4.jpg"
     ],
     specs: {
         dimensions: "1600 * 450 * 425 mm",
@@ -1546,7 +1558,9 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA43/img1.jpg", 
         "/images/SILLAS/SILLA43/img2.jpg",
-        "/images/SILLAS/SILLA43/img3.jpg"
+        "/images/SILLAS/SILLA43/img3.jpg",
+        "/images/SILLAS/SILLA43/img4.jpg",
+        "/images/SILLAS/SILLA43/img5.jpg"
     ],
     specs: {
         dimensions: "ø1000 * 410 mm",
@@ -1579,7 +1593,9 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA44/img1.jpg", 
         "/images/SILLAS/SILLA44/img2.jpg",
-        "/images/SILLAS/SILLA44/img3.jpg"
+        "/images/SILLAS/SILLA44/img3.jpg",
+        "/images/SILLAS/SILLA44/img4.jpg",
+        "/images/SILLAS/SILLA44/img5.jpg"
     ],
     specs: {
         dimensions: "Φ530 * 410 mm",
@@ -1612,7 +1628,8 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA45/img1.jpg", 
         "/images/SILLAS/SILLA45/img2.jpg",
-        "/images/SILLAS/SILLA45/img3.jpg"
+        "/images/SILLAS/SILLA45/img3.jpg",
+        "/images/SILLAS/SILLA45/img4.jpg"
     ],
     specs: {
         dimensions: "450 * 450 * 410 mm",
@@ -1645,7 +1662,10 @@ const sillasData = [
     schematics: [
         "/images/SILLAS/SILLA46/img1.jpg", 
         "/images/SILLAS/SILLA46/img2.jpg",
-        "/images/SILLAS/SILLA46/img3.jpg"
+        "/images/SILLAS/SILLA46/img3.jpg",
+        "/images/SILLAS/SILLA46/img4.jpg", 
+        "/images/SILLAS/SILLA46/img5.jpg",
+        "/images/SILLAS/SILLA46/img6.jpg"
     ],
     specs: {
         dimensions: "470 * 440 * 500 mm",
@@ -2104,6 +2124,9 @@ const sillasData = [
     code: "HYYD85518", 
     priceBase: null, 
     image: "/images/SILLAS/SILLA59/render.jpg", 
+    schematics: [
+        "/images/SILLAS/SILLA59/img1.jpg"
+    ],
     specs: {
         dimensions: "480 * 445 * 420 mm",
         volume: null,
@@ -2273,6 +2296,153 @@ const sillasData = [
     ],
     priceList: [
         { name: "Wabi-Sabi Lounge Chair", size: null, vol: null, prices: { fa: null, fb: null, fc: null, fd: null, fe: null, la: null, lb: null, lc: null } }
+    ]
+ },
+ {
+    id: "hyyd85509-footrest-d16",
+    name: "Footrest HYYD85509-D16",
+    category: "Footrest",
+    code: "HYYD85509-D16",
+    priceBase: null,
+    image: "/images/SILLAS/SILLA64/render.jpg",
+    schematics: [
+        "/images/SILLAS/SILLA64/img1.jpg"
+    ],
+    specs: {
+        dimensions: null,
+        volume: null,
+        assembly: "Assembled / 1 piece"
+    },
+    materials: [
+        { part: "Upholstery", material: "Fabric", detail: "Beige / Sand woven texture" },
+        { part: "Legs", material: "Wood", detail: "Dark stained (black-brown)" }
+    ],
+    colors: {
+        interior: [
+            { name: "Beige / Sand Woven", hex: "#C8B99A" }
+        ],
+        legs: [
+            { name: "Dark Wood (Black-Brown)", hex: "#2A1F1A" }
+        ]
+    },
+    configurations: [
+        { code: "HYYD85509-D16", size: null, vol: null, price: null }
+    ],
+    priceList: [
+        { name: "Footrest D16", size: null, vol: null, prices: { fa: null, fb: null, fc: null, fd: null, fe: null, la: null, lb: null, lc: null } }
+    ]
+ },
+ {
+    id: "hyyd85309-book-chair",
+    name: "Book Chair HYYD85309",
+    category: "Dining chair",
+    code: "HYYD85309",
+    priceBase: null,
+    image: "/images/SILLAS/SILLA65/render.jpg",
+    schematics: [
+        "/images/SILLAS/SILLA65/img1.jpg",
+        "/images/SILLAS/SILLA65/img2.jpg"
+    ],
+    specs: {
+        dimensions: null,
+        volume: null,
+        assembly: "Assembled / 1 piece"
+    },
+    materials: [
+        { part: "Seat, back & armrests", material: "Genuine leather", detail: "Beige / Taupe full wrap" },
+        { part: "Base / sled", material: "Genuine leather + metal", detail: "Taupe leather wrap with brass arc detail" }
+    ],
+    colors: {
+        interior: [
+            { name: "Beige / Taupe Leather", hex: "#C4AA8F" }
+        ],
+        base: [
+            { name: "Brass Arc Trim", hex: "#C9A84C" }
+        ]
+    },
+    configurations: [
+        { code: "HYYD85309", size: null, vol: null, price: null }
+    ],
+    priceList: [
+        { name: "Book Chair", size: null, vol: null, prices: { fa: null, fb: null, fc: null, fd: null, fe: null, la: null, lb: null, lc: null } }
+    ]
+ },
+ {
+    id: "hyyd85308-book-chair",
+    name: "Book Chair HYYD85308",
+    category: "Dining chair",
+    code: "HYYD85308",
+    priceBase: null,
+    image: "/images/SILLAS/SILLA66/render.jpg",
+    schematics: [
+        "/images/SILLAS/SILLA66/img1.jpg"
+    ],
+    specs: {
+        dimensions: null,
+        volume: null,
+        assembly: "Assembled / 1 piece"
+    },
+    materials: [
+        { part: "Seat, back & armrests", material: "Genuine leather", detail: "Dark Charcoal / Black" },
+        { part: "Decorative cushion", material: "Fabric", detail: "White / Light Gray textured weave" },
+        { part: "Legs", material: "Ash wood", detail: "Black stained" }
+    ],
+    colors: {
+        interior: [
+            { name: "Dark Charcoal / Black Leather", hex: "#2A2A2A" }
+        ],
+        legs: [
+            { name: "Black Ash Wood", hex: "#1A1A1A" }
+        ]
+    },
+    configurations: [
+        { code: "HYYD85308", size: null, vol: null, price: null }
+    ],
+    priceList: [
+        { name: "Book Chair", size: null, vol: null, prices: { fa: null, fb: null, fc: null, fd: null, fe: null, la: null, lb: null, lc: null } }
+    ]
+ },
+ {
+    id: "hyyd85218-dining-chair",
+    name: "Dining Chair HYYD85218",
+    category: "Dining chair",
+    code: "HYYD85218",
+    priceBase: null,
+    image: "/images/SILLAS/SILLA67/render.jpg",
+    schematics: [
+        "/images/SILLAS/SILLA67/img1.jpg",
+        "/images/SILLAS/SILLA67/img2.jpg",
+        "/images/SILLAS/SILLA67/img3.jpg",
+        "/images/SILLAS/SILLA67/img4.jpg",
+        "/images/SILLAS/SILLA67/img5.jpg",
+        "/images/SILLAS/SILLA67/img6.jpg"
+    ],
+    specs: {
+        dimensions: null,
+        volume: null,
+        assembly: "Assembled / 1 piece"
+    },
+    materials: [
+        { part: "Back frame & legs", material: "Genuine leather", detail: "Burgundy / Dark Wine" },
+        { part: "Seat & back interior", material: "Genuine leather", detail: "Beige / Cream" },
+        { part: "Leg caps", material: "Metal", detail: "Brass" }
+    ],
+    colors: {
+        exterior: [
+            { name: "Burgundy / Dark Wine", hex: "#5C1A2A" }
+        ],
+        interior: [
+            { name: "Beige / Cream", hex: "#D8CCBA" }
+        ],
+        accent: [
+            { name: "Brass", hex: "#C9A84C" }
+        ]
+    },
+    configurations: [
+        { code: "HYYD85218", size: null, vol: null, price: null }
+    ],
+    priceList: [
+        { name: "Dining Chair", size: null, vol: null, prices: { fa: null, fb: null, fc: null, fd: null, fe: null, la: null, lb: null, lc: null } }
     ]
  },
 ];
