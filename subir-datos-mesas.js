@@ -27,7 +27,7 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82103-B6",
         priceBase: 9760,
-        image: "/images/MESAS/CENTRO/MESA1/render.jpg",
+        image: "/images/MESAS/MESA1/render.jpg",
         specs: {
             dimensions: "1400 * 615 * 385 mm",
             volume: "0.34 m³",
@@ -61,7 +61,7 @@ const tablesData = [
         code: "HYJL82103-C1",
         priceBase: 5460,
         // RECUERDA: Guardar la imagen aquí
-        image: "/images/MESAS/AUXILIAR/MESA2/render.jpg",
+        image: "/images/MESAS/MESA2/render.jpg",
         specs: {
             dimensions: "520 * 416 * 450 mm",
             volume: "0.12 m³",
@@ -91,7 +91,7 @@ const tablesData = [
         code: "HYJL82105-A1",
         priceBase: 5790,
         // RECUERDA: Guardar la imagen aquí
-        image: "/images/MESAS/AUXILIAR/MESA3/render.jpg",
+        image: "/images/MESAS/MESA3/render.jpg",
         specs: {
             dimensions: "Ø700 * 380 mm",
             volume: "0.22 m³",
@@ -120,8 +120,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82105-B1",
         priceBase: 5080,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA4/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA4/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA4/render.jpg
+        image: "/images/MESAS/MESA4/render.jpg",
         specs: {
             dimensions: "Ø450 * 480 mm",
             volume: "0.14 m³",
@@ -150,8 +150,8 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82106-A2/B",
         priceBase: 22870, // Precio combinado del Set (16390 + 6480)
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA5/render.jpg
-        image: "/images/MESAS/CENTRO/MESA5/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA5/render.jpg
+        image: "/images/MESAS/MESA5/render.jpg",
         specs: {
             dimensions: "1500*850*420 mm (Mesa) + 900*550*280 mm (Módulo)",
             volume: "0.93 m³",
@@ -185,8 +185,8 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82107-A1",
         priceBase: 20260,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA6/render.jpg
-        image: "/images/MESAS/CENTRO/MESA6/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA6/render.jpg
+        image: "/images/MESAS/MESA6/render.jpg",
         specs: {
             dimensions: "1060 * 1060 * 300 mm",
             volume: "0.47 m³",
@@ -216,8 +216,8 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82107-B2",
         priceBase: 13950,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA7/render.jpg
-        image: "/images/MESAS/CENTRO/MESA7/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA7/render.jpg
+        image: "/images/MESAS/MESA7/render.jpg",
         specs: {
             dimensions: "970 * 760 * 400 mm",
             volume: "0.38 m³",
@@ -247,8 +247,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82107-C1",
         priceBase: 7690,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA8/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA8/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA8/render.jpg
+        image: "/images/MESAS/MESA8/render.jpg",
         specs: {
             dimensions: "520 * 537 * 500 mm",
             volume: "0.20 m³",
@@ -277,8 +277,8 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82108-A",
         priceBase: 9980,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA9/render.jpg
-        image: "/images/MESAS/CENTRO/MESA9/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA9/render.jpg
+        image: "/images/MESAS/MESA9/render.jpg",
         specs: {
             dimensions: "1400 * 750 * 360 mm",
             volume: "0.51 m³",
@@ -306,8 +306,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82108-B",
         priceBase: 6160,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA10/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA10/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA10/render.jpg
+        image: "/images/MESAS/MESA10/render.jpg",
         specs: {
             dimensions: "520 * 500 * 475 mm",
             volume: "0.18 m³",
@@ -335,8 +335,8 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82109-A",
         priceBase: 17460,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA11/render.jpg
-        image: "/images/MESAS/CENTRO/MESA11/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA11/render.jpg
+        image: "/images/MESAS/MESA11/render.jpg",
         specs: {
             dimensions: "Ø1200 * 300 mm",
             volume: "0.70 m³",
@@ -365,8 +365,8 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82109-B1",
         priceBase: 17580,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA12/render.jpg
-        image: "/images/MESAS/CENTRO/MESA12/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA12/render.jpg
+        image: "/images/MESAS/MESA12/render.jpg",
         specs: {
             dimensions: "Ø920 * 350 mm",
             volume: "0.46 m³",
@@ -395,8 +395,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82109-C",
         priceBase: 5250,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA13/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA13/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA13/render.jpg
+        image: "/images/MESAS/MESA13/render.jpg",
         specs: {
             dimensions: "Ø440 * 450 mm",
             volume: "0.15 m³",
@@ -425,8 +425,8 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82111-A",
         priceBase: 14560,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA14/render.jpg
-        image: "/images/MESAS/CENTRO/MESA14/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA14/render.jpg
+        image: "/images/MESAS/MESA14/render.jpg",
         specs: {
             dimensions: "1350 * 750 * 405 mm",
             volume: "0.57 m³",
@@ -459,8 +459,8 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82112-A3",
         priceBase: 13260,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA15/render.jpg
-        image: "/images/MESAS/CENTRO/MESA15/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA15/render.jpg
+        image: "/images/MESAS/MESA15/render.jpg",
         specs: {
             dimensions: "1070 * 1080 * 330 mm",
             volume: "0.39 m³",
@@ -490,8 +490,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82112-B1",
         priceBase: 6160,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA16/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA16/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA16/render.jpg
+        image: "/images/MESAS/MESA16/render.jpg",
         specs: {
             dimensions: "620 * 620 * 430 mm",
             volume: "0.17 m³",
@@ -521,8 +521,8 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82119-A1/B2",
         priceBase: 17930, // Precio combinado (11450 + 6480)
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA17/render.jpg
-        image: "/images/MESAS/CENTRO/MESA17/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA17/render.jpg
+        image: "/images/MESAS/MESA17/render.jpg",
         specs: {
             dimensions: "Ø1000*305 mm (Centro) + Ø520*455 mm (Auxiliar)",
             volume: "0.80 m³",
@@ -557,8 +557,8 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82130A/B",
         priceBase: 15320, // Precio combinado (10460 + 4860)
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA18/render.jpg
-        image: "/images/MESAS/CENTRO/MESA18/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA18/render.jpg
+        image: "/images/MESAS/MESA18/render.jpg",
         specs: {
             dimensions: "1655*875*200 mm (Base) + Ø600*320 mm (Alta)",
             volume: "0.40 m³",
@@ -591,8 +591,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82131",
         priceBase: 5190,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA19/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA19/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA19/render.jpg
+        image: "/images/MESAS/MESA19/render.jpg",
         specs: {
             dimensions: "Ø700 * 430 mm",
             volume: "0.10 m³",
@@ -621,8 +621,8 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82132-A/B",
         priceBase: 20940, // Precio combinado (16980 + 3960)
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA20/render.jpg
-        image: "/images/MESAS/CENTRO/MESA20/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA20/render.jpg
+        image: "/images/MESAS/MESA20/render.jpg",
         specs: {
             dimensions: "1200*1200*230 mm (Mármol) + 1200*600*230 mm (Módulo)",
             volume: "0.78 m³",
@@ -656,8 +656,8 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82133-A1/B1",
         priceBase: 39340, // Precio combinado (23750 + 15590)
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA21/render.jpg
-        image: "/images/MESAS/CENTRO/MESA21/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA21/render.jpg
+        image: "/images/MESAS/MESA21/render.jpg",
         specs: {
             dimensions: "Ø1200*365 mm (A1) + Ø1000*340 mm (B1)",
             volume: "1.33 m³",
@@ -692,8 +692,8 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82135-A/B",
         priceBase: 13180, // Precio combinado (7990 + 5190)
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA22/render.jpg
-        image: "/images/MESAS/CENTRO/MESA22/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA22/render.jpg
+        image: "/images/MESAS/MESA22/render.jpg",
         specs: {
             dimensions: "1190*950*320 mm (A) + 845*730*380 mm (B)",
             volume: "0.57 m³",
@@ -726,8 +726,8 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82150-A",
         priceBase: 17460,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA23/render.jpg
-        image: "/images/MESAS/CENTRO/MESA23/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA23/render.jpg
+        image: "/images/MESAS/MESA23/render.jpg",
         specs: {
             dimensions: "1400 * 750 * 350 mm",
             volume: "0.50 m³",
@@ -756,8 +756,8 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82151-A1/B1",
         priceBase: 28730, // Precio combinado (18750 + 9980)
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA24/render.jpg
-        image: "/images/MESAS/CENTRO/MESA24/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA24/render.jpg
+        image: "/images/MESAS/MESA24/render.jpg",
         specs: {
             dimensions: "1208*800*460 mm (Alta) + 1060*580*300 mm (Baja)",
             volume: "1.07 m³",
@@ -792,8 +792,8 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82152-3A/B",
         priceBase: 18510, // Precio combinado (13650 + 4860)
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA25/render.jpg
-        image: "/images/MESAS/CENTRO/MESA25/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA25/render.jpg
+        image: "/images/MESAS/MESA25/render.jpg",
         specs: {
             dimensions: "1000*1000*250 mm (A) + Ø800*380 mm (B)",
             volume: "0.95 m³",
@@ -831,8 +831,8 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82153-Set",
         priceBase: 20040, // Precio combinado (4380 + 6650 + 6350 + 2660)
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA26/render.jpg
-        image: "/images/MESAS/CENTRO/MESA26/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA26/render.jpg
+        image: "/images/MESAS/MESA26/render.jpg",
         specs: {
             dimensions: "Combinación Modular (4 Piezas)",
             volume: "0.89 m³",
@@ -874,8 +874,8 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82156-A1",
         priceBase: 14690,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA27/render.jpg
-        image: "/images/MESAS/CENTRO/MESA27/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA27/render.jpg
+        image: "/images/MESAS/MESA27/render.jpg",
         specs: {
             dimensions: "Ø1000 * 385 mm",
             volume: "0.85 m³",
@@ -905,8 +905,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82201",
         priceBase: 10450,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA28/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA28/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA28/render.jpg
+        image: "/images/MESAS/MESA28/render.jpg",
         specs: {
             dimensions: "985 * 310 * 455 mm",
             volume: "0.20 m³",
@@ -937,8 +937,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82202",
         priceBase: 6150,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA29/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA29/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA29/render.jpg
+        image: "/images/MESAS/MESA29/render.jpg",
         specs: {
             dimensions: "540 * 400 * 500 mm",
             volume: "0.17 m³",
@@ -968,8 +968,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82302-B",
         priceBase: 7560,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA30/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA30/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA30/render.jpg
+        image: "/images/MESAS/MESA30/render.jpg",
         specs: {
             dimensions: "Ø580 * 330 mm",
             volume: "0.12 m³",
@@ -1000,8 +1000,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82302-A1",
         priceBase: 12790,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA31/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA31/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA31/render.jpg
+        image: "/images/MESAS/MESA31/render.jpg",
         specs: {
             dimensions: "Ø700 * 420 mm",
             volume: "0.28 m³",
@@ -1032,8 +1032,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82303-C",
         priceBase: 6950,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA32/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA32/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA32/render.jpg
+        image: "/images/MESAS/MESA32/render.jpg",
         specs: {
             dimensions: "365 * 350 * 460 mm",
             volume: "0.10 m³",
@@ -1063,8 +1063,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82307",
         priceBase: 4390,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA33/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA33/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA33/render.jpg
+        image: "/images/MESAS/MESA33/render.jpg",
         specs: {
             dimensions: "370 * 350 * 610 mm",
             volume: "0.12 m³",
@@ -1092,8 +1092,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82308-A1",
         priceBase: 5450,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA34/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA34/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA34/render.jpg
+        image: "/images/MESAS/MESA34/render.jpg",
         specs: {
             dimensions: "Ø500 * 540 mm",
             volume: "0.16 m³",
@@ -1123,8 +1123,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82317",
         priceBase: 3790,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA35/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA35/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA35/render.jpg
+        image: "/images/MESAS/MESA35/render.jpg",
         specs: {
             dimensions: "Ø380 * 440 mm",
             volume: "0.11 m³",
@@ -1155,8 +1155,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82318",
         priceBase: 9390,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA36/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA36/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA36/render.jpg
+        image: "/images/MESAS/MESA36/render.jpg",
         specs: {
             dimensions: "750 * 380 * 520 mm",
             volume: "0.21 m³",
@@ -1189,8 +1189,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82319-A",
         priceBase: 4550,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA37/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA37/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA37/render.jpg
+        image: "/images/MESAS/MESA37/render.jpg",
         specs: {
             dimensions: "Ø450 * 500 mm",
             volume: "0.14 m³",
@@ -1220,8 +1220,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82320",
         priceBase: 7280,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA38/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA38/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA38/render.jpg
+        image: "/images/MESAS/MESA38/render.jpg",
         specs: {
             dimensions: "Ø600 * 435 mm",
             volume: "0.20 m³",
@@ -1251,8 +1251,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82321-A",
         priceBase: 5890,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA39/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA39/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA39/render.jpg
+        image: "/images/MESAS/MESA39/render.jpg",
         specs: {
             dimensions: "390 * 320 * 520 mm",
             volume: "0.11 m³",
@@ -1284,8 +1284,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82305-A/HG1911",
         priceBase: 8490,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA40/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA40/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA40/render.jpg
+        image: "/images/MESAS/MESA40/render.jpg",
         specs: {
             dimensions: "980 * 608 * 380 mm",
             volume: "0.44 m³",
@@ -1315,8 +1315,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82306/HG1913",
         priceBase: 5880,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA41/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA41/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA41/render.jpg
+        image: "/images/MESAS/MESA41/render.jpg",
         specs: {
             dimensions: "Ø495 * 500 mm",
             volume: "0.18 m³",
@@ -1346,8 +1346,8 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYTL86101/HF1823Y-1",
         priceBase: 25450,
-        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/COMEDOR/MESA42/render.jpg
-        image: "/images/MESAS/COMEDOR/MESA42/render.jpg",
+        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA42/render.jpg
+        image: "/images/MESAS/MESA42/render.jpg",
         specs: {
             dimensions: "2100 * 1000 * 750 mm",
             volume: "0.82 m³",
@@ -1390,8 +1390,8 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYTL86102-B/HF1826Y-2",
         priceBase: 28190,
-        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/COMEDOR/MESA43/render.jpg
-        image: "/images/MESAS/COMEDOR/MESA43/render.jpg",
+        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA43/render.jpg
+        image: "/images/MESAS/MESA43/render.jpg",
         specs: {
             dimensions: "920 / 1530 * 760 mm",
             volume: "1.24 m³",
@@ -1433,8 +1433,8 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYTL86105-B/HF1831",
         priceBase: 25550,
-        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/COMEDOR/MESA44/render.jpg
-        image: "/images/MESAS/COMEDOR/MESA44/render.jpg",
+        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA44/render.jpg
+        image: "/images/MESAS/MESA44/render.jpg",
         specs: {
             dimensions: "2100 * 1000 * 750 mm",
             volume: "0.81 m³",
@@ -1478,8 +1478,8 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYTL86108-A/HF1836Y",
         priceBase: 24450,
-        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/COMEDOR/MESA45/render.jpg
-        image: "/images/MESAS/COMEDOR/MESA45/render.jpg",
+        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA45/render.jpg
+        image: "/images/MESAS/MESA45/render.jpg",
         specs: {
             dimensions: "2100 * 1000 * 750 mm",
             volume: "0.77 m³",
@@ -1527,8 +1527,8 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYTL86111-A/HF1837",
         priceBase: 40560,
-        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/COMEDOR/MESA46/render.jpg
-        image: "/images/MESAS/COMEDOR/MESA46/render.jpg",
+        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA46/render.jpg
+        image: "/images/MESAS/MESA46/render.jpg",
         specs: {
             dimensions: "2100 * 1000 * 750 mm",
             volume: "0.91 m³",
@@ -1573,8 +1573,8 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYTL86111-B/HF1837-B",
         priceBase: 35450,
-        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/COMEDOR/MESA47/render.jpg
-        image: "/images/MESAS/COMEDOR/MESA47/render.jpg",
+        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA47/render.jpg
+        image: "/images/MESAS/MESA47/render.jpg",
         specs: {
             dimensions: "2100 * 1000 * 750 mm",
             volume: "0.83 m³",
@@ -1620,8 +1620,8 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYTL86128-B",
         priceBase: 22260,
-        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/COMEDOR/MESA48/render.jpg
-        image: "/images/MESAS/COMEDOR/MESA48/render.jpg",
+        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA48/render.jpg
+        image: "/images/MESAS/MESA48/render.jpg",
         specs: {
             dimensions: "2100 * 950 * 750 mm",
             volume: "0.6 m³",
@@ -1661,8 +1661,8 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYTL86129-A/MZL3118",
         priceBase: 24350,
-        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/COMEDOR/MESA49/render.jpg
-        image: "/images/MESAS/COMEDOR/MESA49/render.jpg",
+        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA49/render.jpg
+        image: "/images/MESAS/MESA49/render.jpg",
         specs: {
             dimensions: "1600 * 900 * 750 mm",
             volume: "0.63 m³",
@@ -1707,7 +1707,7 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82106-A1",
         priceBase: null,
-        image: "/images/MESAS/CENTRO/MESA50/render.jpg",
+        image: "/images/MESAS/MESA50/render.jpg",
         specs: {
             dimensions: "1500 * 850 * 420 mm",
             volume: null,
@@ -1734,7 +1734,7 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYJL82901",
         priceBase: null,
-        image: "/images/MESAS/COMEDOR/MESA51/render.jpg",
+        image: "/images/MESAS/MESA51/render.jpg",
         specs: {
             dimensions: "1000 * 430 * 450 mm",
             volume: null,
@@ -1760,7 +1760,7 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYGL81702-B",
         priceBase: null,
-        image: "/images/MESAS/AUXILIAR/MESA52/render.jpg",
+        image: "/images/MESAS/MESA52/render.jpg",
         specs: {
             dimensions: "630 * 480 * 680 mm",
             volume: null,
@@ -1787,7 +1787,7 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYYD85506",
         priceBase: null,
-        image: "/images/MESAS/CENTRO/MESA53/render.jpg",
+        image: "/images/MESAS/MESA53/render.jpg",
         specs: {
             dimensions: "1600 * 450 * 425 mm",
             volume: null,
