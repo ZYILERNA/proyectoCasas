@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useState, useEffect, useMemo, useRef } from 'react';
+import React, { useState, useEffect, useMemo, memo, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Ruler, Box, Palette, Armchair, Maximize2, Barcode, Search as SearchIcon } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, ScanLine, Ruler, Box, Palette, Armchair, Maximize2, Barcode, Search as SearchIcon, Layers, RefreshCw, Lock } from 'lucide-react';
 import { createClient } from '@supabase/supabase-js';
 
 // --- 1. CONFIGURACIÓN SUPABASE ---
@@ -13,18 +13,19 @@ const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 // --- UTILS ---
-const EXCHANGE_RATE = 0.13; 
+const EXCHANGE_RATE = 0.13;
+const AUTOPLAY_INTERVAL = 3000;
 
 const formatPrice = (priceCNY) => {
     if (!priceCNY) return "-";
-    return new Intl.NumberFormat('es-ES', { 
-        style: 'currency', 
+    return new Intl.NumberFormat('es-ES', {
+        style: 'currency',
         currency: 'EUR',
-        maximumFractionDigits: 0 
+        maximumFractionDigits: 0
     }).format(priceCNY * EXCHANGE_RATE);
 };
 
-// --- VARIANTES DE ANIMACIÓN EXACTAS A "SILLAS" ---
+// --- VARIANTES DE ANIMACIÓN ---
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
@@ -39,11 +40,11 @@ const staggerContainer = {
 };
 
 // --- COMPONENTE MODAL PRECIOS ---
-const PriceTableModal = React.memo(({ isOpen, onClose, data, title }) => {
+const PriceTableModal = memo(({ isOpen, onClose, data, title }) => {
     if (!isOpen || !data) return null;
     return (
         <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-black/60" onClick={onClose}>
-            <motion.div 
+            <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 style={{ willChange: "opacity, transform" }}
@@ -85,14 +86,317 @@ const PriceTableModal = React.memo(({ isOpen, onClose, data, title }) => {
 });
 PriceTableModal.displayName = 'PriceTableModal';
 
+// --- COMPONENTE DRAWER / DETALLE DEL PRODUCTO ---
+const ProductDrawer = memo(({ selectedProduct, onClose }) => {
+    const [currentSchematicIndex, setCurrentSchematicIndex] = useState(0);
+    const [isPaused, setIsPaused] = useState(false);
+    const [showPriceModal, setShowPriceModal] = useState(false);
+    const [mobileImageIndex, setMobileImageIndex] = useState(0);
+
+    const allImages = useMemo(() => {
+        if (!selectedProduct) return [];
+        return [selectedProduct.image, ...(selectedProduct.schematics || [])];
+    }, [selectedProduct]);
+
+    const hasMultipleImages = selectedProduct?.schematics && selectedProduct.schematics.length > 0;
+
+    useEffect(() => {
+        document.body.style.overflow = 'hidden';
+        return () => { document.body.style.overflow = ''; };
+    }, []);
+
+    useEffect(() => {
+        if (!hasMultipleImages || isPaused) return;
+        const timer = setInterval(() => {
+            setCurrentSchematicIndex((prev) => prev === selectedProduct.schematics.length - 1 ? 0 : prev + 1);
+        }, AUTOPLAY_INTERVAL);
+        return () => clearInterval(timer);
+    }, [selectedProduct, isPaused, hasMultipleImages]);
+
+    const nextSchematic = () => {
+        if (!hasMultipleImages) return;
+        setCurrentSchematicIndex((prev) => prev === selectedProduct.schematics.length - 1 ? 0 : prev + 1);
+    };
+
+    const prevSchematic = () => {
+        if (!hasMultipleImages) return;
+        setCurrentSchematicIndex((prev) => prev === 0 ? selectedProduct.schematics.length - 1 : prev - 1);
+    };
+
+    if (!selectedProduct) return null;
+
+    return (
+        <>
+            <PriceTableModal
+                isOpen={showPriceModal}
+                onClose={() => setShowPriceModal(false)}
+                data={selectedProduct?.priceList}
+                title={selectedProduct?.name}
+            />
+
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                className="fixed inset-0 z-50 flex justify-end bg-black/80 h-[100dvh]"
+                onClick={onClose}
+            >
+                <motion.div
+                    initial={{ x: "100%" }}
+                    animate={{ x: 0 }}
+                    exit={{ x: "100%" }}
+                    transition={{ type: "tween", ease: "circOut", duration: 0.35 }}
+                    style={{ willChange: "transform" }}
+                    onClick={(e) => e.stopPropagation()}
+                    className="bg-white w-full max-w-5xl h-full shadow-2xl flex flex-col md:flex-row overflow-hidden md:rounded-l-2xl"
+                >
+                    {/* IZQUIERDA: GALERÍA DE IMÁGENES */}
+                    <div className="md:w-3/5 bg-gray-50 md:p-8 flex flex-col md:gap-6 relative shrink-0 border-b md:border-b-0 border-gray-100">
+                        <button onClick={onClose} className="absolute top-4 right-4 md:hidden bg-white/90 p-2 rounded-full shadow-md border border-gray-100 z-20 text-gray-900">
+                            <X size={20} />
+                        </button>
+
+                        {/* MÓVIL: CARRUSEL DESLIZABLE */}
+                        <div className="md:hidden relative w-full bg-white h-[45vh]">
+                            <div
+                                className="flex overflow-x-auto snap-x snap-mandatory h-full w-full scrollbar-hide"
+                                style={{ scrollBehavior: 'smooth' }}
+                                onScroll={(e) => {
+                                    const index = Math.round(e.target.scrollLeft / e.target.clientWidth);
+                                    setMobileImageIndex(index);
+                                }}
+                            >
+                                {allImages.map((img, idx) => (
+                                    <div key={idx} className="w-full h-full shrink-0 snap-center relative flex items-center justify-center p-6">
+                                        <Image
+                                            src={img}
+                                            alt={`${selectedProduct.name} vista ${idx}`}
+                                            fill
+                                            priority={idx === 0}
+                                            sizes="100vw"
+                                            className="object-contain mix-blend-multiply p-4"
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                            {allImages.length > 1 && (
+                                <div className="absolute bottom-4 left-0 w-full flex justify-center gap-1.5 z-10">
+                                    {allImages.map((_, idx) => (
+                                        <div
+                                            key={idx}
+                                            className={`h-1.5 rounded-full transition-all duration-300 ${idx === mobileImageIndex ? 'w-4 bg-black' : 'w-1.5 bg-gray-300'}`}
+                                        />
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+
+                        {/* ESCRITORIO: IMAGEN PRINCIPAL + CARRUSEL TÉCNICO */}
+                        <div className="hidden md:flex flex-col gap-6 h-full">
+                            <div className="aspect-video w-full bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden p-4 flex items-center justify-center relative group shrink-0">
+                                <div className="relative w-full h-full">
+                                    <Image
+                                        src={selectedProduct.image}
+                                        alt="Render"
+                                        fill
+                                        priority
+                                        className="object-contain mix-blend-multiply"
+                                        sizes="60vw"
+                                    />
+                                </div>
+                            </div>
+
+                            {selectedProduct.schematics && selectedProduct.schematics.length > 0 && (
+                                <div
+                                    className="bg-white p-4 rounded-lg border border-gray-200 relative group shrink-0"
+                                    onMouseEnter={() => setIsPaused(true)}
+                                    onMouseLeave={() => setIsPaused(false)}
+                                >
+                                    <h4 className="text-[10px] font-bold uppercase text-gray-400 mb-3 flex items-center gap-1 justify-between">
+                                        <div className="flex items-center gap-1"><ScanLine size={12} /> Vistas Técnicas</div>
+                                        {hasMultipleImages && isPaused && <span className="text-[9px] bg-gray-100 px-2 py-0.5 rounded text-gray-500">Pausado</span>}
+                                    </h4>
+
+                                    <div className="relative h-64 w-full bg-gray-50 rounded border border-gray-100 flex items-center justify-center overflow-hidden">
+                                        <AnimatePresence mode='wait'>
+                                            <motion.img
+                                                key={currentSchematicIndex}
+                                                src={selectedProduct.schematics[currentSchematicIndex]}
+                                                alt="Technical View"
+                                                initial={{ opacity: 0 }}
+                                                animate={{ opacity: 1 }}
+                                                exit={{ opacity: 0 }}
+                                                transition={{ duration: 0.2 }}
+                                                decoding="async"
+                                                className="max-w-full max-h-full object-contain p-4 mix-blend-multiply cursor-crosshair"
+                                            />
+                                        </AnimatePresence>
+
+                                        {hasMultipleImages && (
+                                            <>
+                                                <button onClick={prevSchematic} className="absolute left-2 p-2 rounded-full bg-white/90 shadow hover:bg-white transition-all hover:scale-110 opacity-0 group-hover:opacity-100">
+                                                    <ChevronLeft size={20} />
+                                                </button>
+                                                <button onClick={nextSchematic} className="absolute right-2 p-2 rounded-full bg-white/90 shadow hover:bg-white transition-all hover:scale-110 opacity-0 group-hover:opacity-100">
+                                                    <ChevronRight size={20} />
+                                                </button>
+
+                                                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+                                                    {selectedProduct.schematics.map((_, index) => (
+                                                        <div
+                                                            key={index}
+                                                            onClick={() => setCurrentSchematicIndex(index)}
+                                                            className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${index === currentSchematicIndex ? 'w-4 bg-black' : 'w-1.5 bg-gray-300 hover:bg-gray-400'}`}
+                                                        />
+                                                    ))}
+                                                </div>
+                                            </>
+                                        )}
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                    </div>
+
+                    {/* DERECHA: DATOS */}
+                    <div className="md:w-2/5 flex flex-col h-full bg-white border-l border-gray-100 relative min-h-0">
+                        {/* Cabecera */}
+                        <div className="p-6 md:p-8 pb-0 shrink-0">
+                            <div className="flex justify-between items-start">
+                                <div>
+                                    <div className="inline-block bg-black text-white text-[10px] font-mono px-2 py-1 mb-2 rounded-sm">
+                                        {selectedProduct.code}
+                                    </div>
+                                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">{selectedProduct.name}</h2>
+                                    <p className="text-xs text-gray-500 uppercase tracking-widest mt-1">{selectedProduct.category}</p>
+                                </div>
+                                <button onClick={onClose} className="hidden md:block hover:bg-gray-100 p-2 rounded-full transition-colors"><X size={24} /></button>
+                            </div>
+                        </div>
+
+                        {/* Scrollable */}
+                        <div className="flex-1 overflow-y-auto p-6 md:p-8 pt-6 pb-32 md:pb-40 scrollbar-hide">
+                            <div className="space-y-8">
+                                {/* Dimensiones */}
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div className="bg-blue-50/50 p-4 rounded-xl border border-blue-100">
+                                        <div className="flex items-center gap-2 text-blue-600 mb-1"><Ruler size={16} /> <span className="text-[10px] font-bold uppercase">Medidas</span></div>
+                                        <div className="text-sm font-bold text-gray-900">{selectedProduct.specs?.dimensions || "N/A"}</div>
+                                    </div>
+                                    <div className="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                                        <div className="flex items-center gap-2 text-gray-500 mb-1"><Box size={16} /> <span className="text-[10px] font-bold uppercase">Volumen</span></div>
+                                        <div className="text-sm font-bold text-gray-900">{selectedProduct.specs?.volume || "N/A"}</div>
+                                    </div>
+                                    {selectedProduct.specs?.assembly && (
+                                        <div className="bg-gray-50 p-4 rounded-xl border border-gray-100 col-span-2">
+                                            <div className="flex items-center gap-2 text-gray-500 mb-1"><Layers size={16} /> <span className="text-[10px] font-bold uppercase">Montaje</span></div>
+                                            <div className="text-sm font-bold text-gray-900">{selectedProduct.specs.assembly}</div>
+                                        </div>
+                                    )}
+                                </div>
+
+                                {/* Colores */}
+                                {selectedProduct.colors?.interior && selectedProduct.colors.interior.length > 0 && (
+                                <div>
+                                    <h3 className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-100 pb-2 mb-3 flex items-center gap-2">
+                                        <Palette size={14} /> Acabados Disponibles
+                                    </h3>
+                                    <div className="flex flex-wrap gap-4 mb-4 p-4 bg-gray-50 rounded-xl justify-center md:justify-start">
+                                        {selectedProduct.colors.interior.map((color, i) => (
+                                            <div key={i} className="text-center group flex flex-col items-center gap-2 cursor-help">
+                                                <div
+                                                    className="w-12 h-12 rounded-full shadow-md border-2 border-white group-hover:scale-110 transition-transform duration-300"
+                                                    style={{ backgroundColor: color.hex }}
+                                                    title={color.name}
+                                                ></div>
+                                                <span className="text-[9px] text-gray-500 uppercase font-bold max-w-[60px] leading-tight">
+                                                    {color.name}
+                                                </span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                                )}
+
+                                {/* Materiales */}
+                                {selectedProduct.materials && (
+                                    <div>
+                                        <h3 className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-100 pb-2 mb-3 flex items-center gap-2">
+                                            <Layers size={14} /> Composición
+                                        </h3>
+                                        <div className="grid grid-cols-1 gap-3">
+                                            {selectedProduct.materials.map((mat, idx) => (
+                                                <div key={idx} className="flex items-center gap-3 p-3 rounded-lg border border-gray-100 bg-white hover:border-gray-300 transition-colors">
+                                                    <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 ${mat.detail === 'Interchangeable' ? 'bg-blue-50 text-blue-600 border border-blue-100' : 'bg-gray-100 text-gray-400'}`}>
+                                                        {mat.detail === 'Interchangeable' ? <RefreshCw size={14} /> : <Lock size={14} />}
+                                                    </div>
+                                                    <div className="flex-1 min-w-0">
+                                                        <span className="text-[10px] font-bold uppercase text-gray-400 tracking-wide block truncate">{mat.part}</span>
+                                                        <div className="text-sm font-bold text-gray-900 truncate">{mat.material}</div>
+                                                        {mat.detail && <div className="text-xs text-gray-500 truncate">{mat.detail}</div>}
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* Configuraciones */}
+                                <div>
+                                    <div className="flex justify-between items-center border-b border-gray-100 pb-2 mb-3">
+                                        <h3 className="text-xs font-bold uppercase tracking-wider text-gray-900 flex items-center gap-2">
+                                            <Armchair size={14} /> Opciones
+                                        </h3>
+                                        <button
+                                            onClick={() => setShowPriceModal(true)}
+                                            className="text-[10px] flex items-center gap-1.5 text-blue-600 hover:text-blue-800 hover:bg-blue-50 px-2 py-1 rounded transition-all cursor-pointer font-medium"
+                                        >
+                                            <Maximize2 size={12} /> Ver Tabla Precios
+                                        </button>
+                                    </div>
+                                    <div className="grid grid-cols-1 gap-2">
+                                        {selectedProduct.configurations?.map((conf, idx) => (
+                                            <div key={idx} className="p-3 rounded-lg border border-dashed border-gray-200 flex justify-between items-center text-xs group hover:border-gray-300 transition-colors">
+                                                <div className="flex items-center gap-3">
+                                                    <span className="font-bold font-mono bg-gray-100 text-gray-600 px-1.5 py-0.5 rounded border border-gray-200">{conf.code}</span>
+                                                    <span className="text-gray-600 font-medium">{conf.desc || conf.size}</span>
+                                                </div>
+                                                <div className="font-bold font-mono text-gray-900">{formatPrice(conf.price)}</div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Footer Fijo */}
+                        <div className="absolute bottom-0 left-0 w-full bg-white border-t border-gray-100 p-4 md:p-6 z-20">
+                            <div className="bg-gray-900 text-white p-4 rounded-lg flex justify-between items-center shadow-lg">
+                                <div>
+                                    <div className="text-[10px] uppercase text-gray-400 tracking-widest">Precio Base</div>
+                                    <div className="text-xl font-bold font-mono">{formatPrice(selectedProduct.priceBase)}</div>
+                                </div>
+                                <Link href="/contacto" className="bg-white text-black px-4 py-2 rounded text-[10px] font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors">
+                                    Solicitar Info
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </motion.div>
+            </motion.div>
+        </>
+    );
+});
+ProductDrawer.displayName = 'ProductDrawer';
+
 export default function MesasPage() {
-  const [products, setProducts] = useState([]);       
-  const [isLoading, setIsLoading] = useState(true);   
+  const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState("Todos");
-  const [searchTerm, setSearchTerm] = useState("");   
-  const [selectedProduct, setSelectedProduct] = useState(null); 
-  const [showPriceModal, setShowPriceModal] = useState(false);
-  
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
   const gridTopRef = useRef(null);
   const filtersRef = useRef(null);
 
@@ -109,7 +413,7 @@ export default function MesasPage() {
   // --- FETCH DATOS ---
   useEffect(() => {
     const controller = new AbortController();
-    
+
     async function fetchMesas() {
       setIsLoading(true);
       try {
@@ -147,7 +451,7 @@ export default function MesasPage() {
       const matchCategory = activeCategory === "Todos" || item.category === activeCategory;
       if (!matchCategory) return false;
       if (searchTerm === "") return true;
-      return item.name.toLowerCase().includes(searchLower) || 
+      return item.name.toLowerCase().includes(searchLower) ||
              item.code.toLowerCase().includes(searchLower);
     });
   }, [products, activeCategory, searchTerm]);
@@ -160,8 +464,8 @@ export default function MesasPage() {
             const element = gridTopRef.current;
             const rect = element.getBoundingClientRect();
             const absoluteTop = rect.top + window.pageYOffset;
-            const offsetPosition = absoluteTop - 140; 
-    
+            const offsetPosition = absoluteTop - 140;
+
             if (window.scrollY > offsetPosition) {
                  window.scrollTo({
                     top: offsetPosition,
@@ -172,32 +476,20 @@ export default function MesasPage() {
     }, 10);
   };
 
-  // Bloqueo de scroll body
-  useEffect(() => {
-    if (selectedProduct || showPriceModal) {
-        document.body.style.overflow = 'hidden';
-    } else {
-        document.body.style.overflow = 'unset';
-    }
-    return () => { document.body.style.overflow = 'unset'; };
-  }, [selectedProduct, showPriceModal]);
-
-  const openModal = (product) => {
-      setSelectedProduct(product);
-      setShowPriceModal(false);
-  };
-
   return (
     <div className="bg-white min-h-screen pb-32 font-sans selection:bg-black selection:text-white">
-      
-      <PriceTableModal 
-        isOpen={showPriceModal} 
-        onClose={() => setShowPriceModal(false)} 
-        data={selectedProduct?.priceList}
-        title={selectedProduct?.name}
-      />
 
-      {/* HEADER ADAPTADO ESTILO "SILLAS" */}
+      {/* DRAWER */}
+      <AnimatePresence>
+        {selectedProduct && (
+            <ProductDrawer
+                selectedProduct={selectedProduct}
+                onClose={() => setSelectedProduct(null)}
+            />
+        )}
+      </AnimatePresence>
+
+      {/* HEADER */}
       <div className="relative h-[55vh] md:h-[65vh] bg-[#0a0a0a] overflow-hidden flex items-end pb-12">
         <motion.div
             initial={{ opacity: 0 }}
@@ -218,8 +510,8 @@ export default function MesasPage() {
                 <source src="/videos/mesas-hero.mp4" type="video/mp4" />
             </video>
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
             variants={staggerContainer}
             initial="hidden"
             animate="visible"
@@ -234,8 +526,8 @@ export default function MesasPage() {
         </motion.div>
       </div>
 
-      {/* BARRA DE FILTROS ADAPTADA ESTILO "SOFÁS/SILLAS" */}
-      <motion.div 
+      {/* BARRA DE FILTROS */}
+      <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
@@ -243,16 +535,15 @@ export default function MesasPage() {
       >
         <div className="container mx-auto px-6 py-4">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                
-                {/* Contenedor de Categorías */}
+
                 <div ref={filtersRef} className="flex gap-2 overflow-x-auto flex-1 pb-2 md:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
                   {categories.map((cat) => (
                     <button
                       key={cat}
                       onClick={() => handleCategoryChange(cat)}
-                      className={`px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 border whitespace-nowrap 
-                        ${activeCategory === cat 
-                            ? 'bg-black text-white border-black' 
+                      className={`px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 border whitespace-nowrap
+                        ${activeCategory === cat
+                            ? 'bg-black text-white border-black'
                             : 'bg-transparent text-gray-500 border-gray-200 hover:border-black hover:text-black'}`}
                     >
                       {cat}
@@ -260,7 +551,6 @@ export default function MesasPage() {
                   ))}
                 </div>
 
-                {/* Contador + Buscador */}
                 <div className="flex items-center gap-3 shrink-0">
                     {!isLoading && (
                         <span className="hidden md:block text-[10px] font-bold text-gray-400 uppercase tracking-widest whitespace-nowrap">
@@ -269,9 +559,9 @@ export default function MesasPage() {
                     )}
                 <div className="relative group w-full md:w-72">
                     <SearchIcon className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-black transition-colors" size={16} />
-                    <input 
-                        type="text" 
-                        placeholder="BUSCAR MESA..." 
+                    <input
+                        type="text"
+                        placeholder="BUSCAR MESA..."
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                         className="w-full bg-[#F5F5F5] border border-transparent focus:bg-white focus:border-gray-200 rounded-full py-2.5 pl-11 pr-4 text-xs font-bold uppercase tracking-wide focus:ring-0 transition-all outline-none text-gray-900 placeholder:text-gray-400"
@@ -314,17 +604,17 @@ export default function MesasPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
                 <AnimatePresence mode="popLayout">
                 {filteredProducts.map((item, index) => (
-                <motion.div 
+                <motion.div
                     layout
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.9 }}
                     transition={{ duration: 0.3, delay: index * 0.05 }}
-                    key={item.id} 
+                    key={item.id}
                     className="group block h-full flex flex-col relative"
                 >
-                    <div 
-                        onClick={() => openModal(item)} 
+                    <div
+                        onClick={() => setSelectedProduct(item)}
                         className="relative aspect-[4/3] overflow-hidden rounded-sm bg-white mb-4 cursor-pointer"
                     >
                         <div className="absolute top-3 left-3 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -332,10 +622,10 @@ export default function MesasPage() {
                                 <Barcode size={10} /> {item.code}
                             </div>
                         </div>
-                        
+
                         <div className="relative w-full h-full p-8 transition-transform duration-500 ease-out group-hover:scale-105">
-                             <Image 
-                                src={item.image || "/images/placeholder.jpg"} 
+                             <Image
+                                src={item.image || "/images/placeholder.jpg"}
                                 alt={item.name}
                                 fill
                                 priority={index < 6}
@@ -344,28 +634,28 @@ export default function MesasPage() {
                                 className="object-contain"
                              />
                         </div>
-                        
+
                         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                             <span className="bg-black text-white px-4 py-2 text-[10px] font-bold uppercase tracking-widest shadow-xl rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                                 Ver Detalles
                             </span>
                         </div>
                     </div>
-                    
+
                     <div className="flex flex-col gap-1">
                         <div className="flex justify-between items-baseline">
-                            <h3 className="text-lg font-medium text-gray-900 leading-tight group-hover:text-gray-600 transition-colors cursor-pointer" onClick={() => openModal(item)}>{item.name}</h3>
+                            <h3 className="text-lg font-medium text-gray-900 leading-tight group-hover:text-gray-600 transition-colors cursor-pointer" onClick={() => setSelectedProduct(item)}>{item.name}</h3>
                             <span className="text-sm font-bold text-gray-900 whitespace-nowrap ml-4">{formatPrice(item.priceBase)}</span>
                         </div>
-                        
+
                         <div className="flex items-center gap-2 mt-1">
                             <p className="text-[10px] text-gray-400 uppercase tracking-widest mr-2">{item.category}</p>
                             {item.colors?.interior && (
                                 <div className="flex -space-x-1">
                                     {item.colors.interior.slice(0, 4).map((c, i) => (
-                                        <div 
-                                            key={i} 
-                                            className="w-3 h-3 rounded-full border border-white shadow-sm" 
+                                        <div
+                                            key={i}
+                                            className="w-3 h-3 rounded-full border border-white shadow-sm"
                                             style={{ backgroundColor: c.hex }}
                                         />
                                     ))}
@@ -384,157 +674,6 @@ export default function MesasPage() {
             </div>
         )}
       </div>
-
-      {/* DRAWER DETALLE */}
-      <AnimatePresence>
-        {selectedProduct && (
-            <motion.div 
-                initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-                transition={{ duration: 0.15 }}
-                className="fixed inset-0 z-50 flex justify-end bg-black/60 h-[100dvh]" 
-                onClick={() => setSelectedProduct(null)}
-            >
-                <motion.div 
-                    initial={{ x: "100%" }} 
-                    animate={{ x: 0 }} 
-                    exit={{ x: "100%" }}
-                    transition={{ type: "spring", damping: 30, stiffness: 350, mass: 0.8 }} 
-                    style={{ willChange: "transform" }}
-                    onClick={(e) => e.stopPropagation()} 
-                    className="bg-white w-full max-w-5xl h-full shadow-2xl flex flex-col md:flex-row overflow-hidden md:rounded-l-2xl"
-                >
-                    {/* IZQUIERDA: IMAGEN */}
-                    <div className="md:w-3/5 bg-white p-6 md:p-8 flex items-center justify-center relative shrink-0 border-b md:border-b-0 border-gray-100">
-                         <button onClick={() => setSelectedProduct(null)} className="absolute top-4 right-4 md:hidden bg-white p-2 rounded-full shadow-lg border border-gray-100 z-10 text-gray-900 active:scale-95 transition-transform"><X size={20} /></button>
-
-                        <div className="relative w-full h-[40vh] md:h-full flex items-center justify-center">
-                            <motion.div
-                                initial={{ scale: 0.95, opacity: 0 }}
-                                animate={{ scale: 1, opacity: 1 }}
-                                transition={{ delay: 0.1, duration: 0.3 }}
-                                className="relative w-full h-full"
-                            >
-                                <Image 
-                                    src={selectedProduct.image} 
-                                    alt={selectedProduct.name} 
-                                    fill
-                                    className="object-contain p-4 md:p-12"
-                                    priority
-                                />
-                            </motion.div>
-                        </div>
-                    </div>
-
-                    {/* DERECHA: DATOS */}
-                    <div className="md:w-2/5 flex flex-col h-full bg-white border-l border-gray-100 relative min-h-0">
-                        {/* Cabecera */}
-                        <div className="p-6 md:p-8 pb-4 shrink-0 bg-white z-10">
-                            <div className="flex justify-between items-start">
-                                <div>
-                                    <div className="inline-block bg-black text-white text-[10px] font-mono px-2 py-1 mb-3 rounded-sm">
-                                        {selectedProduct.code}
-                                    </div>
-                                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">{selectedProduct.name}</h2>
-                                    <p className="text-xs text-gray-500 uppercase tracking-widest mt-2">{selectedProduct.category}</p>
-                                </div>
-                                <button onClick={() => setSelectedProduct(null)} className="hidden md:block hover:bg-gray-100 p-2 rounded-full transition-colors"><X size={24} /></button>
-                            </div>
-                        </div>
-
-                        {/* Scrollable */}
-                        <div className="flex-1 overflow-y-auto p-6 md:p-8 pt-0 pb-32 md:pb-40 scrollbar-hide">
-                            <div className="space-y-8 mt-4">
-                                {/* Dimensiones */}
-                                <div className="grid grid-cols-2 gap-4">
-                                    <div className="bg-blue-50/50 p-4 rounded-xl border border-blue-100">
-                                        <div className="flex items-center gap-2 text-blue-600 mb-1"><Ruler size={16} /> <span className="text-[10px] font-bold uppercase">Medidas</span></div>
-                                        <div className="text-sm font-bold text-gray-900">{selectedProduct.specs?.dimensions || "N/A"}</div>
-                                    </div>
-                                    <div className="bg-gray-50 p-4 rounded-xl border border-gray-100">
-                                        <div className="flex items-center gap-2 text-gray-500 mb-1"><Box size={16} /> <span className="text-[10px] font-bold uppercase">Volumen</span></div>
-                                        <div className="text-sm font-bold text-gray-900">{selectedProduct.specs?.volume || "N/A"}</div>
-                                    </div>
-                                </div>
-
-                                {/* Colores */}
-                                {selectedProduct.colors?.interior && selectedProduct.colors.interior.length > 0 && (
-                                <div>
-                                    <h3 className="text-xs font-bold uppercase tracking-wider text-gray-900 mb-3 flex items-center gap-2">
-                                        <Palette size={14} /> Acabados Disponibles
-                                    </h3>
-                                    <div className="flex flex-wrap gap-3">
-                                    {selectedProduct.colors.interior.map((color, i) => (
-                                        <div key={i} className="group relative">
-                                            <div 
-                                                className="w-10 h-10 rounded-full shadow-sm border border-gray-200 cursor-help transition-transform hover:scale-110" 
-                                                style={{ backgroundColor: color.hex }}
-                                                title={color.name}
-                                            ></div>
-                                        </div>
-                                    ))}
-                                    </div>
-                                </div>
-                                )}
-
-                                {/* Materiales */}
-                                {selectedProduct.materials && (
-                                    <div className="border border-gray-100 rounded-xl overflow-hidden divide-y divide-gray-50">
-                                    {selectedProduct.materials.map((mat, idx) => (
-                                        <div key={idx} className="p-4 bg-white hover:bg-gray-50 transition-colors">
-                                            <span className="text-[9px] font-bold uppercase text-gray-400 block mb-1 tracking-wide">{mat.part}</span>
-                                            <div className="text-sm font-bold text-gray-900">{mat.material}</div>
-                                            {mat.detail && <div className="text-xs text-gray-500 mt-0.5">{mat.detail}</div>}
-                                        </div>
-                                    ))}
-                                    </div>
-                                )}
-
-                                {/* Configuraciones */}
-                                <div>
-                                    <div className="flex justify-between items-center mb-3">
-                                        <h3 className="text-xs font-bold uppercase tracking-wider text-gray-900 flex items-center gap-2">
-                                            <Armchair size={14} /> Opciones
-                                        </h3>
-                                        <button 
-                                            onClick={() => setShowPriceModal(true)}
-                                            className="text-[10px] flex items-center gap-1.5 text-blue-600 bg-blue-50 px-3 py-1.5 rounded-full hover:bg-blue-100 transition-colors font-bold uppercase tracking-wide"
-                                        >
-                                            <Maximize2 size={12} /> Ver Tabla Precios
-                                        </button>
-                                    </div>
-                                    <div className="grid grid-cols-1 gap-2">
-                                        {selectedProduct.configurations?.map((conf, idx) => (
-                                            <div key={idx} className="p-3 rounded-lg border border-dashed border-gray-200 flex justify-between items-center text-xs group hover:border-gray-300 transition-colors">
-                                                <div className="flex items-center gap-3">
-                                                    <span className="font-bold font-mono bg-gray-100 text-gray-600 px-1.5 py-0.5 rounded border border-gray-200">{conf.code}</span>
-                                                    <span className="text-gray-600 font-medium">{conf.desc}</span>
-                                                </div>
-                                                <div className="font-bold font-mono text-gray-900">{formatPrice(conf.price)}</div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Footer Fijo */}
-                        <div className="absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur-md border-t border-gray-100 p-4 md:p-6 z-20">
-                            <div className="flex gap-4 items-center">
-                                <div className="flex-1">
-                                    <div className="text-[10px] uppercase text-gray-400 tracking-widest font-bold">Precio Base</div>
-                                    <div className="text-2xl font-bold font-mono text-gray-900">{formatPrice(selectedProduct.priceBase)}</div>
-                                </div>
-                                <Link href="/contacto" className="flex-1 bg-black text-white text-center py-3.5 rounded-lg text-xs font-bold uppercase tracking-widest hover:bg-gray-800 transition-transform active:scale-95 shadow-lg shadow-gray-200">
-                                    Solicitar Info
-                                </Link>
-                            </div>
-                        </div>
-
-                    </div>
-                </motion.div>
-            </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   );
 }

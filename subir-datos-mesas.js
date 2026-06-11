@@ -27,7 +27,7 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82103-B6",
         priceBase: 9760,
-        image: "/images/MESAS/CENTRO/MESA1/render.jpg",
+        image: "/images/MESAS/MESA1/render.jpg",
         specs: {
             dimensions: "1400 * 615 * 385 mm",
             volume: "0.34 m³",
@@ -61,7 +61,7 @@ const tablesData = [
         code: "HYJL82103-C1",
         priceBase: 5460,
         // RECUERDA: Guardar la imagen aquí
-        image: "/images/MESAS/AUXILIAR/MESA2/render.jpg",
+        image: "/images/MESAS/MESA2/render.jpg",
         specs: {
             dimensions: "520 * 416 * 450 mm",
             volume: "0.12 m³",
@@ -91,7 +91,7 @@ const tablesData = [
         code: "HYJL82105-A1",
         priceBase: 5790,
         // RECUERDA: Guardar la imagen aquí
-        image: "/images/MESAS/AUXILIAR/MESA3/render.jpg",
+        image: "/images/MESAS/MESA3/render.jpg",
         specs: {
             dimensions: "Ø700 * 380 mm",
             volume: "0.22 m³",
@@ -120,8 +120,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82105-B1",
         priceBase: 5080,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA4/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA4/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA4/render.jpg
+        image: "/images/MESAS/MESA4/render.jpg",
         specs: {
             dimensions: "Ø450 * 480 mm",
             volume: "0.14 m³",
@@ -150,8 +150,8 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82106-A2/B",
         priceBase: 22870, // Precio combinado del Set (16390 + 6480)
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA5/render.jpg
-        image: "/images/MESAS/CENTRO/MESA5/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA5/render.jpg
+        image: "/images/MESAS/MESA5/render.jpg",
         specs: {
             dimensions: "1500*850*420 mm (Mesa) + 900*550*280 mm (Módulo)",
             volume: "0.93 m³",
@@ -185,8 +185,8 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82107-A1",
         priceBase: 20260,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA6/render.jpg
-        image: "/images/MESAS/CENTRO/MESA6/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA6/render.jpg
+        image: "/images/MESAS/MESA6/render.jpg",
         specs: {
             dimensions: "1060 * 1060 * 300 mm",
             volume: "0.47 m³",
@@ -216,8 +216,8 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82107-B2",
         priceBase: 13950,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA7/render.jpg
-        image: "/images/MESAS/CENTRO/MESA7/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA7/render.jpg
+        image: "/images/MESAS/MESA7/render.jpg",
         specs: {
             dimensions: "970 * 760 * 400 mm",
             volume: "0.38 m³",
@@ -247,8 +247,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82107-C1",
         priceBase: 7690,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA8/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA8/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA8/render.jpg
+        image: "/images/MESAS/MESA8/render.jpg",
         specs: {
             dimensions: "520 * 537 * 500 mm",
             volume: "0.20 m³",
@@ -277,8 +277,8 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82108-A",
         priceBase: 9980,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA9/render.jpg
-        image: "/images/MESAS/CENTRO/MESA9/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA9/render.jpg
+        image: "/images/MESAS/MESA9/render.jpg",
         specs: {
             dimensions: "1400 * 750 * 360 mm",
             volume: "0.51 m³",
@@ -306,8 +306,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82108-B",
         priceBase: 6160,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA10/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA10/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA10/render.jpg
+        image: "/images/MESAS/MESA10/render.jpg",
         specs: {
             dimensions: "520 * 500 * 475 mm",
             volume: "0.18 m³",
@@ -335,8 +335,8 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82109-A",
         priceBase: 17460,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA11/render.jpg
-        image: "/images/MESAS/CENTRO/MESA11/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA11/render.jpg
+        image: "/images/MESAS/MESA11/render.jpg",
         specs: {
             dimensions: "Ø1200 * 300 mm",
             volume: "0.70 m³",
@@ -365,8 +365,8 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82109-B1",
         priceBase: 17580,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA12/render.jpg
-        image: "/images/MESAS/CENTRO/MESA12/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA12/render.jpg
+        image: "/images/MESAS/MESA12/render.jpg",
         specs: {
             dimensions: "Ø920 * 350 mm",
             volume: "0.46 m³",
@@ -395,8 +395,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82109-C",
         priceBase: 5250,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA13/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA13/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA13/render.jpg
+        image: "/images/MESAS/MESA13/render.jpg",
         specs: {
             dimensions: "Ø440 * 450 mm",
             volume: "0.15 m³",
@@ -425,8 +425,8 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82111-A",
         priceBase: 14560,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA14/render.jpg
-        image: "/images/MESAS/CENTRO/MESA14/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA14/render.jpg
+        image: "/images/MESAS/MESA14/render.jpg",
         specs: {
             dimensions: "1350 * 750 * 405 mm",
             volume: "0.57 m³",
@@ -459,8 +459,8 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82112-A3",
         priceBase: 13260,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA15/render.jpg
-        image: "/images/MESAS/CENTRO/MESA15/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA15/render.jpg
+        image: "/images/MESAS/MESA15/render.jpg",
         specs: {
             dimensions: "1070 * 1080 * 330 mm",
             volume: "0.39 m³",
@@ -490,8 +490,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82112-B1",
         priceBase: 6160,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA16/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA16/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA16/render.jpg
+        image: "/images/MESAS/MESA16/render.jpg",
         specs: {
             dimensions: "620 * 620 * 430 mm",
             volume: "0.17 m³",
@@ -521,8 +521,8 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82119-A1/B2",
         priceBase: 17930, // Precio combinado (11450 + 6480)
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA17/render.jpg
-        image: "/images/MESAS/CENTRO/MESA17/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA17/render.jpg
+        image: "/images/MESAS/MESA17/render.jpg",
         specs: {
             dimensions: "Ø1000*305 mm (Centro) + Ø520*455 mm (Auxiliar)",
             volume: "0.80 m³",
@@ -557,8 +557,8 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82130A/B",
         priceBase: 15320, // Precio combinado (10460 + 4860)
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA18/render.jpg
-        image: "/images/MESAS/CENTRO/MESA18/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA18/render.jpg
+        image: "/images/MESAS/MESA18/render.jpg",
         specs: {
             dimensions: "1655*875*200 mm (Base) + Ø600*320 mm (Alta)",
             volume: "0.40 m³",
@@ -591,8 +591,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82131",
         priceBase: 5190,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA19/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA19/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA19/render.jpg
+        image: "/images/MESAS/MESA19/render.jpg",
         specs: {
             dimensions: "Ø700 * 430 mm",
             volume: "0.10 m³",
@@ -621,8 +621,8 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82132-A/B",
         priceBase: 20940, // Precio combinado (16980 + 3960)
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA20/render.jpg
-        image: "/images/MESAS/CENTRO/MESA20/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA20/render.jpg
+        image: "/images/MESAS/MESA20/render.jpg",
         specs: {
             dimensions: "1200*1200*230 mm (Mármol) + 1200*600*230 mm (Módulo)",
             volume: "0.78 m³",
@@ -656,8 +656,8 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82133-A1/B1",
         priceBase: 39340, // Precio combinado (23750 + 15590)
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA21/render.jpg
-        image: "/images/MESAS/CENTRO/MESA21/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA21/render.jpg
+        image: "/images/MESAS/MESA21/render.jpg",
         specs: {
             dimensions: "Ø1200*365 mm (A1) + Ø1000*340 mm (B1)",
             volume: "1.33 m³",
@@ -692,8 +692,8 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82135-A/B",
         priceBase: 13180, // Precio combinado (7990 + 5190)
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA22/render.jpg
-        image: "/images/MESAS/CENTRO/MESA22/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA22/render.jpg
+        image: "/images/MESAS/MESA22/render.jpg",
         specs: {
             dimensions: "1190*950*320 mm (A) + 845*730*380 mm (B)",
             volume: "0.57 m³",
@@ -726,8 +726,8 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82150-A",
         priceBase: 17460,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA23/render.jpg
-        image: "/images/MESAS/CENTRO/MESA23/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA23/render.jpg
+        image: "/images/MESAS/MESA23/render.jpg",
         specs: {
             dimensions: "1400 * 750 * 350 mm",
             volume: "0.50 m³",
@@ -756,8 +756,8 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82151-A1/B1",
         priceBase: 28730, // Precio combinado (18750 + 9980)
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA24/render.jpg
-        image: "/images/MESAS/CENTRO/MESA24/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA24/render.jpg
+        image: "/images/MESAS/MESA24/render.jpg",
         specs: {
             dimensions: "1208*800*460 mm (Alta) + 1060*580*300 mm (Baja)",
             volume: "1.07 m³",
@@ -792,8 +792,8 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82152-3A/B",
         priceBase: 18510, // Precio combinado (13650 + 4860)
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA25/render.jpg
-        image: "/images/MESAS/CENTRO/MESA25/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA25/render.jpg
+        image: "/images/MESAS/MESA25/render.jpg",
         specs: {
             dimensions: "1000*1000*250 mm (A) + Ø800*380 mm (B)",
             volume: "0.95 m³",
@@ -831,8 +831,8 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82153-Set",
         priceBase: 20040, // Precio combinado (4380 + 6650 + 6350 + 2660)
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA26/render.jpg
-        image: "/images/MESAS/CENTRO/MESA26/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA26/render.jpg
+        image: "/images/MESAS/MESA26/render.jpg",
         specs: {
             dimensions: "Combinación Modular (4 Piezas)",
             volume: "0.89 m³",
@@ -874,8 +874,8 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82156-A1",
         priceBase: 14690,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/CENTRO/MESA27/render.jpg
-        image: "/images/MESAS/CENTRO/MESA27/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA27/render.jpg
+        image: "/images/MESAS/MESA27/render.jpg",
         specs: {
             dimensions: "Ø1000 * 385 mm",
             volume: "0.85 m³",
@@ -905,8 +905,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82201",
         priceBase: 10450,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA28/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA28/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA28/render.jpg
+        image: "/images/MESAS/MESA28/render.jpg",
         specs: {
             dimensions: "985 * 310 * 455 mm",
             volume: "0.20 m³",
@@ -937,8 +937,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82202",
         priceBase: 6150,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA29/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA29/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA29/render.jpg
+        image: "/images/MESAS/MESA29/render.jpg",
         specs: {
             dimensions: "540 * 400 * 500 mm",
             volume: "0.17 m³",
@@ -968,8 +968,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82302-B",
         priceBase: 7560,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA30/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA30/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA30/render.jpg
+        image: "/images/MESAS/MESA30/render.jpg",
         specs: {
             dimensions: "Ø580 * 330 mm",
             volume: "0.12 m³",
@@ -1000,8 +1000,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82302-A1",
         priceBase: 12790,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA31/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA31/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA31/render.jpg
+        image: "/images/MESAS/MESA31/render.jpg",
         specs: {
             dimensions: "Ø700 * 420 mm",
             volume: "0.28 m³",
@@ -1032,8 +1032,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82303-C",
         priceBase: 6950,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA32/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA32/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA32/render.jpg
+        image: "/images/MESAS/MESA32/render.jpg",
         specs: {
             dimensions: "365 * 350 * 460 mm",
             volume: "0.10 m³",
@@ -1063,8 +1063,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82307",
         priceBase: 4390,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA33/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA33/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA33/render.jpg
+        image: "/images/MESAS/MESA33/render.jpg",
         specs: {
             dimensions: "370 * 350 * 610 mm",
             volume: "0.12 m³",
@@ -1092,8 +1092,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82308-A1",
         priceBase: 5450,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA34/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA34/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA34/render.jpg
+        image: "/images/MESAS/MESA34/render.jpg",
         specs: {
             dimensions: "Ø500 * 540 mm",
             volume: "0.16 m³",
@@ -1123,8 +1123,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82317",
         priceBase: 3790,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA35/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA35/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA35/render.jpg
+        image: "/images/MESAS/MESA35/render.jpg",
         specs: {
             dimensions: "Ø380 * 440 mm",
             volume: "0.11 m³",
@@ -1155,8 +1155,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82318",
         priceBase: 9390,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA36/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA36/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA36/render.jpg
+        image: "/images/MESAS/MESA36/render.jpg",
         specs: {
             dimensions: "750 * 380 * 520 mm",
             volume: "0.21 m³",
@@ -1189,8 +1189,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82319-A",
         priceBase: 4550,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA37/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA37/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA37/render.jpg
+        image: "/images/MESAS/MESA37/render.jpg",
         specs: {
             dimensions: "Ø450 * 500 mm",
             volume: "0.14 m³",
@@ -1220,8 +1220,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82320",
         priceBase: 7280,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA38/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA38/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA38/render.jpg
+        image: "/images/MESAS/MESA38/render.jpg",
         specs: {
             dimensions: "Ø600 * 435 mm",
             volume: "0.20 m³",
@@ -1251,8 +1251,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82321-A",
         priceBase: 5890,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA39/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA39/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA39/render.jpg
+        image: "/images/MESAS/MESA39/render.jpg",
         specs: {
             dimensions: "390 * 320 * 520 mm",
             volume: "0.11 m³",
@@ -1284,8 +1284,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82305-A/HG1911",
         priceBase: 8490,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA40/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA40/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA40/render.jpg
+        image: "/images/MESAS/MESA40/render.jpg",
         specs: {
             dimensions: "980 * 608 * 380 mm",
             volume: "0.44 m³",
@@ -1315,8 +1315,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82306/HG1913",
         priceBase: 5880,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/AUXILIAR/MESA41/render.jpg
-        image: "/images/MESAS/AUXILIAR/MESA41/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA41/render.jpg
+        image: "/images/MESAS/MESA41/render.jpg",
         specs: {
             dimensions: "Ø495 * 500 mm",
             volume: "0.18 m³",
@@ -1346,8 +1346,11 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYTL86101/HF1823Y-1",
         priceBase: 25450,
-        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/COMEDOR/MESA42/render.jpg
-        image: "/images/MESAS/COMEDOR/MESA42/render.jpg",
+        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA42/render.jpg
+        image: "/images/MESAS/MESA42/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA42/img1.jpg",
+        ],
         specs: {
             dimensions: "2100 * 1000 * 750 mm",
             volume: "0.82 m³",
@@ -1390,8 +1393,12 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYTL86102-B/HF1826Y-2",
         priceBase: 28190,
-        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/COMEDOR/MESA43/render.jpg
-        image: "/images/MESAS/COMEDOR/MESA43/render.jpg",
+        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA43/render.jpg
+        image: "/images/MESAS/MESA43/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA43/img1.jpg",
+            "/images/MESAS/MESA43/img2.jpg"
+        ],
         specs: {
             dimensions: "920 / 1530 * 760 mm",
             volume: "1.24 m³",
@@ -1433,8 +1440,13 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYTL86105-B/HF1831",
         priceBase: 25550,
-        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/COMEDOR/MESA44/render.jpg
-        image: "/images/MESAS/COMEDOR/MESA44/render.jpg",
+        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA44/render.jpg
+        image: "/images/MESAS/MESA44/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA44/img1.jpg", 
+            "/images/MESAS/MESA44/img2.jpg",
+            "/images/MESAS/MESA44/img3.jpg",
+        ],
         specs: {
             dimensions: "2100 * 1000 * 750 mm",
             volume: "0.81 m³",
@@ -1478,8 +1490,13 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYTL86108-A/HF1836Y",
         priceBase: 24450,
-        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/COMEDOR/MESA45/render.jpg
-        image: "/images/MESAS/COMEDOR/MESA45/render.jpg",
+        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA45/render.jpg
+        image: "/images/MESAS/MESA45/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA45/img1.jpg", 
+            "/images/MESAS/MESA45/img2.jpg",
+            "/images/MESAS/MESA45/img3.jpg",
+        ],
         specs: {
             dimensions: "2100 * 1000 * 750 mm",
             volume: "0.77 m³",
@@ -1527,8 +1544,8 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYTL86111-A/HF1837",
         priceBase: 40560,
-        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/COMEDOR/MESA46/render.jpg
-        image: "/images/MESAS/COMEDOR/MESA46/render.jpg",
+        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA46/render.jpg
+        image: "/images/MESAS/MESA46/render.jpg",
         specs: {
             dimensions: "2100 * 1000 * 750 mm",
             volume: "0.91 m³",
@@ -1566,53 +1583,7 @@ const tablesData = [
             height: "Not customizable"
         }
     },
-    // PRODUCTO 47: MESA COMEDOR
-    {
-        id: "mesa-comedor-hytl86111-b",
-        name: "Mesa de Comedor",
-        category: "Mesa de Comedor",
-        code: "HYTL86111-B/HF1837-B",
-        priceBase: 35450,
-        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/COMEDOR/MESA47/render.jpg
-        image: "/images/MESAS/COMEDOR/MESA47/render.jpg",
-        specs: {
-            dimensions: "2100 * 1000 * 750 mm",
-            volume: "0.83 m³",
-            assembly: "Desmontado y Ensamblado / 3 Piezas"
-        },
-        materials: [
-            { part: "Sobre (Tabletop)", material: "Mármol", detail: "Platinum Diamond (Oil-bright)" },
-            { part: "Estructura metálica (Metal frame)", material: "Acero Inoxidable", detail: "Gunmetal cepillado (Brushed Gunmetal)" },
-            { part: "Patas laterales (Side feet)", material: "Fibra de vidrio (Fiberglass)", detail: "Gunmetal cepillado (Brushed Gunmetal)" }
-        ],
-        colors: {
-            marble: [
-                { name: "Platinum Diamond (Oil-bright)", hex: "#5E504A" },        // Marrón oscuro/grisáceo veteado (estimado)
-                { name: "Prada Green (Oil-bright)", hex: "#2A3B32" },             // Verde oscuro veteado (estimado)
-                { name: "Snow White (Oil-bright)", hex: "#DCDCDC" },              // Blanco veteado (estimado)
-                { name: "Milky Way Starry Sky (Oil-bright)", hex: "#1A1A1A" }     // Negro brillante (estimado)
-            ]
-        },
-        configurations: [
-            { code: "HYTL86111-B1600", desc: "1600*900*750 mm", price: 30100 },
-            { code: "HYTL86111-B1800", desc: "1800*900*750 mm", price: 32050 },
-            { code: "HYTL86111-B2100", desc: "2100*1000*750 mm", price: 35450 },
-            { code: "HYTL86111-B2400", desc: "2400*1000*750 mm", price: 39760 },
-            { code: "HYTL86111-B2600", desc: "2600*1100*750 mm", price: 41350 }
-        ],
-        priceList: [
-            { name: "Mesa 1600mm (Platinum Diamond)", size: "1600*900*750", price: 30100 },
-            { name: "Mesa 1800mm (Platinum Diamond)", size: "1800*900*750", price: 32050 },
-            { name: "Mesa 2100mm (Platinum Diamond)", size: "2100*1000*750", price: 35450 },
-            { name: "Mesa 2400mm (Platinum Diamond)", size: "2400*1000*750", price: 39760 },
-            { name: "Mesa 2600mm (Platinum Diamond)", size: "2600*1100*750", price: 41350 }
-        ],
-        customInstructions: {
-            length: "Customizable (1600-2600 mm)",
-            width: "Customizable (900-1100 mm)",
-            height: "Not customizable"
-        }
-    },
+    // PRODUCTO 47: MESA COMEDOR → borrado (HYTL86111-B/HF1837-B)
     // PRODUCTO 48: MESA COMEDOR
     {
         id: "mesa-comedor-hytl86128-b",
@@ -1620,8 +1591,13 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYTL86128-B",
         priceBase: 22260,
-        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/COMEDOR/MESA48/render.jpg
-        image: "/images/MESAS/COMEDOR/MESA48/render.jpg",
+        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA48/render.jpg
+        image: "/images/MESAS/MESA48/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA48/img1.jpg", 
+            "/images/MESAS/MESA48/img2.jpg",
+            "/images/MESAS/MESA48/img3.jpg",
+        ],
         specs: {
             dimensions: "2100 * 950 * 750 mm",
             volume: "0.6 m³",
@@ -1661,8 +1637,13 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYTL86129-A/MZL3118",
         priceBase: 24350,
-        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/COMEDOR/MESA49/render.jpg
-        image: "/images/MESAS/COMEDOR/MESA49/render.jpg",
+        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA49/render.jpg
+        image: "/images/MESAS/MESA49/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA49/img1.jpg", 
+            "/images/MESAS/MESA49/img2.jpg",
+            "/images/MESAS/MESA49/img3.jpg"
+        ],
         specs: {
             dimensions: "1600 * 900 * 750 mm",
             volume: "0.63 m³",
@@ -1707,7 +1688,7 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82106-A1",
         priceBase: null,
-        image: "/images/MESAS/CENTRO/MESA50/render.jpg",
+        image: "/images/MESAS/MESA50/render.jpg",
         specs: {
             dimensions: "1500 * 850 * 420 mm",
             volume: null,
@@ -1734,7 +1715,7 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYJL82901",
         priceBase: null,
-        image: "/images/MESAS/COMEDOR/MESA51/render.jpg",
+        image: "/images/MESAS/MESA51/render.jpg",
         specs: {
             dimensions: "1000 * 430 * 450 mm",
             volume: null,
@@ -1756,11 +1737,15 @@ const tablesData = [
     // MESA 52
     {
         id: "consola-te-hygl81702-b",
-        name: "Consola de Té CHIN",
-        category: "Mesa Auxiliar",
-        code: "HYGL81702-B",
+        name: "CHIN Tea Cabinet HYGL81702",
+        category: "Mesa de Té",
+        code: "HYGL81702-HQ1826Y-2",
         priceBase: null,
-        image: "/images/MESAS/AUXILIAR/MESA52/render.jpg",
+        image: "/images/MESAS/MESA52/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA52/img1.jpg",
+            "/images/MESAS/MESA52/img2.jpg"
+        ],
         specs: {
             dimensions: "630 * 480 * 680 mm",
             volume: null,
@@ -1787,7 +1772,7 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYYD85506",
         priceBase: null,
-        image: "/images/MESAS/CENTRO/MESA53/render.jpg",
+        image: "/images/MESAS/MESA53/render.jpg",
         specs: {
             dimensions: "1600 * 450 * 425 mm",
             volume: null,
@@ -1808,8 +1793,374 @@ const tablesData = [
         customInstructions: null
     },
     // MESA 54
-    // MESA 55 → movida a gabinetes (escritorio-hytl86301)
-
+    {
+        id: "mesa-comedor-hytl86127-hf1850",
+        name: "Change Dining Table HYTL86127",
+        category: "Mesa de Comedor",
+        code: "HYTL86127-HF1850",
+        priceBase: null,
+        image: "/images/MESAS/MESA54/render.jpg",
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: null
+        },
+        materials: [
+            { part: "Tablero (Tabletop)", material: "Mármol", detail: "Blanco / Calacatta (acabado brillante)" },
+            { part: "Lazy Susan giratoria", material: "Mármol", detail: "Integrada, giratoria, con ribete dorado (brass)" },
+            { part: "Base", material: "Acero Inoxidable", detail: "Gunmetal oscuro / Negro mate — estructura cilíndrica con paneles intercalados" }
+        ],
+        colors: {
+            interior: [
+                { name: "Calacatta White Marble", hex: "#E8E4DE" }
+            ]
+        },
+        configurations: [
+            { code: "HYTL86127-HF1850", desc: null, price: null }
+        ],
+        priceList: [
+            { name: "Change Dining Table", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 55
+    {
+        id: "mesa-comedor-hytl86109-hf1838",
+        name: "«Be Water» Dining Table HYTL86109",
+        category: "Mesa de Comedor",
+        code: "HYTL86109-HF1838",
+        priceBase: null,
+        image: "/images/MESAS/MESA55/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA55/img1.jpg"
+        ],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: null
+        },
+        materials: [
+            { part: "Tablero (Tabletop)", material: "Mármol", detail: "Negro veteado / Nero Marquina" },
+            { part: "Lazy Susan", material: "Mármol", detail: "Integrada y giratoria" },
+            { part: "Base", material: "Acero Inoxidable", detail: "Gunmetal oscuro — columna cilíndrica con elementos curvos tipo corchete" }
+        ],
+        colors: {
+            interior: [
+                { name: "Nero Marquina Black Marble", hex: "#1A1A1A" }
+            ]
+        },
+        configurations: [
+            { code: "HYTL86109-HF1838", desc: null, price: null }
+        ],
+        priceList: [
+            { name: "Be Water Dining Table", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 56
+    {
+        id: "mesa-comedor-hytl86103-hf1830y",
+        name: "Dining Table HYTL86103",
+        category: "Mesa de Comedor",
+        code: "HYTL86103-HF1830Y-1",
+        priceBase: null,
+        image: "/images/MESAS/MESA56/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA56/img1.jpg"
+        ],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: null
+        },
+        materials: [
+            { part: "Tablero (Tabletop)", material: "Mármol", detail: "Blanco veteado / Fantasy Brown — acabado brillante" },
+            { part: "Base", material: "Madera de Fresno", detail: "Negro tintado — cuatro paneles curvos entrelazados" },
+            { part: "Detalle base", material: "Acero Inoxidable", detail: "Gunmetal / Antique Bronze en la unión inferior" }
+        ],
+        colors: {
+            interior: [
+                { name: "Fantasy Brown / Ice Crystal Marble", hex: "#D8D0C8" }
+            ]
+        },
+        configurations: [
+            { code: "HYTL86103-HF1830Y-1", desc: null, price: null }
+        ],
+        priceList: [
+            { name: "Dining Table HYTL86103", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 57 (movida desde gabinetes GAB12)
+    {
+        id: "mesa-hytl86201",
+        name: "Mesa de Té HYTL86201",
+        category: "Mesa de Té",
+        code: "HYTL86201/HCT1801Y-1",
+        priceBase: 18760,
+        image: "/images/MESAS/MESA57/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA57/img1.jpg",
+            "/images/MESAS/MESA57/img2.jpg",
+            "/images/MESAS/MESA57/img3.jpg",
+            "/images/MESAS/MESA57/img4.jpg"
+        ],
+        specs: {
+            dimensions: "1500 / 1800 / 2000 / 2400 * 700/750 * 720 mm",
+            volume: "0.71 - 1.17 m³",
+            assembly: "Desmontado y Ensamblado / 3 Piezas"
+        },
+        materials: [
+            { part: "Superficie principal (Main surface)", material: "Piedra sinterizada (Sintered stone)", detail: "Moonlight White" },
+            { part: "Estructura de madera (Wood frame)", material: "Madera de fresno + MDF E0", detail: "Oil-wax color" },
+            { part: "Detalles (Accents)", material: "Obsidiana (Obsidian)", detail: "Obsidian" },
+            { part: "Estructura de patas (Foot frame)", material: "Acero inoxidable", detail: "Brushed Gunmetal" }
+        ],
+        colors: {
+            wood: [{ name: "Oil-wax color", hex: "#1D1C1A" }],
+            stone: [
+                { name: "Moonlight White", hex: "#F4F4F0" },
+                { name: "Obsidian", hex: "#0F0F0F" }
+            ],
+            metal: [{ name: "Brushed Gunmetal", hex: "#4A4A4A" }]
+        },
+        configurations: [
+            { code: "HYTL86201-1500", desc: "1500*700*720 mm", price: 18760 },
+            { code: "HYTL86201-1800", desc: "1800*700*720 mm", price: 19790 },
+            { code: "HYTL86201-2000", desc: "2000*700*720 mm", price: 20860 },
+            { code: "HYTL86201-2400", desc: "2400*750*720 mm", price: 25390 }
+        ],
+        priceList: [
+            { name: "Mesa de Té 1500mm", size: "1500*700*720 mm", price: 18760 },
+            { name: "Mesa de Té 1800mm", size: "1800*700*720 mm", price: 19790 },
+            { name: "Mesa de Té 2000mm", size: "2000*700*720 mm", price: 20860 },
+            { name: "Mesa de Té 2400mm", size: "2400*750*720 mm", price: 25390 }
+        ],
+        customInstructions: {
+            material: "Not customizable",
+            dimensions: "Available in multiple sizes (1500/1800/2000/2400mm)"
+        }
+    },
+    // MESA 58 (movida desde gabinetes GAB13)
+    {
+        id: "mesa-hytl86202",
+        name: "Mesa de Té HYTL86202",
+        category: "Mesa de Té",
+        code: "HYTL86202/HCT1839",
+        priceBase: 46480,
+        image: "/images/MESAS/MESA58/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA58/img1.jpg",
+            "/images/MESAS/MESA58/img2.jpg",
+            "/images/MESAS/MESA58/img3.jpg",
+            "/images/MESAS/MESA58/img4.jpg",
+            "/images/MESAS/MESA58/img5.jpg",
+            "/images/MESAS/MESA58/img6.jpg",
+            "/images/MESAS/MESA58/img7.jpg",
+            "/images/MESAS/MESA58/img8.jpg",
+            "/images/MESAS/MESA58/img9.jpg",
+            "/images/MESAS/MESA58/img10.jpg"
+        ],
+        specs: {
+            dimensions: "2400 / 2600 / 2800 / 3130 * 1000 * 820 mm",
+            volume: "1.27 - 1.40 m³",
+            assembly: "Desmontado y Ensamblado / 6 Piezas"
+        },
+        materials: [
+            { part: "Estructura principal (Main structure)", material: "MDF grado E0", detail: "Oil-wax color" },
+            { part: "Base decorativa (Decorative base)", material: "Piedra sinterizada (Sintered stone)", detail: "Cold River Snow" },
+            { part: "Detalles metálicos (Metal accents)", material: "Acero inoxidable", detail: "Brushed Gunmetal" }
+        ],
+        colors: {
+            wood: [{ name: "Oil-wax color", hex: "#1D1C1A" }],
+            stone: [{ name: "Cold River Snow", hex: "#EAEAEA" }],
+            metal: [{ name: "Brushed Gunmetal", hex: "#4A4A4A" }]
+        },
+        configurations: [
+            { code: "HYTL86202-2400", desc: "2400(2300)*1000*820 mm", price: 46480 },
+            { code: "HYTL86202-2600", desc: "2600(2500)*1000*820 mm", price: 48690 },
+            { code: "HYTL86202-2800", desc: "2800(2700)*1000*820 mm", price: 49290 },
+            { code: "HYTL86202-3130", desc: "3130(3030)*1000*820 mm", price: 49990 }
+        ],
+        priceList: [
+            { name: "Mesa de Té 2400mm", size: "2400(2300)*1000*820 mm", price: 46480 },
+            { name: "Mesa de Té 2600mm", size: "2600(2500)*1000*820 mm", price: 48690 },
+            { name: "Mesa de Té 2800mm", size: "2800(2700)*1000*820 mm", price: 49290 },
+            { name: "Mesa de Té 3130mm", size: "3130(3030)*1000*820 mm", price: 49990 }
+        ],
+        customInstructions: {
+            material: "Not customizable. Note: Price does not include tea tray stones and green plants.",
+            dimensions: "Available in multiple sizes (2400/2600/2800/3130mm)"
+        }
+    },
+    // MESA 59 (movida desde gabinetes GAB14)
+    {
+        id: "mesa-hytl86202-b",
+        name: "Mesa de Té HYTL86202-B",
+        category: "Mesa de Té",
+        code: "HYTL86202-B/HCT1839-B",
+        priceBase: 37060,
+        image: "/images/MESAS/MESA59/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA59/img1.jpg",
+            "/images/MESAS/MESA59/img2.jpg",
+            "/images/MESAS/MESA59/img3.jpg"
+        ],
+        specs: {
+            dimensions: "2400 / 2600 / 2800 / 3000 * 1000 * 750 mm",
+            volume: "1.21 - 1.35 m³",
+            assembly: "Desmontado y Ensamblado / 5 Piezas"
+        },
+        materials: [
+            { part: "Estructura principal (Main structure)", material: "MDF grado E0", detail: "Oil-wax color" },
+            { part: "Base decorativa (Decorative base)", material: "Piedra sinterizada (Sintered stone)", detail: "Cold River Snow" },
+            { part: "Detalles metálicos (Metal accents)", material: "Acero inoxidable", detail: "Brushed Gunmetal" }
+        ],
+        colors: {
+            wood: [{ name: "Oil-wax color", hex: "#1D1C1A" }],
+            stone: [{ name: "Cold River Snow", hex: "#EAEAEA" }],
+            metal: [{ name: "Brushed Gunmetal", hex: "#4A4A4A" }]
+        },
+        configurations: [
+            { code: "HYTL86202-B-2400", desc: "2400*1000*750 mm", price: 37060 },
+            { code: "HYTL86202-B-2600", desc: "2600*1000*750 mm", price: 39160 },
+            { code: "HYTL86202-B-2800", desc: "2800*1000*750 mm", price: 40190 },
+            { code: "HYTL86202-B-3000", desc: "3000*1000*750 mm", price: 41260 }
+        ],
+        priceList: [
+            { name: "Mesa de Té 2400mm", size: "2400*1000*750 mm", price: 37060 },
+            { name: "Mesa de Té 2600mm", size: "2600*1000*750 mm", price: 39160 },
+            { name: "Mesa de Té 2800mm", size: "2800*1000*750 mm", price: 40190 },
+            { name: "Mesa de Té 3000mm", size: "3000*1000*750 mm", price: 41260 }
+        ],
+        customInstructions: {
+            material: "Not customizable. Note: Price does not include tea tray stones.",
+            dimensions: "Available in multiple sizes (2400/2600/2800/3000mm)"
+        }
+    },
+    // MESA 60 (movida desde gabinetes GAB15)
+    {
+        id: "mesa-hytl86205",
+        name: "Mesa de Té HYTL86205",
+        category: "Mesa de Té",
+        code: "HYTL86205/MQT7715-C",
+        priceBase: 44750,
+        image: "/images/MESAS/MESA60/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA60/img1.jpg",
+            "/images/MESAS/MESA60/img2.jpg",
+            "/images/MESAS/MESA60/img3.jpg",
+            "/images/MESAS/MESA60/img4.jpg"
+        ],
+        specs: {
+            dimensions: "2000/2200/2400/2600 * 850 * 720 mm | 2800/3000 * 1000 * 720 mm",
+            volume: "1.20 - 1.57 m³",
+            assembly: "Desmontado y Ensamblado / 5 Piezas"
+        },
+        materials: [
+            { part: "Superficie (Surface)", material: "Mármol (Marble)", detail: "Picasso (Genuine bright)" },
+            { part: "Estructura principal (Main structure)", material: "Madera de fresno + MDF grado E0", detail: "Oil-wax color" },
+            { part: "Detalles metálicos (Metal details)", material: "Acero inoxidable", detail: "Brushed Gunmetal" }
+        ],
+        colors: {
+            wood: [{ name: "Oil-wax color", hex: "#1D1C1A" }],
+            stone: [{ name: "Picasso (Genuine bright)", hex: "#EBEBEB" }],
+            metal: [{ name: "Brushed Gunmetal", hex: "#4A4A4A" }]
+        },
+        configurations: [
+            { code: "HYTL86205-2000", desc: "2000*850*720 mm", price: 44750 },
+            { code: "HYTL86205-2200", desc: "2200*850*720 mm", price: 45780 },
+            { code: "HYTL86205-2400", desc: "2400*850*720 mm", price: 46850 },
+            { code: "HYTL86205-2600", desc: "2600*850*720 mm", price: 48260 },
+            { code: "HYTL86205-2800", desc: "2800*1000*720 mm", price: 49990 },
+            { code: "HYTL86205-3000", desc: "3000*1000*720 mm", price: 52460 }
+        ],
+        priceList: [
+            { name: "Mesa de Té 2000mm", size: "2000*850*720 mm", price: 44750 },
+            { name: "Mesa de Té 2200mm", size: "2200*850*720 mm", price: 45780 },
+            { name: "Mesa de Té 2400mm", size: "2400*850*720 mm", price: 46850 },
+            { name: "Mesa de Té 2600mm", size: "2600*850*720 mm", price: 48260 },
+            { name: "Mesa de Té 2800mm", size: "2800*1000*720 mm", price: 49990 },
+            { name: "Mesa de Té 3000mm", size: "3000*1000*720 mm", price: 52460 }
+        ],
+        customInstructions: {
+            material: "Not customizable.",
+            dimensions: "Available in multiple sizes (2000 to 3000mm length). Note the depth change at 2800mm."
+        }
+    },
+    // MESA 61
+    {
+        id: "mesa-te-hygl81706",
+        name: "Tea Cabinet HYGL81706",
+        category: "Mesa de Té",
+        code: "HYGL81706",
+        priceBase: null,
+        image: "/images/MESAS/MESA61/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA61/img1.jpg",
+            "/images/MESAS/MESA61/img2.jpg"
+        ],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Assembled / 1 piece"
+        },
+        materials: [
+            { part: "Cuerpo cilíndrico (Body)", material: "Madera de Fresno (Ash wood)", detail: "Negro tintado — textura de grano vertical" },
+            { part: "Bandeja superior giratoria (Rotating top tray)", material: "Piedra sinterizada / Metal", detail: "Blanco piedra con aro metálico gunmetal" },
+            { part: "Puerta lateral (Side door)", material: "Cuero / Leather", detail: "Taupe / Bronce mate" },
+            { part: "Interior (Shelves)", material: "Madera de Fresno (Ash wood)", detail: "Negro tintado — 2 estantes interiores" }
+        ],
+        colors: {
+            interior: [
+                { name: "Dark Ash / Black Stain", hex: "#2A2A2A" },
+                { name: "Taupe / Bronze Leather", hex: "#8A7A68" }
+            ]
+        },
+        configurations: [
+            { code: "HYGL81706", desc: null, price: null }
+        ],
+        priceList: [
+            { name: "Tea Cabinet HYGL81706", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 62
+    {
+        id: "mesa-te-hygl81703",
+        name: "Tea Cabinet HYGL81703",
+        category: "Mesa de Té",
+        code: "HYGL81703",
+        priceBase: null,
+        image: "/images/MESAS/MESA62/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA62/img1.jpg",
+            "/images/MESAS/MESA62/img2.jpg"
+        ],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Assembled / 1 piece"
+        },
+        materials: [
+            { part: "Cuerpo (Body)", material: "Madera de Fresno (Ash wood)", detail: "Gris oscuro / Dark Gray — grano vertical" },
+            { part: "Marco superior (Top frame)", material: "Metal", detail: "Negro mate — estructura abierta para servicio de té" },
+            { part: "Equipamiento de té (Tea equipment)", material: "Metal", detail: "Negro mate — hervidor + dispensador integrados" },
+            { part: "Patas (Feet)", material: "Metal", detail: "Negro mate — pequeñas patas tipo rueda" }
+        ],
+        colors: {
+            interior: [
+                { name: "Dark Gray Ash Wood", hex: "#3A3A3A" }
+            ]
+        },
+        configurations: [
+            { code: "HYGL81703", desc: null, price: null }
+        ],
+        priceList: [
+            { name: "Tea Cabinet HYGL81703", size: null, price: null }
+        ],
+        customInstructions: null
+    },
 ];
 
 // --- 4. FUNCIÓN DE SUBIDA ---
