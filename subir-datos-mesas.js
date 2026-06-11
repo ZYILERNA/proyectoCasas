@@ -1348,6 +1348,9 @@ const tablesData = [
         priceBase: 25450,
         // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA42/render.jpg
         image: "/images/MESAS/MESA42/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA42/img1.jpg",
+        ],
         specs: {
             dimensions: "2100 * 1000 * 750 mm",
             volume: "0.82 m³",
@@ -1392,6 +1395,10 @@ const tablesData = [
         priceBase: 28190,
         // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA43/render.jpg
         image: "/images/MESAS/MESA43/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA43/img1.jpg",
+            "/images/MESAS/MESA43/img2.jpg"
+        ],
         specs: {
             dimensions: "920 / 1530 * 760 mm",
             volume: "1.24 m³",
@@ -1435,6 +1442,11 @@ const tablesData = [
         priceBase: 25550,
         // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA44/render.jpg
         image: "/images/MESAS/MESA44/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA44/img1.jpg", 
+            "/images/MESAS/MESA44/img2.jpg",
+            "/images/MESAS/MESA44/img3.jpg",
+        ],
         specs: {
             dimensions: "2100 * 1000 * 750 mm",
             volume: "0.81 m³",
@@ -1480,6 +1492,11 @@ const tablesData = [
         priceBase: 24450,
         // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA45/render.jpg
         image: "/images/MESAS/MESA45/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA45/img1.jpg", 
+            "/images/MESAS/MESA45/img2.jpg",
+            "/images/MESAS/MESA45/img3.jpg",
+        ],
         specs: {
             dimensions: "2100 * 1000 * 750 mm",
             volume: "0.77 m³",
@@ -1566,53 +1583,7 @@ const tablesData = [
             height: "Not customizable"
         }
     },
-    // PRODUCTO 47: MESA COMEDOR
-    {
-        id: "mesa-comedor-hytl86111-b",
-        name: "Mesa de Comedor",
-        category: "Mesa de Comedor",
-        code: "HYTL86111-B/HF1837-B",
-        priceBase: 35450,
-        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA47/render.jpg
-        image: "/images/MESAS/MESA47/render.jpg",
-        specs: {
-            dimensions: "2100 * 1000 * 750 mm",
-            volume: "0.83 m³",
-            assembly: "Desmontado y Ensamblado / 3 Piezas"
-        },
-        materials: [
-            { part: "Sobre (Tabletop)", material: "Mármol", detail: "Platinum Diamond (Oil-bright)" },
-            { part: "Estructura metálica (Metal frame)", material: "Acero Inoxidable", detail: "Gunmetal cepillado (Brushed Gunmetal)" },
-            { part: "Patas laterales (Side feet)", material: "Fibra de vidrio (Fiberglass)", detail: "Gunmetal cepillado (Brushed Gunmetal)" }
-        ],
-        colors: {
-            marble: [
-                { name: "Platinum Diamond (Oil-bright)", hex: "#5E504A" },        // Marrón oscuro/grisáceo veteado (estimado)
-                { name: "Prada Green (Oil-bright)", hex: "#2A3B32" },             // Verde oscuro veteado (estimado)
-                { name: "Snow White (Oil-bright)", hex: "#DCDCDC" },              // Blanco veteado (estimado)
-                { name: "Milky Way Starry Sky (Oil-bright)", hex: "#1A1A1A" }     // Negro brillante (estimado)
-            ]
-        },
-        configurations: [
-            { code: "HYTL86111-B1600", desc: "1600*900*750 mm", price: 30100 },
-            { code: "HYTL86111-B1800", desc: "1800*900*750 mm", price: 32050 },
-            { code: "HYTL86111-B2100", desc: "2100*1000*750 mm", price: 35450 },
-            { code: "HYTL86111-B2400", desc: "2400*1000*750 mm", price: 39760 },
-            { code: "HYTL86111-B2600", desc: "2600*1100*750 mm", price: 41350 }
-        ],
-        priceList: [
-            { name: "Mesa 1600mm (Platinum Diamond)", size: "1600*900*750", price: 30100 },
-            { name: "Mesa 1800mm (Platinum Diamond)", size: "1800*900*750", price: 32050 },
-            { name: "Mesa 2100mm (Platinum Diamond)", size: "2100*1000*750", price: 35450 },
-            { name: "Mesa 2400mm (Platinum Diamond)", size: "2400*1000*750", price: 39760 },
-            { name: "Mesa 2600mm (Platinum Diamond)", size: "2600*1100*750", price: 41350 }
-        ],
-        customInstructions: {
-            length: "Customizable (1600-2600 mm)",
-            width: "Customizable (900-1100 mm)",
-            height: "Not customizable"
-        }
-    },
+    // PRODUCTO 47: MESA COMEDOR → borrado (HYTL86111-B/HF1837-B)
     // PRODUCTO 48: MESA COMEDOR
     {
         id: "mesa-comedor-hytl86128-b",
@@ -1622,6 +1593,11 @@ const tablesData = [
         priceBase: 22260,
         // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA48/render.jpg
         image: "/images/MESAS/MESA48/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA48/img1.jpg", 
+            "/images/MESAS/MESA48/img2.jpg",
+            "/images/MESAS/MESA48/img3.jpg",
+        ],
         specs: {
             dimensions: "2100 * 950 * 750 mm",
             volume: "0.6 m³",
@@ -1663,6 +1639,11 @@ const tablesData = [
         priceBase: 24350,
         // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA49/render.jpg
         image: "/images/MESAS/MESA49/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA49/img1.jpg", 
+            "/images/MESAS/MESA49/img2.jpg",
+            "/images/MESAS/MESA49/img3.jpg"
+        ],
         specs: {
             dimensions: "1600 * 900 * 750 mm",
             volume: "0.63 m³",
@@ -1756,11 +1737,15 @@ const tablesData = [
     // MESA 52
     {
         id: "consola-te-hygl81702-b",
-        name: "Consola de Té CHIN",
-        category: "Mesa Auxiliar",
-        code: "HYGL81702-B",
+        name: "CHIN Tea Cabinet HYGL81702",
+        category: "Mesa de Té",
+        code: "HYGL81702-HQ1826Y-2",
         priceBase: null,
         image: "/images/MESAS/MESA52/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA52/img1.jpg",
+            "/images/MESAS/MESA52/img2.jpg"
+        ],
         specs: {
             dimensions: "630 * 480 * 680 mm",
             volume: null,
@@ -1808,8 +1793,374 @@ const tablesData = [
         customInstructions: null
     },
     // MESA 54
-    // MESA 55 → movida a gabinetes (escritorio-hytl86301)
-
+    {
+        id: "mesa-comedor-hytl86127-hf1850",
+        name: "Change Dining Table HYTL86127",
+        category: "Mesa de Comedor",
+        code: "HYTL86127-HF1850",
+        priceBase: null,
+        image: "/images/MESAS/MESA54/render.jpg",
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: null
+        },
+        materials: [
+            { part: "Tablero (Tabletop)", material: "Mármol", detail: "Blanco / Calacatta (acabado brillante)" },
+            { part: "Lazy Susan giratoria", material: "Mármol", detail: "Integrada, giratoria, con ribete dorado (brass)" },
+            { part: "Base", material: "Acero Inoxidable", detail: "Gunmetal oscuro / Negro mate — estructura cilíndrica con paneles intercalados" }
+        ],
+        colors: {
+            interior: [
+                { name: "Calacatta White Marble", hex: "#E8E4DE" }
+            ]
+        },
+        configurations: [
+            { code: "HYTL86127-HF1850", desc: null, price: null }
+        ],
+        priceList: [
+            { name: "Change Dining Table", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 55
+    {
+        id: "mesa-comedor-hytl86109-hf1838",
+        name: "«Be Water» Dining Table HYTL86109",
+        category: "Mesa de Comedor",
+        code: "HYTL86109-HF1838",
+        priceBase: null,
+        image: "/images/MESAS/MESA55/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA55/img1.jpg"
+        ],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: null
+        },
+        materials: [
+            { part: "Tablero (Tabletop)", material: "Mármol", detail: "Negro veteado / Nero Marquina" },
+            { part: "Lazy Susan", material: "Mármol", detail: "Integrada y giratoria" },
+            { part: "Base", material: "Acero Inoxidable", detail: "Gunmetal oscuro — columna cilíndrica con elementos curvos tipo corchete" }
+        ],
+        colors: {
+            interior: [
+                { name: "Nero Marquina Black Marble", hex: "#1A1A1A" }
+            ]
+        },
+        configurations: [
+            { code: "HYTL86109-HF1838", desc: null, price: null }
+        ],
+        priceList: [
+            { name: "Be Water Dining Table", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 56
+    {
+        id: "mesa-comedor-hytl86103-hf1830y",
+        name: "Dining Table HYTL86103",
+        category: "Mesa de Comedor",
+        code: "HYTL86103-HF1830Y-1",
+        priceBase: null,
+        image: "/images/MESAS/MESA56/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA56/img1.jpg"
+        ],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: null
+        },
+        materials: [
+            { part: "Tablero (Tabletop)", material: "Mármol", detail: "Blanco veteado / Fantasy Brown — acabado brillante" },
+            { part: "Base", material: "Madera de Fresno", detail: "Negro tintado — cuatro paneles curvos entrelazados" },
+            { part: "Detalle base", material: "Acero Inoxidable", detail: "Gunmetal / Antique Bronze en la unión inferior" }
+        ],
+        colors: {
+            interior: [
+                { name: "Fantasy Brown / Ice Crystal Marble", hex: "#D8D0C8" }
+            ]
+        },
+        configurations: [
+            { code: "HYTL86103-HF1830Y-1", desc: null, price: null }
+        ],
+        priceList: [
+            { name: "Dining Table HYTL86103", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 57 (movida desde gabinetes GAB12)
+    {
+        id: "mesa-hytl86201",
+        name: "Mesa de Té HYTL86201",
+        category: "Mesa de Té",
+        code: "HYTL86201/HCT1801Y-1",
+        priceBase: 18760,
+        image: "/images/MESAS/MESA57/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA57/img1.jpg",
+            "/images/MESAS/MESA57/img2.jpg",
+            "/images/MESAS/MESA57/img3.jpg",
+            "/images/MESAS/MESA57/img4.jpg"
+        ],
+        specs: {
+            dimensions: "1500 / 1800 / 2000 / 2400 * 700/750 * 720 mm",
+            volume: "0.71 - 1.17 m³",
+            assembly: "Desmontado y Ensamblado / 3 Piezas"
+        },
+        materials: [
+            { part: "Superficie principal (Main surface)", material: "Piedra sinterizada (Sintered stone)", detail: "Moonlight White" },
+            { part: "Estructura de madera (Wood frame)", material: "Madera de fresno + MDF E0", detail: "Oil-wax color" },
+            { part: "Detalles (Accents)", material: "Obsidiana (Obsidian)", detail: "Obsidian" },
+            { part: "Estructura de patas (Foot frame)", material: "Acero inoxidable", detail: "Brushed Gunmetal" }
+        ],
+        colors: {
+            wood: [{ name: "Oil-wax color", hex: "#1D1C1A" }],
+            stone: [
+                { name: "Moonlight White", hex: "#F4F4F0" },
+                { name: "Obsidian", hex: "#0F0F0F" }
+            ],
+            metal: [{ name: "Brushed Gunmetal", hex: "#4A4A4A" }]
+        },
+        configurations: [
+            { code: "HYTL86201-1500", desc: "1500*700*720 mm", price: 18760 },
+            { code: "HYTL86201-1800", desc: "1800*700*720 mm", price: 19790 },
+            { code: "HYTL86201-2000", desc: "2000*700*720 mm", price: 20860 },
+            { code: "HYTL86201-2400", desc: "2400*750*720 mm", price: 25390 }
+        ],
+        priceList: [
+            { name: "Mesa de Té 1500mm", size: "1500*700*720 mm", price: 18760 },
+            { name: "Mesa de Té 1800mm", size: "1800*700*720 mm", price: 19790 },
+            { name: "Mesa de Té 2000mm", size: "2000*700*720 mm", price: 20860 },
+            { name: "Mesa de Té 2400mm", size: "2400*750*720 mm", price: 25390 }
+        ],
+        customInstructions: {
+            material: "Not customizable",
+            dimensions: "Available in multiple sizes (1500/1800/2000/2400mm)"
+        }
+    },
+    // MESA 58 (movida desde gabinetes GAB13)
+    {
+        id: "mesa-hytl86202",
+        name: "Mesa de Té HYTL86202",
+        category: "Mesa de Té",
+        code: "HYTL86202/HCT1839",
+        priceBase: 46480,
+        image: "/images/MESAS/MESA58/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA58/img1.jpg",
+            "/images/MESAS/MESA58/img2.jpg",
+            "/images/MESAS/MESA58/img3.jpg",
+            "/images/MESAS/MESA58/img4.jpg",
+            "/images/MESAS/MESA58/img5.jpg",
+            "/images/MESAS/MESA58/img6.jpg",
+            "/images/MESAS/MESA58/img7.jpg",
+            "/images/MESAS/MESA58/img8.jpg",
+            "/images/MESAS/MESA58/img9.jpg",
+            "/images/MESAS/MESA58/img10.jpg"
+        ],
+        specs: {
+            dimensions: "2400 / 2600 / 2800 / 3130 * 1000 * 820 mm",
+            volume: "1.27 - 1.40 m³",
+            assembly: "Desmontado y Ensamblado / 6 Piezas"
+        },
+        materials: [
+            { part: "Estructura principal (Main structure)", material: "MDF grado E0", detail: "Oil-wax color" },
+            { part: "Base decorativa (Decorative base)", material: "Piedra sinterizada (Sintered stone)", detail: "Cold River Snow" },
+            { part: "Detalles metálicos (Metal accents)", material: "Acero inoxidable", detail: "Brushed Gunmetal" }
+        ],
+        colors: {
+            wood: [{ name: "Oil-wax color", hex: "#1D1C1A" }],
+            stone: [{ name: "Cold River Snow", hex: "#EAEAEA" }],
+            metal: [{ name: "Brushed Gunmetal", hex: "#4A4A4A" }]
+        },
+        configurations: [
+            { code: "HYTL86202-2400", desc: "2400(2300)*1000*820 mm", price: 46480 },
+            { code: "HYTL86202-2600", desc: "2600(2500)*1000*820 mm", price: 48690 },
+            { code: "HYTL86202-2800", desc: "2800(2700)*1000*820 mm", price: 49290 },
+            { code: "HYTL86202-3130", desc: "3130(3030)*1000*820 mm", price: 49990 }
+        ],
+        priceList: [
+            { name: "Mesa de Té 2400mm", size: "2400(2300)*1000*820 mm", price: 46480 },
+            { name: "Mesa de Té 2600mm", size: "2600(2500)*1000*820 mm", price: 48690 },
+            { name: "Mesa de Té 2800mm", size: "2800(2700)*1000*820 mm", price: 49290 },
+            { name: "Mesa de Té 3130mm", size: "3130(3030)*1000*820 mm", price: 49990 }
+        ],
+        customInstructions: {
+            material: "Not customizable. Note: Price does not include tea tray stones and green plants.",
+            dimensions: "Available in multiple sizes (2400/2600/2800/3130mm)"
+        }
+    },
+    // MESA 59 (movida desde gabinetes GAB14)
+    {
+        id: "mesa-hytl86202-b",
+        name: "Mesa de Té HYTL86202-B",
+        category: "Mesa de Té",
+        code: "HYTL86202-B/HCT1839-B",
+        priceBase: 37060,
+        image: "/images/MESAS/MESA59/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA59/img1.jpg",
+            "/images/MESAS/MESA59/img2.jpg",
+            "/images/MESAS/MESA59/img3.jpg"
+        ],
+        specs: {
+            dimensions: "2400 / 2600 / 2800 / 3000 * 1000 * 750 mm",
+            volume: "1.21 - 1.35 m³",
+            assembly: "Desmontado y Ensamblado / 5 Piezas"
+        },
+        materials: [
+            { part: "Estructura principal (Main structure)", material: "MDF grado E0", detail: "Oil-wax color" },
+            { part: "Base decorativa (Decorative base)", material: "Piedra sinterizada (Sintered stone)", detail: "Cold River Snow" },
+            { part: "Detalles metálicos (Metal accents)", material: "Acero inoxidable", detail: "Brushed Gunmetal" }
+        ],
+        colors: {
+            wood: [{ name: "Oil-wax color", hex: "#1D1C1A" }],
+            stone: [{ name: "Cold River Snow", hex: "#EAEAEA" }],
+            metal: [{ name: "Brushed Gunmetal", hex: "#4A4A4A" }]
+        },
+        configurations: [
+            { code: "HYTL86202-B-2400", desc: "2400*1000*750 mm", price: 37060 },
+            { code: "HYTL86202-B-2600", desc: "2600*1000*750 mm", price: 39160 },
+            { code: "HYTL86202-B-2800", desc: "2800*1000*750 mm", price: 40190 },
+            { code: "HYTL86202-B-3000", desc: "3000*1000*750 mm", price: 41260 }
+        ],
+        priceList: [
+            { name: "Mesa de Té 2400mm", size: "2400*1000*750 mm", price: 37060 },
+            { name: "Mesa de Té 2600mm", size: "2600*1000*750 mm", price: 39160 },
+            { name: "Mesa de Té 2800mm", size: "2800*1000*750 mm", price: 40190 },
+            { name: "Mesa de Té 3000mm", size: "3000*1000*750 mm", price: 41260 }
+        ],
+        customInstructions: {
+            material: "Not customizable. Note: Price does not include tea tray stones.",
+            dimensions: "Available in multiple sizes (2400/2600/2800/3000mm)"
+        }
+    },
+    // MESA 60 (movida desde gabinetes GAB15)
+    {
+        id: "mesa-hytl86205",
+        name: "Mesa de Té HYTL86205",
+        category: "Mesa de Té",
+        code: "HYTL86205/MQT7715-C",
+        priceBase: 44750,
+        image: "/images/MESAS/MESA60/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA60/img1.jpg",
+            "/images/MESAS/MESA60/img2.jpg",
+            "/images/MESAS/MESA60/img3.jpg",
+            "/images/MESAS/MESA60/img4.jpg"
+        ],
+        specs: {
+            dimensions: "2000/2200/2400/2600 * 850 * 720 mm | 2800/3000 * 1000 * 720 mm",
+            volume: "1.20 - 1.57 m³",
+            assembly: "Desmontado y Ensamblado / 5 Piezas"
+        },
+        materials: [
+            { part: "Superficie (Surface)", material: "Mármol (Marble)", detail: "Picasso (Genuine bright)" },
+            { part: "Estructura principal (Main structure)", material: "Madera de fresno + MDF grado E0", detail: "Oil-wax color" },
+            { part: "Detalles metálicos (Metal details)", material: "Acero inoxidable", detail: "Brushed Gunmetal" }
+        ],
+        colors: {
+            wood: [{ name: "Oil-wax color", hex: "#1D1C1A" }],
+            stone: [{ name: "Picasso (Genuine bright)", hex: "#EBEBEB" }],
+            metal: [{ name: "Brushed Gunmetal", hex: "#4A4A4A" }]
+        },
+        configurations: [
+            { code: "HYTL86205-2000", desc: "2000*850*720 mm", price: 44750 },
+            { code: "HYTL86205-2200", desc: "2200*850*720 mm", price: 45780 },
+            { code: "HYTL86205-2400", desc: "2400*850*720 mm", price: 46850 },
+            { code: "HYTL86205-2600", desc: "2600*850*720 mm", price: 48260 },
+            { code: "HYTL86205-2800", desc: "2800*1000*720 mm", price: 49990 },
+            { code: "HYTL86205-3000", desc: "3000*1000*720 mm", price: 52460 }
+        ],
+        priceList: [
+            { name: "Mesa de Té 2000mm", size: "2000*850*720 mm", price: 44750 },
+            { name: "Mesa de Té 2200mm", size: "2200*850*720 mm", price: 45780 },
+            { name: "Mesa de Té 2400mm", size: "2400*850*720 mm", price: 46850 },
+            { name: "Mesa de Té 2600mm", size: "2600*850*720 mm", price: 48260 },
+            { name: "Mesa de Té 2800mm", size: "2800*1000*720 mm", price: 49990 },
+            { name: "Mesa de Té 3000mm", size: "3000*1000*720 mm", price: 52460 }
+        ],
+        customInstructions: {
+            material: "Not customizable.",
+            dimensions: "Available in multiple sizes (2000 to 3000mm length). Note the depth change at 2800mm."
+        }
+    },
+    // MESA 61
+    {
+        id: "mesa-te-hygl81706",
+        name: "Tea Cabinet HYGL81706",
+        category: "Mesa de Té",
+        code: "HYGL81706",
+        priceBase: null,
+        image: "/images/MESAS/MESA61/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA61/img1.jpg",
+            "/images/MESAS/MESA61/img2.jpg"
+        ],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Assembled / 1 piece"
+        },
+        materials: [
+            { part: "Cuerpo cilíndrico (Body)", material: "Madera de Fresno (Ash wood)", detail: "Negro tintado — textura de grano vertical" },
+            { part: "Bandeja superior giratoria (Rotating top tray)", material: "Piedra sinterizada / Metal", detail: "Blanco piedra con aro metálico gunmetal" },
+            { part: "Puerta lateral (Side door)", material: "Cuero / Leather", detail: "Taupe / Bronce mate" },
+            { part: "Interior (Shelves)", material: "Madera de Fresno (Ash wood)", detail: "Negro tintado — 2 estantes interiores" }
+        ],
+        colors: {
+            interior: [
+                { name: "Dark Ash / Black Stain", hex: "#2A2A2A" },
+                { name: "Taupe / Bronze Leather", hex: "#8A7A68" }
+            ]
+        },
+        configurations: [
+            { code: "HYGL81706", desc: null, price: null }
+        ],
+        priceList: [
+            { name: "Tea Cabinet HYGL81706", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 62
+    {
+        id: "mesa-te-hygl81703",
+        name: "Tea Cabinet HYGL81703",
+        category: "Mesa de Té",
+        code: "HYGL81703",
+        priceBase: null,
+        image: "/images/MESAS/MESA62/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA62/img1.jpg",
+            "/images/MESAS/MESA62/img2.jpg"
+        ],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Assembled / 1 piece"
+        },
+        materials: [
+            { part: "Cuerpo (Body)", material: "Madera de Fresno (Ash wood)", detail: "Gris oscuro / Dark Gray — grano vertical" },
+            { part: "Marco superior (Top frame)", material: "Metal", detail: "Negro mate — estructura abierta para servicio de té" },
+            { part: "Equipamiento de té (Tea equipment)", material: "Metal", detail: "Negro mate — hervidor + dispensador integrados" },
+            { part: "Patas (Feet)", material: "Metal", detail: "Negro mate — pequeñas patas tipo rueda" }
+        ],
+        colors: {
+            interior: [
+                { name: "Dark Gray Ash Wood", hex: "#3A3A3A" }
+            ]
+        },
+        configurations: [
+            { code: "HYGL81703", desc: null, price: null }
+        ],
+        priceList: [
+            { name: "Tea Cabinet HYGL81703", size: null, price: null }
+        ],
+        customInstructions: null
+    },
 ];
 
 // --- 4. FUNCIÓN DE SUBIDA ---
