@@ -28,6 +28,9 @@ const tablesData = [
         code: "HYJL82103-B6",
         priceBase: 9760,
         image: "/images/MESAS/MESA1/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA1/img1.jpg"
+        ],
         specs: {
             dimensions: "1400 * 615 * 385 mm",
             volume: "0.34 m³",
@@ -92,6 +95,9 @@ const tablesData = [
         priceBase: 5790,
         // RECUERDA: Guardar la imagen aquí
         image: "/images/MESAS/MESA3/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA3/img1.jpg"
+        ],
         specs: {
             dimensions: "Ø700 * 380 mm",
             volume: "0.22 m³",
@@ -183,10 +189,13 @@ const tablesData = [
         id: "mesa-centro-brasilia",
         name: "Mesa Centro Brasília Black",
         category: "Mesa de Centro",
-        code: "HYJL82107-A1",
+        code: "HYJL82107-A-HC1929-A",
         priceBase: 20260,
         // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA6/render.jpg
         image: "/images/MESAS/MESA6/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA6/img1.jpg"
+        ],
         specs: {
             dimensions: "1060 * 1060 * 300 mm",
             volume: "0.47 m³",
@@ -214,10 +223,13 @@ const tablesData = [
         id: "mesa-centro-emerald",
         name: "Mesa Centro Emerald Clouds",
         category: "Mesa de Centro",
-        code: "HYJL82107-B2",
+        code: "HYJL82107-BHC1929-B",
         priceBase: 13950,
         // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA7/render.jpg
         image: "/images/MESAS/MESA7/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA7/img1.jpg"
+        ],
         specs: {
             dimensions: "970 * 760 * 400 mm",
             volume: "0.38 m³",
@@ -249,6 +261,9 @@ const tablesData = [
         priceBase: 7690,
         // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA8/render.jpg
         image: "/images/MESAS/MESA8/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA8/img1.jpg"
+        ],
         specs: {
             dimensions: "520 * 537 * 500 mm",
             volume: "0.20 m³",
@@ -279,6 +294,9 @@ const tablesData = [
         priceBase: 9980,
         // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA9/render.jpg
         image: "/images/MESAS/MESA9/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA9/img1.jpg"
+        ],
         specs: {
             dimensions: "1400 * 750 * 360 mm",
             volume: "0.51 m³",
@@ -337,6 +355,9 @@ const tablesData = [
         priceBase: 17460,
         // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA11/render.jpg
         image: "/images/MESAS/MESA11/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA11/img1.jpg"
+        ],
         specs: {
             dimensions: "Ø1200 * 300 mm",
             volume: "0.70 m³",
@@ -367,6 +388,9 @@ const tablesData = [
         priceBase: 17580,
         // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA12/render.jpg
         image: "/images/MESAS/MESA12/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA12/img1.jpg"
+        ],
         specs: {
             dimensions: "Ø920 * 350 mm",
             volume: "0.46 m³",
@@ -397,6 +421,9 @@ const tablesData = [
         priceBase: 5250,
         // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA13/render.jpg
         image: "/images/MESAS/MESA13/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA13/img1.jpg"
+        ],
         specs: {
             dimensions: "Ø440 * 450 mm",
             volume: "0.15 m³",
@@ -427,6 +454,10 @@ const tablesData = [
         priceBase: 14560,
         // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA14/render.jpg
         image: "/images/MESAS/MESA14/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA14/img1.jpg",
+            "/images/MESAS/MESA14/img2.jpg"
+        ],
         specs: {
             dimensions: "1350 * 750 * 405 mm",
             volume: "0.57 m³",
@@ -461,6 +492,9 @@ const tablesData = [
         priceBase: 13260,
         // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA15/render.jpg
         image: "/images/MESAS/MESA15/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA15/img1.jpg"
+        ],
         specs: {
             dimensions: "1070 * 1080 * 330 mm",
             volume: "0.39 m³",
@@ -492,6 +526,9 @@ const tablesData = [
         priceBase: 6160,
         // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA16/render.jpg
         image: "/images/MESAS/MESA16/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA16/img1.jpg"
+        ],
         specs: {
             dimensions: "620 * 620 * 430 mm",
             volume: "0.17 m³",
@@ -555,10 +592,16 @@ const tablesData = [
         id: "set-mesa-organic-black",
         name: "Set Centro Organic Black",
         category: "Sets Completos",
-        code: "HYJL82130A/B",
+        code: "HYJL82130A-B",
         priceBase: 15320, // Precio combinado (10460 + 4860)
         // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA18/render.jpg
         image: "/images/MESAS/MESA18/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA18/img1.jpg",
+            "/images/MESAS/MESA18/img2.jpg",
+            "/images/MESAS/MESA18/img3.jpg",
+            "/images/MESAS/MESA18/img4.jpg"
+        ],
         specs: {
             dimensions: "1655*875*200 mm (Base) + Ø600*320 mm (Alta)",
             volume: "0.40 m³",
@@ -619,10 +662,13 @@ const tablesData = [
         id: "set-mesa-space-gray-huayi",
         name: "Set Centro Space Gray & Huayi",
         category: "Sets Completos",
-        code: "HYJL82132-A/B",
+        code: "HYJL82132",
         priceBase: 20940, // Precio combinado (16980 + 3960)
         // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA20/render.jpg
         image: "/images/MESAS/MESA20/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA20/img1.jpg"
+        ],
         specs: {
             dimensions: "1200*1200*230 mm (Mármol) + 1200*600*230 mm (Módulo)",
             volume: "0.78 m³",
@@ -728,6 +774,9 @@ const tablesData = [
         priceBase: 17460,
         // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA23/render.jpg
         image: "/images/MESAS/MESA23/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA23/img1.jpg"
+        ],
         specs: {
             dimensions: "1400 * 750 * 350 mm",
             volume: "0.50 m³",
@@ -754,10 +803,13 @@ const tablesData = [
         id: "set-mesa-snow-emerald",
         name: "Set Centro Snow & Emerald",
         category: "Sets Completos",
-        code: "HYJL82151-A1/B1",
+        code: "HYJL82151",
         priceBase: 28730, // Precio combinado (18750 + 9980)
         // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA24/render.jpg
         image: "/images/MESAS/MESA24/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA24/img1.jpg"
+        ],
         specs: {
             dimensions: "1208*800*460 mm (Alta) + 1060*580*300 mm (Baja)",
             volume: "1.07 m³",
@@ -876,6 +928,11 @@ const tablesData = [
         priceBase: 14690,
         // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA27/render.jpg
         image: "/images/MESAS/MESA27/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA27/img1.jpg",
+            "/images/MESAS/MESA27/img2.jpg",
+            "/images/MESAS/MESA27/img3.jpg"
+        ],
         specs: {
             dimensions: "Ø1000 * 385 mm",
             volume: "0.85 m³",
@@ -939,6 +996,9 @@ const tablesData = [
         priceBase: 6150,
         // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA29/render.jpg
         image: "/images/MESAS/MESA29/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA29/img1.jpg"
+        ],
         specs: {
             dimensions: "540 * 400 * 500 mm",
             volume: "0.17 m³",
@@ -1002,6 +1062,9 @@ const tablesData = [
         priceBase: 12790,
         // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA31/render.jpg
         image: "/images/MESAS/MESA31/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA31/img1.jpg"
+        ],
         specs: {
             dimensions: "Ø700 * 420 mm",
             volume: "0.28 m³",
@@ -1157,6 +1220,10 @@ const tablesData = [
         priceBase: 9390,
         // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA36/render.jpg
         image: "/images/MESAS/MESA36/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA36/img1.jpg",
+            "/images/MESAS/MESA36/img2.jpg"
+        ],
         specs: {
             dimensions: "750 * 380 * 520 mm",
             volume: "0.21 m³",
@@ -1222,6 +1289,9 @@ const tablesData = [
         priceBase: 7280,
         // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA38/render.jpg
         image: "/images/MESAS/MESA38/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA38/img1.jpg"
+        ],
         specs: {
             dimensions: "Ø600 * 435 mm",
             volume: "0.20 m³",
@@ -1317,6 +1387,9 @@ const tablesData = [
         priceBase: 5880,
         // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA41/render.jpg
         image: "/images/MESAS/MESA41/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA41/img1.jpg"
+        ],
         specs: {
             dimensions: "Ø495 * 500 mm",
             volume: "0.18 m³",
@@ -1443,7 +1516,7 @@ const tablesData = [
         // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA44/render.jpg
         image: "/images/MESAS/MESA44/render.jpg",
         schematics: [
-            "/images/MESAS/MESA44/img1.jpg", 
+            "/images/MESAS/MESA44/img1.jpg",
             "/images/MESAS/MESA44/img2.jpg",
             "/images/MESAS/MESA44/img3.jpg",
         ],
@@ -1493,7 +1566,7 @@ const tablesData = [
         // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA45/render.jpg
         image: "/images/MESAS/MESA45/render.jpg",
         schematics: [
-            "/images/MESAS/MESA45/img1.jpg", 
+            "/images/MESAS/MESA45/img1.jpg",
             "/images/MESAS/MESA45/img2.jpg",
             "/images/MESAS/MESA45/img3.jpg",
         ],
@@ -1594,7 +1667,7 @@ const tablesData = [
         // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA48/render.jpg
         image: "/images/MESAS/MESA48/render.jpg",
         schematics: [
-            "/images/MESAS/MESA48/img1.jpg", 
+            "/images/MESAS/MESA48/img1.jpg",
             "/images/MESAS/MESA48/img2.jpg",
             "/images/MESAS/MESA48/img3.jpg",
         ],
@@ -1640,7 +1713,7 @@ const tablesData = [
         // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA49/render.jpg
         image: "/images/MESAS/MESA49/render.jpg",
         schematics: [
-            "/images/MESAS/MESA49/img1.jpg", 
+            "/images/MESAS/MESA49/img1.jpg",
             "/images/MESAS/MESA49/img2.jpg",
             "/images/MESAS/MESA49/img3.jpg"
         ],
@@ -1686,9 +1759,14 @@ const tablesData = [
         id: "mesa-centro-hyjl82106-a1",
         name: "Mesa de Centro CHIN",
         category: "Sets Completos",
-        code: "HYJL82106-A1",
+        code: "HYJL82106-HC1922Y-A-B-CHIN",
         priceBase: null,
         image: "/images/MESAS/MESA50/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA50/img1.jpg",
+            "/images/MESAS/MESA50/img2.jpg",
+            "/images/MESAS/MESA50/img3.jpg"
+        ],
         specs: {
             dimensions: "1500 * 850 * 420 mm",
             volume: null,
@@ -1716,6 +1794,9 @@ const tablesData = [
         code: "HYJL82901",
         priceBase: null,
         image: "/images/MESAS/MESA51/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA51/img1.jpg",
+        ],
         specs: {
             dimensions: "1000 * 430 * 450 mm",
             volume: null,
@@ -2158,6 +2239,1064 @@ const tablesData = [
         ],
         priceList: [
             { name: "Tea Cabinet HYGL81703", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 63
+    {
+        id: "mesa-auxiliar-hyjl82309-hg1908",
+        name: "Mesa Auxiliar HYJL82309",
+        category: "Mesa Auxiliar",
+        code: "HYJL82309-HG1908",
+        priceBase: null,
+        image: "/images/MESAS/MESA63/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA63/img1.jpg"
+        ],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Assembled / 1 piece"
+        },
+        materials: [
+            { part: "Columna (Column)", material: "Travertino (Travertine)", detail: "Beige / Crema — textura porosa natural" },
+            { part: "Tablero lateral (Side top)", material: "Metal", detail: "Bronce oscuro / Gunmetal — forma oval asimétrica" }
+        ],
+        colors: {
+            interior: [
+                { name: "Travertine Beige", hex: "#C8B99A" },
+                { name: "Dark Bronze Metal", hex: "#5C4A2A" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82309-HG1908", desc: null, price: null }
+        ],
+        priceList: [
+            { name: "Mesa Auxiliar HYJL82309", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 64
+    {
+        id: "mesa-auxiliar-set-hyjl82105-hg1917",
+        name: "Set Mesas Auxiliares HYJL82105",
+        category: "Mesa Auxiliar",
+        code: "HYJL82105-HG1917",
+        priceBase: null,
+        image: "/images/MESAS/MESA64/render.jpg",
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable / 2 Piezas por mesa"
+        },
+        materials: [
+            { part: "Tablero grande (Large top)", material: "Mármol Natural", detail: "Rojo Borgoña / Rosso Levanto" },
+            { part: "Tablero pequeño (Small top)", material: "Mármol Natural", detail: "Blanco Calacatta" },
+            { part: "Base (ambas mesas)", material: "Acero Inoxidable", detail: "Brushed Antique Bronze — base cilíndrica" }
+        ],
+        colors: {
+            interior: [
+                { name: "Rosso Levanto / Burgundy Marble", hex: "#5C1A1A" },
+                { name: "Calacatta White Marble", hex: "#E8E4DE" },
+                { name: "Brushed Antique Bronze", hex: "#8C7B5E" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82105-HG1917", desc: "Set de 2 mesas (grande + pequeña)", price: null }
+        ],
+        priceList: [
+            { name: "Set Mesas Auxiliares HG1917", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 65
+    {
+        id: "mesa-centro-set-hyjl82103-hc1923",
+        name: "Set Mesas Zen HYJL82103",
+        category: "Mesa de Centro",
+        code: "HYJL82103-HC1923",
+        priceBase: null,
+        image: "/images/MESAS/MESA65/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA65/img1.jpg"
+        ],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable / 2 Piezas por mesa"
+        },
+        materials: [
+            { part: "Tablero grande (Large top)", material: "Mármol Natural", detail: "Beige dorado / Calacatta Gold — forma orgánica" },
+            { part: "Base grande (Large base)", material: "Acero Inoxidable", detail: "Brushed Antique Bronze — paneles ondulados con pasadores" },
+            { part: "Tablero pequeño (Small top)", material: "Mármol Natural", detail: "Gris rayado / Ice Gray" },
+            { part: "Base pequeña (Small base)", material: "Acero Inoxidable", detail: "Brushed Antique Bronze — cilíndrica" }
+        ],
+        colors: {
+            interior: [
+                { name: "Calacatta Gold Marble", hex: "#D4C5A0" },
+                { name: "Ice Gray Striped Marble", hex: "#A8ABAA" },
+                { name: "Brushed Antique Bronze", hex: "#8C7B5E" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82103-HC1923", desc: "Set de 2 mesas (centro + auxiliar)", price: null }
+        ],
+        priceList: [
+            { name: "Set Mesas Zen HC1923", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 66
+    {
+        id: "mesa-centro-set-hc1912",
+        name: "Set Mesas HC1912",
+        category: "Mesa de Centro",
+        code: "HC1912",
+        priceBase: null,
+        image: "/images/MESAS/MESA66/render.jpg",
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable / 2 Piezas por mesa"
+        },
+        materials: [
+            { part: "Tablero grande (Large top)", material: "Mármol Natural", detail: "Negro / Nero Marquina — redondo" },
+            { part: "Base grande (Large base)", material: "Acero Inoxidable", detail: "Champagne / Brushed Bronze — arcos curvos" },
+            { part: "Tablero pequeño (Small top)", material: "Mármol Natural", detail: "Rojo Borgoña / Rosso Levanto — redondo" },
+            { part: "Base pequeña (Small base)", material: "Acero Inoxidable", detail: "Champagne / Brushed Bronze — cilíndrica con arcos" }
+        ],
+        colors: {
+            interior: [
+                { name: "Nero Marquina Black Marble", hex: "#1A1A1A" },
+                { name: "Rosso Levanto / Burgundy Marble", hex: "#5C1A1A" },
+                { name: "Champagne Brushed Bronze", hex: "#B8A882" }
+            ]
+        },
+        configurations: [
+            { code: "HC1912", desc: "Set de 2 mesas (centro + auxiliar)", price: null }
+        ],
+        priceList: [
+            { name: "Set Mesas HC1912", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 67
+    {
+        id: "mesa-auxiliar-hc1912-b",
+        name: "Mesa Auxiliar HC1912-B",
+        category: "Mesa Auxiliar",
+        code: "HC1912-B",
+        priceBase: null,
+        image: "/images/MESAS/MESA67/render.jpg",
+        schematics: [],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable"
+        },
+        materials: [
+            { part: "Tablero", material: "Mármol Natural", detail: "Gris veteado — redondo" },
+            { part: "Base", material: "Acero Inoxidable", detail: "Champagne / Brushed Bronze — arco en U curvo" }
+        ],
+        colors: {
+            interior: [
+                { name: "Gray Veined Marble", hex: "#6B6560" },
+                { name: "Champagne Brushed Bronze", hex: "#B8A882" }
+            ]
+        },
+        configurations: [
+            { code: "HC1912-B", desc: "Mesa auxiliar individual", price: null }
+        ],
+        priceList: [
+            { name: "Mesa Auxiliar HC1912-B", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 68
+    {
+        id: "mesa-centro-hc1912-a",
+        name: "Mesa de Centro HC1912-A",
+        category: "Mesa de Centro",
+        code: "HC1912-A",
+        priceBase: null,
+        image: "/images/MESAS/MESA68/render.jpg",
+        schematics: [],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable"
+        },
+        materials: [
+            { part: "Tablero", material: "Mármol Natural", detail: "Negro con vetas grises / Black Forest — redondo" },
+            { part: "Base", material: "Acero Inoxidable", detail: "Champagne / Brushed Bronze — cilíndrico con arco abierto" }
+        ],
+        colors: {
+            interior: [
+                { name: "Black Forest Gray Marble", hex: "#3A3A3A" },
+                { name: "Champagne Brushed Bronze", hex: "#B8A882" }
+            ]
+        },
+        configurations: [
+            { code: "HC1912-A", desc: "Mesa de centro individual", price: null }
+        ],
+        priceList: [
+            { name: "Mesa de Centro HC1912-A", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 69
+    {
+        id: "mesa-auxiliar-set-hyjl82302-hg1906y",
+        name: "Set Mesas Auxiliares HYJL82302-HG1906Y",
+        category: "Mesa Auxiliar",
+        code: "HYJL82302-HG1906Y",
+        priceBase: null,
+        image: "/images/MESAS/MESA69/render.jpg",
+        schematics: [],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable / 2 piezas"
+        },
+        materials: [
+            { part: "Tablero grande", material: "Mármol Natural", detail: "Blanco / Calacatta — redondo" },
+            { part: "Base grande", material: "Madera de Fresno", detail: "Negro — cuerpo curvo con ribete bronce champagne" },
+            { part: "Detalle base grande", material: "Acero Inoxidable", detail: "Champagne / Brushed Bronze — asa con ojo y patín inferior" },
+            { part: "Bandeja pequeña", material: "Acero Inoxidable", detail: "Champagne / Brushed Bronze — bandeja redonda" },
+            { part: "Pata pequeña", material: "Madera / Metal", detail: "Negro + base en cruz champagne" }
+        ],
+        colors: {
+            interior: [
+                { name: "Calacatta White Marble", hex: "#F0EDE8" },
+                { name: "Black Ash Wood", hex: "#1C1C1C" },
+                { name: "Champagne Brushed Bronze", hex: "#B8A882" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82302-HG1906Y", desc: "Set de 2 mesas auxiliares (grande + pequeña)", price: null }
+        ],
+        priceList: [
+            { name: "Set Mesas Auxiliares HYJL82302", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 70
+    {
+        id: "mesa-centro-hyjl82157",
+        name: "Mesa de Centro HYJL82157",
+        category: "Mesa de Centro",
+        code: "HYJL82157",
+        priceBase: null,
+        image: "/images/MESAS/MESA70/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA70/img1.jpg"
+        ],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable"
+        },
+        materials: [
+            { part: "Tablero", material: "Mármol Natural", detail: "Rojo / Rosso Levanto — ovalado" },
+            { part: "Base", material: "Acero / MDF lacado", detail: "Gunmetal / Negro mate — cuerpo rectangular asimétrico" },
+            { part: "Panel lateral", material: "Metal lacado", detail: "Gris claro — panel curvo lateral" }
+        ],
+        colors: {
+            interior: [
+                { name: "Rosso Levanto Red Marble", hex: "#8B3A3A" },
+                { name: "Gunmetal Black", hex: "#2C2C2C" },
+                { name: "Light Gray Panel", hex: "#A0A0A0" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82157", desc: "Mesa de centro ovalada con base asimétrica", price: null }
+        ],
+        priceList: [
+            { name: "Mesa de Centro HYJL82157", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 71
+    {
+        id: "mesa-set-hyjl82156",
+        name: "Set Mesas HYJL82156",
+        category: "Mesa de Centro",
+        code: "HYJL82156",
+        priceBase: null,
+        image: "/images/MESAS/MESA71/render.jpg",
+        schematics: [],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable / 3 piezas"
+        },
+        materials: [
+            { part: "Tablero grande", material: "Mármol Natural", detail: "Negro / Nero Marquina con veta dorada — redondo grande" },
+            { part: "Base grande", material: "Acero Inoxidable", detail: "Dorado / Brushed Gold — panel rectangular con arco circular y esferas negras" },
+            { part: "Tableros auxiliares", material: "Mármol Natural", detail: "Verde / Verde Guatemala — redondos (2 tamaños)" },
+            { part: "Bases auxiliares", material: "Acero Inoxidable", detail: "Dorado / Brushed Gold — estructura con arcos gemelos" }
+        ],
+        colors: {
+            interior: [
+                { name: "Nero Marquina Black Marble", hex: "#1A1A1A" },
+                { name: "Verde Guatemala Green Marble", hex: "#2D5A3D" },
+                { name: "Brushed Gold", hex: "#C9A84C" },
+                { name: "Black Sphere", hex: "#111111" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82156", desc: "Set de 3 mesas (1 centro + 2 auxiliares)", price: null }
+        ],
+        priceList: [
+            { name: "Set Mesas HYJL82156", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 72
+    {
+        id: "mesa-consola-hyjl82153-d",
+        name: "Mesa Consola HYJL82153-D",
+        category: "Mesa Consola",
+        code: "HYJL82153-D",
+        priceBase: null,
+        image: "/images/MESAS/MESA72/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA72/img1.jpg"
+        ],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable"
+        },
+        materials: [
+            { part: "Tablero", material: "Madera lacada / Piedra sinterizada", detail: "Negro mate — ovalado alargado (pill shape)" },
+            { part: "Patas", material: "Madera lacada", detail: "Negro mate — placas rectangulares planas" }
+        ],
+        colors: {
+            interior: [
+                { name: "Matte Black", hex: "#1C1C1C" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82153-D", desc: "Mesa consola / straddle table en negro mate", price: null }
+        ],
+        priceList: [
+            { name: "Mesa Consola HYJL82153-D", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 73
+    {
+        id: "mesa-centro-hyjl82153-c",
+        name: "Mesa de Centro HYJL82153-C",
+        category: "Mesa de Centro",
+        code: "HYJL82153-C",
+        priceBase: null,
+        image: "/images/MESAS/MESA73/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA73/img1.jpg"
+        ],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable"
+        },
+        materials: [
+            { part: "Tablero", material: "Mármol Natural", detail: "Blanco con vetas verde gris / Calacatta Arabescato — redondo" },
+            { part: "Base", material: "MDF lacado", detail: "Beige / Taupe — pedestal trébol de tres lóbulos redondeados" }
+        ],
+        colors: {
+            interior: [
+                { name: "Calacatta Arabescato Marble", hex: "#E8E5DF" },
+                { name: "Taupe / Beige Sand", hex: "#B5A898" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82153-C", desc: "Mesa de centro redonda con base trébol taupe", price: null }
+        ],
+        priceList: [
+            { name: "Mesa de Centro HYJL82153-C", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 74
+    {
+        id: "mesa-centro-hyjl82153-a",
+        name: "Mesa de Centro HYJL82153-A",
+        category: "Mesa de Centro",
+        code: "HYJL82153-A",
+        priceBase: null,
+        image: "/images/MESAS/MESA74/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA74/img1.jpg"
+        ],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable"
+        },
+        materials: [
+            { part: "Tablero", material: "MDF lacado", detail: "Verde oscuro / Forest Green — ovalado alargado (pill shape)" },
+            { part: "Pata izquierda", material: "MDF lacado", detail: "Verde oscuro / Forest Green — placa rectangular con esquinas redondeadas" },
+            { part: "Pata derecha", material: "Mármol Natural", detail: "Blanco con vetas grises / Calacatta — placa rectangular con esquinas redondeadas" }
+        ],
+        colors: {
+            interior: [
+                { name: "Forest Green", hex: "#2D5A3A" },
+                { name: "Calacatta White Marble", hex: "#E8E5DF" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82153-A", desc: "Mesa de centro ovalada verde con pata mixta madera-mármol", price: null }
+        ],
+        priceList: [
+            { name: "Mesa de Centro HYJL82153-A", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 75
+    {
+        id: "mesa-centro-hyjl82152-b",
+        name: "Mesa de Centro HYJL82152-B",
+        category: "Mesa de Centro",
+        code: "HYJL82152-B",
+        priceBase: null,
+        image: "/images/MESAS/MESA75/render.jpg",
+        schematics: [],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable"
+        },
+        materials: [
+            { part: "Tablero", material: "MDF lacado", detail: "Beige / Taupe — redondo" },
+            { part: "Base", material: "MDF lacado", detail: "Beige / Taupe — dos placas en cruz (X)" }
+        ],
+        colors: {
+            interior: [
+                { name: "Taupe / Beige Sand", hex: "#C4B9AC" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82152-B", desc: "Mesa de centro redonda monocromática beige/taupe con base en cruz", price: null }
+        ],
+        priceList: [
+            { name: "Mesa de Centro HYJL82152-B", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 76
+    {
+        id: "mesa-centro-hyjl82152-a",
+        name: "Mesa de Centro HYJL82152-A",
+        category: "Mesa de Centro",
+        code: "HYJL82152-A",
+        priceBase: null,
+        image: "/images/MESAS/MESA76/render.jpg",
+        schematics: [],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable"
+        },
+        materials: [
+            { part: "Tablero", material: "Mármol Natural", detail: "Verde / Verde Alpi — cuadrado con esquinas redondeadas" },
+            { part: "Base", material: "Madera de Fresno", detail: "Negro oscuro — cuerpo rectangular bajo con patas/columnas redondeadas" },
+            { part: "Pieza lateral", material: "Mármol Natural + Madera", detail: "Verde Alpi + Fresno negro — módulo auxiliar anidado" }
+        ],
+        colors: {
+            interior: [
+                { name: "Verde Alpi Green Marble", hex: "#4A6052" },
+                { name: "Dark Ash Wood", hex: "#1C1C1C" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82152-A", desc: "Mesa de centro cuadrada baja con módulo lateral anidado", price: null }
+        ],
+        priceList: [
+            { name: "Mesa de Centro HYJL82152-A", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 77
+    {
+        id: "mesa-auxiliar-hyjl82151-c",
+        name: "Mesa Auxiliar HYJL82151-C",
+        category: "Mesa Auxiliar",
+        code: "HYJL82151-C",
+        priceBase: null,
+        image: "/images/MESAS/MESA77/render.jpg",
+        schematics: [],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable"
+        },
+        materials: [
+            { part: "Tablero", material: "Mármol Natural", detail: "Blanco con vetas grises / Arabescato — redondo con ribete dorado" },
+            { part: "Panel vertical", material: "Madera de Fresno", detail: "Negro — placa curva en arco (bracket)" },
+            { part: "Columna", material: "Mármol Natural", detail: "Blanco con vetas grises / Arabescato — cilíndrica" }
+        ],
+        colors: {
+            interior: [
+                { name: "Arabescato White Marble", hex: "#D8D4CF" },
+                { name: "Black Ash Wood", hex: "#1C1C1C" },
+                { name: "Brushed Gold Rim", hex: "#C9A84C" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82151-C", desc: "Mesa auxiliar escultórica panel arco negro + columna mármol", price: null }
+        ],
+        priceList: [
+            { name: "Mesa Auxiliar HYJL82151-C", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 78
+    {
+        id: "mesa-centro-hyjl82151-b",
+        name: "Mesa de Centro HYJL82151-B",
+        category: "Mesa de Centro",
+        code: "HYJL82151-B",
+        priceBase: null,
+        image: "/images/MESAS/MESA78/render.jpg",
+        schematics: [],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable"
+        },
+        materials: [
+            { part: "Tablero", material: "Mármol Natural", detail: "Verde gris veteado — ovalado con ribete dorado/bronce" },
+            { part: "Pata izquierda", material: "Metal lacado", detail: "Bronce oscuro / Bronze — columna rectangular redondeada" },
+            { part: "Pata derecha", material: "Madera de Fresno", detail: "Gris oscuro — columna rectangular redondeada" },
+            { part: "Conector", material: "Metal", detail: "Gunmetal — lámina vertical entre patas" }
+        ],
+        colors: {
+            interior: [
+                { name: "Gray-Green Veined Marble", hex: "#5A6458" },
+                { name: "Dark Bronze", hex: "#5C4A2A" },
+                { name: "Dark Gray Ash", hex: "#4A4A4A" },
+                { name: "Brushed Gold Rim", hex: "#C9A84C" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82151-B", desc: "Mesa de centro ovalada con patas asimétricas bronce + ash gris", price: null }
+        ],
+        priceList: [
+            { name: "Mesa de Centro HYJL82151-B", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 79
+    {
+        id: "mesa-centro-hyjl82151-a",
+        name: "Mesa de Centro HYJL82151-A",
+        category: "Mesa de Centro",
+        code: "HYJL82151-A",
+        priceBase: null,
+        image: "/images/MESAS/MESA79/render.jpg",
+        schematics: [],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable"
+        },
+        materials: [
+            { part: "Tablero", material: "Mármol Natural", detail: "Multicolor / Patagonia — blanco + nubes gris oscuro + vetas ámbar, ovalado con ribete dorado" },
+            { part: "Pata izquierda", material: "Acero Inoxidable", detail: "Brushed Gold / Brass — placa plana con capuchón decorativo superior" },
+            { part: "Pata derecha", material: "Madera de Fresno", detail: "Gris oscuro — placa rectangular con esquinas redondeadas" }
+        ],
+        colors: {
+            interior: [
+                { name: "Patagonia Exotic Marble", hex: "#C8B89A" },
+                { name: "Brushed Gold / Brass", hex: "#C9A84C" },
+                { name: "Dark Gray Ash", hex: "#4A4A4A" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82151-A", desc: "Mesa de centro ovalada mármol exótico con patas asimétricas brass + ash gris", price: null }
+        ],
+        priceList: [
+            { name: "Mesa de Centro HYJL82151-A", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 80
+    {
+        id: "mesa-centro-hyjl82137",
+        name: "Mesa de Centro HYJL82137",
+        category: "Mesa de Centro",
+        code: "HYJL82137",
+        priceBase: null,
+        image: "/images/MESAS/MESA80/render.jpg",
+        schematics: [],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable"
+        },
+        materials: [
+            { part: "Tablero", material: "Vidrio templado", detail: "Ahumado gris oscuro — redondo" },
+            { part: "Base", material: "Travertino", detail: "Beige / Crema — dos prismas triangulares cruzados en X" }
+        ],
+        colors: {
+            interior: [
+                { name: "Smoked Gray Glass", hex: "#3A3A3A" },
+                { name: "Travertine Beige", hex: "#D4C4A0" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82137", desc: "Mesa de centro vidrio ahumado + base travertino prismas cruzados", price: null }
+        ],
+        priceList: [
+            { name: "Mesa de Centro HYJL82137", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 81
+    {
+        id: "mesa-set-hyjl82136",
+        name: "Set Mesas HYJL82136",
+        category: "Mesa de Centro",
+        code: "HYJL82136",
+        priceBase: null,
+        image: "/images/MESAS/MESA81/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA81/img1.jpg"
+        ],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable / 3 piezas"
+        },
+        materials: [
+            { part: "Tablero grande", material: "Piedra / Mármol", detail: "Blanco — redondo" },
+            { part: "Aro superior", material: "Madera lacada", detail: "Borgoña / Burgundy — borde redondo" },
+            { part: "Cuerpo cilíndrico", material: "Cuero genuino", detail: "Gris / Taupe — cosido, cuerpo tambor" },
+            { part: "Detalles metálicos", material: "Acero Inoxidable", detail: "Brushed Gold / Brass — tiras verticales y pies" },
+            { part: "Tableros auxiliares", material: "Madera lacada", detail: "Borgoña / Burgundy — redondos (2 tamaños)" }
+        ],
+        colors: {
+            interior: [
+                { name: "Burgundy / Bordeaux", hex: "#6B2737" },
+                { name: "Taupe / Gray Leather", hex: "#9A8F85" },
+                { name: "Brushed Gold", hex: "#C9A84C" },
+                { name: "White Stone", hex: "#F0EDEA" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82136", desc: "Set de 3 mesas (grande baja + auxiliar alta + auxiliar baja) cuero y borgoña", price: null }
+        ],
+        priceList: [
+            { name: "Set Mesas HYJL82136", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 82
+    {
+        id: "mesa-auxiliar-hyjl82136-b",
+        name: "Mesa Auxiliar HYJL82136-B",
+        category: "Mesa Auxiliar",
+        code: "HYJL82136-B",
+        priceBase: null,
+        image: "/images/MESAS/MESA82/render.jpg",
+        schematics: [],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable"
+        },
+        materials: [
+            { part: "Tablero superior", material: "Madera lacada", detail: "Borgoña / Burgundy — redondo" },
+            { part: "Banda superior", material: "Cuero genuino", detail: "Gris / Taupe — cosido, aro cilíndrico" },
+            { part: "Tablero inferior", material: "Madera lacada", detail: "Borgoña / Burgundy — redondo más ancho" },
+            { part: "Cuerpo inferior", material: "Cuero genuino", detail: "Gris / Taupe — cosido, banda cilíndrica baja" },
+            { part: "Estructura", material: "Acero Inoxidable", detail: "Brushed Gold / Brass — varillas verticales y pies" }
+        ],
+        colors: {
+            interior: [
+                { name: "Burgundy / Bordeaux", hex: "#6B2737" },
+                { name: "Taupe / Gray Leather", hex: "#9A8F85" },
+                { name: "Brushed Gold", hex: "#C9A84C" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82136-B", desc: "Mesa auxiliar 2 niveles cuero taupe + borgoña + estructura brass", price: null }
+        ],
+        priceList: [
+            { name: "Mesa Auxiliar HYJL82136-B", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 83
+    {
+        id: "mesa-centro-hyjl82136-a",
+        name: "Mesa de Centro HYJL82136-A",
+        category: "Mesa de Centro",
+        code: "HYJL82136-A",
+        priceBase: null,
+        image: "/images/MESAS/MESA83/render.jpg",
+        schematics: [],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable"
+        },
+        materials: [
+            { part: "Tablero", material: "Mármol Natural", detail: "Gris oscuro / Nero Marquina — redondo" },
+            { part: "Aro superior", material: "Madera lacada", detail: "Borgoña / Burgundy — borde redondo" },
+            { part: "Cuerpo cilíndrico", material: "Cuero genuino", detail: "Gris / Taupe — cosido, cuerpo tambor" },
+            { part: "Detalle metálico", material: "Acero Inoxidable", detail: "Brushed Gold / Brass — tira vertical" }
+        ],
+        colors: {
+            interior: [
+                { name: "Nero Marquina Dark Marble", hex: "#2A2A2A" },
+                { name: "Burgundy / Bordeaux", hex: "#6B2737" },
+                { name: "Taupe / Gray Leather", hex: "#9A8F85" },
+                { name: "Brushed Gold", hex: "#C9A84C" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82136-A", desc: "Mesa de centro grande individual cuerpo tambor cuero taupe + mármol oscuro", price: null }
+        ],
+        priceList: [
+            { name: "Mesa de Centro HYJL82136-A", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 84
+    {
+        id: "mesa-set-hyjl82135",
+        name: "Set Mesas HYJL82135",
+        category: "Mesa de Centro",
+        code: "HYJL82135",
+        priceBase: null,
+        image: "/images/MESAS/MESA84/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA84/img1.jpg"
+        ],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable / 2 piezas"
+        },
+        materials: [
+            { part: "Tableros", material: "Mármol Natural", detail: "Negro / Nero Marquina con vetas blancas — forma orgánica irregular (2 tamaños/alturas)" },
+            { part: "Bases", material: "Acero Inoxidable", detail: "Gunmetal / Negro mate — cónicas truncadas (2 tamaños)" }
+        ],
+        colors: {
+            interior: [
+                { name: "Nero Marquina Black Marble", hex: "#1A1A1A" },
+                { name: "Gunmetal Black", hex: "#2C2C2C" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82135", desc: "Set de 2 mesas con tableros orgánicos mármol negro + bases cónicas gunmetal a distinta altura", price: null }
+        ],
+        priceList: [
+            { name: "Set Mesas HYJL82135", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 85
+    {
+        id: "mesa-centro-hyjl82135",
+        name: "Mesa de Centro HYJL82135",
+        category: "Mesa de Centro",
+        code: "HYJL82135",
+        priceBase: null,
+        image: "/images/MESAS/MESA85/render.jpg",
+        schematics: [],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable"
+        },
+        materials: [
+            { part: "Tablero", material: "Mármol Natural", detail: "Negro / Nero Marquina con vetas blancas — forma orgánica irregular" },
+            { part: "Base", material: "Acero Inoxidable", detail: "Gunmetal / Negro mate — cónica truncada" }
+        ],
+        colors: {
+            interior: [
+                { name: "Nero Marquina Black Marble", hex: "#1A1A1A" },
+                { name: "Gunmetal Black", hex: "#2C2C2C" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82135", desc: "Mesa de centro individual tablero orgánico mármol negro + base cónica gunmetal", price: null }
+        ],
+        priceList: [
+            { name: "Mesa de Centro HYJL82135", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 86
+    {
+        id: "mesa-centro-hyjl82132-b",
+        name: "Mesa de Centro HYJL82132-B",
+        category: "Mesa de Centro",
+        code: "HYJL82132-B",
+        priceBase: null,
+        image: "/images/MESAS/MESA86/render.jpg",
+        schematics: [],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable"
+        },
+        materials: [
+            { part: "Tablero", material: "MDF lacado", detail: "Rojo borgoña / Terracota — rectangular con detalle circular rehundido" },
+            { part: "Base", material: "MDF lacado", detail: "Rojo borgoña / Terracota — plinto rectangular bajo" }
+        ],
+        colors: {
+            interior: [
+                { name: "Burgundy / Terracotta Red", hex: "#7B2D2D" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82132-B", desc: "Mesa de centro rectangular monocromática rojo borgoña con detalle circular en tablero", price: null }
+        ],
+        priceList: [
+            { name: "Mesa de Centro HYJL82132-B", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 87
+    {
+        id: "mesa-centro-hyjl82132-a",
+        name: "Mesa de Centro HYJL82132-A",
+        category: "Mesa de Centro",
+        code: "HYJL82132-A",
+        priceBase: null,
+        image: "/images/MESAS/MESA87/render.jpg",
+        schematics: [],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable"
+        },
+        materials: [
+            { part: "Tablero / Cuerpo", material: "Mármol Natural", detail: "Gris oscuro con vetas blancas / Grigio Carnico — rectangular grueso con detalle circular rehundido" },
+            { part: "Base", material: "Acero Inoxidable", detail: "Gunmetal / Negro mate — plinto rectangular" }
+        ],
+        colors: {
+            interior: [
+                { name: "Grigio Carnico Dark Marble", hex: "#3A3A3A" },
+                { name: "Gunmetal Black", hex: "#2C2C2C" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82132-A", desc: "Mesa de centro rectangular mármol gris oscuro con detalle circular rehundido", price: null }
+        ],
+        priceList: [
+            { name: "Mesa de Centro HYJL82132-A", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 88
+    {
+        id: "mesa-set-hyjl82122-hc1951",
+        name: "Set Mesas HYJL82122-HC1951A-B-C",
+        category: "Mesa de Centro",
+        code: "HYJL82122-HC1951A-B-C",
+        priceBase: null,
+        image: "/images/MESAS/MESA88/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA88/img1.jpg"
+        ],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable / 3 piezas"
+        },
+        materials: [
+            { part: "Mesa A — Tablero y base", material: "Vidrio espejo", detail: "Ahumado gris oscuro — cuadrado con base facetada geométrica / origami" },
+            { part: "Mesa B — Cuerpo", material: "Mármol Natural", detail: "Blanco con manchas gris oscuro / Fantasy Brown — bloque macizo cuadrado" },
+            { part: "Mesa C — Estructura", material: "Acero Inoxidable", detail: "Gunmetal / Negro mate — marco angular" }
+        ],
+        colors: {
+            interior: [
+                { name: "Smoked Dark Mirror Glass", hex: "#2A2A2A" },
+                { name: "Fantasy Brown Marble", hex: "#C8BEA8" },
+                { name: "Gunmetal", hex: "#3C3C3C" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82122-HC1951A-B-C", desc: "Set 3 mesas: espejo facetado + bloque mármol exótico + marco gunmetal", price: null }
+        ],
+        priceList: [
+            { name: "Set Mesas HYJL82122-HC1951", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 89
+    {
+        id: "mesa-set-hyjl82112-chin",
+        name: "Set Mesas HYJL82112-CHIN",
+        category: "Mesa de Centro",
+        code: "HYJL82112-CHIN",
+        priceBase: null,
+        image: "/images/MESAS/MESA89/render.jpg",
+        schematics: [],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable / 3 piezas"
+        },
+        materials: [
+            { part: "Tablero grande", material: "Mármol Natural", detail: "Blanco / Calacatta — redondo" },
+            { part: "Tablero pequeño", material: "Mármol Natural", detail: "Negro / Nero Marquina — redondo" },
+            { part: "Patas", material: "Madera", detail: "Nogal oscuro / Ebony — columnas cilíndricas con detalle metálico" },
+            { part: "Puf", material: "Tela / Cuero", detail: "Gris antracita — redondo con capitoné" }
+        ],
+        colors: {
+            interior: [
+                { name: "Calacatta White Marble", hex: "#F0EDE8" },
+                { name: "Nero Marquina Black Marble", hex: "#1A1A1A" },
+                { name: "Dark Walnut / Ebony", hex: "#2C1810" },
+                { name: "Charcoal Gray", hex: "#4A4A4A" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82112-CHIN", desc: "Set 2 mesas redondas (mármol blanco + negro, patas nogal) + puf redondo antracita", price: null }
+        ],
+        priceList: [
+            { name: "Set Mesas HYJL82112-CHIN", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 90
+    {
+        id: "mesa-centro-hyjl82111-b-hc1930y-b",
+        name: "Mesa de Centro HYJL82111-B-HC1930Y-B",
+        category: "Mesa de Centro",
+        code: "HYJL82111-B-HC1930Y-B",
+        priceBase: null,
+        image: "/images/MESAS/MESA90/render.jpg",
+        schematics: [],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable"
+        },
+        materials: [
+            { part: "Cuerpo / Tablero", material: "Madera de Fresno", detail: "Gris oscuro / Charcoal — bloque cuadrado con textura veteada ondulada" },
+            { part: "Interior", material: "Madera", detail: "Cajón / almacenamiento oculto integrado" }
+        ],
+        colors: {
+            interior: [
+                { name: "Charcoal Gray Ash Wood", hex: "#3A3535" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82111-B-HC1930Y-B", desc: "Mesa de centro bloque cuadrado ash gris oscuro con cajón oculto", price: null }
+        ],
+        priceList: [
+            { name: "Mesa de Centro HYJL82111-B", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 91
+    {
+        id: "mesa-set-hyjl82109-hc1931",
+        name: "Set Mesas HYJL82109-HC1931",
+        category: "Mesa de Centro",
+        code: "HYJL82109-HC1931",
+        priceBase: null,
+        image: "/images/MESAS/MESA91/render.jpg",
+        schematics: [
+            "/images/MESAS/MESA91/img1.jpg"
+        ],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable / 2 piezas"
+        },
+        materials: [
+            { part: "Tableros", material: "Mármol Natural", detail: "Negro / Marrón — Emperador Dark con vetas doradas (2 tamaños)" },
+            { part: "Base grande", material: "Acero Inoxidable", detail: "Bronze oscuro / Dark Bronze — 4 patas con arcos curvos entrelazados en trébol" },
+            { part: "Base pequeña", material: "Acero Inoxidable", detail: "Bronze oscuro / Dark Bronze — 4 patas con travesaño en arco" }
+        ],
+        colors: {
+            interior: [
+                { name: "Emperador Dark Marble", hex: "#2C1F1A" },
+                { name: "Dark Bronze", hex: "#3D2B1A" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82109-HC1931", desc: "Set 2 mesas redondas mármol Emperador + bases bronze escultóricas (grande + pequeña)", price: null }
+        ],
+        priceList: [
+            { name: "Set Mesas HYJL82109-HC1931", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 92
+    {
+        id: "mesa-set-hyjl82107-hc1929",
+        name: "Set Mesas HYJL82107-HC1929",
+        category: "Mesa de Centro",
+        code: "HYJL82107-HC1929",
+        priceBase: null,
+        image: "/images/MESAS/MESA92/render.jpg",
+        schematics: [],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable / 3 piezas"
+        },
+        materials: [
+            { part: "Tablero grande", material: "Mármol Natural", detail: "Blanco / Calacatta con vetas grises — redondo" },
+            { part: "Tablero mediano", material: "Mármol Natural", detail: "Gris oscuro / Nero Marquina — redondo" },
+            { part: "Tablero auxiliar", material: "Madera / Piedra", detail: "Negro — redondo pequeño" },
+            { part: "Bases", material: "Acero Inoxidable", detail: "Bronze oscuro / Gunmetal — estructura oval abierta con estante inferior cuero taupe (mesa mediana)" }
+        ],
+        colors: {
+            interior: [
+                { name: "Calacatta White Marble", hex: "#F0EDE8" },
+                { name: "Nero Marquina Dark Marble", hex: "#2A2A2A" },
+                { name: "Dark Bronze / Gunmetal", hex: "#3A3530" },
+                { name: "Taupe Leather Shelf", hex: "#8A7D6E" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82107-HC1929", desc: "Set 3 mesas: grande Calacatta + mediana Nero Marquina con estante cuero + auxiliar alta, bases bronze oval", price: null }
+        ],
+        priceList: [
+            { name: "Set Mesas HYJL82107-HC1929", size: null, price: null }
+        ],
+        customInstructions: null
+    },
+    // MESA 93
+    {
+        id: "mesa-centro-hyjl82106-hc1922y",
+        name: "Mesa de Centro HYJL82106-HC1922Y",
+        category: "Mesa de Centro",
+        code: "HYJL82106-HC1922Y",
+        priceBase: null,
+        image: "/images/MESAS/MESA93/render.jpg",
+        schematics: [],
+        specs: {
+            dimensions: null,
+            volume: null,
+            assembly: "Desmontable"
+        },
+        materials: [
+            { part: "Cuerpo", material: "Madera", detail: "Nogal oscuro / Espresso — bloque rectangular con esquinas redondeadas" },
+            { part: "Tablero", material: "Metal lacado", detail: "Gunmetal / Gris oscuro — tapa rectangular con reborde redondeado" }
+        ],
+        colors: {
+            interior: [
+                { name: "Dark Walnut / Espresso Wood", hex: "#2E1F14" },
+                { name: "Gunmetal Gray", hex: "#3A3A3A" }
+            ]
+        },
+        configurations: [
+            { code: "HYJL82106-HC1922Y", desc: "Mesa de centro bloque rectangular nogal oscuro con tapa gunmetal", price: null }
+        ],
+        priceList: [
+            { name: "Mesa de Centro HYJL82106-HC1922Y", size: null, price: null }
         ],
         customInstructions: null
     },
