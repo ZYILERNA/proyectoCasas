@@ -17,7 +17,10 @@
       "Bash(mv AI/door-saina.jpg ALUMINIO/)",
       "Bash(mv AI/door-makailen.jpg ALUMINIO/)",
       "Bash(mv AI/door-sabo.jpg ALUMINIO/)",
-      "Bash(mv AI/door-pulada.jpg ALUMINIO/)"
+      "Bash(mv AI/door-pulada.jpg ALUMINIO/)",
+      "Bash(Get-ChildItem \"c:/xampp/htdocs/git/proyectoCasas/public/images/SOFA\" -Recurse -Directory)",
+      "Bash(Select-Object FullName)",
+      "Bash(Sort-Object FullName)"
     ]
   }
 }
