@@ -23,6 +23,10 @@ const tablesData = [
     // --- MESAS DE CENTRO Y AUXILIARES ---
     {
         id: "mesa-hyjl82103",
+        color_general: "Marrón",
+        material_general: "Mármol",
+        colores_disponibles: ["Marrón"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa Moon Valley Series",
         category: "Mesa de Centro",
         code: "HYJL82103-B6",
@@ -43,7 +47,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Moon Valley Marble", hex: "#635A52" }
+                { name: "Marrón", hex: "#8B6914", image: "/images/MESAS/MESA1/render.jpg" }
             ]
         },
         configurations: [
@@ -59,6 +63,10 @@ const tablesData = [
     // PRODUCTO 2: MESA AUXILIAR (ANCIENT WOOD) [NUEVA]
     {
         id: "mesa-auxiliar-ancient",
+        color_general: "Negro",
+        material_general: "Mármol",
+        colores_disponibles: ["Gris","Dorado"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa Auxiliar Ancient Wood",
         category: "Mesa Auxiliar",
         code: "HYJL82103-C1",
@@ -76,7 +84,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Ancient Wood Marble", hex: "#2A2A2A" } // Tono gris oscuro veteado
+                { name: "Gris", hex: "#6B6D6E", image: "/images/MESAS/MESA2/render.jpg" }
             ]
         },
         configurations: [
@@ -89,6 +97,10 @@ const tablesData = [
     // PRODUCTO 3: MESA RINCÓN (ZILO RED)
     {
         id: "mesa-rincon-zilo",
+        color_general: "Rojo",
+        material_general: "Mármol",
+        colores_disponibles: ["Rojo"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa Auxiliar Zilo Red",
         category: "Mesa Auxiliar",
         code: "HYJL82105-A1",
@@ -109,7 +121,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Zilo Red Marble", hex: "#59302D" } // Tono rojo oscuro/marrón según la muestra
+                { name: "Rojo", hex: "#7A3532", image: "/images/MESAS/MESA3/render.jpg" }
             ]
         },
         configurations: [
@@ -122,6 +134,10 @@ const tablesData = [
     // PRODUCTO 4: MESA RINCÓN (SNOW WHITE)
     {
         id: "mesa-rincon-snow",
+        color_general: "Blanco",
+        material_general: "Mármol",
+        colores_disponibles: ["Blanco"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa Auxiliar Snow White",
         category: "Mesa Auxiliar",
         code: "HYJL82105-B1",
@@ -139,7 +155,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Snow White Marble", hex: "#E5E5E5" } // Blanco con vetas grises
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA4/render.jpg" }
             ]
         },
         configurations: [
@@ -152,6 +168,10 @@ const tablesData = [
     // PRODUCTO 5: SET MESA BRASILIA BLACK
     {
         id: "set-mesa-brasilia",
+        color_general: "Negro",
+        material_general: "Mixto",
+        colores_disponibles: ["Negro"],
+        materiales_disponibles: ["Mármol","Metal","Madera"],
         name: "Set Centro Brasília Black",
         category: "Sets Completos",
         code: "HYJL82106-A2/B",
@@ -170,7 +190,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Brasília Black", hex: "#2B2B2B" } // Negro texturizado
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA5/render.jpg" }
             ]
         },
         configurations: [
@@ -187,6 +207,10 @@ const tablesData = [
     // PRODUCTO 6: MESA DE CENTRO BRASILIA BLACK
     {
         id: "mesa-centro-brasilia",
+        color_general: "Negro",
+        material_general: "Mármol",
+        colores_disponibles: ["Gris","Negro"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa Centro Brasília Black",
         category: "Mesa de Centro",
         code: "HYJL82107-A-HC1929-A",
@@ -208,7 +232,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Brasília Black", hex: "#2B2B2B" } // Negro con vetas claras
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA6/render.jpg" }
             ]
         },
         configurations: [
@@ -221,6 +245,10 @@ const tablesData = [
     // PRODUCTO 7: MESA CENTRO EMERALD CLOUDS
     {
         id: "mesa-centro-emerald",
+        color_general: "Gris",
+        material_general: "Mármol",
+        colores_disponibles: ["Verde","Negro"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa Centro Emerald Clouds",
         category: "Mesa de Centro",
         code: "HYJL82107-BHC1929-B",
@@ -242,7 +270,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Emerald Clouds", hex: "#7C827A" } // Tono gris verdoso veteado
+                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA7/render.jpg" }
             ]
         },
         configurations: [
@@ -255,6 +283,10 @@ const tablesData = [
     // PRODUCTO 8: MESA AUXILIAR PRADA GREEN
     {
         id: "mesa-auxiliar-prada",
+        color_general: "Verde",
+        material_general: "Mármol",
+        colores_disponibles: ["Verde","Negro"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa Auxiliar Prada Green",
         category: "Mesa Auxiliar",
         code: "HYJL82107-C1",
@@ -275,7 +307,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Prada Green", hex: "#1B2821" } // Verde oscuro profundo
+                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA8/render.jpg" }
             ]
         },
         configurations: [
@@ -288,6 +320,10 @@ const tablesData = [
     // PRODUCTO 9: MESA CENTRO SILVER SCULPTURE
     {
         id: "mesa-centro-silver",
+        color_general: "Plateado",
+        material_general: "Metal",
+        colores_disponibles: ["Plateado"],
+        materiales_disponibles: ["Metal","Mármol"],
         name: "Mesa Centro Silver Sculpture",
         category: "Mesa de Centro",
         code: "HYJL82108-A",
@@ -307,7 +343,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Textured Silver", hex: "#C0C0C0" } // Plateado metálico
+                { name: "Plateado", hex: "#C0C0C0", image: "/images/MESAS/MESA9/render.jpg" }
             ]
         },
         configurations: [
@@ -320,6 +356,10 @@ const tablesData = [
     // PRODUCTO 10: MESA AUXILIAR SILVER SCULPTURE
     {
         id: "mesa-auxiliar-silver",
+        color_general: "Plateado",
+        material_general: "Metal",
+        colores_disponibles: ["Plateado"],
+        materiales_disponibles: ["Metal"],
         name: "Mesa Auxiliar Silver Sculpture",
         category: "Mesa Auxiliar",
         code: "HYJL82108-B",
@@ -336,7 +376,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Textured Silver", hex: "#C0C0C0" }
+                { name: "Plateado", hex: "#C0C0C0", image: "/images/MESAS/MESA10/render.jpg" }
             ]
         },
         configurations: [
@@ -349,6 +389,10 @@ const tablesData = [
     // PRODUCTO 11: MESA CENTRO MILKY WAY
     {
         id: "mesa-centro-milky-way",
+        color_general: "Negro",
+        material_general: "Mármol",
+        colores_disponibles: ["Negro"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa Centro Milky Way Starry",
         category: "Mesa de Centro",
         code: "HYJL82109-A",
@@ -369,7 +413,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Milky Way Starry Sky", hex: "#1F1F1F" } // Negro profundo texturizado
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA11/render.jpg" }
             ]
         },
         configurations: [
@@ -382,6 +426,10 @@ const tablesData = [
     // PRODUCTO 12: MESA CENTRO SNOW MOUNTAIN
     {
         id: "mesa-centro-snow-mountain",
+        color_general: "Blanco",
+        material_general: "Mármol",
+        colores_disponibles: ["Blanco","Negro"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa Centro Snow Mountain",
         category: "Mesa de Centro",
         code: "HYJL82109-B1",
@@ -402,7 +450,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Snow Mountain Blue", hex: "#DCDFE1" } // Blanco agrisado con vetas
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA12/render.jpg" }
             ]
         },
         configurations: [
@@ -415,6 +463,10 @@ const tablesData = [
     // PRODUCTO 13: MESA AUXILIAR MILKY WAY
     {
         id: "mesa-auxiliar-milky-way",
+        color_general: "Negro",
+        material_general: "Mármol",
+        colores_disponibles: ["Negro"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa Auxiliar Milky Way",
         category: "Mesa Auxiliar",
         code: "HYJL82109-C",
@@ -435,7 +487,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Milky Way Starry Sky", hex: "#1F1F1F" } // Negro profundo texturizado
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA13/render.jpg" }
             ]
         },
         configurations: [
@@ -448,6 +500,10 @@ const tablesData = [
     // PRODUCTO 14: MESA CENTRO SNOW WHITE RECTANGULAR
     {
         id: "mesa-centro-snow-white-rect",
+        color_general: "Blanco",
+        material_general: "Mármol",
+        colores_disponibles: ["Blanco"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa Centro Snow White Rectangular",
         category: "Mesa de Centro",
         code: "HYJL82111-A",
@@ -471,7 +527,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Snow White Marble", hex: "#E5E5E5" } // Blanco con vetas suaves
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA14/render.jpg" }
             ]
         },
         configurations: [
@@ -486,6 +542,10 @@ const tablesData = [
     // PRODUCTO 15: MESA CENTRO LAN KWAI FONG
     {
         id: "mesa-centro-lan-kwai",
+        color_general: "Beige",
+        material_general: "Mármol",
+        colores_disponibles: ["Beige"],
+        materiales_disponibles: ["Piedra","Metal"],
         name: "Mesa Centro Lan Kwai Fong",
         category: "Mesa de Centro",
         code: "HYJL82112-A3",
@@ -507,7 +567,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Lan Kwai Fong Cave", hex: "#BCAEA1" } // Tono piedra beige/taupe mate
+                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA15/render.jpg" }
             ]
         },
         configurations: [
@@ -520,6 +580,10 @@ const tablesData = [
     // PRODUCTO 16: MESA RINCÓN ANCIENT WOOD
     {
         id: "mesa-rincon-ancient-wood",
+        color_general: "Negro",
+        material_general: "Mármol",
+        colores_disponibles: ["Negro"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa Auxiliar Ancient Wood",
         category: "Mesa Auxiliar",
         code: "HYJL82112-B1",
@@ -541,7 +605,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Ancient Wood Grain", hex: "#2A2A2A" } // Negro veteado brillo
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA16/render.jpg" }
             ]
         },
         configurations: [
@@ -554,6 +618,10 @@ const tablesData = [
     // PRODUCTO 17: SET MESA ANCIENT & ZILO
     {
         id: "set-mesa-ancient-zilo",
+        color_general: "Negro",
+        material_general: "Mármol",
+        colores_disponibles: ["Negro","Rojo"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Set Centro Ancient & Zilo",
         category: "Sets Completos",
         code: "HYJL82119-A1/B2",
@@ -572,8 +640,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Ancient Wood Grain", hex: "#2A2A2A" }, // Negro veteado
-                { name: "Zilo Red", hex: "#59302D" }       // Rojizo oscuro
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA17/render.jpg" },
+                { name: "Rojo", hex: "#7A3532", image: "/images/MESAS/MESA17/render.jpg" }
             ]
         },
         configurations: [
@@ -590,6 +658,10 @@ const tablesData = [
     // PRODUCTO 18: SET MESA ORGANIC BLACK
     {
         id: "set-mesa-organic-black",
+        color_general: "Negro",
+        material_general: "Madera",
+        colores_disponibles: ["Negro"],
+        materiales_disponibles: ["Madera","Metal"],
         name: "Set Centro Organic Black",
         category: "Sets Completos",
         code: "HYJL82130A-B",
@@ -613,7 +685,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Metal Black Pattern", hex: "#1A1A1A" } // Negro texturizado
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA18/render.jpg" }
             ]
         },
         configurations: [
@@ -630,6 +702,10 @@ const tablesData = [
     // PRODUCTO 19: MESA AUXILIAR HUAYI RED
     {
         id: "mesa-auxiliar-huayi-red",
+        color_general: "Rojo",
+        material_general: "Madera",
+        colores_disponibles: ["Rojo"],
+        materiales_disponibles: ["Metal","Fibra"],
         name: "Mesa Auxiliar Huayi Red",
         category: "Mesa Auxiliar",
         code: "HYJL82131",
@@ -647,7 +723,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Huayi Red Gloss", hex: "#7A3E3E" } // Rojo terracota brillo
+                { name: "Rojo", hex: "#C0392B", image: "/images/MESAS/MESA19/render.jpg" }
             ]
         },
         configurations: [
@@ -660,6 +736,10 @@ const tablesData = [
     // PRODUCTO 20: SET MESA SPACE GRAY & HUAYI
     {
         id: "set-mesa-space-gray-huayi",
+        color_general: "Gris",
+        material_general: "Mixto",
+        colores_disponibles: ["Gris","Rojo"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Set Centro Space Gray & Huayi",
         category: "Sets Completos",
         code: "HYJL82132",
@@ -680,8 +760,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Italian Space Gray", hex: "#4A4A4A" }, // Gris piedra oscuro
-                { name: "Huayi Red Gloss", hex: "#7A3E3E" }     // Rojo terracota brillo
+                { name: "Gris", hex: "#6B6D6E", image: "/images/MESAS/MESA20/render.jpg" },
+                { name: "Rojo", hex: "#C0392B", image: "/images/MESAS/MESA20/render.jpg" }
             ]
         },
         configurations: [
@@ -698,6 +778,10 @@ const tablesData = [
     // PRODUCTO 21: SET MESA CALACATTA GRAY
     {
         id: "set-mesa-calacatta-gray",
+        color_general: "Gris",
+        material_general: "Mixto",
+        colores_disponibles: ["Gris"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Set Centro Calacatta Gray",
         category: "Sets Completos",
         code: "HYJL82133-A1/B1",
@@ -716,8 +800,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Calacatta Gray", hex: "#D4D4D4" }, // Gris claro veteado
-                { name: "European Gray Glass", hex: "#808080" } // Gris medio transparente
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA21/render.jpg" }
             ]
         },
         configurations: [
@@ -734,6 +817,10 @@ const tablesData = [
     // PRODUCTO 22: SET MESA SPACE GRAY HEXAGONAL
     {
         id: "set-mesa-space-gray-hex",
+        color_general: "Gris",
+        material_general: "Mármol",
+        colores_disponibles: ["Gris"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Set Centro Space Gray Hex",
         category: "Sets Completos",
         code: "HYJL82135-A/B",
@@ -751,7 +838,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Italian Space Gray", hex: "#3E3E3E" } // Gris piedra oscuro mate
+                { name: "Gris", hex: "#6B6D6E", image: "/images/MESAS/MESA22/render.jpg" }
             ]
         },
         configurations: [
@@ -768,6 +855,10 @@ const tablesData = [
     // PRODUCTO 23: MESA CENTRO GLASS & CAVE
     {
         id: "mesa-centro-glass-cave",
+        color_general: "Beige",
+        material_general: "Vidrio",
+        colores_disponibles: ["Blanco"],
+        materiales_disponibles: ["Vidrio","Metal"],
         name: "Mesa Centro Glass & Cave",
         category: "Mesa de Centro",
         code: "HYJL82150-A",
@@ -788,7 +879,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Lan Kwai Fong Cave", hex: "#BCAEA1" } // Tono piedra beige mate
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA23/render.jpg" }
             ]
         },
         configurations: [
@@ -801,6 +892,10 @@ const tablesData = [
     // PRODUCTO 24: SET MESA SNOW & EMERALD
     {
         id: "set-mesa-snow-emerald",
+        color_general: "Blanco",
+        material_general: "Mármol",
+        colores_disponibles: ["Blanco","Verde"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Set Centro Snow & Emerald",
         category: "Sets Completos",
         code: "HYJL82151",
@@ -822,8 +917,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Snow Mountain Blue", hex: "#DCDFE1" }, // Blanco agrisado
-                { name: "Emerald in the Clouds", hex: "#7C827A" } // Gris verdoso
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA24/render.jpg" },
+                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA24/render.jpg" }
             ]
         },
         configurations: [
@@ -840,6 +935,10 @@ const tablesData = [
     // PRODUCTO 25: SET MESA EMERALD & OLIVE
     {
         id: "set-mesa-emerald-olive",
+        color_general: "Gris",
+        material_general: "Mármol",
+        colores_disponibles: ["Verde"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Set Centro Emerald & Olive",
         category: "Sets Completos",
         code: "HYJL82152-3A/B",
@@ -857,8 +956,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Emerald Clouds", hex: "#7C827A" }, // Verde grisáceo
-                { name: "Olive Gray Gloss", hex: "#5F6059" } // Gris oliva oscuro
+                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA25/render.jpg" }
             ]
         },
         configurations: [
@@ -879,6 +977,10 @@ const tablesData = [
     // PRODUCTO 26: SET MESA VERONA & EMERALD MULTI
     {
         id: "set-mesa-verona-emerald",
+        color_general: "Gris",
+        material_general: "Mixto",
+        colores_disponibles: ["Verde","Negro","Rojo"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Set Centro Verona & Emerald",
         category: "Sets Completos",
         code: "HYJL82153-Set",
@@ -898,10 +1000,9 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Emerald Clouds", hex: "#7C827A" }, // Gris verdoso
-                { name: "Bordeaux Red", hex: "#4A1A1C" },   // Rojo vino
-                { name: "Verona Green", hex: "#2E4634" },   // Verde oscuro mate
-                { name: "Metal Black", hex: "#1F1F1F" }      // Negro texturizado
+                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA26/render.jpg" },
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA26/render.jpg" },
+                { name: "Rojo", hex: "#7A3532", image: "/images/MESAS/MESA26/render.jpg" }
             ]
         },
         configurations: [
@@ -922,6 +1023,10 @@ const tablesData = [
     // PRODUCTO 27: MESA CENTRO MILKY WAY & GOLD
     {
         id: "mesa-centro-milky-way-gold",
+        color_general: "Negro",
+        material_general: "Mármol",
+        colores_disponibles: ["Negro"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa Centro Milky Way Gold",
         category: "Mesa de Centro",
         code: "HYJL82156-A1",
@@ -945,7 +1050,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Milky Way Starry Sky", hex: "#1F1F1F" } // Negro profundo con textura
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA27/render.jpg" }
             ]
         },
         configurations: [
@@ -958,6 +1063,10 @@ const tablesData = [
     // PRODUCTO 28: MESA AUXILIAR SNOW WHITE RECT
     {
         id: "mesa-auxiliar-snow-rect",
+        color_general: "Blanco",
+        material_general: "Mármol",
+        colores_disponibles: ["Blanco"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa Auxiliar Snow White Rect",
         category: "Mesa Auxiliar",
         code: "HYJL82201",
@@ -977,7 +1086,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Snow White Marble", hex: "#E5E5E5" } // Blanco con vetas suaves
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA28/render.jpg" }
             ]
         },
         configurations: [
@@ -990,6 +1099,10 @@ const tablesData = [
     // PRODUCTO 29: MESA AUXILIAR C-SHAPE GUNMETAL
     {
         id: "mesa-auxiliar-c-shape-gunmetal",
+        color_general: "Gris",
+        material_general: "Metal",
+        colores_disponibles: ["Gris"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa Auxiliar C-Shape Gunmetal",
         category: "Mesa Auxiliar",
         code: "HYJL82202",
@@ -1010,8 +1123,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Brushed Gunmetal", hex: "#4A4A4A" }, // Gris oscuro metálico
-                { name: "Saddle Leather Camel", hex: "#C48A58" } // Tono cuero marrón claro (visual)
+                { name: "Gris", hex: "#6B6D6E", image: "/images/MESAS/MESA29/render.jpg" }
             ]
         },
         configurations: [
@@ -1024,6 +1136,10 @@ const tablesData = [
     // PRODUCTO 30: MESA RINCÓN SPACE GOLD
     {
         id: "mesa-rincon-space-gold",
+        color_general: "Dorado",
+        material_general: "Metal",
+        colores_disponibles: ["Dorado"],
+        materiales_disponibles: ["Metal"],
         name: "Mesa Rincón Space Gold",
         category: "Mesa Auxiliar",
         code: "HYJL82302-B",
@@ -1042,8 +1158,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Brushed Space Gold", hex: "#B49B68" }, // Dorado mate suave
-                { name: "Dark Wood", hex: "#2C2C2C" }           // Madera oscura/negra
+                { name: "Dorado", hex: "#B8860B", image: "/images/MESAS/MESA30/render.jpg" }
             ]
         },
         configurations: [
@@ -1056,6 +1171,10 @@ const tablesData = [
     // PRODUCTO 31: MESA RINCÓN CALACATTA GOLD
     {
         id: "mesa-rincon-calacatta-gold",
+        color_general: "Blanco",
+        material_general: "Mármol",
+        colores_disponibles: ["Blanco","Negro"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa Rincón Calacatta Gold",
         category: "Mesa Auxiliar",
         code: "HYJL82302-A1",
@@ -1077,8 +1196,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Calacatta Gray", hex: "#D4D4D4" }, // Gris claro veteado mate
-                { name: "Brushed Space Gold", hex: "#B49B68" } // Dorado mate suave
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA31/render.jpg" },
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA31/render.jpg" }
             ]
         },
         configurations: [
@@ -1091,6 +1210,10 @@ const tablesData = [
     // PRODUCTO 32: MESA RINCÓN GOLD & CAVE
     {
         id: "mesa-rincon-gold-cave",
+        color_general: "Dorado",
+        material_general: "Metal",
+        colores_disponibles: ["Dorado","Beige"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa Rincón Gold & Cave",
         category: "Mesa Auxiliar",
         code: "HYJL82303-C",
@@ -1108,8 +1231,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Brushed Space Gold", hex: "#B49B68" }, // Dorado mate suave
-                { name: "Lan Kwai Fong Cave", hex: "#BCAEA1" } // Piedra beige mate
+                { name: "Dorado", hex: "#B8860B", image: "/images/MESAS/MESA32/render.jpg" },
+                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA32/render.jpg" }
             ]
         },
         configurations: [
@@ -1122,6 +1245,10 @@ const tablesData = [
     // PRODUCTO 33: MESA AUXILIAR C-SHAPE GOLD
     {
         id: "mesa-auxiliar-c-shape-gold",
+        color_general: "Dorado",
+        material_general: "Metal",
+        colores_disponibles: ["Dorado"],
+        materiales_disponibles: ["Metal"],
         name: "Mesa Auxiliar C-Shape Gold",
         category: "Mesa Auxiliar",
         code: "HYJL82307",
@@ -1138,7 +1265,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Brushed Space Gold", hex: "#B49B68" } // Dorado mate suave
+                { name: "Dorado", hex: "#B8860B", image: "/images/MESAS/MESA33/render.jpg" }
             ]
         },
         configurations: [
@@ -1151,6 +1278,10 @@ const tablesData = [
     // PRODUCTO 34: MESA RINCÓN PLATINUM DIAMOND
     {
         id: "mesa-rincon-platinum-diamond",
+        color_general: "Gris",
+        material_general: "Mármol",
+        colores_disponibles: ["Verde"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa Rincón Platinum Diamond",
         category: "Mesa Auxiliar",
         code: "HYJL82308-A1",
@@ -1168,8 +1299,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Platinum Diamond", hex: "#8A8A8A" }, // Gris medio texturizado
-                { name: "Brushed Gunmetal", hex: "#4A4A4A" }  // Gris oscuro metálico
+                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA34/render.jpg" }
             ]
         },
         configurations: [
@@ -1182,6 +1312,10 @@ const tablesData = [
     // PRODUCTO 35: MESA RINCÓN HUAYI RED FIBERGLASS
     {
         id: "mesa-rincon-huayi-red-fiberglass",
+        color_general: "Rojo",
+        material_general: "Mixto",
+        colores_disponibles: ["Rojo"],
+        materiales_disponibles: ["Metal","Fibra"],
         name: "Mesa Rincón Huayi Red Fiberglass",
         category: "Mesa Auxiliar",
         code: "HYJL82317",
@@ -1199,8 +1333,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Huayi Red Gloss", hex: "#7A3E3E" }, // Rojo terracota brillo
-                { name: "Eco-leather Dark", hex: "#2C2C2C" } // Cuero oscuro tapa
+                { name: "Rojo", hex: "#C0392B", image: "/images/MESAS/MESA35/render.jpg" }
             ]
         },
         configurations: [
@@ -1214,6 +1347,10 @@ const tablesData = [
     // PRODUCTO 36: MESA RINCÓN PRADA & GLASS
     {
         id: "mesa-rincon-prada-glass-gold",
+        color_general: "Verde",
+        material_general: "Vidrio",
+        colores_disponibles: ["Verde","Negro"],
+        materiales_disponibles: ["Vidrio","Metal"],
         name: "Mesa Rincón Prada & Glass",
         category: "Mesa Auxiliar",
         code: "HYJL82318",
@@ -1237,9 +1374,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Prada Green", hex: "#1B2821" },      // Verde oscuro veteado
-                { name: "European Gray Glass", hex: "#808080" }, // Gris transparente
-                { name: "Brushed Japanese Gold", hex: "#B49B68" } // Dorado mate
+                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA36/render.jpg" },
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA36/render.jpg" }
             ]
         },
         configurations: [
@@ -1252,6 +1388,10 @@ const tablesData = [
     // PRODUCTO 37: MESA RINCÓN EMERALD & GOLD
     {
         id: "mesa-rincon-emerald-gold",
+        color_general: "Gris",
+        material_general: "Mármol",
+        colores_disponibles: ["Verde"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa Rincón Emerald Gold",
         category: "Mesa Auxiliar",
         code: "HYJL82319-A",
@@ -1269,8 +1409,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Emerald Clouds", hex: "#7C827A" },    // Verde grisáceo veteado
-                { name: "Brushed Japanese Gold", hex: "#B49B68" } // Dorado mate suave
+                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA37/render.jpg" }
             ]
         },
         configurations: [
@@ -1283,6 +1422,10 @@ const tablesData = [
     // PRODUCTO 38: MESA RINCÓN PRADA ARCH
     {
         id: "mesa-rincon-prada-arch",
+        color_general: "Verde",
+        material_general: "Mármol",
+        colores_disponibles: ["Verde"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa Rincón Prada Arch",
         category: "Mesa Auxiliar",
         code: "HYJL82320",
@@ -1303,8 +1446,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Prada Green", hex: "#1B2821" },       // Verde oscuro profundo
-                { name: "Brushed Japanese Gold", hex: "#B49B68" } // Dorado mate suave
+                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA38/render.jpg" }
             ]
         },
         configurations: [
@@ -1317,6 +1459,10 @@ const tablesData = [
     // PRODUCTO 39: MESA RINCÓN BURL & CALACATTA
     {
         id: "mesa-rincon-burl-calacatta",
+        color_general: "Marrón",
+        material_general: "Madera",
+        colores_disponibles: ["Marrón","Blanco"],
+        materiales_disponibles: ["Madera","Mármol"],
         name: "Mesa Rincón Burl & Calacatta",
         category: "Mesa Auxiliar",
         code: "HYJL82321-A",
@@ -1335,9 +1481,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Oval Tree Burl", hex: "#654321" },   // Marrón madera raíz oscuro
-                { name: "Calacatta Gray", hex: "#D4D4D4" },   // Gris claro veteado
-                { name: "Brushed Japanese Gold", hex: "#B49B68" } // Dorado mate suave
+                { name: "Marrón", hex: "#8B6914", image: "/images/MESAS/MESA39/render.jpg" },
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA39/render.jpg" }
             ]
         },
         configurations: [
@@ -1350,6 +1495,10 @@ const tablesData = [
     // PRODUCTO 40: MESA RINCÓN PRADA GREEN
     {
         id: "mesa-rincon-prada-green-hg1911",
+        color_general: "Verde",
+        material_general: "Mármol",
+        colores_disponibles: ["Verde"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa Rincón Prada Green",
         category: "Mesa Auxiliar",
         code: "HYJL82305-A/HG1911",
@@ -1367,8 +1516,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Prada Green", hex: "#1B2821" },       // Verde oscuro con vetas claras
-                { name: "Brushed Space Gold", hex: "#B49B68" } // Dorado cepillado
+                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA40/render.jpg" }
             ]
         },
         configurations: [
@@ -1381,6 +1529,10 @@ const tablesData = [
     // PRODUCTO 41: MESA RINCÓN CILÍNDRICA
     {
         id: "mesa-rincon-cilindrica-hg1913",
+        color_general: "Dorado",
+        material_general: "Metal",
+        colores_disponibles: ["Dorado"],
+        materiales_disponibles: ["Metal"],
         name: "Mesa Rincón Cilíndrica",
         category: "Mesa Auxiliar",
         code: "HYJL82306/HG1913",
@@ -1401,8 +1553,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Brushed Space Gold", hex: "#B19B6A" },         // Dorado cepillado (estimado de la muestra)
-                { name: "Mirror Steel Japanese Gold", hex: "#D4AF37" }  // Dorado brillante espejo (estimado)
+                { name: "Dorado", hex: "#B8860B", image: "/images/MESAS/MESA41/render.jpg" }
             ]
         },
         configurations: [
@@ -1415,6 +1566,10 @@ const tablesData = [
     // PRODUCTO 42: MESA COMEDOR
     {
         id: "mesa-comedor-hytl86101",
+        color_general: "Gris",
+        material_general: "Mármol",
+        colores_disponibles: ["Gris"],
+        materiales_disponibles: ["Mármol","Metal","Madera"],
         name: "Mesa de Comedor",
         category: "Mesa de Comedor",
         code: "HYTL86101/HF1823Y-1",
@@ -1435,10 +1590,8 @@ const tablesData = [
             { part: "Estructura inferior (Bottom frame)", material: "Acero Inoxidable", detail: "Gunmetal cepillado (Brushed Gunmetal)" }
         ],
         colors: {
-            marble: [
-                { name: "Wyndham Gray (Oil-bright)", hex: "#4A4D4E" },          // Gris oscuro (estimado de la muestra)
-                { name: "Imported Calacatta Gray (Oil-bright)", hex: "#A8A9A0" }, // Gris claro (estimado de la muestra)
-                { name: "Zilo Red (Oil-bright)", hex: "#8A4A43" }                 // Rojo marmolado (estimado de la muestra)
+            interior: [
+                { name: "Gris", hex: "#6B6D6E", image: "/images/MESAS/MESA42/render.jpg" }
             ]
         },
         configurations: [
@@ -1462,6 +1615,10 @@ const tablesData = [
     // PRODUCTO 43: MESA COMEDOR REDONDA
     {
         id: "mesa-comedor-redonda-hytl86102",
+        color_general: "Rojo",
+        material_general: "Mármol",
+        colores_disponibles: ["Rojo","Negro"],
+        materiales_disponibles: ["Mármol","Madera","Metal"],
         name: "Mesa de Comedor Redonda",
         category: "Mesa de Comedor",
         code: "HYTL86102-B/HF1826Y-2",
@@ -1483,11 +1640,9 @@ const tablesData = [
             { part: "Estructura inferior (Bottom frame)", material: "Acero Inoxidable", detail: "Gunmetal cepillado (Brushed Gunmetal)" }
         ],
         colors: {
-            marble: [
-                { name: "Zilo Red (Oil-bright)", hex: "#7A3532" },                 // Rojo intenso marmolado (estimado)
-                { name: "Imported Calacatta Gray (Oil-matte)", hex: "#B0B3A8" },   // Gris claro mate (estimado)
-                { name: "French Red (Oil-bright)", hex: "#8A3B37" },               // Rojo marmolado claro (estimado)
-                { name: "Ancient wood grain (Oil-bright)", hex: "#2C2B29" }        // Negro veteado (estimado)
+            interior: [
+                { name: "Rojo", hex: "#7A3532", image: "/images/MESAS/MESA43/render.jpg" },
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA43/img1.jpg" }
             ]
         },
         configurations: [
@@ -1509,6 +1664,10 @@ const tablesData = [
     // PRODUCTO 44: MESA COMEDOR
     {
         id: "mesa-comedor-hytl86105",
+        color_general: "Marrón",
+        material_general: "Mármol",
+        colores_disponibles: ["Marrón","Beige"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa de Comedor",
         category: "Mesa de Comedor",
         code: "HYTL86105-B/HF1831",
@@ -1531,11 +1690,9 @@ const tablesData = [
             { part: "Hebilla decorativa lateral (Side-foot decorative buckle)", material: "Acero Inoxidable", detail: "Mirror Steel Japanese Gold" }
         ],
         colors: {
-            marble: [
-                { name: "Moon Valley (Oil-bright)", hex: "#8B7D6B" },              // Tono tierra/bronceado (estimado de la muestra)
-                { name: "Snow Mountain Blue (Oil-bright)", hex: "#D0D3D4" },       // Gris claro/azulado (estimado)
-                { name: "Platinum Diamond (Oil-bright)", hex: "#6B5B5A" },         // Gris oscuro/pardo (estimado)
-                { name: "Emerald in the Clouds (Oil-bright)", hex: "#7B8D83" }     // Verde grisáceo (estimado)
+            interior: [
+                { name: "Marrón", hex: "#8B6914", image: "/images/MESAS/MESA44/render.jpg" },
+                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA44/img3.jpg" }
             ]
         },
         configurations: [
@@ -1559,6 +1716,10 @@ const tablesData = [
     // PRODUCTO 45: MESA COMEDOR
     {
         id: "mesa-comedor-hytl86108",
+        color_general: "Gris",
+        material_general: "Mármol",
+        colores_disponibles: ["Negro"],
+        materiales_disponibles: ["Mármol","Madera"],
         name: "Mesa de Comedor",
         category: "Mesa de Comedor",
         code: "HYTL86108-A/HF1836Y",
@@ -1581,11 +1742,8 @@ const tablesData = [
             { part: "Cubierta decorativa (Decorative cover)", material: "Acero Inoxidable", detail: "Brushed Space Gold" }
         ],
         colors: {
-            marble: [
-                { name: "Italian Space Gray (Oil-matte)", hex: "#7A7B76" },       // Gris oscuro veteado mate (estimado)
-                { name: "Snow White (Oil-matte)", hex: "#DCDCDC" },               // Blanco veteado mate (estimado)
-                { name: "Milky Way Starry Sky (Oil-matte)", hex: "#1A1A1A" },     // Negro mate (estimado)
-                { name: "Wyndham Gray (Oil-bright)", hex: "#4A4D4E" }             // Gris oscuro brillante (estimado)
+            interior: [
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA45/render.jpg" }
             ]
         },
         configurations: [
@@ -1613,6 +1771,10 @@ const tablesData = [
     // PRODUCTO 46: MESA COMEDOR
     {
         id: "mesa-comedor-hytl86111",
+        color_general: "Marrón",
+        material_general: "Mármol",
+        colores_disponibles: ["Negro"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa de Comedor",
         category: "Mesa de Comedor",
         code: "HYTL86111-A/HF1837",
@@ -1629,11 +1791,8 @@ const tablesData = [
             { part: "Estructura de las patas (Foot frame)", material: "Acero Inoxidable", detail: "Gunmetal cepillado (Brushed Gunmetal)" }
         ],
         colors: {
-            marble: [
-                { name: "Platinum Diamond (Oil-bright)", hex: "#5E504A" },        // Marrón oscuro/grisáceo veteado (estimado de la muestra)
-                { name: "Prada Green (Oil-bright)", hex: "#2A3B32" },             // Verde oscuro veteado (estimado de la muestra)
-                { name: "Snow White (Oil-bright)", hex: "#DCDCDC" },              // Blanco veteado (estimado de la muestra)
-                { name: "Milky Way Starry Sky (Oil-bright)", hex: "#1A1A1A" }     // Negro brillante (estimado de la muestra)
+            interior: [
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA46/render.jpg" }
             ]
         },
         configurations: [
@@ -1660,6 +1819,10 @@ const tablesData = [
     // PRODUCTO 48: MESA COMEDOR
     {
         id: "mesa-comedor-hytl86128-b",
+        color_general: "Blanco",
+        material_general: "Mármol",
+        colores_disponibles: ["Blanco","Beige"],
+        materiales_disponibles: ["Mármol","Madera"],
         name: "Mesa de Comedor",
         category: "Mesa de Comedor",
         code: "HYTL86128-B",
@@ -1681,10 +1844,9 @@ const tablesData = [
             { part: "Estructura de las patas (Foot frame)", material: "Madera de Fresno (Ash wood)", detail: "Color cera de aceite (Oil-wax color)" }
         ],
         colors: {
-            marble: [
-                { name: "Snow White (Oil-bright)", hex: "#DCDCDC" },              // Blanco veteado (estimado de la muestra)
-                { name: "Imported Calacatta Gray (Oil-matte)", hex: "#B0B3A8" },  // Gris claro mate (estimado de la muestra)
-                { name: "Wyndham Gray (Oil-bright)", hex: "#4A4D4E" }             // Gris oscuro (estimado de la muestra)
+            interior: [
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA48/render.jpg" },
+                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA48/img2.jpg" }
             ]
         },
         configurations: [
@@ -1706,6 +1868,10 @@ const tablesData = [
     // PRODUCTO 49: MESA COMEDOR
     {
         id: "mesa-comedor-hytl86129-a",
+        color_general: "Gris",
+        material_general: "Mármol",
+        colores_disponibles: ["Gris"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa de Comedor",
         category: "Mesa de Comedor",
         code: "HYTL86129-A/MZL3118",
@@ -1727,11 +1893,8 @@ const tablesData = [
             { part: "Estructura de las patas (Foot frame)", material: "Acero Inoxidable", detail: "Gunmetal cepillado (Brushed Gunmetal)" }
         ],
         colors: {
-            marble: [
-                { name: "Emerald in the Clouds (Oil-bright)", hex: "#7B8D83" },     // Verde grisáceo (estimado de la muestra)
-                { name: "Snow Mountain Blue (Oil-bright)", hex: "#D0D3D4" },       // Gris claro/azulado (estimado de la muestra)
-                { name: "Snow White (Oil-bright)", hex: "#DCDCDC" },              // Blanco veteado (estimado de la muestra)
-                { name: "Moon Valley (Oil-bright)", hex: "#8B7D6B" }               // Tono tierra/bronceado (estimado de la muestra)
+            interior: [
+                { name: "Gris", hex: "#6B6D6E", image: "/images/MESAS/MESA49/render.jpg" }
             ]
         },
         configurations: [
@@ -1757,6 +1920,10 @@ const tablesData = [
     // MESA50
     {
         id: "mesa-centro-hyjl82106-a1",
+        color_general: "Marrón",
+        material_general: "Mármol",
+        colores_disponibles: ["Marrón","Negro"],
+        materiales_disponibles: ["Mármol","Madera"],
         name: "Mesa de Centro CHIN",
         category: "Sets Completos",
         code: "HYJL82106-HC1922Y-A-B-CHIN",
@@ -1789,6 +1956,10 @@ const tablesData = [
     // MESA 51
     {
         id: "mesa-comedor-hyjl82901",
+        color_general: "Gris",
+        material_general: "Mármol",
+        colores_disponibles: ["Gris"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa Comedor CHIN",
         category: "Mesa de Comedor",
         code: "HYJL82901",
@@ -1818,6 +1989,10 @@ const tablesData = [
     // MESA 52
     {
         id: "consola-te-hygl81702-b",
+        color_general: "Negro",
+        material_general: "Madera",
+        colores_disponibles: ["Negro"],
+        materiales_disponibles: ["Madera","Mármol"],
         name: "CHIN Tea Cabinet HYGL81702",
         category: "Mesa de Té",
         code: "HYGL81702-HQ1826Y-2",
@@ -1849,6 +2024,10 @@ const tablesData = [
     // MESA 53
     {
         id: "banco-te-hyyd85506",
+        color_general: "Marrón",
+        material_general: "Mixto",
+        colores_disponibles: ["Negro","Marrón"],
+        materiales_disponibles: ["Madera","Cuero","Metal"],
         name: "Banco Largo de Té CHIN",
         category: "Mesa de Centro",
         code: "HYYD85506",
@@ -1876,6 +2055,10 @@ const tablesData = [
     // MESA 54
     {
         id: "mesa-comedor-hytl86127-hf1850",
+        color_general: "Beige",
+        material_general: "Mármol",
+        colores_disponibles: ["Blanco"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Change Dining Table HYTL86127",
         category: "Mesa de Comedor",
         code: "HYTL86127-HF1850",
@@ -1893,7 +2076,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Calacatta White Marble", hex: "#E8E4DE" }
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA54/render.jpg" }
             ]
         },
         configurations: [
@@ -1907,6 +2090,10 @@ const tablesData = [
     // MESA 55
     {
         id: "mesa-comedor-hytl86109-hf1838",
+        color_general: "Negro",
+        material_general: "Mármol",
+        colores_disponibles: ["Negro"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "«Be Water» Dining Table HYTL86109",
         category: "Mesa de Comedor",
         code: "HYTL86109-HF1838",
@@ -1927,7 +2114,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Nero Marquina Black Marble", hex: "#1A1A1A" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA55/render.jpg" }
             ]
         },
         configurations: [
@@ -1941,6 +2128,10 @@ const tablesData = [
     // MESA 56
     {
         id: "mesa-comedor-hytl86103-hf1830y",
+        color_general: "Beige",
+        material_general: "Mármol",
+        colores_disponibles: ["Beige","Gris"],
+        materiales_disponibles: ["Mármol","Madera"],
         name: "Dining Table HYTL86103",
         category: "Mesa de Comedor",
         code: "HYTL86103-HF1830Y-1",
@@ -1961,7 +2152,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Fantasy Brown / Ice Crystal Marble", hex: "#D8D0C8" }
+                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA56/render.jpg" },
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA56/render.jpg" }
             ]
         },
         configurations: [
@@ -1975,6 +2167,10 @@ const tablesData = [
     // MESA 57 (movida desde gabinetes GAB12)
     {
         id: "mesa-hytl86201",
+        color_general: "Blanco",
+        material_general: "Piedra",
+        colores_disponibles: ["Negro","Blanco"],
+        materiales_disponibles: ["Madera","Mármol","Metal"],
         name: "Mesa de Té HYTL86201",
         category: "Mesa de Té",
         code: "HYTL86201/HCT1801Y-1",
@@ -1998,12 +2194,10 @@ const tablesData = [
             { part: "Estructura de patas (Foot frame)", material: "Acero inoxidable", detail: "Brushed Gunmetal" }
         ],
         colors: {
-            wood: [{ name: "Oil-wax color", hex: "#1D1C1A" }],
-            stone: [
-                { name: "Moonlight White", hex: "#F4F4F0" },
-                { name: "Obsidian", hex: "#0F0F0F" }
-            ],
-            metal: [{ name: "Brushed Gunmetal", hex: "#4A4A4A" }]
+            interior: [
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA57/render.jpg" },
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA57/img1.jpg" }
+            ]
         },
         configurations: [
             { code: "HYTL86201-1500", desc: "1500*700*720 mm", price: 18760 },
@@ -2025,6 +2219,10 @@ const tablesData = [
     // MESA 58 (movida desde gabinetes GAB13)
     {
         id: "mesa-hytl86202",
+        color_general: "Negro",
+        material_general: "Madera",
+        colores_disponibles: ["Negro","Blanco"],
+        materiales_disponibles: ["Madera","Mármol","Metal"],
         name: "Mesa de Té HYTL86202",
         category: "Mesa de Té",
         code: "HYTL86202/HCT1839",
@@ -2053,9 +2251,10 @@ const tablesData = [
             { part: "Detalles metálicos (Metal accents)", material: "Acero inoxidable", detail: "Brushed Gunmetal" }
         ],
         colors: {
-            wood: [{ name: "Oil-wax color", hex: "#1D1C1A" }],
-            stone: [{ name: "Cold River Snow", hex: "#EAEAEA" }],
-            metal: [{ name: "Brushed Gunmetal", hex: "#4A4A4A" }]
+            interior: [
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA58/render.jpg" },
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA58/render.jpg" }
+            ]
         },
         configurations: [
             { code: "HYTL86202-2400", desc: "2400(2300)*1000*820 mm", price: 46480 },
@@ -2077,6 +2276,10 @@ const tablesData = [
     // MESA 59 (movida desde gabinetes GAB14)
     {
         id: "mesa-hytl86202-b",
+        color_general: "Negro",
+        material_general: "Madera",
+        colores_disponibles: ["Negro","Gris"],
+        materiales_disponibles: ["Madera","Mármol"],
         name: "Mesa de Té HYTL86202-B",
         category: "Mesa de Té",
         code: "HYTL86202-B/HCT1839-B",
@@ -2098,9 +2301,10 @@ const tablesData = [
             { part: "Detalles metálicos (Metal accents)", material: "Acero inoxidable", detail: "Brushed Gunmetal" }
         ],
         colors: {
-            wood: [{ name: "Oil-wax color", hex: "#1D1C1A" }],
-            stone: [{ name: "Cold River Snow", hex: "#EAEAEA" }],
-            metal: [{ name: "Brushed Gunmetal", hex: "#4A4A4A" }]
+            interior: [
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA59/render.jpg" },
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA59/render.jpg" }
+            ]
         },
         configurations: [
             { code: "HYTL86202-B-2400", desc: "2400*1000*750 mm", price: 37060 },
@@ -2122,6 +2326,10 @@ const tablesData = [
     // MESA 60 (movida desde gabinetes GAB15)
     {
         id: "mesa-hytl86205",
+        color_general: "Negro",
+        material_general: "Mármol",
+        colores_disponibles: ["Negro","Gris"],
+        materiales_disponibles: ["Madera","Mármol","Metal"],
         name: "Mesa de Té HYTL86205",
         category: "Mesa de Té",
         code: "HYTL86205/MQT7715-C",
@@ -2144,9 +2352,10 @@ const tablesData = [
             { part: "Detalles metálicos (Metal details)", material: "Acero inoxidable", detail: "Brushed Gunmetal" }
         ],
         colors: {
-            wood: [{ name: "Oil-wax color", hex: "#1D1C1A" }],
-            stone: [{ name: "Picasso (Genuine bright)", hex: "#EBEBEB" }],
-            metal: [{ name: "Brushed Gunmetal", hex: "#4A4A4A" }]
+            interior: [
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA60/render.jpg" },
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA60/render.jpg" }
+            ]
         },
         configurations: [
             { code: "HYTL86205-2000", desc: "2000*850*720 mm", price: 44750 },
@@ -2172,6 +2381,10 @@ const tablesData = [
     // MESA 61
     {
         id: "mesa-te-hygl81706",
+        color_general: "Negro",
+        material_general: "Madera",
+        colores_disponibles: ["Gris"],
+        materiales_disponibles: ["Madera","Metal"],
         name: "Tea Cabinet HYGL81706",
         category: "Mesa de Té",
         code: "HYGL81706",
@@ -2194,8 +2407,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Dark Ash / Black Stain", hex: "#2A2A2A" },
-                { name: "Taupe / Bronze Leather", hex: "#8A7A68" }
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA61/render.jpg" }
             ]
         },
         configurations: [
@@ -2209,6 +2421,10 @@ const tablesData = [
     // MESA 62
     {
         id: "mesa-te-hygl81703",
+        color_general: "Negro",
+        material_general: "Madera",
+        colores_disponibles: ["Negro"],
+        materiales_disponibles: ["Madera"],
         name: "Tea Cabinet HYGL81703",
         category: "Mesa de Té",
         code: "HYGL81703",
@@ -2231,7 +2447,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Dark Gray Ash Wood", hex: "#3A3A3A" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA62/render.jpg" }
             ]
         },
         configurations: [
@@ -2245,6 +2461,10 @@ const tablesData = [
     // MESA 63
     {
         id: "mesa-auxiliar-hyjl82309-hg1908",
+        color_general: "Beige",
+        material_general: "Piedra",
+        colores_disponibles: ["Beige","Negro"],
+        materiales_disponibles: ["Piedra","Metal"],
         name: "Mesa Auxiliar HYJL82309",
         category: "Mesa Auxiliar",
         code: "HYJL82309-HG1908",
@@ -2264,8 +2484,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Travertine Beige", hex: "#C8B99A" },
-                { name: "Dark Bronze Metal", hex: "#5C4A2A" }
+                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA63/render.jpg" },
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA63/render.jpg" }
             ]
         },
         configurations: [
@@ -2279,6 +2499,10 @@ const tablesData = [
     // MESA 64
     {
         id: "mesa-auxiliar-set-hyjl82105-hg1917",
+        color_general: "Rojo",
+        material_general: "Mármol",
+        colores_disponibles: ["Rojo","Blanco"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Set Mesas Auxiliares HYJL82105",
         category: "Mesa Auxiliar",
         code: "HYJL82105-HG1917",
@@ -2296,9 +2520,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Rosso Levanto / Burgundy Marble", hex: "#5C1A1A" },
-                { name: "Calacatta White Marble", hex: "#E8E4DE" },
-                { name: "Brushed Antique Bronze", hex: "#8C7B5E" }
+                { name: "Rojo", hex: "#7A3532", image: "/images/MESAS/MESA64/render.jpg" },
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA64/render.jpg" }
             ]
         },
         configurations: [
@@ -2312,6 +2535,10 @@ const tablesData = [
     // MESA 65
     {
         id: "mesa-centro-set-hyjl82103-hc1923",
+        color_general: "Beige",
+        material_general: "Mármol",
+        colores_disponibles: ["Blanco","Gris"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Set Mesas Zen HYJL82103",
         category: "Mesa de Centro",
         code: "HYJL82103-HC1923",
@@ -2333,9 +2560,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Calacatta Gold Marble", hex: "#D4C5A0" },
-                { name: "Ice Gray Striped Marble", hex: "#A8ABAA" },
-                { name: "Brushed Antique Bronze", hex: "#8C7B5E" }
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA65/render.jpg" },
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA65/render.jpg" }
             ]
         },
         configurations: [
@@ -2349,6 +2575,10 @@ const tablesData = [
     // MESA 66
     {
         id: "mesa-centro-set-hc1912",
+        color_general: "Negro",
+        material_general: "Mármol",
+        colores_disponibles: ["Negro","Rojo"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Set Mesas HC1912",
         category: "Mesa de Centro",
         code: "HC1912",
@@ -2367,9 +2597,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Nero Marquina Black Marble", hex: "#1A1A1A" },
-                { name: "Rosso Levanto / Burgundy Marble", hex: "#5C1A1A" },
-                { name: "Champagne Brushed Bronze", hex: "#B8A882" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA66/render.jpg" },
+                { name: "Rojo", hex: "#7A3532", image: "/images/MESAS/MESA66/render.jpg" }
             ]
         },
         configurations: [
@@ -2383,6 +2612,10 @@ const tablesData = [
     // MESA 67
     {
         id: "mesa-auxiliar-hc1912-b",
+        color_general: "Marrón",
+        material_general: "Mármol",
+        colores_disponibles: ["Gris"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa Auxiliar HC1912-B",
         category: "Mesa Auxiliar",
         code: "HC1912-B",
@@ -2400,8 +2633,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Gray Veined Marble", hex: "#6B6560" },
-                { name: "Champagne Brushed Bronze", hex: "#B8A882" }
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA67/render.jpg" }
             ]
         },
         configurations: [
@@ -2415,6 +2647,10 @@ const tablesData = [
     // MESA 68
     {
         id: "mesa-centro-hc1912-a",
+        color_general: "Gris",
+        material_general: "Mármol",
+        colores_disponibles: ["Gris"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa de Centro HC1912-A",
         category: "Mesa de Centro",
         code: "HC1912-A",
@@ -2432,8 +2668,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Black Forest Gray Marble", hex: "#3A3A3A" },
-                { name: "Champagne Brushed Bronze", hex: "#B8A882" }
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA68/render.jpg" }
             ]
         },
         configurations: [
@@ -2447,6 +2682,10 @@ const tablesData = [
     // MESA 69
     {
         id: "mesa-auxiliar-set-hyjl82302-hg1906y",
+        color_general: "Blanco",
+        material_general: "Mármol",
+        colores_disponibles: ["Blanco","Dorado"],
+        materiales_disponibles: ["Mármol","Metal","Madera"],
         name: "Set Mesas Auxiliares HYJL82302-HG1906Y",
         category: "Mesa Auxiliar",
         code: "HYJL82302-HG1906Y",
@@ -2467,9 +2706,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Calacatta White Marble", hex: "#F0EDE8" },
-                { name: "Black Ash Wood", hex: "#1C1C1C" },
-                { name: "Champagne Brushed Bronze", hex: "#B8A882" }
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA69/render.jpg" },
+                { name: "Dorado", hex: "#B8860B", image: "/images/MESAS/MESA69/render.jpg" }
             ]
         },
         configurations: [
@@ -2483,6 +2721,10 @@ const tablesData = [
     // MESA 70
     {
         id: "mesa-centro-hyjl82157",
+        color_general: "Rojo",
+        material_general: "Mármol",
+        colores_disponibles: ["Rojo","Negro"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa de Centro HYJL82157",
         category: "Mesa de Centro",
         code: "HYJL82157",
@@ -2503,9 +2745,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Rosso Levanto Red Marble", hex: "#8B3A3A" },
-                { name: "Gunmetal Black", hex: "#2C2C2C" },
-                { name: "Light Gray Panel", hex: "#A0A0A0" }
+                { name: "Rojo", hex: "#7A3532", image: "/images/MESAS/MESA70/render.jpg" },
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA70/render.jpg" }
             ]
         },
         configurations: [
@@ -2519,6 +2760,10 @@ const tablesData = [
     // MESA 71
     {
         id: "mesa-set-hyjl82156",
+        color_general: "Negro",
+        material_general: "Mármol",
+        colores_disponibles: ["Negro","Verde","Dorado"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Set Mesas HYJL82156",
         category: "Mesa de Centro",
         code: "HYJL82156",
@@ -2538,10 +2783,9 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Nero Marquina Black Marble", hex: "#1A1A1A" },
-                { name: "Verde Guatemala Green Marble", hex: "#2D5A3D" },
-                { name: "Brushed Gold", hex: "#C9A84C" },
-                { name: "Black Sphere", hex: "#111111" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA71/render.jpg" },
+                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA71/render.jpg" },
+                { name: "Dorado", hex: "#B8860B", image: "/images/MESAS/MESA71/render.jpg" }
             ]
         },
         configurations: [
@@ -2555,6 +2799,10 @@ const tablesData = [
     // MESA 72
     {
         id: "mesa-consola-hyjl82153-d",
+        color_general: "Negro",
+        material_general: "Mixto",
+        colores_disponibles: ["Negro"],
+        materiales_disponibles: ["Madera"],
         name: "Mesa Consola HYJL82153-D",
         category: "Mesa Consola",
         code: "HYJL82153-D",
@@ -2574,7 +2822,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Matte Black", hex: "#1C1C1C" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA72/render.jpg" }
             ]
         },
         configurations: [
@@ -2588,6 +2836,10 @@ const tablesData = [
     // MESA 73
     {
         id: "mesa-centro-hyjl82153-c",
+        color_general: "Beige",
+        material_general: "Mármol",
+        colores_disponibles: ["Negro"],
+        materiales_disponibles: ["Madera"],
         name: "Mesa de Centro HYJL82153-C",
         category: "Mesa de Centro",
         code: "HYJL82153-C",
@@ -2607,8 +2859,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Calacatta Arabescato Marble", hex: "#E8E5DF" },
-                { name: "Taupe / Beige Sand", hex: "#B5A898" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA73/render.jpg" }
             ]
         },
         configurations: [
@@ -2622,6 +2873,10 @@ const tablesData = [
     // MESA 74
     {
         id: "mesa-centro-hyjl82153-a",
+        color_general: "Verde",
+        material_general: "Madera",
+        colores_disponibles: ["Blanco","Beige"],
+        materiales_disponibles: ["Mármol"],
         name: "Mesa de Centro HYJL82153-A",
         category: "Mesa de Centro",
         code: "HYJL82153-A",
@@ -2642,8 +2897,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Forest Green", hex: "#2D5A3A" },
-                { name: "Calacatta White Marble", hex: "#E8E5DF" }
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA74/render.jpg" },
+                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA74/render.jpg" }
             ]
         },
         configurations: [
@@ -2657,6 +2912,10 @@ const tablesData = [
     // MESA 75
     {
         id: "mesa-centro-hyjl82152-b",
+        color_general: "Beige",
+        material_general: "Madera",
+        colores_disponibles: ["Verde","Blanco"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa de Centro HYJL82152-B",
         category: "Mesa de Centro",
         code: "HYJL82152-B",
@@ -2674,7 +2933,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Taupe / Beige Sand", hex: "#C4B9AC" }
+                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA75/render.jpg" },
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA75/render.jpg" }
             ]
         },
         configurations: [
@@ -2688,6 +2948,10 @@ const tablesData = [
     // MESA 76
     {
         id: "mesa-centro-hyjl82152-a",
+        color_general: "Verde",
+        material_general: "Mármol",
+        colores_disponibles: ["Beige"],
+        materiales_disponibles: ["Metal"],
         name: "Mesa de Centro HYJL82152-A",
         category: "Mesa de Centro",
         code: "HYJL82152-A",
@@ -2706,8 +2970,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Verde Alpi Green Marble", hex: "#4A6052" },
-                { name: "Dark Ash Wood", hex: "#1C1C1C" }
+                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA76/render.jpg" }
             ]
         },
         configurations: [
@@ -2721,6 +2984,10 @@ const tablesData = [
     // MESA 77
     {
         id: "mesa-auxiliar-hyjl82151-c",
+        color_general: "Blanco",
+        material_general: "Mármol",
+        colores_disponibles: ["Verde","Negro"],
+        materiales_disponibles: ["Mármol","Madera"],
         name: "Mesa Auxiliar HYJL82151-C",
         category: "Mesa Auxiliar",
         code: "HYJL82151-C",
@@ -2739,9 +3006,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Arabescato White Marble", hex: "#D8D4CF" },
-                { name: "Black Ash Wood", hex: "#1C1C1C" },
-                { name: "Brushed Gold Rim", hex: "#C9A84C" }
+                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA77/render.jpg" },
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA77/render.jpg" }
             ]
         },
         configurations: [
@@ -2755,6 +3021,10 @@ const tablesData = [
     // MESA 78
     {
         id: "mesa-centro-hyjl82151-b",
+        color_general: "Verde",
+        material_general: "Mármol",
+        colores_disponibles: ["Blanco","Negro","Dorado"],
+        materiales_disponibles: ["Mármol","Madera","Metal"],
         name: "Mesa de Centro HYJL82151-B",
         category: "Mesa de Centro",
         code: "HYJL82151-B",
@@ -2774,10 +3044,9 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Gray-Green Veined Marble", hex: "#5A6458" },
-                { name: "Dark Bronze", hex: "#5C4A2A" },
-                { name: "Dark Gray Ash", hex: "#4A4A4A" },
-                { name: "Brushed Gold Rim", hex: "#C9A84C" }
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA78/render.jpg" },
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA78/render.jpg" },
+                { name: "Dorado", hex: "#B8860B", image: "/images/MESAS/MESA78/render.jpg" }
             ]
         },
         configurations: [
@@ -2791,6 +3060,10 @@ const tablesData = [
     // MESA 79
     {
         id: "mesa-centro-hyjl82151-a",
+        color_general: "Beige",
+        material_general: "Mármol",
+        colores_disponibles: ["Gris","Marrón","Dorado"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Mesa de Centro HYJL82151-A",
         category: "Mesa de Centro",
         code: "HYJL82151-A",
@@ -2809,9 +3082,9 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Patagonia Exotic Marble", hex: "#C8B89A" },
-                { name: "Brushed Gold / Brass", hex: "#C9A84C" },
-                { name: "Dark Gray Ash", hex: "#4A4A4A" }
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA79/render.jpg" },
+                { name: "Marrón", hex: "#8B6914", image: "/images/MESAS/MESA79/render.jpg" },
+                { name: "Dorado", hex: "#B8860B", image: "/images/MESAS/MESA79/render.jpg" }
             ]
         },
         configurations: [
@@ -2825,6 +3098,10 @@ const tablesData = [
     // MESA 80
     {
         id: "mesa-centro-hyjl82137",
+        color_general: "Gris",
+        material_general: "Vidrio",
+        colores_disponibles: ["Beige"],
+        materiales_disponibles: ["Piedra","Vidrio"],
         name: "Mesa de Centro HYJL82137",
         category: "Mesa de Centro",
         code: "HYJL82137",
@@ -2842,8 +3119,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Smoked Gray Glass", hex: "#3A3A3A" },
-                { name: "Travertine Beige", hex: "#D4C4A0" }
+                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA80/render.jpg" }
             ]
         },
         configurations: [
@@ -2857,6 +3133,10 @@ const tablesData = [
     // MESA 81
     {
         id: "mesa-set-hyjl82136",
+        color_general: "Rojo",
+        material_general: "Mármol",
+        colores_disponibles: ["Gris","Rojo"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Set Mesas HYJL82136",
         category: "Mesa de Centro",
         code: "HYJL82136",
@@ -2879,10 +3159,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Burgundy / Bordeaux", hex: "#6B2737" },
-                { name: "Taupe / Gray Leather", hex: "#9A8F85" },
-                { name: "Brushed Gold", hex: "#C9A84C" },
-                { name: "White Stone", hex: "#F0EDEA" }
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA81/render.jpg" },
+                { name: "Rojo", hex: "#7A3532", image: "/images/MESAS/MESA81/render.jpg" }
             ]
         },
         configurations: [
@@ -2896,6 +3174,10 @@ const tablesData = [
     // MESA 82
     {
         id: "mesa-auxiliar-hyjl82136-b",
+        color_general: "Rojo",
+        material_general: "Madera",
+        colores_disponibles: ["Gris","Rojo"],
+        materiales_disponibles: ["Metal"],
         name: "Mesa Auxiliar HYJL82136-B",
         category: "Mesa Auxiliar",
         code: "HYJL82136-B",
@@ -2916,9 +3198,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Burgundy / Bordeaux", hex: "#6B2737" },
-                { name: "Taupe / Gray Leather", hex: "#9A8F85" },
-                { name: "Brushed Gold", hex: "#C9A84C" }
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA82/render.jpg" },
+                { name: "Rojo", hex: "#7A3532", image: "/images/MESAS/MESA82/render.jpg" }
             ]
         },
         configurations: [
@@ -2932,6 +3213,10 @@ const tablesData = [
     // MESA 83
     {
         id: "mesa-centro-hyjl82136-a",
+        color_general: "Negro",
+        material_general: "Mármol",
+        colores_disponibles: ["Gris","Negro"],
+        materiales_disponibles: ["Mármol"],
         name: "Mesa de Centro HYJL82136-A",
         category: "Mesa de Centro",
         code: "HYJL82136-A",
@@ -2951,10 +3236,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Nero Marquina Dark Marble", hex: "#2A2A2A" },
-                { name: "Burgundy / Bordeaux", hex: "#6B2737" },
-                { name: "Taupe / Gray Leather", hex: "#9A8F85" },
-                { name: "Brushed Gold", hex: "#C9A84C" }
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA83/render.jpg" },
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA83/render.jpg" }
             ]
         },
         configurations: [
@@ -2968,6 +3251,10 @@ const tablesData = [
     // MESA 84
     {
         id: "mesa-set-hyjl82135",
+        color_general: "Negro",
+        material_general: "Mármol",
+        colores_disponibles: ["Negro"],
+        materiales_disponibles: ["Mármol"],
         name: "Set Mesas HYJL82135",
         category: "Mesa de Centro",
         code: "HYJL82135",
@@ -2987,8 +3274,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Nero Marquina Black Marble", hex: "#1A1A1A" },
-                { name: "Gunmetal Black", hex: "#2C2C2C" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA84/render.jpg" }
             ]
         },
         configurations: [
@@ -3002,6 +3288,10 @@ const tablesData = [
     // MESA 85
     {
         id: "mesa-centro-hyjl82135",
+        color_general: "Negro",
+        material_general: "Mármol",
+        colores_disponibles: ["Negro","Plateado"],
+        materiales_disponibles: ["Mármol"],
         name: "Mesa de Centro HYJL82135",
         category: "Mesa de Centro",
         code: "HYJL82135",
@@ -3019,8 +3309,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Nero Marquina Black Marble", hex: "#1A1A1A" },
-                { name: "Gunmetal Black", hex: "#2C2C2C" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA85/render.jpg" },
+                { name: "Plateado", hex: "#C0C0C0", image: "/images/MESAS/MESA85/render.jpg" }
             ]
         },
         configurations: [
@@ -3034,6 +3324,10 @@ const tablesData = [
     // MESA 86
     {
         id: "mesa-centro-hyjl82132-b",
+        color_general: "Rojo",
+        material_general: "Madera",
+        colores_disponibles: ["Rojo"],
+        materiales_disponibles: ["Madera"],
         name: "Mesa de Centro HYJL82132-B",
         category: "Mesa de Centro",
         code: "HYJL82132-B",
@@ -3051,7 +3345,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Burgundy / Terracotta Red", hex: "#7B2D2D" }
+                { name: "Rojo", hex: "#8B2020", image: "/images/MESAS/MESA86/render.jpg" }
             ]
         },
         configurations: [
@@ -3065,6 +3359,10 @@ const tablesData = [
     // MESA 87
     {
         id: "mesa-centro-hyjl82132-a",
+        color_general: "Negro",
+        material_general: "Mármol",
+        colores_disponibles: ["Negro"],
+        materiales_disponibles: ["Mármol"],
         name: "Mesa de Centro HYJL82132-A",
         category: "Mesa de Centro",
         code: "HYJL82132-A",
@@ -3082,8 +3380,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Grigio Carnico Dark Marble", hex: "#3A3A3A" },
-                { name: "Gunmetal Black", hex: "#2C2C2C" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA87/render.jpg" }
             ]
         },
         configurations: [
@@ -3097,6 +3394,10 @@ const tablesData = [
     // MESA 88
     {
         id: "mesa-set-hyjl82122-hc1951",
+        color_general: "Negro",
+        material_general: "Vidrio",
+        colores_disponibles: ["Negro","Beige","Plateado"],
+        materiales_disponibles: ["Mármol","Metal"],
         name: "Set Mesas HYJL82122-HC1951A-B-C",
         category: "Mesa de Centro",
         code: "HYJL82122-HC1951A-B-C",
@@ -3117,9 +3418,9 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Smoked Dark Mirror Glass", hex: "#2A2A2A" },
-                { name: "Fantasy Brown Marble", hex: "#C8BEA8" },
-                { name: "Gunmetal", hex: "#3C3C3C" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA88/render.jpg" },
+                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA88/render.jpg" },
+                { name: "Plateado", hex: "#C0C0C0", image: "/images/MESAS/MESA88/render.jpg" }
             ]
         },
         configurations: [
@@ -3133,6 +3434,10 @@ const tablesData = [
     // MESA 89
     {
         id: "mesa-set-hyjl82112-chin",
+        color_general: "Blanco",
+        material_general: "Mármol",
+        colores_disponibles: ["Blanco","Negro"],
+        materiales_disponibles: ["Mármol"],
         name: "Set Mesas HYJL82112-CHIN",
         category: "Mesa de Centro",
         code: "HYJL82112-CHIN",
@@ -3152,10 +3457,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Calacatta White Marble", hex: "#F0EDE8" },
-                { name: "Nero Marquina Black Marble", hex: "#1A1A1A" },
-                { name: "Dark Walnut / Ebony", hex: "#2C1810" },
-                { name: "Charcoal Gray", hex: "#4A4A4A" }
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA89/render.jpg" },
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA89/render.jpg" }
             ]
         },
         configurations: [
@@ -3169,6 +3472,10 @@ const tablesData = [
     // MESA 90
     {
         id: "mesa-centro-hyjl82111-b-hc1930y-b",
+        color_general: "Negro",
+        material_general: "Madera",
+        colores_disponibles: ["Gris"],
+        materiales_disponibles: ["Madera"],
         name: "Mesa de Centro HYJL82111-B-HC1930Y-B",
         category: "Mesa de Centro",
         code: "HYJL82111-B-HC1930Y-B",
@@ -3186,7 +3493,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Charcoal Gray Ash Wood", hex: "#3A3535" }
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA90/render.jpg" }
             ]
         },
         configurations: [
@@ -3200,6 +3507,10 @@ const tablesData = [
     // MESA 91
     {
         id: "mesa-set-hyjl82109-hc1931",
+        color_general: "Negro",
+        material_general: "Mármol",
+        colores_disponibles: ["Negro","Beige"],
+        materiales_disponibles: ["Mármol"],
         name: "Set Mesas HYJL82109-HC1931",
         category: "Mesa de Centro",
         code: "HYJL82109-HC1931",
@@ -3220,8 +3531,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Emperador Dark Marble", hex: "#2C1F1A" },
-                { name: "Dark Bronze", hex: "#3D2B1A" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA91/render.jpg" },
+                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA91/render.jpg" }
             ]
         },
         configurations: [
@@ -3235,6 +3546,10 @@ const tablesData = [
     // MESA 92
     {
         id: "mesa-set-hyjl82107-hc1929",
+        color_general: "Blanco",
+        material_general: "Mármol",
+        colores_disponibles: ["Gris","Beige"],
+        materiales_disponibles: ["Mármol"],
         name: "Set Mesas HYJL82107-HC1929",
         category: "Mesa de Centro",
         code: "HYJL82107-HC1929",
@@ -3254,10 +3569,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Calacatta White Marble", hex: "#F0EDE8" },
-                { name: "Nero Marquina Dark Marble", hex: "#2A2A2A" },
-                { name: "Dark Bronze / Gunmetal", hex: "#3A3530" },
-                { name: "Taupe Leather Shelf", hex: "#8A7D6E" }
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA92/render.jpg" },
+                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA92/render.jpg" }
             ]
         },
         configurations: [
@@ -3271,6 +3584,10 @@ const tablesData = [
     // MESA 93
     {
         id: "mesa-centro-hyjl82106-hc1922y",
+        color_general: "Negro",
+        material_general: "Madera",
+        colores_disponibles: ["Marrón","Negro"],
+        materiales_disponibles: ["Madera"],
         name: "Mesa de Centro HYJL82106-HC1922Y",
         category: "Mesa de Centro",
         code: "HYJL82106-HC1922Y",
@@ -3288,8 +3605,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Dark Walnut / Espresso Wood", hex: "#2E1F14" },
-                { name: "Gunmetal Gray", hex: "#3A3A3A" }
+                { name: "Marrón", hex: "#8B6914", image: "/images/MESAS/MESA93/render.jpg" },
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA93/render.jpg" }
             ]
         },
         configurations: [

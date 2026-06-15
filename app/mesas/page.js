@@ -92,6 +92,17 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
     const [isPaused, setIsPaused] = useState(false);
     const [showPriceModal, setShowPriceModal] = useState(false);
     const [mobileImageIndex, setMobileImageIndex] = useState(0);
+    const [selectedColorIdx, setSelectedColorIdx] = useState(null);
+
+    const mainImage = useMemo(() => {
+        if (selectedColorIdx !== null) {
+            const img = selectedProduct?.colors?.interior?.[selectedColorIdx]?.image;
+            if (img) return img;
+        }
+        return selectedProduct?.image;
+    }, [selectedProduct, selectedColorIdx]);
+
+    useEffect(() => { setSelectedColorIdx(null); }, [selectedProduct?.id]);
 
     const allImages = useMemo(() => {
         if (!selectedProduct) return [];
@@ -195,16 +206,25 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
                         {/* ESCRITORIO: IMAGEN PRINCIPAL + CARRUSEL TÉCNICO */}
                         <div className="hidden md:flex flex-col gap-6 h-full">
                             <div className="aspect-video w-full bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden p-4 flex items-center justify-center relative group shrink-0">
-                                <div className="relative w-full h-full">
-                                    <Image
-                                        src={selectedProduct.image}
-                                        alt="Render"
-                                        fill
-                                        priority
-                                        className="object-contain mix-blend-multiply"
-                                        sizes="60vw"
-                                    />
-                                </div>
+                                <AnimatePresence mode="wait">
+                                    <motion.div
+                                        key={mainImage}
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        transition={{ duration: 0.25 }}
+                                        className="relative w-full h-full"
+                                    >
+                                        <Image
+                                            src={mainImage}
+                                            alt="Render"
+                                            fill
+                                            priority
+                                            className="object-contain mix-blend-multiply"
+                                            sizes="60vw"
+                                        />
+                                    </motion.div>
+                                </AnimatePresence>
                             </div>
 
                             {selectedProduct.schematics && selectedProduct.schematics.length > 0 && (
@@ -304,16 +324,20 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
                                     </h3>
                                     <div className="flex flex-wrap gap-4 mb-4 p-4 bg-gray-50 rounded-xl justify-center md:justify-start">
                                         {selectedProduct.colors.interior.map((color, i) => (
-                                            <div key={i} className="text-center group flex flex-col items-center gap-2 cursor-help">
+                                            <button
+                                                key={i}
+                                                onClick={() => setSelectedColorIdx(selectedColorIdx === i ? null : i)}
+                                                className="text-center flex flex-col items-center gap-2 group"
+                                            >
                                                 <div
-                                                    className="w-12 h-12 rounded-full shadow-md border-2 border-white group-hover:scale-110 transition-transform duration-300"
+                                                    className={`w-12 h-12 rounded-full shadow-md transition-all duration-200 group-hover:scale-110 ${selectedColorIdx === i ? 'border-4 border-black' : 'border-2 border-white'}`}
                                                     style={{ backgroundColor: color.hex }}
                                                     title={color.name}
-                                                ></div>
+                                                />
                                                 <span className="text-[9px] text-gray-500 uppercase font-bold max-w-[60px] leading-tight">
                                                     {color.name}
                                                 </span>
-                                            </div>
+                                            </button>
                                         ))}
                                     </div>
                                 </div>
@@ -390,10 +414,88 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
 });
 ProductDrawer.displayName = 'ProductDrawer';
 
+// --- COMPONENTE TARJETA CON HOVER DE COLOR ---
+const ProductCard = memo(({ item, index, onSelect }) => {
+    const [hoverColorIdx, setHoverColorIdx] = useState(null);
+    const cardImage = useMemo(() => {
+        if (hoverColorIdx !== null) {
+            const img = item.colors?.interior?.[hoverColorIdx]?.image;
+            if (img) return img;
+        }
+        return item.image || "/images/placeholder.jpg";
+    }, [item, hoverColorIdx]);
+
+    return (
+        <motion.div
+            layout
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.3, delay: index * 0.05 }}
+            className="group block h-full flex flex-col relative"
+        >
+            <div
+                onClick={() => onSelect(item)}
+                className="relative aspect-[4/3] overflow-hidden rounded-sm bg-white mb-4 cursor-pointer"
+            >
+                <div className="absolute top-3 left-3 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="bg-white/90 backdrop-blur text-black border border-gray-100 text-[10px] font-mono px-2 py-1 flex items-center gap-2 rounded shadow-sm">
+                        <Barcode size={10} /> {item.code}
+                    </div>
+                </div>
+                <div className="relative w-full h-full p-8 transition-transform duration-500 ease-out group-hover:scale-105">
+                    <Image
+                        src={cardImage}
+                        alt={item.name}
+                        fill
+                        priority={index < 6}
+                        sizes="400px"
+                        unoptimized
+                        className="object-contain"
+                    />
+                </div>
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    <span className="bg-black text-white px-4 py-2 text-[10px] font-bold uppercase tracking-widest shadow-xl rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        Ver Detalles
+                    </span>
+                </div>
+            </div>
+            <div className="flex flex-col gap-1">
+                <div className="flex justify-between items-baseline">
+                    <h3 className="text-lg font-medium text-gray-900 leading-tight group-hover:text-gray-600 transition-colors cursor-pointer" onClick={() => onSelect(item)}>{item.name}</h3>
+                    <span className="text-sm font-bold text-gray-900 whitespace-nowrap ml-4">{formatPrice(item.priceBase)}</span>
+                </div>
+                <div className="flex items-center gap-2 mt-1">
+                    <p className="text-[10px] text-gray-400 uppercase tracking-widest mr-2">{item.category}</p>
+                    {item.colors?.interior && (
+                        <div className="flex -space-x-1">
+                            {item.colors.interior.slice(0, 4).map((c, i) => (
+                                <div
+                                    key={i}
+                                    className="w-4 h-4 rounded-full border border-white shadow-sm cursor-pointer hover:scale-125 transition-transform"
+                                    style={{ backgroundColor: c.hex }}
+                                    onMouseEnter={() => setHoverColorIdx(i)}
+                                    onMouseLeave={() => setHoverColorIdx(null)}
+                                />
+                            ))}
+                            {item.colors.interior.length > 4 && (
+                                <div className="w-4 h-4 rounded-full bg-gray-100 border border-white flex items-center justify-center text-[6px] text-gray-500">+</div>
+                            )}
+                        </div>
+                    )}
+                </div>
+            </div>
+        </motion.div>
+    );
+});
+ProductCard.displayName = 'ProductCard';
+
 export default function MesasPage() {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState("Todos");
+  const [activeColor, setActiveColor] = useState(null);
+  const [activeMaterial, setActiveMaterial] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -445,16 +547,30 @@ export default function MesasPage() {
     return ["Todos", ...uniqueCats];
   }, [products]);
 
+  const allColors = useMemo(() => {
+    const set = new Set();
+    products.forEach(p => (p.colores_disponibles || []).forEach(c => set.add(c)));
+    return [...set].sort();
+  }, [products]);
+
+  const allMaterials = useMemo(() => {
+    const set = new Set();
+    products.forEach(p => (p.materiales_disponibles || []).forEach(m => set.add(m)));
+    return [...set].sort();
+  }, [products]);
+
   const filteredProducts = useMemo(() => {
     const searchLower = searchTerm.toLowerCase();
     return products.filter(item => {
       const matchCategory = activeCategory === "Todos" || item.category === activeCategory;
       if (!matchCategory) return false;
+      if (activeColor && !(item.colores_disponibles || []).includes(activeColor)) return false;
+      if (activeMaterial && !(item.materiales_disponibles || []).includes(activeMaterial)) return false;
       if (searchTerm === "") return true;
       return item.name.toLowerCase().includes(searchLower) ||
              item.code.toLowerCase().includes(searchLower);
     });
-  }, [products, activeCategory, searchTerm]);
+  }, [products, activeCategory, activeColor, activeMaterial, searchTerm]);
 
   // --- SCROLL HANDLE ---
   const handleCategoryChange = (cat) => {
@@ -533,7 +649,8 @@ export default function MesasPage() {
         transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
         className="sticky top-0 z-40 bg-white/95 backdrop-blur-xl border-b border-gray-100 shadow-sm transition-all duration-300"
       >
-        <div className="container mx-auto px-6 py-4">
+        <div className="container mx-auto px-6 py-4 space-y-3">
+            {/* Fila 1: Categorías + búsqueda */}
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
 
                 <div ref={filtersRef} className="flex gap-2 overflow-x-auto flex-1 pb-2 md:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
@@ -577,6 +694,36 @@ export default function MesasPage() {
                 </div>
                 </div>
             </div>
+
+            {/* Fila 2: Filtros color + material */}
+            {!isLoading && (allColors.length > 0 || allMaterials.length > 0) && (
+                <div className="flex flex-wrap gap-2 items-center">
+                    <span className="text-[9px] font-bold uppercase tracking-widest text-gray-400 mr-1">Color:</span>
+                    {allColors.map(color => (
+                        <button
+                            key={color}
+                            onClick={() => setActiveColor(activeColor === color ? null : color)}
+                            className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all duration-200 border whitespace-nowrap
+                                ${activeColor === color ? 'bg-black text-white border-black' : 'bg-transparent text-gray-500 border-gray-200 hover:border-gray-400 hover:text-gray-800'}`}
+                        >{color}</button>
+                    ))}
+                    <span className="text-[9px] font-bold uppercase tracking-widest text-gray-400 ml-3 mr-1">Material:</span>
+                    {allMaterials.map(mat => (
+                        <button
+                            key={mat}
+                            onClick={() => setActiveMaterial(activeMaterial === mat ? null : mat)}
+                            className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all duration-200 border whitespace-nowrap
+                                ${activeMaterial === mat ? 'bg-black text-white border-black' : 'bg-transparent text-gray-500 border-gray-200 hover:border-gray-400 hover:text-gray-800'}`}
+                        >{mat}</button>
+                    ))}
+                    {(activeColor || activeMaterial) && (
+                        <button
+                            onClick={() => { setActiveColor(null); setActiveMaterial(null); }}
+                            className="ml-2 text-[10px] text-gray-400 hover:text-black underline"
+                        >Limpiar</button>
+                    )}
+                </div>
+            )}
         </div>
       </motion.div>
 
@@ -596,7 +743,7 @@ export default function MesasPage() {
             <div className="text-center py-32 text-gray-400 flex flex-col items-center">
                 <SearchIcon size={48} className="mb-4 opacity-20" />
                 <p className="text-lg">No encontramos mesas.</p>
-                <button onClick={() => {setSearchTerm(""); handleCategoryChange("Todos")}} className="mt-4 text-xs font-bold uppercase border-b border-black pb-0.5 hover:opacity-50 transition-opacity">
+                <button onClick={() => {setSearchTerm(""); setActiveColor(null); setActiveMaterial(null); handleCategoryChange("Todos")}} className="mt-4 text-xs font-bold uppercase border-b border-black pb-0.5 hover:opacity-50 transition-opacity">
                     Limpiar filtros
                 </button>
             </div>
@@ -604,71 +751,7 @@ export default function MesasPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
                 <AnimatePresence mode="popLayout">
                 {filteredProducts.map((item, index) => (
-                <motion.div
-                    layout
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.9 }}
-                    transition={{ duration: 0.3, delay: index * 0.05 }}
-                    key={item.id}
-                    className="group block h-full flex flex-col relative"
-                >
-                    <div
-                        onClick={() => setSelectedProduct(item)}
-                        className="relative aspect-[4/3] overflow-hidden rounded-sm bg-white mb-4 cursor-pointer"
-                    >
-                        <div className="absolute top-3 left-3 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div className="bg-white/90 backdrop-blur text-black border border-gray-100 text-[10px] font-mono px-2 py-1 flex items-center gap-2 rounded shadow-sm">
-                                <Barcode size={10} /> {item.code}
-                            </div>
-                        </div>
-
-                        <div className="relative w-full h-full p-8 transition-transform duration-500 ease-out group-hover:scale-105">
-                             <Image
-                                src={item.image || "/images/placeholder.jpg"}
-                                alt={item.name}
-                                fill
-                                priority={index < 6}
-                                sizes="100px"
-                                unoptimized
-                                className="object-contain"
-                             />
-                        </div>
-
-                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                            <span className="bg-black text-white px-4 py-2 text-[10px] font-bold uppercase tracking-widest shadow-xl rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                                Ver Detalles
-                            </span>
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col gap-1">
-                        <div className="flex justify-between items-baseline">
-                            <h3 className="text-lg font-medium text-gray-900 leading-tight group-hover:text-gray-600 transition-colors cursor-pointer" onClick={() => setSelectedProduct(item)}>{item.name}</h3>
-                            <span className="text-sm font-bold text-gray-900 whitespace-nowrap ml-4">{formatPrice(item.priceBase)}</span>
-                        </div>
-
-                        <div className="flex items-center gap-2 mt-1">
-                            <p className="text-[10px] text-gray-400 uppercase tracking-widest mr-2">{item.category}</p>
-                            {item.colors?.interior && (
-                                <div className="flex -space-x-1">
-                                    {item.colors.interior.slice(0, 4).map((c, i) => (
-                                        <div
-                                            key={i}
-                                            className="w-3 h-3 rounded-full border border-white shadow-sm"
-                                            style={{ backgroundColor: c.hex }}
-                                        />
-                                    ))}
-                                    {item.colors.interior.length > 4 && (
-                                        <div className="w-3 h-3 rounded-full bg-gray-100 border border-white flex items-center justify-center text-[6px] text-gray-500">
-                                            +
-                                        </div>
-                                    )}
-                                </div>
-                            )}
-                        </div>
-                    </div>
-                </motion.div>
+                    <ProductCard key={item.id} item={item} index={index} onSelect={setSelectedProduct} />
                 ))}
                 </AnimatePresence>
             </div>
