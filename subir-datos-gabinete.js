@@ -862,7 +862,11 @@ const gabinetesData = [
         { part: "Estructura y Almacenaje", material: "MDF Grado E0 + Acero Inox", detail: "Estructura inspirada en armas de la era Qin con almacenaje discreto de 'borde oculto'" },
         { part: "Funciones Inteligentes", material: "Tecnología Oculta", detail: "Carga inalámbrica integrada y hub de energía emergente multidispositivo" }
     ],
-    colors: null,
+    colors: {
+        wood: [{ name: "Dark Ash (Oil-wax)", hex: "#1A1817" }],
+        leather: [{ name: "Beige / Taupe", hex: "#C9B99A" }],
+        metal: [{ name: "Matte Black", hex: "#1C1C1C" }]
+    },
     configurations: [
         { code: "HYTL86301-1500", desc: "1500*780*760 mm", price: null },
         { code: "HYTL86301-1800", desc: "1800*730*760 mm", price: null }
