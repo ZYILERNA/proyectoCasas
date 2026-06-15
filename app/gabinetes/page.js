@@ -490,7 +490,7 @@ const ProductCard = memo(({ item, index, onSelect }) => {
             const img = getAllColors(item.colors)?.[hoverColorIdx]?.image;
             if (img) return img;
         }
-        return item.image || "/images/placeholder.jpg";
+        return item.image || "/images/placeholder.webp";
     }, [item, hoverColorIdx]);
 
     return (
@@ -664,7 +664,7 @@ export default function GabinetesPage() {
         >
             <video
                 autoPlay loop muted playsInline preload="auto"
-                poster="/images/gabinetes-header.jpg"
+                poster="/images/gabinetes-header.webp"
                 className="w-full h-full object-cover opacity-60 scale-110"
             >
                 <source src="/videos/gabinetes-hero.webm" type="video/webm" />

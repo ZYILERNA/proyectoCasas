@@ -311,7 +311,7 @@ export default function CerradurasPage() {
       <section className="relative min-h-[85vh] flex flex-col justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/images/CERRADURA/detalle-cuerpo.jpg"
+            src="/images/CERRADURA/detalle-cuerpo.webp"
             alt=""
             className="w-full h-full object-cover object-center opacity-15"
           />
@@ -435,7 +435,7 @@ export default function CerradurasPage() {
               <div className="absolute inset-0 bg-gradient-to-r from-[#0d0d0d] via-[#0d0d0d]/70 to-transparent z-10 pointer-events-none" />
               <div className="absolute inset-0 flex items-center justify-end z-0">
                 <img
-                  src="/images/CERRADURA/cilindro-core.png"
+                  src="/images/CERRADURA/cilindro-core.webp"
                   alt="Cilindro"
                   className="w-[60%] h-full object-contain object-right translate-x-6 group-hover:translate-x-2 transition-transform duration-700"
                 />
@@ -470,7 +470,7 @@ export default function CerradurasPage() {
               className="md:col-span-5 h-72 relative border border-white/8 rounded-2xl overflow-hidden group"
             >
               <img
-                src="/images/CERRADURA/detalle-cuerpo.jpg"
+                src="/images/CERRADURA/detalle-cuerpo.webp"
                 alt="Detalle cuerpo"
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />

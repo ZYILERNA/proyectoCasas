@@ -469,7 +469,7 @@ const ProductCard = memo(({ item, index, onSelect }) => {
             const img = item.colors?.interior?.[hoverColorIdx]?.image;
             if (img) return img;
         }
-        return item.image || "/images/placeholder.jpg";
+        return item.image || "/images/placeholder.webp";
     }, [item, hoverColorIdx]);
 
     return (
@@ -642,7 +642,7 @@ export default function SillasPage() {
                 >
                     <video
                         autoPlay loop muted playsInline preload="auto"
-                        poster="/images/sillas-header.jpg"
+                        poster="/images/sillas-header.webp"
                         className="w-full h-full object-cover opacity-60 scale-110"
                     >
                         <source src="/videos/sillas-hero.webm" type="video/webm" />

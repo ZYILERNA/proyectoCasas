@@ -23,33 +23,33 @@ const sofasData = [
         code: "HYSF88101/2928BS",
         modules: "4D (2795mm)",
         priceBase: 35580,
-        image: "/images/SOFA/SOFA1/render_iso.jpg",
+        image: "/images/SOFA/SOFA1/render_iso.webp",
         schematics: [
-            "/images/SOFA/SOFA1/img1.jpg",
-            "/images/SOFA/SOFA1/img2.jpg",
-            "/images/SOFA/SOFA1/img3.jpg",
-            "/images/SOFA/SOFA1/img4.jpg",
-            "/images/SOFA/SOFA1/img5.jpg",
-            "/images/SOFA/SOFA1/img6.jpg",
-            "/images/SOFA/SOFA1/img7.jpg",
-            "/images/SOFA/SOFA1/img8.jpg",
-            "/images/SOFA/SOFA1/img9.jpg",
-            "/images/SOFA/SOFA1/img10.jpg",
-            "/images/SOFA/SOFA1/img11.jpg",
-            "/images/SOFA/SOFA1/img12.jpg",
-            "/images/SOFA/SOFA1/img13.jpg",
-            "/images/SOFA/SOFA1/img14.jpg",
-            "/images/SOFA/SOFA1/img15.jpg",
-            "/images/SOFA/SOFA1/img16.jpg",
-            "/images/SOFA/SOFA1/img17.jpg",
-            "/images/SOFA/SOFA1/img18.jpg",
-            "/images/SOFA/SOFA1/img19.jpg",
-            "/images/SOFA/SOFA1/img20.jpg",
-            "/images/SOFA/SOFA1/img21.jpg",
-            "/images/SOFA/SOFA1/img22.jpg",
-            "/images/SOFA/SOFA1/img23.jpg",
-            "/images/SOFA/SOFA1/img24.jpg",
-            "/images/SOFA/SOFA1/img25.jpg"
+            "/images/SOFA/SOFA1/img1.webp",
+            "/images/SOFA/SOFA1/img2.webp",
+            "/images/SOFA/SOFA1/img3.webp",
+            "/images/SOFA/SOFA1/img4.webp",
+            "/images/SOFA/SOFA1/img5.webp",
+            "/images/SOFA/SOFA1/img6.webp",
+            "/images/SOFA/SOFA1/img7.webp",
+            "/images/SOFA/SOFA1/img8.webp",
+            "/images/SOFA/SOFA1/img9.webp",
+            "/images/SOFA/SOFA1/img10.webp",
+            "/images/SOFA/SOFA1/img11.webp",
+            "/images/SOFA/SOFA1/img12.webp",
+            "/images/SOFA/SOFA1/img13.webp",
+            "/images/SOFA/SOFA1/img14.webp",
+            "/images/SOFA/SOFA1/img15.webp",
+            "/images/SOFA/SOFA1/img16.webp",
+            "/images/SOFA/SOFA1/img17.webp",
+            "/images/SOFA/SOFA1/img18.webp",
+            "/images/SOFA/SOFA1/img19.webp",
+            "/images/SOFA/SOFA1/img20.webp",
+            "/images/SOFA/SOFA1/img21.webp",
+            "/images/SOFA/SOFA1/img22.webp",
+            "/images/SOFA/SOFA1/img23.webp",
+            "/images/SOFA/SOFA1/img24.webp",
+            "/images/SOFA/SOFA1/img25.webp"
         ],
         specs: {
             dimensions: "2795 * 915 * 790 mm",
@@ -64,9 +64,9 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Gris", hex: "#9BA4B1", image: "/images/SOFA/SOFA1/img1.jpg" },
-                { name: "Beige", hex: "#D4C9B0", image: "/images/SOFA/SOFA1/img3.jpg" },
-                { name: "Marrón", hex: "#8B6F52", image: "/images/SOFA/SOFA1/img17.jpg" }
+                { name: "Gris", hex: "#9BA4B1", image: "/images/SOFA/SOFA1/img1.webp" },
+                { name: "Beige", hex: "#D4C9B0", image: "/images/SOFA/SOFA1/img3.webp" },
+                { name: "Marrón", hex: "#8B6F52", image: "/images/SOFA/SOFA1/img17.webp" }
             ]
         },
         configurations: [
@@ -96,16 +96,16 @@ const sofasData = [
         code: "HYSF88103/2951BS",
         modules: "Group: 2LE+1S+R+1S+ST",
         priceBase: 121990,
-        image: "/images/SOFA/SOFA2/render_iso.jpg",
+        image: "/images/SOFA/SOFA2/render_iso.webp",
         schematics: [
-            "/images/SOFA/SOFA2/img1.jpg",
-            "/images/SOFA/SOFA2/img2.jpg",
-            "/images/SOFA/SOFA2/img3.jpg",
-            "/images/SOFA/SOFA2/img4.jpg",
-            "/images/SOFA/SOFA2/img5.jpg",
-            "/images/SOFA/SOFA2/img6.jpg",
-            "/images/SOFA/SOFA2/img7.jpg",
-            "/images/SOFA/SOFA2/img8.jpg"
+            "/images/SOFA/SOFA2/img1.webp",
+            "/images/SOFA/SOFA2/img2.webp",
+            "/images/SOFA/SOFA2/img3.webp",
+            "/images/SOFA/SOFA2/img4.webp",
+            "/images/SOFA/SOFA2/img5.webp",
+            "/images/SOFA/SOFA2/img6.webp",
+            "/images/SOFA/SOFA2/img7.webp",
+            "/images/SOFA/SOFA2/img8.webp"
         ],
         specs: {
             dimensions: "4430 * 2880 * 700 mm",
@@ -120,11 +120,11 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Marrón", hex: "#4A4644", image: "/images/SOFA/SOFA2/img1.jpg" },
-                { name: "Gris", hex: "#9BA4B1", image: "/images/SOFA/SOFA2/img3.jpg" },
-                { name: "Azul", hex: "#4E7F8C", image: "/images/SOFA/SOFA2/img2.jpg" },
-                { name: "Verde", hex: "#7A8A55", image: "/images/SOFA/SOFA2/img4.jpg" },
-                { name: "Beige", hex: "#D4C9B0", image: "/images/SOFA/SOFA2/img8.jpg" }
+                { name: "Marrón", hex: "#4A4644", image: "/images/SOFA/SOFA2/img1.webp" },
+                { name: "Gris", hex: "#9BA4B1", image: "/images/SOFA/SOFA2/img3.webp" },
+                { name: "Azul", hex: "#4E7F8C", image: "/images/SOFA/SOFA2/img2.webp" },
+                { name: "Verde", hex: "#7A8A55", image: "/images/SOFA/SOFA2/img4.webp" },
+                { name: "Beige", hex: "#D4C9B0", image: "/images/SOFA/SOFA2/img8.webp" }
             ]
         },
         configurations: [
@@ -154,36 +154,36 @@ const sofasData = [
         code: "HYSF88105/2952",
         modules: "Group: 2LE+LE-A+1S+1RE",
         priceBase: 63330,
-        image: "/images/SOFA/SOFA3/render_iso.jpg",
+        image: "/images/SOFA/SOFA3/render_iso.webp",
         schematics: [
-            "/images/SOFA/SOFA3/img1.jpg",
-            "/images/SOFA/SOFA3/img2.jpg",
-            "/images/SOFA/SOFA3/img3.jpg",
-            "/images/SOFA/SOFA3/img4.jpg",
-            "/images/SOFA/SOFA3/img5.jpg",
-            "/images/SOFA/SOFA3/img6.jpg",
-            "/images/SOFA/SOFA3/img7.jpg",
-            "/images/SOFA/SOFA3/img8.jpg",
-            "/images/SOFA/SOFA3/img9.jpg",
-            "/images/SOFA/SOFA3/img10.jpg",
-            "/images/SOFA/SOFA3/img11.jpg",
-            "/images/SOFA/SOFA3/img12.jpg",
-            "/images/SOFA/SOFA3/img13.jpg",
-            "/images/SOFA/SOFA3/img14.jpg",
-            "/images/SOFA/SOFA3/img15.jpg",
-            "/images/SOFA/SOFA3/img16.jpg",
-            "/images/SOFA/SOFA3/img17.jpg",
-            "/images/SOFA/SOFA3/img18.jpg",
-            "/images/SOFA/SOFA3/img19.jpg",
-            "/images/SOFA/SOFA3/img20.jpg",
-            "/images/SOFA/SOFA3/img21.jpg",
-            "/images/SOFA/SOFA3/img22.jpg",
-            "/images/SOFA/SOFA3/img23.jpg",
-            "/images/SOFA/SOFA3/img24.jpg",
-            "/images/SOFA/SOFA3/img25.jpg",
-            "/images/SOFA/SOFA3/img26.jpg",
-            "/images/SOFA/SOFA3/img27.jpg",
-            "/images/SOFA/SOFA3/img28.jpg"
+            "/images/SOFA/SOFA3/img1.webp",
+            "/images/SOFA/SOFA3/img2.webp",
+            "/images/SOFA/SOFA3/img3.webp",
+            "/images/SOFA/SOFA3/img4.webp",
+            "/images/SOFA/SOFA3/img5.webp",
+            "/images/SOFA/SOFA3/img6.webp",
+            "/images/SOFA/SOFA3/img7.webp",
+            "/images/SOFA/SOFA3/img8.webp",
+            "/images/SOFA/SOFA3/img9.webp",
+            "/images/SOFA/SOFA3/img10.webp",
+            "/images/SOFA/SOFA3/img11.webp",
+            "/images/SOFA/SOFA3/img12.webp",
+            "/images/SOFA/SOFA3/img13.webp",
+            "/images/SOFA/SOFA3/img14.webp",
+            "/images/SOFA/SOFA3/img15.webp",
+            "/images/SOFA/SOFA3/img16.webp",
+            "/images/SOFA/SOFA3/img17.webp",
+            "/images/SOFA/SOFA3/img18.webp",
+            "/images/SOFA/SOFA3/img19.webp",
+            "/images/SOFA/SOFA3/img20.webp",
+            "/images/SOFA/SOFA3/img21.webp",
+            "/images/SOFA/SOFA3/img22.webp",
+            "/images/SOFA/SOFA3/img23.webp",
+            "/images/SOFA/SOFA3/img24.webp",
+            "/images/SOFA/SOFA3/img25.webp",
+            "/images/SOFA/SOFA3/img26.webp",
+            "/images/SOFA/SOFA3/img27.webp",
+            "/images/SOFA/SOFA3/img28.webp"
         ],
         specs: {
             dimensions: "3430 * 3870 * 690 mm",
@@ -198,13 +198,13 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Gris", hex: "#A39E9E", image: "/images/SOFA/SOFA3/img1.jpg" },
-                { name: "Beige", hex: "#D9D0BF", image: "/images/SOFA/SOFA3/img4.jpg" },
-                { name: "Negro", hex: "#2A2A2A", image: "/images/SOFA/SOFA3/img20.jpg" },
-                { name: "Marrón", hex: "#6B5A40", image: "/images/SOFA/SOFA3/img22.jpg" },
-                { name: "Rojo", hex: "#8A3535", image: "/images/SOFA/SOFA3/img23.jpg" },
-                { name: "Verde", hex: "#4A6A35", image: "/images/SOFA/SOFA3/img26.jpg" },
-                { name: "Azul", hex: "#4E7F8C", image: "/images/SOFA/SOFA3/img28.jpg" }
+                { name: "Gris", hex: "#A39E9E", image: "/images/SOFA/SOFA3/img1.webp" },
+                { name: "Beige", hex: "#D9D0BF", image: "/images/SOFA/SOFA3/img4.webp" },
+                { name: "Negro", hex: "#2A2A2A", image: "/images/SOFA/SOFA3/img20.webp" },
+                { name: "Marrón", hex: "#6B5A40", image: "/images/SOFA/SOFA3/img22.webp" },
+                { name: "Rojo", hex: "#8A3535", image: "/images/SOFA/SOFA3/img23.webp" },
+                { name: "Verde", hex: "#4A6A35", image: "/images/SOFA/SOFA3/img26.webp" },
+                { name: "Azul", hex: "#4E7F8C", image: "/images/SOFA/SOFA3/img28.webp" }
             ]
         },
         configurations: [
@@ -237,29 +237,29 @@ const sofasData = [
         code: "HYSF88106/2955",
         modules: "Group: LS+short platform+wooden box cabinet+1S+1RE Soft armrest+ST",
         priceBase: 109260,
-        image: "/images/SOFA/SOFA4/render_iso.jpg",
+        image: "/images/SOFA/SOFA4/render_iso.webp",
         schematics: [
-            "/images/SOFA/SOFA4/img1.jpg",
-            "/images/SOFA/SOFA4/img2.jpg",
-            "/images/SOFA/SOFA4/img3.jpg",
-            "/images/SOFA/SOFA4/img4.jpg",
-            "/images/SOFA/SOFA4/img5.jpg",
-            "/images/SOFA/SOFA4/img6.jpg",
-            "/images/SOFA/SOFA4/img7.jpg",
-            "/images/SOFA/SOFA4/img8.jpg",
-            "/images/SOFA/SOFA4/img9.jpg",
-            "/images/SOFA/SOFA4/img10.jpg",
-            "/images/SOFA/SOFA4/img11.jpg",
-            "/images/SOFA/SOFA4/img12.jpg",
-            "/images/SOFA/SOFA4/img13.jpg",
-            "/images/SOFA/SOFA4/img14.jpg",
-            "/images/SOFA/SOFA4/img15.jpg",
-            "/images/SOFA/SOFA4/img16.jpg",
-            "/images/SOFA/SOFA4/img17.jpg",
-            "/images/SOFA/SOFA4/img18.jpg",
-            "/images/SOFA/SOFA4/img19.jpg",
-            "/images/SOFA/SOFA4/img20.jpg",
-            "/images/SOFA/SOFA4/img21.jpg"
+            "/images/SOFA/SOFA4/img1.webp",
+            "/images/SOFA/SOFA4/img2.webp",
+            "/images/SOFA/SOFA4/img3.webp",
+            "/images/SOFA/SOFA4/img4.webp",
+            "/images/SOFA/SOFA4/img5.webp",
+            "/images/SOFA/SOFA4/img6.webp",
+            "/images/SOFA/SOFA4/img7.webp",
+            "/images/SOFA/SOFA4/img8.webp",
+            "/images/SOFA/SOFA4/img9.webp",
+            "/images/SOFA/SOFA4/img10.webp",
+            "/images/SOFA/SOFA4/img11.webp",
+            "/images/SOFA/SOFA4/img12.webp",
+            "/images/SOFA/SOFA4/img13.webp",
+            "/images/SOFA/SOFA4/img14.webp",
+            "/images/SOFA/SOFA4/img15.webp",
+            "/images/SOFA/SOFA4/img16.webp",
+            "/images/SOFA/SOFA4/img17.webp",
+            "/images/SOFA/SOFA4/img18.webp",
+            "/images/SOFA/SOFA4/img19.webp",
+            "/images/SOFA/SOFA4/img20.webp",
+            "/images/SOFA/SOFA4/img21.webp"
         ],
         specs: {
             dimensions: "4800 * 1580 * 680/815 mm",
@@ -275,10 +275,10 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Beige", hex: "#E5E1D9", image: "/images/SOFA/SOFA4/img1.jpg" },
-                { name: "Negro", hex: "#2A2A2A", image: "/images/SOFA/SOFA4/img7.jpg" },
-                { name: "Marrón", hex: "#8B7355", image: "/images/SOFA/SOFA4/img10.jpg" },
-                { name: "Gris", hex: "#9BA4B1", image: "/images/SOFA/SOFA4/img17.jpg" }
+                { name: "Beige", hex: "#E5E1D9", image: "/images/SOFA/SOFA4/img1.webp" },
+                { name: "Negro", hex: "#2A2A2A", image: "/images/SOFA/SOFA4/img7.webp" },
+                { name: "Marrón", hex: "#8B7355", image: "/images/SOFA/SOFA4/img10.webp" },
+                { name: "Gris", hex: "#9BA4B1", image: "/images/SOFA/SOFA4/img17.webp" }
             ]
         },
         configurations: [
@@ -309,29 +309,29 @@ const sofasData = [
         code: "HYSF88107/2956",
         modules: "Group: LS + 3RE",
         priceBase: 70460,
-        image: "/images/SOFA/SOFA5/render_iso.jpg",
+        image: "/images/SOFA/SOFA5/render_iso.webp",
         schematics: [
-            "/images/SOFA/SOFA5/img1.jpg",
-            "/images/SOFA/SOFA5/img2.jpg",
-            "/images/SOFA/SOFA5/img3.jpg",
-            "/images/SOFA/SOFA5/img4.jpg",
-            "/images/SOFA/SOFA5/img5.jpg",
-            "/images/SOFA/SOFA5/img6.jpg",
-            "/images/SOFA/SOFA5/img7.jpg",
-            "/images/SOFA/SOFA5/img8.jpg",
-            "/images/SOFA/SOFA5/img9.jpg",
-            "/images/SOFA/SOFA5/img10.jpg",
-            "/images/SOFA/SOFA5/img11.jpg",
-            "/images/SOFA/SOFA5/img12.jpg",
-            "/images/SOFA/SOFA5/img13.jpg",
-            "/images/SOFA/SOFA5/img14.jpg",
-            "/images/SOFA/SOFA5/img15.jpg",
-            "/images/SOFA/SOFA5/img16.jpg",
-            "/images/SOFA/SOFA5/img17.jpg",
-            "/images/SOFA/SOFA5/img18.jpg",
-            "/images/SOFA/SOFA5/img19.jpg",
-            "/images/SOFA/SOFA5/img20.jpg",
-            "/images/SOFA/SOFA5/img21.jpg"
+            "/images/SOFA/SOFA5/img1.webp",
+            "/images/SOFA/SOFA5/img2.webp",
+            "/images/SOFA/SOFA5/img3.webp",
+            "/images/SOFA/SOFA5/img4.webp",
+            "/images/SOFA/SOFA5/img5.webp",
+            "/images/SOFA/SOFA5/img6.webp",
+            "/images/SOFA/SOFA5/img7.webp",
+            "/images/SOFA/SOFA5/img8.webp",
+            "/images/SOFA/SOFA5/img9.webp",
+            "/images/SOFA/SOFA5/img10.webp",
+            "/images/SOFA/SOFA5/img11.webp",
+            "/images/SOFA/SOFA5/img12.webp",
+            "/images/SOFA/SOFA5/img13.webp",
+            "/images/SOFA/SOFA5/img14.webp",
+            "/images/SOFA/SOFA5/img15.webp",
+            "/images/SOFA/SOFA5/img16.webp",
+            "/images/SOFA/SOFA5/img17.webp",
+            "/images/SOFA/SOFA5/img18.webp",
+            "/images/SOFA/SOFA5/img19.webp",
+            "/images/SOFA/SOFA5/img20.webp",
+            "/images/SOFA/SOFA5/img21.webp"
         ],
         specs: {
             dimensions: "3580 * 1600 * 690 mm",
@@ -345,11 +345,11 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Negro", hex: "#2A2A2A", image: "/images/SOFA/SOFA5/img1.jpg" },
-                { name: "Verde", hex: "#4A6A35", image: "/images/SOFA/SOFA5/img11.jpg" },
-                { name: "Marrón", hex: "#8B7355", image: "/images/SOFA/SOFA5/img12.jpg" },
-                { name: "Dorado", hex: "#C9A84C", image: "/images/SOFA/SOFA5/img15.jpg" },
-                { name: "Azul", hex: "#4E7F8C", image: "/images/SOFA/SOFA5/img21.jpg" }
+                { name: "Negro", hex: "#2A2A2A", image: "/images/SOFA/SOFA5/img1.webp" },
+                { name: "Verde", hex: "#4A6A35", image: "/images/SOFA/SOFA5/img11.webp" },
+                { name: "Marrón", hex: "#8B7355", image: "/images/SOFA/SOFA5/img12.webp" },
+                { name: "Dorado", hex: "#C9A84C", image: "/images/SOFA/SOFA5/img15.webp" },
+                { name: "Azul", hex: "#4E7F8C", image: "/images/SOFA/SOFA5/img21.webp" }
             ]
         },
         configurations: [
@@ -378,11 +378,11 @@ const sofasData = [
         code: "HYSF88119/2957",
         modules: "Group: 4D",
         priceBase: 43260,
-        image: "/images/SOFA/SOFA6/render_iso.jpg",
+        image: "/images/SOFA/SOFA6/render_iso.webp",
         schematics: [
-            "/images/SOFA/SOFA6/img1.jpg",
-            "/images/SOFA/SOFA6/img2.jpg",
-            "/images/SOFA/SOFA6/img3.jpg"
+            "/images/SOFA/SOFA6/img1.webp",
+            "/images/SOFA/SOFA6/img2.webp",
+            "/images/SOFA/SOFA6/img3.webp"
         ],
         specs: {
             dimensions: "2820 * 1060 * 730 mm",
@@ -397,8 +397,8 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Gris", hex: "#6D6D6D", image: "/images/SOFA/SOFA6/img1.jpg" },
-                { name: "Beige", hex: "#D4C9B0", image: "/images/SOFA/SOFA6/img2.jpg" }
+                { name: "Gris", hex: "#6D6D6D", image: "/images/SOFA/SOFA6/img1.webp" },
+                { name: "Beige", hex: "#D4C9B0", image: "/images/SOFA/SOFA6/img2.webp" }
             ]
         },
         configurations: [
@@ -429,16 +429,16 @@ const sofasData = [
         code: "HYSF88120/2958/SOFA",
         modules: "2LE-B+1LE(GF)+ST+2RE-A",
         priceBase: 39450,
-        image: "/images/SOFA/SOFA7/render_iso.jpg",
+        image: "/images/SOFA/SOFA7/render_iso.webp",
         schematics: [
-            "/images/SOFA/SOFA7/img1.jpg",
-            "/images/SOFA/SOFA7/img2.jpg",
-            "/images/SOFA/SOFA7/img3.jpg",
-            "/images/SOFA/SOFA7/img4.jpg",
-            "/images/SOFA/SOFA7/img5.jpg",
-            "/images/SOFA/SOFA7/img6.jpg",
-            "/images/SOFA/SOFA7/img7.jpg",
-            "/images/SOFA/SOFA7/img8.jpg"
+            "/images/SOFA/SOFA7/img1.webp",
+            "/images/SOFA/SOFA7/img2.webp",
+            "/images/SOFA/SOFA7/img3.webp",
+            "/images/SOFA/SOFA7/img4.webp",
+            "/images/SOFA/SOFA7/img5.webp",
+            "/images/SOFA/SOFA7/img6.webp",
+            "/images/SOFA/SOFA7/img7.webp",
+            "/images/SOFA/SOFA7/img8.webp"
         ],
         specs: {
             dimensions: "3320 * 2660 * 750 mm",
@@ -455,11 +455,11 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Negro", hex: "#353535", image: "/images/SOFA/SOFA7/img1.jpg" },
-                { name: "Gris", hex: "#6B6B6B", image: "/images/SOFA/SOFA7/img1.jpg" },
-                { name: "Beige", hex: "#D4C9B0", image: "/images/SOFA/SOFA7/img2.jpg" },
-                { name: "Verde", hex: "#6A8A5A", image: "/images/SOFA/SOFA7/img7.jpg" },
-                { name: "Marrón", hex: "#7A6045", image: "/images/SOFA/SOFA7/img8.jpg" }
+                { name: "Negro", hex: "#353535", image: "/images/SOFA/SOFA7/img1.webp" },
+                { name: "Gris", hex: "#6B6B6B", image: "/images/SOFA/SOFA7/img1.webp" },
+                { name: "Beige", hex: "#D4C9B0", image: "/images/SOFA/SOFA7/img2.webp" },
+                { name: "Verde", hex: "#6A8A5A", image: "/images/SOFA/SOFA7/img7.webp" },
+                { name: "Marrón", hex: "#7A6045", image: "/images/SOFA/SOFA7/img8.webp" }
             ]
         },
         configurations: [
@@ -490,23 +490,23 @@ const sofasData = [
         code: "HYSF88121/2960",
         modules: "Group: L-B+1S+R-A+1S+1RE-B",
         priceBase: 62440,
-        image: "/images/SOFA/SOFA8/render_iso.jpg",
+        image: "/images/SOFA/SOFA8/render_iso.webp",
         schematics: [
-            "/images/SOFA/SOFA8/img1.jpg",
-            "/images/SOFA/SOFA8/img2.jpg",
-            "/images/SOFA/SOFA8/img3.jpg",
-            "/images/SOFA/SOFA8/img4.jpg",
-            "/images/SOFA/SOFA8/img5.jpg",
-            "/images/SOFA/SOFA8/img6.jpg",
-            "/images/SOFA/SOFA8/img7.jpg",
-            "/images/SOFA/SOFA8/img8.jpg",
-            "/images/SOFA/SOFA8/img9.jpg",
-            "/images/SOFA/SOFA8/img10.jpg",
-            "/images/SOFA/SOFA8/img11.jpg",
-            "/images/SOFA/SOFA8/img12.jpg",
-            "/images/SOFA/SOFA8/img13.jpg",
-            "/images/SOFA/SOFA8/img14.jpg",
-            "/images/SOFA/SOFA8/img15.jpg"
+            "/images/SOFA/SOFA8/img1.webp",
+            "/images/SOFA/SOFA8/img2.webp",
+            "/images/SOFA/SOFA8/img3.webp",
+            "/images/SOFA/SOFA8/img4.webp",
+            "/images/SOFA/SOFA8/img5.webp",
+            "/images/SOFA/SOFA8/img6.webp",
+            "/images/SOFA/SOFA8/img7.webp",
+            "/images/SOFA/SOFA8/img8.webp",
+            "/images/SOFA/SOFA8/img9.webp",
+            "/images/SOFA/SOFA8/img10.webp",
+            "/images/SOFA/SOFA8/img11.webp",
+            "/images/SOFA/SOFA8/img12.webp",
+            "/images/SOFA/SOFA8/img13.webp",
+            "/images/SOFA/SOFA8/img14.webp",
+            "/images/SOFA/SOFA8/img15.webp"
         ],
         specs: {
             dimensions: "3820 * 4070 * 710 mm",
@@ -521,10 +521,10 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Gris", hex: "#9E968A", image: "/images/SOFA/SOFA8/img1.jpg" },
-                { name: "Beige", hex: "#D4C9B0", image: "/images/SOFA/SOFA8/img3.jpg" },
-                { name: "Negro", hex: "#1A1A1A", image: "/images/SOFA/SOFA8/img5.jpg" },
-                { name: "Marrón", hex: "#73675B", image: "/images/SOFA/SOFA8/img6.jpg" }
+                { name: "Gris", hex: "#9E968A", image: "/images/SOFA/SOFA8/img1.webp" },
+                { name: "Beige", hex: "#D4C9B0", image: "/images/SOFA/SOFA8/img3.webp" },
+                { name: "Negro", hex: "#1A1A1A", image: "/images/SOFA/SOFA8/img5.webp" },
+                { name: "Marrón", hex: "#73675B", image: "/images/SOFA/SOFA8/img6.webp" }
             ]
         },
         configurations: [
@@ -553,42 +553,42 @@ const sofasData = [
         code: "HYSF88123/SOFA",
         modules: "Group: 1LE(Square grid) + 1S(Flat surface) + 1S-B(Square grid) + ST(Square grid)*2 + 1S-B(Flat surface)",
         priceBase: 47480,
-        image: "/images/SOFA/SOFA9/render_iso.jpg",
+        image: "/images/SOFA/SOFA9/render_iso.webp",
         schematics: [
-            "/images/SOFA/SOFA9/img1.jpg",
-            "/images/SOFA/SOFA9/img2.jpg",
-            "/images/SOFA/SOFA9/img3.jpg",
-            "/images/SOFA/SOFA9/img4.jpg",
-            "/images/SOFA/SOFA9/img5.jpg",
-            "/images/SOFA/SOFA9/img6.jpg",
-            "/images/SOFA/SOFA9/img7.jpg",
-            "/images/SOFA/SOFA9/img8.jpg",
-            "/images/SOFA/SOFA9/img9.jpg",
-            "/images/SOFA/SOFA9/img10.jpg",
-            "/images/SOFA/SOFA9/img11.jpg",
-            "/images/SOFA/SOFA9/img12.jpg",
-            "/images/SOFA/SOFA9/img13.jpg",
-            "/images/SOFA/SOFA9/img14.jpg",
-            "/images/SOFA/SOFA9/img15.jpg",
-            "/images/SOFA/SOFA9/img16.jpg",
-            "/images/SOFA/SOFA9/img17.jpg",
-            "/images/SOFA/SOFA9/img18.jpg",
-            "/images/SOFA/SOFA9/img19.jpg",
-            "/images/SOFA/SOFA9/img20.jpg",
-            "/images/SOFA/SOFA9/img21.jpg",
-            "/images/SOFA/SOFA9/img22.jpg",
-            "/images/SOFA/SOFA9/img23.jpg",
-            "/images/SOFA/SOFA9/img24.jpg",
-            "/images/SOFA/SOFA9/img25.jpg",
-            "/images/SOFA/SOFA9/img26.jpg",
-            "/images/SOFA/SOFA9/img27.jpg",
-            "/images/SOFA/SOFA9/img28.jpg",
-            "/images/SOFA/SOFA9/img29.jpg",
-            "/images/SOFA/SOFA9/img30.jpg",
-            "/images/SOFA/SOFA9/img31.jpg",
-            "/images/SOFA/SOFA9/img32.jpg",
-            "/images/SOFA/SOFA9/img33.jpg",
-            "/images/SOFA/SOFA9/img34.jpg"
+            "/images/SOFA/SOFA9/img1.webp",
+            "/images/SOFA/SOFA9/img2.webp",
+            "/images/SOFA/SOFA9/img3.webp",
+            "/images/SOFA/SOFA9/img4.webp",
+            "/images/SOFA/SOFA9/img5.webp",
+            "/images/SOFA/SOFA9/img6.webp",
+            "/images/SOFA/SOFA9/img7.webp",
+            "/images/SOFA/SOFA9/img8.webp",
+            "/images/SOFA/SOFA9/img9.webp",
+            "/images/SOFA/SOFA9/img10.webp",
+            "/images/SOFA/SOFA9/img11.webp",
+            "/images/SOFA/SOFA9/img12.webp",
+            "/images/SOFA/SOFA9/img13.webp",
+            "/images/SOFA/SOFA9/img14.webp",
+            "/images/SOFA/SOFA9/img15.webp",
+            "/images/SOFA/SOFA9/img16.webp",
+            "/images/SOFA/SOFA9/img17.webp",
+            "/images/SOFA/SOFA9/img18.webp",
+            "/images/SOFA/SOFA9/img19.webp",
+            "/images/SOFA/SOFA9/img20.webp",
+            "/images/SOFA/SOFA9/img21.webp",
+            "/images/SOFA/SOFA9/img22.webp",
+            "/images/SOFA/SOFA9/img23.webp",
+            "/images/SOFA/SOFA9/img24.webp",
+            "/images/SOFA/SOFA9/img25.webp",
+            "/images/SOFA/SOFA9/img26.webp",
+            "/images/SOFA/SOFA9/img27.webp",
+            "/images/SOFA/SOFA9/img28.webp",
+            "/images/SOFA/SOFA9/img29.webp",
+            "/images/SOFA/SOFA9/img30.webp",
+            "/images/SOFA/SOFA9/img31.webp",
+            "/images/SOFA/SOFA9/img32.webp",
+            "/images/SOFA/SOFA9/img33.webp",
+            "/images/SOFA/SOFA9/img34.webp"
         ],
         specs: {
             dimensions: "3060 * 2600 * 690 mm",
@@ -603,10 +603,10 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Negro", hex: "#1A1A1B", image: "/images/SOFA/SOFA9/img1.jpg" },
-                { name: "Gris", hex: "#6D6D6D", image: "/images/SOFA/SOFA9/img27.jpg" },
-                { name: "Blanco", hex: "#F0EDE8", image: "/images/SOFA/SOFA9/img22.jpg" },
-                { name: "Beige", hex: "#D9D9D9", image: "/images/SOFA/SOFA9/img25.jpg" }
+                { name: "Negro", hex: "#1A1A1B", image: "/images/SOFA/SOFA9/img1.webp" },
+                { name: "Gris", hex: "#6D6D6D", image: "/images/SOFA/SOFA9/img27.webp" },
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/SOFA/SOFA9/img22.webp" },
+                { name: "Beige", hex: "#D9D9D9", image: "/images/SOFA/SOFA9/img25.webp" }
             ]
         },
         configurations: [
@@ -645,47 +645,47 @@ const sofasData = [
         code: "HYSF88125/SOFA",
         modules: "Group A:(2RE-D + FSG) + Group B:(2LE-B + 1S + R + R-A + Support plate)",
         priceBase: 83710,
-        image: "/images/SOFA/SOFA10/render_iso.jpg",
+        image: "/images/SOFA/SOFA10/render_iso.webp",
         schematics: [
-            "/images/SOFA/SOFA10/img1.jpg",
-            "/images/SOFA/SOFA10/img2.jpg",
-            "/images/SOFA/SOFA10/img3.jpg",
-            "/images/SOFA/SOFA10/img4.jpg",
-            "/images/SOFA/SOFA10/img5.jpg",
-            "/images/SOFA/SOFA10/img6.jpg",
-            "/images/SOFA/SOFA10/img7.jpg",
-            "/images/SOFA/SOFA10/img8.jpg",
-            "/images/SOFA/SOFA10/img9.jpg",
-            "/images/SOFA/SOFA10/img10.jpg",
-            "/images/SOFA/SOFA10/img11.jpg",
-            "/images/SOFA/SOFA10/img12.jpg",
-            "/images/SOFA/SOFA10/img13.jpg",
-            "/images/SOFA/SOFA10/img14.jpg",
-            "/images/SOFA/SOFA10/img15.jpg",
-            "/images/SOFA/SOFA10/img16.jpg",
-            "/images/SOFA/SOFA10/img17.jpg",
-            "/images/SOFA/SOFA10/img18.jpg",
-            "/images/SOFA/SOFA10/img19.jpg",
-            "/images/SOFA/SOFA10/img20.jpg",
-            "/images/SOFA/SOFA10/img21.jpg",
-            "/images/SOFA/SOFA10/img22.jpg",
-            "/images/SOFA/SOFA10/img23.jpg",
-            "/images/SOFA/SOFA10/img24.jpg",
-            "/images/SOFA/SOFA10/img25.jpg",
-            "/images/SOFA/SOFA10/img26.jpg",
-            "/images/SOFA/SOFA10/img27.jpg",
-            "/images/SOFA/SOFA10/img28.jpg",
-            "/images/SOFA/SOFA10/img29.jpg",
-            "/images/SOFA/SOFA10/img30.jpg",
-            "/images/SOFA/SOFA10/img31.jpg",
-            "/images/SOFA/SOFA10/img32.jpg",
-            "/images/SOFA/SOFA10/img33.jpg",
-            "/images/SOFA/SOFA10/img34.jpg",
-            "/images/SOFA/SOFA10/img35.jpg",
-            "/images/SOFA/SOFA10/img36.jpg",
-            "/images/SOFA/SOFA10/img37.jpg",
-            "/images/SOFA/SOFA10/img38.jpg",
-            "/images/SOFA/SOFA10/img39.jpg"
+            "/images/SOFA/SOFA10/img1.webp",
+            "/images/SOFA/SOFA10/img2.webp",
+            "/images/SOFA/SOFA10/img3.webp",
+            "/images/SOFA/SOFA10/img4.webp",
+            "/images/SOFA/SOFA10/img5.webp",
+            "/images/SOFA/SOFA10/img6.webp",
+            "/images/SOFA/SOFA10/img7.webp",
+            "/images/SOFA/SOFA10/img8.webp",
+            "/images/SOFA/SOFA10/img9.webp",
+            "/images/SOFA/SOFA10/img10.webp",
+            "/images/SOFA/SOFA10/img11.webp",
+            "/images/SOFA/SOFA10/img12.webp",
+            "/images/SOFA/SOFA10/img13.webp",
+            "/images/SOFA/SOFA10/img14.webp",
+            "/images/SOFA/SOFA10/img15.webp",
+            "/images/SOFA/SOFA10/img16.webp",
+            "/images/SOFA/SOFA10/img17.webp",
+            "/images/SOFA/SOFA10/img18.webp",
+            "/images/SOFA/SOFA10/img19.webp",
+            "/images/SOFA/SOFA10/img20.webp",
+            "/images/SOFA/SOFA10/img21.webp",
+            "/images/SOFA/SOFA10/img22.webp",
+            "/images/SOFA/SOFA10/img23.webp",
+            "/images/SOFA/SOFA10/img24.webp",
+            "/images/SOFA/SOFA10/img25.webp",
+            "/images/SOFA/SOFA10/img26.webp",
+            "/images/SOFA/SOFA10/img27.webp",
+            "/images/SOFA/SOFA10/img28.webp",
+            "/images/SOFA/SOFA10/img29.webp",
+            "/images/SOFA/SOFA10/img30.webp",
+            "/images/SOFA/SOFA10/img31.webp",
+            "/images/SOFA/SOFA10/img32.webp",
+            "/images/SOFA/SOFA10/img33.webp",
+            "/images/SOFA/SOFA10/img34.webp",
+            "/images/SOFA/SOFA10/img35.webp",
+            "/images/SOFA/SOFA10/img36.webp",
+            "/images/SOFA/SOFA10/img37.webp",
+            "/images/SOFA/SOFA10/img38.webp",
+            "/images/SOFA/SOFA10/img39.webp"
         ],
         specs: {
             dimensions: "5000 * 4000 * 740 mm",
@@ -701,10 +701,10 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Blanco", hex: "#F2F2F0", image: "/images/SOFA/SOFA10/render_iso.jpg" },
-                { name: "Negro", hex: "#1A1A1A", image: "/images/SOFA/SOFA10/img10.jpg" },
-                { name: "Gris", hex: "#9BA4B1", image: "/images/SOFA/SOFA10/img1.jpg" },
-                { name: "Beige", hex: "#C2BCB2", image: "/images/SOFA/SOFA10/img5.jpg" }
+                { name: "Blanco", hex: "#F2F2F0", image: "/images/SOFA/SOFA10/render_iso.webp" },
+                { name: "Negro", hex: "#1A1A1A", image: "/images/SOFA/SOFA10/img10.webp" },
+                { name: "Gris", hex: "#9BA4B1", image: "/images/SOFA/SOFA10/img1.webp" },
+                { name: "Beige", hex: "#C2BCB2", image: "/images/SOFA/SOFA10/img5.webp" }
             ]
         },
         configurations: [
@@ -754,42 +754,42 @@ const sofasData = [
         code: "HYSF88126/SOFA",
         modules: "Group: LS + 1S + 1S + LE",
         priceBase: 69560,
-        image: "/images/SOFA/SOFA11/render_iso.jpg",
+        image: "/images/SOFA/SOFA11/render_iso.webp",
         schematics: [
-            "/images/SOFA/SOFA11/img1.jpg",
-            "/images/SOFA/SOFA11/img2.jpg",
-            "/images/SOFA/SOFA11/img3.jpg",
-            "/images/SOFA/SOFA11/img4.jpg",
-            "/images/SOFA/SOFA11/img5.jpg",
-            "/images/SOFA/SOFA11/img6.jpg",
-            "/images/SOFA/SOFA11/img7.jpg",
-            "/images/SOFA/SOFA11/img8.jpg",
-            "/images/SOFA/SOFA11/img9.jpg",
-            "/images/SOFA/SOFA11/img10.jpg",
-            "/images/SOFA/SOFA11/img11.jpg",
-            "/images/SOFA/SOFA11/img12.jpg",
-            "/images/SOFA/SOFA11/img13.jpg",
-            "/images/SOFA/SOFA11/img14.jpg",
-            "/images/SOFA/SOFA11/img15.jpg",
-            "/images/SOFA/SOFA11/img16.jpg",
-            "/images/SOFA/SOFA11/img17.jpg",
-            "/images/SOFA/SOFA11/img18.jpg",
-            "/images/SOFA/SOFA11/img19.jpg",
-            "/images/SOFA/SOFA11/img20.jpg",
-            "/images/SOFA/SOFA11/img21.jpg",
-            "/images/SOFA/SOFA11/img22.jpg",
-            "/images/SOFA/SOFA11/img23.jpg",
-            "/images/SOFA/SOFA11/img24.jpg",
-            "/images/SOFA/SOFA11/img25.jpg",
-            "/images/SOFA/SOFA11/img26.jpg",
-            "/images/SOFA/SOFA11/img27.jpg",
-            "/images/SOFA/SOFA11/img28.jpg",
-            "/images/SOFA/SOFA11/img29.jpg",
-            "/images/SOFA/SOFA11/img30.jpg",
-            "/images/SOFA/SOFA11/img31.jpg",
-            "/images/SOFA/SOFA11/img32.jpg",
-            "/images/SOFA/SOFA11/img33.jpg",
-            "/images/SOFA/SOFA11/img34.jpg"
+            "/images/SOFA/SOFA11/img1.webp",
+            "/images/SOFA/SOFA11/img2.webp",
+            "/images/SOFA/SOFA11/img3.webp",
+            "/images/SOFA/SOFA11/img4.webp",
+            "/images/SOFA/SOFA11/img5.webp",
+            "/images/SOFA/SOFA11/img6.webp",
+            "/images/SOFA/SOFA11/img7.webp",
+            "/images/SOFA/SOFA11/img8.webp",
+            "/images/SOFA/SOFA11/img9.webp",
+            "/images/SOFA/SOFA11/img10.webp",
+            "/images/SOFA/SOFA11/img11.webp",
+            "/images/SOFA/SOFA11/img12.webp",
+            "/images/SOFA/SOFA11/img13.webp",
+            "/images/SOFA/SOFA11/img14.webp",
+            "/images/SOFA/SOFA11/img15.webp",
+            "/images/SOFA/SOFA11/img16.webp",
+            "/images/SOFA/SOFA11/img17.webp",
+            "/images/SOFA/SOFA11/img18.webp",
+            "/images/SOFA/SOFA11/img19.webp",
+            "/images/SOFA/SOFA11/img20.webp",
+            "/images/SOFA/SOFA11/img21.webp",
+            "/images/SOFA/SOFA11/img22.webp",
+            "/images/SOFA/SOFA11/img23.webp",
+            "/images/SOFA/SOFA11/img24.webp",
+            "/images/SOFA/SOFA11/img25.webp",
+            "/images/SOFA/SOFA11/img26.webp",
+            "/images/SOFA/SOFA11/img27.webp",
+            "/images/SOFA/SOFA11/img28.webp",
+            "/images/SOFA/SOFA11/img29.webp",
+            "/images/SOFA/SOFA11/img30.webp",
+            "/images/SOFA/SOFA11/img31.webp",
+            "/images/SOFA/SOFA11/img32.webp",
+            "/images/SOFA/SOFA11/img33.webp",
+            "/images/SOFA/SOFA11/img34.webp"
         ],
         specs: {
             dimensions: "5305 * 1820 * 795 mm",
@@ -805,9 +805,9 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Gris", hex: "#8A8279", image: "/images/SOFA/SOFA11/render_iso.jpg" },
-                { name: "Beige", hex: "#D4C9B0", image: "/images/SOFA/SOFA11/img18.jpg" },
-                { name: "Marrón", hex: "#634734", image: "/images/SOFA/SOFA11/img11.jpg" }
+                { name: "Gris", hex: "#8A8279", image: "/images/SOFA/SOFA11/render_iso.webp" },
+                { name: "Beige", hex: "#D4C9B0", image: "/images/SOFA/SOFA11/img18.webp" },
+                { name: "Marrón", hex: "#634734", image: "/images/SOFA/SOFA11/img11.webp" }
             ]
         },
         configurations: [
@@ -838,32 +838,32 @@ const sofasData = [
         code: "HYSF88127/SOFA",
         modules: "Group: 1LE-B + LS + 1S*2 + 1RE-A + Hanging basket (DL)",
         priceBase: 80350,
-        image: "/images/SOFA/SOFA12/render_iso.jpg",
+        image: "/images/SOFA/SOFA12/render_iso.webp",
         schematics: [
-            "/images/SOFA/SOFA12/img1.jpg",
-            "/images/SOFA/SOFA12/img2.jpg",
-            "/images/SOFA/SOFA12/img3.jpg",
-            "/images/SOFA/SOFA12/img4.jpg",
-            "/images/SOFA/SOFA12/img5.jpg",
-            "/images/SOFA/SOFA12/img6.jpg",
-            "/images/SOFA/SOFA12/img7.jpg",
-            "/images/SOFA/SOFA12/img8.jpg",
-            "/images/SOFA/SOFA12/img9.jpg",
-            "/images/SOFA/SOFA12/img10.jpg",
-            "/images/SOFA/SOFA12/img11.jpg",
-            "/images/SOFA/SOFA12/img12.jpg",
-            "/images/SOFA/SOFA12/img13.jpg",
-            "/images/SOFA/SOFA12/img14.jpg",
-            "/images/SOFA/SOFA12/img15.jpg",
-            "/images/SOFA/SOFA12/img16.jpg",
-            "/images/SOFA/SOFA12/img17.jpg",
-            "/images/SOFA/SOFA12/img18.jpg",
-            "/images/SOFA/SOFA12/img19.jpg",
-            "/images/SOFA/SOFA12/img20.jpg",
-            "/images/SOFA/SOFA12/img21.jpg",
-            "/images/SOFA/SOFA12/img22.jpg",
-            "/images/SOFA/SOFA12/img23.jpg",
-            "/images/SOFA/SOFA12/img24.jpg"
+            "/images/SOFA/SOFA12/img1.webp",
+            "/images/SOFA/SOFA12/img2.webp",
+            "/images/SOFA/SOFA12/img3.webp",
+            "/images/SOFA/SOFA12/img4.webp",
+            "/images/SOFA/SOFA12/img5.webp",
+            "/images/SOFA/SOFA12/img6.webp",
+            "/images/SOFA/SOFA12/img7.webp",
+            "/images/SOFA/SOFA12/img8.webp",
+            "/images/SOFA/SOFA12/img9.webp",
+            "/images/SOFA/SOFA12/img10.webp",
+            "/images/SOFA/SOFA12/img11.webp",
+            "/images/SOFA/SOFA12/img12.webp",
+            "/images/SOFA/SOFA12/img13.webp",
+            "/images/SOFA/SOFA12/img14.webp",
+            "/images/SOFA/SOFA12/img15.webp",
+            "/images/SOFA/SOFA12/img16.webp",
+            "/images/SOFA/SOFA12/img17.webp",
+            "/images/SOFA/SOFA12/img18.webp",
+            "/images/SOFA/SOFA12/img19.webp",
+            "/images/SOFA/SOFA12/img20.webp",
+            "/images/SOFA/SOFA12/img21.webp",
+            "/images/SOFA/SOFA12/img22.webp",
+            "/images/SOFA/SOFA12/img23.webp",
+            "/images/SOFA/SOFA12/img24.webp"
 
         ],
         specs: {
@@ -881,8 +881,8 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Beige", hex: "#F2F2F0", image: "/images/SOFA/SOFA12/render_iso.jpg" },
-                { name: "Marrón", hex: "#8B6F52", image: "/images/SOFA/SOFA12/img13.jpg" }
+                { name: "Beige", hex: "#F2F2F0", image: "/images/SOFA/SOFA12/render_iso.webp" },
+                { name: "Marrón", hex: "#8B6F52", image: "/images/SOFA/SOFA12/img13.webp" }
             ]
         },
         configurations: [
@@ -912,12 +912,12 @@ const sofasData = [
         code: "HYSF88128/SOFA",
         modules: "Group: 2LE-B + 2RE-B",
         priceBase: 18580,
-        image: "/images/SOFA/SOFA13/render_iso.jpg",
+        image: "/images/SOFA/SOFA13/render_iso.webp",
         schematics: [
-            "/images/SOFA/SOFA13/img1.jpg",
-            "/images/SOFA/SOFA13/img2.jpg",
-            "/images/SOFA/SOFA13/img3.jpg",
-            "/images/SOFA/SOFA13/img4.jpg"
+            "/images/SOFA/SOFA13/img1.webp",
+            "/images/SOFA/SOFA13/img2.webp",
+            "/images/SOFA/SOFA13/img3.webp",
+            "/images/SOFA/SOFA13/img4.webp"
         ],
         specs: {
             dimensions: "2800 * 1000 * 730 mm",
@@ -933,8 +933,8 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Gris", hex: "#7E7873", image: "/images/SOFA/SOFA13/render_iso.jpg" },
-                { name: "Beige", hex: "#D4C9B0", image: "/images/SOFA/SOFA13/img2.jpg" }
+                { name: "Gris", hex: "#7E7873", image: "/images/SOFA/SOFA13/render_iso.webp" },
+                { name: "Beige", hex: "#D4C9B0", image: "/images/SOFA/SOFA13/img2.webp" }
             ]
         },
         configurations: [
@@ -964,42 +964,42 @@ const sofasData = [
         code: "HYSF88129/SOFA",
         modules: "Group: LE + FJ + 3RE-A (Whole cushion) + 3S-A (Whole cushion) + BJ + DX + Feet",
         priceBase: 124280,
-        image: "/images/SOFA/SOFA14/render_iso.jpg",
+        image: "/images/SOFA/SOFA14/render_iso.webp",
         schematics: [
-            "/images/SOFA/SOFA14/img1.jpg",
-            "/images/SOFA/SOFA14/img2.jpg",
-            "/images/SOFA/SOFA14/img3.jpg",
-            "/images/SOFA/SOFA14/img4.jpg",
-            "/images/SOFA/SOFA14/img5.jpg",
-            "/images/SOFA/SOFA14/img6.jpg",
-            "/images/SOFA/SOFA14/img7.jpg",
-            "/images/SOFA/SOFA14/img8.jpg",
-            "/images/SOFA/SOFA14/img9.jpg",
-            "/images/SOFA/SOFA14/img10.jpg",
-            "/images/SOFA/SOFA14/img11.jpg",
-            "/images/SOFA/SOFA14/img12.jpg",
-            "/images/SOFA/SOFA14/img13.jpg",
-            "/images/SOFA/SOFA14/img14.jpg",
-            "/images/SOFA/SOFA14/img15.jpg",
-            "/images/SOFA/SOFA14/img16.jpg",
-            "/images/SOFA/SOFA14/img17.jpg",
-            "/images/SOFA/SOFA14/img18.jpg",
-            "/images/SOFA/SOFA14/img19.jpg",
-            "/images/SOFA/SOFA14/img20.jpg",
-            "/images/SOFA/SOFA14/img21.jpg",
-            "/images/SOFA/SOFA14/img22.jpg",
-            "/images/SOFA/SOFA14/img23.jpg",
-            "/images/SOFA/SOFA14/img24.jpg",
-            "/images/SOFA/SOFA14/img25.jpg",
-            "/images/SOFA/SOFA14/img26.jpg",
-            "/images/SOFA/SOFA14/img27.jpg",
-            "/images/SOFA/SOFA14/img28.jpg",
-            "/images/SOFA/SOFA14/img29.jpg",
-            "/images/SOFA/SOFA14/img30.jpg",
-            "/images/SOFA/SOFA14/img31.jpg",
-            "/images/SOFA/SOFA14/img32.jpg",
-            "/images/SOFA/SOFA14/img33.jpg",
-            "/images/SOFA/SOFA14/img34.jpg"
+            "/images/SOFA/SOFA14/img1.webp",
+            "/images/SOFA/SOFA14/img2.webp",
+            "/images/SOFA/SOFA14/img3.webp",
+            "/images/SOFA/SOFA14/img4.webp",
+            "/images/SOFA/SOFA14/img5.webp",
+            "/images/SOFA/SOFA14/img6.webp",
+            "/images/SOFA/SOFA14/img7.webp",
+            "/images/SOFA/SOFA14/img8.webp",
+            "/images/SOFA/SOFA14/img9.webp",
+            "/images/SOFA/SOFA14/img10.webp",
+            "/images/SOFA/SOFA14/img11.webp",
+            "/images/SOFA/SOFA14/img12.webp",
+            "/images/SOFA/SOFA14/img13.webp",
+            "/images/SOFA/SOFA14/img14.webp",
+            "/images/SOFA/SOFA14/img15.webp",
+            "/images/SOFA/SOFA14/img16.webp",
+            "/images/SOFA/SOFA14/img17.webp",
+            "/images/SOFA/SOFA14/img18.webp",
+            "/images/SOFA/SOFA14/img19.webp",
+            "/images/SOFA/SOFA14/img20.webp",
+            "/images/SOFA/SOFA14/img21.webp",
+            "/images/SOFA/SOFA14/img22.webp",
+            "/images/SOFA/SOFA14/img23.webp",
+            "/images/SOFA/SOFA14/img24.webp",
+            "/images/SOFA/SOFA14/img25.webp",
+            "/images/SOFA/SOFA14/img26.webp",
+            "/images/SOFA/SOFA14/img27.webp",
+            "/images/SOFA/SOFA14/img28.webp",
+            "/images/SOFA/SOFA14/img29.webp",
+            "/images/SOFA/SOFA14/img30.webp",
+            "/images/SOFA/SOFA14/img31.webp",
+            "/images/SOFA/SOFA14/img32.webp",
+            "/images/SOFA/SOFA14/img33.webp",
+            "/images/SOFA/SOFA14/img34.webp"
         ],
         specs: {
             dimensions: "4840 * 3390 * 625/810 mm",
@@ -1015,8 +1015,8 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Beige", hex: "#D6D3D1", image: "/images/SOFA/SOFA14/render_iso.jpg" },
-                { name: "Gris", hex: "#5C5C5C", image: "/images/SOFA/SOFA14/img8.jpg" }
+                { name: "Beige", hex: "#D6D3D1", image: "/images/SOFA/SOFA14/render_iso.webp" },
+                { name: "Gris", hex: "#5C5C5C", image: "/images/SOFA/SOFA14/img8.webp" }
             ]
         },
         configurations: [
@@ -1051,11 +1051,11 @@ const sofasData = [
         code: "HYSF88130/SOFA",
         modules: "Group: 2LE + 2RE",
         priceBase: 47300,
-        image: "/images/SOFA/SOFA15/render_iso.jpg",
+        image: "/images/SOFA/SOFA15/render_iso.webp",
         schematics: [
-            "/images/SOFA/SOFA15/img1.jpg",
-            "/images/SOFA/SOFA15/img2.jpg",
-            "/images/SOFA/SOFA15/img3.jpg"
+            "/images/SOFA/SOFA15/img1.webp",
+            "/images/SOFA/SOFA15/img2.webp",
+            "/images/SOFA/SOFA15/img3.webp"
         ],
         specs: {
             dimensions: "2900 * 1050 * 760 mm",
@@ -1068,7 +1068,7 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Marrón", hex: "#9B8E85", image: "/images/SOFA/SOFA15/render_iso.jpg" }
+                { name: "Marrón", hex: "#9B8E85", image: "/images/SOFA/SOFA15/render_iso.webp" }
             ]
         },
         configurations: [
@@ -1093,13 +1093,13 @@ const sofasData = [
         code: "HYSF88132/MSF8828/SOFA",
         modules: "Group: 1LE + 3RE",
         priceBase: 38980,
-        image: "/images/SOFA/SOFA16/render_iso.jpg",
+        image: "/images/SOFA/SOFA16/render_iso.webp",
         schematics: [
-            "/images/SOFA/SOFA16/img1.jpg",
-            "/images/SOFA/SOFA16/img2.jpg",
-            "/images/SOFA/SOFA16/img3.jpg",
-            "/images/SOFA/SOFA16/img4.jpg",
-            "/images/SOFA/SOFA16/img5.jpg"
+            "/images/SOFA/SOFA16/img1.webp",
+            "/images/SOFA/SOFA16/img2.webp",
+            "/images/SOFA/SOFA16/img3.webp",
+            "/images/SOFA/SOFA16/img4.webp",
+            "/images/SOFA/SOFA16/img5.webp"
         ],
         specs: {
             dimensions: "3240 * 1060 * 660 mm",
@@ -1114,8 +1114,8 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Beige", hex: "#D9D1C5", image: "/images/SOFA/SOFA16/render_iso.jpg" },
-                { name: "Marrón", hex: "#8B6F52", image: "/images/SOFA/SOFA16/img3.jpg" }
+                { name: "Beige", hex: "#D9D1C5", image: "/images/SOFA/SOFA16/render_iso.webp" },
+                { name: "Marrón", hex: "#8B6F52", image: "/images/SOFA/SOFA16/img3.webp" }
             ]
         },
         configurations: [
@@ -1144,28 +1144,28 @@ const sofasData = [
         code: "HYSF88133/MSF8830/SOFA",
         modules: "Group: L-B + 2S + R-A + LS-A",
         priceBase: 59110,
-        image: "/images/SOFA/SOFA17/render_iso.jpg",
+        image: "/images/SOFA/SOFA17/render_iso.webp",
         schematics: [
-            "/images/SOFA/SOFA17/img1.jpg",
-            "/images/SOFA/SOFA17/img2.jpg",
-            "/images/SOFA/SOFA17/img3.jpg",
-            "/images/SOFA/SOFA17/img4.jpg",
-            "/images/SOFA/SOFA17/img5.jpg",
-            "/images/SOFA/SOFA17/img6.jpg",
-            "/images/SOFA/SOFA17/img7.jpg",
-            "/images/SOFA/SOFA17/img8.jpg",
-            "/images/SOFA/SOFA17/img9.jpg",
-            "/images/SOFA/SOFA17/img10.jpg",
-            "/images/SOFA/SOFA17/img11.jpg",
-            "/images/SOFA/SOFA17/img12.jpg",
-            "/images/SOFA/SOFA17/img13.jpg",
-            "/images/SOFA/SOFA17/img14.jpg",
-            "/images/SOFA/SOFA17/img15.jpg",
-            "/images/SOFA/SOFA17/img16.jpg",
-            "/images/SOFA/SOFA17/img17.jpg",
-            "/images/SOFA/SOFA17/img18.jpg",
-            "/images/SOFA/SOFA17/img19.jpg",
-            "/images/SOFA/SOFA17/img20.jpg"
+            "/images/SOFA/SOFA17/img1.webp",
+            "/images/SOFA/SOFA17/img2.webp",
+            "/images/SOFA/SOFA17/img3.webp",
+            "/images/SOFA/SOFA17/img4.webp",
+            "/images/SOFA/SOFA17/img5.webp",
+            "/images/SOFA/SOFA17/img6.webp",
+            "/images/SOFA/SOFA17/img7.webp",
+            "/images/SOFA/SOFA17/img8.webp",
+            "/images/SOFA/SOFA17/img9.webp",
+            "/images/SOFA/SOFA17/img10.webp",
+            "/images/SOFA/SOFA17/img11.webp",
+            "/images/SOFA/SOFA17/img12.webp",
+            "/images/SOFA/SOFA17/img13.webp",
+            "/images/SOFA/SOFA17/img14.webp",
+            "/images/SOFA/SOFA17/img15.webp",
+            "/images/SOFA/SOFA17/img16.webp",
+            "/images/SOFA/SOFA17/img17.webp",
+            "/images/SOFA/SOFA17/img18.webp",
+            "/images/SOFA/SOFA17/img19.webp",
+            "/images/SOFA/SOFA17/img20.webp"
         ],
         specs: {
             dimensions: "4280 * 3380 * 680 mm",
@@ -1180,11 +1180,11 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Beige", hex: "#D4C9B0", image: "/images/SOFA/SOFA17/render_iso.jpg" },
-                { name: "Marrón", hex: "#8B6F52", image: "/images/SOFA/SOFA17/img1.jpg" },
-                { name: "Blanco", hex: "#F0EDE8", image: "/images/SOFA/SOFA17/img2.jpg" },
-                { name: "Rojo", hex: "#8A3535", image: "/images/SOFA/SOFA17/img6.jpg" },
-                { name: "Gris", hex: "#B8B3AC", image: "/images/SOFA/SOFA17/img4.jpg" }
+                { name: "Beige", hex: "#D4C9B0", image: "/images/SOFA/SOFA17/render_iso.webp" },
+                { name: "Marrón", hex: "#8B6F52", image: "/images/SOFA/SOFA17/img1.webp" },
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/SOFA/SOFA17/img2.webp" },
+                { name: "Rojo", hex: "#8A3535", image: "/images/SOFA/SOFA17/img6.webp" },
+                { name: "Gris", hex: "#B8B3AC", image: "/images/SOFA/SOFA17/img4.webp" }
             ]
         },
         configurations: [
@@ -1216,15 +1216,15 @@ const sofasData = [
         code: "HYSF88203/MSF8829/SOFA",
         modules: "Group: 4LS",
         priceBase: 15900,
-        image: "/images/SOFA/SOFA18/render_iso.jpg",
+        image: "/images/SOFA/SOFA18/render_iso.webp",
         schematics: [
-            "/images/SOFA/SOFA18/img1.jpg",
-            "/images/SOFA/SOFA18/img2.jpg",
-            "/images/SOFA/SOFA18/img3.jpg",
-            "/images/SOFA/SOFA18/img4.jpg",
-            "/images/SOFA/SOFA18/img5.jpg",
-            "/images/SOFA/SOFA18/img6.jpg",
-            "/images/SOFA/SOFA18/img7.jpg"
+            "/images/SOFA/SOFA18/img1.webp",
+            "/images/SOFA/SOFA18/img2.webp",
+            "/images/SOFA/SOFA18/img3.webp",
+            "/images/SOFA/SOFA18/img4.webp",
+            "/images/SOFA/SOFA18/img5.webp",
+            "/images/SOFA/SOFA18/img6.webp",
+            "/images/SOFA/SOFA18/img7.webp"
         ],
         specs: {
             dimensions: "2870 * 1230 * 660 mm",
@@ -1238,8 +1238,8 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Gris", hex: "#D1D5D9", image: "/images/SOFA/SOFA18/render_iso.jpg" },
-                { name: "Beige", hex: "#D4C9B0", image: "/images/SOFA/SOFA18/img1.jpg" }
+                { name: "Gris", hex: "#D1D5D9", image: "/images/SOFA/SOFA18/render_iso.webp" },
+                { name: "Beige", hex: "#D4C9B0", image: "/images/SOFA/SOFA18/img1.webp" }
             ]
         },
         configurations: [
@@ -1264,11 +1264,11 @@ const sofasData = [
         code: "HYSF88206/SOFA",
         modules: "Group: 1S",
         priceBase: 6960,
-        image: "/images/SOFA/SOFA19/render_iso.jpg",
+        image: "/images/SOFA/SOFA19/render_iso.webp",
         schematics: [
-            "/images/SOFA/SOFA19/img1.jpg",
-            "/images/SOFA/SOFA19/img2.jpg",
-            "/images/SOFA/SOFA19/img3.jpg"
+            "/images/SOFA/SOFA19/img1.webp",
+            "/images/SOFA/SOFA19/img2.webp",
+            "/images/SOFA/SOFA19/img3.webp"
         ],
         specs: {
             dimensions: "1090 * 1120 * 880 mm",
@@ -1283,7 +1283,7 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Marrón", hex: "#63433B", image: "/images/SOFA/SOFA19/render_iso.jpg" }
+                { name: "Marrón", hex: "#63433B", image: "/images/SOFA/SOFA19/render_iso.webp" }
             ]
         },
         configurations: [
@@ -1305,13 +1305,13 @@ const sofasData = [
         code: "HYSF88131",
         modules: null,
         priceBase: null,
-        image: "/images/SOFA/SOFA20/render_iso.jpg",
+        image: "/images/SOFA/SOFA20/render_iso.webp",
         schematics: [
-            "/images/SOFA/SOFA20/img1.jpg",
-            "/images/SOFA/SOFA20/img2.jpg",
-            "/images/SOFA/SOFA20/img3.jpg",
-            "/images/SOFA/SOFA20/img4.jpg",
-            "/images/SOFA/SOFA20/img5.jpg"
+            "/images/SOFA/SOFA20/img1.webp",
+            "/images/SOFA/SOFA20/img2.webp",
+            "/images/SOFA/SOFA20/img3.webp",
+            "/images/SOFA/SOFA20/img4.webp",
+            "/images/SOFA/SOFA20/img5.webp"
         ],
         specs: {
             dimensions: null,
@@ -1327,8 +1327,8 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Gris", hex: "#D4D0CC", image: "/images/SOFA/SOFA20/render_iso.jpg" },
-                { name: "Beige", hex: "#C8B89A", image: "/images/SOFA/SOFA20/img3.jpg" }
+                { name: "Gris", hex: "#D4D0CC", image: "/images/SOFA/SOFA20/render_iso.webp" },
+                { name: "Beige", hex: "#C8B89A", image: "/images/SOFA/SOFA20/img3.webp" }
             ]
         },
         configurations: [

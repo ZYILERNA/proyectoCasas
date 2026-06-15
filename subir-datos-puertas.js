@@ -116,7 +116,7 @@ const productos_t200 = MODELOS_T200.map(n => ({
   specs: SPECS_T200,
   features: FEATURES_T200,
   unlock: UNLOCK_T200,
-  img: `/images/AI/door-t200.jpg`
+  img: `/images/AI/door-t200.webp`
 }));
 
 // ---- K300 Max ----
@@ -151,7 +151,7 @@ const productos_k300_max = MODELOS_K300_MAX.map(n => ({
   specs: SPECS_K300_MAX,
   features: FEATURES_K300_MAX,
   unlock: UNLOCK_K300_MAX,
-  img: `/images/AI/door-k300-max.jpg`
+  img: `/images/AI/door-k300-max.webp`
 }));
 
 // ---- K300 Pro ----
@@ -186,7 +186,7 @@ const productos_k300_pro = MODELOS_K300_PRO.map(n => ({
   specs: SPECS_K300_PRO,
   features: FEATURES_K300_PRO,
   unlock: UNLOCK_K300_PRO,
-  img: `/images/AI/door-k300-pro.jpg`
+  img: `/images/AI/door-k300-pro.webp`
 }));
 
 // ---- S121 ----
@@ -221,7 +221,7 @@ const productos_s121 = MODELOS_S121.map(n => ({
   specs: SPECS_S121,
   features: FEATURES_S121,
   unlock: UNLOCK_S121,
-  img: `/images/ACERO/door-s121.jpg`
+  img: `/images/ACERO/door-s121.webp`
 }));
 
 // ---- S101 ----
@@ -256,7 +256,7 @@ const productos_s101 = MODELOS_S101.map(n => ({
   specs: SPECS_S101,
   features: FEATURES_S101,
   unlock: UNLOCK_S101,
-  img: `/images/ACERO/door-s101.jpg`
+  img: `/images/ACERO/door-s101.webp`
 }));
 
 // ---- S119 ----
@@ -292,7 +292,7 @@ const productos_s119 = MODELOS_S119.map(n => ({
   specs: SPECS_S119,
   features: FEATURES_S119,
   unlock: UNLOCK_S119,
-  img: `/images/ACERO/door-s119.jpg`
+  img: `/images/ACERO/door-s119.webp`
 }));
 
 // ---- S118 ----
@@ -303,7 +303,7 @@ const productos_s118 = ["S118"].map(n => ({
   specs: SPECS_S119,      // ✅ Specs idénticas al S119
   features: FEATURES_S119, // ✅ Features idénticas al S119
   unlock: UNLOCK_S119,     // ✅ Desbloqueo idéntico al S119
-  img: `/images/ACERO/door-s118.jpg`
+  img: `/images/ACERO/door-s118.webp`
 }));
 
 // ---- S116 ----
@@ -336,7 +336,7 @@ const productos_s116 = ["S116"].map(n => ({
   specs: SPECS_S116,
   features: FEATURES_S116,
   unlock: UNLOCK_S116,
-  img: `/images/ACERO/door-s116.jpg`
+  img: `/images/ACERO/door-s116.webp`
 }));
 
 // ---- P103 ----
@@ -370,7 +370,7 @@ const productos_p103 = ["P103"].map(n => ({
   specs: SPECS_P103,
   features: FEATURES_P103,
   unlock: UNLOCK_P103,
-  img: `/images/ACERO/door-p103.jpg`
+  img: `/images/ACERO/door-p103.webp`
 }));
 
 // ---- P108 ----
@@ -404,7 +404,7 @@ const productos_p108 = ["P108"].map(n => ({
   specs: SPECS_P108,
   features: FEATURES_P108,
   unlock: UNLOCK_P108,
-  img: `/images/ACERO/door-p108.jpg`
+  img: `/images/ACERO/door-p108.webp`
 }));
 
 // ---- P106 ----
@@ -415,7 +415,7 @@ const productos_p106 = ["P106"].map(n => ({
   specs: SPECS_P108,       // ✅ Idéntico al P108
   features: FEATURES_P108, // ✅ Idéntico al P108
   unlock: UNLOCK_P108,     // ✅ Idéntico al P108
-  img: `/images/ACERO/door-p106.jpg`
+  img: `/images/ACERO/door-p106.webp`
 }));
 
 // ---- GL097 ----
@@ -449,7 +449,7 @@ const productos_gl097 = ["GL097"].map(n => ({
   specs: SPECS_GL097,
   features: FEATURES_GL097,
   unlock: UNLOCK_GL097,
-  img: `/images/ACERO/door-gl097.jpg`
+  img: `/images/ACERO/door-gl097.webp`
 }));
 
 // ---- GL097 Pro ----
@@ -483,7 +483,7 @@ const productos_gl097_pro = ["GL097 Pro"].map(n => ({
   specs: SPECS_GL097_PRO,
   features: FEATURES_GL097_PRO,
   unlock: UNLOCK_GL097_PRO,
-  img: `/images/ACERO/door-gl097-pro.jpg`
+  img: `/images/ACERO/door-gl097-pro.webp`
 }));
 
 // ---- GL098 Pro ----
@@ -494,7 +494,7 @@ const productos_gl098_pro = ["GL098 Pro"].map(n => ({
   specs: SPECS_GL097_PRO,       // ✅ Idéntico al GL097 Pro
   features: FEATURES_GL097_PRO, // ✅ Idéntico al GL097 Pro
   unlock: UNLOCK_GL097_PRO,     // ✅ Idéntico al GL097 Pro
-  img: `/images/ACERO/door-gl098-pro.jpg`
+  img: `/images/ACERO/door-gl098-pro.webp`
 }));
 
 // ---- CL96 ----
@@ -528,7 +528,7 @@ const productos_cl96 = ["CL96"].map(n => ({
   specs: SPECS_CL96,
   features: FEATURES_CL96,
   unlock: UNLOCK_CL96,
-  img: `/images/ACERO/door-cl96.jpg`
+  img: `/images/ACERO/door-cl96.webp`
 }));
 
 // ---- CL56 ----
@@ -539,7 +539,7 @@ const productos_cl56 = ["CL56"].map(n => ({
   specs: SPECS_CL96,     // ✅ Idéntico al CL96
   features: FEATURES_CL96,
   unlock: UNLOCK_CL96,
-  img: `/images/ACERO/door-cl56.jpg`
+  img: `/images/ACERO/door-cl56.webp`
 }));
 
 // ---- CL59 ----
@@ -550,7 +550,7 @@ const productos_cl59 = ["CL59"].map(n => ({
   specs: SPECS_CL96,     // ✅ Idéntico al CL96
   features: FEATURES_CL96,
   unlock: UNLOCK_CL96,
-  img: `/images/ACERO/door-cl59.jpg`
+  img: `/images/ACERO/door-cl59.webp`
 }));
 
 // ---- CL66 ----
@@ -561,7 +561,7 @@ const productos_cl66 = ["CL66"].map(n => ({
   specs: SPECS_CL96,     // ✅ Idéntico al CL96
   features: FEATURES_CL96,
   unlock: UNLOCK_CL96,
-  img: `/images/ACERO/door-cl66.jpg`
+  img: `/images/ACERO/door-cl66.webp`
 }));
 
 // ---- N9518 ----
@@ -595,7 +595,7 @@ const productos_n9518 = ["N9518"].map(n => ({
   specs: SPECS_N9518,
   features: FEATURES_N9518,
   unlock: UNLOCK_N9518,
-  img: `/images/ACERO/door-n9518.jpg`
+  img: `/images/ACERO/door-n9518.webp`
 }));
 
 // ---- N9519 ----
@@ -617,7 +617,7 @@ const productos_n9519 = ["N9519"].map(n => ({
   specs: SPECS_N9519,
   features: FEATURES_N9518, // ✅ Features idénticas al N9518
   unlock: UNLOCK_N9518,     // ✅ Desbloqueo idéntico al N9518
-  img: `/images/ACERO/door-n9519.jpg`
+  img: `/images/ACERO/door-n9519.webp`
 }));
 
 // --- 2. GENERADORES ---
@@ -671,7 +671,7 @@ const productos_ia = MODELOS_IA.map(n => {
       specs: SPECS_X50_MAX,
       features: FEATURES_X50_MAX,
       unlock: UNLOCK_X70, // Comparten los mismos métodos
-      img: `/images/AI/door-x50-max.jpg`
+      img: `/images/AI/door-x50-max.webp`
     };
   }
 
@@ -684,7 +684,7 @@ const productos_ia = MODELOS_IA.map(n => {
       specs: SPECS_X60_MAX,
       features: FEATURES_X70, 
       unlock: UNLOCK_X70,
-      img: `/images/AI/door-x60-max.jpg`
+      img: `/images/AI/door-x60-max.webp`
     };
   }
 
@@ -697,7 +697,7 @@ const productos_ia = MODELOS_IA.map(n => {
       specs: SPECS_X70_SHUNLIU,
       features: FEATURES_X70,
       unlock: UNLOCK_X70,
-      img: `/images/AI/door-x70-shunliu.jpg`
+      img: `/images/AI/door-x70-shunliu.webp`
     };
   }
   
@@ -710,7 +710,7 @@ const productos_ia = MODELOS_IA.map(n => {
       specs: SPECS_X70_JINXIU,
       features: FEATURES_X70,
       unlock: UNLOCK_X70,
-      img: `/images/AI/door-x70-jinxiu.jpg`
+      img: `/images/AI/door-x70-jinxiu.webp`
     };
   }
   
@@ -722,7 +722,7 @@ const productos_ia = MODELOS_IA.map(n => {
     specs: SPECS_IA,
     features: FEATURES_IA,
     unlock: UNLOCK_IA,
-    img: `/images/AI/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+    img: `/images/AI/door-${n.toLowerCase().replace(/\s+/g, '-')}.webp`
   };
 });
 
@@ -730,70 +730,70 @@ const productos_acero = MODELOS_ACERO.map(n => ({
   name: n, category: "PUERTA DE ACERO REFORZADO",
   description: `Modelo ${n}. Estructura multicapa reforzada.`,
   specs: SPECS_MECANICA, features: FEATURES_MECANICA, unlock: UNLOCK_MECANICO,
-  img: `/images/ACERO/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+  img: `/images/ACERO/door-${n.toLowerCase().replace(/\s+/g, '-')}.webp`
 }));
 
 const productos_acorazada = MODELOS_ACORAZADA.map(n => ({
   name: n, category: "PUERTA DE SEGURIDAD ACORAZADA",
   description: `Acorazada Serie WL modelo ${n}.`,
   specs: SPECS_MECANICA, features: FEATURES_MECANICA, unlock: UNLOCK_MECANICO,
-  img: `/images/ACORAZADA/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+  img: `/images/ACORAZADA/door-${n.toLowerCase().replace(/\s+/g, '-')}.webp`
 }));
 
 const productos_aluminio = MODELOS_ALUMINIO.map(n => ({
   name: n, category: "PUERTA DE ALUMINIO FUNDIDO",
   description: `Modelo ${n} en aluminio fundido.`,
   specs: SPECS_ALUMINIO, features: FEATURES_ALUMINIO, unlock: UNLOCK_MECANICO,
-  img: `/images/ALUMINIO/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+  img: `/images/ALUMINIO/door-${n.toLowerCase().replace(/\s+/g, '-')}.webp`
 }));
 
 const productos_madera_j = MODELOS_MADERA_J.map(n => ({
   name: n, category: "PUERTA ACÚSTICA DE MADERA",
   description: `Serie J Modelo ${n}.`,
   specs: SPECS_MADERA, features: FEATURES_MADERA, unlock: UNLOCK_MADERA,
-  img: `/images/MADERAACÚSTICA/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+  img: `/images/MADERAACÚSTICA/door-${n.toLowerCase().replace(/\s+/g, '-')}.webp`
 }));
 
 const productos_madera_d = MODELOS_MADERA_D.map(n => ({
   name: n, category: "PUERTA ACÚSTICA DE MADERA",
   description: `Serie D Minimalista ${n}.`,
   specs: SPECS_MADERA, features: FEATURES_MADERA, unlock: UNLOCK_MADERA,
-  img: `/images/MADERAACÚSTICA/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+  img: `/images/MADERAACÚSTICA/door-${n.toLowerCase().replace(/\s+/g, '-')}.webp`
 }));
 
 const productos_madera_s = [...new Set(MODELOS_MADERA_S)].map(n => ({
   name: n, category: "PUERTA ACÚSTICA DE MADERA",
   description: `Serie S Pure ${n}.`,
   specs: SPECS_MADERA, features: FEATURES_MADERA, unlock: UNLOCK_MADERA,
-  img: `/images/MADERAACÚSTICA/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+  img: `/images/MADERAACÚSTICA/door-${n.toLowerCase().replace(/\s+/g, '-')}.webp`
 }));
 
 const productos_madera_s203 = MODELOS_MADERA_S203.map(n => ({
   name: n, category: "PUERTA ACÚSTICA DE MADERA",
   description: `Modelo ${n}. Puerta acústica de madera con diseño minimalista y acabados premium.`,
   specs: SPECS_MADERA, features: FEATURES_MADERA, unlock: UNLOCK_MADERA,
-  img: `/images/MADERAACÚSTICA/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+  img: `/images/MADERAACÚSTICA/door-${n.toLowerCase().replace(/\s+/g, '-')}.webp`
 }));
 
 const productos_minimalista_ume = MODELOS_MINIMALISTA_UME.map(n => ({
   name: n, category: "PUERTA MINIMALISTA",
   description: `Serie UME Modelo ${n}. Diseño minimalista contemporáneo con acabados premium.`,
   specs: SPECS_MINIMALISTA, features: FEATURES_MINIMALISTA, unlock: UNLOCK_MINIMALISTA,
-  img: `/images/MINIMALISTA/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+  img: `/images/MINIMALISTA/door-${n.toLowerCase().replace(/\s+/g, '-')}.webp`
 }));
 
 const productos_bajo_carbono = MODELOS_BAJO_CARBONO.map(n => ({
   name: n, category: "PUERTA DE BAJO CARBONO",
   description: `Serie WL-DT Modelo ${n}. Puerta de bajo carbono con fabricación sostenible y eco-certificada.`,
   specs: SPECS_BAJO_CARBONO, features: FEATURES_BAJO_CARBONO, unlock: UNLOCK_BAJO_CARBONO,
-  img: `/images/BAJOCARBONO/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+  img: `/images/BAJOCARBONO/door-${n.toLowerCase().replace(/\s+/g, '-')}.webp`
 }));
 
 const productos_pvc = MODELOS_PVC.map(n => ({
   name: n, category: "PUERTA DE PVC",
   description: `Modelo ${n}. Diseño vanguardista.`,
   specs: SPECS_PVC, features: FEATURES_PVC, unlock: UNLOCK_PVC,
-  img: `/images/PVC/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+  img: `/images/PVC/door-${n.toLowerCase().replace(/\s+/g, '-')}.webp`
 }));
 
 const productos_corredizas = MODELOS_CORREDIZAS.map(n => {
@@ -805,7 +805,7 @@ const productos_corredizas = MODELOS_CORREDIZAS.map(n => {
     description: `Sistema corredero modelo ${n}.`,
     specs: SPECS_CORREDIZAS, features: FEATURES_CORREDIZAS, unlock: UNLOCK_CORREDIZAS,
     colors: colors,
-    img: `/images/CORREDIZA/door-${n}.jpg`
+    img: `/images/CORREDIZA/door-${n}.webp`
   };
 });
 
@@ -815,14 +815,14 @@ const productos_cortafuegos = MODELOS_CORTAFUEGOS.map(n => ({
   description: "Puerta cortafuego certificada.",
   specs: SPECS_CORTAFUEGOS, features: FEATURES_CORTAFUEGOS, unlock: UNLOCK_CORTAFUEGOS,
   colors: COLORS_CORTAFUEGOS,
-  img: `/images/CORTAFUEGO/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+  img: `/images/CORTAFUEGO/door-${n.toLowerCase().replace(/\s+/g, '-')}.webp`
 }));
 
 const productos_evacuacion = MODELOS_EVACUACION.map(n => ({
   name: n, category: "PUERTA DE EVACUACIÓN",
   description: "Puerta de evacuación de emergencia certificada con apertura en sentido de evacuación.",
   specs: SPECS_EVACUACION, features: FEATURES_EVACUACION, unlock: UNLOCK_EVACUACION,
-  img: `/images/EVACUACION/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+  img: `/images/EVACUACION/door-${n.toLowerCase().replace(/\s+/g, '-')}.webp`
 }));
 
 // ✅ CORRECCIÓN 2: Convertir nombres Médicos a minúsculas y sin espacios
@@ -832,8 +832,8 @@ const productos_medicas = MODELOS_MEDICAS.map(n => ({
   description: "Puerta técnica especializada para uso hospitalario y sanitario.",
   specs: SPECS_MEDICAS,
   features: FEATURES_MEDICAS,
-  // Esto convierte "PUERTA DE SALA1" -> "door-puerta-de-sala1.jpg"
-  img: `/images/MEDICA/door-${n.toLowerCase().replace(/\s+/g, '-')}.jpg`
+  // Esto convierte "PUERTA DE SALA1" -> "door-puerta-de-sala1.webp"
+  img: `/images/MEDICA/door-${n.toLowerCase().replace(/\s+/g, '-')}.webp`
 }));
 
 // ---- N9520 ----
@@ -867,7 +867,7 @@ const productos_n9520 = ["N9520"].map(n => ({
   specs: SPECS_N9520,
   features: FEATURES_N9520,
   unlock: UNLOCK_N9520,
-  img: `/images/ACERO/door-n9520.jpg`
+  img: `/images/ACERO/door-n9520.webp`
 }));
 
 // ---- Y118 ----
@@ -901,7 +901,7 @@ const productos_y118 = ["Y118"].map(n => ({
   specs: SPECS_Y118,
   features: FEATURES_Y118,
   unlock: UNLOCK_Y118,
-  img: `/images/ACERO/door-y118.jpg`
+  img: `/images/ACERO/door-y118.webp`
 }));
 
 // ---- Y116 ----
@@ -912,7 +912,7 @@ const productos_y116 = ["Y116"].map(n => ({
   specs: SPECS_Y118,       // ✅ Idéntico al Y118
   features: FEATURES_Y118,
   unlock: UNLOCK_Y118,
-  img: `/images/ACERO/door-y116.jpg`
+  img: `/images/ACERO/door-y116.webp`
 }));
 
 // ---- Y119 ----
@@ -946,7 +946,7 @@ const productos_y119 = ["Y119"].map(n => ({
   specs: SPECS_Y119,
   features: FEATURES_Y119,
   unlock: UNLOCK_Y119,
-  img: `/images/ACERO/door-y119.jpg`
+  img: `/images/ACERO/door-y119.webp`
 }));
 
 // ---- Y106 ----
@@ -980,7 +980,7 @@ const productos_y106 = ["Y106"].map(n => ({
   specs: SPECS_Y106,
   features: FEATURES_Y106,
   unlock: UNLOCK_Y106,
-  img: `/images/ACERO/door-y106.jpg`
+  img: `/images/ACERO/door-y106.webp`
 }));
 
 // ---- Chaohe ----
@@ -1013,7 +1013,7 @@ const productos_chaohe = ["Chaohe"].map(n => ({
   specs: SPECS_CHAOHE,
   features: FEATURES_CHAOHE,
   unlock: UNLOCK_CHAOHE,
-  img: `/images/ALUMINIO/door-chaohe.jpg`
+  img: `/images/ALUMINIO/door-chaohe.webp`
 }));
 
 // ---- L5859 ----
@@ -1045,7 +1045,7 @@ const productos_l5859 = ["L5859"].map(n => ({
   specs: SPECS_L5859,
   features: FEATURES_L5859,
   unlock: UNLOCK_L5859,
-  img: `/images/AI/door-l5859.jpg`
+  img: `/images/AI/door-l5859.webp`
 }));
 
 // ---- L5857 ----
@@ -1067,7 +1067,7 @@ const productos_l5857 = ["L5857"].map(n => ({
     "Fabricación a medida no estándar"
   ],
   unlock: "A Elección del Cliente / App / Llave",
-  img: `/images/AI/door-l5857.jpg`
+  img: `/images/AI/door-l5857.webp`
 }));
 
 // ---- L5601 ----
@@ -1078,7 +1078,7 @@ const productos_l5601 = ["L5601"].map(n => ({
   specs: productos_l5857[0].specs,       // ✅ Idéntico al L5857
   features: productos_l5857[0].features, // ✅ Idéntico al L5857
   unlock: productos_l5857[0].unlock,     // ✅ Idéntico al L5857
-  img: `/images/ACERO/door-l5601.jpg`
+  img: `/images/ACERO/door-l5601.webp`
 }));
 
 // ---- Louis ----
@@ -1110,7 +1110,7 @@ const productos_luyi = ["Louis"].map(n => ({
   specs: SPECS_LUYI,
   features: FEATURES_LUYI,
   unlock: UNLOCK_LUYI,
-  img: `/images/ALUMINIO/door-luyi.jpg`
+  img: `/images/ALUMINIO/door-luyi.webp`
 }));
 
 // ---- Chaopu ----
@@ -1121,7 +1121,7 @@ const productos_chaopu = ["Chaopu"].map(n => ({
   specs: SPECS_LUYI,       // ✅ Idéntico al Louis
   features: FEATURES_LUYI, // ✅ Idéntico al Louis
   unlock: UNLOCK_LUYI,     // ✅ Idéntico al Louis
-  img: `/images/ALUMINIO/door-chaopu.jpg`
+  img: `/images/ALUMINIO/door-chaopu.webp`
 }));
 
 // ---- Dihua ----
@@ -1153,7 +1153,7 @@ const productos_dihua = ["Dihua"].map(n => ({
   specs: SPECS_DIHUA,
   features: FEATURES_DIHUA,
   unlock: UNLOCK_DIHUA,
-  img: `/images/ALUMINIO/door-dihua.jpg`
+  img: `/images/ALUMINIO/door-dihua.webp`
 }));
 
 // ---- Saina ----
@@ -1164,7 +1164,7 @@ const productos_saina = ["Saina"].map(n => ({
   specs: SPECS_DIHUA,       // ✅ Idéntico al Dihua
   features: FEATURES_DIHUA, // ✅ Idéntico al Dihua
   unlock: UNLOCK_DIHUA,     // ✅ Idéntico al Dihua
-  img: `/images/ALUMINIO/door-saina.jpg`
+  img: `/images/ALUMINIO/door-saina.webp`
 }));
 
 // ---- Makailen ----
@@ -1175,7 +1175,7 @@ const productos_makailen = ["Makailen"].map(n => ({
   specs: SPECS_LUYI,       // ✅ Idéntico al Louis/Chaopu
   features: FEATURES_LUYI, // ✅ Idéntico al Louis/Chaopu
   unlock: UNLOCK_LUYI,     // ✅ Idéntico al Louis/Chaopu
-  img: `/images/ALUMINIO/door-makailen.jpg`
+  img: `/images/ALUMINIO/door-makailen.webp`
 }));
 
 // ---- Sabo ----
@@ -1207,7 +1207,7 @@ const productos_sabo = ["Sabo"].map(n => ({
   specs: SPECS_SABO,
   features: FEATURES_SABO,
   unlock: UNLOCK_SABO,
-  img: `/images/ALUMINIO/door-sabo.jpg`
+  img: `/images/ALUMINIO/door-sabo.webp`
 }));
 
 // ---- Chaoling ----
@@ -1218,7 +1218,7 @@ const productos_chaoling = ["Chaoling"].map(n => ({
   specs: SPECS_DIHUA,       // ✅ Idéntico al Dihua/Saina
   features: FEATURES_DIHUA, // ✅ Idéntico al Dihua/Saina
   unlock: UNLOCK_DIHUA,     // ✅ Idéntico al Dihua/Saina
-  img: `/images/ALUMINIO/door-chaoling.jpg`
+  img: `/images/ALUMINIO/door-chaoling.webp`
 }));
 
 // ---- Pulada ----
@@ -1229,7 +1229,7 @@ const productos_pulada = ["Pulada"].map(n => ({
   specs: SPECS_DIHUA,       // ✅ Idéntico al Dihua/Saina/Chaoling
   features: FEATURES_DIHUA, // ✅ Idéntico al Dihua/Saina/Chaoling
   unlock: UNLOCK_DIHUA,     // ✅ Idéntico al Dihua/Saina/Chaoling
-  img: `/images/ALUMINIO/door-pulada.jpg`
+  img: `/images/ALUMINIO/door-pulada.webp`
 }));
 
 // ---- TDF-2009 ----
@@ -1262,7 +1262,7 @@ const productos_tdf2009 = ["TDF-2009"].map(n => ({
   specs: SPECS_TDF2009,
   features: FEATURES_TDF2009,
   unlock: UNLOCK_TDF2009,
-  img: `/images/COBRE/door-tdf-2009.jpg`
+  img: `/images/COBRE/door-tdf-2009.webp`
 }));
 
 // ---- TDF-2003 ----
@@ -1294,7 +1294,7 @@ const productos_tdf2003 = ["TDF-2003"].map(n => ({
   specs: SPECS_TDF2003,
   features: FEATURES_TDF2003,
   unlock: UNLOCK_TDF2003,
-  img: `/images/COBRE/door-tdf-2003.jpg`
+  img: `/images/COBRE/door-tdf-2003.webp`
 }));
 
 // ---- Shengshi ----
@@ -1305,7 +1305,7 @@ const productos_shengshi = ["Shengshi"].map(n => ({
   specs: SPECS_N9519,       // ✅ Idéntico al N9519
   features: FEATURES_N9518, // ✅ Idéntico al N9519
   unlock: UNLOCK_N9518,     // ✅ Idéntico al N9519
-  img: `/images/ALUMINIO/door-shengshi.jpg`
+  img: `/images/ALUMINIO/door-shengshi.webp`
 }));
 
 // --- 3. UNIFICACIÓN ---

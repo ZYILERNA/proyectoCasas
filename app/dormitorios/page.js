@@ -485,7 +485,7 @@ const ProductCard = memo(({ item, index, onSelect }) => {
             const img = item.colors?.interior?.[hoverColorIdx]?.image;
             if (img) return img;
         }
-        return item.image || "/images/placeholder.jpg";
+        return item.image || "/images/placeholder.webp";
     }, [item, hoverColorIdx]);
 
     return (
@@ -659,7 +659,7 @@ export default function DormitoriosPage() {
         >
             <video
                 autoPlay loop muted playsInline preload="auto"
-                poster="/images/dormitorios-header.jpg"
+                poster="/images/dormitorios-header.webp"
                 className="w-full h-full object-cover opacity-60 scale-110"
             >
                 <source src="/videos/dormitorios-hero.webm" type="video/webm" />
