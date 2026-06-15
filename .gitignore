@@ -17,3 +17,6 @@ pnpm-debug.log*
 
 # OS
 .DS_Store
+
+# Claude Code settings (can contain tokens)
+.claude/
