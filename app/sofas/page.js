@@ -389,12 +389,33 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
 ProductDrawer.displayName = 'ProductDrawer';
 
 // --- PÁGINA PRINCIPAL ---
+// Extrae el tipo de tapizado: "Tela" o "Piel"
+function getMaterialType(product) {
+    const main = product.materials?.[0]?.material || "";
+    if (/leather|piel|cuero/i.test(main)) return "Piel";
+    return "Tela";
+}
+
+// Extrae el máximo de plazas del producto (por configuraciones)
+function getMaxSeats(product) {
+    const codes = (product.configurations || []).map(c => c.code || "");
+    const nums = codes.map(c => {
+        const m = c.match(/^(\d+)/);
+        return m ? parseInt(m[1]) : 0;
+    });
+    return nums.length ? Math.max(...nums) : 0;
+}
+
 export default function SofasPage() {
     const [products, setProducts] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [activeCategory, setActiveCategory] = useState("Todos");
     const [searchTerm, setSearchTerm] = useState("");
     const [selectedProduct, setSelectedProduct] = useState(null);
+    const [activeMaterial, setActiveMaterial] = useState("Todos");
+    const [activeSeats, setActiveSeats] = useState("Todos");
+    const [priceRange, setPriceRange] = useState([0, 100000]);
+    const [showAdvanced, setShowAdvanced] = useState(false);
 
     const gridTopRef = useRef(null);
     const filtersRef = useRef(null);
@@ -444,16 +465,36 @@ export default function SofasPage() {
         return ["Todos", ...uniqueCats];
     }, [products]);
 
+    // Precio mínimo y máximo reales del catálogo
+    const [priceMin, priceMax] = useMemo(() => {
+        if (!products.length) return [0, 100000];
+        const prices = products.map(p => p.priceBase || 0).filter(Boolean);
+        return [Math.min(...prices), Math.max(...prices)];
+    }, [products]);
+
+    // Inicializa el rango cuando llegan los datos
+    useEffect(() => {
+        if (products.length) setPriceRange([priceMin, priceMax]);
+    }, [priceMin, priceMax]);
+
     const filteredProducts = useMemo(() => {
         const searchLower = searchTerm.toLowerCase();
         return products.filter(item => {
             const matchCategory = activeCategory === "Todos" || item.category === activeCategory;
             if (!matchCategory) return false;
+            const matchMaterial = activeMaterial === "Todos" || getMaterialType(item) === activeMaterial;
+            if (!matchMaterial) return false;
+            const seats = getMaxSeats(item);
+            const matchSeats = activeSeats === "Todos"
+                || (activeSeats === "4+" ? seats >= 4 : seats === parseInt(activeSeats));
+            if (!matchSeats) return false;
+            const price = item.priceBase || 0;
+            if (price && (price < priceRange[0] || price > priceRange[1])) return false;
             if (searchTerm === "") return true;
             return item.name.toLowerCase().includes(searchLower) ||
                 item.code?.toLowerCase().includes(searchLower);
         });
-    }, [products, activeCategory, searchTerm]);
+    }, [products, activeCategory, searchTerm, activeMaterial, activeSeats, priceRange]);
 
     const handleCategoryChange = (cat) => {
         setActiveCategory(cat);

@@ -19,11 +19,13 @@ const sofasData = [
         code: "HYSF88101/2928BS",
         modules: "4D (2795mm)",
         priceBase: 35580,
-        image: "/images/SOFA/SOFA1/sofa_render.jpg",
+        image: "/images/SOFA/SOFA1/render_iso.jpg",
         schematics: [
-            "/images/SOFA/SOFA1/plano_vista_frontal.jpg",
-            "/images/SOFA/SOFA1/plano_vista_lateral.jpg",
-            "/images/SOFA/SOFA1/plano_vista_superior.jpg"
+            "/images/SOFA/SOFA1/img1.jpg",
+            "/images/SOFA/SOFA1/img2.jpg",
+            "/images/SOFA/SOFA1/img3.jpg",
+
+            "/images/SOFA/SOFA1/img25.jpg"
         ],
         specs: {
             dimensions: "2795 * 915 * 790 mm",
@@ -66,9 +68,14 @@ const sofasData = [
         priceBase: 121990,
         image: "/images/SOFA/SOFA2/render_iso.jpg",
         schematics: [
-            "/images/SOFA/SOFA2/plano_medidas.jpg",
-            "/images/SOFA/SOFA2/despiece_modulos.jpg",
-            "/images/SOFA/SOFA2/img3.jpg"
+            "/images/SOFA/SOFA2/img1.jpg",
+            "/images/SOFA/SOFA2/img2.jpg",
+            "/images/SOFA/SOFA2/img3.jpg",
+            "/images/SOFA/SOFA2/img4.jpg",
+            "/images/SOFA/SOFA2/img5.jpg",
+            "/images/SOFA/SOFA2/img6.jpg",
+            "/images/SOFA/SOFA2/img7.jpg",
+            "/images/SOFA/SOFA2/img8.jpg"
         ],
         specs: {
             dimensions: "4430 * 2880 * 700 mm",
@@ -113,7 +120,32 @@ const sofasData = [
         schematics: [
             "/images/SOFA/SOFA3/img1.jpg",
             "/images/SOFA/SOFA3/img2.jpg",
-            "/images/SOFA/SOFA3/img3.jpg"
+            "/images/SOFA/SOFA3/img3.jpg",
+            "/images/SOFA/SOFA3/img4.jpg",
+            "/images/SOFA/SOFA3/img5.jpg",
+            "/images/SOFA/SOFA3/img6.jpg",
+            "/images/SOFA/SOFA3/img7.jpg",
+            "/images/SOFA/SOFA3/img8.jpg",
+            "/images/SOFA/SOFA3/img9.jpg",
+            "/images/SOFA/SOFA3/img10.jpg",
+            "/images/SOFA/SOFA3/img11.jpg",
+            "/images/SOFA/SOFA3/img12.jpg",
+            "/images/SOFA/SOFA3/img13.jpg",
+            "/images/SOFA/SOFA3/img14.jpg",
+            "/images/SOFA/SOFA3/img15.jpg",
+            "/images/SOFA/SOFA3/img16.jpg",
+            "/images/SOFA/SOFA3/img17.jpg",
+            "/images/SOFA/SOFA3/img18.jpg",
+            "/images/SOFA/SOFA3/img19.jpg",
+            "/images/SOFA/SOFA3/img20.jpg",
+            "/images/SOFA/SOFA3/img21.jpg",
+            "/images/SOFA/SOFA3/img22.jpg",
+            "/images/SOFA/SOFA3/img23.jpg",
+            "/images/SOFA/SOFA3/img24.jpg",
+            "/images/SOFA/SOFA3/img25.jpg",
+            "/images/SOFA/SOFA3/img26.jpg",
+            "/images/SOFA/SOFA3/img27.jpg",
+            "/images/SOFA/SOFA3/img28.jpg"
         ],
         specs: {
             dimensions: "3430 * 3870 * 690 mm",
@@ -161,7 +193,25 @@ const sofasData = [
         schematics: [
             "/images/SOFA/SOFA4/img1.jpg",
             "/images/SOFA/SOFA4/img2.jpg",
-            "/images/SOFA/SOFA4/img3.jpg"
+            "/images/SOFA/SOFA4/img3.jpg",
+            "/images/SOFA/SOFA4/img4.jpg",
+            "/images/SOFA/SOFA4/img5.jpg",
+            "/images/SOFA/SOFA4/img6.jpg",
+            "/images/SOFA/SOFA4/img7.jpg",
+            "/images/SOFA/SOFA4/img8.jpg",
+            "/images/SOFA/SOFA4/img9.jpg",
+            "/images/SOFA/SOFA4/img10.jpg",
+            "/images/SOFA/SOFA4/img11.jpg",
+            "/images/SOFA/SOFA4/img12.jpg",
+            "/images/SOFA/SOFA4/img13.jpg",
+            "/images/SOFA/SOFA4/img14.jpg",
+            "/images/SOFA/SOFA4/img15.jpg",
+            "/images/SOFA/SOFA4/img16.jpg",
+            "/images/SOFA/SOFA4/img17.jpg",
+            "/images/SOFA/SOFA4/img18.jpg",
+            "/images/SOFA/SOFA4/img19.jpg",
+            "/images/SOFA/SOFA4/img20.jpg",
+            "/images/SOFA/SOFA4/img21.jpg"
         ],
         specs: {
             dimensions: "4800 * 1580 * 680/815 mm",
@@ -225,7 +275,8 @@ const sofasData = [
             "/images/SOFA/SOFA5/img17.jpg",
             "/images/SOFA/SOFA5/img18.jpg",
             "/images/SOFA/SOFA5/img19.jpg",
-            "/images/SOFA/SOFA5/img20.jpg"
+            "/images/SOFA/SOFA5/img20.jpg",
+            "/images/SOFA/SOFA5/img21.jpg"
         ],
         specs: {
             dimensions: "3580 * 1600 * 690 mm",
@@ -266,7 +317,9 @@ const sofasData = [
         priceBase: 43260,
         image: "/images/SOFA/SOFA6/render_iso.jpg",
         schematics: [
-            "/images/SOFA/SOFA6/img1.jpg"
+            "/images/SOFA/SOFA6/img1.jpg",
+            "/images/SOFA/SOFA6/img2.jpg",
+            "/images/SOFA/SOFA6/img3.jpg"
         ],
         specs: {
             dimensions: "2820 * 1060 * 730 mm",
@@ -310,7 +363,14 @@ const sofasData = [
         priceBase: 39450,
         image: "/images/SOFA/SOFA7/render_iso.jpg",
         schematics: [
-            "/images/SOFA/SOFA7/img1.jpg"
+            "/images/SOFA/SOFA7/img1.jpg",
+            "/images/SOFA/SOFA7/img2.jpg",
+            "/images/SOFA/SOFA7/img3.jpg",
+            "/images/SOFA/SOFA7/img4.jpg",
+            "/images/SOFA/SOFA7/img5.jpg",
+            "/images/SOFA/SOFA7/img6.jpg",
+            "/images/SOFA/SOFA7/img7.jpg",
+            "/images/SOFA/SOFA7/img8.jpg"
         ],
         specs: {
             dimensions: "3320 * 2660 * 750 mm",
@@ -359,7 +419,19 @@ const sofasData = [
         schematics: [
             "/images/SOFA/SOFA8/img1.jpg",
             "/images/SOFA/SOFA8/img2.jpg",
-            "/images/SOFA/SOFA8/img3.jpg"
+            "/images/SOFA/SOFA8/img3.jpg",
+            "/images/SOFA/SOFA8/img4.jpg",
+            "/images/SOFA/SOFA8/img5.jpg",
+            "/images/SOFA/SOFA8/img6.jpg",
+            "/images/SOFA/SOFA8/img7.jpg",
+            "/images/SOFA/SOFA8/img8.jpg",
+            "/images/SOFA/SOFA8/img9.jpg",
+            "/images/SOFA/SOFA8/img10.jpg",
+            "/images/SOFA/SOFA8/img11.jpg",
+            "/images/SOFA/SOFA8/img12.jpg",
+            "/images/SOFA/SOFA8/img13.jpg",
+            "/images/SOFA/SOFA8/img14.jpg",
+            "/images/SOFA/SOFA8/img15.jpg"
         ],
         specs: {
             dimensions: "3820 * 4070 * 710 mm",
@@ -404,7 +476,38 @@ const sofasData = [
         schematics: [
             "/images/SOFA/SOFA9/img1.jpg",
             "/images/SOFA/SOFA9/img2.jpg",
-            "/images/SOFA/SOFA9/img3.jpg"
+            "/images/SOFA/SOFA9/img3.jpg",
+            "/images/SOFA/SOFA9/img4.jpg",
+            "/images/SOFA/SOFA9/img5.jpg",
+            "/images/SOFA/SOFA9/img6.jpg",
+            "/images/SOFA/SOFA9/img7.jpg",
+            "/images/SOFA/SOFA9/img8.jpg",
+            "/images/SOFA/SOFA9/img9.jpg",
+            "/images/SOFA/SOFA9/img10.jpg",
+            "/images/SOFA/SOFA9/img11.jpg",
+            "/images/SOFA/SOFA9/img12.jpg",
+            "/images/SOFA/SOFA9/img13.jpg",
+            "/images/SOFA/SOFA9/img14.jpg",
+            "/images/SOFA/SOFA9/img15.jpg",
+            "/images/SOFA/SOFA9/img16.jpg",
+            "/images/SOFA/SOFA9/img17.jpg",
+            "/images/SOFA/SOFA9/img18.jpg",
+            "/images/SOFA/SOFA9/img19.jpg",
+            "/images/SOFA/SOFA9/img20.jpg",
+            "/images/SOFA/SOFA9/img21.jpg",
+            "/images/SOFA/SOFA9/img22.jpg",
+            "/images/SOFA/SOFA9/img23.jpg",
+            "/images/SOFA/SOFA9/img24.jpg",
+            "/images/SOFA/SOFA9/img25.jpg",
+            "/images/SOFA/SOFA9/img26.jpg",
+            "/images/SOFA/SOFA9/img27.jpg",
+            "/images/SOFA/SOFA9/img28.jpg",
+            "/images/SOFA/SOFA9/img29.jpg",
+            "/images/SOFA/SOFA9/img30.jpg",
+            "/images/SOFA/SOFA9/img31.jpg",
+            "/images/SOFA/SOFA9/img32.jpg",
+            "/images/SOFA/SOFA9/img33.jpg",
+            "/images/SOFA/SOFA9/img34.jpg"
         ],
         specs: {
             dimensions: "3060 * 2600 * 690 mm",
@@ -1105,7 +1208,7 @@ const sofasData = [
 
 
 
-    //empezar a subir en 88129
+    //empezar a subir en 88107
 ];
 
 async function uploadData() {
