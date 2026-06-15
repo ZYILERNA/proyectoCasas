@@ -1,4 +1,4 @@
-'use client'; // 👈 ESTO ES OBLIGATORIO EN NEXT.JS PARA ANIMACIONES
+﻿'use client'; // 👈 ESTO ES OBLIGATORIO EN NEXT.JS PARA ANIMACIONES
 
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -20,7 +20,7 @@ export default function EmpresaPage() {
         {/* Imagen de fondo */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/COMPANY/hq-building.jpg" 
+            src="/images/COMPANY/hq-building.webp" 
             alt="WONLY Headquarters" 
             className="w-full h-full object-cover opacity-60 scale-105"
           />
@@ -75,7 +75,7 @@ export default function EmpresaPage() {
           >
              <div className="absolute inset-0">
                <img 
-                 src="/images/COMPANY/ipo-celebration.jpg" 
+                 src="/images/COMPANY/ipo-celebration.webp" 
                  alt="Salida a Bolsa 2021" 
                  className="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700"
                />
@@ -164,7 +164,7 @@ export default function EmpresaPage() {
             </div>
             <div className="md:w-1/2 relative h-[300px] w-full rounded-xl overflow-hidden border border-white/10">
                <img 
-                 src="/images/COMPANY/factory-render.jpg" 
+                 src="/images/COMPANY/factory-render.webp" 
                  alt="Future Factory" 
                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                />

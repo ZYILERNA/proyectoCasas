@@ -22,7 +22,7 @@ export const metadata = {
   
   // FAVICON
   icons: {
-    icon: '/images/wonlylogo.jpg', 
+    icon: '/images/wonlylogo.webp',
   },
 };
 

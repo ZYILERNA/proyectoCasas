@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -26,42 +26,42 @@ const factoryModules = [
     title: "Línea Digital de Puertas de Seguridad",
     desc: "Inversión millonaria para una línea capaz de cambiar entre cientos de referencias (SKUs) automáticamente. Aumenta la capacidad en un 300% y mejora la precisión eliminando el trabajo manual.",
     icon: <Bot size={24} className="text-[#00C2FF]"/>,
-    image: "/images/COMPANY/FACTORY/security-line.jpg", 
+    image: "/images/COMPANY/FACTORY/security-line.webp", 
     stats: "+300% Capacidad"
   },
   {
     title: "Centro de Inspección IA",
     desc: "Sistema visual CCD y escaneo láser para detectar par de torsión y espacios. Los datos se sincronizan con sistemas SCADA y ERP para evitar cualquier error humano en el control de calidad.",
     icon: <Scan size={24} className="text-[#00C2FF]"/>,
-    image: "/images/COMPANY/FACTORY/inspection.jpg",
+    image: "/images/COMPANY/FACTORY/inspection.webp",
     stats: "Cero Errores"
   },
   {
     title: "Línea SMT de Cerraduras",
     desc: "Producción electrónica de vanguardia con una capacidad mensual superior al millón de unidades. Integra I+D y fabricación con una tasa de aprobación del 99,8%.",
     icon: <Cpu size={24} className="text-[#00C2FF]"/>,
-    image: "/images/COMPANY/FACTORY/smt.jpg",
+    image: "/images/COMPANY/FACTORY/smt.webp",
     stats: "99.8% Aprobación"
   },
   {
     title: "Almacenamiento Automático (AS/RS)",
     desc: "Sistema logístico inteligente que gestiona el almacenamiento y recuperación, aumentando el aprovechamiento del espacio en 3.6 veces y acelerando los envíos.",
     icon: <Warehouse size={24} className="text-[#00C2FF]"/>,
-    image: "/images/COMPANY/FACTORY/storage.jpg",
+    image: "/images/COMPANY/FACTORY/storage.webp",
     stats: "3.6x Eficiencia"
   },
   {
     title: "Fabricación de Puertas de Madera",
     desc: "Base de producción en Sichuan con tecnología 3 años por delante del sector. Automatización completa para mejorar la calidad de acabados y reducir costes laborales.",
     icon: <Factory size={24} className="text-[#00C2FF]"/>,
-    image: "/images/COMPANY/FACTORY/wood-line.jpg",
+    image: "/images/COMPANY/FACTORY/wood-line.webp",
     stats: "Tecnología Líder"
   },
   {
     title: "Recubrimiento Inteligente",
     desc: "Línea de pintura con inversión de 70M de yuanes. Aumenta la tasa de aplicación de polvo al 80-90%, optimizando la durabilidad y el acabado estético del producto.",
     icon: <Paintbrush size={24} className="text-[#00C2FF]"/>,
-    image: "/images/COMPANY/FACTORY/coating.jpg",
+    image: "/images/COMPANY/FACTORY/coating.webp",
     stats: "90% Eficiencia"
   }
 ];
@@ -74,7 +74,7 @@ const EmpresaPage = () => {
       <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/COMPANY/wonlyblue.jpg" 
+            src="/images/COMPANY/wonlyblue.webp" 
             alt="WONLY Headquarters" 
             className="w-full h-full object-cover opacity-50 scale-105"
           />
@@ -128,7 +128,7 @@ const EmpresaPage = () => {
             className="col-span-1 md:col-span-2 lg:col-span-8 bg-[#111] border border-white/10 rounded-2xl overflow-hidden relative group min-h-[400px] md:min-h-[500px]"
           >
              <img 
-              src="/images/COMPANY/ipo-celebration.jpg" 
+              src="/images/COMPANY/ipo-celebration.webp" 
               alt="Salida a Bolsa 2021" 
               className="absolute inset-0 w-full h-full object-cover object-top opacity-60 group-hover:scale-105 transition-transform duration-700"
              />
@@ -326,35 +326,35 @@ const EmpresaPage = () => {
                 className="grid grid-cols-2 gap-3 md:gap-4"
             >
               <div className="relative group overflow-hidden rounded-xl aspect-square border border-white/10">
-                <img src="/images/COMPANY/FACTORY/rd-central.jpg" alt="Sede Central" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
+                <img src="/images/COMPANY/FACTORY/rd-central.webp" alt="Sede Central" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
                 <div className="absolute bottom-0 w-full bg-black/80 backdrop-blur-sm py-2 px-3">
                   <span className="text-white text-xs md:text-sm font-medium">Sede Central</span>
                 </div>
               </div>
 
               <div className="relative group overflow-hidden rounded-xl aspect-square border border-white/10">
-                <img src="/images/COMPANY/FACTORY/rd-shanghai.jpg" alt="Shanghái" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
+                <img src="/images/COMPANY/FACTORY/rd-shanghai.webp" alt="Shanghái" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
                 <div className="absolute bottom-0 w-full bg-black/80 backdrop-blur-sm py-2 px-3">
                   <span className="text-white text-xs md:text-sm font-medium">Shanghái</span>
                 </div>
               </div>
 
               <div className="relative group overflow-hidden rounded-xl aspect-square border border-white/10">
-                <img src="/images/COMPANY/FACTORY/rd-hangzhou.jpg" alt="Hangzhou" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
+                <img src="/images/COMPANY/FACTORY/rd-hangzhou.webp" alt="Hangzhou" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
                 <div className="absolute bottom-0 w-full bg-black/80 backdrop-blur-sm py-2 px-3">
                   <span className="text-white text-xs md:text-sm font-medium">Hangzhou</span>
                 </div>
               </div>
 
               <div className="relative group overflow-hidden rounded-xl aspect-square border border-white/10">
-                <img src="/images/COMPANY/FACTORY/rd-shenzhen.jpg" alt="Shenzhen" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
+                <img src="/images/COMPANY/FACTORY/rd-shenzhen.webp" alt="Shenzhen" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
                 <div className="absolute bottom-0 w-full bg-black/80 backdrop-blur-sm py-2 px-3">
                   <span className="text-white text-xs md:text-sm font-medium">Shenzhen</span>
                 </div>
               </div>
 
               <div className="relative group overflow-hidden rounded-xl col-span-2 h-48 border border-white/10">
-                <img src="/images/COMPANY/FACTORY/rd-germany.jpg" alt="Alemania" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
+                <img src="/images/COMPANY/FACTORY/rd-germany.webp" alt="Alemania" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
                 <div className="absolute bottom-0 w-full bg-black/80 backdrop-blur-sm py-3 px-4 flex justify-between items-center">
                   <span className="text-white text-sm md:text-base font-bold">Base de I+D de Múnich, Alemania</span>
                   <Star size={16} className="text-[#00C2FF]"/>
@@ -438,7 +438,7 @@ const EmpresaPage = () => {
         {/* FONDO ESPACIAL Y ROBOT */}
         <div className="absolute inset-0 z-0">
          <img 
-          src="images/hero-robot.jpg" 
+          src="images/hero-robot.webp" 
           alt="WONLY Robot Security" 
           className="w-full h-full object-cover opacity-100"
           style={{ objectPosition: "center 0%" }}
@@ -481,10 +481,10 @@ const EmpresaPage = () => {
               {/* LOS 4 LOGOS DE CERTIFICACIÓN */}
               <div className="flex flex-wrap items-center gap-4 md:gap-6 mt-12">
                 {[
-                  { img: "cert-ga.png", title: "Norma GA", sub: "Seguridad Pública" },
-                  { img: "cert-gb.png", title: "Estándar GB", sub: "Norma Nacional" },
-                  { img: "cert-if.png", title: "iF Design", sub: "Design Award 2020" },
-                  { img: "cert-reddot.png", title: "Red Dot", sub: "Best of the Best" }
+                  { img: "cert-ga.webp", title: "Norma GA", sub: "Seguridad Pública" },
+                  { img: "cert-gb.webp", title: "Estándar GB", sub: "Norma Nacional" },
+                  { img: "cert-if.webp", title: "iF Design", sub: "Design Award 2020" },
+                  { img: "cert-reddot.webp", title: "Red Dot", sub: "Best of the Best" }
                 ].map((cert, i) => (
                   <div key={i} className="flex flex-col items-center gap-2 group">
                     <div className="h-16 md:h-20 aspect-square flex items-center justify-center bg-white p-2 md:p-3 rounded-lg shadow-[0_0_20px_rgba(255,255,255,0.1)] group-hover:scale-105 transition-transform duration-300">
@@ -523,7 +523,7 @@ const EmpresaPage = () => {
           <div className="absolute top-0 w-full h-32 bg-gradient-to-b from-[#011425] to-transparent z-10 pointer-events-none"></div>
           
           <img 
-            src="/images/COMPANY/wonly500final.jpg" 
+            src="/images/COMPANY/wonly500final.webp" 
             alt="Top 500 Asian Brands - WONLY" 
             className="w-full h-full object-cover object-center"
           />
@@ -596,7 +596,7 @@ const EmpresaPage = () => {
           <div className="absolute top-0 w-full h-32 bg-gradient-to-b from-[#011425] to-transparent z-10 pointer-events-none"></div>
           
           <img 
-            src="/images/COMPANY/skyland.jpg" // CAMBIA ESTO POR LA RUTA DE TU IMAGEN DE LOS EDIFICIOS
+            src="/images/COMPANY/skyland.webp" // CAMBIA ESTO POR LA RUTA DE TU IMAGEN DE LOS EDIFICIOS
             alt="Real Estate Partners WONLY" 
             className="w-full h-full object-cover object-center"
           />
@@ -666,11 +666,11 @@ const EmpresaPage = () => {
                     >
                       {/*
                       AQUÍ INSERTARÁS TUS LOGOS REALES. Ejemplo:
-                          <img src={`/images/COMPANY/LOGOS/inmobiliaria-${i+1}.png`} className="max-w-full max-h-full object-contain" alt={`Partner ${i+1}`} /> 
+                          <img src={`/images/COMPANY/LOGOS/inmobiliaria-${i+1}.webp`} className="max-w-full max-h-full object-contain" alt={`Partner ${i+1}`} /> 
                       */}
                       
                       {/* Texto placeholder temporal - Puedes borrarlo cuando pongas las imágenes */}
-                      <img src={`/images/COMPANY/LOGO/partner${i+1}.png`} className="max-w-full max-h-full object-contain" alt={`Partner ${i+1}`} /> 
+                      <img src={`/images/COMPANY/LOGO/partner${i+1}.webp`} className="max-w-full max-h-full object-contain" alt={`Partner ${i+1}`} /> 
                     </div>
                   ))}  
                   
