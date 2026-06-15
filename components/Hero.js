@@ -1,4 +1,4 @@
-// components/Hero.js
+﻿// components/Hero.js
 import Link from 'next/link';
 
 export default function Hero() {
@@ -8,7 +8,7 @@ export default function Hero() {
       {/* 1. LA IMAGEN DE FONDO */}
       <div className="absolute inset-0">
         <img 
-          src="/images/portrait1.png" 
+          src="/images/portrait1.webp" 
           alt="Dimoldura Interiors" 
           className="w-full h-full object-cover opacity-80"
         />

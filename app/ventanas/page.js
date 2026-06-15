@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from 'react';
 import Image from 'next/image';
@@ -39,7 +39,7 @@ const PRODUCTOS = [
     category: "Ventana",
     type: "SERIE ABATIBLE INTEGRADA",
     description: "Serie de ventanas abatibles integradas con mosquitero y rotura de puente térmico multicavidad. Equilibrio perfecto entre estética y aislamiento.",
-    img: "/images/VENTANAS/fashion110.jpg",
+    img: "/images/VENTANAS/fashion110.webp",
     specs: [
       { label: "Espesor", value: "1.4 mm" },
       { label: "Marco", value: "110 mm" },
@@ -77,7 +77,7 @@ const PRODUCTOS = [
     category: "Ventana",
     type: "SERIE ABATIBLE PREMIUM",
     description: "La evolución de la serie Fashion con mayor espesor de perfil y rendimiento térmico optimizado. Robustez superior para grandes exigencias.",
-    img: "/images/VENTANAS/fashion120.jpg",
+    img: "/images/VENTANAS/fashion120.webp",
     specs: [
       { label: "Espesor", value: "2.0 mm" },
       { label: "Marco", value: "120 mm" },
@@ -115,7 +115,7 @@ const PRODUCTOS = [
     category: "Ventana",
     type: "ABATIBLE DOBLE APERTURA",
     description: "Ventana abatible de doble apertura interior. Diseño compacto de alto rendimiento con herrajes alemanes VBH.",
-    img: "/images/VENTANAS/glory70.jpg",
+    img: "/images/VENTANAS/glory70.webp",
     specs: [
       { label: "Espesor", value: "2.0 mm" },
       { label: "Marco", value: "70 mm" },
@@ -151,7 +151,7 @@ const PRODUCTOS = [
     category: "Ventana",
     type: "SISTEMA ABATIBLE INTEGRAL",
     description: "Sistema de ventana abatible robusta con marco de 118mm. Estabilidad estructural superior y máxima protección.",
-    img: "/images/VENTANAS/glory118.jpg",
+    img: "/images/VENTANAS/glory118.webp",
     specs: [
       { label: "Espesor", value: "1.8 mm" },
       { label: "Marco", value: "118 mm" },
@@ -387,7 +387,7 @@ export default function CatalogoPage() {
 
           {/* 1. TÉRMICO */}
           <motion.div variants={fadeInUp} className="md:col-span-7 bg-[#0f0f0f] border border-white/10 rounded-xl relative overflow-hidden group hover:border-[#00C2FF]/30 transition-colors h-[450px]">
-             <Image src="/images/VENTANAS/termico.jpg" alt="Diseño Térmico" fill className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"/>
+             <Image src="/images/VENTANAS/termico.webp" alt="Diseño Térmico" fill className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"/>
              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
              <div className="absolute bottom-0 left-0 p-8 z-10 w-full">
                 <div className="flex items-center gap-3 mb-3">
@@ -402,7 +402,7 @@ export default function CatalogoPage() {
 
           {/* 2. DESAGÜE */}
           <motion.div variants={fadeInUp} className="md:col-span-5 bg-[#0f0f0f] border border-white/10 rounded-xl relative overflow-hidden group hover:border-white/30 transition-colors h-[450px]">
-             <Image src="/images/VENTANAS/desague.jpg" alt="Desagüe" fill className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"/>
+             <Image src="/images/VENTANAS/desague.webp" alt="Desagüe" fill className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"/>
              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
              <div className="absolute bottom-0 left-0 p-8 z-10">
                 <div className="flex items-center gap-3 mb-3">
@@ -417,7 +417,7 @@ export default function CatalogoPage() {
 
           {/* 3. TRIPLE SELLADO */}
           <motion.div variants={fadeInUp} className="md:col-span-6 bg-[#0f0f0f] border border-white/10 rounded-xl relative overflow-hidden group hover:border-[#00C2FF]/30 transition-colors h-[400px]">
-              <Image src="/images/VENTANAS/sellado.jpg" alt="Sellado" fill className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"/>
+              <Image src="/images/VENTANAS/sellado.webp" alt="Sellado" fill className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"/>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-8 z-10">
                  <div className="flex items-center gap-3 mb-3">
@@ -432,7 +432,7 @@ export default function CatalogoPage() {
 
           {/* 4. PROTECTOR */}
           <motion.div variants={fadeInUp} className="md:col-span-6 bg-[#0f0f0f] border border-white/10 rounded-xl relative overflow-hidden group hover:border-white/30 transition-colors h-[400px]">
-              <Image src="/images/VENTANAS/protector.jpg" alt="Protector" fill className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"/>
+              <Image src="/images/VENTANAS/protector.webp" alt="Protector" fill className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"/>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-8 z-10 w-full">
                  <div className="flex items-center gap-3 mb-3">

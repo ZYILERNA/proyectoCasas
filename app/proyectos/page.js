@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React from 'react';
 import Header from '../../components/Header';
 import Link from 'next/link';
@@ -11,55 +11,55 @@ const chinaProjects = [
     title: "Sede de los Juegos Asiáticos - Hangzhou",
     category: "Deportes / Infraestructura",
     description: "Infraestructura y gestión de seguridad para la sede principal de los Juegos Asiáticos de Hangzhou.",
-    image: "/images/PROYECTOS/hangzhou-games.jpg"
+    image: "/images/PROYECTOS/hangzhou-games.webp"
   },
   {
     title: "Cumbre del G20 - Hangzhou",
     category: "Gubernamental / Eventos",
     description: "Proveedores de seguridad para uno de los eventos diplomáticos más importantes del mundo.",
-    image: "/images/PROYECTOS/g20.jpg" 
+    image: "/images/PROYECTOS/g20.webp" 
   },
   {
     title: "Centro Nacional de Natación",
     category: "Deportes / Instalaciones",
     description: "Gestión y sistemas de seguridad en el Centro Nacional de Natación para competiciones internacionales.",
-    image: "/images/PROYECTOS/natacion-nacional.jpg"
+    image: "/images/PROYECTOS/natacion-nacional.webp"
   },
   {
     title: "Villa de los Juegos Nacionales - Tianjin",
     category: "Deportes / Infraestructura",
     description: "Soporte y control de seguridad en la Villa de los Juegos Nacionales durante el evento deportivo.",
-    image: "/images/PROYECTOS/villa-juegos-tianjin.jpg"
+    image: "/images/PROYECTOS/villa-juegos-tianjin.webp"
   },
   {
     title: "Viviendas del Ministerio Central",
     category: "Gubernamental / Residencial",
     description: "Gestión integral de seguridad en complejos residenciales destinados a personal del Ministerio Central.",
-    image: "/images/PROYECTOS/viviendas-ministerio-central.jpg"
+    image: "/images/PROYECTOS/viviendas-ministerio-central.webp"
   }, 
   {
     title: "Centro de Lanzamiento de Satélites de Xichang",
     category: "Aeroespacial / Infraestructura",
     description: "Sistemas avanzados de seguridad y control en el Centro de Lanzamiento de Satélites de Xichang.",
-    image: "/images/PROYECTOS/xichang-satellite.jpg"
+    image: "/images/PROYECTOS/xichang-satellite.webp"
   },
   {
     title: "Salón de Conferencias de la Calidad de China",
     category: "Gubernamental / Conferencias",
     description: "Soluciones de seguridad y control para el Salón de Conferencias de la Calidad de China.",
-    image: "/images/PROYECTOS/salon-calidad-china.jpg"
+    image: "/images/PROYECTOS/salon-calidad-china.webp"
   },
   {
     title: "Puerto de la Innovación",
     category: "Infraestructura / Tecnología",
     description: "Gestión y sistemas de seguridad en el Puerto de la Innovación como núcleo tecnológico y logístico.",
-    image: "/images/PROYECTOS/puerto-innovacion.jpg"
+    image: "/images/PROYECTOS/puerto-innovacion.webp"
   },
   {
     title: "Aeropuerto Internacional de Pekín-Daxing",
     category: "Transporte / Infraestructura",
     description: "Sistemas integrales de seguridad y control en el Aeropuerto Internacional de Pekín-Daxing.",
-    image: "/images/PROYECTOS/aeropuerto-daxing.jpg"
+    image: "/images/PROYECTOS/aeropuerto-daxing.webp"
   },
 ];
 
@@ -70,56 +70,56 @@ const internationalProjects = [
     location: "Dakar, Senegal",
     category: "Deportes / Infraestructura",
     description: "Sistemas de seguridad y control de accesos en el Estadio Nacional de Senegal para eventos deportivos internacionales.",
-    image: "/images/PROYECTOS/estadio-senegal.jpg"
+    image: "/images/PROYECTOS/estadio-senegal.webp"
     },
     {
     title: "Escuelas Modelo en Irak",
     location: "Irak",
     category: "Educación / Infraestructura",
     description: "Gestión de seguridad y control en la construcción de escuelas modelo para impulsar la educación en Irak.",
-    image: "/images/PROYECTOS/escuelas-irak.jpg"
+    image: "/images/PROYECTOS/escuelas-irak.webp"
     },
     {
     title: "CBD de la Nueva Capital Administrativa - Egipto",
     location: "Egipto",
     category: "Infraestructura / Negocios",
     description: "Sistemas de seguridad y gestión integral en el Distrito Central de Negocios de la Nueva Capital Administrativa.",
-    image: "/images/PROYECTOS/cbd-egipto.jpg"
+    image: "/images/PROYECTOS/cbd-egipto.webp"
     },
     {
     title: "Proyecto de Apartamentos - Sri Lanka",
     location: "Sri Lanka",
     category: "Residencial / Infraestructura",
     description: "Gestión de seguridad y control de accesos en el proyecto de apartamentos de alta gama en Sri Lanka.",
-    image: "/images/PROYECTOS/apartamentos-srilanka.jpg"
+    image: "/images/PROYECTOS/apartamentos-srilanka.webp"
     },
     {
     title: "Zona FOH - Torre Crescent, Egipto",
     location: "Egipto",
     category: "Infraestructura / Comercial",
     description: "Sistemas de seguridad y control de accesos en la zona FOH de la Torre Crescent en Egipto.",
-    image: "/images/PROYECTOS/foh-torre-crescent.jpg"
+    image: "/images/PROYECTOS/foh-torre-crescent.webp"
     },
     {
     title: "Palacio Presidencial - Togo",
     location: "Togo",
     category: "Gubernamental / Seguridad",
     description: "Gestión de asistencia y sistemas de seguridad en el Palacio Presidencial de Togo.",
-    image: "/images/PROYECTOS/palacio-togo.jpg"
+    image: "/images/PROYECTOS/palacio-togo.webp"
     },
     {
     title: "Escuela Secundaria Naxtong - Vientián, Laos",
     location: "Laos",
     category: "Educación / Infraestructura",
     description: "Gestión de asistencia y sistemas de seguridad en la Escuela Secundaria Naxtong en Vientián, Laos.",
-    image: "/images/PROYECTOS/escuela-naxtong-laos.jpg"
+    image: "/images/PROYECTOS/escuela-naxtong-laos.webp"
     },
     {
     title: "Asistencia Presidencial - Vanuatu",
     location: "Vanuatu",
     category: "Gubernamental / Seguridad",
     description: "Gestión de asistencia y sistemas de seguridad para la Presidencia en Vanuatu.",
-    image: "/images/PROYECTOS/asistencia-presidencial-vanuatu.jpg"
+    image: "/images/PROYECTOS/asistencia-presidencial-vanuatu.webp"
     },
 
 ];
@@ -214,7 +214,7 @@ export default function ProyectosPage() {
       {/* 3. SECCIÓN PROYECTOS INTERNACIONALES */}
       <section className="py-20 bg-[#080808] border-t border-white/5 relative overflow-hidden">
           {/* Fondo sutil para diferenciar la sección */}
-          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.webp')] opacity-5 pointer-events-none"></div>
 
           <div className="container mx-auto px-6 relative z-10">
               {/* Encabezado descriptivo */}

@@ -1,4 +1,4 @@
-// subir-dormitorios.js
+﻿// subir-dormitorios.js
 require('dotenv').config({ path: '.env.local' });
 const { createClient } = require('@supabase/supabase-js');
 
@@ -27,11 +27,11 @@ const dormitoriosData = [
     category: "Camas", 
     code: "HYRC89101/HB106", 
     priceBase: 15960, 
-    image: "/images/DORMITORIOS/CAMA1/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA1/render.webp", 
     schematics: [
-        "/images/DORMITORIOS/CAMA1/img1.jpg", 
-        "/images/DORMITORIOS/CAMA1/img2.jpg",
-        "/images/DORMITORIOS/CAMA1/img3.jpg"
+        "/images/DORMITORIOS/CAMA1/img1.webp", 
+        "/images/DORMITORIOS/CAMA1/img2.webp",
+        "/images/DORMITORIOS/CAMA1/img3.webp"
     ],
     specs: { 
         dimensions: "1800 * 2000 mm", 
@@ -70,12 +70,12 @@ const dormitoriosData = [
     category: "Camas", 
     code: "HYRC89101-B/HB106B", 
     priceBase: 15960, 
-    image: "/images/DORMITORIOS/CAMA2/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA2/render.webp", 
     schematics: [
-        "/images/DORMITORIOS/CAMA2/img1.jpg", 
-        "/images/DORMITORIOS/CAMA2/img2.jpg",
-        "/images/DORMITORIOS/CAMA2/img3.jpg",
-        "/images/DORMITORIOS/CAMA2/img4.jpg"
+        "/images/DORMITORIOS/CAMA2/img1.webp", 
+        "/images/DORMITORIOS/CAMA2/img2.webp",
+        "/images/DORMITORIOS/CAMA2/img3.webp",
+        "/images/DORMITORIOS/CAMA2/img4.webp"
     ],
     specs: { 
         dimensions: "1800 * 2000 mm", 
@@ -114,12 +114,12 @@ const dormitoriosData = [
     category: "Camas", 
     code: "HYRC89102/HB126", 
     priceBase: 16630, 
-    image: "/images/DORMITORIOS/CAMA3/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA3/render.webp", 
     schematics: [
-        "/images/DORMITORIOS/CAMA3/img1.jpg", 
-        "/images/DORMITORIOS/CAMA3/img2.jpg",
-        "/images/DORMITORIOS/CAMA3/img3.jpg",
-        "/images/DORMITORIOS/CAMA3/img4.jpg"
+        "/images/DORMITORIOS/CAMA3/img1.webp", 
+        "/images/DORMITORIOS/CAMA3/img2.webp",
+        "/images/DORMITORIOS/CAMA3/img3.webp",
+        "/images/DORMITORIOS/CAMA3/img4.webp"
     ],
     specs: { 
         dimensions: "1800 * 2000 mm", 
@@ -160,13 +160,13 @@ const dormitoriosData = [
     category: "Camas", 
     code: "HYRC89103/HB128", 
     priceBase: 35380, 
-    image: "/images/DORMITORIOS/CAMA4/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA4/render.webp", 
     schematics: [
-        "/images/DORMITORIOS/CAMA4/img1.jpg", 
-        "/images/DORMITORIOS/CAMA4/img2.jpg",
-        "/images/DORMITORIOS/CAMA4/img3.jpg",
-        "/images/DORMITORIOS/CAMA4/img4.jpg",
-        "/images/DORMITORIOS/CAMA4/img5.jpg"
+        "/images/DORMITORIOS/CAMA4/img1.webp", 
+        "/images/DORMITORIOS/CAMA4/img2.webp",
+        "/images/DORMITORIOS/CAMA4/img3.webp",
+        "/images/DORMITORIOS/CAMA4/img4.webp",
+        "/images/DORMITORIOS/CAMA4/img5.webp"
     ],
     specs: { 
         dimensions: "1800 * 2000 mm", 
@@ -208,13 +208,13 @@ const dormitoriosData = [
     category: "Camas", 
     code: "HYRC89105/HB129BS", 
     priceBase: 29480, 
-    image: "/images/DORMITORIOS/CAMA5/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA5/render.webp", 
     schematics: [
-        "/images/DORMITORIOS/CAMA5/img1.jpg", 
-        "/images/DORMITORIOS/CAMA5/img2.jpg",
-        "/images/DORMITORIOS/CAMA5/img3.jpg",
-         "/images/DORMITORIOS/CAMA5/img4.jpg",
-        "/images/DORMITORIOS/CAMA5/img5.jpg"
+        "/images/DORMITORIOS/CAMA5/img1.webp", 
+        "/images/DORMITORIOS/CAMA5/img2.webp",
+        "/images/DORMITORIOS/CAMA5/img3.webp",
+         "/images/DORMITORIOS/CAMA5/img4.webp",
+        "/images/DORMITORIOS/CAMA5/img5.webp"
     ],
     specs: { 
         dimensions: "1800 * 2000 mm", 
@@ -253,13 +253,13 @@ const dormitoriosData = [
     category: "Camas", 
     code: "HYRC89106/HB130", 
     priceBase: 41550, 
-    image: "/images/DORMITORIOS/CAMA6/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA6/render.webp", 
     schematics: [
-        "/images/DORMITORIOS/CAMA6/img1.jpg",
-        "/images/DORMITORIOS/CAMA6/img2.jpg",
-        "/images/DORMITORIOS/CAMA6/img3.jpg",
-        "/images/DORMITORIOS/CAMA6/img4.jpg",
-        "/images/DORMITORIOS/CAMA6/img5.jpg"
+        "/images/DORMITORIOS/CAMA6/img1.webp",
+        "/images/DORMITORIOS/CAMA6/img2.webp",
+        "/images/DORMITORIOS/CAMA6/img3.webp",
+        "/images/DORMITORIOS/CAMA6/img4.webp",
+        "/images/DORMITORIOS/CAMA6/img5.webp"
     ],
     specs: { 
         dimensions: "1800 * 2000 mm", 
@@ -300,13 +300,13 @@ const dormitoriosData = [
     category: "Camas", 
     code: "HYRC89107/HB133B", 
     priceBase: 32860, 
-    image: "/images/DORMITORIOS/CAMA7/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA7/render.webp", 
     schematics: [
-        "/images/DORMITORIOS/CAMA7/img1.jpg",
-        "/images/DORMITORIOS/CAMA7/img2.jpg",
-        "/images/DORMITORIOS/CAMA7/img3.jpg",
-        "/images/DORMITORIOS/CAMA7/img4.jpg",
-        "/images/DORMITORIOS/CAMA7/img5.jpg"
+        "/images/DORMITORIOS/CAMA7/img1.webp",
+        "/images/DORMITORIOS/CAMA7/img2.webp",
+        "/images/DORMITORIOS/CAMA7/img3.webp",
+        "/images/DORMITORIOS/CAMA7/img4.webp",
+        "/images/DORMITORIOS/CAMA7/img5.webp"
     ],
     specs: { 
         dimensions: "1800 * 2000 mm", 
@@ -344,14 +344,14 @@ const dormitoriosData = [
     category: "Camas", 
     code: "HYRC89118", 
     priceBase: 34480, 
-    image: "/images/DORMITORIOS/CAMA8/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA8/render.webp", 
     schematics: [
-        "/images/DORMITORIOS/CAMA8/img1.jpg",
-        "/images/DORMITORIOS/CAMA8/img2.jpg",
-        "/images/DORMITORIOS/CAMA8/img3.jpg",
-        "/images/DORMITORIOS/CAMA8/img4.jpg",
-        "/images/DORMITORIOS/CAMA8/img5.jpg",
-        "/images/DORMITORIOS/CAMA8/img6.jpg"
+        "/images/DORMITORIOS/CAMA8/img1.webp",
+        "/images/DORMITORIOS/CAMA8/img2.webp",
+        "/images/DORMITORIOS/CAMA8/img3.webp",
+        "/images/DORMITORIOS/CAMA8/img4.webp",
+        "/images/DORMITORIOS/CAMA8/img5.webp",
+        "/images/DORMITORIOS/CAMA8/img6.webp"
     ],
     specs: { 
         dimensions: "1800 * 2000 mm", 
@@ -392,14 +392,14 @@ const dormitoriosData = [
     category: "Camas", 
     code: "HYRC89122/MCJ5812", 
     priceBase: 23460, 
-    image: "/images/DORMITORIOS/CAMA9/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA9/render.webp", 
     schematics: [
-        "/images/DORMITORIOS/CAMA9/img1.jpg",
-        "/images/DORMITORIOS/CAMA9/img2.jpg",
-        "/images/DORMITORIOS/CAMA9/img3.jpg",
-        "/images/DORMITORIOS/CAMA9/img4.jpg",
-        "/images/DORMITORIOS/CAMA9/img5.jpg",
-        "/images/DORMITORIOS/CAMA9/img6.jpg"
+        "/images/DORMITORIOS/CAMA9/img1.webp",
+        "/images/DORMITORIOS/CAMA9/img2.webp",
+        "/images/DORMITORIOS/CAMA9/img3.webp",
+        "/images/DORMITORIOS/CAMA9/img4.webp",
+        "/images/DORMITORIOS/CAMA9/img5.webp",
+        "/images/DORMITORIOS/CAMA9/img6.webp"
     ],
     specs: { 
         dimensions: "1800 * 2000 mm", 
@@ -438,15 +438,15 @@ const dormitoriosData = [
     category: "Mesas de Noche", 
     code: "HYGL81803-A/HB132Y-CTG", 
     priceBase: 8450, 
-    image: "/images/DORMITORIOS/CAMA10/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA10/render.webp", 
     schematics: [
-        "/images/DORMITORIOS/CAMA10/img1.jpg", 
-        "/images/DORMITORIOS/CAMA10/img2.jpg",
-        "/images/DORMITORIOS/CAMA10/img3.jpg",
-        "/images/DORMITORIOS/CAMA10/img4.jpg",
-        "/images/DORMITORIOS/CAMA10/img5.jpg",
-        "/images/DORMITORIOS/CAMA10/img6.jpg",
-        "/images/DORMITORIOS/CAMA10/img7.jpg"
+        "/images/DORMITORIOS/CAMA10/img1.webp", 
+        "/images/DORMITORIOS/CAMA10/img2.webp",
+        "/images/DORMITORIOS/CAMA10/img3.webp",
+        "/images/DORMITORIOS/CAMA10/img4.webp",
+        "/images/DORMITORIOS/CAMA10/img5.webp",
+        "/images/DORMITORIOS/CAMA10/img6.webp",
+        "/images/DORMITORIOS/CAMA10/img7.webp"
     ],
     specs: { 
         dimensions: "550 * 430 * 500 mm", 
@@ -484,13 +484,13 @@ const dormitoriosData = [
     category: "Mesas de Noche", 
     code: "HYGL81808-B/HB126Y-CTG", 
     priceBase: 5890, 
-    image: "/images/DORMITORIOS/CAMA11/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA11/render.webp", 
     schematics: [
-        "/images/DORMITORIOS/CAMA11/img1.jpg", 
-        "/images/DORMITORIOS/CAMA11/img2.jpg",
-        "/images/DORMITORIOS/CAMA11/img3.jpg",
-        "/images/DORMITORIOS/CAMA11/img4.jpg",
-        "/images/DORMITORIOS/CAMA11/img5.jpg"
+        "/images/DORMITORIOS/CAMA11/img1.webp", 
+        "/images/DORMITORIOS/CAMA11/img2.webp",
+        "/images/DORMITORIOS/CAMA11/img3.webp",
+        "/images/DORMITORIOS/CAMA11/img4.webp",
+        "/images/DORMITORIOS/CAMA11/img5.webp"
     ],
     specs: { 
         dimensions: "500 * 420 * 450 mm", 
@@ -533,13 +533,13 @@ const dormitoriosData = [
     category: "Mesas de Noche", 
     code: "HYGL81810/HB130Y-CTG", 
     priceBase: 7190, 
-    image: "/images/DORMITORIOS/CAMA12/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA12/render.webp", 
     schematics: [
-        "/images/DORMITORIOS/CAMA12/img1.jpg", 
-        "/images/DORMITORIOS/CAMA12/img2.jpg",
-        "/images/DORMITORIOS/CAMA12/img3.jpg",
-        "/images/DORMITORIOS/CAMA12/img4.jpg",
-        "/images/DORMITORIOS/CAMA12/img5.jpg"
+        "/images/DORMITORIOS/CAMA12/img1.webp", 
+        "/images/DORMITORIOS/CAMA12/img2.webp",
+        "/images/DORMITORIOS/CAMA12/img3.webp",
+        "/images/DORMITORIOS/CAMA12/img4.webp",
+        "/images/DORMITORIOS/CAMA12/img5.webp"
     ],
     specs: { 
         dimensions: "500 * 380 * 500 mm", 
@@ -575,12 +575,12 @@ const dormitoriosData = [
     category: "Mesas de Noche", 
     code: "HYGL81811-L/HB135Y-CTGL", 
     priceBase: 5460, 
-    image: "/images/DORMITORIOS/CAMA13/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA13/render.webp", 
     schematics: [
-        "/images/DORMITORIOS/CAMA13/img1.jpg", 
-        "/images/DORMITORIOS/CAMA13/img2.jpg",
-        "/images/DORMITORIOS/CAMA13/img3.jpg",
-        "/images/DORMITORIOS/CAMA13/img4.jpg"
+        "/images/DORMITORIOS/CAMA13/img1.webp", 
+        "/images/DORMITORIOS/CAMA13/img2.webp",
+        "/images/DORMITORIOS/CAMA13/img3.webp",
+        "/images/DORMITORIOS/CAMA13/img4.webp"
     ],
     specs: { 
         dimensions: "550 * 470 * 460 mm", 
@@ -622,12 +622,12 @@ const dormitoriosData = [
     category: "Mesas de Noche", 
     code: "HYGL81811-AL/HB135Y-CTGL", 
     priceBase: 5460, 
-    image: "/images/DORMITORIOS/CAMA14/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA14/render.webp", 
     schematics: [
-        "/images/DORMITORIOS/CAMA14/img1.jpg", 
-        "/images/DORMITORIOS/CAMA14/img2.jpg",
-        "/images/DORMITORIOS/CAMA14/img3.jpg",
-        "/images/DORMITORIOS/CAMA14/img4.jpg"
+        "/images/DORMITORIOS/CAMA14/img1.webp", 
+        "/images/DORMITORIOS/CAMA14/img2.webp",
+        "/images/DORMITORIOS/CAMA14/img3.webp",
+        "/images/DORMITORIOS/CAMA14/img4.webp"
     ],
     specs: { 
         dimensions: "550 * 470 * 460 mm", 
@@ -669,14 +669,14 @@ const dormitoriosData = [
     category: "Mesas de Noche", 
     code: "HYGL81812-A/HB136-CTGA", 
     priceBase: 4760, 
-    image: "/images/DORMITORIOS/CAMA15/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA15/render.webp", 
     schematics: [
-        "/images/DORMITORIOS/CAMA15/img1.jpg", 
-        "/images/DORMITORIOS/CAMA15/img2.jpg",
-        "/images/DORMITORIOS/CAMA15/img3.jpg",
-        "/images/DORMITORIOS/CAMA15/img4.jpg",
-        "/images/DORMITORIOS/CAMA15/img5.jpg",
-        "/images/DORMITORIOS/CAMA15/img6.jpg"
+        "/images/DORMITORIOS/CAMA15/img1.webp", 
+        "/images/DORMITORIOS/CAMA15/img2.webp",
+        "/images/DORMITORIOS/CAMA15/img3.webp",
+        "/images/DORMITORIOS/CAMA15/img4.webp",
+        "/images/DORMITORIOS/CAMA15/img5.webp",
+        "/images/DORMITORIOS/CAMA15/img6.webp"
     ],
     specs: { 
         dimensions: "700 * 440 * 420 mm", 
@@ -720,12 +720,12 @@ const dormitoriosData = [
     category: "Mesas de Noche", 
     code: "HYGL81813/HB137-CTG", 
     priceBase: 6260, 
-    image: "/images/DORMITORIOS/CAMA16/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA16/render.webp", 
     schematics: [
-        "/images/DORMITORIOS/CAMA16/img1.jpg", 
-        "/images/DORMITORIOS/CAMA16/img2.jpg",
-        "/images/DORMITORIOS/CAMA16/img3.jpg",
-        "/images/DORMITORIOS/CAMA16/img4.jpg"
+        "/images/DORMITORIOS/CAMA16/img1.webp", 
+        "/images/DORMITORIOS/CAMA16/img2.webp",
+        "/images/DORMITORIOS/CAMA16/img3.webp",
+        "/images/DORMITORIOS/CAMA16/img4.webp"
     ],
     specs: { 
         dimensions: "530 * 470 * 570 mm", 
@@ -764,12 +764,12 @@ const dormitoriosData = [
     category: "Mesas de Noche", 
     code: "HYGL81818-A", 
     priceBase: 3790, 
-    image: "/images/DORMITORIOS/CAMA17/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA17/render.webp", 
     schematics: [
-        "/images/DORMITORIOS/CAMA17/img1.jpg", 
-        "/images/DORMITORIOS/CAMA17/img2.jpg",
-        "/images/DORMITORIOS/CAMA17/img3.jpg",
-        "/images/DORMITORIOS/CAMA17/img4.jpg"
+        "/images/DORMITORIOS/CAMA17/img1.webp", 
+        "/images/DORMITORIOS/CAMA17/img2.webp",
+        "/images/DORMITORIOS/CAMA17/img3.webp",
+        "/images/DORMITORIOS/CAMA17/img4.webp"
     ],
     specs: { 
         dimensions: "460 * 400 * 450 mm", 
@@ -810,12 +810,12 @@ const dormitoriosData = [
     category: "Mesas de Noche", 
     code: "HYGL81823-AR", 
     priceBase: 6960, 
-    image: "/images/DORMITORIOS/CAMA18/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA18/render.webp", 
     schematics: [
-        "/images/DORMITORIOS/CAMA18/img1.jpg", 
-        "/images/DORMITORIOS/CAMA18/img2.jpg",
-        "/images/DORMITORIOS/CAMA18/img3.jpg",
-        "/images/DORMITORIOS/CAMA18/img4.jpg"
+        "/images/DORMITORIOS/CAMA18/img1.webp", 
+        "/images/DORMITORIOS/CAMA18/img2.webp",
+        "/images/DORMITORIOS/CAMA18/img3.webp",
+        "/images/DORMITORIOS/CAMA18/img4.webp"
     ],
     specs: { 
         dimensions: "545 * 420 * 475 mm", 
@@ -858,12 +858,12 @@ const dormitoriosData = [
     category: "Mesas de Noche", 
     code: "HYGL81823-BR", 
     priceBase: 6260, 
-    image: "/images/DORMITORIOS/CAMA19/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA19/render.webp", 
     schematics: [
-        "/images/DORMITORIOS/CAMA19/img1.jpg", 
-        "/images/DORMITORIOS/CAMA19/img2.jpg",
-        "/images/DORMITORIOS/CAMA19/img3.jpg",
-        "/images/DORMITORIOS/CAMA19/img4.jpg"
+        "/images/DORMITORIOS/CAMA19/img1.webp", 
+        "/images/DORMITORIOS/CAMA19/img2.webp",
+        "/images/DORMITORIOS/CAMA19/img3.webp",
+        "/images/DORMITORIOS/CAMA19/img4.webp"
     ],
     specs: { 
         dimensions: "545 * 420 * 475 mm", 
@@ -905,11 +905,11 @@ const dormitoriosData = [
     category: "Mesas de Noche", 
     code: "HYGL81825/GEGL91807", 
     priceBase: 4160, 
-    image: "/images/DORMITORIOS/CAMA20/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA20/render.webp", 
     schematics: [
-        "/images/DORMITORIOS/CAMA20/img1.jpg", 
-        "/images/DORMITORIOS/CAMA20/img2.jpg",
-        "/images/DORMITORIOS/CAMA20/img3.jpg"
+        "/images/DORMITORIOS/CAMA20/img1.webp", 
+        "/images/DORMITORIOS/CAMA20/img2.webp",
+        "/images/DORMITORIOS/CAMA20/img3.webp"
     ],
     specs: { 
         dimensions: "450 * 420 * 520 mm", 
@@ -949,13 +949,13 @@ const dormitoriosData = [
     category: "Mesas de Noche", 
     code: "HYGL81826-L/MGL8310L", 
     priceBase: 3250, 
-    image: "/images/DORMITORIOS/CAMA21/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA21/render.webp", 
     schematics: [
-        "/images/DORMITORIOS/CAMA21/img1.jpg", 
-        "/images/DORMITORIOS/CAMA21/img2.jpg",
-        "/images/DORMITORIOS/CAMA21/img3.jpg",
-        "/images/DORMITORIOS/CAMA21/img4.jpg",
-        "/images/DORMITORIOS/CAMA21/img5.jpg"
+        "/images/DORMITORIOS/CAMA21/img1.webp", 
+        "/images/DORMITORIOS/CAMA21/img2.webp",
+        "/images/DORMITORIOS/CAMA21/img3.webp",
+        "/images/DORMITORIOS/CAMA21/img4.webp",
+        "/images/DORMITORIOS/CAMA21/img5.webp"
     ],
     specs: { 
         dimensions: "540 * 445 * 525 mm", 
@@ -994,13 +994,13 @@ const dormitoriosData = [
     category: "Mesas de Noche", 
     code: "HYGL81827-AR/MGL8311R", 
     priceBase: 4160, 
-    image: "/images/DORMITORIOS/CAMA22/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA22/render.webp", 
     schematics: [
-        "/images/DORMITORIOS/CAMA22/img1.jpg", 
-        "/images/DORMITORIOS/CAMA22/img2.jpg",
-        "/images/DORMITORIOS/CAMA22/img3.jpg",
-        "/images/DORMITORIOS/CAMA22/img4.jpg",
-        "/images/DORMITORIOS/CAMA22/img5.jpg"
+        "/images/DORMITORIOS/CAMA22/img1.webp", 
+        "/images/DORMITORIOS/CAMA22/img2.webp",
+        "/images/DORMITORIOS/CAMA22/img3.webp",
+        "/images/DORMITORIOS/CAMA22/img4.webp",
+        "/images/DORMITORIOS/CAMA22/img5.webp"
     ],
     specs: { 
         dimensions: "545 * 405 * 470 mm", 
@@ -1044,7 +1044,7 @@ const dormitoriosData = [
     category: "Colchones", 
     code: "FYRC59201/HMCD-006", 
     priceBase: 6160, 
-    image: "/images/DORMITORIOS/CAMA25/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA25/render.webp", 
     specs: { 
         dimensions: "1800 * 2000 * 250 mm", 
         volume: "0.90 m³", 
@@ -1072,7 +1072,7 @@ const dormitoriosData = [
     category: "Colchones", 
     code: "FYRC59203/HMCD-008", 
     priceBase: 17760, 
-    image: "/images/DORMITORIOS/CAMA26/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA26/render.webp", 
     specs: { 
         dimensions: "1800 * 2000 * 280 mm", 
         volume: "1.01 m³", 
@@ -1106,7 +1106,7 @@ const dormitoriosData = [
     category: "Colchones", 
     code: "FYRC59202/HMCD-007", 
     priceBase: 9760, 
-    image: "/images/DORMITORIOS/CAMA27/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA27/render.webp", 
     specs: { 
         dimensions: "1800 * 2000 * 250 mm", 
         volume: "0.94 m³", 
@@ -1140,7 +1140,7 @@ const dormitoriosData = [
     category: "Colchones", 
     code: "FYRC59206/HMCD-010", 
     priceBase: 14560, 
-    image: "/images/DORMITORIOS/CAMA28/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA28/render.webp", 
     specs: { 
         dimensions: "1800 * 2000 * 280 mm", 
         volume: "1.01 m³", 
@@ -1173,7 +1173,7 @@ const dormitoriosData = [
     category: "Colchones", 
     code: "FYRC59207/HMCD-011", 
     priceBase: 18460, 
-    image: "/images/DORMITORIOS/CAMA29/render.jpg",
+    image: "/images/DORMITORIOS/CAMA29/render.webp",
     specs: { 
         dimensions: "1800 * 2000 * 330 mm", 
         volume: "1.19 m³", 
@@ -1206,7 +1206,7 @@ const dormitoriosData = [
     category: "Bases de Cama", 
     code: "TYRC9303 PGJ-007", 
     priceBase: 3690, 
-    image: "/images/DORMITORIOS/CAMA30/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA30/render.webp", 
     specs: { 
         dimensions: "1800 * 2000 * 70 mm", 
         volume: "0.26 m³", 
@@ -1228,7 +1228,7 @@ const dormitoriosData = [
     category: "Bases de Cama", 
     code: "TYRC9305 PGJ-008", 
     priceBase: 1860, 
-    image: "/images/DORMITORIOS/CAMA31/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA31/render.webp", 
     specs: { 
         dimensions: "1800 * 2000 * 30 mm", 
         volume: "0.17 m³", 
@@ -1250,11 +1250,11 @@ const dormitoriosData = [
     category: "Camas",
     code: "HYRC89125",
     priceBase: null,
-    image: "/images/DORMITORIOS/CAMA33/render.jpg",
+    image: "/images/DORMITORIOS/CAMA33/render.webp",
     schematics: [
-        "/images/DORMITORIOS/CAMA33/img1.jpg",
-        "/images/DORMITORIOS/CAMA33/img2.jpg",
-        "/images/DORMITORIOS/CAMA33/img3.jpg"
+        "/images/DORMITORIOS/CAMA33/img1.webp",
+        "/images/DORMITORIOS/CAMA33/img2.webp",
+        "/images/DORMITORIOS/CAMA33/img3.webp"
     ],
     specs: {
         dimensions: "1800 * 2000 mm",
@@ -1285,11 +1285,11 @@ const dormitoriosData = [
     category: "Camas",
     code: "HYRC89119",
     priceBase: null,
-    image: "/images/DORMITORIOS/CAMA34/render.jpg",
+    image: "/images/DORMITORIOS/CAMA34/render.webp",
     schematics: [
-        "/images/DORMITORIOS/CAMA34/img1.jpg",
-        "/images/DORMITORIOS/CAMA34/img2.jpg",
-        "/images/DORMITORIOS/CAMA34/img3.jpg"
+        "/images/DORMITORIOS/CAMA34/img1.webp",
+        "/images/DORMITORIOS/CAMA34/img2.webp",
+        "/images/DORMITORIOS/CAMA34/img3.webp"
     ],
     specs: {
         dimensions: "1800 * 2000 mm",
@@ -1319,7 +1319,7 @@ const dormitoriosData = [
     category: "Camas",
     code: "HYRC89115-B",
     priceBase: null,
-    image: "/images/DORMITORIOS/CAMA35/render.jpg",
+    image: "/images/DORMITORIOS/CAMA35/render.webp",
     schematics: [],
     specs: {
         dimensions: "1800 * 2000 mm",
@@ -1348,10 +1348,10 @@ const dormitoriosData = [
     category: "Camas",
     code: "HYRC89115-A",
     priceBase: null,
-    image: "/images/DORMITORIOS/CAMA36/render.jpg",
+    image: "/images/DORMITORIOS/CAMA36/render.webp",
     schematics: [
-        "/images/DORMITORIOS/CAMA36/img1.jpg",
-        "/images/DORMITORIOS/CAMA36/img2.jpg"
+        "/images/DORMITORIOS/CAMA36/img1.webp",
+        "/images/DORMITORIOS/CAMA36/img2.webp"
     ],
     specs: {
         dimensions: "1800 * 2000 mm",
@@ -1380,9 +1380,9 @@ const dormitoriosData = [
     category: "Mesas de Noche",
     code: "HYGL81815/HB133-CTG",
     priceBase: null,
-    image: "/images/DORMITORIOS/CAMA37/render.jpg",
+    image: "/images/DORMITORIOS/CAMA37/render.webp",
     schematics: [
-        "/images/DORMITORIOS/CAMA37/img1.jpg"
+        "/images/DORMITORIOS/CAMA37/img1.webp"
     ],
     specs: {
         dimensions: "500 * 500 * 550 mm",
@@ -1426,15 +1426,15 @@ const dormitoriosData = [
     category: "Mesas de Noche",
     code: "HYGL81801-R/HB129Y-CTG & HB131Y-CTG",
     priceBase: null,
-    image: "/images/DORMITORIOS/CAMA38/render.jpg",
+    image: "/images/DORMITORIOS/CAMA38/render.webp",
     schematics: [
-        "/images/DORMITORIOS/CAMA38/img1.jpg",
-        "/images/DORMITORIOS/CAMA38/img2.jpg",
-        "/images/DORMITORIOS/CAMA38/img3.jpg",
-        "/images/DORMITORIOS/CAMA38/img4.jpg",
-        "/images/DORMITORIOS/CAMA38/img5.jpg",
-        "/images/DORMITORIOS/CAMA38/img6.jpg",
-        "/images/DORMITORIOS/CAMA38/img7.jpg"
+        "/images/DORMITORIOS/CAMA38/img1.webp",
+        "/images/DORMITORIOS/CAMA38/img2.webp",
+        "/images/DORMITORIOS/CAMA38/img3.webp",
+        "/images/DORMITORIOS/CAMA38/img4.webp",
+        "/images/DORMITORIOS/CAMA38/img5.webp",
+        "/images/DORMITORIOS/CAMA38/img6.webp",
+        "/images/DORMITORIOS/CAMA38/img7.webp"
     ],
     specs: {
         dimensions: "530 * 530 * 600 mm",
@@ -1485,9 +1485,9 @@ const dormitoriosData = [
     category: "Mesas de Noche",
     code: "HYGL81605-1",
     priceBase: 8690,
-    image: "/images/DORMITORIOS/CAMA39/render.jpg",
+    image: "/images/DORMITORIOS/CAMA39/render.webp",
     schematics: [
-        "/images/DORMITORIOS/CAMA39/img1.jpg"
+        "/images/DORMITORIOS/CAMA39/img1.webp"
     ],
     specs: {
         dimensions: "900 * 470 * 515 mm",
@@ -1525,7 +1525,7 @@ const dormitoriosData = [
     category: "Bases de Cama", 
     code: "TYRC9306 PGJ-009", 
     priceBase: 1860, 
-    image: "/images/DORMITORIOS/CAMA32/render.jpg", 
+    image: "/images/DORMITORIOS/CAMA32/render.webp", 
     specs: { 
         dimensions: "1800 * 2000 * 30 mm", 
         volume: "0.17 m³", 

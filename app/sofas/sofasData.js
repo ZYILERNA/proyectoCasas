@@ -1,4 +1,4 @@
-// --- BASE DE DATOS DE PRODUCTOS ---
+﻿// --- BASE DE DATOS DE PRODUCTOS ---
 const sofasData = [
   // ... (Tus datos se mantienen igual, solo copio la estructura para referencia) ...
   // PRODUCTO 1: MODENA 88 (SOFÁ ESTÁNDAR)
@@ -9,11 +9,11 @@ const sofasData = [
     code: "HYSF88101/2928BS", 
     modules: "4D (2795mm)", 
     priceBase: 35580, 
-    image: "/images/SOFA/ESTANDAR/SOFA1/sofa_render.jpg", 
+    image: "/images/SOFA/ESTANDAR/SOFA1/sofa_render.webp", 
     schematics: [
-        "/images/SOFA/ESTANDAR/SOFA1/plano_vista_frontal.jpg", 
-        "/images/SOFA/ESTANDAR/SOFA1/plano_vista_lateral.jpg",
-        "/images/SOFA/ESTANDAR/SOFA1/plano_vista_superior.jpg"
+        "/images/SOFA/ESTANDAR/SOFA1/plano_vista_frontal.webp", 
+        "/images/SOFA/ESTANDAR/SOFA1/plano_vista_lateral.webp",
+        "/images/SOFA/ESTANDAR/SOFA1/plano_vista_superior.webp"
     ],
     specs: {
         dimensions: "2795 * 915 * 790 mm",
@@ -55,11 +55,11 @@ const sofasData = [
     code: "HYSF88103/2951BS", 
     modules: "Group: 2LE+1S+R+1S+ST", 
     priceBase: 121990, 
-    image: "/images/SOFA/MODULAR/SOFA2/render_iso.jpg", 
+    image: "/images/SOFA/MODULAR/SOFA2/render_iso.webp", 
     schematics: [
-        "/images/SOFA/MODULAR/SOFA2/plano_medidas.jpg",
-        "/images/SOFA/MODULAR/SOFA2/despiece_modulos.jpg",
-        "/images/SOFA/MODULAR/SOFA2/img3.jpg"
+        "/images/SOFA/MODULAR/SOFA2/plano_medidas.webp",
+        "/images/SOFA/MODULAR/SOFA2/despiece_modulos.webp",
+        "/images/SOFA/MODULAR/SOFA2/img3.webp"
     ],
     specs: { 
         dimensions: "4430 * 2880 * 700 mm", 
@@ -100,11 +100,11 @@ const sofasData = [
     code: "HYSF88105/2952", 
     modules: "Group: 2LE+LE-A+1S+1RE", 
     priceBase: 63330, 
-    image: "/images/SOFA/MODULAR/SOFA3/render_iso.jpg", 
+    image: "/images/SOFA/MODULAR/SOFA3/render_iso.webp", 
     schematics: [
-        "/images/SOFA/MODULAR/SOFA3/img1.jpg",
-        "/images/SOFA/MODULAR/SOFA3/img2.jpg",
-        "/images/SOFA/MODULAR/SOFA3/img3.jpg"
+        "/images/SOFA/MODULAR/SOFA3/img1.webp",
+        "/images/SOFA/MODULAR/SOFA3/img2.webp",
+        "/images/SOFA/MODULAR/SOFA3/img3.webp"
     ],
     specs: { 
         dimensions: "3430 * 3870 * 690 mm", 
@@ -148,11 +148,11 @@ const sofasData = [
     code: "HYSF88106/2955", 
     modules: "Group: LS+short platform+wooden box cabinet+1S+1RE Soft armrest+ST", 
     priceBase: 109260, 
-    image: "/images/SOFA/MODULAR/SOFA4/render_iso.jpg", 
+    image: "/images/SOFA/MODULAR/SOFA4/render_iso.webp", 
     schematics: [
-        "/images/SOFA/MODULAR/SOFA4/img1.jpg",
-        "/images/SOFA/MODULAR/SOFA4/img2.jpg",
-        "/images/SOFA/MODULAR/SOFA4/img3.jpg"
+        "/images/SOFA/MODULAR/SOFA4/img1.webp",
+        "/images/SOFA/MODULAR/SOFA4/img2.webp",
+        "/images/SOFA/MODULAR/SOFA4/img3.webp"
     ],
     specs: { 
         dimensions: "4800 * 1580 * 680/815 mm", 
@@ -195,11 +195,11 @@ const sofasData = [
     code: "HYSF88107/2956", 
     modules: "Group: LS + 3RE", 
     priceBase: 70460, 
-    image: "/images/SOFA/MODULAR/SOFA5/render_iso.jpg", 
+    image: "/images/SOFA/MODULAR/SOFA5/render_iso.webp", 
     schematics: [
-        "/images/SOFA/MODULAR/SOFA5/img1.jpg",
-        "/images/SOFA/MODULAR/SOFA5/img2.jpg",
-        "/images/SOFA/MODULAR/SOFA5/img3.jpg"
+        "/images/SOFA/MODULAR/SOFA5/img1.webp",
+        "/images/SOFA/MODULAR/SOFA5/img2.webp",
+        "/images/SOFA/MODULAR/SOFA5/img3.webp"
     ],
     specs: { 
         dimensions: "3580 * 1600 * 690 mm", 
@@ -238,9 +238,9 @@ const sofasData = [
     code: "HYSF88119/2957",
     modules: "Group: 4D",
     priceBase: 43260,
-    image: "/images/SOFA/ESTANDAR/SOFA6/render_iso.jpg", 
+    image: "/images/SOFA/ESTANDAR/SOFA6/render_iso.webp", 
     schematics: [
-        "/images/SOFA/ESTANDAR/SOFA6/img1.jpg"
+        "/images/SOFA/ESTANDAR/SOFA6/img1.webp"
     ],
     specs: { 
         dimensions: "2820 * 1060 * 730 mm",
@@ -282,9 +282,9 @@ const sofasData = [
     code: "HYSF88120/2958/SOFA", 
     modules: "2LE-B+1LE(GF)+ST+2RE-A", 
     priceBase: 39450, 
-    image: "/images/SOFA/MODULAR/SOFA7/render_iso.jpg", 
+    image: "/images/SOFA/MODULAR/SOFA7/render_iso.webp", 
     schematics: [
-        "/images/SOFA/MODULAR/SOFA7/img1.jpg"
+        "/images/SOFA/MODULAR/SOFA7/img1.webp"
     ],
     specs: {
         dimensions: "3320 * 2660 * 750 mm",
@@ -329,11 +329,11 @@ const sofasData = [
     code: "HYSF88121/2960", 
     modules: "Group: L-B+1S+R-A+1S+1RE-B", 
     priceBase: 62440, 
-    image: "/images/SOFA/MODULAR/SOFA8/render_iso.jpg", 
+    image: "/images/SOFA/MODULAR/SOFA8/render_iso.webp", 
     schematics: [
-        "/images/SOFA/MODULAR/SOFA8/img1.jpg",
-        "/images/SOFA/MODULAR/SOFA8/img2.jpg",
-        "/images/SOFA/MODULAR/SOFA8/img3.jpg"
+        "/images/SOFA/MODULAR/SOFA8/img1.webp",
+        "/images/SOFA/MODULAR/SOFA8/img2.webp",
+        "/images/SOFA/MODULAR/SOFA8/img3.webp"
     ],
     specs: { 
         dimensions: "3820 * 4070 * 710 mm", 
@@ -374,11 +374,11 @@ const sofasData = [
     code: "HYSF88123/SOFA", 
     modules: "Group: 1LE(Square grid) + 1S(Flat surface) + 1S-B(Square grid) + ST(Square grid)*2 + 1S-B(Flat surface)", 
     priceBase: 47480, 
-    image: "/images/SOFA/MODULAR/SOFA9/render_iso.jpg", 
+    image: "/images/SOFA/MODULAR/SOFA9/render_iso.webp", 
     schematics: [
-        "/images/SOFA/MODULAR/SOFA9/img1.jpg",
-        "/images/SOFA/MODULAR/SOFA9/img2.jpg",
-        "/images/SOFA/MODULAR/SOFA9/img3.jpg"
+        "/images/SOFA/MODULAR/SOFA9/img1.webp",
+        "/images/SOFA/MODULAR/SOFA9/img2.webp",
+        "/images/SOFA/MODULAR/SOFA9/img3.webp"
     ],
     specs: { 
         dimensions: "3060 * 2600 * 690 mm", 
@@ -429,11 +429,11 @@ const sofasData = [
     code: "HYSF88125/SOFA", 
     modules: "Group A:(2RE-D + FSG) + Group B:(2LE-B + 1S + R + R-A + Support plate)", 
     priceBase: 83710, 
-    image: "/images/SOFA/MODULAR/SOFA10/render_iso.jpg", 
+    image: "/images/SOFA/MODULAR/SOFA10/render_iso.webp", 
     schematics: [
-        "/images/SOFA/MODULAR/SOFA10/img1.jpg",
-        "/images/SOFA/MODULAR/SOFA10/img2.jpg",
-        "/images/SOFA/MODULAR/SOFA10/img3.jpg"
+        "/images/SOFA/MODULAR/SOFA10/img1.webp",
+        "/images/SOFA/MODULAR/SOFA10/img2.webp",
+        "/images/SOFA/MODULAR/SOFA10/img3.webp"
     ],
     specs: { 
         dimensions: "5000 * 4000 * 740 mm", 
@@ -496,11 +496,11 @@ const sofasData = [
     code: "HYSF88126/SOFA", 
     modules: "Group: LS + 1S + 1S + LE", 
     priceBase: 69560, 
-    image: "/images/SOFA/MODULAR/SOFA11/render_iso.jpg", 
+    image: "/images/SOFA/MODULAR/SOFA11/render_iso.webp", 
     schematics: [
-        "/images/SOFA/MODULAR/SOFA11/img1.jpg",
-        "/images/SOFA/MODULAR/SOFA11/img2.jpg",
-        "/images/SOFA/MODULAR/SOFA11/img3.jpg"
+        "/images/SOFA/MODULAR/SOFA11/img1.webp",
+        "/images/SOFA/MODULAR/SOFA11/img2.webp",
+        "/images/SOFA/MODULAR/SOFA11/img3.webp"
     ],
     specs: { 
         dimensions: "5305 * 1820 * 795 mm", 
@@ -544,11 +544,11 @@ const sofasData = [
     code: "HYSF88127/SOFA", 
     modules: "Group: 1LE-B + LS + 1S*2 + 1RE-A + Hanging basket (DL)", 
     priceBase: 80350, 
-    image: "/images/SOFA/MODULAR/SOFA12/render_iso.jpg", 
+    image: "/images/SOFA/MODULAR/SOFA12/render_iso.webp", 
     schematics: [
-        "/images/SOFA/MODULAR/SOFA12/img1.jpg",
-        "/images/SOFA/MODULAR/SOFA12/img2.jpg",
-        "/images/SOFA/MODULAR/SOFA12/img3.jpg"
+        "/images/SOFA/MODULAR/SOFA12/img1.webp",
+        "/images/SOFA/MODULAR/SOFA12/img2.webp",
+        "/images/SOFA/MODULAR/SOFA12/img3.webp"
     ],
     specs: { 
         dimensions: "4660 * 2990 * 740 mm", 
@@ -592,11 +592,11 @@ const sofasData = [
     code: "HYSF88128/SOFA", 
     modules: "Group: 2LE-B + 2RE-B", 
     priceBase: 18580, 
-    image: "/images/SOFA/ESTANDAR/SOFA13/render_iso.jpg", 
+    image: "/images/SOFA/ESTANDAR/SOFA13/render_iso.webp", 
     schematics: [
-        "/images/SOFA/ESTANDAR/SOFA13/img1.jpg",
-        "/images/SOFA/ESTANDAR/SOFA13/img2.jpg",
-        "/images/SOFA/ESTANDAR/SOFA13/img3.jpg"
+        "/images/SOFA/ESTANDAR/SOFA13/img1.webp",
+        "/images/SOFA/ESTANDAR/SOFA13/img2.webp",
+        "/images/SOFA/ESTANDAR/SOFA13/img3.webp"
     ],
     specs: { 
         dimensions: "2800 * 1000 * 730 mm", 
@@ -638,11 +638,11 @@ const sofasData = [
     code: "HYSF88129/SOFA", 
     modules: "Group: LE + FJ + 3RE-A (Whole cushion) + 3S-A (Whole cushion) + BJ + DX + Feet", 
     priceBase: 124280, 
-    image: "/images/SOFA/MODULAR/SOFA14/render_iso.jpg", 
+    image: "/images/SOFA/MODULAR/SOFA14/render_iso.webp", 
     schematics: [
-        "/images/SOFA/MODULAR/SOFA14/img1.jpg",
-        "/images/SOFA/MODULAR/SOFA14/img2.jpg",
-        "/images/SOFA/MODULAR/SOFA14/img3.jpg"
+        "/images/SOFA/MODULAR/SOFA14/img1.webp",
+        "/images/SOFA/MODULAR/SOFA14/img2.webp",
+        "/images/SOFA/MODULAR/SOFA14/img3.webp"
     ],
     specs: { 
         dimensions: "4840 * 3390 * 625/810 mm", 
@@ -690,11 +690,11 @@ const sofasData = [
     code: "HYSF88130/SOFA", 
     modules: "Group: 2LE + 2RE", 
     priceBase: 47300, 
-    image: "/images/SOFA/ESTANDAR/SOFA15/render_iso.jpg", 
+    image: "/images/SOFA/ESTANDAR/SOFA15/render_iso.webp", 
     schematics: [
-        "/images/SOFA/ESTANDAR/SOFA15/img1.jpg",
-        "/images/SOFA/ESTANDAR/SOFA15/img2.jpg",
-        "/images/SOFA/ESTANDAR/SOFA15/img3.jpg"
+        "/images/SOFA/ESTANDAR/SOFA15/img1.webp",
+        "/images/SOFA/ESTANDAR/SOFA15/img2.webp",
+        "/images/SOFA/ESTANDAR/SOFA15/img3.webp"
     ],
     specs: { 
         dimensions: "2900 * 1050 * 760 mm", 
@@ -728,11 +728,11 @@ const sofasData = [
     code: "HYSF88132/MSF8828/SOFA", 
     modules: "Group: 1LE + 3RE", 
     priceBase: 38980, 
-    image: "/images/SOFA/ESTANDAR/SOFA16/render_iso.jpg", 
+    image: "/images/SOFA/ESTANDAR/SOFA16/render_iso.webp", 
     schematics: [
-        "/images/SOFA/ESTANDAR/SOFA16/img1.jpg",
-        "/images/SOFA/ESTANDAR/SOFA16/img2.jpg",
-        "/images/SOFA/ESTANDAR/SOFA16/img3.jpg"
+        "/images/SOFA/ESTANDAR/SOFA16/img1.webp",
+        "/images/SOFA/ESTANDAR/SOFA16/img2.webp",
+        "/images/SOFA/ESTANDAR/SOFA16/img3.webp"
     ],
     specs: { 
         dimensions: "3240 * 1060 * 660 mm", 
@@ -772,11 +772,11 @@ const sofasData = [
     code: "HYSF88133/MSF8830/SOFA", 
     modules: "Group: L-B + 2S + R-A + LS-A", 
     priceBase: 59110, 
-    image: "/images/SOFA/MODULAR/SOFA17/render_iso.jpg", 
+    image: "/images/SOFA/MODULAR/SOFA17/render_iso.webp", 
     schematics: [
-        "/images/SOFA/MODULAR/SOFA17/img1.jpg",
-        "/images/SOFA/MODULAR/SOFA17/img2.jpg",
-        "/images/SOFA/MODULAR/SOFA17/img3.jpg"
+        "/images/SOFA/MODULAR/SOFA17/img1.webp",
+        "/images/SOFA/MODULAR/SOFA17/img2.webp",
+        "/images/SOFA/MODULAR/SOFA17/img3.webp"
     ],
     specs: { 
         dimensions: "4280 * 3380 * 680 mm", 
@@ -820,11 +820,11 @@ const sofasData = [
     code: "HYSF88203/MSF8829/SOFA", 
     modules: "Group: 4LS", 
     priceBase: 15900, 
-    image: "/images/SOFA/MODULAR/SOFA18/render_iso.jpg", 
+    image: "/images/SOFA/MODULAR/SOFA18/render_iso.webp", 
     schematics: [
-        "/images/SOFA/MODULAR/SOFA18/img1.jpg",
-        "/images/SOFA/MODULAR/SOFA18/img2.jpg",
-        "/images/SOFA/MODULAR/SOFA18/img3.jpg"
+        "/images/SOFA/MODULAR/SOFA18/img1.webp",
+        "/images/SOFA/MODULAR/SOFA18/img2.webp",
+        "/images/SOFA/MODULAR/SOFA18/img3.webp"
     ],
     specs: { 
         dimensions: "2870 * 1230 * 660 mm", 
@@ -859,10 +859,10 @@ const sofasData = [
     code: "HYSF88206/SOFA", 
     modules: "Group: 1S", 
     priceBase: 6960, 
-    image: "/images/SOFA/BUTACAS/SOFA19/render_iso.jpg", 
+    image: "/images/SOFA/BUTACAS/SOFA19/render_iso.webp", 
     schematics: [
-        "/images/SOFA/BUTACAS/SOFA19/img1.jpg",
-        "/images/SOFA/BUTACAS/SOFA19/img2.jpg"
+        "/images/SOFA/BUTACAS/SOFA19/img1.webp",
+        "/images/SOFA/BUTACAS/SOFA19/img2.webp"
     ],
     specs: { 
         dimensions: "1090 * 1120 * 880 mm", 
