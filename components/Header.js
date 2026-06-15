@@ -77,7 +77,7 @@ export default function Header() {
             className="block transition-transform duration-300 hover:scale-105"
           >
             <Image
-              src="/images/logo-wonly.png"
+              src="/images/logo-wonly.webp"
               alt="WONLY"
               width={160}
               height={40}

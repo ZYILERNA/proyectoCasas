@@ -19,7 +19,7 @@ export default function Footer() {
           <div className="lg:col-span-4 flex flex-col">
             <Link href="/" className="mb-6 inline-block">
               <Image
-                src="/images/logo-wonly.png"
+                src="/images/logo-wonly.webp"
                 alt="WONLY"
                 width={160}
                 height={40}
