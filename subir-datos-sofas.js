@@ -14,6 +14,10 @@ const sofasData = [
     // PRODUCTO 1: MODENA 88 (SOFÁ ESTÁNDAR)
     {
         id: "hysf88-standard",
+        color_general: "Gris",
+        material_general: "Tela",
+        colores_disponibles: ["Gris", "Beige", "Marrón"],
+        materiales_disponibles: ["Tela", "Cuero"],
         name: "Modena 88 Series",
         category: "Sofá Estándar",
         code: "HYSF88101/2928BS",
@@ -24,7 +28,27 @@ const sofasData = [
             "/images/SOFA/SOFA1/img1.jpg",
             "/images/SOFA/SOFA1/img2.jpg",
             "/images/SOFA/SOFA1/img3.jpg",
-
+            "/images/SOFA/SOFA1/img4.jpg",
+            "/images/SOFA/SOFA1/img5.jpg",
+            "/images/SOFA/SOFA1/img6.jpg",
+            "/images/SOFA/SOFA1/img7.jpg",
+            "/images/SOFA/SOFA1/img8.jpg",
+            "/images/SOFA/SOFA1/img9.jpg",
+            "/images/SOFA/SOFA1/img10.jpg",
+            "/images/SOFA/SOFA1/img11.jpg",
+            "/images/SOFA/SOFA1/img12.jpg",
+            "/images/SOFA/SOFA1/img13.jpg",
+            "/images/SOFA/SOFA1/img14.jpg",
+            "/images/SOFA/SOFA1/img15.jpg",
+            "/images/SOFA/SOFA1/img16.jpg",
+            "/images/SOFA/SOFA1/img17.jpg",
+            "/images/SOFA/SOFA1/img18.jpg",
+            "/images/SOFA/SOFA1/img19.jpg",
+            "/images/SOFA/SOFA1/img20.jpg",
+            "/images/SOFA/SOFA1/img21.jpg",
+            "/images/SOFA/SOFA1/img22.jpg",
+            "/images/SOFA/SOFA1/img23.jpg",
+            "/images/SOFA/SOFA1/img24.jpg",
             "/images/SOFA/SOFA1/img25.jpg"
         ],
         specs: {
@@ -40,7 +64,9 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Slate Grid Fabric", hex: "#9BA4B1" }
+                { name: "Gris", hex: "#9BA4B1", image: "/images/SOFA/SOFA1/img1.jpg" },
+                { name: "Beige", hex: "#D4C9B0", image: "/images/SOFA/SOFA1/img3.jpg" },
+                { name: "Marrón", hex: "#8B6F52", image: "/images/SOFA/SOFA1/img17.jpg" }
             ]
         },
         configurations: [
@@ -61,6 +87,10 @@ const sofasData = [
     // PRODUCTO 2: NORDIC MODULAR (HYSF88103)
     {
         id: "hysf88-modular",
+        color_general: "Marrón",
+        material_general: "Cuero",
+        colores_disponibles: ["Marrón", "Gris", "Azul", "Verde", "Beige"],
+        materiales_disponibles: ["Cuero", "Tela"],
         name: "Nordic Modular System",
         category: "Modulares",
         code: "HYSF88103/2951BS",
@@ -90,7 +120,11 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Charcoal Soft Matte", hex: "#4A4644" }
+                { name: "Marrón", hex: "#4A4644", image: "/images/SOFA/SOFA2/img1.jpg" },
+                { name: "Gris", hex: "#9BA4B1", image: "/images/SOFA/SOFA2/img3.jpg" },
+                { name: "Azul", hex: "#4E7F8C", image: "/images/SOFA/SOFA2/img2.jpg" },
+                { name: "Verde", hex: "#7A8A55", image: "/images/SOFA/SOFA2/img4.jpg" },
+                { name: "Beige", hex: "#D4C9B0", image: "/images/SOFA/SOFA2/img8.jpg" }
             ]
         },
         configurations: [
@@ -111,6 +145,10 @@ const sofasData = [
     // PRODUCTO 3: CURVED MODULAR (HYSF88105)
     {
         id: "hysf88-curved",
+        color_general: "Gris",
+        material_general: "Tela",
+        colores_disponibles: ["Gris", "Beige", "Negro", "Marrón", "Rojo", "Verde", "Azul"],
+        materiales_disponibles: ["Tela", "Cuero"],
         name: "Curved Modular System",
         category: "Modulares",
         code: "HYSF88105/2952",
@@ -160,7 +198,13 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Heather Grey Weave", hex: "#A39E9E" }
+                { name: "Gris", hex: "#A39E9E", image: "/images/SOFA/SOFA3/img1.jpg" },
+                { name: "Beige", hex: "#D9D0BF", image: "/images/SOFA/SOFA3/img4.jpg" },
+                { name: "Negro", hex: "#2A2A2A", image: "/images/SOFA/SOFA3/img20.jpg" },
+                { name: "Marrón", hex: "#6B5A40", image: "/images/SOFA/SOFA3/img22.jpg" },
+                { name: "Rojo", hex: "#8A3535", image: "/images/SOFA/SOFA3/img23.jpg" },
+                { name: "Verde", hex: "#4A6A35", image: "/images/SOFA/SOFA3/img26.jpg" },
+                { name: "Azul", hex: "#4E7F8C", image: "/images/SOFA/SOFA3/img28.jpg" }
             ]
         },
         configurations: [
@@ -184,6 +228,10 @@ const sofasData = [
     },
     {
         id: "hysf88106-modular",
+        color_general: "Beige",
+        material_general: "Tela",
+        colores_disponibles: ["Beige", "Gris", "Marrón", "Negro"],
+        materiales_disponibles: ["Tela", "Cuero"],
         name: "Sofa HYSF88106",
         category: "Modulares",
         code: "HYSF88106/2955",
@@ -227,7 +275,10 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Cream Textured Bouclé", hex: "#E5E1D9" }
+                { name: "Beige", hex: "#E5E1D9", image: "/images/SOFA/SOFA4/img1.jpg" },
+                { name: "Negro", hex: "#2A2A2A", image: "/images/SOFA/SOFA4/img7.jpg" },
+                { name: "Marrón", hex: "#8B7355", image: "/images/SOFA/SOFA4/img10.jpg" },
+                { name: "Gris", hex: "#9BA4B1", image: "/images/SOFA/SOFA4/img17.jpg" }
             ]
         },
         configurations: [
@@ -249,6 +300,10 @@ const sofasData = [
     },
     {
         id: "hysf88107-modular",
+        color_general: "Gris",
+        material_general: "Cuero",
+        colores_disponibles: ["Negro", "Verde", "Marrón", "Dorado", "Azul"],
+        materiales_disponibles: ["Cuero", "Tela"],
         name: "Sofa HYSF88107",
         category: "Modulares",
         code: "HYSF88107/2956",
@@ -290,7 +345,11 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Sand Grained Leather", hex: "#A8A292" }
+                { name: "Negro", hex: "#2A2A2A", image: "/images/SOFA/SOFA5/img1.jpg" },
+                { name: "Verde", hex: "#4A6A35", image: "/images/SOFA/SOFA5/img11.jpg" },
+                { name: "Marrón", hex: "#8B7355", image: "/images/SOFA/SOFA5/img12.jpg" },
+                { name: "Dorado", hex: "#C9A84C", image: "/images/SOFA/SOFA5/img15.jpg" },
+                { name: "Azul", hex: "#4E7F8C", image: "/images/SOFA/SOFA5/img21.jpg" }
             ]
         },
         configurations: [
@@ -310,6 +369,10 @@ const sofasData = [
     },
     {
         id: "hysf88119-modular",
+        color_general: "Gris",
+        material_general: "Cuero",
+        colores_disponibles: ["Gris", "Beige"],
+        materiales_disponibles: ["Cuero"],
         name: "Sofa HYSF88119",
         category: "Sofá Estándar",
         code: "HYSF88119/2957",
@@ -334,7 +397,8 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Anthracite Smooth Leather", hex: "#6D6D6D" }
+                { name: "Gris", hex: "#6D6D6D", image: "/images/SOFA/SOFA6/img1.jpg" },
+                { name: "Beige", hex: "#D4C9B0", image: "/images/SOFA/SOFA6/img2.jpg" }
             ]
         },
         configurations: [
@@ -356,6 +420,10 @@ const sofasData = [
     },
     {
         id: "hysf88120-2958",
+        color_general: "Negro",
+        material_general: "Mixto",
+        colores_disponibles: ["Negro", "Gris", "Beige", "Verde", "Marrón"],
+        materiales_disponibles: ["Tela", "Cuero"],
         name: "HYSF 88120 Series",
         category: "Modulares",
         code: "HYSF88120/2958/SOFA",
@@ -387,8 +455,11 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Obsidian Textured Weave", hex: "#353535" },
-                { name: "Midnight Geometric Matte", hex: "#1A1A1A" }
+                { name: "Negro", hex: "#353535", image: "/images/SOFA/SOFA7/img1.jpg" },
+                { name: "Gris", hex: "#6B6B6B", image: "/images/SOFA/SOFA7/img1.jpg" },
+                { name: "Beige", hex: "#D4C9B0", image: "/images/SOFA/SOFA7/img2.jpg" },
+                { name: "Verde", hex: "#6A8A5A", image: "/images/SOFA/SOFA7/img7.jpg" },
+                { name: "Marrón", hex: "#7A6045", image: "/images/SOFA/SOFA7/img8.jpg" }
             ]
         },
         configurations: [
@@ -410,6 +481,10 @@ const sofasData = [
     },
     {
         id: "hysf88121-modular",
+        color_general: "Marrón",
+        material_general: "Mixto",
+        colores_disponibles: ["Gris", "Beige", "Negro", "Marrón"],
+        materiales_disponibles: ["Cuero", "Tela"],
         name: "Sofa HYSF88121",
         category: "Modulares",
         code: "HYSF88121/2960",
@@ -446,8 +521,10 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Mocca Smooth Matte", hex: "#73675B" },
-                { name: "Desert Tweed Weave", hex: "#9E968A" }
+                { name: "Gris", hex: "#9E968A", image: "/images/SOFA/SOFA8/img1.jpg" },
+                { name: "Beige", hex: "#D4C9B0", image: "/images/SOFA/SOFA8/img3.jpg" },
+                { name: "Negro", hex: "#1A1A1A", image: "/images/SOFA/SOFA8/img5.jpg" },
+                { name: "Marrón", hex: "#73675B", image: "/images/SOFA/SOFA8/img6.jpg" }
             ]
         },
         configurations: [
@@ -467,6 +544,10 @@ const sofasData = [
     },
     {
         id: "hysf88123-modular",
+        color_general: "Negro",
+        material_general: "Mixto",
+        colores_disponibles: ["Negro", "Gris", "Blanco", "Beige"],
+        materiales_disponibles: ["Cuero", "Tela"],
         name: "Sofa HYSF88123",
         category: "Modulares",
         code: "HYSF88123/SOFA",
@@ -522,8 +603,10 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Obsidian Grained Leather", hex: "#1A1A1B" },
-                { name: "Polar Grid Weave", hex: "#D9D9D9" }
+                { name: "Negro", hex: "#1A1A1B", image: "/images/SOFA/SOFA9/img1.jpg" },
+                { name: "Gris", hex: "#6D6D6D", image: "/images/SOFA/SOFA9/img27.jpg" },
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/SOFA/SOFA9/img22.jpg" },
+                { name: "Beige", hex: "#D9D9D9", image: "/images/SOFA/SOFA9/img25.jpg" }
             ]
         },
         configurations: [
@@ -553,6 +636,10 @@ const sofasData = [
     },
     {
         id: "hysf88125-modular",
+        color_general: "Blanco",
+        material_general: "Mixto",
+        colores_disponibles: ["Blanco", "Negro", "Gris", "Beige"],
+        materiales_disponibles: ["Tela", "Cuero"],
         name: "Sofa HYSF88125",
         category: "Modulares",
         code: "HYSF88125/SOFA",
@@ -614,8 +701,10 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Stone Texture Weave", hex: "#C2BCB2" },
-                { name: "Storm Grey Matte", hex: "#4E525A" }
+                { name: "Blanco", hex: "#F2F2F0", image: "/images/SOFA/SOFA10/render_iso.jpg" },
+                { name: "Negro", hex: "#1A1A1A", image: "/images/SOFA/SOFA10/img10.jpg" },
+                { name: "Gris", hex: "#9BA4B1", image: "/images/SOFA/SOFA10/img1.jpg" },
+                { name: "Beige", hex: "#C2BCB2", image: "/images/SOFA/SOFA10/img5.jpg" }
             ]
         },
         configurations: [
@@ -656,6 +745,10 @@ const sofasData = [
     },
     {
         id: "hysf88126-modular",
+        color_general: "Gris",
+        material_general: "Mixto",
+        colores_disponibles: ["Gris", "Beige", "Marrón"],
+        materiales_disponibles: ["Tela", "Cuero"],
         name: "Sofa HYSF88126",
         category: "Modulares",
         code: "HYSF88126/SOFA",
@@ -712,8 +805,9 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Earth Texture Bouclé", hex: "#8A8279" },
-                { name: "Chestnut Smooth Matte", hex: "#634734" }
+                { name: "Gris", hex: "#8A8279", image: "/images/SOFA/SOFA11/render_iso.jpg" },
+                { name: "Beige", hex: "#D4C9B0", image: "/images/SOFA/SOFA11/img18.jpg" },
+                { name: "Marrón", hex: "#634734", image: "/images/SOFA/SOFA11/img11.jpg" }
             ]
         },
         configurations: [
@@ -735,6 +829,10 @@ const sofasData = [
     },
     {
         id: "hysf88127-modular",
+        color_general: "Blanco",
+        material_general: "Mixto",
+        colores_disponibles: ["Beige", "Marrón"],
+        materiales_disponibles: ["Tela", "Cuero"],
         name: "Sofa HYSF88127",
         category: "Modulares",
         code: "HYSF88127/SOFA",
@@ -783,8 +881,8 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Arctic White Bouclé", hex: "#F2F2F0" },
-                { name: "Onyx Grained Leather", hex: "#2C2C2C" }
+                { name: "Beige", hex: "#F2F2F0", image: "/images/SOFA/SOFA12/render_iso.jpg" },
+                { name: "Marrón", hex: "#8B6F52", image: "/images/SOFA/SOFA12/img13.jpg" }
             ]
         },
         configurations: [
@@ -805,6 +903,10 @@ const sofasData = [
     },
     {
         id: "hysf88128-standard",
+        color_general: "Gris",
+        material_general: "Tela",
+        colores_disponibles: ["Gris", "Beige"],
+        materiales_disponibles: ["Tela", "Cuero"],
         name: "Sofa HYSF88128",
         category: "Sofá Estándar",
         code: "HYSF88128/SOFA",
@@ -831,7 +933,8 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Graphite Melange Weave", hex: "#7E7873" }
+                { name: "Gris", hex: "#7E7873", image: "/images/SOFA/SOFA13/render_iso.jpg" },
+                { name: "Beige", hex: "#D4C9B0", image: "/images/SOFA/SOFA13/img2.jpg" }
             ]
         },
         configurations: [
@@ -852,6 +955,10 @@ const sofasData = [
     },
     {
         id: "hysf88129-modular",
+        color_general: "Blanco",
+        material_general: "Mixto",
+        colores_disponibles: ["Beige", "Gris"],
+        materiales_disponibles: ["Tela", "Cuero"],
         name: "Sofa HYSF88129",
         category: "Modulares",
         code: "HYSF88129/SOFA",
@@ -908,8 +1015,8 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Pearl Grid Weave", hex: "#D6D3D1" },
-                { name: "Shadow Grey Matte", hex: "#5C5C5C" }
+                { name: "Beige", hex: "#D6D3D1", image: "/images/SOFA/SOFA14/render_iso.jpg" },
+                { name: "Gris", hex: "#5C5C5C", image: "/images/SOFA/SOFA14/img8.jpg" }
             ]
         },
         configurations: [
@@ -935,6 +1042,10 @@ const sofasData = [
     },
     {
         id: "hysf88130-standard",
+        color_general: "Beige",
+        material_general: "Cuero",
+        colores_disponibles: ["Marrón"],
+        materiales_disponibles: ["Cuero"],
         name: "Sofa HYSF88130",
         category: "Sofá Estándar",
         code: "HYSF88130/SOFA",
@@ -957,7 +1068,7 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Taupe Velvet Weave", hex: "#9B8E85" }
+                { name: "Marrón", hex: "#9B8E85", image: "/images/SOFA/SOFA15/render_iso.jpg" }
             ]
         },
         configurations: [
@@ -973,6 +1084,10 @@ const sofasData = [
     },
     {
         id: "hysf88132-standard",
+        color_general: "Beige",
+        material_general: "Tela",
+        colores_disponibles: ["Beige", "Marrón"],
+        materiales_disponibles: ["Tela", "Cuero"],
         name: "Sofa HYSF88132 / MSF8828",
         category: "Sofá Estándar",
         code: "HYSF88132/MSF8828/SOFA",
@@ -999,7 +1114,8 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Oatmeal Linen Weave", hex: "#D9D1C5" }
+                { name: "Beige", hex: "#D9D1C5", image: "/images/SOFA/SOFA16/render_iso.jpg" },
+                { name: "Marrón", hex: "#8B6F52", image: "/images/SOFA/SOFA16/img3.jpg" }
             ]
         },
         configurations: [
@@ -1019,6 +1135,10 @@ const sofasData = [
     },
     {
         id: "hysf88133-modular",
+        color_general: "Beige",
+        material_general: "Mixto",
+        colores_disponibles: ["Beige", "Marrón", "Rojo", "Gris", "Blanco"],
+        materiales_disponibles: ["Tela", "Cuero"],
         name: "Sofa HYSF88133 / MSF8830",
         category: "Modulares",
         code: "HYSF88133/MSF8830/SOFA",
@@ -1060,8 +1180,11 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Mineral Texture Weave", hex: "#B8B3AC" },
-                { name: "Pebble Smooth Matte", hex: "#A4998E" }
+                { name: "Beige", hex: "#D4C9B0", image: "/images/SOFA/SOFA17/render_iso.jpg" },
+                { name: "Marrón", hex: "#8B6F52", image: "/images/SOFA/SOFA17/img1.jpg" },
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/SOFA/SOFA17/img2.jpg" },
+                { name: "Rojo", hex: "#8A3535", image: "/images/SOFA/SOFA17/img6.jpg" },
+                { name: "Gris", hex: "#B8B3AC", image: "/images/SOFA/SOFA17/img4.jpg" }
             ]
         },
         configurations: [
@@ -1084,6 +1207,10 @@ const sofasData = [
     },
     {
         id: "hysf88203-modular",
+        color_general: "Blanco",
+        material_general: "Tela",
+        colores_disponibles: ["Gris", "Beige"],
+        materiales_disponibles: ["Tela", "Cuero"],
         name: "Sofa HYSF88203 / MSF8829",
         category: "Modulares",
         code: "HYSF88203/MSF8829/SOFA",
@@ -1111,7 +1238,8 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Cloud Grey Matte", hex: "#D1D5D9" }
+                { name: "Gris", hex: "#D1D5D9", image: "/images/SOFA/SOFA18/render_iso.jpg" },
+                { name: "Beige", hex: "#D4C9B0", image: "/images/SOFA/SOFA18/img1.jpg" }
             ]
         },
         configurations: [
@@ -1127,6 +1255,10 @@ const sofasData = [
     },
     {
         id: "hysf88206-butaca",
+        color_general: "Marrón",
+        material_general: "Mixto",
+        colores_disponibles: ["Marrón"],
+        materiales_disponibles: ["Tela"],
         name: "Butaca HYSF88206",
         category: "Butacas",
         code: "HYSF88206/SOFA",
@@ -1151,8 +1283,7 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Sienna Texture Weave", hex: "#63433B" },
-                { name: "Coffee Smooth Matte", hex: "#5C4037" }
+                { name: "Marrón", hex: "#63433B", image: "/images/SOFA/SOFA19/render_iso.jpg" }
             ]
         },
         configurations: [
@@ -1165,6 +1296,10 @@ const sofasData = [
     // SOFA 20: HYSF88131
     {
         id: "hysf88131-modular",
+        color_general: "Beige",
+        material_general: "Mixto",
+        colores_disponibles: ["Gris", "Beige"],
+        materiales_disponibles: ["Tela", "Cuero"],
         name: "Sofa HYSF88131",
         category: "Modulares",
         code: "HYSF88131",
@@ -1192,10 +1327,8 @@ const sofasData = [
         ],
         colors: {
             interior: [
-                { name: "Light Gray Boucle", hex: "#D4D0CC" },
-                { name: "Sand / Beige Leather", hex: "#C8B89A" },
-                { name: "Taupe Gray Leather", hex: "#9A8F85" },
-                { name: "Brushed Gold Caps", hex: "#C9A84C" }
+                { name: "Gris", hex: "#D4D0CC", image: "/images/SOFA/SOFA20/render_iso.jpg" },
+                { name: "Beige", hex: "#C8B89A", image: "/images/SOFA/SOFA20/img3.jpg" }
             ]
         },
         configurations: [

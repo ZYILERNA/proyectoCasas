@@ -64,7 +64,7 @@ export default function Header() {
         isVisible ? "translate-y-0" : "-translate-y-full"
       } ${
         lastScrollY > 20
-          ? "bg-black/90 backdrop-blur-md shadow-2xl shadow-black/50"
+          ? "bg-black/90 backdrop-blur-md"
           : "bg-black"
       }`}
     >

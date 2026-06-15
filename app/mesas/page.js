@@ -92,6 +92,35 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
     const [isPaused, setIsPaused] = useState(false);
     const [showPriceModal, setShowPriceModal] = useState(false);
     const [mobileImageIndex, setMobileImageIndex] = useState(0);
+    const [selectedColorIdx, setSelectedColorIdx] = useState(null);
+    const mobileScrollRef = useRef(null);
+
+    const mainImage = useMemo(() => {
+        if (selectedColorIdx !== null) {
+            const img = selectedProduct?.colors?.interior?.[selectedColorIdx]?.image;
+            if (img) return img;
+        }
+        return selectedProduct?.image;
+    }, [selectedProduct, selectedColorIdx]);
+
+    useEffect(() => {
+        setSelectedColorIdx(null);
+        setCurrentSchematicIndex(0);
+        if (mobileScrollRef.current) mobileScrollRef.current.scrollTo({ left: 0, behavior: 'instant' });
+    }, [selectedProduct?.id]);
+
+    useEffect(() => {
+        if (selectedColorIdx === null) return;
+        const colorImg = selectedProduct?.colors?.interior?.[selectedColorIdx]?.image;
+        if (!colorImg) return;
+        const schemIdx = (selectedProduct?.schematics || []).indexOf(colorImg);
+        if (schemIdx !== -1) setCurrentSchematicIndex(schemIdx);
+        if (mobileScrollRef.current) {
+            const allImgs = [selectedProduct.image, ...(selectedProduct.schematics || [])];
+            const mIdx = allImgs.indexOf(colorImg);
+            if (mIdx !== -1) mobileScrollRef.current.scrollTo({ left: mIdx * mobileScrollRef.current.clientWidth, behavior: 'smooth' });
+        }
+    }, [selectedColorIdx, selectedProduct]);
 
     const allImages = useMemo(() => {
         if (!selectedProduct) return [];
@@ -111,7 +140,7 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
             setCurrentSchematicIndex((prev) => prev === selectedProduct.schematics.length - 1 ? 0 : prev + 1);
         }, AUTOPLAY_INTERVAL);
         return () => clearInterval(timer);
-    }, [selectedProduct, isPaused, hasMultipleImages]);
+    }, [selectedProduct, isPaused, hasMultipleImages, currentSchematicIndex]);
 
     const nextSchematic = () => {
         if (!hasMultipleImages) return;
@@ -160,6 +189,7 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
                         {/* MÓVIL: CARRUSEL DESLIZABLE */}
                         <div className="md:hidden relative w-full bg-white h-[45vh]">
                             <div
+                                ref={mobileScrollRef}
                                 className="flex overflow-x-auto snap-x snap-mandatory h-full w-full scrollbar-hide"
                                 style={{ scrollBehavior: 'smooth' }}
                                 onScroll={(e) => {
@@ -195,65 +225,78 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
                         {/* ESCRITORIO: IMAGEN PRINCIPAL + CARRUSEL TÉCNICO */}
                         <div className="hidden md:flex flex-col gap-6 h-full">
                             <div className="aspect-video w-full bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden p-4 flex items-center justify-center relative group shrink-0">
-                                <div className="relative w-full h-full">
-                                    <Image
-                                        src={selectedProduct.image}
-                                        alt="Render"
-                                        fill
-                                        priority
-                                        className="object-contain mix-blend-multiply"
-                                        sizes="60vw"
-                                    />
-                                </div>
+                                <AnimatePresence mode="wait">
+                                    <motion.div
+                                        key={mainImage}
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        transition={{ duration: 0.25 }}
+                                        className="relative w-full h-full"
+                                    >
+                                        <Image
+                                            src={mainImage}
+                                            alt="Render"
+                                            fill
+                                            priority
+                                            className="object-contain mix-blend-multiply"
+                                            sizes="60vw"
+                                        />
+                                    </motion.div>
+                                </AnimatePresence>
                             </div>
 
                             {selectedProduct.schematics && selectedProduct.schematics.length > 0 && (
                                 <div
-                                    className="bg-white p-4 rounded-lg border border-gray-200 relative group shrink-0"
+                                    className="bg-white rounded-xl border border-gray-100 overflow-hidden shrink-0 group"
                                     onMouseEnter={() => setIsPaused(true)}
                                     onMouseLeave={() => setIsPaused(false)}
                                 >
-                                    <h4 className="text-[10px] font-bold uppercase text-gray-400 mb-3 flex items-center gap-1 justify-between">
-                                        <div className="flex items-center gap-1"><ScanLine size={12} /> Vistas Técnicas</div>
-                                        {hasMultipleImages && isPaused && <span className="text-[9px] bg-gray-100 px-2 py-0.5 rounded text-gray-500">Pausado</span>}
-                                    </h4>
+                                    <div className="flex items-center gap-1.5 text-gray-400 px-4 pt-3 pb-2">
+                                        <ScanLine size={11} />
+                                        <span className="text-[10px] font-bold uppercase tracking-wider">Galería</span>
+                                    </div>
 
-                                    <div className="relative h-64 w-full bg-gray-50 rounded border border-gray-100 flex items-center justify-center overflow-hidden">
-                                        <AnimatePresence mode='wait'>
+                                    <div className="relative h-56 w-full bg-gray-50 flex items-center justify-center overflow-hidden">
+                                        <AnimatePresence mode="wait">
                                             <motion.img
                                                 key={currentSchematicIndex}
                                                 src={selectedProduct.schematics[currentSchematicIndex]}
-                                                alt="Technical View"
-                                                initial={{ opacity: 0 }}
-                                                animate={{ opacity: 1 }}
-                                                exit={{ opacity: 0 }}
-                                                transition={{ duration: 0.2 }}
+                                                alt="Vista"
+                                                initial={{ opacity: 0, scale: 0.97 }}
+                                                animate={{ opacity: 1, scale: 1 }}
+                                                exit={{ opacity: 0, scale: 1.02 }}
+                                                transition={{ duration: 0.25 }}
                                                 decoding="async"
-                                                className="max-w-full max-h-full object-contain p-4 mix-blend-multiply cursor-crosshair"
+                                                className="max-w-full max-h-full object-contain p-4 mix-blend-multiply"
                                             />
                                         </AnimatePresence>
-
                                         {hasMultipleImages && (
                                             <>
-                                                <button onClick={prevSchematic} className="absolute left-2 p-2 rounded-full bg-white/90 shadow hover:bg-white transition-all hover:scale-110 opacity-0 group-hover:opacity-100">
-                                                    <ChevronLeft size={20} />
+                                                <button onClick={prevSchematic} className="absolute left-2 p-1.5 rounded-full bg-white shadow-md border border-gray-100 hover:bg-gray-50 hover:scale-110 transition-all opacity-0 group-hover:opacity-100">
+                                                    <ChevronLeft size={16} />
                                                 </button>
-                                                <button onClick={nextSchematic} className="absolute right-2 p-2 rounded-full bg-white/90 shadow hover:bg-white transition-all hover:scale-110 opacity-0 group-hover:opacity-100">
-                                                    <ChevronRight size={20} />
+                                                <button onClick={nextSchematic} className="absolute right-2 p-1.5 rounded-full bg-white shadow-md border border-gray-100 hover:bg-gray-50 hover:scale-110 transition-all opacity-0 group-hover:opacity-100">
+                                                    <ChevronRight size={16} />
                                                 </button>
-
-                                                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
-                                                    {selectedProduct.schematics.map((_, index) => (
-                                                        <div
-                                                            key={index}
-                                                            onClick={() => setCurrentSchematicIndex(index)}
-                                                            className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${index === currentSchematicIndex ? 'w-4 bg-black' : 'w-1.5 bg-gray-300 hover:bg-gray-400'}`}
-                                                        />
-                                                    ))}
-                                                </div>
                                             </>
                                         )}
                                     </div>
+
+                                    {hasMultipleImages && (
+                                        <div className="flex gap-1.5 px-3 pb-3 pt-2 overflow-x-auto [&::-webkit-scrollbar]:hidden">
+                                            {selectedProduct.schematics.map((img, idx) => (
+                                                <button
+                                                    key={idx}
+                                                    onClick={() => setCurrentSchematicIndex(idx)}
+                                                    className={`shrink-0 w-14 h-10 rounded-md overflow-hidden border-2 transition-all duration-200
+                                                        ${idx === currentSchematicIndex ? 'border-black opacity-100' : 'border-transparent opacity-40 hover:opacity-70'}`}
+                                                >
+                                                    <img src={img} alt="" className="w-full h-full object-contain mix-blend-multiply bg-gray-50 p-0.5" />
+                                                </button>
+                                            ))}
+                                        </div>
+                                    )}
                                 </div>
                             )}
                         </div>
@@ -303,18 +346,29 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
                                         <Palette size={14} /> Acabados Disponibles
                                     </h3>
                                     <div className="flex flex-wrap gap-4 mb-4 p-4 bg-gray-50 rounded-xl justify-center md:justify-start">
-                                        {selectedProduct.colors.interior.map((color, i) => (
-                                            <div key={i} className="text-center group flex flex-col items-center gap-2 cursor-help">
-                                                <div
-                                                    className="w-12 h-12 rounded-full shadow-md border-2 border-white group-hover:scale-110 transition-transform duration-300"
-                                                    style={{ backgroundColor: color.hex }}
+                                        {selectedProduct.colors.interior.map((color, i) => {
+                                            const isSelected = selectedColorIdx === i;
+                                            return (
+                                                <button
+                                                    key={i}
+                                                    onClick={() => setSelectedColorIdx(isSelected ? null : i)}
+                                                    className="flex flex-col items-center gap-2 transition-all duration-200"
                                                     title={color.name}
-                                                ></div>
-                                                <span className="text-[9px] text-gray-500 uppercase font-bold max-w-[60px] leading-tight">
-                                                    {color.name}
-                                                </span>
-                                            </div>
-                                        ))}
+                                                >
+                                                    <div
+                                                        className={`w-12 h-12 rounded-full shadow-md transition-all duration-300 hover:scale-110 overflow-hidden
+                                                            ${isSelected ? 'border-2 border-black scale-110 shadow-lg' : 'border-2 border-white'}`}
+                                                        style={color.image
+                                                            ? { backgroundImage: `url(${color.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }
+                                                            : { backgroundColor: color.hex }}
+                                                    />
+                                                    <span className={`text-[9px] uppercase font-bold max-w-[60px] leading-tight transition-colors
+                                                        ${isSelected ? 'text-black' : 'text-gray-400'}`}>
+                                                        {color.name}
+                                                    </span>
+                                                </button>
+                                            );
+                                        })}
                                     </div>
                                 </div>
                                 )}
@@ -390,10 +444,91 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
 });
 ProductDrawer.displayName = 'ProductDrawer';
 
+// --- COMPONENTE TARJETA CON HOVER DE COLOR ---
+const ProductCard = memo(({ item, index, onSelect }) => {
+    const [hoverColorIdx, setHoverColorIdx] = useState(null);
+    const cardImage = useMemo(() => {
+        if (hoverColorIdx !== null) {
+            const img = item.colors?.interior?.[hoverColorIdx]?.image;
+            if (img) return img;
+        }
+        return item.image || "/images/placeholder.jpg";
+    }, [item, hoverColorIdx]);
+
+    return (
+        <motion.div
+            layout
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.3, delay: index * 0.05 }}
+            className="group block h-full flex flex-col relative"
+        >
+            <div
+                onClick={() => onSelect(item)}
+                className="relative aspect-[4/3] overflow-hidden rounded-sm bg-white mb-4 cursor-pointer"
+            >
+                <div className="absolute top-3 left-3 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="bg-white/90 backdrop-blur text-black border border-gray-100 text-[10px] font-mono px-2 py-1 flex items-center gap-2 rounded shadow-sm">
+                        <Barcode size={10} /> {item.code}
+                    </div>
+                </div>
+                <div className="relative w-full h-full p-4 md:p-8 transition-transform duration-500 ease-out group-hover:scale-105">
+                    <Image
+                        src={cardImage}
+                        alt={item.name}
+                        fill
+                        priority={index < 6}
+                        sizes="400px"
+                        unoptimized
+                        className="object-contain"
+                    />
+                </div>
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    <span className="bg-black text-white px-4 py-2 text-[10px] font-bold uppercase tracking-widest shadow-xl rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        Ver Detalles
+                    </span>
+                </div>
+            </div>
+            <div className="flex flex-col gap-0.5">
+                <div className="flex justify-between items-baseline gap-1">
+                    <h3 className="text-sm md:text-lg font-medium text-gray-900 leading-tight group-hover:text-gray-600 transition-colors cursor-pointer" onClick={() => onSelect(item)}>{item.name}</h3>
+                    <span className="text-xs md:text-sm font-bold text-gray-900 whitespace-nowrap">{formatPrice(item.priceBase)}</span>
+                </div>
+                <div className="flex items-center gap-1.5 mt-0.5">
+                    <p className="text-[9px] md:text-[10px] text-gray-400 uppercase tracking-widest mr-1">{item.category}</p>
+                    {item.colors?.interior && (
+                        <div className="flex -space-x-1">
+                            {item.colors.interior.slice(0, 4).map((c, i) => (
+                                <div
+                                    key={i}
+                                    className={`w-4 h-4 rounded-full border-2 shadow-sm cursor-pointer transition-all duration-200 overflow-hidden
+                                        ${hoverColorIdx === i ? 'border-black scale-125' : 'border-white hover:scale-110'}`}
+                                    style={c.image
+                                        ? { backgroundImage: `url(${c.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }
+                                        : { backgroundColor: c.hex }}
+                                    onMouseEnter={() => setHoverColorIdx(i)}
+                                    onMouseLeave={() => setHoverColorIdx(null)}
+                                />
+                            ))}
+                            {item.colors.interior.length > 4 && (
+                                <div className="w-4 h-4 rounded-full bg-gray-100 border border-white flex items-center justify-center text-[6px] text-gray-500">+</div>
+                            )}
+                        </div>
+                    )}
+                </div>
+            </div>
+        </motion.div>
+    );
+});
+ProductCard.displayName = 'ProductCard';
+
 export default function MesasPage() {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState("Todos");
+  const [activeColor, setActiveColor] = useState(null);
+  const [activeMaterial, setActiveMaterial] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -445,16 +580,30 @@ export default function MesasPage() {
     return ["Todos", ...uniqueCats];
   }, [products]);
 
+  const allColors = useMemo(() => {
+    const set = new Set();
+    products.forEach(p => (p.colores_disponibles || []).forEach(c => set.add(c)));
+    return [...set].sort();
+  }, [products]);
+
+  const allMaterials = useMemo(() => {
+    const set = new Set();
+    products.forEach(p => (p.materiales_disponibles || []).forEach(m => set.add(m)));
+    return [...set].sort();
+  }, [products]);
+
   const filteredProducts = useMemo(() => {
     const searchLower = searchTerm.toLowerCase();
     return products.filter(item => {
       const matchCategory = activeCategory === "Todos" || item.category === activeCategory;
       if (!matchCategory) return false;
+      if (activeColor && !(item.colores_disponibles || []).includes(activeColor)) return false;
+      if (activeMaterial && !(item.materiales_disponibles || []).includes(activeMaterial)) return false;
       if (searchTerm === "") return true;
       return item.name.toLowerCase().includes(searchLower) ||
              item.code.toLowerCase().includes(searchLower);
     });
-  }, [products, activeCategory, searchTerm]);
+  }, [products, activeCategory, activeColor, activeMaterial, searchTerm]);
 
   // --- SCROLL HANDLE ---
   const handleCategoryChange = (cat) => {
@@ -490,7 +639,7 @@ export default function MesasPage() {
       </AnimatePresence>
 
       {/* HEADER */}
-      <div className="relative h-[55vh] md:h-[65vh] bg-[#0a0a0a] overflow-hidden flex items-end pb-12">
+      <div className="relative h-[35vh] md:h-[65vh] bg-[#0a0a0a] overflow-hidden flex items-end pb-8 md:pb-12">
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -517,7 +666,7 @@ export default function MesasPage() {
             animate="visible"
             className="relative z-10 container mx-auto px-6"
         >
-            <motion.h1 variants={fadeInUp} className="text-4xl md:text-7xl font-bold text-white mb-2 tracking-tighter">
+            <motion.h1 variants={fadeInUp} className="text-2xl md:text-7xl font-bold text-white mb-1 md:mb-2 tracking-tighter">
               COLECCIÓN MESAS
             </motion.h1>
             <motion.p variants={fadeInUp} className="text-gray-300 max-w-xl text-sm md:text-base">
@@ -531,9 +680,10 @@ export default function MesasPage() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-        className="sticky top-0 z-40 bg-white/95 backdrop-blur-xl border-b border-gray-100 shadow-sm transition-all duration-300"
+        className="md:sticky md:top-0 z-40 bg-white/95 backdrop-blur-xl transition-all duration-300"
       >
-        <div className="container mx-auto px-6 py-4">
+        <div className="container mx-auto px-4 md:px-6 py-2 md:py-4 space-y-2 md:space-y-3">
+            {/* Fila 1: Categorías + búsqueda */}
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
 
                 <div ref={filtersRef} className="flex gap-2 overflow-x-auto flex-1 pb-2 md:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
@@ -541,7 +691,7 @@ export default function MesasPage() {
                     <button
                       key={cat}
                       onClick={() => handleCategoryChange(cat)}
-                      className={`px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 border whitespace-nowrap
+                      className={`px-3 md:px-5 py-1.5 md:py-2 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest transition-all duration-300 border whitespace-nowrap
                         ${activeCategory === cat
                             ? 'bg-black text-white border-black'
                             : 'bg-transparent text-gray-500 border-gray-200 hover:border-black hover:text-black'}`}
@@ -577,13 +727,43 @@ export default function MesasPage() {
                 </div>
                 </div>
             </div>
+
+            {/* Fila 2: Filtros color + material */}
+            {!isLoading && (allColors.length > 0 || allMaterials.length > 0) && (
+                <div className="flex flex-wrap gap-2 items-center">
+                    <span className="text-[9px] font-bold uppercase tracking-widest text-gray-400 mr-1">Color:</span>
+                    {allColors.map(color => (
+                        <button
+                            key={color}
+                            onClick={() => setActiveColor(activeColor === color ? null : color)}
+                            className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all duration-200 border whitespace-nowrap
+                                ${activeColor === color ? 'bg-black text-white border-black' : 'bg-transparent text-gray-500 border-gray-200 hover:border-gray-400 hover:text-gray-800'}`}
+                        >{color}</button>
+                    ))}
+                    <span className="text-[9px] font-bold uppercase tracking-widest text-gray-400 ml-3 mr-1">Material:</span>
+                    {allMaterials.map(mat => (
+                        <button
+                            key={mat}
+                            onClick={() => setActiveMaterial(activeMaterial === mat ? null : mat)}
+                            className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all duration-200 border whitespace-nowrap
+                                ${activeMaterial === mat ? 'bg-black text-white border-black' : 'bg-transparent text-gray-500 border-gray-200 hover:border-gray-400 hover:text-gray-800'}`}
+                        >{mat}</button>
+                    ))}
+                    {(activeColor || activeMaterial) && (
+                        <button
+                            onClick={() => { setActiveColor(null); setActiveMaterial(null); }}
+                            className="ml-2 text-[10px] text-gray-400 hover:text-black underline"
+                        >Limpiar</button>
+                    )}
+                </div>
+            )}
         </div>
       </motion.div>
 
       {/* GRID PRODUCTOS */}
-      <div className="container mx-auto px-6 py-12" ref={gridTopRef}>
+      <div className="container mx-auto px-4 md:px-6 py-6 md:py-12" ref={gridTopRef}>
         {isLoading ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-3 md:gap-x-8 gap-y-8 md:gap-y-16">
                 {[1,2,3,4,5,6].map(i => (
                     <div key={i} className="animate-pulse">
                         <div className="bg-gray-200 aspect-[4/3] rounded-sm mb-4"></div>
@@ -596,79 +776,15 @@ export default function MesasPage() {
             <div className="text-center py-32 text-gray-400 flex flex-col items-center">
                 <SearchIcon size={48} className="mb-4 opacity-20" />
                 <p className="text-lg">No encontramos mesas.</p>
-                <button onClick={() => {setSearchTerm(""); handleCategoryChange("Todos")}} className="mt-4 text-xs font-bold uppercase border-b border-black pb-0.5 hover:opacity-50 transition-opacity">
+                <button onClick={() => {setSearchTerm(""); setActiveColor(null); setActiveMaterial(null); handleCategoryChange("Todos")}} className="mt-4 text-xs font-bold uppercase border-b border-black pb-0.5 hover:opacity-50 transition-opacity">
                     Limpiar filtros
                 </button>
             </div>
         ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-3 md:gap-x-8 gap-y-8 md:gap-y-16">
                 <AnimatePresence mode="popLayout">
                 {filteredProducts.map((item, index) => (
-                <motion.div
-                    layout
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.9 }}
-                    transition={{ duration: 0.3, delay: index * 0.05 }}
-                    key={item.id}
-                    className="group block h-full flex flex-col relative"
-                >
-                    <div
-                        onClick={() => setSelectedProduct(item)}
-                        className="relative aspect-[4/3] overflow-hidden rounded-sm bg-white mb-4 cursor-pointer"
-                    >
-                        <div className="absolute top-3 left-3 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div className="bg-white/90 backdrop-blur text-black border border-gray-100 text-[10px] font-mono px-2 py-1 flex items-center gap-2 rounded shadow-sm">
-                                <Barcode size={10} /> {item.code}
-                            </div>
-                        </div>
-
-                        <div className="relative w-full h-full p-8 transition-transform duration-500 ease-out group-hover:scale-105">
-                             <Image
-                                src={item.image || "/images/placeholder.jpg"}
-                                alt={item.name}
-                                fill
-                                priority={index < 6}
-                                sizes="100px"
-                                unoptimized
-                                className="object-contain"
-                             />
-                        </div>
-
-                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                            <span className="bg-black text-white px-4 py-2 text-[10px] font-bold uppercase tracking-widest shadow-xl rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                                Ver Detalles
-                            </span>
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col gap-1">
-                        <div className="flex justify-between items-baseline">
-                            <h3 className="text-lg font-medium text-gray-900 leading-tight group-hover:text-gray-600 transition-colors cursor-pointer" onClick={() => setSelectedProduct(item)}>{item.name}</h3>
-                            <span className="text-sm font-bold text-gray-900 whitespace-nowrap ml-4">{formatPrice(item.priceBase)}</span>
-                        </div>
-
-                        <div className="flex items-center gap-2 mt-1">
-                            <p className="text-[10px] text-gray-400 uppercase tracking-widest mr-2">{item.category}</p>
-                            {item.colors?.interior && (
-                                <div className="flex -space-x-1">
-                                    {item.colors.interior.slice(0, 4).map((c, i) => (
-                                        <div
-                                            key={i}
-                                            className="w-3 h-3 rounded-full border border-white shadow-sm"
-                                            style={{ backgroundColor: c.hex }}
-                                        />
-                                    ))}
-                                    {item.colors.interior.length > 4 && (
-                                        <div className="w-3 h-3 rounded-full bg-gray-100 border border-white flex items-center justify-center text-[6px] text-gray-500">
-                                            +
-                                        </div>
-                                    )}
-                                </div>
-                            )}
-                        </div>
-                    </div>
-                </motion.div>
+                    <ProductCard key={item.id} item={item} index={index} onSelect={setSelectedProduct} />
                 ))}
                 </AnimatePresence>
             </div>
