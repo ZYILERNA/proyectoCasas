@@ -31,9 +31,9 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82103-B6",
         priceBase: 9760,
-        image: "/images/MESAS/MESA1/render.jpg",
+        image: "/images/MESAS/MESA1/render.webp",
         schematics: [
-            "/images/MESAS/MESA1/img1.jpg"
+            "/images/MESAS/MESA1/img1.webp"
         ],
         specs: {
             dimensions: "1400 * 615 * 385 mm",
@@ -47,7 +47,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Marrón", hex: "#8B6914", image: "/images/MESAS/MESA1/render.jpg" }
+                { name: "Marrón", hex: "#8B6914", image: "/images/MESAS/MESA1/render.webp" }
             ]
         },
         configurations: [
@@ -72,7 +72,7 @@ const tablesData = [
         code: "HYJL82103-C1",
         priceBase: 5460,
         // RECUERDA: Guardar la imagen aquí
-        image: "/images/MESAS/MESA2/render.jpg",
+        image: "/images/MESAS/MESA2/render.webp",
         specs: {
             dimensions: "520 * 416 * 450 mm",
             volume: "0.12 m³",
@@ -84,7 +84,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Gris", hex: "#6B6D6E", image: "/images/MESAS/MESA2/render.jpg" }
+                { name: "Gris", hex: "#6B6D6E", image: "/images/MESAS/MESA2/render.webp" }
             ]
         },
         configurations: [
@@ -106,9 +106,9 @@ const tablesData = [
         code: "HYJL82105-A1",
         priceBase: 5790,
         // RECUERDA: Guardar la imagen aquí
-        image: "/images/MESAS/MESA3/render.jpg",
+        image: "/images/MESAS/MESA3/render.webp",
         schematics: [
-            "/images/MESAS/MESA3/img1.jpg"
+            "/images/MESAS/MESA3/img1.webp"
         ],
         specs: {
             dimensions: "Ø700 * 380 mm",
@@ -121,7 +121,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Rojo", hex: "#7A3532", image: "/images/MESAS/MESA3/render.jpg" }
+                { name: "Rojo", hex: "#7A3532", image: "/images/MESAS/MESA3/render.webp" }
             ]
         },
         configurations: [
@@ -142,8 +142,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82105-B1",
         priceBase: 5080,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA4/render.jpg
-        image: "/images/MESAS/MESA4/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA4/render.webp
+        image: "/images/MESAS/MESA4/render.webp",
         specs: {
             dimensions: "Ø450 * 480 mm",
             volume: "0.14 m³",
@@ -155,7 +155,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA4/render.jpg" }
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA4/render.webp" }
             ]
         },
         configurations: [
@@ -176,8 +176,8 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82106-A2/B",
         priceBase: 22870, // Precio combinado del Set (16390 + 6480)
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA5/render.jpg
-        image: "/images/MESAS/MESA5/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA5/render.webp
+        image: "/images/MESAS/MESA5/render.webp",
         specs: {
             dimensions: "1500*850*420 mm (Mesa) + 900*550*280 mm (Módulo)",
             volume: "0.93 m³",
@@ -190,7 +190,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA5/render.jpg" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA5/render.webp" }
             ]
         },
         configurations: [
@@ -215,10 +215,10 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82107-A-HC1929-A",
         priceBase: 20260,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA6/render.jpg
-        image: "/images/MESAS/MESA6/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA6/render.webp
+        image: "/images/MESAS/MESA6/render.webp",
         schematics: [
-            "/images/MESAS/MESA6/img1.jpg"
+            "/images/MESAS/MESA6/img1.webp"
         ],
         specs: {
             dimensions: "1060 * 1060 * 300 mm",
@@ -232,7 +232,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA6/render.jpg" }
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA6/render.webp" }
             ]
         },
         configurations: [
@@ -253,10 +253,10 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82107-BHC1929-B",
         priceBase: 13950,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA7/render.jpg
-        image: "/images/MESAS/MESA7/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA7/render.webp
+        image: "/images/MESAS/MESA7/render.webp",
         schematics: [
-            "/images/MESAS/MESA7/img1.jpg"
+            "/images/MESAS/MESA7/img1.webp"
         ],
         specs: {
             dimensions: "970 * 760 * 400 mm",
@@ -270,7 +270,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA7/render.jpg" }
+                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA7/render.webp" }
             ]
         },
         configurations: [
@@ -291,10 +291,10 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82107-C1",
         priceBase: 7690,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA8/render.jpg
-        image: "/images/MESAS/MESA8/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA8/render.webp
+        image: "/images/MESAS/MESA8/render.webp",
         schematics: [
-            "/images/MESAS/MESA8/img1.jpg"
+            "/images/MESAS/MESA8/img1.webp"
         ],
         specs: {
             dimensions: "520 * 537 * 500 mm",
@@ -307,7 +307,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA8/render.jpg" }
+                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA8/render.webp" }
             ]
         },
         configurations: [
@@ -328,10 +328,10 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82108-A",
         priceBase: 9980,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA9/render.jpg
-        image: "/images/MESAS/MESA9/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA9/render.webp
+        image: "/images/MESAS/MESA9/render.webp",
         schematics: [
-            "/images/MESAS/MESA9/img1.jpg"
+            "/images/MESAS/MESA9/img1.webp"
         ],
         specs: {
             dimensions: "1400 * 750 * 360 mm",
@@ -343,7 +343,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Plateado", hex: "#C0C0C0", image: "/images/MESAS/MESA9/render.jpg" }
+                { name: "Plateado", hex: "#C0C0C0", image: "/images/MESAS/MESA9/render.webp" }
             ]
         },
         configurations: [
@@ -364,8 +364,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82108-B",
         priceBase: 6160,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA10/render.jpg
-        image: "/images/MESAS/MESA10/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA10/render.webp
+        image: "/images/MESAS/MESA10/render.webp",
         specs: {
             dimensions: "520 * 500 * 475 mm",
             volume: "0.18 m³",
@@ -376,7 +376,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Plateado", hex: "#C0C0C0", image: "/images/MESAS/MESA10/render.jpg" }
+                { name: "Plateado", hex: "#C0C0C0", image: "/images/MESAS/MESA10/render.webp" }
             ]
         },
         configurations: [
@@ -397,10 +397,10 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82109-A",
         priceBase: 17460,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA11/render.jpg
-        image: "/images/MESAS/MESA11/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA11/render.webp
+        image: "/images/MESAS/MESA11/render.webp",
         schematics: [
-            "/images/MESAS/MESA11/img1.jpg"
+            "/images/MESAS/MESA11/img1.webp"
         ],
         specs: {
             dimensions: "Ø1200 * 300 mm",
@@ -413,7 +413,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA11/render.jpg" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA11/render.webp" }
             ]
         },
         configurations: [
@@ -434,10 +434,10 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82109-B1",
         priceBase: 17580,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA12/render.jpg
-        image: "/images/MESAS/MESA12/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA12/render.webp
+        image: "/images/MESAS/MESA12/render.webp",
         schematics: [
-            "/images/MESAS/MESA12/img1.jpg"
+            "/images/MESAS/MESA12/img1.webp"
         ],
         specs: {
             dimensions: "Ø920 * 350 mm",
@@ -450,7 +450,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA12/render.jpg" }
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA12/render.webp" }
             ]
         },
         configurations: [
@@ -471,10 +471,10 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82109-C",
         priceBase: 5250,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA13/render.jpg
-        image: "/images/MESAS/MESA13/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA13/render.webp
+        image: "/images/MESAS/MESA13/render.webp",
         schematics: [
-            "/images/MESAS/MESA13/img1.jpg"
+            "/images/MESAS/MESA13/img1.webp"
         ],
         specs: {
             dimensions: "Ø440 * 450 mm",
@@ -487,7 +487,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA13/render.jpg" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA13/render.webp" }
             ]
         },
         configurations: [
@@ -508,11 +508,11 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82111-A",
         priceBase: 14560,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA14/render.jpg
-        image: "/images/MESAS/MESA14/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA14/render.webp
+        image: "/images/MESAS/MESA14/render.webp",
         schematics: [
-            "/images/MESAS/MESA14/img1.jpg",
-            "/images/MESAS/MESA14/img2.jpg"
+            "/images/MESAS/MESA14/img1.webp",
+            "/images/MESAS/MESA14/img2.webp"
         ],
         specs: {
             dimensions: "1350 * 750 * 405 mm",
@@ -527,7 +527,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA14/render.jpg" }
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA14/render.webp" }
             ]
         },
         configurations: [
@@ -550,10 +550,10 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82112-A3",
         priceBase: 13260,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA15/render.jpg
-        image: "/images/MESAS/MESA15/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA15/render.webp
+        image: "/images/MESAS/MESA15/render.webp",
         schematics: [
-            "/images/MESAS/MESA15/img1.jpg"
+            "/images/MESAS/MESA15/img1.webp"
         ],
         specs: {
             dimensions: "1070 * 1080 * 330 mm",
@@ -567,7 +567,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA15/render.jpg" }
+                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA15/render.webp" }
             ]
         },
         configurations: [
@@ -588,10 +588,10 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82112-B1",
         priceBase: 6160,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA16/render.jpg
-        image: "/images/MESAS/MESA16/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA16/render.webp
+        image: "/images/MESAS/MESA16/render.webp",
         schematics: [
-            "/images/MESAS/MESA16/img1.jpg"
+            "/images/MESAS/MESA16/img1.webp"
         ],
         specs: {
             dimensions: "620 * 620 * 430 mm",
@@ -605,7 +605,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA16/render.jpg" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA16/render.webp" }
             ]
         },
         configurations: [
@@ -626,8 +626,8 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82119-A1/B2",
         priceBase: 17930, // Precio combinado (11450 + 6480)
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA17/render.jpg
-        image: "/images/MESAS/MESA17/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA17/render.webp
+        image: "/images/MESAS/MESA17/render.webp",
         specs: {
             dimensions: "Ø1000*305 mm (Centro) + Ø520*455 mm (Auxiliar)",
             volume: "0.80 m³",
@@ -640,8 +640,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA17/render.jpg" },
-                { name: "Rojo", hex: "#7A3532", image: "/images/MESAS/MESA17/render.jpg" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA17/render.webp" },
+                { name: "Rojo", hex: "#7A3532", image: "/images/MESAS/MESA17/render.webp" }
             ]
         },
         configurations: [
@@ -666,13 +666,13 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82130A-B",
         priceBase: 15320, // Precio combinado (10460 + 4860)
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA18/render.jpg
-        image: "/images/MESAS/MESA18/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA18/render.webp
+        image: "/images/MESAS/MESA18/render.webp",
         schematics: [
-            "/images/MESAS/MESA18/img1.jpg",
-            "/images/MESAS/MESA18/img2.jpg",
-            "/images/MESAS/MESA18/img3.jpg",
-            "/images/MESAS/MESA18/img4.jpg"
+            "/images/MESAS/MESA18/img1.webp",
+            "/images/MESAS/MESA18/img2.webp",
+            "/images/MESAS/MESA18/img3.webp",
+            "/images/MESAS/MESA18/img4.webp"
         ],
         specs: {
             dimensions: "1655*875*200 mm (Base) + Ø600*320 mm (Alta)",
@@ -685,7 +685,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA18/render.jpg" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA18/render.webp" }
             ]
         },
         configurations: [
@@ -710,8 +710,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82131",
         priceBase: 5190,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA19/render.jpg
-        image: "/images/MESAS/MESA19/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA19/render.webp
+        image: "/images/MESAS/MESA19/render.webp",
         specs: {
             dimensions: "Ø700 * 430 mm",
             volume: "0.10 m³",
@@ -723,7 +723,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Rojo", hex: "#C0392B", image: "/images/MESAS/MESA19/render.jpg" }
+                { name: "Rojo", hex: "#C0392B", image: "/images/MESAS/MESA19/render.webp" }
             ]
         },
         configurations: [
@@ -744,10 +744,10 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82132",
         priceBase: 20940, // Precio combinado (16980 + 3960)
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA20/render.jpg
-        image: "/images/MESAS/MESA20/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA20/render.webp
+        image: "/images/MESAS/MESA20/render.webp",
         schematics: [
-            "/images/MESAS/MESA20/img1.jpg"
+            "/images/MESAS/MESA20/img1.webp"
         ],
         specs: {
             dimensions: "1200*1200*230 mm (Mármol) + 1200*600*230 mm (Módulo)",
@@ -760,8 +760,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Gris", hex: "#6B6D6E", image: "/images/MESAS/MESA20/render.jpg" },
-                { name: "Rojo", hex: "#C0392B", image: "/images/MESAS/MESA20/render.jpg" }
+                { name: "Gris", hex: "#6B6D6E", image: "/images/MESAS/MESA20/render.webp" },
+                { name: "Rojo", hex: "#C0392B", image: "/images/MESAS/MESA20/render.webp" }
             ]
         },
         configurations: [
@@ -786,8 +786,8 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82133-A1/B1",
         priceBase: 39340, // Precio combinado (23750 + 15590)
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA21/render.jpg
-        image: "/images/MESAS/MESA21/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA21/render.webp
+        image: "/images/MESAS/MESA21/render.webp",
         specs: {
             dimensions: "Ø1200*365 mm (A1) + Ø1000*340 mm (B1)",
             volume: "1.33 m³",
@@ -800,7 +800,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA21/render.jpg" }
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA21/render.webp" }
             ]
         },
         configurations: [
@@ -825,8 +825,8 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82135-A/B",
         priceBase: 13180, // Precio combinado (7990 + 5190)
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA22/render.jpg
-        image: "/images/MESAS/MESA22/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA22/render.webp
+        image: "/images/MESAS/MESA22/render.webp",
         specs: {
             dimensions: "1190*950*320 mm (A) + 845*730*380 mm (B)",
             volume: "0.57 m³",
@@ -838,7 +838,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Gris", hex: "#6B6D6E", image: "/images/MESAS/MESA22/render.jpg" }
+                { name: "Gris", hex: "#6B6D6E", image: "/images/MESAS/MESA22/render.webp" }
             ]
         },
         configurations: [
@@ -863,10 +863,10 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82150-A",
         priceBase: 17460,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA23/render.jpg
-        image: "/images/MESAS/MESA23/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA23/render.webp
+        image: "/images/MESAS/MESA23/render.webp",
         schematics: [
-            "/images/MESAS/MESA23/img1.jpg"
+            "/images/MESAS/MESA23/img1.webp"
         ],
         specs: {
             dimensions: "1400 * 750 * 350 mm",
@@ -879,7 +879,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA23/render.jpg" }
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA23/render.webp" }
             ]
         },
         configurations: [
@@ -900,10 +900,10 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82151",
         priceBase: 28730, // Precio combinado (18750 + 9980)
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA24/render.jpg
-        image: "/images/MESAS/MESA24/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA24/render.webp
+        image: "/images/MESAS/MESA24/render.webp",
         schematics: [
-            "/images/MESAS/MESA24/img1.jpg"
+            "/images/MESAS/MESA24/img1.webp"
         ],
         specs: {
             dimensions: "1208*800*460 mm (Alta) + 1060*580*300 mm (Baja)",
@@ -917,8 +917,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA24/render.jpg" },
-                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA24/render.jpg" }
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA24/render.webp" },
+                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA24/render.webp" }
             ]
         },
         configurations: [
@@ -943,8 +943,8 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82152-3A/B",
         priceBase: 18510, // Precio combinado (13650 + 4860)
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA25/render.jpg
-        image: "/images/MESAS/MESA25/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA25/render.webp
+        image: "/images/MESAS/MESA25/render.webp",
         specs: {
             dimensions: "1000*1000*250 mm (A) + Ø800*380 mm (B)",
             volume: "0.95 m³",
@@ -956,7 +956,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA25/render.jpg" }
+                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA25/render.webp" }
             ]
         },
         configurations: [
@@ -985,8 +985,8 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82153-Set",
         priceBase: 20040, // Precio combinado (4380 + 6650 + 6350 + 2660)
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA26/render.jpg
-        image: "/images/MESAS/MESA26/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA26/render.webp
+        image: "/images/MESAS/MESA26/render.webp",
         specs: {
             dimensions: "Combinación Modular (4 Piezas)",
             volume: "0.89 m³",
@@ -1000,9 +1000,9 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA26/render.jpg" },
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA26/render.jpg" },
-                { name: "Rojo", hex: "#7A3532", image: "/images/MESAS/MESA26/render.jpg" }
+                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA26/render.webp" },
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA26/render.webp" },
+                { name: "Rojo", hex: "#7A3532", image: "/images/MESAS/MESA26/render.webp" }
             ]
         },
         configurations: [
@@ -1031,12 +1031,12 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82156-A1",
         priceBase: 14690,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA27/render.jpg
-        image: "/images/MESAS/MESA27/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA27/render.webp
+        image: "/images/MESAS/MESA27/render.webp",
         schematics: [
-            "/images/MESAS/MESA27/img1.jpg",
-            "/images/MESAS/MESA27/img2.jpg",
-            "/images/MESAS/MESA27/img3.jpg"
+            "/images/MESAS/MESA27/img1.webp",
+            "/images/MESAS/MESA27/img2.webp",
+            "/images/MESAS/MESA27/img3.webp"
         ],
         specs: {
             dimensions: "Ø1000 * 385 mm",
@@ -1050,7 +1050,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA27/render.jpg" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA27/render.webp" }
             ]
         },
         configurations: [
@@ -1071,8 +1071,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82201",
         priceBase: 10450,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA28/render.jpg
-        image: "/images/MESAS/MESA28/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA28/render.webp
+        image: "/images/MESAS/MESA28/render.webp",
         specs: {
             dimensions: "985 * 310 * 455 mm",
             volume: "0.20 m³",
@@ -1086,7 +1086,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA28/render.jpg" }
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA28/render.webp" }
             ]
         },
         configurations: [
@@ -1107,10 +1107,10 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82202",
         priceBase: 6150,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA29/render.jpg
-        image: "/images/MESAS/MESA29/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA29/render.webp
+        image: "/images/MESAS/MESA29/render.webp",
         schematics: [
-            "/images/MESAS/MESA29/img1.jpg"
+            "/images/MESAS/MESA29/img1.webp"
         ],
         specs: {
             dimensions: "540 * 400 * 500 mm",
@@ -1123,7 +1123,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Gris", hex: "#6B6D6E", image: "/images/MESAS/MESA29/render.jpg" }
+                { name: "Gris", hex: "#6B6D6E", image: "/images/MESAS/MESA29/render.webp" }
             ]
         },
         configurations: [
@@ -1144,8 +1144,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82302-B",
         priceBase: 7560,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA30/render.jpg
-        image: "/images/MESAS/MESA30/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA30/render.webp
+        image: "/images/MESAS/MESA30/render.webp",
         specs: {
             dimensions: "Ø580 * 330 mm",
             volume: "0.12 m³",
@@ -1158,7 +1158,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Dorado", hex: "#B8860B", image: "/images/MESAS/MESA30/render.jpg" }
+                { name: "Dorado", hex: "#B8860B", image: "/images/MESAS/MESA30/render.webp" }
             ]
         },
         configurations: [
@@ -1179,10 +1179,10 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82302-A1",
         priceBase: 12790,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA31/render.jpg
-        image: "/images/MESAS/MESA31/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA31/render.webp
+        image: "/images/MESAS/MESA31/render.webp",
         schematics: [
-            "/images/MESAS/MESA31/img1.jpg"
+            "/images/MESAS/MESA31/img1.webp"
         ],
         specs: {
             dimensions: "Ø700 * 420 mm",
@@ -1196,8 +1196,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA31/render.jpg" },
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA31/render.jpg" }
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA31/render.webp" },
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA31/render.webp" }
             ]
         },
         configurations: [
@@ -1218,8 +1218,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82303-C",
         priceBase: 6950,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA32/render.jpg
-        image: "/images/MESAS/MESA32/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA32/render.webp
+        image: "/images/MESAS/MESA32/render.webp",
         specs: {
             dimensions: "365 * 350 * 460 mm",
             volume: "0.10 m³",
@@ -1231,8 +1231,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Dorado", hex: "#B8860B", image: "/images/MESAS/MESA32/render.jpg" },
-                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA32/render.jpg" }
+                { name: "Dorado", hex: "#B8860B", image: "/images/MESAS/MESA32/render.webp" },
+                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA32/render.webp" }
             ]
         },
         configurations: [
@@ -1253,8 +1253,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82307",
         priceBase: 4390,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA33/render.jpg
-        image: "/images/MESAS/MESA33/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA33/render.webp
+        image: "/images/MESAS/MESA33/render.webp",
         specs: {
             dimensions: "370 * 350 * 610 mm",
             volume: "0.12 m³",
@@ -1265,7 +1265,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Dorado", hex: "#B8860B", image: "/images/MESAS/MESA33/render.jpg" }
+                { name: "Dorado", hex: "#B8860B", image: "/images/MESAS/MESA33/render.webp" }
             ]
         },
         configurations: [
@@ -1286,8 +1286,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82308-A1",
         priceBase: 5450,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA34/render.jpg
-        image: "/images/MESAS/MESA34/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA34/render.webp
+        image: "/images/MESAS/MESA34/render.webp",
         specs: {
             dimensions: "Ø500 * 540 mm",
             volume: "0.16 m³",
@@ -1299,7 +1299,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA34/render.jpg" }
+                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA34/render.webp" }
             ]
         },
         configurations: [
@@ -1320,8 +1320,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82317",
         priceBase: 3790,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA35/render.jpg
-        image: "/images/MESAS/MESA35/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA35/render.webp
+        image: "/images/MESAS/MESA35/render.webp",
         specs: {
             dimensions: "Ø380 * 440 mm",
             volume: "0.11 m³",
@@ -1333,7 +1333,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Rojo", hex: "#C0392B", image: "/images/MESAS/MESA35/render.jpg" }
+                { name: "Rojo", hex: "#C0392B", image: "/images/MESAS/MESA35/render.webp" }
             ]
         },
         configurations: [
@@ -1355,11 +1355,11 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82318",
         priceBase: 9390,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA36/render.jpg
-        image: "/images/MESAS/MESA36/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA36/render.webp
+        image: "/images/MESAS/MESA36/render.webp",
         schematics: [
-            "/images/MESAS/MESA36/img1.jpg",
-            "/images/MESAS/MESA36/img2.jpg"
+            "/images/MESAS/MESA36/img1.webp",
+            "/images/MESAS/MESA36/img2.webp"
         ],
         specs: {
             dimensions: "750 * 380 * 520 mm",
@@ -1374,8 +1374,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA36/render.jpg" },
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA36/render.jpg" }
+                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA36/render.webp" },
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA36/render.webp" }
             ]
         },
         configurations: [
@@ -1396,8 +1396,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82319-A",
         priceBase: 4550,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA37/render.jpg
-        image: "/images/MESAS/MESA37/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA37/render.webp
+        image: "/images/MESAS/MESA37/render.webp",
         specs: {
             dimensions: "Ø450 * 500 mm",
             volume: "0.14 m³",
@@ -1409,7 +1409,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA37/render.jpg" }
+                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA37/render.webp" }
             ]
         },
         configurations: [
@@ -1430,10 +1430,10 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82320",
         priceBase: 7280,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA38/render.jpg
-        image: "/images/MESAS/MESA38/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA38/render.webp
+        image: "/images/MESAS/MESA38/render.webp",
         schematics: [
-            "/images/MESAS/MESA38/img1.jpg"
+            "/images/MESAS/MESA38/img1.webp"
         ],
         specs: {
             dimensions: "Ø600 * 435 mm",
@@ -1446,7 +1446,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA38/render.jpg" }
+                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA38/render.webp" }
             ]
         },
         configurations: [
@@ -1467,8 +1467,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82321-A",
         priceBase: 5890,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA39/render.jpg
-        image: "/images/MESAS/MESA39/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA39/render.webp
+        image: "/images/MESAS/MESA39/render.webp",
         specs: {
             dimensions: "390 * 320 * 520 mm",
             volume: "0.11 m³",
@@ -1481,8 +1481,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Marrón", hex: "#8B6914", image: "/images/MESAS/MESA39/render.jpg" },
-                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA39/render.jpg" }
+                { name: "Marrón", hex: "#8B6914", image: "/images/MESAS/MESA39/render.webp" },
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA39/render.webp" }
             ]
         },
         configurations: [
@@ -1503,8 +1503,8 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82305-A/HG1911",
         priceBase: 8490,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA40/render.jpg
-        image: "/images/MESAS/MESA40/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA40/render.webp
+        image: "/images/MESAS/MESA40/render.webp",
         specs: {
             dimensions: "980 * 608 * 380 mm",
             volume: "0.44 m³",
@@ -1516,7 +1516,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA40/render.jpg" }
+                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA40/render.webp" }
             ]
         },
         configurations: [
@@ -1537,10 +1537,10 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82306/HG1913",
         priceBase: 5880,
-        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA41/render.jpg
-        image: "/images/MESAS/MESA41/render.jpg",
+        // RECUERDA: Guardar imagen en: /public/images/MESAS/MESA41/render.webp
+        image: "/images/MESAS/MESA41/render.webp",
         schematics: [
-            "/images/MESAS/MESA41/img1.jpg"
+            "/images/MESAS/MESA41/img1.webp"
         ],
         specs: {
             dimensions: "Ø495 * 500 mm",
@@ -1553,7 +1553,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Dorado", hex: "#B8860B", image: "/images/MESAS/MESA41/render.jpg" }
+                { name: "Dorado", hex: "#B8860B", image: "/images/MESAS/MESA41/render.webp" }
             ]
         },
         configurations: [
@@ -1574,10 +1574,10 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYTL86101/HF1823Y-1",
         priceBase: 25450,
-        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA42/render.jpg
-        image: "/images/MESAS/MESA42/render.jpg",
+        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA42/render.webp
+        image: "/images/MESAS/MESA42/render.webp",
         schematics: [
-            "/images/MESAS/MESA42/img1.jpg",
+            "/images/MESAS/MESA42/img1.webp",
         ],
         specs: {
             dimensions: "2100 * 1000 * 750 mm",
@@ -1591,7 +1591,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Gris", hex: "#6B6D6E", image: "/images/MESAS/MESA42/render.jpg" }
+                { name: "Gris", hex: "#6B6D6E", image: "/images/MESAS/MESA42/render.webp" }
             ]
         },
         configurations: [
@@ -1623,11 +1623,11 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYTL86102-B/HF1826Y-2",
         priceBase: 28190,
-        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA43/render.jpg
-        image: "/images/MESAS/MESA43/render.jpg",
+        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA43/render.webp
+        image: "/images/MESAS/MESA43/render.webp",
         schematics: [
-            "/images/MESAS/MESA43/img1.jpg",
-            "/images/MESAS/MESA43/img2.jpg"
+            "/images/MESAS/MESA43/img1.webp",
+            "/images/MESAS/MESA43/img2.webp"
         ],
         specs: {
             dimensions: "920 / 1530 * 760 mm",
@@ -1641,8 +1641,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Rojo", hex: "#7A3532", image: "/images/MESAS/MESA43/render.jpg" },
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA43/img1.jpg" }
+                { name: "Rojo", hex: "#7A3532", image: "/images/MESAS/MESA43/render.webp" },
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA43/img1.webp" }
             ]
         },
         configurations: [
@@ -1672,12 +1672,12 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYTL86105-B/HF1831",
         priceBase: 25550,
-        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA44/render.jpg
-        image: "/images/MESAS/MESA44/render.jpg",
+        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA44/render.webp
+        image: "/images/MESAS/MESA44/render.webp",
         schematics: [
-            "/images/MESAS/MESA44/img1.jpg",
-            "/images/MESAS/MESA44/img2.jpg",
-            "/images/MESAS/MESA44/img3.jpg",
+            "/images/MESAS/MESA44/img1.webp",
+            "/images/MESAS/MESA44/img2.webp",
+            "/images/MESAS/MESA44/img3.webp",
         ],
         specs: {
             dimensions: "2100 * 1000 * 750 mm",
@@ -1691,8 +1691,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Marrón", hex: "#8B6914", image: "/images/MESAS/MESA44/render.jpg" },
-                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA44/img3.jpg" }
+                { name: "Marrón", hex: "#8B6914", image: "/images/MESAS/MESA44/render.webp" },
+                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA44/img3.webp" }
             ]
         },
         configurations: [
@@ -1724,12 +1724,12 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYTL86108-A/HF1836Y",
         priceBase: 24450,
-        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA45/render.jpg
-        image: "/images/MESAS/MESA45/render.jpg",
+        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA45/render.webp
+        image: "/images/MESAS/MESA45/render.webp",
         schematics: [
-            "/images/MESAS/MESA45/img1.jpg",
-            "/images/MESAS/MESA45/img2.jpg",
-            "/images/MESAS/MESA45/img3.jpg",
+            "/images/MESAS/MESA45/img1.webp",
+            "/images/MESAS/MESA45/img2.webp",
+            "/images/MESAS/MESA45/img3.webp",
         ],
         specs: {
             dimensions: "2100 * 1000 * 750 mm",
@@ -1743,7 +1743,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA45/render.jpg" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA45/render.webp" }
             ]
         },
         configurations: [
@@ -1779,8 +1779,8 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYTL86111-A/HF1837",
         priceBase: 40560,
-        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA46/render.jpg
-        image: "/images/MESAS/MESA46/render.jpg",
+        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA46/render.webp
+        image: "/images/MESAS/MESA46/render.webp",
         specs: {
             dimensions: "2100 * 1000 * 750 mm",
             volume: "0.91 m³",
@@ -1792,7 +1792,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA46/render.jpg" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA46/render.webp" }
             ]
         },
         configurations: [
@@ -1827,12 +1827,12 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYTL86128-B",
         priceBase: 22260,
-        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA48/render.jpg
-        image: "/images/MESAS/MESA48/render.jpg",
+        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA48/render.webp
+        image: "/images/MESAS/MESA48/render.webp",
         schematics: [
-            "/images/MESAS/MESA48/img1.jpg",
-            "/images/MESAS/MESA48/img2.jpg",
-            "/images/MESAS/MESA48/img3.jpg",
+            "/images/MESAS/MESA48/img1.webp",
+            "/images/MESAS/MESA48/img2.webp",
+            "/images/MESAS/MESA48/img3.webp",
         ],
         specs: {
             dimensions: "2100 * 950 * 750 mm",
@@ -1845,8 +1845,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA48/render.jpg" },
-                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA48/img2.jpg" }
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA48/render.webp" },
+                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA48/img2.webp" }
             ]
         },
         configurations: [
@@ -1876,12 +1876,12 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYTL86129-A/MZL3118",
         priceBase: 24350,
-        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA49/render.jpg
-        image: "/images/MESAS/MESA49/render.jpg",
+        // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/MESAS/MESA49/render.webp
+        image: "/images/MESAS/MESA49/render.webp",
         schematics: [
-            "/images/MESAS/MESA49/img1.jpg",
-            "/images/MESAS/MESA49/img2.jpg",
-            "/images/MESAS/MESA49/img3.jpg"
+            "/images/MESAS/MESA49/img1.webp",
+            "/images/MESAS/MESA49/img2.webp",
+            "/images/MESAS/MESA49/img3.webp"
         ],
         specs: {
             dimensions: "1600 * 900 * 750 mm",
@@ -1894,7 +1894,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Gris", hex: "#6B6D6E", image: "/images/MESAS/MESA49/render.jpg" }
+                { name: "Gris", hex: "#6B6D6E", image: "/images/MESAS/MESA49/render.webp" }
             ]
         },
         configurations: [
@@ -1928,11 +1928,11 @@ const tablesData = [
         category: "Sets Completos",
         code: "HYJL82106-HC1922Y-A-B-CHIN",
         priceBase: null,
-        image: "/images/MESAS/MESA50/render.jpg",
+        image: "/images/MESAS/MESA50/render.webp",
         schematics: [
-            "/images/MESAS/MESA50/img1.jpg",
-            "/images/MESAS/MESA50/img2.jpg",
-            "/images/MESAS/MESA50/img3.jpg"
+            "/images/MESAS/MESA50/img1.webp",
+            "/images/MESAS/MESA50/img2.webp",
+            "/images/MESAS/MESA50/img3.webp"
         ],
         specs: {
             dimensions: "1500 * 850 * 420 mm",
@@ -1964,9 +1964,9 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYJL82901",
         priceBase: null,
-        image: "/images/MESAS/MESA51/render.jpg",
+        image: "/images/MESAS/MESA51/render.webp",
         schematics: [
-            "/images/MESAS/MESA51/img1.jpg",
+            "/images/MESAS/MESA51/img1.webp",
         ],
         specs: {
             dimensions: "1000 * 430 * 450 mm",
@@ -1997,10 +1997,10 @@ const tablesData = [
         category: "Mesa de Té",
         code: "HYGL81702-HQ1826Y-2",
         priceBase: null,
-        image: "/images/MESAS/MESA52/render.jpg",
+        image: "/images/MESAS/MESA52/render.webp",
         schematics: [
-            "/images/MESAS/MESA52/img1.jpg",
-            "/images/MESAS/MESA52/img2.jpg"
+            "/images/MESAS/MESA52/img1.webp",
+            "/images/MESAS/MESA52/img2.webp"
         ],
         specs: {
             dimensions: "630 * 480 * 680 mm",
@@ -2032,7 +2032,7 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYYD85506",
         priceBase: null,
-        image: "/images/MESAS/MESA53/render.jpg",
+        image: "/images/MESAS/MESA53/render.webp",
         specs: {
             dimensions: "1600 * 450 * 425 mm",
             volume: null,
@@ -2063,7 +2063,7 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYTL86127-HF1850",
         priceBase: null,
-        image: "/images/MESAS/MESA54/render.jpg",
+        image: "/images/MESAS/MESA54/render.webp",
         specs: {
             dimensions: null,
             volume: null,
@@ -2076,7 +2076,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA54/render.jpg" }
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA54/render.webp" }
             ]
         },
         configurations: [
@@ -2098,9 +2098,9 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYTL86109-HF1838",
         priceBase: null,
-        image: "/images/MESAS/MESA55/render.jpg",
+        image: "/images/MESAS/MESA55/render.webp",
         schematics: [
-            "/images/MESAS/MESA55/img1.jpg"
+            "/images/MESAS/MESA55/img1.webp"
         ],
         specs: {
             dimensions: null,
@@ -2114,7 +2114,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA55/render.jpg" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA55/render.webp" }
             ]
         },
         configurations: [
@@ -2136,9 +2136,9 @@ const tablesData = [
         category: "Mesa de Comedor",
         code: "HYTL86103-HF1830Y-1",
         priceBase: null,
-        image: "/images/MESAS/MESA56/render.jpg",
+        image: "/images/MESAS/MESA56/render.webp",
         schematics: [
-            "/images/MESAS/MESA56/img1.jpg"
+            "/images/MESAS/MESA56/img1.webp"
         ],
         specs: {
             dimensions: null,
@@ -2152,8 +2152,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA56/render.jpg" },
-                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA56/render.jpg" }
+                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA56/render.webp" },
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA56/render.webp" }
             ]
         },
         configurations: [
@@ -2175,12 +2175,12 @@ const tablesData = [
         category: "Mesa de Té",
         code: "HYTL86201/HCT1801Y-1",
         priceBase: 18760,
-        image: "/images/MESAS/MESA57/render.jpg",
+        image: "/images/MESAS/MESA57/render.webp",
         schematics: [
-            "/images/MESAS/MESA57/img1.jpg",
-            "/images/MESAS/MESA57/img2.jpg",
-            "/images/MESAS/MESA57/img3.jpg",
-            "/images/MESAS/MESA57/img4.jpg"
+            "/images/MESAS/MESA57/img1.webp",
+            "/images/MESAS/MESA57/img2.webp",
+            "/images/MESAS/MESA57/img3.webp",
+            "/images/MESAS/MESA57/img4.webp"
         ],
         specs: {
             dimensions: "1500 / 1800 / 2000 / 2400 * 700/750 * 720 mm",
@@ -2195,8 +2195,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA57/render.jpg" },
-                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA57/img1.jpg" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA57/render.webp" },
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA57/img1.webp" }
             ]
         },
         configurations: [
@@ -2227,18 +2227,18 @@ const tablesData = [
         category: "Mesa de Té",
         code: "HYTL86202/HCT1839",
         priceBase: 46480,
-        image: "/images/MESAS/MESA58/render.jpg",
+        image: "/images/MESAS/MESA58/render.webp",
         schematics: [
-            "/images/MESAS/MESA58/img1.jpg",
-            "/images/MESAS/MESA58/img2.jpg",
-            "/images/MESAS/MESA58/img3.jpg",
-            "/images/MESAS/MESA58/img4.jpg",
-            "/images/MESAS/MESA58/img5.jpg",
-            "/images/MESAS/MESA58/img6.jpg",
-            "/images/MESAS/MESA58/img7.jpg",
-            "/images/MESAS/MESA58/img8.jpg",
-            "/images/MESAS/MESA58/img9.jpg",
-            "/images/MESAS/MESA58/img10.jpg"
+            "/images/MESAS/MESA58/img1.webp",
+            "/images/MESAS/MESA58/img2.webp",
+            "/images/MESAS/MESA58/img3.webp",
+            "/images/MESAS/MESA58/img4.webp",
+            "/images/MESAS/MESA58/img5.webp",
+            "/images/MESAS/MESA58/img6.webp",
+            "/images/MESAS/MESA58/img7.webp",
+            "/images/MESAS/MESA58/img8.webp",
+            "/images/MESAS/MESA58/img9.webp",
+            "/images/MESAS/MESA58/img10.webp"
         ],
         specs: {
             dimensions: "2400 / 2600 / 2800 / 3130 * 1000 * 820 mm",
@@ -2252,8 +2252,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA58/render.jpg" },
-                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA58/render.jpg" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA58/render.webp" },
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA58/render.webp" }
             ]
         },
         configurations: [
@@ -2284,11 +2284,11 @@ const tablesData = [
         category: "Mesa de Té",
         code: "HYTL86202-B/HCT1839-B",
         priceBase: 37060,
-        image: "/images/MESAS/MESA59/render.jpg",
+        image: "/images/MESAS/MESA59/render.webp",
         schematics: [
-            "/images/MESAS/MESA59/img1.jpg",
-            "/images/MESAS/MESA59/img2.jpg",
-            "/images/MESAS/MESA59/img3.jpg"
+            "/images/MESAS/MESA59/img1.webp",
+            "/images/MESAS/MESA59/img2.webp",
+            "/images/MESAS/MESA59/img3.webp"
         ],
         specs: {
             dimensions: "2400 / 2600 / 2800 / 3000 * 1000 * 750 mm",
@@ -2302,8 +2302,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA59/render.jpg" },
-                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA59/render.jpg" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA59/render.webp" },
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA59/render.webp" }
             ]
         },
         configurations: [
@@ -2334,12 +2334,12 @@ const tablesData = [
         category: "Mesa de Té",
         code: "HYTL86205/MQT7715-C",
         priceBase: 44750,
-        image: "/images/MESAS/MESA60/render.jpg",
+        image: "/images/MESAS/MESA60/render.webp",
         schematics: [
-            "/images/MESAS/MESA60/img1.jpg",
-            "/images/MESAS/MESA60/img2.jpg",
-            "/images/MESAS/MESA60/img3.jpg",
-            "/images/MESAS/MESA60/img4.jpg"
+            "/images/MESAS/MESA60/img1.webp",
+            "/images/MESAS/MESA60/img2.webp",
+            "/images/MESAS/MESA60/img3.webp",
+            "/images/MESAS/MESA60/img4.webp"
         ],
         specs: {
             dimensions: "2000/2200/2400/2600 * 850 * 720 mm | 2800/3000 * 1000 * 720 mm",
@@ -2353,8 +2353,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA60/render.jpg" },
-                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA60/render.jpg" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA60/render.webp" },
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA60/render.webp" }
             ]
         },
         configurations: [
@@ -2389,10 +2389,10 @@ const tablesData = [
         category: "Mesa de Té",
         code: "HYGL81706",
         priceBase: null,
-        image: "/images/MESAS/MESA61/render.jpg",
+        image: "/images/MESAS/MESA61/render.webp",
         schematics: [
-            "/images/MESAS/MESA61/img1.jpg",
-            "/images/MESAS/MESA61/img2.jpg"
+            "/images/MESAS/MESA61/img1.webp",
+            "/images/MESAS/MESA61/img2.webp"
         ],
         specs: {
             dimensions: null,
@@ -2407,7 +2407,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA61/render.jpg" }
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA61/render.webp" }
             ]
         },
         configurations: [
@@ -2429,10 +2429,10 @@ const tablesData = [
         category: "Mesa de Té",
         code: "HYGL81703",
         priceBase: null,
-        image: "/images/MESAS/MESA62/render.jpg",
+        image: "/images/MESAS/MESA62/render.webp",
         schematics: [
-            "/images/MESAS/MESA62/img1.jpg",
-            "/images/MESAS/MESA62/img2.jpg"
+            "/images/MESAS/MESA62/img1.webp",
+            "/images/MESAS/MESA62/img2.webp"
         ],
         specs: {
             dimensions: null,
@@ -2447,7 +2447,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA62/render.jpg" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA62/render.webp" }
             ]
         },
         configurations: [
@@ -2469,9 +2469,9 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82309-HG1908",
         priceBase: null,
-        image: "/images/MESAS/MESA63/render.jpg",
+        image: "/images/MESAS/MESA63/render.webp",
         schematics: [
-            "/images/MESAS/MESA63/img1.jpg"
+            "/images/MESAS/MESA63/img1.webp"
         ],
         specs: {
             dimensions: null,
@@ -2484,8 +2484,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA63/render.jpg" },
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA63/render.jpg" }
+                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA63/render.webp" },
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA63/render.webp" }
             ]
         },
         configurations: [
@@ -2507,7 +2507,7 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82105-HG1917",
         priceBase: null,
-        image: "/images/MESAS/MESA64/render.jpg",
+        image: "/images/MESAS/MESA64/render.webp",
         specs: {
             dimensions: null,
             volume: null,
@@ -2520,8 +2520,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Rojo", hex: "#7A3532", image: "/images/MESAS/MESA64/render.jpg" },
-                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA64/render.jpg" }
+                { name: "Rojo", hex: "#7A3532", image: "/images/MESAS/MESA64/render.webp" },
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA64/render.webp" }
             ]
         },
         configurations: [
@@ -2543,9 +2543,9 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82103-HC1923",
         priceBase: null,
-        image: "/images/MESAS/MESA65/render.jpg",
+        image: "/images/MESAS/MESA65/render.webp",
         schematics: [
-            "/images/MESAS/MESA65/img1.jpg"
+            "/images/MESAS/MESA65/img1.webp"
         ],
         specs: {
             dimensions: null,
@@ -2560,8 +2560,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA65/render.jpg" },
-                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA65/render.jpg" }
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA65/render.webp" },
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA65/render.webp" }
             ]
         },
         configurations: [
@@ -2583,7 +2583,7 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HC1912",
         priceBase: null,
-        image: "/images/MESAS/MESA66/render.jpg",
+        image: "/images/MESAS/MESA66/render.webp",
         specs: {
             dimensions: null,
             volume: null,
@@ -2597,8 +2597,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA66/render.jpg" },
-                { name: "Rojo", hex: "#7A3532", image: "/images/MESAS/MESA66/render.jpg" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA66/render.webp" },
+                { name: "Rojo", hex: "#7A3532", image: "/images/MESAS/MESA66/render.webp" }
             ]
         },
         configurations: [
@@ -2620,7 +2620,7 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HC1912-B",
         priceBase: null,
-        image: "/images/MESAS/MESA67/render.jpg",
+        image: "/images/MESAS/MESA67/render.webp",
         schematics: [],
         specs: {
             dimensions: null,
@@ -2633,7 +2633,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA67/render.jpg" }
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA67/render.webp" }
             ]
         },
         configurations: [
@@ -2655,7 +2655,7 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HC1912-A",
         priceBase: null,
-        image: "/images/MESAS/MESA68/render.jpg",
+        image: "/images/MESAS/MESA68/render.webp",
         schematics: [],
         specs: {
             dimensions: null,
@@ -2668,7 +2668,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA68/render.jpg" }
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA68/render.webp" }
             ]
         },
         configurations: [
@@ -2690,7 +2690,7 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82302-HG1906Y",
         priceBase: null,
-        image: "/images/MESAS/MESA69/render.jpg",
+        image: "/images/MESAS/MESA69/render.webp",
         schematics: [],
         specs: {
             dimensions: null,
@@ -2706,8 +2706,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA69/render.jpg" },
-                { name: "Dorado", hex: "#B8860B", image: "/images/MESAS/MESA69/render.jpg" }
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA69/render.webp" },
+                { name: "Dorado", hex: "#B8860B", image: "/images/MESAS/MESA69/render.webp" }
             ]
         },
         configurations: [
@@ -2729,9 +2729,9 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82157",
         priceBase: null,
-        image: "/images/MESAS/MESA70/render.jpg",
+        image: "/images/MESAS/MESA70/render.webp",
         schematics: [
-            "/images/MESAS/MESA70/img1.jpg"
+            "/images/MESAS/MESA70/img1.webp"
         ],
         specs: {
             dimensions: null,
@@ -2745,8 +2745,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Rojo", hex: "#7A3532", image: "/images/MESAS/MESA70/render.jpg" },
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA70/render.jpg" }
+                { name: "Rojo", hex: "#7A3532", image: "/images/MESAS/MESA70/render.webp" },
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA70/render.webp" }
             ]
         },
         configurations: [
@@ -2768,7 +2768,7 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82156",
         priceBase: null,
-        image: "/images/MESAS/MESA71/render.jpg",
+        image: "/images/MESAS/MESA71/render.webp",
         schematics: [],
         specs: {
             dimensions: null,
@@ -2783,9 +2783,9 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA71/render.jpg" },
-                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA71/render.jpg" },
-                { name: "Dorado", hex: "#B8860B", image: "/images/MESAS/MESA71/render.jpg" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA71/render.webp" },
+                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA71/render.webp" },
+                { name: "Dorado", hex: "#B8860B", image: "/images/MESAS/MESA71/render.webp" }
             ]
         },
         configurations: [
@@ -2807,9 +2807,9 @@ const tablesData = [
         category: "Mesa Consola",
         code: "HYJL82153-D",
         priceBase: null,
-        image: "/images/MESAS/MESA72/render.jpg",
+        image: "/images/MESAS/MESA72/render.webp",
         schematics: [
-            "/images/MESAS/MESA72/img1.jpg"
+            "/images/MESAS/MESA72/img1.webp"
         ],
         specs: {
             dimensions: null,
@@ -2822,7 +2822,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA72/render.jpg" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA72/render.webp" }
             ]
         },
         configurations: [
@@ -2844,9 +2844,9 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82153-C",
         priceBase: null,
-        image: "/images/MESAS/MESA73/render.jpg",
+        image: "/images/MESAS/MESA73/render.webp",
         schematics: [
-            "/images/MESAS/MESA73/img1.jpg"
+            "/images/MESAS/MESA73/img1.webp"
         ],
         specs: {
             dimensions: null,
@@ -2859,7 +2859,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA73/render.jpg" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA73/render.webp" }
             ]
         },
         configurations: [
@@ -2881,9 +2881,9 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82153-A",
         priceBase: null,
-        image: "/images/MESAS/MESA74/render.jpg",
+        image: "/images/MESAS/MESA74/render.webp",
         schematics: [
-            "/images/MESAS/MESA74/img1.jpg"
+            "/images/MESAS/MESA74/img1.webp"
         ],
         specs: {
             dimensions: null,
@@ -2897,8 +2897,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA74/render.jpg" },
-                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA74/render.jpg" }
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA74/render.webp" },
+                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA74/render.webp" }
             ]
         },
         configurations: [
@@ -2920,7 +2920,7 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82152-B",
         priceBase: null,
-        image: "/images/MESAS/MESA75/render.jpg",
+        image: "/images/MESAS/MESA75/render.webp",
         schematics: [],
         specs: {
             dimensions: null,
@@ -2933,8 +2933,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA75/render.jpg" },
-                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA75/render.jpg" }
+                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA75/render.webp" },
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA75/render.webp" }
             ]
         },
         configurations: [
@@ -2956,7 +2956,7 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82152-A",
         priceBase: null,
-        image: "/images/MESAS/MESA76/render.jpg",
+        image: "/images/MESAS/MESA76/render.webp",
         schematics: [],
         specs: {
             dimensions: null,
@@ -2970,7 +2970,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA76/render.jpg" }
+                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA76/render.webp" }
             ]
         },
         configurations: [
@@ -2992,7 +2992,7 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82151-C",
         priceBase: null,
-        image: "/images/MESAS/MESA77/render.jpg",
+        image: "/images/MESAS/MESA77/render.webp",
         schematics: [],
         specs: {
             dimensions: null,
@@ -3006,8 +3006,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA77/render.jpg" },
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA77/render.jpg" }
+                { name: "Verde", hex: "#2A5A35", image: "/images/MESAS/MESA77/render.webp" },
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA77/render.webp" }
             ]
         },
         configurations: [
@@ -3029,7 +3029,7 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82151-B",
         priceBase: null,
-        image: "/images/MESAS/MESA78/render.jpg",
+        image: "/images/MESAS/MESA78/render.webp",
         schematics: [],
         specs: {
             dimensions: null,
@@ -3044,9 +3044,9 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA78/render.jpg" },
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA78/render.jpg" },
-                { name: "Dorado", hex: "#B8860B", image: "/images/MESAS/MESA78/render.jpg" }
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA78/render.webp" },
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA78/render.webp" },
+                { name: "Dorado", hex: "#B8860B", image: "/images/MESAS/MESA78/render.webp" }
             ]
         },
         configurations: [
@@ -3068,7 +3068,7 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82151-A",
         priceBase: null,
-        image: "/images/MESAS/MESA79/render.jpg",
+        image: "/images/MESAS/MESA79/render.webp",
         schematics: [],
         specs: {
             dimensions: null,
@@ -3082,9 +3082,9 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA79/render.jpg" },
-                { name: "Marrón", hex: "#8B6914", image: "/images/MESAS/MESA79/render.jpg" },
-                { name: "Dorado", hex: "#B8860B", image: "/images/MESAS/MESA79/render.jpg" }
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA79/render.webp" },
+                { name: "Marrón", hex: "#8B6914", image: "/images/MESAS/MESA79/render.webp" },
+                { name: "Dorado", hex: "#B8860B", image: "/images/MESAS/MESA79/render.webp" }
             ]
         },
         configurations: [
@@ -3106,7 +3106,7 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82137",
         priceBase: null,
-        image: "/images/MESAS/MESA80/render.jpg",
+        image: "/images/MESAS/MESA80/render.webp",
         schematics: [],
         specs: {
             dimensions: null,
@@ -3119,7 +3119,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA80/render.jpg" }
+                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA80/render.webp" }
             ]
         },
         configurations: [
@@ -3141,9 +3141,9 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82136",
         priceBase: null,
-        image: "/images/MESAS/MESA81/render.jpg",
+        image: "/images/MESAS/MESA81/render.webp",
         schematics: [
-            "/images/MESAS/MESA81/img1.jpg"
+            "/images/MESAS/MESA81/img1.webp"
         ],
         specs: {
             dimensions: null,
@@ -3159,8 +3159,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA81/render.jpg" },
-                { name: "Rojo", hex: "#7A3532", image: "/images/MESAS/MESA81/render.jpg" }
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA81/render.webp" },
+                { name: "Rojo", hex: "#7A3532", image: "/images/MESAS/MESA81/render.webp" }
             ]
         },
         configurations: [
@@ -3182,7 +3182,7 @@ const tablesData = [
         category: "Mesa Auxiliar",
         code: "HYJL82136-B",
         priceBase: null,
-        image: "/images/MESAS/MESA82/render.jpg",
+        image: "/images/MESAS/MESA82/render.webp",
         schematics: [],
         specs: {
             dimensions: null,
@@ -3198,8 +3198,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA82/render.jpg" },
-                { name: "Rojo", hex: "#7A3532", image: "/images/MESAS/MESA82/render.jpg" }
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA82/render.webp" },
+                { name: "Rojo", hex: "#7A3532", image: "/images/MESAS/MESA82/render.webp" }
             ]
         },
         configurations: [
@@ -3221,7 +3221,7 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82136-A",
         priceBase: null,
-        image: "/images/MESAS/MESA83/render.jpg",
+        image: "/images/MESAS/MESA83/render.webp",
         schematics: [],
         specs: {
             dimensions: null,
@@ -3236,8 +3236,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA83/render.jpg" },
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA83/render.jpg" }
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA83/render.webp" },
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA83/render.webp" }
             ]
         },
         configurations: [
@@ -3259,9 +3259,9 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82135",
         priceBase: null,
-        image: "/images/MESAS/MESA84/render.jpg",
+        image: "/images/MESAS/MESA84/render.webp",
         schematics: [
-            "/images/MESAS/MESA84/img1.jpg"
+            "/images/MESAS/MESA84/img1.webp"
         ],
         specs: {
             dimensions: null,
@@ -3274,7 +3274,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA84/render.jpg" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA84/render.webp" }
             ]
         },
         configurations: [
@@ -3296,7 +3296,7 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82135",
         priceBase: null,
-        image: "/images/MESAS/MESA85/render.jpg",
+        image: "/images/MESAS/MESA85/render.webp",
         schematics: [],
         specs: {
             dimensions: null,
@@ -3309,8 +3309,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA85/render.jpg" },
-                { name: "Plateado", hex: "#C0C0C0", image: "/images/MESAS/MESA85/render.jpg" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA85/render.webp" },
+                { name: "Plateado", hex: "#C0C0C0", image: "/images/MESAS/MESA85/render.webp" }
             ]
         },
         configurations: [
@@ -3332,7 +3332,7 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82132-B",
         priceBase: null,
-        image: "/images/MESAS/MESA86/render.jpg",
+        image: "/images/MESAS/MESA86/render.webp",
         schematics: [],
         specs: {
             dimensions: null,
@@ -3345,7 +3345,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Rojo", hex: "#8B2020", image: "/images/MESAS/MESA86/render.jpg" }
+                { name: "Rojo", hex: "#8B2020", image: "/images/MESAS/MESA86/render.webp" }
             ]
         },
         configurations: [
@@ -3367,7 +3367,7 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82132-A",
         priceBase: null,
-        image: "/images/MESAS/MESA87/render.jpg",
+        image: "/images/MESAS/MESA87/render.webp",
         schematics: [],
         specs: {
             dimensions: null,
@@ -3380,7 +3380,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA87/render.jpg" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA87/render.webp" }
             ]
         },
         configurations: [
@@ -3402,9 +3402,9 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82122-HC1951A-B-C",
         priceBase: null,
-        image: "/images/MESAS/MESA88/render.jpg",
+        image: "/images/MESAS/MESA88/render.webp",
         schematics: [
-            "/images/MESAS/MESA88/img1.jpg"
+            "/images/MESAS/MESA88/img1.webp"
         ],
         specs: {
             dimensions: null,
@@ -3418,9 +3418,9 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA88/render.jpg" },
-                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA88/render.jpg" },
-                { name: "Plateado", hex: "#C0C0C0", image: "/images/MESAS/MESA88/render.jpg" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA88/render.webp" },
+                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA88/render.webp" },
+                { name: "Plateado", hex: "#C0C0C0", image: "/images/MESAS/MESA88/render.webp" }
             ]
         },
         configurations: [
@@ -3442,7 +3442,7 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82112-CHIN",
         priceBase: null,
-        image: "/images/MESAS/MESA89/render.jpg",
+        image: "/images/MESAS/MESA89/render.webp",
         schematics: [],
         specs: {
             dimensions: null,
@@ -3457,8 +3457,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA89/render.jpg" },
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA89/render.jpg" }
+                { name: "Blanco", hex: "#F0EDE8", image: "/images/MESAS/MESA89/render.webp" },
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA89/render.webp" }
             ]
         },
         configurations: [
@@ -3480,7 +3480,7 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82111-B-HC1930Y-B",
         priceBase: null,
-        image: "/images/MESAS/MESA90/render.jpg",
+        image: "/images/MESAS/MESA90/render.webp",
         schematics: [],
         specs: {
             dimensions: null,
@@ -3493,7 +3493,7 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA90/render.jpg" }
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA90/render.webp" }
             ]
         },
         configurations: [
@@ -3515,9 +3515,9 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82109-HC1931",
         priceBase: null,
-        image: "/images/MESAS/MESA91/render.jpg",
+        image: "/images/MESAS/MESA91/render.webp",
         schematics: [
-            "/images/MESAS/MESA91/img1.jpg"
+            "/images/MESAS/MESA91/img1.webp"
         ],
         specs: {
             dimensions: null,
@@ -3531,8 +3531,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA91/render.jpg" },
-                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA91/render.jpg" }
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA91/render.webp" },
+                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA91/render.webp" }
             ]
         },
         configurations: [
@@ -3554,7 +3554,7 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82107-HC1929",
         priceBase: null,
-        image: "/images/MESAS/MESA92/render.jpg",
+        image: "/images/MESAS/MESA92/render.webp",
         schematics: [],
         specs: {
             dimensions: null,
@@ -3569,8 +3569,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA92/render.jpg" },
-                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA92/render.jpg" }
+                { name: "Gris", hex: "#8A8A8A", image: "/images/MESAS/MESA92/render.webp" },
+                { name: "Beige", hex: "#C8B68A", image: "/images/MESAS/MESA92/render.webp" }
             ]
         },
         configurations: [
@@ -3592,7 +3592,7 @@ const tablesData = [
         category: "Mesa de Centro",
         code: "HYJL82106-HC1922Y",
         priceBase: null,
-        image: "/images/MESAS/MESA93/render.jpg",
+        image: "/images/MESAS/MESA93/render.webp",
         schematics: [],
         specs: {
             dimensions: null,
@@ -3605,8 +3605,8 @@ const tablesData = [
         ],
         colors: {
             interior: [
-                { name: "Marrón", hex: "#8B6914", image: "/images/MESAS/MESA93/render.jpg" },
-                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA93/render.jpg" }
+                { name: "Marrón", hex: "#8B6914", image: "/images/MESAS/MESA93/render.webp" },
+                { name: "Negro", hex: "#1A1A1A", image: "/images/MESAS/MESA93/render.webp" }
             ]
         },
         configurations: [

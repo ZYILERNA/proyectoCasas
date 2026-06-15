@@ -32,20 +32,20 @@ const CATEGORIAS = [
 
 // NUEVO: Mapa de imágenes para el Hero según la categoría
 const IMAGENES_HERO = {
-  "TODAS": "/images/todas.jpg", // Imagen por defecto
-  "PUERTA DE SEGURIDAD IA": "/images/family.jpg",
-  "PUERTA DE ACERO REFORZADO": "/images/specs.jpg", // Cambia estas rutas por tus imágenes reales
-  "PUERTA DE SEGURIDAD ACORAZADA": "/images/acorazada.jpg",
-  "PUERTA DE ALUMINIO FUNDIDO": "/images/fundido.jpg",
-  "PUERTA ACÚSTICA DE MADERA": "/images/madera.jpg",
-  "PUERTA DE PVC": "/images/pvc.jpg",
-  "PUERTAS CORREDIZAS Y ABATIBLES": "/images/corredizas.jpg",
-  "PUERTA COMERCIAL CORTAFUEGO": "/images/cortafuego.jpg",
-  "PUERTA DE EVACUACIÓN": "/images/evacuacion.jpg",
-  "PUERTA MINIMALISTA": "/images/minimalista.jpg",
-  "PUERTA DE BAJO CARBONO": "/images/carbono.jpg",
-  "PUERTA MÉDICA": "/images/medica.jpg",
-  "PUERTA DE COBRE COMPUESTA": "/images/cobrewallaper.jpg"
+  "TODAS": "/images/todas.webp", // Imagen por defecto
+  "PUERTA DE SEGURIDAD IA": "/images/family.webp",
+  "PUERTA DE ACERO REFORZADO": "/images/specs.webp", // Cambia estas rutas por tus imágenes reales
+  "PUERTA DE SEGURIDAD ACORAZADA": "/images/acorazada.webp",
+  "PUERTA DE ALUMINIO FUNDIDO": "/images/fundido.webp",
+  "PUERTA ACÚSTICA DE MADERA": "/images/madera.webp",
+  "PUERTA DE PVC": "/images/pvc.webp",
+  "PUERTAS CORREDIZAS Y ABATIBLES": "/images/corredizas.webp",
+  "PUERTA COMERCIAL CORTAFUEGO": "/images/cortafuego.webp",
+  "PUERTA DE EVACUACIÓN": "/images/evacuacion.webp",
+  "PUERTA MINIMALISTA": "/images/minimalista.webp",
+  "PUERTA DE BAJO CARBONO": "/images/carbono.webp",
+  "PUERTA MÉDICA": "/images/medica.webp",
+  "PUERTA DE COBRE COMPUESTA": "/images/cobrewallaper.webp"
 };
 
 // --- CARTA DE COLORES (igual para todas las puertas, de más oscuro a más claro) ---
@@ -64,48 +64,48 @@ const DOOR_COLORS = [
 ];
 
 const ACCESORIOS_CORREDIZAS = [
-  { name: "Manilla VBH con base", tag: "Ventana abatible", img: "/images/Asset/Accesorios/manilla_vbh_base.jpg" },
-  { name: "Manilla Runas", tag: "Ventana abatible", img: "/images/Asset/Accesorios/manilla_runas.jpg" },
-  { name: "Manilla VBH sin base", tag: "Ventana", img: "/images/Asset/Accesorios/manilla_vbh_sin_base.jpg" },
-  { name: "Manilla y Accesorios", tag: "Ventana corrediza", img: "/images/Asset/Accesorios/manilla_accesorios_corrediza.jpg" },
-  { name: "Cerradura de Una Línea", tag: "Ventana corrediza", img: "/images/Asset/Accesorios/cerradura_una_linea.jpg" },
-  { name: "Manilla con Cerradura Ultrafina", tag: "Puerta corrediza · 210 mm", img: "/images/Asset/Accesorios/manilla_ultrafina.jpg" },
-  { name: "A01 Manilla", tag: "310 mm", img: "/images/Asset/Accesorios/a01.jpg" },
-  { name: "A03 Manilla", tag: "304 Stainless Steel · 360 mm", img: "/images/Asset/Accesorios/a03.jpg" },
-  { name: "A04 Manilla", tag: "390 mm", img: "/images/Asset/Accesorios/a04.jpg" },
-  { name: "A05 Manilla", tag: "450 mm", img: "/images/Asset/Accesorios/a05.jpg" },
-  { name: "A06 Manilla", tag: "600 mm", img: "/images/Asset/Accesorios/a06.jpg" },
-  { name: "A07 Manilla", tag: "1200 mm", img: "/images/Asset/Accesorios/a07.jpg" },
-  { name: "B01 One-Line Lock", tag: "Vertical", img: "/images/Asset/Accesorios/b01.jpg" },
-  { name: "B02 One-Line Lock", tag: "Vertical", img: "/images/Asset/Accesorios/b02.jpg" },
-  { name: "B03 One-Line Lock", tag: "Vertical", img: "/images/Asset/Accesorios/b03.jpg" },
-  { name: "B04 One-Line Lock", tag: "Vertical", img: "/images/Asset/Accesorios/b04.jpg" },
-  { name: "C01 Flat Lock", tag: "Puerta batiente", img: "/images/Asset/Accesorios/c01.jpg" },
-  { name: "C02 Flat Lock", tag: "Puerta batiente", img: "/images/Asset/Accesorios/c02.jpg" },
-  { name: "Ultra Narrow Swing Door Flat Lock", tag: "Puerta batiente", img: "/images/Asset/Accesorios/ultra_narrow_flat_lock.jpg" }
+  { name: "Manilla VBH con base", tag: "Ventana abatible", img: "/images/Asset/Accesorios/manilla_vbh_base.webp" },
+  { name: "Manilla Runas", tag: "Ventana abatible", img: "/images/Asset/Accesorios/manilla_runas.webp" },
+  { name: "Manilla VBH sin base", tag: "Ventana", img: "/images/Asset/Accesorios/manilla_vbh_sin_base.webp" },
+  { name: "Manilla y Accesorios", tag: "Ventana corrediza", img: "/images/Asset/Accesorios/manilla_accesorios_corrediza.webp" },
+  { name: "Cerradura de Una Línea", tag: "Ventana corrediza", img: "/images/Asset/Accesorios/cerradura_una_linea.webp" },
+  { name: "Manilla con Cerradura Ultrafina", tag: "Puerta corrediza · 210 mm", img: "/images/Asset/Accesorios/manilla_ultrafina.webp" },
+  { name: "A01 Manilla", tag: "310 mm", img: "/images/Asset/Accesorios/a01.webp" },
+  { name: "A03 Manilla", tag: "304 Stainless Steel · 360 mm", img: "/images/Asset/Accesorios/a03.webp" },
+  { name: "A04 Manilla", tag: "390 mm", img: "/images/Asset/Accesorios/a04.webp" },
+  { name: "A05 Manilla", tag: "450 mm", img: "/images/Asset/Accesorios/a05.webp" },
+  { name: "A06 Manilla", tag: "600 mm", img: "/images/Asset/Accesorios/a06.webp" },
+  { name: "A07 Manilla", tag: "1200 mm", img: "/images/Asset/Accesorios/a07.webp" },
+  { name: "B01 One-Line Lock", tag: "Vertical", img: "/images/Asset/Accesorios/b01.webp" },
+  { name: "B02 One-Line Lock", tag: "Vertical", img: "/images/Asset/Accesorios/b02.webp" },
+  { name: "B03 One-Line Lock", tag: "Vertical", img: "/images/Asset/Accesorios/b03.webp" },
+  { name: "B04 One-Line Lock", tag: "Vertical", img: "/images/Asset/Accesorios/b04.webp" },
+  { name: "C01 Flat Lock", tag: "Puerta batiente", img: "/images/Asset/Accesorios/c01.webp" },
+  { name: "C02 Flat Lock", tag: "Puerta batiente", img: "/images/Asset/Accesorios/c02.webp" },
+  { name: "Ultra Narrow Swing Door Flat Lock", tag: "Puerta batiente", img: "/images/Asset/Accesorios/ultra_narrow_flat_lock.webp" }
 ];
 
 const VIDRIOS_CORREDIZAS = [
-  { name: "VIDRIO-01", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-01.jpg" },
-  { name: "VIDRIO-02", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-02.jpg" },
-  { name: "VIDRIO-03", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-03.jpg" },
-  { name: "VIDRIO-04", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-04.jpg" },
-  { name: "VIDRIO-05", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-05.jpg" },
-  { name: "VIDRIO-06", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-06.jpg" },
-  { name: "VIDRIO-07", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-07.jpg" },
-  { name: "VIDRIO-08", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-08.jpg" },
-  { name: "VIDRIO-09", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-09.jpg" },
-  { name: "VIDRIO-10", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-10.jpg" },
-  { name: "VIDRIO-11", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-11.jpg" },
-  { name: "VIDRIO-12", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-12.jpg" },
-  { name: "VIDRIO-13", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-13.jpg" },
-  { name: "VIDRIO-14", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-14.jpg" },
-  { name: "VIDRIO-15", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-15.jpg" },
-  { name: "VIDRIO-16", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-16.jpg" },
-  { name: "VIDRIO-17", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-17.jpg" },
-  { name: "VIDRIO-18", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-18.jpg" },
-  { name: "VIDRIO-19", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-19.jpg" },
-  { name: "VIDRIO-20", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-20.jpg" },
+  { name: "VIDRIO-01", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-01.webp" },
+  { name: "VIDRIO-02", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-02.webp" },
+  { name: "VIDRIO-03", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-03.webp" },
+  { name: "VIDRIO-04", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-04.webp" },
+  { name: "VIDRIO-05", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-05.webp" },
+  { name: "VIDRIO-06", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-06.webp" },
+  { name: "VIDRIO-07", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-07.webp" },
+  { name: "VIDRIO-08", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-08.webp" },
+  { name: "VIDRIO-09", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-09.webp" },
+  { name: "VIDRIO-10", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-10.webp" },
+  { name: "VIDRIO-11", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-11.webp" },
+  { name: "VIDRIO-12", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-12.webp" },
+  { name: "VIDRIO-13", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-13.webp" },
+  { name: "VIDRIO-14", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-14.webp" },
+  { name: "VIDRIO-15", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-15.webp" },
+  { name: "VIDRIO-16", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-16.webp" },
+  { name: "VIDRIO-17", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-17.webp" },
+  { name: "VIDRIO-18", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-18.webp" },
+  { name: "VIDRIO-19", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-19.webp" },
+  { name: "VIDRIO-20", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-20.webp" },
 ];
 
 // --- 2. COMPONENTES UI ---

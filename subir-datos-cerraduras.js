@@ -23,7 +23,7 @@ const MODELOS = [
     name: "S60 Max",
     category: "Smart Lock",
     type: "Serie Max",
-    img: "/images/CERRADURA/lock-s60-max.jpg", 
+    img: "/images/CERRADURA/lock-s60-max.webp", 
     description: "La cerradura inteligente con detección remota real. Se abre automáticamente al acercarte a 2-4 metros. Incorpora reconocimiento facial 3D, mirilla digital con captura de instantáneas y una pantalla trasera de 4,5 pulgadas para máxima seguridad y comodidad.",
     specs: [
       { label: "Pantalla", value: "4.5''" },
@@ -53,7 +53,7 @@ const MODELOS = [
     name: "S922 Max",
     category: "Smart Lock",
     type: "Serie Max",
-    img: "/images/CERRADURA/lock-s922-max.jpg", 
+    img: "/images/CERRADURA/lock-s922-max.webp", 
     description: "Cerradura inteligente de alta seguridad con reconocimiento facial 3D avanzado. Integra mirilla visual, captura de estancia y una pantalla trasera de 4 pulgadas para un control total del acceso.",
     specs: [
       { label: "Pantalla", value: "4.0''" },
@@ -84,7 +84,7 @@ const MODELOS = [
     name: "S935 Pro",
     category: "Smart Lock",
     type: "Serie Pro",
-    img: "/images/CERRADURA/lock-s935-pro.jpg",
+    img: "/images/CERRADURA/lock-s935-pro.webp",
     description: "Sistema de seguridad integral con Video Portero y Desbloqueo Remoto. Combina reconocimiento facial 3D, tarjeta CPU de alta seguridad y una pantalla de 4 pulgadas para una gestión de acceso total.",
     specs: [
       { label: "Pantalla", value: "4.0''" },
@@ -115,7 +115,7 @@ const MODELOS = [
     name: "S958 Pro",
     category: "Smart Lock",
     type: "Serie Pro",
-    img: "/images/CERRADURA/lock-s958-pro.jpg",
+    img: "/images/CERRADURA/lock-s958-pro.webp",
     description: "Cerradura inteligente de diseño exclusivo en Negro Obsidiana. Integra reconocimiento facial 3D, video portero, mirilla digital y captura de estancia, ofreciendo la máxima protección y conectividad.",
     specs: [
       { label: "Pantalla", value: "4.0''" },
@@ -146,7 +146,7 @@ const MODELOS = [
     name: "S953 Max",
     category: "Smart Lock",
     type: "Serie Max",
-    img: "/images/CERRADURA/lock-s953-max.jpg", 
+    img: "/images/CERRADURA/lock-s953-max.webp", 
     description: "Tecnología de vanguardia con Reconocimiento de Venas Dactilares para una seguridad infalible. Combina lo mejor de la biometría (facial y venas) con mirilla visual y pantalla de 4 pulgadas.",
     specs: [
       { label: "Biometría", value: "Venas + Facial" },
@@ -177,7 +177,7 @@ const MODELOS = [
     name: "P15 Pro",
     category: "Smart Lock",
     type: "Serie Pro",
-    img: "/images/CERRADURA/lock-p15-pro.jpg", 
+    img: "/images/CERRADURA/lock-p15-pro.webp", 
     description: "Diseño elegante con una gran pantalla trasera de 4.5 pulgadas para una visibilidad superior. Integra reconocimiento facial 3D y mirilla digital con captura de estancia, ideal para quienes buscan tecnología visual avanzada.",
     specs: [
       { label: "Pantalla", value: "4.5''" },
@@ -208,7 +208,7 @@ const MODELOS = [
     name: "S936",
     category: "Smart Lock",
     type: "Semi-Auto",
-    img: "/images/CERRADURA/lock-s936.jpg", 
+    img: "/images/CERRADURA/lock-s936.webp", 
     description: "Cerradura inteligente semi-automática con diseño ergonómico de 'un solo agarre'. Ideal para acceso rápido mediante huella dactilar, combinando simplicidad de uso y seguridad con tarjeta cifrada M1.",
     specs: [
       { label: "Apertura", value: "Un Agarre" },
@@ -236,7 +236,7 @@ const MODELOS = [
     name: "S80 Vision Series",
     category: "Flagship",
     type: "Smart Lock UWB",
-    img: "/images/CERRADURA/s80-lock.jpg",
+    img: "/images/CERRADURA/s80-lock.webp",
     description: "La cerradura más avanzada con tecnología UWB de 4ª generación. Detecta tu presencia y abre automáticamente. Cuenta con pantalla interactiva que reacciona con 50 expresiones y monitoreo activo.",
     specs: [
       { value: "UWB 4.0", label: "Tecnología" },
@@ -265,7 +265,7 @@ const MODELOS = [
     name: "DSM:R9 Series",
     category: "Best Seller",
     type: "Face ID + Palm Vein",
-    img: "/images/CERRADURA/r9-lock.jpg",
+    img: "/images/CERRADURA/r9-lock.webp",
     description: "El modelo más vendido con más de 100.000 unidades. Integra una pantalla gigante de 5 pulgadas, reconocimiento de venas de la palma y acabado premium en aleación con IML.",
     specs: [
       { value: "5.0\" HD", label: "Pantalla" },
@@ -294,7 +294,7 @@ const MODELOS = [
     name: "S80 Max Flagship",
     category: "Tope de Gama",
     type: "UWB + 3D Face ID",
-    img: "/images/CERRADURA/s80-max.jpg", 
+    img: "/images/CERRADURA/s80-max.webp", 
     description: "El estándar más alto en seguridad inteligente. Combina detección UWB de 4ª generación para apertura automática con una cámara de visión nocturna a todo color y 9 métodos de acceso.",
     specs: [
       { value: "UWB 4.0", label: "Sensor" },
@@ -323,7 +323,7 @@ const MODELOS = [
     name: "S60M Smart Home",
     category: "Ecosistema Mijia",
     type: "Face ID + App Control",
-    img: "/images/CERRADURA/s60m.jpg",
+    img: "/images/CERRADURA/s60m.webp",
     description: "La opción definitiva para la domótica. Se integra perfectamente con el ecosistema Xiaomi (Mijia) y ofrece videoportero remoto, pantalla de 4.5 pulgadas y visión nocturna por doble infrarrojo.",
     specs: [
       { value: "Mijia", label: "App" },
@@ -352,7 +352,7 @@ const MODELOS = [
     name: "S50 Pro Visual",
     category: "Estrella 2025",
     type: "Face ID + Quick Handle",
-    img: "/images/CERRADURA/s50-pro.jpg",
+    img: "/images/CERRADURA/s50-pro.webp",
     description: "El modelo proyectado como líder de ventas para 2025. Combina un videoportero avanzado con una gran manija de diseño 'Quick Open' para una salida rápida y segura.",
     specs: [
       { value: "Rápida", label: "Manija" },
@@ -381,7 +381,7 @@ const MODELOS = [
     name: "Q3F Pro Classic",
     category: "Top Ventas 500k+",
     type: "Face ID + 3.5\" Screen",
-    img: "/images/CERRADURA/q3f-pro.jpg",
+    img: "/images/CERRADURA/q3f-pro.webp",
     description: "La cerradura más probada del mercado con más de 500.000 unidades vendidas al año. Equilibrio perfecto entre seguridad y funcionalidad con pantalla de 3.5 pulgadas.",
     specs: [
       { value: "+500k", label: "Ventas" },
@@ -410,7 +410,7 @@ const MODELOS = [
     name: "S60 Pro Ultra",
     category: "Gama Alta",
     type: "Palm Vein + Face ID",
-    img: "/images/CERRADURA/s60-pro.jpg",
+    img: "/images/CERRADURA/s60-pro.webp",
     description: "El modelo más sofisticado. Incorpora desbloqueo por meridianos de la palma (Palm Vein), sensor de movimiento, gestión por App y acabado de lujo.",
     specs: [
       { value: "Venas", label: "Biometría" },
@@ -439,7 +439,7 @@ const MODELOS = [
     name: "D235 Global",
     category: "Video Connect", 
     type: "FaceTime + Palm Vein",
-    img: "/images/CERRADURA/d235.png",
+    img: "/images/CERRADURA/d235.webp",
     description: "Tecnología global con interfaz en 9 idiomas y sistema 'FaceTime' para videollamadas directas. Combina reconocimiento de venas y contraseñas de un solo uso.",
     specs: [
       { value: "Video", label: "Llamada" },
@@ -467,7 +467,7 @@ const MODELOS = [
     name: "S922 Full Auto",
     category: "Premium Automática",
     type: "Face ID + Auto Lock",
-    img: "/images/CERRADURA/s922.jpg",
+    img: "/images/CERRADURA/s922.webp",
     description: "Cerradura inteligente totalmente automática construida en aleación de aluminio. Experiencia de acceso fluida 'manos libres' gracias a su motorización completa.",
     specs: [
       { value: "Auto", label: "Mecanismo" },
@@ -500,7 +500,7 @@ const MODELOS = [
     name: "P10",
     category: "Smart Lock",
     type: "Serie Pro",
-    img: "/images/CERRADURA/lock-p10-pro.jpg",
+    img: "/images/CERRADURA/lock-p10-pro.webp",
     description: "Serie 3D de alta gama con pantalla trasera de 4.5\", ojo de buey con cámara visible y captura automática por intrusión. Biometría avanzada con acceso por WeChat/QR.",
     specs: [
       { label: "Pantalla", value: "4.5''" },
@@ -531,7 +531,7 @@ const MODELOS = [
     name: "Z117-Z",
     category: "Smart Lock",
     type: "Semi-Auto Ingeniería",
-    img: "/images/CERRADURA/lock-z117z.jpg",
+    img: "/images/CERRADURA/lock-z117z.webp",
     description: "Cerradura inteligente semi-automática de la línea de ingeniería GUXIN. Diseño robusto con manija de palanca, acceso por huella, contraseña, llave y tarjeta IC. Ideal para proyectos de obra y uso intensivo.",
     specs: [
       { label: "Mecanismo", value: "Semi-Auto" },
@@ -561,7 +561,7 @@ const MODELOS = [
     name: "XD515",
     category: "Smart Lock",
     type: "Semi-Auto Ingeniería",
-    img: "/images/CERRADURA/lock-xd515.jpg",
+    img: "/images/CERRADURA/lock-xd515.webp",
     description: "Cerradura inteligente semi-automática de ingeniería WONLY con apertura remota y pantalla integrada. Diseño de palanca compacto con acceso por huella, contraseña, llave, tarjeta IC y WeChat/QR.",
     specs: [
       { label: "Mecanismo", value: "Semi-Auto" },
@@ -591,7 +591,7 @@ const MODELOS = [
     name: "S933",
     category: "Smart Lock",
     type: "Ingeniería Estándar",
-    img: "/images/CERRADURA/lock-s933.jpg",
+    img: "/images/CERRADURA/lock-s933.webp",
     description: "Cerradura inteligente de ingeniería GUXIN en versión estándar. Diseño de palanca con lector de huella frontal iluminado, acceso por contraseña, tarjeta IC y llave de emergencia. Solución robusta para uso intensivo en obra.",
     specs: [
       { label: "Mecanismo", value: "Semi-Auto" },
@@ -621,7 +621,7 @@ const MODELOS = [
     name: "S932",
     category: "Smart Lock",
     type: "Facial — Cuadrado Estándar",
-    img: "/images/CERRADURA/lock-s932-square-standard.jpg",
+    img: "/images/CERRADURA/lock-s932-square-standard.webp",
     description: "Cerradura inteligente facial con tapa cuadrada en versión estándar. Ojo de buey con captura por timbre, apertura remota y pantalla trasera. Acceso por huella, contraseña, llave y tarjeta CPU.",
     specs: [
       { label: "Tapa", value: "Cuadrada" },
@@ -651,7 +651,7 @@ const MODELOS = [
     name: "S932 Pro",
     category: "Smart Lock",
     type: "Facial — Cuadrado Pro",
-    img: "/images/CERRADURA/lock-s932-square-pro.jpg",
+    img: "/images/CERRADURA/lock-s932-square-pro.webp",
     description: "Versión Pro de la S932 con tapa cuadrada. Añade reconocimiento facial 3D completo al ojo de buey, captura por timbre mejorada y pantalla trasera HD.",
     specs: [
       { label: "Tapa", value: "Cuadrada" },
@@ -681,7 +681,7 @@ const MODELOS = [
     name: "S80",
     category: "Smart Lock",
     type: "Telesensado Estándar",
-    img: "/images/CERRADURA/lock-s80-standard.jpg",
+    img: "/images/CERRADURA/lock-s80-standard.webp",
     description: "Cerradura de telesensado con reconocimiento facial 3D, apertura y visión remota, ojo de buey con captura por intrusión y pantalla trasera de 5 pulgadas. Acabado en Negro Xuanwu (玄武金).",
     specs: [
       { label: "Sensor", value: "Telesensado" },
@@ -715,52 +715,52 @@ const HARDWARE_RAW = [
     category: "Cuerpos de Cerradura",
     description: "Mecanismos internos de alta resistencia",
     items: [
-      { name: "Cerradura de 5 pernos", img: "/images/CERRADURA/ACCESORIO/hard-cuerpo-5pernos.jpg" },
-      { name: "Cerradura Empotrada", img: "/images/CERRADURA/ACCESORIO/hard-cuerpo-empotrada.jpg" },
-      { name: "Cerradura Autocontrol", img: "/images/CERRADURA/ACCESORIO/hard-cuerpo-auto.jpg" },
-      { name: "Anti-explosión A7-3", img: "/images/CERRADURA/ACCESORIO/hard-cuerpo-a73.jpg" }
+      { name: "Cerradura de 5 pernos", img: "/images/CERRADURA/ACCESORIO/hard-cuerpo-5pernos.webp" },
+      { name: "Cerradura Empotrada", img: "/images/CERRADURA/ACCESORIO/hard-cuerpo-empotrada.webp" },
+      { name: "Cerradura Autocontrol", img: "/images/CERRADURA/ACCESORIO/hard-cuerpo-auto.webp" },
+      { name: "Anti-explosión A7-3", img: "/images/CERRADURA/ACCESORIO/hard-cuerpo-a73.webp" }
     ]
   },
   {
     category: "Cilindros de Seguridad",
     description: "Núcleos blindados anti-ganzúa",
     items: [
-      { name: "Plegable Doble Fila", img: "/images/CERRADURA/ACCESORIO/hard-cilindro-plegable.jpg" },
-      { name: "Doble Fila Negra", img: "/images/CERRADURA/ACCESORIO/hard-cilindro-negro.jpg" },
-      { name: "Ultra Seguro 5.0", img: "/images/CERRADURA/ACCESORIO/hard-cilindro-50.jpg" },
-      { name: "Ultra Seguro 6.0", img: "/images/CERRADURA/ACCESORIO/hard-cilindro-60.jpg" }
+      { name: "Plegable Doble Fila", img: "/images/CERRADURA/ACCESORIO/hard-cilindro-plegable.webp" },
+      { name: "Doble Fila Negra", img: "/images/CERRADURA/ACCESORIO/hard-cilindro-negro.webp" },
+      { name: "Ultra Seguro 5.0", img: "/images/CERRADURA/ACCESORIO/hard-cilindro-50.webp" },
+      { name: "Ultra Seguro 6.0", img: "/images/CERRADURA/ACCESORIO/hard-cilindro-60.webp" }
     ]
   },
   {
     category: "Bisagras",
     description: "Soporte de carga y movimiento fluido",
     items: [
-      { name: "Modelo H-001", img: "/images/CERRADURA/ACCESORIO/hard-bisagra-h001.jpg" },
-      { name: "Modelo H-005", img: "/images/CERRADURA/ACCESORIO/hard-bisagra-h005.jpg" },
-      { name: "Modelo H-006", img: "/images/CERRADURA/ACCESORIO/hard-bisagra-h006.jpg" },
-      { name: "Modelo H-008", img: "/images/CERRADURA/ACCESORIO/hard-bisagra-h008.jpg" },
-      { name: "Modelo H-009", img: "/images/CERRADURA/ACCESORIO/hard-bisagra-h009.jpg" },
-      { name: "Modelo H-010", img: "/images/CERRADURA/ACCESORIO/hard-bisagra-h010.jpg" }
+      { name: "Modelo H-001", img: "/images/CERRADURA/ACCESORIO/hard-bisagra-h001.webp" },
+      { name: "Modelo H-005", img: "/images/CERRADURA/ACCESORIO/hard-bisagra-h005.webp" },
+      { name: "Modelo H-006", img: "/images/CERRADURA/ACCESORIO/hard-bisagra-h006.webp" },
+      { name: "Modelo H-008", img: "/images/CERRADURA/ACCESORIO/hard-bisagra-h008.webp" },
+      { name: "Modelo H-009", img: "/images/CERRADURA/ACCESORIO/hard-bisagra-h009.webp" },
+      { name: "Modelo H-010", img: "/images/CERRADURA/ACCESORIO/hard-bisagra-h010.webp" }
     ]
   },
   {
     category: "Manijas",
     description: "Ergonomía y diseño premium",
     items: [
-      { name: "PF6851", img: "/images/CERRADURA/ACCESORIO/hard-manija-pf6851.jpg" },
-      { name: "PG6818", img: "/images/CERRADURA/ACCESORIO/hard-manija-pg6818.jpg" },
-      { name: "PZ6850", img: "/images/CERRADURA/ACCESORIO/hard-manija-pz6850.jpg" },
-      { name: "PF6853", img: "/images/CERRADURA/ACCESORIO/hard-manija-pf6853.jpg" },
-      { name: "PZ6820", img: "/images/CERRADURA/ACCESORIO/hard-manija-pz6820.jpg" }
+      { name: "PF6851", img: "/images/CERRADURA/ACCESORIO/hard-manija-pf6851.webp" },
+      { name: "PG6818", img: "/images/CERRADURA/ACCESORIO/hard-manija-pg6818.webp" },
+      { name: "PZ6850", img: "/images/CERRADURA/ACCESORIO/hard-manija-pz6850.webp" },
+      { name: "PF6853", img: "/images/CERRADURA/ACCESORIO/hard-manija-pf6853.webp" },
+      { name: "PZ6820", img: "/images/CERRADURA/ACCESORIO/hard-manija-pz6820.webp" }
     ]
   },
   {
     category: "Mirillas",
     description: "Visión clara y protección física",
     items: [
-      { name: "Antirrobo Ignífuga", img: "/images/CERRADURA/ACCESORIO/hard-mirilla-fuego.jpg" },
-      { name: "Aleación de Zinc", img: "/images/CERRADURA/ACCESORIO/hard-mirilla-zinc.jpg" },
-      { name: "Antirrobo Cobre", img: "/images/CERRADURA/ACCESORIO/hard-mirilla-cobre.jpg" }
+      { name: "Antirrobo Ignífuga", img: "/images/CERRADURA/ACCESORIO/hard-mirilla-fuego.webp" },
+      { name: "Aleación de Zinc", img: "/images/CERRADURA/ACCESORIO/hard-mirilla-zinc.webp" },
+      { name: "Antirrobo Cobre", img: "/images/CERRADURA/ACCESORIO/hard-mirilla-cobre.webp" }
     ]
   }
 ];

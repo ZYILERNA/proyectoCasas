@@ -478,7 +478,7 @@ const ProductCard = memo(({ item, index, onSelect }) => {
             const img = item.colors?.interior?.[hoverColorIdx]?.image;
             if (img) return img;
         }
-        return item.image || "/images/placeholder.jpg";
+        return item.image || "/images/placeholder.webp";
     }, [item, hoverColorIdx]);
 
     return (
@@ -691,7 +691,7 @@ export default function SofasPage() {
                         muted
                         playsInline
                         preload="auto"
-                        poster="/images/sofa-header.jpg"
+                        poster="/images/sofa-header.webp"
                         className="w-full h-full object-cover opacity-60 scale-110"
                     >
                         <source src="/videos/sofa-hero.webm" type="video/webm" />

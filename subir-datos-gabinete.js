@@ -25,14 +25,14 @@ const gabinetesData = [
     category: "Gabinete", 
     code: "HYGL81501-A/HBG1856Y", 
     priceBase: 27590, 
-    // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/GABINETES/LATERAL/HYGL81501-A/render.jpg
-    image: "/images/GABINETES/GAB1/render.jpg", 
+    // RECUERDA: Guardar imagen en la ruta correspondiente, ej: /public/images/GABINETES/LATERAL/HYGL81501-A/render.webp
+    image: "/images/GABINETES/GAB1/render.webp", 
     schematics: [
-        "/images/GABINETES/GAB1/img1.jpg", 
-        "/images/GABINETES/GAB1/img2.jpg",
-        "/images/GABINETES/GAB1/img3.jpg", 
-        "/images/GABINETES/GAB1/img4.jpg",
-        "/images/GABINETES/GAB1/img5.jpg"
+        "/images/GABINETES/GAB1/img1.webp", 
+        "/images/GABINETES/GAB1/img2.webp",
+        "/images/GABINETES/GAB1/img3.webp", 
+        "/images/GABINETES/GAB1/img4.webp",
+        "/images/GABINETES/GAB1/img5.webp"
     ],
     specs: { 
         dimensions: "1788 * 450 * 860 mm", 
@@ -66,12 +66,12 @@ const gabinetesData = [
     category: "Gabinete", 
     code: "HYGL81502/HBG1857Y", 
     priceBase: 17760, 
-    image: "/images/GABINETES/GAB2/render.jpg", 
+    image: "/images/GABINETES/GAB2/render.webp", 
     schematics: [
-        "/images/GABINETES/GAB2/img1.jpg", 
-        "/images/GABINETES/GAB2/img2.jpg",
-        "/images/GABINETES/GAB2/img3.jpg",
-        "/images/GABINETES/GAB2/img4.jpg"
+        "/images/GABINETES/GAB2/img1.webp", 
+        "/images/GABINETES/GAB2/img2.webp",
+        "/images/GABINETES/GAB2/img3.webp",
+        "/images/GABINETES/GAB2/img4.webp"
     ],
     specs: { 
         dimensions: "1600 * 450 * 900 mm", 
@@ -106,13 +106,13 @@ const gabinetesData = [
     category: "Gabinete", 
     code: "HYGL81503/HBG1858Y", 
     priceBase: 15960, 
-    image: "/images/GABINETES/GAB3/render.jpg", 
+    image: "/images/GABINETES/GAB3/render.webp", 
     schematics: [
-        "/images/GABINETES/GAB3/img1.jpg", 
-        "/images/GABINETES/GAB3/img2.jpg",
-        "/images/GABINETES/GAB3/img3.jpg",
-        "/images/GABINETES/GAB3/img4.jpg", 
-        "/images/GABINETES/GAB3/img5.jpg"
+        "/images/GABINETES/GAB3/img1.webp", 
+        "/images/GABINETES/GAB3/img2.webp",
+        "/images/GABINETES/GAB3/img3.webp",
+        "/images/GABINETES/GAB3/img4.webp", 
+        "/images/GABINETES/GAB3/img5.webp"
     ],
     specs: { 
         dimensions: "2200 * 450 * 575 mm", 
@@ -148,14 +148,14 @@ const gabinetesData = [
     category: "Gabinete", 
     code: "HYGL81507-A/HBG1862A", 
     priceBase: 18060, 
-    image: "/images/GABINETES/GAB4/render.jpg", 
+    image: "/images/GABINETES/GAB4/render.webp", 
     schematics: [
-        "/images/GABINETES/GAB4/img1.jpg", 
-        "/images/GABINETES/GAB4/img2.jpg",
-        "/images/GABINETES/GAB4/img3.jpg",
-        "/images/GABINETES/GAB4/img4.jpg", 
-        "/images/GABINETES/GAB4/img5.jpg",
-        "/images/GABINETES/GAB4/img6.jpg"
+        "/images/GABINETES/GAB4/img1.webp", 
+        "/images/GABINETES/GAB4/img2.webp",
+        "/images/GABINETES/GAB4/img3.webp",
+        "/images/GABINETES/GAB4/img4.webp", 
+        "/images/GABINETES/GAB4/img5.webp",
+        "/images/GABINETES/GAB4/img6.webp"
     ],
     specs: { 
         dimensions: "1730 * 450 * 723 mm", 
@@ -189,12 +189,12 @@ const gabinetesData = [
     category: "Gabinete", 
     code: "HYGL81515", 
     priceBase: 13960, 
-    image: "/images/GABINETES/GAB5/render.jpg", 
+    image: "/images/GABINETES/GAB5/render.webp", 
     schematics: [
-        "/images/GABINETES/GAB5/img1.jpg", 
-        "/images/GABINETES/GAB5/img2.jpg",
-        "/images/GABINETES/GAB5/img3.jpg",
-        "/images/GABINETES/GAB5/img4.jpg"
+        "/images/GABINETES/GAB5/img1.webp", 
+        "/images/GABINETES/GAB5/img2.webp",
+        "/images/GABINETES/GAB5/img3.webp",
+        "/images/GABINETES/GAB5/img4.webp"
     ],
     specs: { 
         dimensions: "1550 * 500 * 830 mm", 
@@ -226,12 +226,12 @@ const gabinetesData = [
     category: "Gabinete", 
     code: "HYGL81516", 
     priceBase: 18160, 
-    image: "/images/GABINETES/GAB6/render.jpg", 
+    image: "/images/GABINETES/GAB6/render.webp", 
     schematics: [
-        "/images/GABINETES/GAB6/img1.jpg", 
-        "/images/GABINETES/GAB6/img2.jpg",
-        "/images/GABINETES/GAB6/img3.jpg",
-        "/images/GABINETES/GAB6/img4.jpg"
+        "/images/GABINETES/GAB6/img1.webp", 
+        "/images/GABINETES/GAB6/img2.webp",
+        "/images/GABINETES/GAB6/img3.webp",
+        "/images/GABINETES/GAB6/img4.webp"
     ],
     specs: { 
         dimensions: "2080 * 520 * 650 mm", 
@@ -263,11 +263,11 @@ const gabinetesData = [
     category: "Gabinete", 
     code: "HYGL81517/MGL8611", 
     priceBase: 10060, 
-    image: "/images/GABINETES/GAB7/render.jpg", 
+    image: "/images/GABINETES/GAB7/render.webp", 
     schematics: [
-        "/images/GABINETES/GAB7/img1.jpg", 
-        "/images/GABINETES/GAB7/img2.jpg",
-        "/images/GABINETES/GAB7/img3.jpg"
+        "/images/GABINETES/GAB7/img1.webp", 
+        "/images/GABINETES/GAB7/img2.webp",
+        "/images/GABINETES/GAB7/img3.webp"
     ],
     specs: { 
         dimensions: "1643 * 425 * 735 mm", 
@@ -301,15 +301,15 @@ const gabinetesData = [
     category: "Gabinete",
     code: "HYGL81518/MGL8616",
     priceBase: 22960,
-    image: "/images/GABINETES/GAB8/render.jpg",
+    image: "/images/GABINETES/GAB8/render.webp",
     schematics: [
-        "/images/GABINETES/GAB8/img1.jpg",
-        "/images/GABINETES/GAB8/img2.jpg",
-        "/images/GABINETES/GAB8/img3.jpg",
-        "/images/GABINETES/GAB8/img4.jpg",
-        "/images/GABINETES/GAB8/img5.jpg",
-        "/images/GABINETES/GAB8/img6.jpg",
-        "/images/GABINETES/GAB8/img7.jpg"
+        "/images/GABINETES/GAB8/img1.webp",
+        "/images/GABINETES/GAB8/img2.webp",
+        "/images/GABINETES/GAB8/img3.webp",
+        "/images/GABINETES/GAB8/img4.webp",
+        "/images/GABINETES/GAB8/img5.webp",
+        "/images/GABINETES/GAB8/img6.webp",
+        "/images/GABINETES/GAB8/img7.webp"
     ],
     specs: {
         dimensions: "2000 * 440 * 730 mm",
@@ -355,14 +355,14 @@ const gabinetesData = [
     category: "Gabinete", 
     code: "HYGL81505-B/HE1821Y-B", 
     priceBase: 13060, 
-    image: "/images/GABINETES/GAB9/render.jpg", 
+    image: "/images/GABINETES/GAB9/render.webp", 
     schematics: [
-        "/images/GABINETES/GAB9/img1.jpg", 
-        "/images/GABINETES/GAB9/img2.jpg",
-        "/images/GABINETES/GAB9/img3.jpg",
-        "/images/GABINETES/GAB9/img4.jpg", 
-        "/images/GABINETES/GAB9/img5.jpg",
-        "/images/GABINETES/GAB9/img6.jpg"
+        "/images/GABINETES/GAB9/img1.webp", 
+        "/images/GABINETES/GAB9/img2.webp",
+        "/images/GABINETES/GAB9/img3.webp",
+        "/images/GABINETES/GAB9/img4.webp", 
+        "/images/GABINETES/GAB9/img5.webp",
+        "/images/GABINETES/GAB9/img6.webp"
     ],
     specs: { 
         dimensions: "1600 * 350 * 875 mm", 
@@ -395,11 +395,11 @@ const gabinetesData = [
     category: "Gabinete", 
     code: "HYGL81506/HE1835Y", 
     priceBase: 13260, 
-    image: "/images/GABINETES/GAB10/render.jpg", 
+    image: "/images/GABINETES/GAB10/render.webp", 
     schematics: [
-        "/images/GABINETES/GAB10/img1.jpg", 
-        "/images/GABINETES/GAB10/img2.jpg",
-        "/images/GABINETES/GAB10/img3.jpg"
+        "/images/GABINETES/GAB10/img1.webp", 
+        "/images/GABINETES/GAB10/img2.webp",
+        "/images/GABINETES/GAB10/img3.webp"
     ],
     specs: { 
         dimensions: "1500 * 380 * 1000 mm", 
@@ -436,14 +436,14 @@ const gabinetesData = [
     category: "Gabinete", 
     code: "HYGL81302/HA1802", 
     priceBase: 14990, 
-    image: "/images/GABINETES/GAB11/render.jpg", 
+    image: "/images/GABINETES/GAB11/render.webp", 
     schematics: [
-        "/images/GABINETES/GAB11/img1.jpg", 
-        "/images/GABINETES/GAB11/img2.jpg",
-        "/images/GABINETES/GAB11/img3.jpg",
-        "/images/GABINETES/GAB11/img4.jpg", 
-        "/images/GABINETES/GAB11/img5.jpg",
-        "/images/GABINETES/GAB11/img6.jpg"
+        "/images/GABINETES/GAB11/img1.webp", 
+        "/images/GABINETES/GAB11/img2.webp",
+        "/images/GABINETES/GAB11/img3.webp",
+        "/images/GABINETES/GAB11/img4.webp", 
+        "/images/GABINETES/GAB11/img5.webp",
+        "/images/GABINETES/GAB11/img6.webp"
     ],
     specs: { 
         dimensions: "850 * 420 * 1200 mm", 
@@ -488,13 +488,13 @@ const gabinetesData = [
     category: "Estantería", 
     code: "HYGL81909", 
     priceBase: 29360, 
-    image: "/images/GABINETES/GAB16/render.jpg", 
+    image: "/images/GABINETES/GAB16/render.webp", 
     schematics: [
-        "/images/GABINETES/GAB16/img1.jpg", 
-        "/images/GABINETES/GAB16/img2.jpg",
-        "/images/GABINETES/GAB16/img3.jpg",
-        "/images/GABINETES/GAB16/img4.jpg",
-        "/images/GABINETES/GAB16/img5.jpg"
+        "/images/GABINETES/GAB16/img1.webp", 
+        "/images/GABINETES/GAB16/img2.webp",
+        "/images/GABINETES/GAB16/img3.webp",
+        "/images/GABINETES/GAB16/img4.webp",
+        "/images/GABINETES/GAB16/img5.webp"
     ],
     specs: { 
         dimensions: "1830 * 435 * 2050 mm", 
@@ -530,12 +530,12 @@ const gabinetesData = [
     category: "Gabinete", 
     code: "HYGL81705-A/MQT7711A", 
     priceBase: 42990, 
-    image: "/images/GABINETES/GAB17/render.jpg", 
+    image: "/images/GABINETES/GAB17/render.webp", 
     schematics: [
-        "/images/GABINETES/GAB17/img1.jpg", 
-        "/images/GABINETES/GAB17/img2.jpg",
-        "/images/GABINETES/GAB17/img3.jpg",
-        "/images/GABINETES/GAB17/img4.jpg"
+        "/images/GABINETES/GAB17/img1.webp", 
+        "/images/GABINETES/GAB17/img2.webp",
+        "/images/GABINETES/GAB17/img3.webp",
+        "/images/GABINETES/GAB17/img4.webp"
     ],
     specs: { 
         dimensions: "2200 / 2400 / 2600 / 2790 * 430 * 1645 mm", 
@@ -582,12 +582,12 @@ const gabinetesData = [
     category: "Gabinete", 
     code: "HYGL81705-B/MQT7711", 
     priceBase: 26460, 
-    image: "/images/GABINETES/GAB18/render.jpg", 
+    image: "/images/GABINETES/GAB18/render.webp", 
     schematics: [
-        "/images/GABINETES/GAB18/img1.jpg", 
-        "/images/GABINETES/GAB18/img2.jpg",
-        "/images/GABINETES/GAB18/img3.jpg",
-        "/images/GABINETES/GAB18/img4.jpg"
+        "/images/GABINETES/GAB18/img1.webp", 
+        "/images/GABINETES/GAB18/img2.webp",
+        "/images/GABINETES/GAB18/img3.webp",
+        "/images/GABINETES/GAB18/img4.webp"
     ],
     specs: { 
         dimensions: "1500 / 1600 / 1700 / 1800 * 425 * 1645 mm", 
@@ -634,11 +634,11 @@ const gabinetesData = [
     category: "Biombo", 
     code: "HYGL81913", 
     priceBase: 39160, 
-    image: "/images/GABINETES/GAB19/render.jpg", 
+    image: "/images/GABINETES/GAB19/render.webp", 
     schematics: [
-        "/images/GABINETES/GAB19/img1.jpg", 
-        "/images/GABINETES/GAB19/img2.jpg",
-        "/images/GABINETES/GAB19/img3.jpg"
+        "/images/GABINETES/GAB19/img1.webp", 
+        "/images/GABINETES/GAB19/img2.webp",
+        "/images/GABINETES/GAB19/img3.webp"
     ],
     specs: { 
         dimensions: "2690 * 100 * 1800 mm", 
@@ -678,11 +678,11 @@ const gabinetesData = [
     category: "Estantería", 
     code: "HYGL819098", 
     priceBase: 11550, 
-    image: "/images/GABINETES/GAB20/render.jpg", 
+    image: "/images/GABINETES/GAB20/render.webp", 
     schematics: [
-        "/images/GABINETES/GAB20/img1.jpg", 
-        "/images/GABINETES/GAB20/img2.jpg",
-        "/images/GABINETES/GAB20/img3.jpg"
+        "/images/GABINETES/GAB20/img1.webp", 
+        "/images/GABINETES/GAB20/img2.webp",
+        "/images/GABINETES/GAB20/img3.webp"
     ],
     specs: { 
         dimensions: "1500 * 380 * 1000 mm", 
@@ -721,11 +721,11 @@ const gabinetesData = [
     category: "Cómoda", 
     code: "HYGL81906", 
     priceBase: 29800, 
-    image: "/images/GABINETES/GAB21/render.jpg", 
+    image: "/images/GABINETES/GAB21/render.webp", 
     schematics: [
-        "/images/GABINETES/GAB21/img1.jpg", 
-        "/images/GABINETES/GAB21/img2.jpg",
-        "/images/GABINETES/GAB21/img3.jpg"
+        "/images/GABINETES/GAB21/img1.webp", 
+        "/images/GABINETES/GAB21/img2.webp",
+        "/images/GABINETES/GAB21/img3.webp"
     ],
     specs: { 
         dimensions: "850 * 420 * 1200 mm", 
@@ -767,11 +767,11 @@ const gabinetesData = [
         category: "Mesa de Centro",
         code: "HYTL86303",
         priceBase: null,
-        image: "/images/GABINETES/GAB22/render.jpg",
+        image: "/images/GABINETES/GAB22/render.webp",
         schematics: [
-            "/images/GABINETES/GAB22/img1.jpg",
-            "/images/GABINETES/GAB22/img2.jpg",
-            "/images/GABINETES/GAB22/img3.jpg"
+            "/images/GABINETES/GAB22/img1.webp",
+            "/images/GABINETES/GAB22/img2.webp",
+            "/images/GABINETES/GAB22/img3.webp"
         ],
         specs: {
             dimensions: "1800 * 730 * 760 mm",
@@ -806,10 +806,10 @@ const gabinetesData = [
     category: "Mesa de Escritorio",
     code: "HYTL86305",
     priceBase: null,
-    image: "/images/GABINETES/GAB23/render.jpg",
+    image: "/images/GABINETES/GAB23/render.webp",
     schematics: [
-        "/images/GABINETES/GAB23/img1.jpg",
-        "/images/GABINETES/GAB23/img2.jpg"
+        "/images/GABINETES/GAB23/img1.webp",
+        "/images/GABINETES/GAB23/img2.webp"
     ],
     specs: {
         dimensions: "2200 * 900 * 760 mm",
@@ -846,11 +846,11 @@ const gabinetesData = [
     category: "Mesa de Escritorio",
     code: "HYTL86301",
     priceBase: null,
-    image: "/images/GABINETES/GAB24/render.jpg",
+    image: "/images/GABINETES/GAB24/render.webp",
     schematics: [
-        "/images/GABINETES/GAB24/img1.jpg",
-        "/images/GABINETES/GAB24/img2.jpg",
-        "/images/GABINETES/GAB24/img3.jpg"
+        "/images/GABINETES/GAB24/img1.webp",
+        "/images/GABINETES/GAB24/img2.webp",
+        "/images/GABINETES/GAB24/img3.webp"
     ],
     specs: {
         dimensions: "1500-1800 * 730-780 * 760 mm",
@@ -887,9 +887,9 @@ const gabinetesData = [
     category: "Gabinete",
     code: "HYSF88901/FSG-01",
     priceBase: null,
-    image: "/images/GABINETES/GAB25/render.jpg",
+    image: "/images/GABINETES/GAB25/render.webp",
     schematics: [
-        "/images/GABINETES/GAB25/img1.jpg"
+        "/images/GABINETES/GAB25/img1.webp"
     ],
     specs: {
         dimensions: null,
@@ -930,13 +930,13 @@ const gabinetesData = [
     category: "Gabinete",
     code: "HYGL81918-A",
     priceBase: null,
-    image: "/images/GABINETES/GAB26/render.jpg",
+    image: "/images/GABINETES/GAB26/render.webp",
     schematics: [
-        "/images/GABINETES/GAB26/img1.jpg",
-        "/images/GABINETES/GAB26/img2.jpg",
-        "/images/GABINETES/GAB26/img3.jpg",
-        "/images/GABINETES/GAB26/img4.jpg",
-        "/images/GABINETES/GAB26/img5.jpg"
+        "/images/GABINETES/GAB26/img1.webp",
+        "/images/GABINETES/GAB26/img2.webp",
+        "/images/GABINETES/GAB26/img3.webp",
+        "/images/GABINETES/GAB26/img4.webp",
+        "/images/GABINETES/GAB26/img5.webp"
     ],
     specs: {
         dimensions: null,
@@ -977,11 +977,11 @@ const gabinetesData = [
     category: "Estantería",
     code: "HYGL81910",
     priceBase: null,
-    image: "/images/GABINETES/GAB27/render.jpg",
+    image: "/images/GABINETES/GAB27/render.webp",
     schematics: [
-        "/images/GABINETES/GAB27/img1.jpg",
-        "/images/GABINETES/GAB27/img2.jpg",
-        "/images/GABINETES/GAB27/img3.jpg"
+        "/images/GABINETES/GAB27/img1.webp",
+        "/images/GABINETES/GAB27/img2.webp",
+        "/images/GABINETES/GAB27/img3.webp"
     ],
     specs: {
         dimensions: null,
@@ -1016,10 +1016,10 @@ const gabinetesData = [
     category: "Gabinete",
     code: "HYGL81901/HM1833Y-1",
     priceBase: null,
-    image: "/images/GABINETES/GAB28/render.jpg",
+    image: "/images/GABINETES/GAB28/render.webp",
     schematics: [
-        "/images/GABINETES/GAB28/img1.jpg",
-        "/images/GABINETES/GAB28/img2.jpg"
+        "/images/GABINETES/GAB28/img1.webp",
+        "/images/GABINETES/GAB28/img2.webp"
     ],
     specs: {
         dimensions: null,
@@ -1057,9 +1057,9 @@ const gabinetesData = [
     category: "Gabinete",
     code: "HYGL81701/HCG1801Y-1",
     priceBase: null,
-    image: "/images/GABINETES/GAB29/render.jpg",
+    image: "/images/GABINETES/GAB29/render.webp",
     schematics: [
-        "/images/GABINETES/GAB29/img1.jpg"
+        "/images/GABINETES/GAB29/img1.webp"
     ],
     specs: {
         dimensions: null,
@@ -1097,11 +1097,11 @@ const gabinetesData = [
     category: "Mesa de Escritorio",
     code: "HYGL81606/MZL3505A",
     priceBase: 11390,
-    image: "/images/GABINETES/GAB30/render.jpg",
+    image: "/images/GABINETES/GAB30/render.webp",
     schematics: [
-        "/images/GABINETES/GAB30/img1.jpg",
-        "/images/GABINETES/GAB30/img2.jpg",
-        "/images/GABINETES/GAB30/img3.jpg"
+        "/images/GABINETES/GAB30/img1.webp",
+        "/images/GABINETES/GAB30/img2.webp",
+        "/images/GABINETES/GAB30/img3.webp"
     ],
     specs: {
         dimensions: "1300 * 450 * 775 mm",
@@ -1139,16 +1139,16 @@ const gabinetesData = [
     category: "Mesa de Escritorio",
     code: "HYGL81605-1 / HYGL81605-2",
     priceBase: 20550,
-    image: "/images/GABINETES/GAB31/render.jpg",
+    image: "/images/GABINETES/GAB31/render.webp",
     schematics: [
-        "/images/GABINETES/GAB31/img1.jpg",
-        "/images/GABINETES/GAB31/img2.jpg",
-        "/images/GABINETES/GAB31/img3.jpg",
-        "/images/GABINETES/GAB31/img4.jpg",
-        "/images/GABINETES/GAB31/img5.jpg",
-        "/images/GABINETES/GAB31/img6.jpg",
-        "/images/GABINETES/GAB31/img7.jpg",
-        "/images/GABINETES/GAB31/img8.jpg"
+        "/images/GABINETES/GAB31/img1.webp",
+        "/images/GABINETES/GAB31/img2.webp",
+        "/images/GABINETES/GAB31/img3.webp",
+        "/images/GABINETES/GAB31/img4.webp",
+        "/images/GABINETES/GAB31/img5.webp",
+        "/images/GABINETES/GAB31/img6.webp",
+        "/images/GABINETES/GAB31/img7.webp",
+        "/images/GABINETES/GAB31/img8.webp"
     ],
     specs: {
         dimensions: "1300 * 530 * 755 mm (Mesa principal)",
@@ -1186,9 +1186,9 @@ const gabinetesData = [
     category: "Mesa de Escritorio",
     code: "HYGL81603-A",
     priceBase: null,
-    image: "/images/GABINETES/GAB32/render.jpg",
+    image: "/images/GABINETES/GAB32/render.webp",
     schematics: [
-        "/images/GABINETES/GAB32/img1.jpg"
+        "/images/GABINETES/GAB32/img1.webp"
     ],
     specs: {
         dimensions: null,
@@ -1227,9 +1227,9 @@ const gabinetesData = [
     category: "Mesa de Escritorio",
     code: "HYGL81602-A/HZ1851A",
     priceBase: null,
-    image: "/images/GABINETES/GAB33/render.jpg",
+    image: "/images/GABINETES/GAB33/render.webp",
     schematics: [
-        "/images/GABINETES/GAB33/img1.jpg"
+        "/images/GABINETES/GAB33/img1.webp"
     ],
     specs: {
         dimensions: null,
@@ -1270,13 +1270,13 @@ const gabinetesData = [
     category: "Gabinete",
     code: "HYGL81512",
     priceBase: null,
-    image: "/images/GABINETES/GAB34/render.jpg",
+    image: "/images/GABINETES/GAB34/render.webp",
     schematics: [
-        "/images/GABINETES/GAB34/img1.jpg",
-        "/images/GABINETES/GAB34/img2.jpg",
-        "/images/GABINETES/GAB34/img3.jpg",
-        "/images/GABINETES/GAB34/img4.jpg",
-        "/images/GABINETES/GAB34/img5.jpg"
+        "/images/GABINETES/GAB34/img1.webp",
+        "/images/GABINETES/GAB34/img2.webp",
+        "/images/GABINETES/GAB34/img3.webp",
+        "/images/GABINETES/GAB34/img4.webp",
+        "/images/GABINETES/GAB34/img5.webp"
     ],
     specs: {
         dimensions: null,
@@ -1319,7 +1319,7 @@ const gabinetesData = [
     category: "Gabinete",
     code: "HYGL81511-A",
     priceBase: null,
-    image: "/images/GABINETES/GAB35/render.jpg",
+    image: "/images/GABINETES/GAB35/render.webp",
     specs: {
         dimensions: null,
         volume: null,
@@ -1356,13 +1356,13 @@ const gabinetesData = [
     category: "Gabinete",
     code: "HYGL81105/HJ1850",
     priceBase: null,
-    image: "/images/GABINETES/GAB36/render.jpg",
+    image: "/images/GABINETES/GAB36/render.webp",
     schematics: [
-        "/images/GABINETES/GAB36/img1.jpg",
-        "/images/GABINETES/GAB36/img2.jpg",
-        "/images/GABINETES/GAB36/img3.jpg",
-        "/images/GABINETES/GAB36/img4.jpg",
-        "/images/GABINETES/GAB36/img5.jpg"
+        "/images/GABINETES/GAB36/img1.webp",
+        "/images/GABINETES/GAB36/img2.webp",
+        "/images/GABINETES/GAB36/img3.webp",
+        "/images/GABINETES/GAB36/img4.webp",
+        "/images/GABINETES/GAB36/img5.webp"
     ],
     specs: {
         dimensions: null,
@@ -1405,11 +1405,11 @@ const gabinetesData = [
     category: "Estantería",
     code: "HYGL81102/HJ1838",
     priceBase: null,
-    image: "/images/GABINETES/GAB37/render.jpg",
+    image: "/images/GABINETES/GAB37/render.webp",
     schematics: [
-        "/images/GABINETES/GAB37/img1.jpg",
-        "/images/GABINETES/GAB37/img2.jpg",
-        "/images/GABINETES/GAB37/img3.jpg"
+        "/images/GABINETES/GAB37/img1.webp",
+        "/images/GABINETES/GAB37/img2.webp",
+        "/images/GABINETES/GAB37/img3.webp"
     ],
     specs: {
         dimensions: null,

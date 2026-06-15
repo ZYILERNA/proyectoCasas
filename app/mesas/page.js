@@ -452,7 +452,7 @@ const ProductCard = memo(({ item, index, onSelect }) => {
             const img = item.colors?.interior?.[hoverColorIdx]?.image;
             if (img) return img;
         }
-        return item.image || "/images/placeholder.jpg";
+        return item.image || "/images/placeholder.webp";
     }, [item, hoverColorIdx]);
 
     return (
@@ -652,7 +652,7 @@ export default function MesasPage() {
                 muted
                 playsInline
                 preload="auto"
-                poster="/images/mesas-header.jpg"
+                poster="/images/mesas-header.webp"
                 className="w-full h-full object-cover opacity-60 scale-110"
             >
                 <source src="/videos/mesas-hero.webm" type="video/webm" />
