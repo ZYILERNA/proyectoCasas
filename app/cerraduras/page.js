@@ -111,12 +111,12 @@ const ProductModal = memo(({ product, onClose }) => {
   }, []);
   if (!product) return null;
 
-  const isS80 = product?.id?.startsWith('s80');
+  const hasWallpaper = !!product?.wallpaper;
 
   return (
     <div className="fixed inset-0 z-[100] flex justify-end">
       {/* BACKDROP — wallpaper animado para S80, oscuro para el resto */}
-      {isS80 ? (
+      {hasWallpaper ? (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
