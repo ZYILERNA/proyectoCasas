@@ -268,35 +268,6 @@ const MODELOS = [
     colors: { interior: [{ name: "Negro", hex: "#000000" }] }
   },
   {
-    id: "dsm-r9",
-    name: "DSM:R9 Series",
-    category: "Best Seller",
-    type: "Face ID + Palm Vein",
-    img: "/images/CERRADURA/r9-lock.webp",
-    description: "El modelo más vendido con más de 100.000 unidades. Integra una pantalla gigante de 5 pulgadas, reconocimiento de venas de la palma y acabado premium en aleación con IML.",
-    specs: [
-      { value: "5.0\" HD", label: "Pantalla" },
-      { value: "Venas", label: "Biometría" },
-      { value: "IML", label: "Acabado" }
-    ],
-    details: {
-      reconocimiento: "Facial 3D + Venas de Palma",
-      camara: "2MP + Vigilancia Activa 24h",
-      pantalla: "5.0 Pulgadas HD (Gran Formato)",
-      interaccion: "Pantalla externa con Emojis",
-      material: "Aleación + Proceso IML",
-      seguridad: "Certificación BCTC",
-      bateria: "Consumo 310uA - 4-5 meses"
-    },
-    performance: [
-      { label: "Biometría", value: "Venas", level: "Palma de Mano" },
-      { label: "Visión", value: "5.0''", level: "Pantalla Gigante" },
-      { label: "Vigilancia", value: "Activa", level: "24 Horas" },
-      { label: "Acabado", value: "IML", level: "Anti-Rayaduras" }
-    ],
-    colors: { interior: [{ name: "Negro", hex: "#111111" }, { name: "Gris Espacial", hex: "#4a4a4a" }] }
-  },
-  {
     id: "s80-max",
     name: "S80 Max Flagship",
     category: "Tope de Gama",
