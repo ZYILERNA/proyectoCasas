@@ -1,22 +1,22 @@
-// subir-cerraduras.js
+﻿// subir-cerraduras.js
 require('dotenv').config({ path: '.env.local' });
 const { createClient } = require('@supabase/supabase-js');
 
-// Configuración de Supabase
+// ConfiguraciÃ³n de Supabase
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 // Usamos preferiblemente la SERVICE_ROLE para permisos de escritura
 const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 if (!supabaseUrl || !supabaseKey) {
-  console.error("❌ Error: Faltan las variables de entorno en .env.local");
-  console.error("Asegúrate de tener NEXT_PUBLIC_SUPABASE_URL y SUPABASE_SERVICE_ROLE_KEY");
+  console.error("âŒ Error: Faltan las variables de entorno en .env.local");
+  console.error("AsegÃºrate de tener NEXT_PUBLIC_SUPABASE_URL y SUPABASE_SERVICE_ROLE_KEY");
   process.exit(1);
 }
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 // --- 1. MODELOS (Cerraduras Principales) ---
-// NOTA: Se han eliminado los iconos JSX. El frontend los reasignará según el 'label'.
+// NOTA: Se han eliminado los iconos JSX. El frontend los reasignarÃ¡ segÃºn el 'label'.
 const MODELOS = [
   {
     id: "s60max",
@@ -24,28 +24,28 @@ const MODELOS = [
     category: "Smart Lock",
     type: "Serie Max",
     img: "/images/CERRADURA/lock-s60-max.webp",
-    wallpaper: "/images/CERRADURA/wallpaper/s60wallpaper.webp",
-    description: "La cerradura inteligente con detección remota real. Se abre automáticamente al acercarte a 2-4 metros. Incorpora reconocimiento facial 3D, mirilla digital con captura de instantáneas y una pantalla trasera de 4,5 pulgadas para máxima seguridad y comodidad.",
+    wallpaper: "/images/CERRADURA/WALLPAPER/s60wallpaper.webp",
+    description: "La cerradura inteligente con detecciÃ³n remota real. Se abre automÃ¡ticamente al acercarte a 2-4 metros. Incorpora reconocimiento facial 3D, mirilla digital con captura de instantÃ¡neas y una pantalla trasera de 4,5 pulgadas para mÃ¡xima seguridad y comodidad.",
     specs: [
       { label: "Pantalla", value: "4.5''" },
-      { label: "Acceso", value: "6 Métodos" },
+      { label: "Acceso", value: "6 MÃ©todos" },
       { label: "Sensor", value: "2-4 Metros" }
     ],
     details: {
       Tipo: "Inteligente con sensor remoto",
-      Versión: "Max",
+      VersiÃ³n: "Max",
       Pantalla: "4,5 Pulgadas",
       Color: "Negro Espacial",
-      Cuerpo_Compatible: "Mecánica Automática WONLY",
-      Cilindro_Compatible: "Electrónico / Eléctrico 3 filas"
+      Cuerpo_Compatible: "MecÃ¡nica AutomÃ¡tica WONLY",
+      Cilindro_Compatible: "ElectrÃ³nico / ElÃ©ctrico 3 filas"
     },
     performance: [
-      { label: "Detección", value: "2-4 Metros", level: "Apertura Automática" },
-      { label: "Biometría", value: "Facial 3D", level: "Anti-falsificación" },
+      { label: "DetecciÃ³n", value: "2-4 Metros", level: "Apertura AutomÃ¡tica" },
+      { label: "BiometrÃ­a", value: "Facial 3D", level: "Anti-falsificaciÃ³n" },
       { label: "Seguridad", value: "Cifrado M1", level: "Nivel Financiero" },
-      { label: "Control", value: "App + Mirilla", level: "Visualización Remota" },
-      { label: "Sistemas", value: "3 Aislados", level: "Gestión Independiente" },
-      { label: "Respaldo", value: "Llave Mecánica", level: "Clase C Superior" }
+      { label: "Control", value: "App + Mirilla", level: "VisualizaciÃ³n Remota" },
+      { label: "Sistemas", value: "3 Aislados", level: "GestiÃ³n Independiente" },
+      { label: "Respaldo", value: "Llave MecÃ¡nica", level: "Clase C Superior" }
     ],
     colors: { interior: [{ name: "Negro Espacial", hex: "#1a1a1a" }] }
   },
@@ -55,29 +55,29 @@ const MODELOS = [
     category: "Smart Lock",
     type: "Serie Max",
     img: "/images/CERRADURA/lock-s922-max.webp",
-    wallpaper: "/images/CERRADURA/wallpaper/s922maxwallpaper.webp",
+    wallpaper: "/images/CERRADURA/WALLPAPER/s922maxwallpaper.webp",
     description: "Cerradura inteligente de alta seguridad con reconocimiento facial 3D avanzado. Integra mirilla visual, captura de estancia y una pantalla trasera de 4 pulgadas para un control total del acceso.",
     specs: [
       { label: "Pantalla", value: "4.0''" },
-      { label: "Acceso", value: "5 Métodos" },
-      { label: "Biometría", value: "Facial 3D" }
+      { label: "Acceso", value: "5 MÃ©todos" },
+      { label: "BiometrÃ­a", value: "Facial 3D" }
     ],
     details: {
       Tipo: "Inteligente Reconocimiento Facial",
-      Versión: "Max",
-      Características: "Facial 3D + Mirilla + Captura",
+      VersiÃ³n: "Max",
+      CaracterÃ­sticas: "Facial 3D + Mirilla + Captura",
       Pantalla: "4 Pulgadas",
       Color: "Negro",
-      Cuerpo_Compatible: "Mecánica WONLY Auto",
-      Cilindro_Compatible: "Electrónico / Eléctrico 3 filas"
+      Cuerpo_Compatible: "MecÃ¡nica WONLY Auto",
+      Cilindro_Compatible: "ElectrÃ³nico / ElÃ©ctrico 3 filas"
     },
     performance: [
-      { label: "Biometría", value: "Facial 3D", level: "Reconocimiento Profundo" },
+      { label: "BiometrÃ­a", value: "Facial 3D", level: "Reconocimiento Profundo" },
       { label: "Acceso", value: "Huella + Clave", level: "Multifuncional" },
       { label: "Vigilancia", value: "Mirilla Visual", level: "Captura de Estancia" },
       { label: "Seguridad", value: "Cifrado M1", level: "Tarjeta Encriptada" },
       { label: "Pantalla", value: "4 Pulgadas", level: "Panel Trasero HD" },
-      { label: "Respaldo", value: "Llave Mecánica", level: "Emergencia" }
+      { label: "Respaldo", value: "Llave MecÃ¡nica", level: "Emergencia" }
     ],
     colors: { interior: [{ name: "Negro", hex: "#000000" }] }
   },
@@ -87,29 +87,29 @@ const MODELOS = [
     category: "Smart Lock",
     type: "Serie Pro",
     img: "/images/CERRADURA/lock-s935-pro.webp",
-    wallpaper: "/images/CERRADURA/wallpaper/s935wallpaper.webp",
-    description: "Sistema de seguridad integral con Video Portero y Desbloqueo Remoto. Combina reconocimiento facial 3D, tarjeta CPU de alta seguridad y una pantalla de 4 pulgadas para una gestión de acceso total.",
+    wallpaper: "/images/CERRADURA/WALLPAPER/s935wallpaper.webp",
+    description: "Sistema de seguridad integral con Video Portero y Desbloqueo Remoto. Combina reconocimiento facial 3D, tarjeta CPU de alta seguridad y una pantalla de 4 pulgadas para una gestiÃ³n de acceso total.",
     specs: [
       { label: "Pantalla", value: "4.0''" },
-      { label: "Comunicación", value: "Video Portero" },
+      { label: "ComunicaciÃ³n", value: "Video Portero" },
       { label: "Acceso", value: "Huella + Facial" }
     ],
     details: {
       Tipo: "Inteligente Facial + Video",
-      Versión: "Pro",
+      VersiÃ³n: "Pro",
       Funciones: "Video Portero + Desbloqueo Remoto",
       Pantalla: "4 Pulgadas",
       Color: "Negro",
-      Cuerpo_Compatible: "Mecánica WONLY Auto/Rápido",
-      Cilindro_Compatible: "Electrónico / Antirrobo 3 filas"
+      Cuerpo_Compatible: "MecÃ¡nica WONLY Auto/RÃ¡pido",
+      Cilindro_Compatible: "ElectrÃ³nico / Antirrobo 3 filas"
     },
     performance: [
-      { label: "Comunicación", value: "Video Portero", level: "Intercomunicador Visual" },
-      { label: "Biometría", value: "Facial 3D", level: "Alta Precisión" },
+      { label: "ComunicaciÃ³n", value: "Video Portero", level: "Intercomunicador Visual" },
+      { label: "BiometrÃ­a", value: "Facial 3D", level: "Alta PrecisiÃ³n" },
       { label: "Remoto", value: "App Control", level: "Desbloqueo a Distancia" },
       { label: "Seguridad", value: "Tarjeta CPU", level: "Anti-copia Avanzado" },
-      { label: "Acceso", value: "Huella + Clave", level: "Respuesta Rápida" },
-      { label: "Respaldo", value: "Llave Mecánica", level: "Emergencia" }
+      { label: "Acceso", value: "Huella + Clave", level: "Respuesta RÃ¡pida" },
+      { label: "Respaldo", value: "Llave MecÃ¡nica", level: "Emergencia" }
     ],
     colors: { interior: [{ name: "Negro", hex: "#000000" }] }
   },
@@ -119,28 +119,28 @@ const MODELOS = [
     category: "Smart Lock",
     type: "Serie Pro",
     img: "/images/CERRADURA/lock-s958-pro.webp",
-    description: "Cerradura inteligente de diseño exclusivo en Negro Obsidiana. Integra reconocimiento facial 3D, video portero, mirilla digital y captura de estancia, ofreciendo la máxima protección y conectividad.",
+    description: "Cerradura inteligente de diseÃ±o exclusivo en Negro Obsidiana. Integra reconocimiento facial 3D, video portero, mirilla digital y captura de estancia, ofreciendo la mÃ¡xima protecciÃ³n y conectividad.",
     specs: [
       { label: "Pantalla", value: "4.0''" },
       { label: "Seguridad", value: "Tarjeta CPU" },
-      { label: "Biometría", value: "Facial 3D" }
+      { label: "BiometrÃ­a", value: "Facial 3D" }
     ],
     details: {
       Tipo: "Inteligente Facial + Video",
-      Versión: "Pro",
+      VersiÃ³n: "Pro",
       Funciones: "Video Portero + Mirilla + Captura",
       Pantalla: "4 Pulgadas",
       Color: "Negro Obsidiana",
-      Cuerpo_Compatible: "Mecánica WONLY Auto/Rápido",
-      Cilindro_Compatible: "Electrónico / Antirrobo 3 filas"
+      Cuerpo_Compatible: "MecÃ¡nica WONLY Auto/RÃ¡pido",
+      Cilindro_Compatible: "ElectrÃ³nico / Antirrobo 3 filas"
     },
     performance: [
-      { label: "Video", value: "Video Portero", level: "Comunicación Bidireccional" },
-      { label: "Biometría", value: "Facial 3D", level: "Reconocimiento Profundo" },
+      { label: "Video", value: "Video Portero", level: "ComunicaciÃ³n Bidireccional" },
+      { label: "BiometrÃ­a", value: "Facial 3D", level: "Reconocimiento Profundo" },
       { label: "Conectividad", value: "App Remota", level: "Control Total" },
-      { label: "Protección", value: "Tarjeta CPU", level: "Cifrado Bancario" },
+      { label: "ProtecciÃ³n", value: "Tarjeta CPU", level: "Cifrado Bancario" },
       { label: "Vigilancia", value: "Captura Estancia", level: "Monitoreo Activo" },
-      { label: "Respaldo", value: "Llave Mecánica", level: "Clase C" }
+      { label: "Respaldo", value: "Llave MecÃ¡nica", level: "Clase C" }
     ],
     colors: { interior: [{ name: "Negro Obsidiana", hex: "#111111" }] }
   },
@@ -150,29 +150,29 @@ const MODELOS = [
     category: "Smart Lock",
     type: "Serie Max",
     img: "/images/CERRADURA/s953max.webp",
-    wallpaper: "/images/CERRADURA/wallpaper/s953maxwallpaper.webp",
-    description: "Tecnología de vanguardia con Reconocimiento de Venas Dactilares para una seguridad infalible. Combina lo mejor de la biometría (facial y venas) con mirilla visual y pantalla de 4 pulgadas.",
+    wallpaper: "/images/CERRADURA/WALLPAPER/s953maxwallpaper.webp",
+    description: "TecnologÃ­a de vanguardia con Reconocimiento de Venas Dactilares para una seguridad infalible. Combina lo mejor de la biometrÃ­a (facial y venas) con mirilla visual y pantalla de 4 pulgadas.",
     specs: [
-      { label: "Biometría", value: "Venas + Facial" },
+      { label: "BiometrÃ­a", value: "Venas + Facial" },
       { label: "Pantalla", value: "4.0''" },
       { label: "Seguridad", value: "Tarjeta CPU" }
     ],
     details: {
       Tipo: "Inteligente Venas Dactilares",
-      Versión: "Max",
-      Características: "Facial + Venas + Mirilla + Captura",
+      VersiÃ³n: "Max",
+      CaracterÃ­sticas: "Facial + Venas + Mirilla + Captura",
       Pantalla: "4 Pulgadas",
       Color: "Negro Obsidiana",
-      Cuerpo_Compatible: "Mecánica WONLY Auto/Rápido",
-      Cilindro_Compatible: "Electrónico / Antirrobo 3 filas"
+      Cuerpo_Compatible: "MecÃ¡nica WONLY Auto/RÃ¡pido",
+      Cilindro_Compatible: "ElectrÃ³nico / Antirrobo 3 filas"
     },
     performance: [
-      { label: "Biometría", value: "Venas Dactilares", level: "Máxima Seguridad" },
-      { label: "Biometría 2", value: "Facial + Huella", level: "Multifuncional" },
+      { label: "BiometrÃ­a", value: "Venas Dactilares", level: "MÃ¡xima Seguridad" },
+      { label: "BiometrÃ­a 2", value: "Facial + Huella", level: "Multifuncional" },
       { label: "Vigilancia", value: "Captura Estancia", level: "Monitor Trasero" },
-      { label: "Protección", value: "Tarjeta CPU", level: "Anti-Clonación" },
+      { label: "ProtecciÃ³n", value: "Tarjeta CPU", level: "Anti-ClonaciÃ³n" },
       { label: "Pantalla", value: "4 Pulgadas", level: "Panel HD" },
-      { label: "Respaldo", value: "Llave Mecánica", level: "Emergencia" }
+      { label: "Respaldo", value: "Llave MecÃ¡nica", level: "Emergencia" }
     ],
     colors: { interior: [{ name: "Negro Obsidiana", hex: "#111111" }] }
   },
@@ -182,29 +182,29 @@ const MODELOS = [
     category: "Smart Lock",
     type: "Serie Pro",
     img: "/images/CERRADURA/p15.webp",
-    wallpaper: "/images/CERRADURA/wallpaper/p15wallpaper.webp",
-    description: "Diseño elegante con una gran pantalla trasera de 4.5 pulgadas para una visibilidad superior. Integra reconocimiento facial 3D y mirilla digital con captura de estancia, ideal para quienes buscan tecnología visual avanzada.",
+    wallpaper: "/images/CERRADURA/WALLPAPER/p15wallpaper.webp",
+    description: "DiseÃ±o elegante con una gran pantalla trasera de 4.5 pulgadas para una visibilidad superior. Integra reconocimiento facial 3D y mirilla digital con captura de estancia, ideal para quienes buscan tecnologÃ­a visual avanzada.",
     specs: [
       { label: "Pantalla", value: "4.5''" },
-      { label: "Biometría", value: "Facial 3D" },
+      { label: "BiometrÃ­a", value: "Facial 3D" },
       { label: "Tarjeta", value: "Cifrado M1" }
     ],
     details: {
       Tipo: "Inteligente Facial",
-      Versión: "Pro",
-      Características: "Facial 3D + Mirilla + Captura",
+      VersiÃ³n: "Pro",
+      CaracterÃ­sticas: "Facial 3D + Mirilla + Captura",
       Pantalla: "4.5 Pulgadas",
       Color: "Negro",
-      Cuerpo_Compatible: "Mecánica WONLY Auto/Rápido",
-      Cilindro_Compatible: "Electrónico / Antirrobo 3 filas"
+      Cuerpo_Compatible: "MecÃ¡nica WONLY Auto/RÃ¡pido",
+      Cilindro_Compatible: "ElectrÃ³nico / Antirrobo 3 filas"
     },
     performance: [
-      { label: "Biometría", value: "Facial 3D", level: "Alta Precisión" },
+      { label: "BiometrÃ­a", value: "Facial 3D", level: "Alta PrecisiÃ³n" },
       { label: "Pantalla", value: "4.5 Pulgadas", level: "Gran Formato" },
       { label: "Vigilancia", value: "Mirilla + Captura", level: "Monitor Activo" },
       { label: "Seguridad", value: "Cifrado M1", level: "Tarjeta Encriptada" },
-      { label: "Acceso", value: "Huella + Clave", level: "Respuesta Rápida" },
-      { label: "Respaldo", value: "Llave Mecánica", level: "Emergencia" }
+      { label: "Acceso", value: "Huella + Clave", level: "Respuesta RÃ¡pida" },
+      { label: "Respaldo", value: "Llave MecÃ¡nica", level: "Emergencia" }
     ],
     colors: { interior: [{ name: "Negro", hex: "#000000" }] }
   },
@@ -214,8 +214,8 @@ const MODELOS = [
     category: "Smart Lock",
     type: "Semi-Auto",
     img: "/images/CERRADURA/lock-s936.webp",
-    wallpaper: "/images/CERRADURA/wallpaper/s936wallpaper.webp",
-    description: "Cerradura inteligente semi-automática con diseño ergonómico de 'un solo agarre'. Ideal para acceso rápido mediante huella dactilar, combinando simplicidad de uso y seguridad con tarjeta cifrada M1.",
+    wallpaper: "/images/CERRADURA/WALLPAPER/s936wallpaper.webp",
+    description: "Cerradura inteligente semi-automÃ¡tica con diseÃ±o ergonÃ³mico de 'un solo agarre'. Ideal para acceso rÃ¡pido mediante huella dactilar, combinando simplicidad de uso y seguridad con tarjeta cifrada M1.",
     specs: [
       { label: "Apertura", value: "Un Agarre" },
       { label: "Acceso", value: "Huella + M1" },
@@ -223,17 +223,17 @@ const MODELOS = [
     ],
     details: {
       Tipo: "Inteligente Huella Dactilar",
-      Versión: "Semi-Automática / Un Agarre",
+      VersiÃ³n: "Semi-AutomÃ¡tica / Un Agarre",
       Funciones: "Huella + Clave + Tarjeta M1 + Llave",
       Color: "Negro",
-      Cuerpo_Compatible: "Desbloqueo rápido WONLY",
+      Cuerpo_Compatible: "Desbloqueo rÃ¡pido WONLY",
       Cilindro_Compatible: "WONLY Media Luna (Doble Fila)"
     },
     performance: [
-      { label: "Biometría", value: "Huella Dactilar", level: "Acceso Rápido" },
-      { label: "Mecanismo", value: "Un Agarre", level: "Ergonomía Directa" },
+      { label: "BiometrÃ­a", value: "Huella Dactilar", level: "Acceso RÃ¡pido" },
+      { label: "Mecanismo", value: "Un Agarre", level: "ErgonomÃ­a Directa" },
       { label: "Seguridad", value: "Cifrado M1", level: "Tarjeta Encriptada" },
-      { label: "Respaldo", value: "Llave Mecánica", level: "Emergencia" }
+      { label: "Respaldo", value: "Llave MecÃ¡nica", level: "Emergencia" }
     ],
     colors: { interior: [{ name: "Negro", hex: "#000000" }] }
   },
@@ -243,25 +243,25 @@ const MODELOS = [
     category: "Flagship",
     type: "Smart Lock UWB",
     img: "/images/CERRADURA/s80-lock.webp",
-    wallpaper: "/images/CERRADURA/wallpaper/s80wallpaper.webp",
-    description: "La cerradura más avanzada con tecnología UWB de 4ª generación. Detecta tu presencia y abre automáticamente. Cuenta con pantalla interactiva que reacciona con 50 expresiones y monitoreo activo.",
+    wallpaper: "/images/CERRADURA/WALLPAPER/s80wallpaper.webp",
+    description: "La cerradura mÃ¡s avanzada con tecnologÃ­a UWB de 4Âª generaciÃ³n. Detecta tu presencia y abre automÃ¡ticamente. Cuenta con pantalla interactiva que reacciona con 50 expresiones y monitoreo activo.",
     specs: [
-      { value: "UWB 4.0", label: "Tecnología" },
+      { value: "UWB 4.0", label: "TecnologÃ­a" },
       { value: "4.7\" HD", label: "Pantalla" },
       { value: "CNC", label: "Cuerpo" }
     ],
     details: {
       reconocimiento: "Facial 3D + Venas + UWB",
-      camara: "2MP Gran Angular + Visión Nocturna",
-      pantalla: "4.7 Pulgadas IPS Alta Definición",
+      camara: "2MP Gran Angular + VisiÃ³n Nocturna",
+      pantalla: "4.7 Pulgadas IPS Alta DefiniciÃ³n",
       interaccion: "Pantalla externa con 50 Emojis",
-      material: "Aluminio Aeronáutico (Tallado CNC)",
-      seguridad: "Alerta de merodeo + Captura automática",
+      material: "Aluminio AeronÃ¡utico (Tallado CNC)",
+      seguridad: "Alerta de merodeo + Captura automÃ¡tica",
       bateria: "Bajo consumo (220uA) - 6 meses+"
     },
     performance: [
-      { label: "Sensor", value: "UWB 4.0", level: "Detección Remota" },
-      { label: "Biometría", value: "Facial 3D", level: "Sin Contacto" },
+      { label: "Sensor", value: "UWB 4.0", level: "DetecciÃ³n Remota" },
+      { label: "BiometrÃ­a", value: "Facial 3D", level: "Sin Contacto" },
       { label: "Pantalla", value: "4.7'' HD", level: "Interactiva" },
       { label: "Seguridad", value: "Alerta", level: "Anti-Merodeo" }
     ],
@@ -273,8 +273,8 @@ const MODELOS = [
     category: "Tope de Gama",
     type: "UWB + 3D Face ID",
     img: "/images/CERRADURA/s80-max.webp",
-    wallpaper: "/images/CERRADURA/wallpaper/s80wallpaper.webp",
-    description: "El estándar más alto en seguridad inteligente. Combina detección UWB de 4ª generación para apertura automática con una cámara de visión nocturna a todo color y 9 métodos de acceso.",
+    wallpaper: "/images/CERRADURA/WALLPAPER/s80wallpaper.webp",
+    description: "El estÃ¡ndar mÃ¡s alto en seguridad inteligente. Combina detecciÃ³n UWB de 4Âª generaciÃ³n para apertura automÃ¡tica con una cÃ¡mara de visiÃ³n nocturna a todo color y 9 mÃ©todos de acceso.",
     specs: [
       { value: "UWB 4.0", label: "Sensor" },
       { value: "Color", label: "Nocturna" },
@@ -282,16 +282,16 @@ const MODELOS = [
     ],
     details: {
       reconocimiento: "Facial 3D + UWB Gen4",
-      camara: "Visión Nocturna a TODO COLOR",
+      camara: "VisiÃ³n Nocturna a TODO COLOR",
       pantalla: "4.7 Pulgadas HD",
       interaccion: "Mensajes de Voz + Emojis",
-      seguridad: "9 Métodos de Desbloqueo",
+      seguridad: "9 MÃ©todos de Desbloqueo",
       conectividad: "App Control",
       sensor: "Radar de presencia"
     },
     performance: [
-      { label: "Tecnología", value: "UWB Gen4", level: "Apertura Auto" },
-      { label: "Cámara", value: "Color", level: "Visión Nocturna" },
+      { label: "TecnologÃ­a", value: "UWB Gen4", level: "Apertura Auto" },
+      { label: "CÃ¡mara", value: "Color", level: "VisiÃ³n Nocturna" },
       { label: "Acceso", value: "9 Modos", level: "Versatilidad Total" },
       { label: "Seguridad", value: "Total", level: "Gama Alta" }
     ],
@@ -302,27 +302,27 @@ const MODELOS = [
     name: "S60M Smart Home",
     category: "Ecosistema Mijia",
     type: "Face ID + App Control",
-    wallpaper: "/images/CERRADURA/wallpaper/s60wallpaper.webp",
+    wallpaper: "/images/CERRADURA/WALLPAPER/s60wallpaper.webp",
     img: "/images/CERRADURA/s60m.webp",
-    description: "La opción definitiva para la domótica. Se integra perfectamente con el ecosistema Xiaomi (Mijia) y ofrece videoportero remoto, pantalla de 4.5 pulgadas y visión nocturna por doble infrarrojo.",
+    description: "La opciÃ³n definitiva para la domÃ³tica. Se integra perfectamente con el ecosistema Xiaomi (Mijia) y ofrece videoportero remoto, pantalla de 4.5 pulgadas y visiÃ³n nocturna por doble infrarrojo.",
     specs: [
       { value: "Mijia", label: "App" },
       { value: "4.5\"", label: "Pantalla" },
-      { value: "Dual IR", label: "Visión" }
+      { value: "Dual IR", label: "VisiÃ³n" }
     ],
     details: {
       sistema: "Compatible Xiaomi Smart Home",
       reconocimiento: "Facial 3D + Huella",
       pantalla: "4.5 Pulgadas HD",
       vision: "Doble Infrarrojo (Dual IR)",
-      seguridad: "8 Métodos de Desbloqueo",
-      mecanismo: "Automático Electrónico",
+      seguridad: "8 MÃ©todos de Desbloqueo",
+      mecanismo: "AutomÃ¡tico ElectrÃ³nico",
       interaccion: "Videoportero Remoto"
     },
     performance: [
-      { label: "Domótica", value: "Mijia", level: "Xiaomi Home" },
+      { label: "DomÃ³tica", value: "Mijia", level: "Xiaomi Home" },
       { label: "Nocturna", value: "Dual IR", level: "Infrarrojo Doble" },
-      { label: "Biometría", value: "Facial 3D", level: "Rápido" },
+      { label: "BiometrÃ­a", value: "Facial 3D", level: "RÃ¡pido" },
       { label: "Control", value: "App", level: "Remoto" }
     ],
     colors: { interior: [{ name: "Negro Mate", hex: "#1a1a1a" }, { name: "Gris Titanio", hex: "#383838" }] }
@@ -333,28 +333,28 @@ const MODELOS = [
     category: "Estrella 2025",
     type: "Face ID + Quick Handle",
     img: "/images/CERRADURA/s50-pro.webp",
-    description: "El modelo proyectado como líder de ventas para 2025. Combina un videoportero avanzado con una gran manija de diseño 'Quick Open' para una salida rápida y segura.",
+    description: "El modelo proyectado como lÃ­der de ventas para 2025. Combina un videoportero avanzado con una gran manija de diseÃ±o 'Quick Open' para una salida rÃ¡pida y segura.",
     specs: [
-      { value: "Rápida", label: "Manija" },
+      { value: "RÃ¡pida", label: "Manija" },
       { value: "4.5\"", label: "Pantalla" },
       { value: "Video", label: "Intercom" }
     ],
     details: {
       reconocimiento: "Facial 3D + Videoportero",
-      manija: "Quick Open (Apertura Rápida)",
+      manija: "Quick Open (Apertura RÃ¡pida)",
       pantalla: "4.5 Pulgadas HD",
       vision: "Doble Infrarrojo",
-      funciones: "Códigos temporales remotos",
-      seguridad: "8 Métodos de Desbloqueo",
-      app: "Gestión App Seguridad"
+      funciones: "CÃ³digos temporales remotos",
+      seguridad: "8 MÃ©todos de Desbloqueo",
+      app: "GestiÃ³n App Seguridad"
     },
     performance: [
-      { label: "Ergonomía", value: "Manija", level: "Quick Open" },
-      { label: "Comunicación", value: "Video", level: "Portero Visual" },
-      { label: "Invitados", value: "Códigos", level: "Temporales" },
-      { label: "Protección", value: "Dual IR", level: "Vigilancia" }
+      { label: "ErgonomÃ­a", value: "Manija", level: "Quick Open" },
+      { label: "ComunicaciÃ³n", value: "Video", level: "Portero Visual" },
+      { label: "Invitados", value: "CÃ³digos", level: "Temporales" },
+      { label: "ProtecciÃ³n", value: "Dual IR", level: "Vigilancia" }
     ],
-    colors: { interior: [{ name: "Negro Clásico", hex: "#111111" }, { name: "Gris Industrial", hex: "#2f2f2f" }] }
+    colors: { interior: [{ name: "Negro ClÃ¡sico", hex: "#111111" }, { name: "Gris Industrial", hex: "#2f2f2f" }] }
   },
   {
     id: "q3f-pro",
@@ -362,39 +362,39 @@ const MODELOS = [
     category: "Top Ventas 500k+",
     type: "Face ID + 3.5\" Screen",
     img: "/images/CERRADURA/q3f-pro.webp",
-    description: "La cerradura más probada del mercado con más de 500.000 unidades vendidas al año. Equilibrio perfecto entre seguridad y funcionalidad con pantalla de 3.5 pulgadas.",
+    description: "La cerradura mÃ¡s probada del mercado con mÃ¡s de 500.000 unidades vendidas al aÃ±o. Equilibrio perfecto entre seguridad y funcionalidad con pantalla de 3.5 pulgadas.",
     specs: [
       { value: "+500k", label: "Ventas" },
       { value: "3.5\"", label: "Pantalla" },
-      { value: "1MP", label: "Cámara" }
+      { value: "1MP", label: "CÃ¡mara" }
     ],
     details: {
       reconocimiento: "Facial + Huella + Tarjeta",
-      camara: "1 Megapíxel",
+      camara: "1 MegapÃ­xel",
       pantalla: "3.5 Pulgadas",
       vision: "Infrarroja (IR)",
-      bateria: "4-5 Meses duración",
-      mecanismo: "Doble Acción Rápida",
+      bateria: "4-5 Meses duraciÃ³n",
+      mecanismo: "Doble AcciÃ³n RÃ¡pida",
       seguridad: "Captura sospechosos"
     },
     performance: [
-      { label: "Fiabilidad", value: "Top 1", level: "Más Vendida" },
-      { label: "Biometría", value: "Facial", level: "Acceso Seguro" },
-      { label: "Mecanismo", value: "Doble", level: "Acción Rápida" },
+      { label: "Fiabilidad", value: "Top 1", level: "MÃ¡s Vendida" },
+      { label: "BiometrÃ­a", value: "Facial", level: "Acceso Seguro" },
+      { label: "Mecanismo", value: "Doble", level: "AcciÃ³n RÃ¡pida" },
       { label: "Pantalla", value: "3.5''", level: "Monitor" }
     ],
-    colors: { interior: [{ name: "Negro Star", hex: "#111111" }, { name: "Café Profundo", hex: "#3e2723" }] }
+    colors: { interior: [{ name: "Negro Star", hex: "#111111" }, { name: "CafÃ© Profundo", hex: "#3e2723" }] }
   },
   {
     id: "s60-pro-wonly",
     name: "S60 Pro Ultra",
     category: "Gama Alta",
     type: "Palm Vein + Face ID",
-    wallpaper: "/images/CERRADURA/wallpaper/s60wallpaper.webp",
+    wallpaper: "/images/CERRADURA/WALLPAPER/s60wallpaper.webp",
     img: "/images/CERRADURA/s60-pro.webp",
-    description: "El modelo más sofisticado. Incorpora desbloqueo por meridianos de la palma (Palm Vein), sensor de movimiento, gestión por App y acabado de lujo.",
+    description: "El modelo mÃ¡s sofisticado. Incorpora desbloqueo por meridianos de la palma (Palm Vein), sensor de movimiento, gestiÃ³n por App y acabado de lujo.",
     specs: [
-      { value: "Venas", label: "Biometría" },
+      { value: "Venas", label: "BiometrÃ­a" },
       { value: "Sensor", label: "Movimiento" },
       { value: "Total", label: "App" }
     ],
@@ -403,15 +403,15 @@ const MODELOS = [
       seguridad: "Grado Bancario (Palm Vein)",
       sensores: "Sensor de movimiento integrado",
       conectividad: "Control total por App + Tarjeta IC",
-      mecanismo: "Totalmente Automático",
+      mecanismo: "Totalmente AutomÃ¡tico",
       bateria: "Puerto de carga de emergencia incluido",
       extra: "Control remoto incluido"
     },
     performance: [
-      { label: "Biometría", value: "Palm Vein", level: "Grado Bancario" },
-      { label: "Sensor", value: "Movimiento", level: "Auto-Activación" },
-      { label: "Control", value: "App Total", level: "Gestión Remota" },
-      { label: "Mecanismo", value: "Automático", level: "Motorizado" }
+      { label: "BiometrÃ­a", value: "Palm Vein", level: "Grado Bancario" },
+      { label: "Sensor", value: "Movimiento", level: "Auto-ActivaciÃ³n" },
+      { label: "Control", value: "App Total", level: "GestiÃ³n Remota" },
+      { label: "Mecanismo", value: "AutomÃ¡tico", level: "Motorizado" }
     ],
     colors: { interior: [{ name: "Negro", hex: "#000000" }] }
   },
@@ -421,24 +421,24 @@ const MODELOS = [
     category: "Video Connect",
     type: "FaceTime + Palm Vein",
     img: "/images/CERRADURA/d235.webp",
-    description: "Tecnología global con interfaz en 9 idiomas y sistema 'FaceTime' para videollamadas directas. Combina reconocimiento de venas y contraseñas de un solo uso.",
+    description: "TecnologÃ­a global con interfaz en 9 idiomas y sistema 'FaceTime' para videollamadas directas. Combina reconocimiento de venas y contraseÃ±as de un solo uso.",
     specs: [
       { value: "Video", label: "Llamada" },
       { value: "9", label: "Idiomas" },
       { value: "Venas", label: "Sensor" }
     ],
     details: {
-      idiomas: "9 (Español, Inglés, Chino, Ruso...)",
-      comunicacion: "Sistema FaceTime + Cámara",
+      idiomas: "9 (EspaÃ±ol, InglÃ©s, Chino, Ruso...)",
+      comunicacion: "Sistema FaceTime + CÃ¡mara",
       reconocimiento: "Meridiano de Palma + Facial",
-      funciones: "Contraseña temporal (OTP)",
-      pantalla: "Versión Corta con cámara",
-      sistema: "Configuración por códigos"
+      funciones: "ContraseÃ±a temporal (OTP)",
+      pantalla: "VersiÃ³n Corta con cÃ¡mara",
+      sistema: "ConfiguraciÃ³n por cÃ³digos"
     },
     performance: [
       { label: "Global", value: "9 Idiomas", level: "Internacional" },
       { label: "Video", value: "FaceTime", level: "Llamada Live" },
-      { label: "Seguridad", value: "Venas", level: "Biometría Top" },
+      { label: "Seguridad", value: "Venas", level: "BiometrÃ­a Top" },
       { label: "Invitados", value: "OTP", level: "Clave 1 Uso" }
     ],
     colors: { interior: [{ name: "Negro", hex: "#000000" }] }
@@ -446,22 +446,22 @@ const MODELOS = [
   {
     id: "s922-wonly",
     name: "S922 Full Auto",
-    category: "Premium Automática",
+    category: "Premium AutomÃ¡tica",
     type: "Face ID + Auto Lock",
     img: "/images/CERRADURA/s922.webp",
-    description: "Cerradura inteligente totalmente automática construida en aleación de aluminio. Experiencia de acceso fluida 'manos libres' gracias a su motorización completa.",
+    description: "Cerradura inteligente totalmente automÃ¡tica construida en aleaciÃ³n de aluminio. Experiencia de acceso fluida 'manos libres' gracias a su motorizaciÃ³n completa.",
     specs: [
       { value: "Auto", label: "Mecanismo" },
-      { value: "Face ID", label: "Biometría" },
+      { value: "Face ID", label: "BiometrÃ­a" },
       { value: "Aluminio", label: "Cuerpo" }
     ],
     details: {
-      sistema: "Cerradura Totalmente Automática",
-      material: "Cuerpo robusto de Aleación",
+      sistema: "Cerradura Totalmente AutomÃ¡tica",
+      material: "Cuerpo robusto de AleaciÃ³n",
       desbloqueo_bio: "Facial + Huella Digital",
-      accesos_extra: "Contraseña + Tarjeta IC",
+      accesos_extra: "ContraseÃ±a + Tarjeta IC",
       emergencia: "Puerto de carga externo",
-      seguridad: "Cierre automático al cerrar"
+      seguridad: "Cierre automÃ¡tico al cerrar"
     },
     performance: [
       { label: "Confort", value: "Motorizado", level: "Full Auto" },
@@ -482,28 +482,28 @@ const MODELOS = [
     category: "Smart Lock",
     type: "Serie Pro",
     img: "/images/CERRADURA/p10.webp",
-    wallpaper: "/images/CERRADURA/wallpaper/p10wallpaper.webp",
-    description: "Serie 3D de alta gama con pantalla trasera de 4.5\", ojo de buey con cámara visible y captura automática por intrusión. Biometría avanzada con acceso por WeChat/QR.",
+    wallpaper: "/images/CERRADURA/WALLPAPER/p10wallpaper.webp",
+    description: "Serie 3D de alta gama con pantalla trasera de 4.5\", ojo de buey con cÃ¡mara visible y captura automÃ¡tica por intrusiÃ³n. BiometrÃ­a avanzada con acceso por WeChat/QR.",
     specs: [
       { label: "Pantalla", value: "4.5''" },
-      { label: "Biometría", value: "Facial 3D" },
+      { label: "BiometrÃ­a", value: "Facial 3D" },
       { label: "Tarjeta", value: "Cifrado M1" }
     ],
     details: {
       Tipo: "3D Alta Gama Serie Facial",
-      Versión: "Pro",
-      Características: "Facial 3D + Ojo de Buey con Cámara + Captura por Intrusión + Pantalla 4.5\"",
+      VersiÃ³n: "Pro",
+      CaracterÃ­sticas: "Facial 3D + Ojo de Buey con CÃ¡mara + Captura por IntrusiÃ³n + Pantalla 4.5\"",
       Pantalla: "4.5 Pulgadas",
       Color: "Negro",
-      Cuerpo_Compatible: "Mecánica WONLY Auto Serie 1/Serie 5",
-      Cilindro_Compatible: "Electrónico Wang Li / Eléctrico 3 filas"
+      Cuerpo_Compatible: "MecÃ¡nica WONLY Auto Serie 1/Serie 5",
+      Cilindro_Compatible: "ElectrÃ³nico Wang Li / ElÃ©ctrico 3 filas"
     },
     performance: [
-      { label: "Biometría", value: "Facial 3D", level: "Alta Precisión" },
+      { label: "BiometrÃ­a", value: "Facial 3D", level: "Alta PrecisiÃ³n" },
       { label: "Pantalla", value: "4.5 Pulgadas", level: "Gran Formato" },
-      { label: "Vigilancia", value: "Ojo de Buey", level: "Captura Intrusión" },
+      { label: "Vigilancia", value: "Ojo de Buey", level: "Captura IntrusiÃ³n" },
       { label: "Seguridad", value: "Cifrado M1", level: "Tarjeta Encriptada" },
-      { label: "Acceso", value: "Huella + Clave", level: "Multimétodo" },
+      { label: "Acceso", value: "Huella + Clave", level: "MultimÃ©todo" },
       { label: "Respaldo", value: "Llave / M1 / WeChat", level: "Emergencia" }
     ],
     colors: { interior: [{ name: "Negro", hex: "#0f0f0f" }] }
@@ -512,61 +512,61 @@ const MODELOS = [
     id: "z117z-engineering",
     name: "Z117-Z",
     category: "Smart Lock",
-    type: "Semi-Auto Ingeniería",
+    type: "Semi-Auto IngenierÃ­a",
     img: "/images/CERRADURA/z117-z.webp",
-    wallpaper: "/images/CERRADURA/wallpaper/z117-zwallpaper.webp",
-    description: "Cerradura inteligente semi-automática de la línea de ingeniería GUXIN. Diseño robusto con manija de palanca, acceso por huella, contraseña, llave y tarjeta IC. Ideal para proyectos de obra y uso intensivo.",
+    wallpaper: "/images/CERRADURA/WALLPAPER/z117-zwallpaper.webp",
+    description: "Cerradura inteligente semi-automÃ¡tica de la lÃ­nea de ingenierÃ­a GUXIN. DiseÃ±o robusto con manija de palanca, acceso por huella, contraseÃ±a, llave y tarjeta IC. Ideal para proyectos de obra y uso intensivo.",
     specs: [
       { label: "Mecanismo", value: "Semi-Auto" },
       { label: "Acceso", value: "Huella + IC" },
-      { label: "Línea", value: "Ingeniería" }
+      { label: "LÃ­nea", value: "IngenierÃ­a" }
     ],
     details: {
-      Tipo: "Semi-Automática de Ingeniería",
-      Versión: "Edición Obra",
-      Características: "Huella + Contraseña + Llave + Tarjeta IC",
-      Color: "Negro /香槟金 (Champán Dorado)",
-      Cuerpo_Compatible: "Doble Rápido Mecánico",
+      Tipo: "Semi-AutomÃ¡tica de IngenierÃ­a",
+      VersiÃ³n: "EdiciÃ³n Obra",
+      CaracterÃ­sticas: "Huella + ContraseÃ±a + Llave + Tarjeta IC",
+      Color: "Negro /é¦™æ§Ÿé‡‘ (ChampÃ¡n Dorado)",
+      Cuerpo_Compatible: "Doble RÃ¡pido MecÃ¡nico",
       Cilindro_Compatible: "Lunar Doble Fila Cabeza Simple / Antipalanca Triple Cabeza Simple"
     },
     performance: [
-      { label: "Biometría", value: "Huella Dactilar", level: "Acceso Rápido" },
-      { label: "Mecanismo", value: "Semi-Auto", level: "Palanca Ergonómica" },
-      { label: "Seguridad", value: "Tarjeta IC", level: "Cifrado Estándar" },
-      { label: "Uso", value: "Intensivo", level: "Grado Ingeniería" },
-      { label: "Acceso", value: "Huella + Clave", level: "4 Métodos" },
-      { label: "Respaldo", value: "Llave Mecánica", level: "Emergencia" }
+      { label: "BiometrÃ­a", value: "Huella Dactilar", level: "Acceso RÃ¡pido" },
+      { label: "Mecanismo", value: "Semi-Auto", level: "Palanca ErgonÃ³mica" },
+      { label: "Seguridad", value: "Tarjeta IC", level: "Cifrado EstÃ¡ndar" },
+      { label: "Uso", value: "Intensivo", level: "Grado IngenierÃ­a" },
+      { label: "Acceso", value: "Huella + Clave", level: "4 MÃ©todos" },
+      { label: "Respaldo", value: "Llave MecÃ¡nica", level: "Emergencia" }
     ],
-    colors: { interior: [{ name: "Negro", hex: "#111111" }, { name: "Champán Dorado", hex: "#b8975a" }] }
+    colors: { interior: [{ name: "Negro", hex: "#111111" }, { name: "ChampÃ¡n Dorado", hex: "#b8975a" }] }
   },
   {
     id: "xd515-v1",
     name: "XD515",
     category: "Smart Lock",
-    type: "Semi-Auto Ingeniería",
+    type: "Semi-Auto IngenierÃ­a",
     img: "/images/CERRADURA/xd515.webp",
-    wallpaper: "/images/CERRADURA/wallpaper/xd515wallpaper.webp",
-    description: "Cerradura inteligente semi-automática de ingeniería WONLY con apertura remota y pantalla integrada. Diseño de palanca compacto con acceso por huella, contraseña, llave, tarjeta IC y WeChat/QR.",
+    wallpaper: "/images/CERRADURA/WALLPAPER/xd515wallpaper.webp",
+    description: "Cerradura inteligente semi-automÃ¡tica de ingenierÃ­a WONLY con apertura remota y pantalla integrada. DiseÃ±o de palanca compacto con acceso por huella, contraseÃ±a, llave, tarjeta IC y WeChat/QR.",
     specs: [
       { label: "Mecanismo", value: "Semi-Auto" },
       { label: "Acceso", value: "Remoto + IC" },
-      { label: "Línea", value: "Ingeniería" }
+      { label: "LÃ­nea", value: "IngenierÃ­a" }
     ],
     details: {
-      Tipo: "Semi-Automática de Ingeniería",
-      Versión: "Versión 1",
-      Características: "Apertura Remota + Pantalla Display",
+      Tipo: "Semi-AutomÃ¡tica de IngenierÃ­a",
+      VersiÃ³n: "VersiÃ³n 1",
+      CaracterÃ­sticas: "Apertura Remota + Pantalla Display",
       Color: "Negro",
-      Cuerpo_Compatible: "Doble Rápido Mecánico",
+      Cuerpo_Compatible: "Doble RÃ¡pido MecÃ¡nico",
       Cilindro_Compatible: "Lunar Doble Fila Cabeza Simple / Antipalanca Triple Cabeza Simple"
     },
     performance: [
-      { label: "Biometría", value: "Huella Dactilar", level: "Acceso Rápido" },
+      { label: "BiometrÃ­a", value: "Huella Dactilar", level: "Acceso RÃ¡pido" },
       { label: "Remoto", value: "App Control", level: "Apertura a Distancia" },
       { label: "Pantalla", value: "Display", level: "Indicador Visual" },
-      { label: "Seguridad", value: "Tarjeta IC", level: "Cifrado Estándar" },
-      { label: "Acceso", value: "5 Métodos", level: "WeChat / QR incluido" },
-      { label: "Respaldo", value: "Llave Mecánica", level: "Emergencia" }
+      { label: "Seguridad", value: "Tarjeta IC", level: "Cifrado EstÃ¡ndar" },
+      { label: "Acceso", value: "5 MÃ©todos", level: "WeChat / QR incluido" },
+      { label: "Respaldo", value: "Llave MecÃ¡nica", level: "Emergencia" }
     ],
     colors: { interior: [{ name: "Negro", hex: "#111111" }] }
   },
@@ -574,29 +574,29 @@ const MODELOS = [
     id: "s933-standard",
     name: "S933",
     category: "Smart Lock",
-    type: "Ingeniería Estándar",
+    type: "IngenierÃ­a EstÃ¡ndar",
     img: "/images/CERRADURA/s933.webp",
-    wallpaper: "/images/CERRADURA/wallpaper/s933wallpaper.webp",
-    description: "Cerradura inteligente de ingeniería GUXIN en versión estándar. Diseño de palanca con lector de huella frontal iluminado, acceso por contraseña, tarjeta IC y llave de emergencia. Solución robusta para uso intensivo en obra.",
+    wallpaper: "/images/CERRADURA/WALLPAPER/s933wallpaper.webp",
+    description: "Cerradura inteligente de ingenierÃ­a GUXIN en versiÃ³n estÃ¡ndar. DiseÃ±o de palanca con lector de huella frontal iluminado, acceso por contraseÃ±a, tarjeta IC y llave de emergencia. SoluciÃ³n robusta para uso intensivo en obra.",
     specs: [
       { label: "Mecanismo", value: "Semi-Auto" },
       { label: "Acceso", value: "Huella + IC" },
-      { label: "Línea", value: "Ingeniería" }
+      { label: "LÃ­nea", value: "IngenierÃ­a" }
     ],
     details: {
-      Tipo: "Inteligente de Ingeniería",
-      Versión: "Estándar",
-      Características: "Huella + Contraseña + Tarjeta IC + Llave de Emergencia",
+      Tipo: "Inteligente de IngenierÃ­a",
+      VersiÃ³n: "EstÃ¡ndar",
+      CaracterÃ­sticas: "Huella + ContraseÃ±a + Tarjeta IC + Llave de Emergencia",
       Color: "Negro",
-      Cuerpo_Compatible: "Doble Rápido Mecánico",
+      Cuerpo_Compatible: "Doble RÃ¡pido MecÃ¡nico",
       Cilindro_Compatible: "Lunar Doble Fila Cabeza Simple / Antipalanca Triple Cabeza Simple"
     },
     performance: [
-      { label: "Biometría", value: "Huella Dactilar", level: "Lector Iluminado" },
-      { label: "Mecanismo", value: "Semi-Auto", level: "Palanca Ergonómica" },
-      { label: "Seguridad", value: "Tarjeta IC", level: "Cifrado Estándar" },
-      { label: "Uso", value: "Intensivo", level: "Grado Ingeniería" },
-      { label: "Acceso", value: "4 Métodos", level: "Huella + Clave + IC" },
+      { label: "BiometrÃ­a", value: "Huella Dactilar", level: "Lector Iluminado" },
+      { label: "Mecanismo", value: "Semi-Auto", level: "Palanca ErgonÃ³mica" },
+      { label: "Seguridad", value: "Tarjeta IC", level: "Cifrado EstÃ¡ndar" },
+      { label: "Uso", value: "Intensivo", level: "Grado IngenierÃ­a" },
+      { label: "Acceso", value: "4 MÃ©todos", level: "Huella + Clave + IC" },
       { label: "Respaldo", value: "Llave Emergencia", level: "Seguridad Total" }
     ],
     colors: { interior: [{ name: "Negro", hex: "#111111" }] }
@@ -605,9 +605,9 @@ const MODELOS = [
     id: "s932-square-standard",
     name: "S932",
     category: "Smart Lock",
-    type: "Facial — Cuadrado Estándar",
+    type: "Facial â€” Cuadrado EstÃ¡ndar",
     img: "/images/CERRADURA/s932.webp",
-    description: "Cerradura inteligente facial con tapa cuadrada en versión estándar. Ojo de buey con captura por timbre, apertura remota y pantalla trasera. Acceso por huella, contraseña, llave y tarjeta CPU.",
+    description: "Cerradura inteligente facial con tapa cuadrada en versiÃ³n estÃ¡ndar. Ojo de buey con captura por timbre, apertura remota y pantalla trasera. Acceso por huella, contraseÃ±a, llave y tarjeta CPU.",
     specs: [
       { label: "Tapa", value: "Cuadrada" },
       { label: "Acceso", value: "Facial + CPU" },
@@ -615,19 +615,19 @@ const MODELOS = [
     ],
     details: {
       Tipo: "Inteligente Facial",
-      Versión: "Estándar — Tapa Cuadrada",
-      Características: "Ojo de Buey (Timbre + Captura) + Apertura Remota + Pantalla Posterior",
+      VersiÃ³n: "EstÃ¡ndar â€” Tapa Cuadrada",
+      CaracterÃ­sticas: "Ojo de Buey (Timbre + Captura) + Apertura Remota + Pantalla Posterior",
       Color: "Gris Pizarra / Negro",
-      Cuerpo_Compatible: "Mecánica WONLY Auto/Rápido Serie 1/2×5",
-      Cilindro_Compatible: "Electrónico Wang Li / Eléctrico 3 filas"
+      Cuerpo_Compatible: "MecÃ¡nica WONLY Auto/RÃ¡pido Serie 1/2Ã—5",
+      Cilindro_Compatible: "ElectrÃ³nico Wang Li / ElÃ©ctrico 3 filas"
     },
     performance: [
-      { label: "Biometría", value: "Facial + Huella", level: "Doble Biometría" },
+      { label: "BiometrÃ­a", value: "Facial + Huella", level: "Doble BiometrÃ­a" },
       { label: "Vigilancia", value: "Ojo de Buey", level: "Captura al Timbre" },
       { label: "Remoto", value: "App Control", level: "Apertura a Distancia" },
       { label: "Seguridad", value: "Tarjeta CPU", level: "Anti-copia Avanzado" },
-      { label: "Acceso", value: "Huella + Clave", level: "5 Métodos + WeChat" },
-      { label: "Respaldo", value: "Llave Mecánica", level: "Emergencia" }
+      { label: "Acceso", value: "Huella + Clave", level: "5 MÃ©todos + WeChat" },
+      { label: "Respaldo", value: "Llave MecÃ¡nica", level: "Emergencia" }
     ],
     colors: { interior: [{ name: "Gris Pizarra", hex: "#4a4a4a" }, { name: "Negro", hex: "#111111" }] }
   },
@@ -635,29 +635,29 @@ const MODELOS = [
     id: "s932-square-pro",
     name: "S932 Pro",
     category: "Smart Lock",
-    type: "Facial — Cuadrado Pro",
+    type: "Facial â€” Cuadrado Pro",
     img: "/images/CERRADURA/s932.webp",
-    description: "Versión Pro de la S932 con tapa cuadrada. Añade reconocimiento facial 3D completo al ojo de buey, captura por timbre mejorada y pantalla trasera HD.",
+    description: "VersiÃ³n Pro de la S932 con tapa cuadrada. AÃ±ade reconocimiento facial 3D completo al ojo de buey, captura por timbre mejorada y pantalla trasera HD.",
     specs: [
       { label: "Tapa", value: "Cuadrada" },
-      { label: "Biometría", value: "Facial 3D" },
+      { label: "BiometrÃ­a", value: "Facial 3D" },
       { label: "Pantalla", value: "Posterior HD" }
     ],
     details: {
       Tipo: "Inteligente Facial",
-      Versión: "Pro — Tapa Cuadrada",
-      Características: "Facial 3D + Ojo de Buey (Timbre + Captura) + Apertura Remota + Pantalla HD",
+      VersiÃ³n: "Pro â€” Tapa Cuadrada",
+      CaracterÃ­sticas: "Facial 3D + Ojo de Buey (Timbre + Captura) + Apertura Remota + Pantalla HD",
       Color: "Gris Pizarra / Negro",
-      Cuerpo_Compatible: "Mecánica WONLY Auto/Rápido Serie 1/2×5",
-      Cilindro_Compatible: "Electrónico Wang Li / Eléctrico 3 filas"
+      Cuerpo_Compatible: "MecÃ¡nica WONLY Auto/RÃ¡pido Serie 1/2Ã—5",
+      Cilindro_Compatible: "ElectrÃ³nico Wang Li / ElÃ©ctrico 3 filas"
     },
     performance: [
-      { label: "Biometría", value: "Facial 3D", level: "Alta Precisión" },
+      { label: "BiometrÃ­a", value: "Facial 3D", level: "Alta PrecisiÃ³n" },
       { label: "Vigilancia", value: "Ojo de Buey", level: "Captura al Timbre" },
       { label: "Remoto", value: "App Control", level: "Apertura a Distancia" },
       { label: "Seguridad", value: "Tarjeta CPU", level: "Anti-copia Avanzado" },
       { label: "Pantalla", value: "Posterior HD", level: "Monitor Trasero" },
-      { label: "Respaldo", value: "Llave Mecánica", level: "Emergencia" }
+      { label: "Respaldo", value: "Llave MecÃ¡nica", level: "Emergencia" }
     ],
     colors: { interior: [{ name: "Gris Pizarra", hex: "#4a4a4a" }, { name: "Negro", hex: "#111111" }] }
   },
@@ -665,29 +665,29 @@ const MODELOS = [
     id: "s80-standard",
     name: "S80",
     category: "Smart Lock",
-    type: "Telesensado Estándar",
+    type: "Telesensado EstÃ¡ndar",
     img: "/images/CERRADURA/s80-lock.webp",
-    wallpaper: "/images/CERRADURA/wallpaper/s80wallpaper.webp",
-    description: "Cerradura de telesensado con reconocimiento facial 3D, apertura y visión remota, ojo de buey con captura por intrusión y pantalla trasera de 5 pulgadas. Acabado en Negro Xuanwu (玄武金).",
+    wallpaper: "/images/CERRADURA/WALLPAPER/s80wallpaper.webp",
+    description: "Cerradura de telesensado con reconocimiento facial 3D, apertura y visiÃ³n remota, ojo de buey con captura por intrusiÃ³n y pantalla trasera de 5 pulgadas. Acabado en Negro Xuanwu (çŽ„æ­¦é‡‘).",
     specs: [
       { label: "Sensor", value: "Telesensado" },
-      { label: "Biometría", value: "Facial 3D" },
+      { label: "BiometrÃ­a", value: "Facial 3D" },
       { label: "Pantalla", value: "5.0''" }
     ],
     details: {
       Tipo: "Inteligente con Sensor Remoto",
-      Versión: "Estándar",
-      Características: "Telesensado + Facial 3D + Apertura Remota + Visión Remota + Ojo de Buey + Captura Intrusión + Pantalla 5\"",
+      VersiÃ³n: "EstÃ¡ndar",
+      CaracterÃ­sticas: "Telesensado + Facial 3D + Apertura Remota + VisiÃ³n Remota + Ojo de Buey + Captura IntrusiÃ³n + Pantalla 5\"",
       Pantalla: "5 Pulgadas",
-      Color: "Negro Xuanwu (玄武金)",
-      Cuerpo_Compatible: "Mecánica WONLY Auto/Rápido Serie 1/2×5",
-      Cilindro_Compatible: "Electrónico Wang Li / Eléctrico 3 filas"
+      Color: "Negro Xuanwu (çŽ„æ­¦é‡‘)",
+      Cuerpo_Compatible: "MecÃ¡nica WONLY Auto/RÃ¡pido Serie 1/2Ã—5",
+      Cilindro_Compatible: "ElectrÃ³nico Wang Li / ElÃ©ctrico 3 filas"
     },
     performance: [
-      { label: "Detección", value: "Telesensado", level: "Apertura Automática" },
-      { label: "Biometría", value: "Facial 3D", level: "Anti-falsificación" },
+      { label: "DetecciÃ³n", value: "Telesensado", level: "Apertura AutomÃ¡tica" },
+      { label: "BiometrÃ­a", value: "Facial 3D", level: "Anti-falsificaciÃ³n" },
       { label: "Remote", value: "Apertura + Vista", level: "Control Total" },
-      { label: "Vigilancia", value: "Ojo de Buey", level: "Captura Intrusión" },
+      { label: "Vigilancia", value: "Ojo de Buey", level: "Captura IntrusiÃ³n" },
       { label: "Pantalla", value: "5 Pulgadas", level: "Gran Formato" },
       { label: "Respaldo", value: "Llave / M1 / APP", level: "Emergencia" }
     ],
@@ -704,12 +704,12 @@ const HARDWARE_RAW = [
       { name: "Cerradura de 5 pernos", img: "/images/CERRADURA/ACCESORIO/hard-cuerpo-5pernos.webp" },
       { name: "Cerradura Empotrada", img: "/images/CERRADURA/ACCESORIO/hard-cuerpo-empotrada.webp" },
       { name: "Cerradura Autocontrol", img: "/images/CERRADURA/ACCESORIO/hard-cuerpo-auto.webp" },
-      { name: "Anti-explosión A7-3", img: "/images/CERRADURA/ACCESORIO/hard-cuerpo-a73.webp" }
+      { name: "Anti-explosiÃ³n A7-3", img: "/images/CERRADURA/ACCESORIO/hard-cuerpo-a73.webp" }
     ]
   },
   {
     category: "Cilindros de Seguridad",
-    description: "Núcleos blindados anti-ganzúa",
+    description: "NÃºcleos blindados anti-ganzÃºa",
     items: [
       { name: "Plegable Doble Fila", img: "/images/CERRADURA/ACCESORIO/hard-cilindro-plegable.webp" },
       { name: "Doble Fila Negra", img: "/images/CERRADURA/ACCESORIO/hard-cilindro-negro.webp" },
@@ -731,7 +731,7 @@ const HARDWARE_RAW = [
   },
   {
     category: "Manijas",
-    description: "Ergonomía y diseño premium",
+    description: "ErgonomÃ­a y diseÃ±o premium",
     items: [
       { name: "PF6851", img: "/images/CERRADURA/ACCESORIO/hard-manija-pf6851.webp" },
       { name: "PG6818", img: "/images/CERRADURA/ACCESORIO/hard-manija-pg6818.webp" },
@@ -742,10 +742,10 @@ const HARDWARE_RAW = [
   },
   {
     category: "Mirillas",
-    description: "Visión clara y protección física",
+    description: "VisiÃ³n clara y protecciÃ³n fÃ­sica",
     items: [
-      { name: "Antirrobo Ignífuga", img: "/images/CERRADURA/ACCESORIO/hard-mirilla-fuego.webp" },
-      { name: "Aleación de Zinc", img: "/images/CERRADURA/ACCESORIO/hard-mirilla-zinc.webp" },
+      { name: "Antirrobo IgnÃ­fuga", img: "/images/CERRADURA/ACCESORIO/hard-mirilla-fuego.webp" },
+      { name: "AleaciÃ³n de Zinc", img: "/images/CERRADURA/ACCESORIO/hard-mirilla-zinc.webp" },
       { name: "Antirrobo Cobre", img: "/images/CERRADURA/ACCESORIO/hard-mirilla-cobre.webp" }
     ]
   }
@@ -758,27 +758,27 @@ HARDWARE_RAW.forEach(cat => {
       name: item.name,
       img: item.img,
       category: cat.category,
-      description: cat.description // Guardamos la descripción de la categoría
+      description: cat.description // Guardamos la descripciÃ³n de la categorÃ­a
     });
   });
 });
 
 async function uploadData() {
-  console.log(`📡 Conectando a Supabase...`);
+  console.log(`ðŸ“¡ Conectando a Supabase...`);
 
-  // 1. SUBIR MODELOS (borrar todo primero para eliminar registros huérfanos)
+  // 1. SUBIR MODELOS (borrar todo primero para eliminar registros huÃ©rfanos)
   console.log(`Subiendo ${MODELOS.length} Cerraduras...`);
   const { error: errDeleteLocks } = await supabase.from('locks').delete().neq('id', '');
   if (errDeleteLocks) {
-    console.error('❌ Error al limpiar locks:', errDeleteLocks.message);
+    console.error('âŒ Error al limpiar locks:', errDeleteLocks.message);
     return;
   }
   const { error: err1 } = await supabase.from('locks').insert(MODELOS);
 
   if (err1) {
-    console.error('❌ Error locks:', err1.message);
+    console.error('âŒ Error locks:', err1.message);
   } else {
-    console.log('✅ Cerraduras subidas.');
+    console.log('âœ… Cerraduras subidas.');
   }
 
   // 2. SUBIR HARDWARE
@@ -789,8 +789,8 @@ async function uploadData() {
 
   if (!errDelete) {
     const { error: err2 } = await supabase.from('lock_hardware').insert(HARDWARE_FLAT);
-    if (err2) console.error('❌ Error hardware:', err2.message);
-    else console.log('✅ Hardware subido.');
+    if (err2) console.error('âŒ Error hardware:', err2.message);
+    else console.log('âœ… Hardware subido.');
   } else {
     console.error('Error al limpiar tabla hardware:', errDelete);
   }
