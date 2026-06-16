@@ -111,16 +111,45 @@ const ProductModal = memo(({ product, onClose }) => {
   }, []);
   if (!product) return null;
 
+  const hasWallpaper = !!product?.wallpaper;
+
   return (
     <div className="fixed inset-0 z-[100] flex justify-end">
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.2 }}
-        className="absolute inset-0 bg-black/85"
-        onClick={onClose}
-      />
+      {/* BACKDROP — wallpaper animado para S80, oscuro para el resto */}
+      {hasWallpaper ? (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.25 }}
+          className="absolute inset-0"
+          onClick={onClose}
+        >
+          {/* Wallpaper solo en la zona izquierda, sin cubrir el panel */}
+          <div className="absolute inset-0 right-[680px] overflow-hidden">
+            <motion.img
+              src={product.wallpaper}
+              alt=""
+              aria-hidden="true"
+              initial={{ scale: 1.08 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </div>
+        </motion.div>
+      ) : (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+          className="absolute inset-0 bg-black/85"
+          onClick={onClose}
+        />
+      )}
+
+      {/* PANEL LATERAL — igual para todos los productos */}
       <motion.div
         initial={{ x: "100%" }}
         animate={{ x: 0 }}
@@ -147,7 +176,7 @@ const ProductModal = memo(({ product, onClose }) => {
         </div>
 
         <div className="p-8 space-y-8">
-          {/* Imagen — fondo blanco para que encaje la foto */}
+          {/* Imagen */}
           <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-white border border-white/10 flex items-center justify-center">
             <img
               src={product.img}

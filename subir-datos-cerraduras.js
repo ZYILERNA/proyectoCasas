@@ -8,9 +8,9 @@ const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 if (!supabaseUrl || !supabaseKey) {
-    console.error("❌ Error: Faltan las variables de entorno en .env.local");
-    console.error("Asegúrate de tener NEXT_PUBLIC_SUPABASE_URL y SUPABASE_SERVICE_ROLE_KEY");
-    process.exit(1);
+  console.error("❌ Error: Faltan las variables de entorno en .env.local");
+  console.error("Asegúrate de tener NEXT_PUBLIC_SUPABASE_URL y SUPABASE_SERVICE_ROLE_KEY");
+  process.exit(1);
 }
 
 const supabase = createClient(supabaseUrl, supabaseKey);
@@ -23,7 +23,8 @@ const MODELOS = [
     name: "S60 Max",
     category: "Smart Lock",
     type: "Serie Max",
-    img: "/images/CERRADURA/lock-s60-max.webp", 
+    img: "/images/CERRADURA/lock-s60-max.webp",
+    wallpaper: "/images/CERRADURA/wallpaper/s60wallpaper.webp",
     description: "La cerradura inteligente con detección remota real. Se abre automáticamente al acercarte a 2-4 metros. Incorpora reconocimiento facial 3D, mirilla digital con captura de instantáneas y una pantalla trasera de 4,5 pulgadas para máxima seguridad y comodidad.",
     specs: [
       { label: "Pantalla", value: "4.5''" },
@@ -53,7 +54,8 @@ const MODELOS = [
     name: "S922 Max",
     category: "Smart Lock",
     type: "Serie Max",
-    img: "/images/CERRADURA/lock-s922-max.webp", 
+    img: "/images/CERRADURA/lock-s922-max.webp",
+    wallpaper: "/images/CERRADURA/wallpaper/s922maxwallpaper.webp",
     description: "Cerradura inteligente de alta seguridad con reconocimiento facial 3D avanzado. Integra mirilla visual, captura de estancia y una pantalla trasera de 4 pulgadas para un control total del acceso.",
     specs: [
       { label: "Pantalla", value: "4.0''" },
@@ -85,6 +87,7 @@ const MODELOS = [
     category: "Smart Lock",
     type: "Serie Pro",
     img: "/images/CERRADURA/lock-s935-pro.webp",
+    wallpaper: "/images/CERRADURA/wallpaper/s935wallpaper.webp",
     description: "Sistema de seguridad integral con Video Portero y Desbloqueo Remoto. Combina reconocimiento facial 3D, tarjeta CPU de alta seguridad y una pantalla de 4 pulgadas para una gestión de acceso total.",
     specs: [
       { label: "Pantalla", value: "4.0''" },
@@ -146,7 +149,8 @@ const MODELOS = [
     name: "S953 Max",
     category: "Smart Lock",
     type: "Serie Max",
-    img: "/images/CERRADURA/lock-s953-max.webp", 
+    img: "/images/CERRADURA/s953max.webp",
+    wallpaper: "/images/CERRADURA/wallpaper/s953maxwallpaper.webp",
     description: "Tecnología de vanguardia con Reconocimiento de Venas Dactilares para una seguridad infalible. Combina lo mejor de la biometría (facial y venas) con mirilla visual y pantalla de 4 pulgadas.",
     specs: [
       { label: "Biometría", value: "Venas + Facial" },
@@ -173,11 +177,12 @@ const MODELOS = [
     colors: { interior: [{ name: "Negro Obsidiana", hex: "#111111" }] }
   },
   {
-    id: "p15pro",
-    name: "P15 Pro",
+    id: "p15",
+    name: "P15",
     category: "Smart Lock",
     type: "Serie Pro",
-    img: "/images/CERRADURA/lock-p15-pro.webp", 
+    img: "/images/CERRADURA/p15.webp",
+    wallpaper: "/images/CERRADURA/wallpaper/p15wallpaper.webp",
     description: "Diseño elegante con una gran pantalla trasera de 4.5 pulgadas para una visibilidad superior. Integra reconocimiento facial 3D y mirilla digital con captura de estancia, ideal para quienes buscan tecnología visual avanzada.",
     specs: [
       { label: "Pantalla", value: "4.5''" },
@@ -208,7 +213,8 @@ const MODELOS = [
     name: "S936",
     category: "Smart Lock",
     type: "Semi-Auto",
-    img: "/images/CERRADURA/lock-s936.webp", 
+    img: "/images/CERRADURA/lock-s936.webp",
+    wallpaper: "/images/CERRADURA/wallpaper/s936wallpaper.webp",
     description: "Cerradura inteligente semi-automática con diseño ergonómico de 'un solo agarre'. Ideal para acceso rápido mediante huella dactilar, combinando simplicidad de uso y seguridad con tarjeta cifrada M1.",
     specs: [
       { label: "Apertura", value: "Un Agarre" },
@@ -237,6 +243,7 @@ const MODELOS = [
     category: "Flagship",
     type: "Smart Lock UWB",
     img: "/images/CERRADURA/s80-lock.webp",
+    wallpaper: "/images/CERRADURA/wallpaper/s80wallpaper.webp",
     description: "La cerradura más avanzada con tecnología UWB de 4ª generación. Detecta tu presencia y abre automáticamente. Cuenta con pantalla interactiva que reacciona con 50 expresiones y monitoreo activo.",
     specs: [
       { value: "UWB 4.0", label: "Tecnología" },
@@ -294,7 +301,8 @@ const MODELOS = [
     name: "S80 Max Flagship",
     category: "Tope de Gama",
     type: "UWB + 3D Face ID",
-    img: "/images/CERRADURA/s80-max.webp", 
+    img: "/images/CERRADURA/s80-max.webp",
+    wallpaper: "/images/CERRADURA/wallpaper/s80wallpaper.webp",
     description: "El estándar más alto en seguridad inteligente. Combina detección UWB de 4ª generación para apertura automática con una cámara de visión nocturna a todo color y 9 métodos de acceso.",
     specs: [
       { value: "UWB 4.0", label: "Sensor" },
@@ -323,6 +331,7 @@ const MODELOS = [
     name: "S60M Smart Home",
     category: "Ecosistema Mijia",
     type: "Face ID + App Control",
+    wallpaper: "/images/CERRADURA/wallpaper/s60wallpaper.webp",
     img: "/images/CERRADURA/s60m.webp",
     description: "La opción definitiva para la domótica. Se integra perfectamente con el ecosistema Xiaomi (Mijia) y ofrece videoportero remoto, pantalla de 4.5 pulgadas y visión nocturna por doble infrarrojo.",
     specs: [
@@ -410,6 +419,7 @@ const MODELOS = [
     name: "S60 Pro Ultra",
     category: "Gama Alta",
     type: "Palm Vein + Face ID",
+    wallpaper: "/images/CERRADURA/wallpaper/s60wallpaper.webp",
     img: "/images/CERRADURA/s60-pro.webp",
     description: "El modelo más sofisticado. Incorpora desbloqueo por meridianos de la palma (Palm Vein), sensor de movimiento, gestión por App y acabado de lujo.",
     specs: [
@@ -437,7 +447,7 @@ const MODELOS = [
   {
     id: "d235-facetime",
     name: "D235 Global",
-    category: "Video Connect", 
+    category: "Video Connect",
     type: "FaceTime + Palm Vein",
     img: "/images/CERRADURA/d235.webp",
     description: "Tecnología global con interfaz en 9 idiomas y sistema 'FaceTime' para videollamadas directas. Combina reconocimiento de venas y contraseñas de un solo uso.",
@@ -488,11 +498,11 @@ const MODELOS = [
       { label: "Material", value: "Aluminio", level: "Robusto" },
       { label: "Respaldo", value: "Llave/IC", level: "Emergencia" }
     ],
-    colors: { 
-        interior: [
-            { name: "Negro", hex: "#111111" }, 
-            { name: "Gris Metal", hex: "#4a4a4a" }
-        ] 
+    colors: {
+      interior: [
+        { name: "Negro", hex: "#111111" },
+        { name: "Gris Metal", hex: "#4a4a4a" }
+      ]
     }
   },
   {
@@ -500,7 +510,8 @@ const MODELOS = [
     name: "P10",
     category: "Smart Lock",
     type: "Serie Pro",
-    img: "/images/CERRADURA/lock-p10-pro.webp",
+    img: "/images/CERRADURA/p10.webp",
+    wallpaper: "/images/CERRADURA/wallpaper/p10wallpaper.webp",
     description: "Serie 3D de alta gama con pantalla trasera de 4.5\", ojo de buey con cámara visible y captura automática por intrusión. Biometría avanzada con acceso por WeChat/QR.",
     specs: [
       { label: "Pantalla", value: "4.5''" },
@@ -531,7 +542,8 @@ const MODELOS = [
     name: "Z117-Z",
     category: "Smart Lock",
     type: "Semi-Auto Ingeniería",
-    img: "/images/CERRADURA/lock-z117z.webp",
+    img: "/images/CERRADURA/z117-z.webp",
+    wallpaper: "/images/CERRADURA/wallpaper/z117-zwallpaper.webp",
     description: "Cerradura inteligente semi-automática de la línea de ingeniería GUXIN. Diseño robusto con manija de palanca, acceso por huella, contraseña, llave y tarjeta IC. Ideal para proyectos de obra y uso intensivo.",
     specs: [
       { label: "Mecanismo", value: "Semi-Auto" },
@@ -561,7 +573,8 @@ const MODELOS = [
     name: "XD515",
     category: "Smart Lock",
     type: "Semi-Auto Ingeniería",
-    img: "/images/CERRADURA/lock-xd515.webp",
+    img: "/images/CERRADURA/xd515.webp",
+    wallpaper: "/images/CERRADURA/wallpaper/xd515wallpaper.webp",
     description: "Cerradura inteligente semi-automática de ingeniería WONLY con apertura remota y pantalla integrada. Diseño de palanca compacto con acceso por huella, contraseña, llave, tarjeta IC y WeChat/QR.",
     specs: [
       { label: "Mecanismo", value: "Semi-Auto" },
@@ -591,7 +604,8 @@ const MODELOS = [
     name: "S933",
     category: "Smart Lock",
     type: "Ingeniería Estándar",
-    img: "/images/CERRADURA/lock-s933.webp",
+    img: "/images/CERRADURA/s933.webp",
+    wallpaper: "/images/CERRADURA/wallpaper/s933wallpaper.webp",
     description: "Cerradura inteligente de ingeniería GUXIN en versión estándar. Diseño de palanca con lector de huella frontal iluminado, acceso por contraseña, tarjeta IC y llave de emergencia. Solución robusta para uso intensivo en obra.",
     specs: [
       { label: "Mecanismo", value: "Semi-Auto" },
@@ -621,7 +635,7 @@ const MODELOS = [
     name: "S932",
     category: "Smart Lock",
     type: "Facial — Cuadrado Estándar",
-    img: "/images/CERRADURA/lock-s932-square-standard.webp",
+    img: "/images/CERRADURA/s932.webp",
     description: "Cerradura inteligente facial con tapa cuadrada en versión estándar. Ojo de buey con captura por timbre, apertura remota y pantalla trasera. Acceso por huella, contraseña, llave y tarjeta CPU.",
     specs: [
       { label: "Tapa", value: "Cuadrada" },
@@ -651,7 +665,7 @@ const MODELOS = [
     name: "S932 Pro",
     category: "Smart Lock",
     type: "Facial — Cuadrado Pro",
-    img: "/images/CERRADURA/lock-s932-square-pro.webp",
+    img: "/images/CERRADURA/s932.webp",
     description: "Versión Pro de la S932 con tapa cuadrada. Añade reconocimiento facial 3D completo al ojo de buey, captura por timbre mejorada y pantalla trasera HD.",
     specs: [
       { label: "Tapa", value: "Cuadrada" },
@@ -681,7 +695,8 @@ const MODELOS = [
     name: "S80",
     category: "Smart Lock",
     type: "Telesensado Estándar",
-    img: "/images/CERRADURA/lock-s80-standard.webp",
+    img: "/images/CERRADURA/s80-lock.webp",
+    wallpaper: "/images/CERRADURA/wallpaper/s80wallpaper.webp",
     description: "Cerradura de telesensado con reconocimiento facial 3D, apertura y visión remota, ojo de buey con captura por intrusión y pantalla trasera de 5 pulgadas. Acabado en Negro Xuanwu (玄武金).",
     specs: [
       { label: "Sensor", value: "Telesensado" },
@@ -767,14 +782,14 @@ const HARDWARE_RAW = [
 
 const HARDWARE_FLAT = [];
 HARDWARE_RAW.forEach(cat => {
-    cat.items.forEach(item => {
-        HARDWARE_FLAT.push({
-            name: item.name,
-            img: item.img,
-            category: cat.category,
-            description: cat.description // Guardamos la descripción de la categoría
-        });
+  cat.items.forEach(item => {
+    HARDWARE_FLAT.push({
+      name: item.name,
+      img: item.img,
+      category: cat.category,
+      description: cat.description // Guardamos la descripción de la categoría
     });
+  });
 });
 
 async function uploadData() {
@@ -800,13 +815,13 @@ async function uploadData() {
   // Limpiamos tabla hardware para evitar duplicados al correr el script varias veces
   // (Ojo: esto borra todo en lock_hardware antes de insertar lo nuevo)
   const { error: errDelete } = await supabase.from('lock_hardware').delete().neq('id', '00000000-0000-0000-0000-000000000000');
-  
+
   if (!errDelete) {
-      const { error: err2 } = await supabase.from('lock_hardware').insert(HARDWARE_FLAT);
-      if (err2) console.error('❌ Error hardware:', err2.message);
-      else console.log('✅ Hardware subido.');
+    const { error: err2 } = await supabase.from('lock_hardware').insert(HARDWARE_FLAT);
+    if (err2) console.error('❌ Error hardware:', err2.message);
+    else console.log('✅ Hardware subido.');
   } else {
-      console.error('Error al limpiar tabla hardware:', errDelete);
+    console.error('Error al limpiar tabla hardware:', errDelete);
   }
 }
 
