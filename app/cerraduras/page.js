@@ -122,33 +122,34 @@ const ProductModal = memo(({ product, onClose }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.25 }}
-          className="absolute inset-0"
+          className="absolute inset-0 bg-black/80"
           onClick={onClose}
         >
-          <motion.img
-            src="/images/CERRADURA/wallpaper/s80wallpaper.webp"
-            alt=""
-            aria-hidden="true"
-            initial={{ scale: 1.08 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 1.2, ease: "easeOut" }}
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          {/* Oscurecer bordes y fusionar con el panel derecho */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/10 to-[#080808]" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/40" />
-          {/* Texto sobre el wallpaper, en la zona visible (izquierda del panel) */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.45 }}
-            className="absolute bottom-12 left-12 right-[700px] pointer-events-none"
-          >
-            <p className="text-[#00C2FF] text-[9px] font-bold uppercase tracking-[0.35em] mb-3">Serie S80</p>
-            <h3 className="text-white text-3xl font-bold leading-tight mb-3">{product.name}</h3>
-            <div className="w-8 h-0.5 bg-[#00C2FF] mb-3" />
-            <p className="text-gray-300 text-sm leading-relaxed line-clamp-3 max-w-xs">{product.description}</p>
-          </motion.div>
+          {/* Wallpaper solo en la zona izquierda, sin cubrir el panel */}
+          <div className="absolute inset-0 right-[680px] overflow-hidden">
+            <motion.img
+              src="/images/CERRADURA/wallpaper/s80wallpaper.webp"
+              alt=""
+              aria-hidden="true"
+              initial={{ scale: 1.08 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/70" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/40" />
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.45 }}
+              className="absolute bottom-12 left-12 right-8 pointer-events-none"
+            >
+              <p className="text-[#00C2FF] text-[9px] font-bold uppercase tracking-[0.35em] mb-3">Serie S80</p>
+              <h3 className="text-white text-3xl font-bold leading-tight mb-3">{product.name}</h3>
+              <div className="w-8 h-0.5 bg-[#00C2FF] mb-3" />
+              <p className="text-gray-300 text-sm leading-relaxed line-clamp-3 max-w-xs">{product.description}</p>
+            </motion.div>
+          </div>
         </motion.div>
       ) : (
         <motion.div
