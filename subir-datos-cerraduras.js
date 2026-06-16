@@ -55,6 +55,7 @@ const MODELOS = [
     category: "Smart Lock",
     type: "Serie Max",
     img: "/images/CERRADURA/lock-s922-max.webp",
+    wallpaper: "/images/CERRADURA/wallpaper/s922maxwallpaper.webp",
     description: "Cerradura inteligente de alta seguridad con reconocimiento facial 3D avanzado. Integra mirilla visual, captura de estancia y una pantalla trasera de 4 pulgadas para un control total del acceso.",
     specs: [
       { label: "Pantalla", value: "4.0''" },
@@ -148,7 +149,8 @@ const MODELOS = [
     name: "S953 Max",
     category: "Smart Lock",
     type: "Serie Max",
-    img: "/images/CERRADURA/lock-s953-max.webp",
+    img: "/images/CERRADURA/s953max.webp",
+    wallpaper: "/images/CERRADURA/wallpaper/s953maxwallpaper.webp",
     description: "Tecnología de vanguardia con Reconocimiento de Venas Dactilares para una seguridad infalible. Combina lo mejor de la biometría (facial y venas) con mirilla visual y pantalla de 4 pulgadas.",
     specs: [
       { label: "Biometría", value: "Venas + Facial" },
@@ -175,11 +177,12 @@ const MODELOS = [
     colors: { interior: [{ name: "Negro Obsidiana", hex: "#111111" }] }
   },
   {
-    id: "p15pro",
-    name: "P15 Pro",
+    id: "p15",
+    name: "P15",
     category: "Smart Lock",
     type: "Serie Pro",
-    img: "/images/CERRADURA/lock-p15-pro.webp",
+    img: "/images/CERRADURA/p15.webp",
+    wallpaper: "/images/CERRADURA/wallpaper/p15wallpaper.webp",
     description: "Diseño elegante con una gran pantalla trasera de 4.5 pulgadas para una visibilidad superior. Integra reconocimiento facial 3D y mirilla digital con captura de estancia, ideal para quienes buscan tecnología visual avanzada.",
     specs: [
       { label: "Pantalla", value: "4.5''" },
@@ -211,6 +214,7 @@ const MODELOS = [
     category: "Smart Lock",
     type: "Semi-Auto",
     img: "/images/CERRADURA/lock-s936.webp",
+    wallpaper: "/images/CERRADURA/wallpaper/s936wallpaper.webp",
     description: "Cerradura inteligente semi-automática con diseño ergonómico de 'un solo agarre'. Ideal para acceso rápido mediante huella dactilar, combinando simplicidad de uso y seguridad con tarjeta cifrada M1.",
     specs: [
       { label: "Apertura", value: "Un Agarre" },
@@ -506,7 +510,8 @@ const MODELOS = [
     name: "P10",
     category: "Smart Lock",
     type: "Serie Pro",
-    img: "/images/CERRADURA/lock-p10-pro.webp",
+    img: "/images/CERRADURA/p10.webp",
+    wallpaper: "/images/CERRADURA/wallpaper/p10wallpaper.webp",
     description: "Serie 3D de alta gama con pantalla trasera de 4.5\", ojo de buey con cámara visible y captura automática por intrusión. Biometría avanzada con acceso por WeChat/QR.",
     specs: [
       { label: "Pantalla", value: "4.5''" },
@@ -537,7 +542,8 @@ const MODELOS = [
     name: "Z117-Z",
     category: "Smart Lock",
     type: "Semi-Auto Ingeniería",
-    img: "/images/CERRADURA/lock-z117z.webp",
+    img: "/images/CERRADURA/z117-z.webp",
+    wallpaper: "/images/CERRADURA/wallpaper/z117-zwallpaper.webp",
     description: "Cerradura inteligente semi-automática de la línea de ingeniería GUXIN. Diseño robusto con manija de palanca, acceso por huella, contraseña, llave y tarjeta IC. Ideal para proyectos de obra y uso intensivo.",
     specs: [
       { label: "Mecanismo", value: "Semi-Auto" },
@@ -567,7 +573,8 @@ const MODELOS = [
     name: "XD515",
     category: "Smart Lock",
     type: "Semi-Auto Ingeniería",
-    img: "/images/CERRADURA/lock-xd515.webp",
+    img: "/images/CERRADURA/xd515.webp",
+    wallpaper: "/images/CERRADURA/wallpaper/xd515wallpaper.webp",
     description: "Cerradura inteligente semi-automática de ingeniería WONLY con apertura remota y pantalla integrada. Diseño de palanca compacto con acceso por huella, contraseña, llave, tarjeta IC y WeChat/QR.",
     specs: [
       { label: "Mecanismo", value: "Semi-Auto" },
@@ -597,7 +604,8 @@ const MODELOS = [
     name: "S933",
     category: "Smart Lock",
     type: "Ingeniería Estándar",
-    img: "/images/CERRADURA/lock-s933.webp",
+    img: "/images/CERRADURA/s933.webp",
+    wallpaper: "/images/CERRADURA/wallpaper/s933wallpaper.webp",
     description: "Cerradura inteligente de ingeniería GUXIN en versión estándar. Diseño de palanca con lector de huella frontal iluminado, acceso por contraseña, tarjeta IC y llave de emergencia. Solución robusta para uso intensivo en obra.",
     specs: [
       { label: "Mecanismo", value: "Semi-Auto" },
@@ -627,7 +635,7 @@ const MODELOS = [
     name: "S932",
     category: "Smart Lock",
     type: "Facial — Cuadrado Estándar",
-    img: "/images/CERRADURA/lock-s932-square-standard.webp",
+    img: "/images/CERRADURA/s932.webp",
     description: "Cerradura inteligente facial con tapa cuadrada en versión estándar. Ojo de buey con captura por timbre, apertura remota y pantalla trasera. Acceso por huella, contraseña, llave y tarjeta CPU.",
     specs: [
       { label: "Tapa", value: "Cuadrada" },
@@ -657,7 +665,7 @@ const MODELOS = [
     name: "S932 Pro",
     category: "Smart Lock",
     type: "Facial — Cuadrado Pro",
-    img: "/images/CERRADURA/lock-s932-square-pro.webp",
+    img: "/images/CERRADURA/s932.webp",
     description: "Versión Pro de la S932 con tapa cuadrada. Añade reconocimiento facial 3D completo al ojo de buey, captura por timbre mejorada y pantalla trasera HD.",
     specs: [
       { label: "Tapa", value: "Cuadrada" },
