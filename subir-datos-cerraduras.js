@@ -681,7 +681,7 @@ const MODELOS = [
     name: "S80",
     category: "Smart Lock",
     type: "Telesensado Estándar",
-    img: "/images/CERRADURA/lock-s80-standard.webp",
+    img: "/images/CERRADURA/s80-lock.webp",
     description: "Cerradura de telesensado con reconocimiento facial 3D, apertura y visión remota, ojo de buey con captura por intrusión y pantalla trasera de 5 pulgadas. Acabado en Negro Xuanwu (玄武金).",
     specs: [
       { label: "Sensor", value: "Telesensado" },
