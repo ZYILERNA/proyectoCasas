@@ -111,6 +111,106 @@ const ProductModal = memo(({ product, onClose }) => {
   }, []);
   if (!product) return null;
 
+  const isS80 = product?.id?.startsWith('s80');
+
+  const rightPanel = (
+    <>
+      {/* Header */}
+      <div className="sticky top-0 bg-[#080808]/95 backdrop-blur z-30 px-8 py-6 border-b border-white/5 flex justify-between items-start shrink-0">
+        <div>
+          <div className="flex items-center gap-2 mb-1">
+            <span className="text-[#00C2FF] text-[10px] font-bold uppercase tracking-widest">{product.category}</span>
+            <span className="text-white/20 text-xs">/</span>
+            <span className="text-gray-500 text-[10px] uppercase tracking-wider">{product.type}</span>
+          </div>
+          <h2 className="text-3xl font-bold text-white">{product.name}</h2>
+        </div>
+        <button
+          onClick={onClose}
+          className="text-gray-400 hover:text-white transition-colors p-2 rounded-xl hover:bg-white/8 mt-1"
+        >
+          <X size={20} />
+        </button>
+      </div>
+
+      <div className="p-8 space-y-8 overflow-y-auto flex-1">
+        {/* Imagen — solo en panel no-S80 */}
+        {!isS80 && (
+          <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-white border border-white/10 flex items-center justify-center">
+            <img src={product.img} alt={product.name} className="object-contain w-full h-full p-6" />
+          </div>
+        )}
+
+        {/* Descripción */}
+        <p className="text-gray-300 leading-relaxed">{product.description}</p>
+
+        {/* Detalles técnicos */}
+        {product.details && (
+          <div>
+            <h3 className="text-white text-sm font-bold uppercase tracking-wider mb-4 flex items-center gap-2">
+              <span className="w-4 h-0.5 bg-[#00C2FF] inline-block"></span> Especificaciones
+            </h3>
+            <div className="rounded-xl overflow-hidden border border-white/8 divide-y divide-white/5">
+              {Object.entries(product.details).map(([key, value]) => (
+                <div key={key} className="flex justify-between px-4 py-3 bg-white/3 hover:bg-white/6 transition-colors text-sm">
+                  <span className="text-gray-500 capitalize">{key.replace(/_/g, ' ')}</span>
+                  <span className="text-white font-medium text-right ml-4">{value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Performance */}
+        {product.performance && (
+          <div>
+            <h3 className="text-white text-sm font-bold uppercase tracking-wider mb-4 flex items-center gap-2">
+              <span className="w-4 h-0.5 bg-[#00C2FF] inline-block"></span> Rendimiento
+            </h3>
+            <div className="grid grid-cols-2 gap-3">
+              {product.performance.map((perf, i) => (
+                <div key={i} className="bg-white/4 border border-white/6 rounded-xl p-4 hover:bg-white/7 hover:border-[#00C2FF]/20 transition-all">
+                  <div className="text-[#00C2FF] mb-2">{getPerformanceIcon(perf.label)}</div>
+                  <p className="text-gray-500 text-[10px] uppercase tracking-wider font-bold mb-1">{perf.label}</p>
+                  <p className="text-white font-bold text-sm">{perf.value}</p>
+                  <p className="text-gray-600 text-[10px] mt-0.5">{perf.level}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Colores */}
+        {product.colors?.interior?.length > 0 && (
+          <div>
+            <h3 className="text-white text-sm font-bold uppercase tracking-wider mb-4 flex items-center gap-2">
+              <span className="w-4 h-0.5 bg-[#00C2FF] inline-block"></span> Acabados
+            </h3>
+            <div className="flex flex-wrap gap-4">
+              {product.colors.interior.map((color, i) => (
+                <div key={i} className="flex flex-col items-center gap-2 group cursor-pointer">
+                  <div
+                    className="w-10 h-10 rounded-full border-2 border-white/15 group-hover:border-white/60 group-hover:scale-110 transition-all"
+                    style={{ backgroundColor: color.hex }}
+                  />
+                  <span className="text-[9px] text-gray-500 uppercase font-medium max-w-[64px] text-center leading-tight">{color.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div className="h-2" />
+        <Link
+          href="/contacto"
+          className="flex items-center justify-center gap-2 w-full bg-[#00C2FF] hover:bg-[#00a8e0] transition-colors text-black py-4 font-bold uppercase rounded-xl text-sm tracking-widest"
+        >
+          Solicitar Cotización <ChevronRight size={16} />
+        </Link>
+      </div>
+    </>
+  );
+
   return (
     <div className="fixed inset-0 z-[100] flex justify-end">
       <motion.div
@@ -126,103 +226,51 @@ const ProductModal = memo(({ product, onClose }) => {
         animate={{ x: 0 }}
         exit={{ x: "100%" }}
         transition={{ type: "tween", ease: "easeOut", duration: 0.32 }}
-        className="relative bg-[#080808] w-full max-w-[680px] h-full shadow-2xl overflow-y-auto border-l border-white/8 will-change-transform"
+        className={`relative flex h-full shadow-2xl border-l border-white/8 will-change-transform w-full ${isS80 ? 'max-w-[960px]' : 'max-w-[680px] bg-[#080808] overflow-y-auto flex-col'}`}
       >
-        {/* Header */}
-        <div className="sticky top-0 bg-[#080808]/95 backdrop-blur z-30 px-8 py-6 border-b border-white/5 flex justify-between items-start">
-          <div>
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-[#00C2FF] text-[10px] font-bold uppercase tracking-widest">{product.category}</span>
-              <span className="text-white/20 text-xs">/</span>
-              <span className="text-gray-500 text-[10px] uppercase tracking-wider">{product.type}</span>
+        {isS80 ? (
+          <>
+            {/* PANEL IZQUIERDO — Wallpaper S80 */}
+            <div className="relative w-[380px] shrink-0 h-full overflow-hidden">
+              {/* Imagen con efecto Ken Burns */}
+              <motion.img
+                src="/images/CERRADURA/wallpaper/s80wallpaper.webp"
+                alt="S80 Series"
+                initial={{ scale: 1.12, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 1.1, ease: "easeOut" }}
+                className="absolute inset-0 w-full h-full object-cover"
+                style={{ willChange: "transform" }}
+              />
+              {/* Gradiente lateral derecho para fusión */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#080808]" />
+              {/* Gradiente inferior para texto */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+              {/* Partícula azul sutil */}
+              <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-48 h-48 rounded-full bg-[#00C2FF]/5 blur-3xl pointer-events-none" />
+
+              {/* Contenido sobre el wallpaper */}
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.4 }}
+                className="absolute bottom-10 left-8 right-8"
+              >
+                <p className="text-[#00C2FF] text-[9px] font-bold uppercase tracking-[0.35em] mb-3">Serie S80</p>
+                <h3 className="text-white text-2xl font-bold leading-tight mb-2">{product.name}</h3>
+                <div className="w-8 h-0.5 bg-[#00C2FF] mb-3" />
+                <p className="text-gray-400 text-xs leading-relaxed line-clamp-3">{product.description}</p>
+              </motion.div>
             </div>
-            <h2 className="text-3xl font-bold text-white">{product.name}</h2>
-          </div>
-          <button
-            onClick={onClose}
-            className="text-gray-400 hover:text-white transition-colors p-2 rounded-xl hover:bg-white/8 mt-1"
-          >
-            <X size={20} />
-          </button>
-        </div>
 
-        <div className="p-8 space-y-8">
-          {/* Imagen — fondo blanco para que encaje la foto */}
-          <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-white border border-white/10 flex items-center justify-center">
-            <img
-              src={product.img}
-              alt={product.name}
-              className="object-contain w-full h-full p-6"
-            />
-          </div>
-
-          {/* Descripción */}
-          <p className="text-gray-300 leading-relaxed">{product.description}</p>
-
-          {/* Detalles técnicos */}
-          {product.details && (
-            <div>
-              <h3 className="text-white text-sm font-bold uppercase tracking-wider mb-4 flex items-center gap-2">
-                <span className="w-4 h-0.5 bg-[#00C2FF] inline-block"></span> Especificaciones
-              </h3>
-              <div className="rounded-xl overflow-hidden border border-white/8 divide-y divide-white/5">
-                {Object.entries(product.details).map(([key, value]) => (
-                  <div key={key} className="flex justify-between px-4 py-3 bg-white/3 hover:bg-white/6 transition-colors text-sm">
-                    <span className="text-gray-500 capitalize">{key.replace(/_/g, ' ')}</span>
-                    <span className="text-white font-medium text-right ml-4">{value}</span>
-                  </div>
-                ))}
-              </div>
+            {/* PANEL DERECHO — contenido */}
+            <div className="flex-1 bg-[#080808] h-full flex flex-col overflow-hidden">
+              {rightPanel}
             </div>
-          )}
-
-          {/* Performance */}
-          {product.performance && (
-            <div>
-              <h3 className="text-white text-sm font-bold uppercase tracking-wider mb-4 flex items-center gap-2">
-                <span className="w-4 h-0.5 bg-[#00C2FF] inline-block"></span> Rendimiento
-              </h3>
-              <div className="grid grid-cols-2 gap-3">
-                {product.performance.map((perf, i) => (
-                  <div key={i} className="bg-white/4 border border-white/6 rounded-xl p-4 hover:bg-white/7 hover:border-[#00C2FF]/20 transition-all">
-                    <div className="text-[#00C2FF] mb-2">{getPerformanceIcon(perf.label)}</div>
-                    <p className="text-gray-500 text-[10px] uppercase tracking-wider font-bold mb-1">{perf.label}</p>
-                    <p className="text-white font-bold text-sm">{perf.value}</p>
-                    <p className="text-gray-600 text-[10px] mt-0.5">{perf.level}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Colores */}
-          {product.colors?.interior?.length > 0 && (
-            <div>
-              <h3 className="text-white text-sm font-bold uppercase tracking-wider mb-4 flex items-center gap-2">
-                <span className="w-4 h-0.5 bg-[#00C2FF] inline-block"></span> Acabados
-              </h3>
-              <div className="flex flex-wrap gap-4">
-                {product.colors.interior.map((color, i) => (
-                  <div key={i} className="flex flex-col items-center gap-2 group cursor-pointer">
-                    <div
-                      className="w-10 h-10 rounded-full border-2 border-white/15 group-hover:border-white/60 group-hover:scale-110 transition-all"
-                      style={{ backgroundColor: color.hex }}
-                    />
-                    <span className="text-[9px] text-gray-500 uppercase font-medium max-w-[64px] text-center leading-tight">{color.name}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          <div className="h-2" />
-          <Link
-            href="/contacto"
-            className="flex items-center justify-center gap-2 w-full bg-[#00C2FF] hover:bg-[#00a8e0] transition-colors text-black py-4 font-bold uppercase rounded-xl text-sm tracking-widest"
-          >
-            Solicitar Cotización <ChevronRight size={16} />
-          </Link>
-        </div>
+          </>
+        ) : (
+          rightPanel
+        )}
       </motion.div>
     </div>
   );
