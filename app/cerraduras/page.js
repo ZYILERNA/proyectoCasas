@@ -128,7 +128,7 @@ const ProductModal = memo(({ product, onClose }) => {
           {/* Wallpaper solo en la zona izquierda, sin cubrir el panel */}
           <div className="absolute inset-0 right-[680px] overflow-hidden">
             <motion.img
-              src="/images/CERRADURA/wallpaper/s80wallpaper.webp"
+              src={product.wallpaper}
               alt=""
               aria-hidden="true"
               initial={{ scale: 1.08 }}

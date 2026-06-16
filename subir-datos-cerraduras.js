@@ -237,6 +237,7 @@ const MODELOS = [
     category: "Flagship",
     type: "Smart Lock UWB",
     img: "/images/CERRADURA/s80-lock.webp",
+    wallpaper: "/images/CERRADURA/wallpaper/s80wallpaper.webp",
     description: "La cerradura más avanzada con tecnología UWB de 4ª generación. Detecta tu presencia y abre automáticamente. Cuenta con pantalla interactiva que reacciona con 50 expresiones y monitoreo activo.",
     specs: [
       { value: "UWB 4.0", label: "Tecnología" },
@@ -294,7 +295,8 @@ const MODELOS = [
     name: "S80 Max Flagship",
     category: "Tope de Gama",
     type: "UWB + 3D Face ID",
-    img: "/images/CERRADURA/s80-max.webp", 
+    img: "/images/CERRADURA/s80-max.webp",
+    wallpaper: "/images/CERRADURA/wallpaper/s80wallpaper.webp",
     description: "El estándar más alto en seguridad inteligente. Combina detección UWB de 4ª generación para apertura automática con una cámara de visión nocturna a todo color y 9 métodos de acceso.",
     specs: [
       { value: "UWB 4.0", label: "Sensor" },
@@ -682,6 +684,7 @@ const MODELOS = [
     category: "Smart Lock",
     type: "Telesensado Estándar",
     img: "/images/CERRADURA/s80-lock.webp",
+    wallpaper: "/images/CERRADURA/wallpaper/s80wallpaper.webp",
     description: "Cerradura de telesensado con reconocimiento facial 3D, apertura y visión remota, ojo de buey con captura por intrusión y pantalla trasera de 5 pulgadas. Acabado en Negro Xuanwu (玄武金).",
     specs: [
       { label: "Sensor", value: "Telesensado" },
