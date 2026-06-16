@@ -136,19 +136,6 @@ const ProductModal = memo(({ product, onClose }) => {
               transition={{ duration: 1.2, ease: "easeOut" }}
               className="absolute inset-0 w-full h-full object-cover"
             />
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.45 }}
-              className="absolute bottom-10 left-10 right-10 pointer-events-none"
-            >
-              <div className="bg-black rounded-2xl px-6 py-5">
-                <p className="text-[#00C2FF] text-[9px] font-bold uppercase tracking-[0.35em] mb-2">{product.category}</p>
-                <h3 className="text-white text-2xl font-bold leading-tight mb-3">{product.name}</h3>
-                <div className="w-8 h-0.5 bg-[#00C2FF] mb-3" />
-                <p className="text-gray-400 text-xs leading-relaxed line-clamp-3">{product.description}</p>
-              </div>
-            </motion.div>
           </div>
         </motion.div>
       ) : (
