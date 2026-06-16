@@ -86,6 +86,7 @@ const MODELOS = [
     category: "Smart Lock",
     type: "Serie Pro",
     img: "/images/CERRADURA/lock-s935-pro.webp",
+    wallpaper: "/images/CERRADURA/wallpaper/s935wallpaper.webp",
     description: "Sistema de seguridad integral con Video Portero y Desbloqueo Remoto. Combina reconocimiento facial 3D, tarjeta CPU de alta seguridad y una pantalla de 4 pulgadas para una gestión de acceso total.",
     specs: [
       { label: "Pantalla", value: "4.0''" },
