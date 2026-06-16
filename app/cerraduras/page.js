@@ -122,7 +122,7 @@ const ProductModal = memo(({ product, onClose }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.25 }}
-          className="absolute inset-0 bg-black/80"
+          className="absolute inset-0 bg-black/40"
           onClick={onClose}
         >
           {/* Wallpaper solo en la zona izquierda, sin cubrir el panel */}
@@ -136,8 +136,8 @@ const ProductModal = memo(({ product, onClose }) => {
               transition={{ duration: 1.2, ease: "easeOut" }}
               className="absolute inset-0 w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/70" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/40" />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/60" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
