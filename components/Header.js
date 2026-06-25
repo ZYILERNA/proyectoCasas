@@ -154,6 +154,14 @@ export default function Header() {
             Proyectos
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00C2FF] transition-all duration-300 group-hover:w-full"></span>
           </Link>
+
+          <Link
+            href="/blog"
+            className="relative text-sm font-semibold text-gray-200 uppercase tracking-widest hover:text-[#00C2FF] transition-colors duration-300 group"
+          >
+            Blog
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00C2FF] transition-all duration-300 group-hover:w-full"></span>
+          </Link>
         </nav>
 
         {/* ICONS & DESKTOP TICKER */}
@@ -250,6 +258,14 @@ export default function Header() {
               className="text-3xl font-bold uppercase tracking-widest text-white hover:text-[#00C2FF]"
             >
               Proyectos
+            </Link>
+
+            <Link
+              href="/blog"
+              onClick={closeMobileMenu}
+              className="text-3xl font-bold uppercase tracking-widest text-white hover:text-[#00C2FF]"
+            >
+              Blog
             </Link>
           </div>
 

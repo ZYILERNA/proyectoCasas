@@ -54,6 +54,7 @@ export default function Footer() {
               <FooterLink href="/cerraduras" text="Cerraduras Inteligentes" />
               <li role="separator" aria-hidden="true" className="w-full h-px bg-white/5 my-4"></li>
               <FooterLink href="/proyectos" text="Proyectos Contract" />
+              <FooterLink href="/blog" text="Blog · Instalaciones" />
             </ul>
           </div>
 
