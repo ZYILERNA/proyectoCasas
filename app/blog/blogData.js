@@ -8,6 +8,10 @@
 // Para añadir un nuevo caso: copia un objeto, cambia el "slug" (debe ser único),
 // la ubicación, el tipo y la lista de "media". El primer elemento de "media"
 // se usa automáticamente como portada en el listado.
+//
+// Marca con "before: true" las fotos del ANTES de la reforma. Si un caso tiene
+// alguna, la página de detalle mostrará dos bloques separados: "Antes" y
+// "Después". Si no hay ninguna, se muestra una "Galería" normal.
 // -----------------------------------------------------------------------------
 
 const BASE = "/images/BLOG";
@@ -29,12 +33,10 @@ export const blogPosts = [
     description:
       "Reportaje completo de la instalación de una puerta de seguridad en una vivienda de Montgat. Documentamos el estado previo, el transporte y montaje de la nueva puerta y el resultado final con su demostración en vídeo.",
     media: [
-      { type: "image", src: `${BASE}/MONTGAT/finalizado.jpg`, alt: "Puerta de seguridad instalada y finalizada en Montgat" },
-      { type: "image", src: `${BASE}/MONTGAT/puertamontado.jpg`, alt: "Puerta montada en Montgat" },
-      { type: "image", src: `${BASE}/MONTGAT/foto4.png`, alt: "Detalle de la puerta instalada en Montgat" },
-      { type: "image", src: `${BASE}/MONTGAT/fot1antes.jpg`, alt: "Estado del acceso antes de la instalación" },
-      { type: "image", src: `${BASE}/MONTGAT/fot2antes.jpg`, alt: "Estado del acceso antes de la instalación" },
-      { type: "image", src: `${BASE}/MONTGAT/fot3antes.jpg`, alt: "Estado del acceso antes de la instalación" },
+      { type: "image", src: `${BASE}/MONTGAT/despues1.jpg`, alt: "Puerta de seguridad instalada y finalizada en Montgat" },
+      { type: "image", src: `${BASE}/MONTGAT/despues2.jpg`, alt: "Detalle de la puerta instalada en Montgat" },
+      { type: "image", before: true, src: `${BASE}/MONTGAT/fotoantes1.jpg`, alt: "Estado del acceso antes de la instalación" },
+      { type: "image", before: true, src: `${BASE}/MONTGAT/fotoantes2.jpg`, alt: "Estado del acceso antes de la instalación" },
       { type: "video", src: `${BASE}/MONTGAT/llevandolapuerta.mp4`, alt: "Transporte de la puerta hasta la vivienda" },
       { type: "video", src: `${BASE}/MONTGAT/demodelapuerta.mp4`, alt: "Demostración de la puerta instalada" },
       { type: "video", src: `${BASE}/MONTGAT/videodemo.mp4`, alt: "Vídeo demostración de la puerta de seguridad" },
@@ -50,9 +52,9 @@ export const blogPosts = [
     description:
       "Caso de instalación de una puerta de seguridad en una finca situada junto al Arc de Triomf de Barcelona. Mostramos el proceso de instalación y el resultado final.",
     media: [
-      { type: "image", src: `${BASE}/ARCDETRIOMF/fot1.jpg`, alt: "Instalación de puerta junto al Arc de Triomf" },
-      { type: "image", src: `${BASE}/ARCDETRIOMF/fot2.jpg`, alt: "Proceso de instalación de la puerta" },
-      { type: "image", src: `${BASE}/ARCDETRIOMF/for3.jpg`, alt: "Detalle de la puerta instalada" },
+      { type: "image", src: `${BASE}/ARCDETRIOMF/despues1.jpg`, alt: "Puerta de seguridad instalada junto al Arc de Triomf" },
+      { type: "image", src: `${BASE}/ARCDETRIOMF/despues2.jpg`, alt: "Detalle de la puerta instalada" },
+      { type: "image", src: `${BASE}/ARCDETRIOMF/despues3.jpg`, alt: "Detalle de la puerta instalada" },
       { type: "video", src: `${BASE}/ARCDETRIOMF/vidinstalando.mp4`, alt: "Vídeo del proceso de instalación" },
     ],
   },
@@ -66,10 +68,10 @@ export const blogPosts = [
     description:
       "Instalación de una puerta de seguridad en una panadería de la zona del Arc de Triomf. Documentamos el proceso de montaje en vídeo y el acabado final del local.",
     media: [
-      { type: "image", src: `${BASE}/ARCDETRIOMF/PANADERIA/foto1acabado.jpg`, alt: "Puerta acabada en la panadería" },
-      { type: "image", src: `${BASE}/ARCDETRIOMF/PANADERIA/foto2.jpg`, alt: "Detalle de la instalación en la panadería" },
-      { type: "image", src: `${BASE}/ARCDETRIOMF/PANADERIA/foto3.jpg`, alt: "Detalle de la instalación en la panadería" },
-      { type: "image", src: `${BASE}/ARCDETRIOMF/PANADERIA/foto4.jpg`, alt: "Detalle de la instalación en la panadería" },
+      { type: "image", src: `${BASE}/ARCDETRIOMF/PANADERIA/despues1.jpg`, alt: "Puerta de seguridad acabada en la panadería" },
+      { type: "image", src: `${BASE}/ARCDETRIOMF/PANADERIA/despues2.jpg`, alt: "Detalle de la instalación en la panadería" },
+      { type: "image", src: `${BASE}/ARCDETRIOMF/PANADERIA/despues3.jpg`, alt: "Detalle de la instalación en la panadería" },
+      { type: "image", src: `${BASE}/ARCDETRIOMF/PANADERIA/despues4.jpg`, alt: "Detalle de la instalación en la panadería" },
       { type: "video", src: `${BASE}/ARCDETRIOMF/PANADERIA/instalando.mp4`, alt: "Vídeo del montaje de la puerta en la panadería" },
       { type: "video", src: `${BASE}/ARCDETRIOMF/PANADERIA/demovideo.mp4`, alt: "Vídeo demostración de la puerta de la panadería" },
     ],
@@ -84,8 +86,8 @@ export const blogPosts = [
     description:
       "Instalación de una cerradura inteligente WONLY en una vivienda de la Calle Marina. Incluimos el vídeo del proceso de instalación y una demostración del funcionamiento (apertura por código, huella y app).",
     media: [
-      { type: "image", src: `${BASE}/CALLEMARINA/cerradurainstalada.jpg`, alt: "Cerradura inteligente instalada en Calle Marina" },
-      { type: "image", src: `${BASE}/CALLEMARINA/cerradurapantalla.jpg`, alt: "Pantalla de la cerradura inteligente" },
+      { type: "image", src: `${BASE}/CALLEMARINA/despues1.jpg`, alt: "Cerradura inteligente instalada en Calle Marina" },
+      { type: "image", src: `${BASE}/CALLEMARINA/despues2.jpg`, alt: "Detalle de la cerradura inteligente instalada" },
       { type: "video", src: `${BASE}/CALLEMARINA/videoinstalacioncerradura.mp4`, alt: "Vídeo de la instalación de la cerradura" },
       { type: "video", src: `${BASE}/CALLEMARINA/videodemocerradurainteligente.mp4`, alt: "Demostración de la cerradura inteligente" },
     ],
@@ -168,8 +170,8 @@ export const blogPosts = [
       { type: "image", src: `${BASE}/VILLAHUESPEDGRANOLLERS/fot5.jpg`, alt: "Detalle de la instalación" },
       { type: "image", src: `${BASE}/VILLAHUESPEDGRANOLLERS/fot6.jpg`, alt: "Detalle de la instalación" },
       { type: "image", src: `${BASE}/VILLAHUESPEDGRANOLLERS/fot7.jpg`, alt: "Detalle de la instalación" },
-      { type: "image", src: `${BASE}/VILLAHUESPEDGRANOLLERS/fot1antes.jpg`, alt: "Estado previo a la instalación" },
-      { type: "image", src: `${BASE}/VILLAHUESPEDGRANOLLERS/fot2antes.jpg`, alt: "Estado previo a la instalación" },
+      { type: "image", before: true, src: `${BASE}/VILLAHUESPEDGRANOLLERS/fot1antes.jpg`, alt: "Estado previo a la instalación" },
+      { type: "image", before: true, src: `${BASE}/VILLAHUESPEDGRANOLLERS/fot2antes.jpg`, alt: "Estado previo a la instalación" },
     ],
   },
   {

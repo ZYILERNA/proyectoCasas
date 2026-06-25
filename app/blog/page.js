@@ -166,8 +166,8 @@ export default function BlogPage() {
                 className="group"
               >
                 <Link href={`/blog/${post.slug}`} className="block">
-                  {/* Imagen — brillo completo, sin overlay oscuro */}
-                  <div className="relative overflow-hidden rounded-2xl aspect-[4/3] ring-1 ring-white/10 mb-5">
+                  {/* Imagen — cuadrada, brillo completo, sin overlay oscuro */}
+                  <div className="relative overflow-hidden rounded-2xl aspect-square ring-1 ring-white/10 mb-5">
                     <img
                       src={getCover(post)}
                       alt={post.title}
