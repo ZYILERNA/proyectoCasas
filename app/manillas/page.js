@@ -383,7 +383,7 @@ export default function ManillasPage() {
       <section className="relative min-h-[70vh] flex flex-col justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/images/MANILLAS/5801259/img1.jpg"
+            src="/images/MANILLAS/5801259/img1.webp"
             alt=""
             className="w-full h-full object-cover object-center opacity-10"
           />
