@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { MapPin, PlayCircle, Camera, ArrowUpRight, Newspaper } from "lucide-react";
 import { blogPosts, getCover, TIPOS } from "./blogData";
 
-const FILTROS = ["Todos", TIPOS.PUERTA, TIPOS.CERRADURA];
+const FILTROS = ["Todos", TIPOS.PUERTA, TIPOS.CERRADURA, TIPOS.MANILLA];
 
 // Pequeña pastilla con el tipo + contador de medios
 function MediaMeta({ post }) {

@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/dormitorios',
     '/empresa',
     '/gabinetes',
+    '/manillas',
     '/mesas',
     '/privacidad',
     '/proyectos',

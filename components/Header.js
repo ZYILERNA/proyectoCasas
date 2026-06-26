@@ -116,6 +116,7 @@ export default function Header() {
                     href="/cerraduras"
                     text="Cerraduras Inteligentes"
                   />
+                  <MenuItem href="/manillas" text="Manillas de Diseño" />
                 </ul>
               </div>
 
@@ -242,6 +243,14 @@ export default function Header() {
               className="text-3xl font-bold uppercase tracking-widest text-white hover:text-[#00C2FF]"
             >
               Cerraduras
+            </Link>
+
+            <Link
+              href="/manillas"
+              onClick={closeMobileMenu}
+              className="text-3xl font-bold uppercase tracking-widest text-white hover:text-[#00C2FF]"
+            >
+              Manillas
             </Link>
 
             <Link

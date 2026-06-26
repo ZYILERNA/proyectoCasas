@@ -20,6 +20,7 @@ const BASE = "/images/BLOG";
 export const TIPOS = {
   PUERTA: "Puerta de Seguridad",
   CERRADURA: "Cerradura Inteligente",
+  MANILLA: "Manilla de Puerta",
 };
 
 export const blogPosts = [
@@ -44,13 +45,13 @@ export const blogPosts = [
   },
   {
     slug: "arc-de-triomf",
-    title: "Puerta de Seguridad junto al Arc de Triomf",
+    title: "Manilla de Puerta junto al Arc de Triomf",
     location: "Arc de Triomf, Barcelona",
-    tipo: TIPOS.PUERTA,
+    tipo: TIPOS.MANILLA,
     excerpt:
-      "Instalación de puerta de seguridad en pleno centro de Barcelona, documentada paso a paso.",
+      "Instalación de manilla en pleno centro de Barcelona, documentada paso a paso.",
     description:
-      "Caso de instalación de una puerta de seguridad en una finca situada junto al Arc de Triomf de Barcelona. Mostramos el proceso de instalación y el resultado final.",
+      "Caso de instalación de una manilla en una finca situada junto al Arc de Triomf de Barcelona. Mostramos el proceso de instalación y el resultado final.",
     media: [
       { type: "image", src: `${BASE}/ARCDETRIOMF/despues1.jpg`, alt: "Puerta de seguridad instalada junto al Arc de Triomf" },
       { type: "image", src: `${BASE}/ARCDETRIOMF/despues2.jpg`, alt: "Detalle de la puerta instalada" },
@@ -60,13 +61,13 @@ export const blogPosts = [
   },
   {
     slug: "panaderia-arc-de-triomf",
-    title: "Puerta de Seguridad para Panadería",
+    title: "Cerradura Inteligente para Panadería",
     location: "Arc de Triomf, Barcelona",
-    tipo: TIPOS.PUERTA,
+    tipo: TIPOS.CERRADURA,
     excerpt:
-      "Instalación de puerta de seguridad en un local comercial (panadería), con vídeo del montaje y demostración.",
+      "Instalación de cerradura inteligente en un local comercial (panadería), con vídeo del montaje y demostración.",
     description:
-      "Instalación de una puerta de seguridad en una panadería de la zona del Arc de Triomf. Documentamos el proceso de montaje en vídeo y el acabado final del local.",
+      "Instalación de una cerradura inteligente en una panadería de la zona del Arc de Triomf. Documentamos el proceso de montaje en vídeo y el acabado final del local.",
     media: [
       { type: "image", src: `${BASE}/ARCDETRIOMF/PANADERIA/despues1.jpg`, alt: "Puerta de seguridad acabada en la panadería" },
       { type: "image", src: `${BASE}/ARCDETRIOMF/PANADERIA/despues2.jpg`, alt: "Detalle de la instalación en la panadería" },
@@ -93,19 +94,31 @@ export const blogPosts = [
     ],
   },
   {
-    slug: "castelldefels",
-    title: "Cerradura Inteligente en Castelldefels",
+    slug: "castelldefels-cliente-1",
+    title: "Cerradura Inteligente en Castelldefels — Cliente 1",
+    location: "Castelldefels, Barcelona",
+    tipo: TIPOS.CERRADURA,
+    excerpt:
+      "Instalación de cerradura inteligente en una vivienda de Castelldefels.",
+    description:
+      "Instalación de una cerradura inteligente en una vivienda de Castelldefels. Mostramos el resultado final de la instalación.",
+    media: [
+      { type: "image", src: `${BASE}/CASTELLDEFERS/CLIENTE1/despues1.jpg`, alt: "Cerradura inteligente instalada en Castelldefels" },
+      { type: "image", src: `${BASE}/CASTELLDEFERS/CLIENTE1/despues2.jpg`, alt: "Vista frontal de la cerradura instalada" },
+    ],
+  },
+  {
+    slug: "castelldefels-cliente-2",
+    title: "Cerradura Inteligente en Castelldefels — Cliente 2",
     location: "Castelldefels, Barcelona",
     tipo: TIPOS.CERRADURA,
     excerpt:
       "Instalación de cerradura inteligente con vídeo de demostración del resultado final.",
     description:
-      "Instalación de una cerradura inteligente en una vivienda de Castelldefels. Mostramos el proceso de instalación y una demostración en vídeo de la cerradura ya en funcionamiento.",
+      "Instalación de una cerradura inteligente en otra vivienda de Castelldefels. Incluimos una demostración en vídeo de la cerradura ya en funcionamiento.",
     media: [
-      { type: "image", src: `${BASE}/CASTELLDEFERS/fot3vistainstalada.jpg`, alt: "Cerradura inteligente instalada en Castelldefels" },
-      { type: "image", src: `${BASE}/CASTELLDEFERS/fot4vistafrontal.jpg`, alt: "Vista frontal de la cerradura instalada" },
-      { type: "image", src: `${BASE}/CASTELLDEFERS/instalandocerradura.jpg`, alt: "Proceso de instalación de la cerradura" },
-      { type: "video", src: `${BASE}/CASTELLDEFERS/videodemocerradurainstalada.mp4`, alt: "Demostración de la cerradura instalada" },
+      { type: "image", src: `${BASE}/CASTELLDEFERS/CLIENTE2/despues3.jpg`, alt: "Cerradura inteligente instalada en Castelldefels" },
+      { type: "video", src: `${BASE}/CASTELLDEFERS/CLIENTE2/videodemocerradurainstalada.mp4`, alt: "Demostración de la cerradura instalada" },
     ],
   },
   {
@@ -118,9 +131,9 @@ export const blogPosts = [
     description:
       "Sustitución de la cerradura convencional por una cerradura inteligente en una vivienda de Badalona. Documentamos la retirada de la cerradura antigua, la instalación de la nueva y el acabado final.",
     media: [
-      { type: "image", src: `${BASE}/BADALONA/cerradurainstalada.jpg`, alt: "Cerradura inteligente instalada en Badalona" },
-      { type: "image", src: `${BASE}/BADALONA/acabado.jpg`, alt: "Acabado final de la instalación" },
-      { type: "image", src: `${BASE}/BADALONA/removiendocerradura.jpg`, alt: "Retirada de la cerradura antigua" },
+      { type: "image", src: `${BASE}/BADALONA/despues1.jpg`, alt: "Cerradura inteligente instalada en Badalona" },
+      { type: "image", src: `${BASE}/BADALONA/despues2.jpg`, alt: "Acabado final de la instalación" },
+      { type: "image", before: true, src: `${BASE}/BADALONA/antes1.jpg`, alt: "Estado previo a la instalación" },
     ],
   },
   {
@@ -133,8 +146,8 @@ export const blogPosts = [
     description:
       "Instalación de una cerradura inteligente en una vivienda del Carrer del Marcell i Esquius. Mostramos el resultado final tanto desde el interior como desde el exterior de la puerta.",
     media: [
-      { type: "image", src: `${BASE}/CARRERDELMARCELLIESQUIUS/cerradurainstalada.jpg`, alt: "Cerradura inteligente instalada" },
-      { type: "image", src: `${BASE}/CARRERDELMARCELLIESQUIUS/cerraduravistaafuera.jpg`, alt: "Vista exterior de la cerradura instalada" },
+      { type: "image", src: `${BASE}/CARRERDELMARCELLIESQUIUS/despues1.jpg`, alt: "Cerradura inteligente instalada" },
+      { type: "image", src: `${BASE}/CARRERDELMARCELLIESQUIUS/despues2.jpg`, alt: "Vista exterior de la cerradura instalada" },
     ],
   },
   {
@@ -163,15 +176,11 @@ export const blogPosts = [
     description:
       "Trabajo de seguridad realizado en una villa de huéspedes de Granollers. Documentamos el estado previo y el resultado final de la instalación con varias fotografías del antes y el después.",
     media: [
-      { type: "image", src: `${BASE}/VILLAHUESPEDGRANOLLERS/fot1.jpg`, alt: "Resultado final en la villa de huéspedes" },
-      { type: "image", src: `${BASE}/VILLAHUESPEDGRANOLLERS/fot2.jpg`, alt: "Detalle de la instalación" },
-      { type: "image", src: `${BASE}/VILLAHUESPEDGRANOLLERS/fot3.jpg`, alt: "Detalle de la instalación" },
-      { type: "image", src: `${BASE}/VILLAHUESPEDGRANOLLERS/fot4.jpg`, alt: "Detalle de la instalación" },
-      { type: "image", src: `${BASE}/VILLAHUESPEDGRANOLLERS/fot5.jpg`, alt: "Detalle de la instalación" },
-      { type: "image", src: `${BASE}/VILLAHUESPEDGRANOLLERS/fot6.jpg`, alt: "Detalle de la instalación" },
-      { type: "image", src: `${BASE}/VILLAHUESPEDGRANOLLERS/fot7.jpg`, alt: "Detalle de la instalación" },
-      { type: "image", before: true, src: `${BASE}/VILLAHUESPEDGRANOLLERS/fot1antes.jpg`, alt: "Estado previo a la instalación" },
-      { type: "image", before: true, src: `${BASE}/VILLAHUESPEDGRANOLLERS/fot2antes.jpg`, alt: "Estado previo a la instalación" },
+      { type: "image", src: `${BASE}/VILLAHUESPEDGRANOLLERS/despues1.jpg`, alt: "Resultado final en la villa de huéspedes" },
+      { type: "image", src: `${BASE}/VILLAHUESPEDGRANOLLERS/despues2.jpg`, alt: "Detalle de la instalación" },
+      { type: "image", src: `${BASE}/VILLAHUESPEDGRANOLLERS/despues3.jpg`, alt: "Detalle de la instalación" },
+      { type: "image", before: true, src: `${BASE}/VILLAHUESPEDGRANOLLERS/antes1.jpg`, alt: "Estado previo a la instalación" },
+      { type: "image", before: true, src: `${BASE}/VILLAHUESPEDGRANOLLERS/antes2.jpg`, alt: "Estado previo a la instalación" },
     ],
   },
   {
@@ -183,8 +192,8 @@ export const blogPosts = [
     description:
       "Trabajo de instalación realizado en una vivienda de Gavà. A continuación mostramos las fotografías del resultado.",
     media: [
-      { type: "image", src: `${BASE}/GAVA/foto1.jpg`, alt: "Instalación en Gavà" },
-      { type: "image", src: `${BASE}/GAVA/foto2.jpg`, alt: "Detalle de la instalación en Gavà" },
+      { type: "image", src: `${BASE}/GAVA/despues1.jpg`, alt: "Instalación en Gavà" },
+      { type: "image", src: `${BASE}/GAVA/despues2.jpg`, alt: "Detalle de la instalación en Gavà" },
     ],
   },
   {
@@ -202,12 +211,12 @@ export const blogPosts = [
   },
   {
     slug: "sant-joan-despi",
-    title: "Instalación en Sant Joan Despí",
+    title: "Manilla de Puerta en Sant Joan Despí",
     location: "Sant Joan Despí, Barcelona",
-    tipo: TIPOS.CERRADURA,
-    excerpt: "Instalación realizada en una vivienda de Sant Joan Despí.",
+    tipo: TIPOS.MANILLA,
+    excerpt: "Instalación de manilla de puerta en una vivienda de Sant Joan Despí.",
     description:
-      "Trabajo de instalación realizado en una vivienda de Sant Joan Despí. A continuación mostramos la fotografía del resultado.",
+      "Instalación de una manilla de puerta en una vivienda de Sant Joan Despí. A continuación mostramos la fotografía del resultado.",
     media: [
       { type: "image", src: `${BASE}/SANJOANDESPI/FOTO1.jpg`, alt: "Instalación en Sant Joan Despí" },
     ],
@@ -233,7 +242,7 @@ export const blogPosts = [
     description:
       "Trabajo de instalación realizado en una vivienda de la zona de La Maquinista, en Barcelona. A continuación mostramos la fotografía del resultado.",
     media: [
-      { type: "image", src: `${BASE}/LAMAQUINISTA/foto1.jpg`, alt: "Instalación en La Maquinista" },
+      { type: "image", src: `${BASE}/LAMAQUINISTA/despues1.jpg`, alt: "Instalación en La Maquinista" },
     ],
   },
 ];
