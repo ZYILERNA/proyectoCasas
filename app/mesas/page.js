@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState, useEffect, useMemo, memo, useRef } from 'react';
+import React, { useState, useEffect, useMemo, memo, useRef, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -524,6 +525,15 @@ const ProductCard = memo(({ item, index, onSelect }) => {
 ProductCard.displayName = 'ProductCard';
 
 export default function MesasPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-white" />}>
+      <MesasContent />
+    </Suspense>
+  );
+}
+
+function MesasContent() {
+  const searchParams = useSearchParams();
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState("Todos");
@@ -531,6 +541,18 @@ export default function MesasPage() {
   const [activeMaterial, setActiveMaterial] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
+
+  // Abrir ficha de producto desde URL (deep-link del buscador)
+  useEffect(() => {
+    const producto = searchParams.get('producto');
+    if (!producto) return;
+    let active = true;
+    (async () => {
+      const { data } = await supabase.from('mesas').select('*').eq('name', producto).limit(1);
+      if (active && data && data[0]) setSelectedProduct(data[0]);
+    })();
+    return () => { active = false; };
+  }, [searchParams]);
 
   const gridTopRef = useRef(null);
   const filtersRef = useRef(null);

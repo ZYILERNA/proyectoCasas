@@ -1,5 +1,6 @@
 "use client";
-import React, { useState, useEffect, useMemo, memo } from 'react';
+import React, { useState, useEffect, useMemo, memo, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Fingerprint, GripHorizontal, ShieldCheck, Key, Radio, ScanFace,
@@ -258,7 +259,8 @@ const ProductModal = memo(({ product, onClose }) => {
 });
 
 // --- PÁGINA PRINCIPAL ---
-export default function CerradurasPage() {
+function CerradurasContent() {
+  const searchParams = useSearchParams();
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [locks, setLocks] = useState([]);
   const [hardware, setHardware] = useState([]);
@@ -266,6 +268,22 @@ export default function CerradurasPage() {
   const [activeFilter, setActiveFilter] = useState("Todos");
   const [activeHardwareTab, setActiveHardwareTab] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
+
+  // Abrir ficha de producto desde URL (deep-link del buscador)
+  useEffect(() => {
+    const producto = searchParams.get('producto');
+    if (!producto) return;
+    let active = true;
+    (async () => {
+      const { data } = await supabase
+        .from('locks')
+        .select('*')
+        .eq('name', producto)
+        .limit(1);
+      if (active && data && data[0]) setSelectedProduct(data[0]);
+    })();
+    return () => { active = false; };
+  }, [searchParams]);
 
   useEffect(() => {
     async function fetchData() {
@@ -781,5 +799,13 @@ export default function CerradurasPage() {
       </section>
 
     </main>
+  );
+}
+
+export default function CerradurasPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-[#060606]" />}>
+      <CerradurasContent />
+    </Suspense>
   );
 }

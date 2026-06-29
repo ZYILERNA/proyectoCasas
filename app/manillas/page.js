@@ -1,5 +1,6 @@
 "use client";
-import React, { useState, useEffect, useMemo, memo, useRef } from 'react';
+import React, { useState, useEffect, useMemo, memo, useRef, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   X, Loader2, ChevronRight, ChevronLeft, Search,
@@ -332,12 +333,29 @@ const ProductDrawer = memo(({ product, onClose }) => {
 ProductDrawer.displayName = 'ProductDrawer';
 
 // --- PÁGINA PRINCIPAL ---
-export default function ManillasPage() {
+function ManillasContent() {
+  const searchParams = useSearchParams();
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [manillas, setManillas] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [activeFilter, setActiveFilter] = useState("Todos");
   const [searchQuery, setSearchQuery] = useState("");
+
+  // Abrir ficha de producto desde URL (deep-link del buscador)
+  useEffect(() => {
+    const producto = searchParams.get('producto');
+    if (!producto) return;
+    let active = true;
+    (async () => {
+      const { data } = await supabase
+        .from('manillas')
+        .select('*')
+        .eq('name', producto)
+        .limit(1);
+      if (active && data && data[0]) setSelectedProduct(data[0]);
+    })();
+    return () => { active = false; };
+  }, [searchParams]);
 
   useEffect(() => {
     async function fetchData() {
@@ -566,5 +584,13 @@ export default function ManillasPage() {
       </section>
 
     </main>
+  );
+}
+
+export default function ManillasPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-[#060606]" />}>
+      <ManillasContent />
+    </Suspense>
   );
 }

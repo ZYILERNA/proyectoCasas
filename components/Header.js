@@ -11,14 +11,35 @@ import {
   X,
   ShieldCheck,
   Home as HomeIcon,
-  Activity
+  Activity,
+  Globe
 } from "lucide-react";
 import StockTicker from "./StockTicker";
+import LanguageSwitcher from "./LanguageSwitcher";
+import SearchOverlay from "./SearchOverlay";
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  // Cargar el traductor de Google una sola vez (selector de idioma)
+  useEffect(() => {
+    if (window.__gtInjected) return;
+    window.__gtInjected = true;
+    window.googleTranslateElementInit = () => {
+      new window.google.translate.TranslateElement(
+        { pageLanguage: "es", autoDisplay: false },
+        "google_translate_element"
+      );
+    };
+    const s = document.createElement("script");
+    s.src =
+      "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    s.async = true;
+    document.body.appendChild(s);
+  }, []);
 
   // Smart Hide Navbar
   useEffect(() => {
@@ -59,6 +80,7 @@ export default function Header() {
   };
 
   return (
+    <>
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out border-b border-white/5 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
@@ -68,7 +90,7 @@ export default function Header() {
           : "bg-black"
       }`}
     >
-      <div className="container mx-auto px-6 h-20 flex items-center justify-between relative">
+      <div className={`container mx-auto px-6 h-20 flex items-center justify-between relative z-50 ${isMobileMenuOpen ? "bg-black" : ""}`}>
         {/* LOGO */}
         <div className="cursor-pointer z-50">
           <Link
@@ -173,9 +195,14 @@ export default function Header() {
             <StockTicker />
           </div>
 
-          <button className="group p-2" aria-label="Buscar">
+          <button onClick={() => setIsSearchOpen(true)} className="group p-2" aria-label="Buscar">
             <Search className="w-5 h-5 text-gray-300 group-hover:text-[#00C2FF] group-hover:scale-110 transition-all duration-300" aria-hidden="true" />
           </button>
+
+          {/* Selector de idioma (Google Translate) */}
+          <div className="hidden md:block">
+            <LanguageSwitcher variant="desktop" />
+          </div>
 
           <Link
             href="/contacto"
@@ -183,6 +210,9 @@ export default function Header() {
           >
             Contacto
           </Link>
+
+          {/* Elemento oculto requerido por Google Translate */}
+          <div id="google_translate_element" className="hidden" aria-hidden="true" />
 
           <button
             className="md:hidden text-gray-300 hover:text-[#00C2FF] transition-colors focus:outline-none p-2"
@@ -197,7 +227,7 @@ export default function Header() {
 
       {/* MOBILE MENU */}
       <div
-        className={`md:hidden fixed top-0 left-0 w-full h-screen bg-black/95 backdrop-blur-xl border-t border-white/10 flex flex-col pt-24 overflow-y-auto transition-all duration-500 ease-in-out ${
+        className={`md:hidden fixed top-0 left-0 w-full h-screen z-40 bg-black/95 backdrop-blur-xl border-t border-white/10 flex flex-col pt-24 overflow-y-auto transition-all duration-500 ease-in-out ${
           isMobileMenuOpen
             ? "opacity-100 visible translate-y-0"
             : "opacity-0 invisible -translate-y-8"
@@ -315,6 +345,14 @@ export default function Header() {
             </ul>
           </div>
 
+          {/* Selector de idioma (móvil) */}
+          <div>
+            <h3 className="text-xs font-bold text-[#00C2FF] uppercase tracking-widest mb-4 flex items-center gap-2">
+              <Globe size={14} /> Idioma
+            </h3>
+            <LanguageSwitcher variant="mobile" />
+          </div>
+
           {/* Botón de Contacto */}
           <div className="mt-4 pb-10">
             <Link
@@ -328,6 +366,10 @@ export default function Header() {
         </div>
       </div>
     </header>
+
+    {/* BUSCADOR (overlay) — fuera del <header> porque este usa transform */}
+    <SearchOverlay open={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+    </>
   );
 }
 

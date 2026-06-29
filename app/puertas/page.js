@@ -456,6 +456,22 @@ function PuertasContent() {
     }
   }, [searchParams]);
 
+  // Abrir ficha de producto desde URL (deep-link del buscador)
+  useEffect(() => {
+    const producto = searchParams.get('producto');
+    if (!producto) return;
+    let active = true;
+    (async () => {
+      const { data } = await supabase
+        .from('products')
+        .select('*')
+        .eq('name', producto)
+        .limit(1);
+      if (active && data && data[0]) setSelectedProduct(data[0]);
+    })();
+    return () => { active = false; };
+  }, [searchParams]);
+
   // CARGAR DATOS DE SUPABASE
   useEffect(() => {
     async function fetchProducts() {

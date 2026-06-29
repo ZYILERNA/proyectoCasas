@@ -1,6 +1,7 @@
 ﻿"use client";
 
-import { useState } from 'react';
+import { useState, useEffect, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { 
@@ -342,7 +343,24 @@ const ProductModal = ({ product, onClose }) => {
 
 // --- 3. PÁGINA PRINCIPAL ---
 export default function CatalogoPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-black" />}>
+      <CatalogoContent />
+    </Suspense>
+  );
+}
+
+function CatalogoContent() {
+  const searchParams = useSearchParams();
   const [selectedProduct, setSelectedProduct] = useState(null);
+
+  // Abrir ficha de producto desde URL (deep-link del buscador)
+  useEffect(() => {
+    const producto = searchParams.get('producto');
+    if (!producto) return;
+    const found = PRODUCTOS.find((p) => p.name === producto);
+    if (found) setSelectedProduct(found);
+  }, [searchParams]);
 
   return (
     <main className="bg-black min-h-screen text-white pt-24 pb-20 selection:bg-[#00C2FF] selection:text-black overflow-hidden">

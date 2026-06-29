@@ -11,3 +11,42 @@
 body {
   color: rgb(var(--foreground-rgb));
 }
+
+/* --- Google Translate: ocultar su barra/UI, tooltips y popups --- */
+.goog-te-banner-frame,
+.goog-te-banner-frame.skiptranslate,
+.goog-te-gadget-icon,
+.goog-te-balloon-frame,
+#goog-gt-tt,
+.goog-tooltip,
+.goog-tooltip:hover,
+#google_translate_element,
+iframe.skiptranslate,
+.skiptranslate iframe {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Tooltip/popup nuevo de Google ("mostrar original" al pasar el ratón) */
+.VIpgJd-yAWNEb-VIpgJd-fmcmS-sn54Q,
+.VIpgJd-yAWNEb-L7lbkb,
+.VIpgJd-ZVi9od-l4eHX-hSRGPd,
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf,
+.VIpgJd-yAWNEb-hvhgNd,
+.VIpgJd-yAWNEb-hvhgNd-l4eHX {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Evitar el resaltado de fondo en el texto traducido */
+.goog-text-highlight,
+font[style] {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* Google añade `top: 40px` al body para su barra; lo anulamos */
+body {
+  top: 0 !important;
+  position: static !important;
+}
