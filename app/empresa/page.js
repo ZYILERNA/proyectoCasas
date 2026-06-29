@@ -103,6 +103,33 @@ const EmpresaPage = () => {
         </div>
       </section>
 
+      {/* 2. CINTA DE DATOS CLAVE */}
+      <section className="border-y border-white/10 bg-[#0A0A0A] relative z-10">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4">
+            {[
+              { icon: <TrendingUp size={22} />, value: "1996", label: "Año de Fundación" },
+              { icon: <Users2 size={22} />, value: "200M+", label: "Usuarios Globales" },
+              { icon: <Factory size={22} />, value: "5", label: "Bases de Producción" },
+              { icon: <Award size={22} />, value: "1.000+", label: "Patentes Nacionales" },
+            ].map((s, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="flex flex-col items-center text-center py-10 px-4 border-white/10 lg:border-l lg:first:border-l-0"
+              >
+                <div className="text-[#00C2FF] mb-3">{s.icon}</div>
+                <span className="text-3xl md:text-4xl font-bold font-mono text-white">{s.value}</span>
+                <span className="text-[10px] md:text-xs uppercase tracking-widest text-gray-400 mt-2">{s.label}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* 3. PERFIL CORPORATIVO & IPO (BENTO GRID PROFESIONAL) */}
       <section className="py-24 container mx-auto px-6 relative">
@@ -110,6 +137,7 @@ const EmpresaPage = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#00C2FF] opacity-[0.02] blur-[100px] rounded-full pointer-events-none"/>
 
         <div className="mb-12">
+           <span className="inline-block text-xs font-bold uppercase tracking-[0.25em] text-[#00C2FF] mb-4">Perfil Corporativo</span>
            <h2 className="text-3xl md:text-4xl font-bold mb-4">El Poder de la <span className="text-[#00C2FF]">Integración</span></h2>
            <p className="text-gray-400 max-w-2xl">
              Pioneros desde 1996. Operamos 5 grandes bases de producción en China estableciendo los más altos estándares de calidad, diseño y tecnología del sector.
@@ -230,11 +258,68 @@ const EmpresaPage = () => {
       </section>
 
       {/* =========================================================================
-          4. FABRICACIÓN INTELIGENTE 
+          VÍDEOS CORPORATIVOS
+         ========================================================================= */}
+      <section className="py-20 bg-[#070707] relative border-t border-white/5 overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#00C2FF]/5 blur-[140px] pointer-events-none" />
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="mb-16 text-center max-w-3xl mx-auto">
+            <span className="inline-block text-xs font-bold uppercase tracking-[0.25em] text-[#00C2FF] mb-4">
+              En Movimiento
+            </span>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+              Descubre <span className="text-[#00C2FF]">WONLY</span> en Vídeo
+            </h2>
+            <p className="text-gray-400 text-lg">
+              De la fábrica a tu hogar: la tecnología, la precisión y la tranquilidad que hay detrás de cada producto.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { src: "/images/COMPANY/VIDEOS/fabrica.mp4", poster: "/images/COMPANY/VIDEOS/fabrica-poster.jpg", title: "La Fábrica del Futuro", desc: "Una puerta terminada cada 7,68 segundos. Líneas robotizadas y logística inteligente que producen a gran escala con precisión milimétrica." },
+              { src: "/images/COMPANY/VIDEOS/el-secreto.mp4", poster: "/images/COMPANY/VIDEOS/el-secreto-poster.jpg", title: "El Secreto de WONLY", desc: "Soldadura con IA, control de calidad de 74 indicadores y puertas robotizadas inteligentes: la tecnología que confían más de 200 millones de usuarios." },
+              { src: "/images/COMPANY/VIDEOS/tranquilidad.mp4", poster: "/images/COMPANY/VIDEOS/tranquilidad-poster.jpg", title: "Hecho para tu Tranquilidad", desc: "Artesanía, tecnología propia y obsesión por el detalle con un único propósito: proteger a tu familia y darte verdadera tranquilidad." },
+            ].map((video, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group bg-[#111] border border-white/10 rounded-2xl overflow-hidden hover:border-[#00C2FF]/50 transition-colors duration-300"
+              >
+                <div className="aspect-video w-full bg-black overflow-hidden">
+                  <video
+                    src={video.src}
+                    poster={video.poster}
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="w-full h-full object-cover"
+                  >
+                    Tu navegador no soporta la reproducción de vídeo.
+                  </video>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-white mb-1 group-hover:text-[#00C2FF] transition-colors">
+                    {video.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm">{video.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================================
+          4. FABRICACIÓN INTELIGENTE
          ========================================================================= */}
       <section className="py-20 bg-[#0A0A0A] relative border-t border-white/5">
         <div className="container mx-auto px-6">
           <div className="mb-16 text-center max-w-4xl mx-auto">
+            <span className="inline-block text-xs font-bold uppercase tracking-[0.25em] text-[#00C2FF] mb-4">Industria 4.0</span>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Fabricación <span className="text-[#00C2FF]">Inteligente</span></h2>
             <p className="text-gray-400 text-lg mb-8">
               Nuestra Base de Changtian fue reconocida en 2021 como la primera "Fábrica del Futuro" del sector. Integramos robótica y datos para garantizar cero errores y máxima eficiencia.
@@ -305,8 +390,8 @@ const EmpresaPage = () => {
               </h2>
               
               <p className="text-gray-400 mb-8 leading-relaxed text-lg">
-                Fieles a nuestra estrategia de "Investigar una generación, usar una generación, reservar múltiples generaciones". 
-                Con un equipo de **más de 400 investigadores**, invertimos cientos de millones anualmente para liderar las tendencias globales en hogares inteligentes y seguridad.
+                Fieles a nuestra estrategia de "Investigar una generación, usar una generación, reservar múltiples generaciones".
+                Con un equipo de <span className="font-bold text-white">más de 400 investigadores</span>, invertimos cientos de millones anualmente para liderar las tendencias globales en hogares inteligentes y seguridad.
               </p>
 
               <div className="flex flex-wrap gap-3 mb-8">

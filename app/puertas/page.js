@@ -4,7 +4,7 @@ import { useState, useMemo, useEffect, Suspense, useRef } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronRight, ScanFace, ShieldCheck, VolumeX, Sparkles, MoveHorizontal, Palette, Settings, Flame, Filter, Loader2 } from 'lucide-react';
+import { X, ChevronRight, ScanFace, ShieldCheck, VolumeX, Sparkles, MoveHorizontal, Palette, Settings, Flame, Filter, Search, Loader2 } from 'lucide-react';
 import { createClient } from '@supabase/supabase-js';
 
 // --- CONFIGURACIÓN SUPABASE ---
@@ -153,23 +153,23 @@ const FilterButton = ({ label, active, onClick }) => (
   </button>
 );
 
-// --- COMPONENTE DE BÚSQUEDA REUTILIZABLE ---
+// --- COMPONENTE DE BÚSQUEDA REUTILIZABLE (estilo redondo, igual que Sofás) ---
 const SearchInput = ({ value, onChange }) => (
   <div className="relative group w-full">
+    <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-black transition-colors" size={16} />
     <input
       type="text"
       placeholder="BUSCAR MODELO..."
       value={value}
       onChange={onChange}
-      className="w-full bg-[#F9F9F9] border-none rounded-sm py-3 pl-10 pr-8 text-xs font-bold uppercase tracking-wider focus:ring-1 focus:ring-black transition-all outline-none text-gray-900 placeholder:text-gray-400"
+      className="w-full bg-[#F5F5F5] border border-transparent focus:bg-white focus:border-gray-200 rounded-full py-2.5 pl-11 pr-4 text-xs font-bold uppercase tracking-wide focus:ring-0 transition-all outline-none text-gray-900 placeholder:text-gray-400"
     />
-    <Sparkles className="absolute left-3 top-3 text-gray-400 group-focus-within:text-black transition-colors" size={14} />
     {value && (
       <button
         onClick={() => onChange({ target: { value: "" } })}
-        className="absolute right-2 top-1/2 -translate-y-1/2 p-1 hover:bg-gray-200 rounded-full text-gray-400 transition-colors"
+        className="absolute right-3 top-1/2 -translate-y-1/2 p-1 hover:bg-gray-200 rounded-full text-gray-400 hover:text-black transition-colors"
       >
-        <X size={14} />
+        <X size={12} />
       </button>
     )}
   </div>
@@ -660,6 +660,7 @@ function PuertasContent() {
           </motion.div>
         )}
       </AnimatePresence>
+
     </main>
   );
 }
