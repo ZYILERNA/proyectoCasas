@@ -86,9 +86,26 @@ export default function Footer() {
                   </div>
                   <div>
                     <p className="text-[10px] text-gray-400 uppercase tracking-widest mb-1 font-semibold">Email</p>
-                    <a href="mailto:Zhongyuankejisl@gmail.com" className="text-sm text-gray-300 hover:text-white transition-colors break-all">
-                      Zhongyuankejisl@gmail.com
-                    </a>
+                    <div className="space-y-2">
+                      <div>
+                        <p className="text-[10px] text-gray-500 uppercase tracking-wider">Consultas y contacto</p>
+                        <a href="mailto:info@wonlyspain.com" className="block text-sm text-gray-300 hover:text-white transition-colors break-all">
+                          info@wonlyspain.com
+                        </a>
+                      </div>
+                      <div>
+                        <p className="text-[10px] text-gray-500 uppercase tracking-wider">Director Ejecutivo</p>
+                        <a href="mailto:jack@wonlyspain.com" className="block text-sm text-gray-300 hover:text-white transition-colors break-all">
+                          jack@wonlyspain.com
+                        </a>
+                      </div>
+                      <div>
+                        <p className="text-[10px] text-gray-500 uppercase tracking-wider">Directora</p>
+                        <a href="mailto:jennyqiu@wonlyspain.com" className="block text-sm text-gray-300 hover:text-white transition-colors break-all">
+                          jennyqiu@wonlyspain.com
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
 

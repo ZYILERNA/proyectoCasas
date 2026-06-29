@@ -8,7 +8,7 @@ export default function ContactoPage() {
   const [formStatus, setFormStatus] = useState('idle'); // idle, submitting, success, error
 
   // --- TU CONFIGURACIÓN REAL DE FORMSPREE ---
-  const FORMSPREE_ID = "xwvooakd"; 
+  const FORMSPREE_ID = "xrewlllz";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -111,8 +111,8 @@ export default function ContactoPage() {
                             </div>
                             <div>
                                 <h3 className="text-lg font-bold text-white mb-1">Correo Electrónico</h3>
-                                <a href="mailto:Zhongyuankejisl@gmail.com" className="text-gray-400 hover:text-[#00C2FF] transition-colors">
-                                    Zhongyuankejisl@gmail.com
+                                <a href="mailto:info@wonlyspain.com" className="text-gray-400 hover:text-[#00C2FF] transition-colors">
+                                    info@wonlyspain.com
                                 </a>
                             </div>
                         </div>
