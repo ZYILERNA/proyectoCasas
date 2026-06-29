@@ -1,7 +1,7 @@
 // components/Footer.js
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, Phone, MapPin, ChevronRight, Instagram, Linkedin, Facebook, Sparkles, Music2 } from 'lucide-react';
+import { Mail, Phone, MapPin, ChevronRight, Instagram, Linkedin, Facebook, Sparkles, Music2, Youtube } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -39,6 +39,7 @@ export default function Footer() {
               <SocialIcon Icon={Instagram} href="https://www.instagram.com/wonlyspain/" label="Instagram de WONLY" />
               <SocialIcon Icon={Facebook} href="https://www.facebook.com/people/WONLY/61580719733874/" label="Facebook de WONLY" />
               <SocialIcon Icon={Music2} href="https://www.tiktok.com/@wonlyspain" label="TikTok de WONLY" />
+              <SocialIcon Icon={Youtube} href="https://www.youtube.com/@jackjiang-u4r" label="YouTube de WONLY" />
               <SocialIcon Icon={Linkedin} href="https://www.linkedin.com/in/jack-jiang-a024483a9/" label="LinkedIn de WONLY" />
             </div>
           </div>
