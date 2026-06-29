@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useMemo, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
@@ -317,7 +317,7 @@ const PRODUCTOS_IA = MODELOS_IA.map((nombre, index) => ({
   specs: SPECS_IA,
   features: FEATURES_IA,
   unlock: UNLOCK_IA,
-  img: `/images/AI/door-${nombre.toLowerCase().replace(/\s+/g, '-')}.webp`
+  img: `/images/PUERTAS/AI/door-${nombre.toLowerCase().replace(/\s+/g, '-')}.webp`
 }));
 
 // Generador ACERO
@@ -329,7 +329,7 @@ const PRODUCTOS_ACERO = MODELOS_ACERO.map((nombre, index) => ({
   specs: SPECS_SEGURIDAD_MECANICA,
   features: FEATURES_SEGURIDAD_MECANICA,
   unlock: UNLOCK_MECANICO,
-  img: `/images/ACERO/door-${nombre.toLowerCase().replace(/\s+/g, '-')}.webp`
+  img: `/images/PUERTAS/ACERO/door-${nombre.toLowerCase().replace(/\s+/g, '-')}.webp`
 }));
 
 // Generador ACORAZADA
@@ -341,7 +341,7 @@ const PRODUCTOS_ACORAZADA = MODELOS_ACORAZADA.map((nombre, index) => ({
   specs: SPECS_SEGURIDAD_MECANICA,
   features: FEATURES_SEGURIDAD_MECANICA,
   unlock: UNLOCK_MECANICO,
-  img: `/images/ACORAZADA/door-${nombre.toLowerCase().replace(/\s+/g, '-')}.webp`
+  img: `/images/PUERTAS/ACORAZADA/door-${nombre.toLowerCase().replace(/\s+/g, '-')}.webp`
 }));
 
 // Generador ALUMINIO
@@ -353,7 +353,7 @@ const PRODUCTOS_ALUMINIO = MODELOS_ALUMINIO.map((nombre, index) => ({
   specs: SPECS_ALUMINIO,
   features: FEATURES_ALUMINIO,
   unlock: UNLOCK_MECANICO,
-  img: `/images/ALUMINIO/door-${nombre.toLowerCase().replace(/\s+/g, '-')}.webp`
+  img: `/images/PUERTAS/ALUMINIO/door-${nombre.toLowerCase().replace(/\s+/g, '-')}.webp`
 }));
 
 // Generador MADERA Series
@@ -365,7 +365,7 @@ const PRODUCTOS_MADERA_J = MODELOS_MADERA_J.map((nombre, index) => ({
   specs: SPECS_MADERA,
   features: FEATURES_MADERA_J,
   unlock: UNLOCK_MADERA,
-  img: `/images/MADERAACÚSTICA/door-${nombre.toLowerCase().replace(/\s+/g, '-')}.webp`
+  img: `/images/PUERTAS/MADERAACÚSTICA/door-${nombre.toLowerCase().replace(/\s+/g, '-')}.webp`
 }));
 
 const PRODUCTOS_MADERA_D = MODELOS_MADERA_D.map((nombre, index) => ({
@@ -376,7 +376,7 @@ const PRODUCTOS_MADERA_D = MODELOS_MADERA_D.map((nombre, index) => ({
   specs: SPECS_MADERA,
   features: FEATURES_MADERA_D,
   unlock: UNLOCK_MADERA,
-  img: `/images/MADERAACÚSTICA/door-${nombre.toLowerCase().replace(/\s+/g, '-')}.webp`
+  img: `/images/PUERTAS/MADERAACÚSTICA/door-${nombre.toLowerCase().replace(/\s+/g, '-')}.webp`
 }));
 
 const PRODUCTOS_MADERA_S = [...new Set(MODELOS_MADERA_S)].map((nombre, index) => ({
@@ -387,7 +387,7 @@ const PRODUCTOS_MADERA_S = [...new Set(MODELOS_MADERA_S)].map((nombre, index) =>
   specs: SPECS_MADERA,
   features: FEATURES_MADERA_S,
   unlock: UNLOCK_MADERA,
-  img: `/images/MADERAACÚSTICA/door-${nombre.toLowerCase().replace(/\s+/g, '-')}.webp`
+  img: `/images/PUERTAS/MADERAACÚSTICA/door-${nombre.toLowerCase().replace(/\s+/g, '-')}.webp`
 }));
 
 // Generador PVC
@@ -399,7 +399,7 @@ const PRODUCTOS_PVC = MODELOS_PVC.map((nombre, index) => ({
   specs: SPECS_PVC,
   features: FEATURES_PVC,
   unlock: UNLOCK_PVC,
-  img: `/images/PVC/door-${nombre.toLowerCase().replace(/\s+/g, '-')}.webp`
+  img: `/images/PUERTAS/PVC/door-${nombre.toLowerCase().replace(/\s+/g, '-')}.webp`
 }));
 
 // GENERACIÓN CORREDIZAS CON LOGICA DE COLORES
@@ -459,7 +459,7 @@ const PRODUCTOS_CORREDIZAS = MODELOS_CORREDIZAS.map((nombre, index) => {
         features: FEATURES_CORREDIZAS,
         unlock: UNLOCK_CORREDIZAS,
         colors: colors, 
-        img: `/images/CORREDIZA/door-${nombre}.webp` 
+        img: `/images/PUERTAS/CORREDIZA/door-${nombre}.webp` 
     };
 });
 
@@ -475,7 +475,7 @@ const PRODUCTOS_CORTAFUEGOS = MODELOS_CORTAFUEGOS.map((nombre, index) => {
     unlock: UNLOCK_CORTAFUEGOS,
     colors: COLORS_CORTAFUEGOS,
     // La ruta debe empezar con /images/...
-    img: `/images/CORTAFUEGO/door-${nombre}.webp`
+    img: `/images/PUERTAS/CORTAFUEGO/door-${nombre}.webp`
   };
 });
 
@@ -487,7 +487,7 @@ const PRODUCTOS_MEDICAS = MODELOS_MEDICAS.map((nombre, index) => {
     category: "PUERTA MÉDICA",
     specs: SPECS_MEDICAS,
     features: FEATURES_MEDICAS,
-    img: `/images/MEDICA/door-${nombre}.webp`
+    img: `/images/PUERTAS/MEDICA/door-${nombre}.webp`
   }; 
 });
 

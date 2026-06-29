@@ -124,7 +124,7 @@ export default function Home() {
             {/* CARD 1: SMART */}
             <motion.div variants={fadeInUp}>
               <Link href="/puertas?category=PUERTA DE SEGURIDAD IA" className="group relative block h-[500px] overflow-hidden bg-gray-900 border border-white/10 hover:border-[#00C2FF] transition-colors duration-500">
-                <Image src="/images/AI/door-x60-pro.webp" alt="Smart Door" fill className="object-cover opacity-70 group-hover:scale-110 transition-transform duration-700" sizes="(max-width: 768px) 100vw, 33vw"/>
+                <Image src="/images/PUERTAS/AI/door-x60-pro.webp" alt="Smart Door" fill className="object-cover opacity-70 group-hover:scale-110 transition-transform duration-700" sizes="(max-width: 768px) 100vw, 33vw"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
                 <div className="absolute bottom-0 left-0 p-8 w-full">
                   <ShieldCheck className="text-[#00C2FF] w-10 h-10 mb-4" />
@@ -137,7 +137,7 @@ export default function Home() {
             {/* CARD 2: ACORAZADAS */}
             <motion.div variants={fadeInUp}>
               <Link href="/puertas?category=PUERTA DE SEGURIDAD ACORAZADA" className="group relative block h-[500px] overflow-hidden bg-gray-900 border border-white/10 hover:border-white transition-colors duration-500">
-                <Image src="/images/ACORAZADA/door-wl001.webp" alt="Acorazada" fill className="object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" sizes="(max-width: 768px) 100vw, 33vw"/>
+                <Image src="/images/PUERTAS/ACORAZADA/door-wl001.webp" alt="Acorazada" fill className="object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" sizes="(max-width: 768px) 100vw, 33vw"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
                 <div className="absolute bottom-0 left-0 p-8 w-full">
                   <Lock className="text-white w-10 h-10 mb-4" />

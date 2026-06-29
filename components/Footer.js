@@ -94,13 +94,13 @@ export default function Footer() {
                         </a>
                       </div>
                       <div>
-                        <p className="text-[10px] text-gray-500 uppercase tracking-wider">Director Ejecutivo</p>
+                        <p className="text-[10px] text-gray-500 uppercase tracking-wider">Corporativo</p>
                         <a href="mailto:jack@wonlyspain.com" className="block text-sm text-gray-300 hover:text-white transition-colors break-all">
                           jack@wonlyspain.com
                         </a>
                       </div>
                       <div>
-                        <p className="text-[10px] text-gray-500 uppercase tracking-wider">Directora</p>
+                        <p className="text-[10px] text-gray-500 uppercase tracking-wider">Marketing</p>
                         <a href="mailto:jennyqiu@wonlyspain.com" className="block text-sm text-gray-300 hover:text-white transition-colors break-all">
                           jennyqiu@wonlyspain.com
                         </a>

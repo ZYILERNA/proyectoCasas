@@ -108,6 +108,25 @@ const VIDRIOS_CORREDIZAS = [
   { name: "VIDRIO-20", tag: "Vidrio 8mm", img: "/images/Asset/Vidrios/vidrio-20.webp" },
 ];
 
+// --- WALLPAPERS (fondo lateral del modal, estilo cerraduras) ---
+const WALLPAPER_DIR = "/images/PUERTAS/WALLPAPER";
+const WALLPAPER_SLUGS = new Set([
+  "chaobu", "chaohe", "chaoling", "cl96", "dihua", "gl097pro", "gl098pro", "k300max", "k300pro",
+  "l5601", "l5857", "l5859", "lingan", "louis", "mclaren", "n9518", "n9519", "n9520", "p101", "p102",
+  "p103", "p105", "p106", "p107", "p108", "pulada", "s101", "s108pro", "s116", "s118", "s119", "s121",
+  "sabo", "saina", "shengshi", "t200", "tdf-2003", "tdf-2009", "x50max", "x50pro", "x60max", "x60pro",
+  "x70jinxiu", "x70shunliu", "y106", "y118", "y119",
+]);
+// Correcciones nombre de producto -> nombre real del archivo de wallpaper
+const WALLPAPER_OVERRIDES = { chaopu: "chaobu", makailen: "mclaren" };
+
+const getWallpaper = (name) => {
+  if (!name) return null;
+  const base = name.toLowerCase().replace(/\s+/g, '');
+  const slug = WALLPAPER_OVERRIDES[base] || base;
+  return WALLPAPER_SLUGS.has(slug) ? `${WALLPAPER_DIR}/${slug}.webp` : null;
+};
+
 // --- 2. COMPONENTES UI ---
 
 const FilterButton = ({ label, active, onClick }) => (
@@ -180,16 +199,33 @@ const ProductModal = ({ product, onClose }) => {
   else if (product.category.includes("MINIMALISTA")) { accentColor = "text-stone-500"; borderColor = "border-stone-500"; Icon = Sparkles; }
   else if (product.category.includes("BAJO CARBONO")) { accentColor = "text-green-600"; borderColor = "border-green-600"; Icon = Sparkles; }
 
+  const wallpaper = getWallpaper(product.name);
+
   return (
     <div className="fixed inset-0 z-[100] flex justify-end">
-      {/* Backdrop */}
+      {/* Backdrop — con wallpaper lateral si el producto lo tiene (estilo cerraduras) */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         className="absolute inset-0 bg-black/60"
         onClick={onClose}
-      />
+      >
+        {wallpaper && (
+          <div className="hidden md:block absolute inset-y-0 left-0 right-[900px] overflow-hidden">
+            <motion.img
+              src={wallpaper}
+              alt=""
+              aria-hidden="true"
+              initial={{ scale: 1.08, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/40 pointer-events-none" />
+          </div>
+        )}
+      </motion.div>
 
       {/* Panel deslizante */}
       <motion.div

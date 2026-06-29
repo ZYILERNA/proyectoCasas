@@ -133,127 +133,125 @@ const ProductDrawer = memo(({ product, onClose }) => {
   const isKit = product.has_kit && galleryIndex === allImages.length - 1;
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.2 }}
-      className="fixed inset-0 z-[100] flex justify-end bg-black/85 h-[100dvh]"
-      onClick={onClose}
-    >
+    <div className="fixed inset-0 z-[100] flex justify-end h-[100dvh]">
+      {/* BACKDROP — wallpaper = imagen activa del carrusel (solo escritorio) */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.25 }}
+        className="absolute inset-0 bg-black/85"
+        onClick={onClose}
+      >
+        {/* Zona del wallpaper: ocupa todo menos el panel lateral */}
+        <div
+          className="hidden md:block absolute inset-0 right-[620px] overflow-hidden bg-white"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={galleryIndex}
+              src={allImages[galleryIndex]}
+              alt=""
+              aria-hidden="true"
+              initial={{ opacity: 0, scale: 1.06 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </AnimatePresence>
+          {/* Difuminado hacia el panel para integrar el wallpaper */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black/25 pointer-events-none" />
+
+          {/* Etiqueta galería / kit */}
+          <div className="absolute top-6 left-6 z-10 flex items-center gap-2">
+            <span className="flex items-center gap-1.5 bg-black/60 backdrop-blur text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full">
+              <ScanLine size={11} /> {isKit ? 'Kit de instalación' : 'Galería'}
+            </span>
+            {isKit && (
+              <span className="flex items-center gap-1 bg-black text-white text-[10px] font-bold px-2.5 py-1.5 rounded-full">
+                <Package size={10} /> KIT COMPLETO
+              </span>
+            )}
+          </div>
+
+          {/* Flechas de navegación (no cierran el modal) */}
+          {hasMultiple && (
+            <>
+              <button
+                onClick={(e) => { e.stopPropagation(); prev(); }}
+                className="absolute left-5 top-1/2 -translate-y-1/2 z-10 p-2.5 rounded-full bg-white/90 shadow-lg border border-gray-100 hover:bg-white hover:scale-110 transition-all text-gray-900"
+              >
+                <ChevronLeft size={20} />
+              </button>
+              <button
+                onClick={(e) => { e.stopPropagation(); next(); }}
+                className="absolute right-5 top-1/2 -translate-y-1/2 z-10 p-2.5 rounded-full bg-white/90 shadow-lg border border-gray-100 hover:bg-white hover:scale-110 transition-all text-gray-900"
+              >
+                <ChevronRight size={20} />
+              </button>
+              {/* Indicadores */}
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex gap-1.5">
+                {allImages.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={(e) => { e.stopPropagation(); setGalleryIndex(idx); }}
+                    className={`h-1.5 rounded-full transition-all duration-300 ${idx === galleryIndex ? 'w-5 bg-[#00C2FF]' : 'w-1.5 bg-white/60 hover:bg-white'}`}
+                  />
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+      </motion.div>
+
+      {/* PANEL LATERAL */}
       <motion.div
         initial={{ x: "100%" }}
         animate={{ x: 0 }}
         exit={{ x: "100%" }}
-        transition={{ type: "tween", ease: "circOut", duration: 0.35 }}
+        transition={{ type: "tween", ease: "easeOut", duration: 0.32 }}
         style={{ willChange: "transform" }}
-        onClick={(e) => e.stopPropagation()}
-        className="bg-[#080808] text-white w-full max-w-5xl h-full shadow-2xl flex flex-col md:flex-row overflow-hidden md:rounded-l-2xl"
+        className="relative bg-[#080808] text-white w-full max-w-[620px] h-full shadow-2xl flex flex-col border-l border-white/8 overflow-hidden"
       >
-        {/* IZQUIERDA: GALERÍA (fondo oscuro, fotos sobre blanco) */}
-        <div className="md:w-3/5 bg-[#080808] md:p-8 flex flex-col md:gap-6 relative shrink-0 border-b md:border-b-0 border-white/10">
-          <button onClick={onClose} className="absolute top-4 right-4 md:hidden bg-white/90 p-2 rounded-full shadow-md border border-gray-100 z-20 text-gray-900">
+        {/* MÓVIL: carrusel deslizable (no hay wallpaper en móvil) */}
+        <div className="md:hidden relative w-full bg-white h-[42vh] shrink-0">
+          <button onClick={onClose} className="absolute top-4 right-4 bg-white/90 p-2 rounded-full shadow-md border border-gray-100 z-20 text-gray-900">
             <X size={20} />
           </button>
-
-          {/* MÓVIL: carrusel deslizable */}
-          <div className="md:hidden relative w-full bg-white h-[45vh]">
-            <div
-              ref={mobileScrollRef}
-              className="flex overflow-x-auto snap-x snap-mandatory h-full w-full [&::-webkit-scrollbar]:hidden"
-              style={{ scrollBehavior: 'smooth' }}
-              onScroll={(e) => {
-                const idx = Math.round(e.target.scrollLeft / e.target.clientWidth);
-                setMobileImageIndex(idx);
-              }}
-            >
-              {allImages.map((img, idx) => (
-                <div key={idx} className="w-full h-full shrink-0 snap-center relative flex items-center justify-center p-6">
-                  <img src={img} alt={`${product.name} ${idx}`} className="object-contain w-full h-full" />
-                  {product.has_kit && idx === allImages.length - 1 && (
-                    <span className="absolute top-3 left-3 bg-black text-white text-[10px] font-bold px-2 py-1 rounded-full flex items-center gap-1">
-                      <Package size={10} /> KIT COMPLETO
-                    </span>
-                  )}
-                </div>
+          <div
+            ref={mobileScrollRef}
+            className="flex overflow-x-auto snap-x snap-mandatory h-full w-full [&::-webkit-scrollbar]:hidden"
+            style={{ scrollBehavior: 'smooth' }}
+            onScroll={(e) => {
+              const idx = Math.round(e.target.scrollLeft / e.target.clientWidth);
+              setMobileImageIndex(idx);
+            }}
+          >
+            {allImages.map((img, idx) => (
+              <div key={idx} className="w-full h-full shrink-0 snap-center relative flex items-center justify-center p-6">
+                <img src={img} alt={`${product.name} ${idx}`} className="object-contain w-full h-full" />
+                {product.has_kit && idx === allImages.length - 1 && (
+                  <span className="absolute top-3 left-3 bg-black text-white text-[10px] font-bold px-2 py-1 rounded-full flex items-center gap-1">
+                    <Package size={10} /> KIT COMPLETO
+                  </span>
+                )}
+              </div>
+            ))}
+          </div>
+          {hasMultiple && (
+            <div className="absolute bottom-4 left-0 w-full flex justify-center gap-1.5 z-10">
+              {allImages.map((_, idx) => (
+                <div key={idx} className={`h-1.5 rounded-full transition-all duration-300 ${idx === mobileImageIndex ? 'w-4 bg-black' : 'w-1.5 bg-gray-300'}`} />
               ))}
             </div>
-            {hasMultiple && (
-              <div className="absolute bottom-4 left-0 w-full flex justify-center gap-1.5 z-10">
-                {allImages.map((_, idx) => (
-                  <div key={idx} className={`h-1.5 rounded-full transition-all duration-300 ${idx === mobileImageIndex ? 'w-4 bg-black' : 'w-1.5 bg-gray-300'}`} />
-                ))}
-              </div>
-            )}
-          </div>
-
-          {/* ESCRITORIO: imagen grande + carrusel */}
-          <div className="hidden md:flex flex-col gap-6 h-full">
-            <div
-              className="flex-1 bg-white rounded-xl border border-white/10 overflow-hidden relative group flex items-center justify-center"
-              onMouseEnter={() => setIsPaused(true)}
-              onMouseLeave={() => setIsPaused(false)}
-            >
-              <div className="flex items-center gap-1.5 text-gray-400 absolute top-3 left-4 z-10">
-                <ScanLine size={11} />
-                <span className="text-[10px] font-bold uppercase tracking-wider">
-                  {isKit ? 'Kit de instalación' : 'Galería'}
-                </span>
-              </div>
-              {isKit && (
-                <span className="absolute top-3 right-4 z-10 bg-black text-white text-[10px] font-bold px-2 py-1 rounded-full flex items-center gap-1">
-                  <Package size={10} /> KIT COMPLETO
-                </span>
-              )}
-
-              <AnimatePresence mode="wait">
-                <motion.img
-                  key={galleryIndex}
-                  src={allImages[galleryIndex]}
-                  alt={`${product.name} vista ${galleryIndex}`}
-                  initial={{ opacity: 0, scale: 0.97 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 1.02 }}
-                  transition={{ duration: 0.25 }}
-                  className="max-w-full max-h-full object-contain p-8"
-                />
-              </AnimatePresence>
-
-              {hasMultiple && (
-                <>
-                  <button onClick={prev} className="absolute left-3 p-1.5 rounded-full bg-white shadow-md border border-gray-100 hover:bg-gray-50 hover:scale-110 transition-all opacity-0 group-hover:opacity-100">
-                    <ChevronLeft size={18} />
-                  </button>
-                  <button onClick={next} className="absolute right-3 p-1.5 rounded-full bg-white shadow-md border border-gray-100 hover:bg-gray-50 hover:scale-110 transition-all opacity-0 group-hover:opacity-100">
-                    <ChevronRight size={18} />
-                  </button>
-                </>
-              )}
-            </div>
-
-            {/* Tira de miniaturas */}
-            {hasMultiple && (
-              <div className="flex gap-2 shrink-0 overflow-x-auto [&::-webkit-scrollbar]:hidden">
-                {allImages.map((img, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setGalleryIndex(idx)}
-                    className={`relative shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all duration-200 bg-white
-                      ${idx === galleryIndex ? 'border-black opacity-100' : 'border-transparent opacity-50 hover:opacity-80'}`}
-                  >
-                    <img src={img} alt="" className="w-full h-full object-contain p-1" />
-                    {product.has_kit && idx === allImages.length - 1 && (
-                      <span className="absolute bottom-0 inset-x-0 bg-black/80 text-white text-[7px] font-bold text-center uppercase tracking-wide">Kit</span>
-                    )}
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
+          )}
         </div>
 
-        {/* DERECHA: DATOS (panel oscuro) */}
-        <div className="md:w-2/5 flex flex-col h-full bg-[#080808] border-l border-white/10 relative min-h-0">
+        {/* DATOS */}
+        <div className="flex flex-col flex-1 bg-[#080808] relative min-h-0">
           <div className="p-6 md:p-8 pb-0 shrink-0">
             <div className="flex justify-between items-start">
               <div>
@@ -328,7 +326,7 @@ const ProductDrawer = memo(({ product, onClose }) => {
           </div>
         </div>
       </motion.div>
-    </motion.div>
+    </div>
   );
 });
 ProductDrawer.displayName = 'ProductDrawer';
