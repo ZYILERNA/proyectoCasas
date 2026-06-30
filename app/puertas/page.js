@@ -116,6 +116,7 @@ const WALLPAPER_SLUGS = new Set([
   "p103", "p105", "p106", "p107", "p108", "pulada", "s101", "s108pro", "s116", "s118", "s119", "s121",
   "sabo", "saina", "shengshi", "t200", "tdf-2003", "tdf-2009", "x50max", "x50pro", "x60max", "x60pro",
   "x70jinxiu", "x70shunliu", "y106", "y118", "y119",
+  "s108", "wave", "wl001", "wl-d003", "wl-j001", "wl-p001", "wl-s009",
 ]);
 // Correcciones nombre de producto -> nombre real del archivo de wallpaper
 const WALLPAPER_OVERRIDES = { chaopu: "chaobu", makailen: "mclaren" };
