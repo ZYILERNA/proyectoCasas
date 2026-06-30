@@ -53,9 +53,21 @@ function setGoogTransCookie(lang) {
 function clearGoogTransCookie() {
   const host = window.location.hostname;
   const expired = "expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
+
+  // 1) Cookie sin dominio (host-only)
   document.cookie = `googtrans=;${expired}`;
-  document.cookie = `googtrans=;${expired};domain=${host}`;
-  document.cookie = `googtrans=;${expired};domain=.${host}`;
+
+  // 2) Borrar en cada nivel de dominio: host, .host y todos los dominios padre
+  //    (p. ej. www.example.com -> www.example.com, .www.example.com,
+  //     example.com, .example.com). Así cubrimos el scope donde Google
+  //     o setGoogTransCookie hayan dejado escrita la cookie.
+  const parts = host.split(".");
+  for (let i = 0; i < parts.length; i++) {
+    const domain = parts.slice(i).join(".");
+    if (!domain) continue;
+    document.cookie = `googtrans=;${expired};domain=${domain}`;
+    document.cookie = `googtrans=;${expired};domain=.${domain}`;
+  }
 }
 
 export default function LanguageSwitcher({ variant = "desktop" }) {
@@ -66,6 +78,24 @@ export default function LanguageSwitcher({ variant = "desktop" }) {
 
   useEffect(() => {
     setCurrent(readCookieLang());
+
+    // Guard "cinturón y tirantes": si pedimos volver a español pero la cookie
+    // googtrans sobrevivió a la recarga, la volvemos a borrar y recargamos
+    // UNA sola vez (con tope) para evitar bucles de recarga.
+    if (sessionStorage.getItem("wonly_force_es") === "1") {
+      const stillTranslated = readCookieLang() !== PAGE_LANG;
+      const tries = Number(sessionStorage.getItem("wonly_force_es_tries") || "0");
+      if (stillTranslated && tries < 1) {
+        sessionStorage.setItem("wonly_force_es_tries", String(tries + 1));
+        clearGoogTransCookie();
+        window.location.reload();
+        return;
+      }
+      // Limpio: quitamos las marcas
+      sessionStorage.removeItem("wonly_force_es");
+      sessionStorage.removeItem("wonly_force_es_tries");
+      if (!stillTranslated) setCurrent(PAGE_LANG);
+    }
   }, []);
 
   // Cerrar al hacer clic fuera
@@ -83,6 +113,8 @@ export default function LanguageSwitcher({ variant = "desktop" }) {
 
     // Volver al idioma original: limpiar cookie y recargar
     if (lang === PAGE_LANG) {
+      sessionStorage.setItem("wonly_force_es", "1");
+      sessionStorage.removeItem("wonly_force_es_tries");
       clearGoogTransCookie();
       window.location.reload();
       return;
