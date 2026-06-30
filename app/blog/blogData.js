@@ -226,11 +226,16 @@ export const blogPosts = [
     title: "Instalación en Viladecans",
     location: "Viladecans, Barcelona",
     tipo: TIPOS.PUERTA,
-    excerpt: "Instalación realizada en una vivienda de Viladecans.",
+    excerpt: "Instalación realizada en una tienda de Viladecans.",
     description:
-      "Trabajo de instalación realizado en una vivienda de Viladecans, sede principal de WONLY. A continuación mostramos la fotografía del resultado.",
+      "Trabajo de instalación realizado en una tienda de Viladecans, sede principal de WONLY. A continuación mostramos las fotografías del resultado.",
     media: [
       { type: "image", src: `${BASE}/VILADECANS/foto1.webp`, alt: "Instalación en Viladecans" },
+      { type: "image", src: `${BASE}/VILADECANS/foto2.webp`, alt: "Instalación en Viladecans" },
+      { type: "image", src: `${BASE}/VILADECANS/foto3.webp`, alt: "Instalación en Viladecans" },
+      { type: "image", src: `${BASE}/VILADECANS/foto4.webp`, alt: "Instalación en Viladecans" },
+      { type: "image", src: `${BASE}/VILADECANS/foto5.webp`, alt: "Instalación en Viladecans" },
+      { type: "image", src: `${BASE}/VILADECANS/foto6.webp`, alt: "Instalación en Viladecans" },
     ],
   },
   {
