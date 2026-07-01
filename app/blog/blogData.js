@@ -236,6 +236,7 @@ export const blogPosts = [
       { type: "image", src: `${BASE}/VILADECANS/foto4.webp`, alt: "Instalación en Viladecans" },
       { type: "image", src: `${BASE}/VILADECANS/foto5.webp`, alt: "Instalación en Viladecans" },
       { type: "image", src: `${BASE}/VILADECANS/foto6.webp`, alt: "Instalación en Viladecans" },
+      { type: "video", src: `${BASE}/VILADECANS/demodelanave.mp4`, alt: "Vídeo demostración de la nave en Viladecans" },
     ],
   },
   {
