@@ -30,7 +30,7 @@ export default function Home() {
           - mt-[80px]: Empuja la sección por debajo del header. 
           - h-[calc(100vh-80px)]: Mantiene el diseño a pantalla completa restando la altura del header. 
           (Nota: Si tu header es más grande o más pequeño, ajusta el "80px" por tu medida real) */}
-      <section className="relative w-full h-[calc(100vh-80px)] mt-[80px] flex items-center">
+      <section className="relative w-full h-[calc(100vh-120px)] mt-[120px] flex items-center">
         
         {/* FONDO: Imagen del Robot con animación de zoom lento */}
         <motion.div 

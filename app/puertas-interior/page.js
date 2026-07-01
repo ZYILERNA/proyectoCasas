@@ -1,0 +1,517 @@
+"use client";
+
+import { useState, useMemo, useEffect, Suspense, useRef } from 'react';
+import { useSearchParams } from 'next/navigation';
+import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
+import { X, ChevronRight, DoorOpen, Palette, Filter, Search, Loader2 } from 'lucide-react';
+import { createClient } from '@supabase/supabase-js';
+
+// --- CONFIGURACIÓN SUPABASE ---
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+// --- 1. CATEGORÍAS DE PUERTAS DE INTERIOR ---
+// IMPORTANTE: estos textos deben coincidir EXACTAMENTE con el campo "category"
+// de la tabla "products" en Supabase. Añade/renombra según tus productos de
+// interior. La página solo mostrará productos cuya categoría esté en esta lista.
+const CATEGORIAS = [
+  "PUERTA DE INTERIOR LACADA",
+  "PUERTA DE INTERIOR DE MADERA",
+  "PUERTA DE INTERIOR VIDRIADA",
+  "PUERTA CORREDERA DE INTERIOR",
+  "PUERTA ABATIBLE DE INTERIOR",
+  "PUERTA DE INTERIOR MINIMALISTA",
+];
+
+// Imagen del hero según la categoría (con fallback a la genérica)
+const IMAGENES_HERO = {
+  "TODAS": "/images/todas.webp",
+};
+
+// Acento visual de la línea de interior (cálido, para diferenciarla de la de seguridad)
+const ACCENT = "#A67C52";
+
+// --- CARTA DE COLORES (misma gama de acabados que el resto de puertas) ---
+const DOOR_COLORS = [
+  { name: "Lacado Negro",          hex: "#1A1A1A" },
+  { name: "Tinte Wengué",          hex: "#4A2E1A" },
+  { name: "Tinte Gris Oscuro",     hex: "#3D3530" },
+  { name: "Morado",                hex: "#6A0DAD" },
+  { name: "Lacado Gris Antracita", hex: "#3C3F42" },
+  { name: "Tinte Nogal Oscuro",    hex: "#7B3F1A" },
+  { name: "Azul",                  hex: "#1565C0" },
+  { name: "Tinte Roble",           hex: "#A0522D" },
+  { name: "Tinte Gris Claro",      hex: "#7A6E65" },
+  { name: "Tinte Natural",         hex: "#C47C2B" },
+  { name: "Lacado Blanco",         hex: "#F5F5F5" },
+];
+
+// --- 2. COMPONENTES UI ---
+
+const FilterButton = ({ label, active, onClick }) => (
+  <button
+    onClick={onClick}
+    className={`w-full text-left px-4 py-3 text-[10px] font-bold uppercase border-b transition-all duration-300 flex justify-between items-center tracking-widest relative overflow-hidden group
+      ${active
+        ? 'text-white border-black pl-6'
+        : 'bg-white text-gray-500 border-gray-100 hover:bg-gray-50 hover:text-black hover:pl-6'
+      }`}
+  >
+    {active && (
+      <motion.div
+        layoutId="activeFilterInterior"
+        className="absolute inset-0 bg-black z-0"
+        initial={false}
+        transition={{ type: "spring", stiffness: 300, damping: 30 }}
+      />
+    )}
+    <span className="relative z-10 flex items-center justify-between w-full">
+      {label}
+      {active && <ChevronRight size={12} />}
+    </span>
+  </button>
+);
+
+const SearchInput = ({ value, onChange }) => (
+  <div className="relative group w-full">
+    <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-black transition-colors" size={16} />
+    <input
+      type="text"
+      placeholder="BUSCAR MODELO..."
+      value={value}
+      onChange={onChange}
+      className="w-full bg-[#F5F5F5] border border-transparent focus:bg-white focus:border-gray-200 rounded-full py-2.5 pl-11 pr-4 text-xs font-bold uppercase tracking-wide focus:ring-0 transition-all outline-none text-gray-900 placeholder:text-gray-400"
+    />
+    {value && (
+      <button
+        onClick={() => onChange({ target: { value: "" } })}
+        className="absolute right-3 top-1/2 -translate-y-1/2 p-1 hover:bg-gray-200 rounded-full text-gray-400 hover:text-black transition-colors"
+      >
+        <X size={12} />
+      </button>
+    )}
+  </div>
+);
+
+// --- MODAL DE PRODUCTO ---
+const ProductModal = ({ product, onClose }) => {
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = 'unset'; };
+  }, []);
+
+  if (!product) return null;
+
+  return (
+    <div className="fixed inset-0 z-[100] flex justify-end">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="absolute inset-0 bg-black/60"
+        onClick={onClose}
+      />
+
+      {/* Panel deslizante */}
+      <motion.div
+        initial={{ x: "100%" }}
+        animate={{ x: 0 }}
+        exit={{ x: "100%" }}
+        transition={{ type: "spring", damping: 30, stiffness: 350, mass: 0.8 }}
+        style={{ willChange: "transform" }}
+        className="relative bg-white w-full max-w-[900px] h-full shadow-2xl flex flex-col md:flex-row z-10"
+      >
+        <button onClick={onClose} className="absolute top-4 left-4 z-20 p-2 bg-white/80 backdrop-blur rounded-full hover:bg-black hover:text-white transition"><X size={20} /></button>
+
+        {/* Imagen */}
+        <div className="w-full md:w-1/2 bg-[#F8F8F8] relative min-h-[300px] md:h-full flex items-center justify-center p-10">
+          <motion.div
+            initial={{ scale: 0.95, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.1, duration: 0.3 }}
+            className="relative w-full h-full max-h-[500px]"
+          >
+            <Image
+              src={product.img}
+              alt={product.name}
+              fill
+              priority
+              className="object-contain mix-blend-multiply"
+            />
+          </motion.div>
+        </div>
+
+        {/* Contenido */}
+        <div className="w-full md:w-1/2 p-8 md:p-12 overflow-y-auto bg-white scrollbar-hide">
+          <span className="text-[10px] font-bold uppercase tracking-widest mb-2 block" style={{ color: ACCENT }}>{product.category}</span>
+          <h2 className="text-3xl font-bold mb-4 text-gray-900 tracking-tight">{product.name}</h2>
+          <p className="text-sm text-gray-600 mb-8 leading-relaxed">{product.description}</p>
+
+          <div className="space-y-8">
+            {/* Características */}
+            {product.features?.length > 0 && (
+              <div>
+                <h3 className="text-xs font-bold uppercase text-gray-900 mb-3 flex items-center gap-2">
+                  <DoorOpen size={14} /> Características
+                </h3>
+                <ul className="space-y-2">
+                  {product.features.map((feat, i) => (
+                    <motion.li
+                      initial={{ opacity: 0, x: 10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.05 * i }}
+                      key={i}
+                      className="flex items-start gap-2 text-xs text-gray-600"
+                    >
+                      <span className="mt-0.5" style={{ color: ACCENT }}>•</span> {feat}
+                    </motion.li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Carta de Colores */}
+            <div>
+              <h3 className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-100 pb-2 mb-3 flex items-center gap-2">
+                <Palette size={14} /> Acabados y Carta de Colores
+              </h3>
+              <div className="flex flex-wrap gap-4 mb-3 p-4 bg-gray-50 rounded-xl justify-center md:justify-start">
+                {DOOR_COLORS.map((color, i) => (
+                  <div key={i} className="text-center group flex flex-col items-center gap-2 cursor-help">
+                    <div
+                      className="w-12 h-12 rounded-full shadow-md border-2 border-white group-hover:scale-110 transition-transform duration-300"
+                      style={{ backgroundColor: color.hex }}
+                      title={color.name}
+                    ></div>
+                    <span className="text-[9px] text-gray-500 uppercase font-bold max-w-[60px] leading-tight">{color.name}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="flex items-start gap-3 bg-gray-50 rounded-lg p-3 border border-gray-200">
+                <Palette size={16} className="text-gray-400 shrink-0 mt-0.5" />
+                <p className="text-xs text-gray-500 leading-relaxed">
+                  ¿Buscas un color diferente? Disponemos de una amplia gama de acabados y colores personalizados bajo pedido.{" "}
+                  <span className="font-bold text-gray-800">Consúltanos sin compromiso.</span>
+                </p>
+              </div>
+            </div>
+
+            {/* Specs */}
+            {product.specs?.length > 0 && (
+              <div className="bg-gray-50 p-5 rounded border border-gray-100">
+                <h3 className="text-xs font-bold uppercase text-gray-400 mb-3">Especificaciones</h3>
+                <div className="grid grid-cols-1 gap-y-2">
+                  {product.specs.map((spec, i) => (
+                    <div key={i} className="flex justify-between border-b border-gray-200 pb-1 last:border-0">
+                      <span className="text-[10px] font-bold text-gray-500 uppercase">{spec.label}</span>
+                      <span className="text-[11px] font-semibold text-gray-900 text-right">{spec.value}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  );
+};
+
+// --- PRODUCT CARD ---
+const ProductCard = ({ product, onClick, priority = false }) => {
+  const shortCategory = product.category
+    .replace("PUERTA DE INTERIOR ", "")
+    .replace("PUERTA DE ", "")
+    .replace("PUERTA ", "");
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.2 }}
+      onClick={onClick}
+      className="group cursor-pointer flex flex-col h-full"
+    >
+      <div className="relative aspect-[3/5] bg-[#FCFCFC] mb-4 overflow-hidden border border-transparent group-hover:border-gray-100 transition-all rounded-sm">
+        <Image
+          src={product.img}
+          alt={product.name}
+          fill
+          priority={priority}
+          className="object-contain p-6 transition-transform duration-700 group-hover:scale-110 mix-blend-multiply"
+          sizes="100px"
+          unoptimized
+        />
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 flex items-end justify-center pb-6">
+          <span className="bg-white text-black text-[9px] font-bold uppercase px-3 py-2 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 shadow-sm tracking-widest">
+            Ver Detalles
+          </span>
+        </div>
+      </div>
+
+      <div className="text-center group-hover:text-left transition-all">
+        <h4 className="font-bold text-base text-gray-900 transition-colors uppercase group-hover:text-[#A67C52]">{product.name}</h4>
+        <div className="flex items-center justify-center group-hover:justify-start gap-2 mt-1">
+          <p className="text-[9px] uppercase tracking-widest text-gray-400">
+            {shortCategory}
+          </p>
+          <div className="flex -space-x-1">
+            {DOOR_COLORS.slice(0, 5).map((c, i) => (
+              <div
+                key={i}
+                className="w-3 h-3 rounded-full border border-white shadow-sm"
+                style={{ backgroundColor: c.hex }}
+              />
+            ))}
+            <div className="w-3 h-3 rounded-full bg-gray-100 border border-white flex items-center justify-center text-[6px] text-gray-500">+</div>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
+// --- PÁGINA PRINCIPAL ---
+function PuertasInteriorContent() {
+  const searchParams = useSearchParams();
+  const [activeCategory, setActiveCategory] = useState("TODAS");
+  const [products, setProducts] = useState([]);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState("");
+  const gridTopRef = useRef(null);
+
+  // Inicializar categoría desde URL
+  useEffect(() => {
+    const categoryFromUrl = searchParams.get('category');
+    if (categoryFromUrl) {
+      setActiveCategory(categoryFromUrl);
+    }
+  }, [searchParams]);
+
+  // Abrir ficha de producto desde URL (deep-link del buscador)
+  useEffect(() => {
+    const producto = searchParams.get('producto');
+    if (!producto) return;
+    let active = true;
+    (async () => {
+      const { data } = await supabase
+        .from('products')
+        .select('*')
+        .eq('name', producto)
+        .limit(1);
+      if (active && data && data[0]) setSelectedProduct(data[0]);
+    })();
+    return () => { active = false; };
+  }, [searchParams]);
+
+  // CARGAR DATOS DE SUPABASE (solo categorías de interior)
+  useEffect(() => {
+    async function fetchProducts() {
+      setLoading(true);
+
+      let query = supabase
+        .from('products')
+        .select('*')
+        .order('id', { ascending: true });
+
+      if (activeCategory !== "TODAS") {
+        query = query.eq('category', activeCategory);
+      } else {
+        // "Ver Todo" = solo las categorías de interior
+        query = query.in('category', CATEGORIAS);
+      }
+
+      const { data, error } = await query;
+
+      if (error) {
+        console.error("Error cargando productos:", error);
+      } else {
+        setProducts(data || []);
+      }
+      setLoading(false);
+    }
+
+    fetchProducts();
+  }, [activeCategory]);
+
+  const displayProducts = useMemo(() => {
+    if (searchTerm.trim() === "") return products;
+    const term = searchTerm.toLowerCase();
+    return products.filter(p =>
+      p.name.toLowerCase().includes(term) ||
+      (p.description && p.description.toLowerCase().includes(term))
+    );
+  }, [products, searchTerm]);
+
+  const handleCategoryChange = (cat) => {
+    setActiveCategory(cat);
+    if (gridTopRef.current && window.scrollY > 300) {
+      gridTopRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  return (
+    <main className="bg-white min-h-screen text-black pb-20 font-sans selection:bg-black selection:text-white">
+
+      {/* HERO */}
+      <div className="w-full h-[45vh] md:h-[62vh] relative mb-16 overflow-hidden bg-black mt-20">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeCategory}
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            className="absolute inset-0"
+          >
+            <Image
+              src={IMAGENES_HERO[activeCategory] || IMAGENES_HERO["TODAS"]}
+              alt={`Wonly ${activeCategory}`}
+              fill
+              priority
+              className="object-cover opacity-75"
+            />
+          </motion.div>
+        </AnimatePresence>
+
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 z-10">
+          <AnimatePresence mode="wait">
+            <motion.h1
+              key={`title-${activeCategory}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4 }}
+              className="text-3xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tighter text-white mb-3 md:mb-10 drop-shadow-2xl max-w-5xl"
+            >
+              {activeCategory === "TODAS" ? "Puertas de Interior" : activeCategory}
+            </motion.h1>
+          </AnimatePresence>
+
+          <AnimatePresence mode="wait">
+            <motion.p
+              key={`desc-${activeCategory}`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
+              className="text-gray-200 max-w-2xl mx-auto text-sm md:text-base font-light leading-relaxed drop-shadow-md"
+            >
+              {activeCategory === "TODAS"
+                ? "Nuestra colección de puertas de interior: diseño, calidez y acabados a medida para cada estancia de tu hogar."
+                : `Explora nuestra línea de ${activeCategory.toLowerCase()} con diseño de vanguardia y acabados personalizables.`}
+            </motion.p>
+          </AnimatePresence>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col lg:flex-row gap-12">
+
+          {/* SIDEBAR */}
+          <aside className="hidden lg:block w-64 flex-shrink-0 sticky top-32 h-fit">
+            <div className="mb-8">
+              <SearchInput value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+            </div>
+
+            <div className="mb-6 pb-2 border-b border-gray-100">
+              <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Categorías</span>
+            </div>
+            <div className="flex flex-col gap-1">
+              <FilterButton label="Ver Todo" active={activeCategory === "TODAS"} onClick={() => handleCategoryChange("TODAS")} />
+              {CATEGORIAS.map((cat) => (
+                <FilterButton key={cat} label={cat} active={activeCategory === cat} onClick={() => handleCategoryChange(cat)} />
+              ))}
+            </div>
+          </aside>
+
+          {/* GRID */}
+          <section className="flex-grow" ref={gridTopRef}>
+            <div className="lg:hidden mb-6">
+              <SearchInput value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+            </div>
+
+            <div className="flex justify-between items-center mb-8 pb-4 border-b border-gray-100">
+              <span className="text-xs font-bold uppercase tracking-widest text-gray-900">
+                {activeCategory === "TODAS" ? "Colección de Interior" : activeCategory} <span className="text-gray-400 ml-2">({displayProducts.length})</span>
+              </span>
+              <button onClick={() => setIsMobileMenuOpen(true)} className="lg:hidden flex items-center gap-2 text-[10px] font-bold uppercase bg-black text-white px-3 py-2"><Filter size={12} /> Filtros</button>
+            </div>
+
+            {loading ? (
+              <div className="flex h-64 w-full flex-col items-center justify-center text-gray-400 gap-3">
+                <Loader2 className="animate-spin" size={32} />
+                <span className="text-xs tracking-widest uppercase">Cargando colección...</span>
+              </div>
+            ) : (
+              <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-12">
+                <AnimatePresence mode='popLayout'>
+                  {displayProducts.map((p, index) => (
+                    <ProductCard
+                      key={p.id}
+                      product={p}
+                      onClick={() => setSelectedProduct(p)}
+                      priority={index < 8}
+                    />
+                  ))}
+                </AnimatePresence>
+              </div>
+            )}
+
+            {!loading && displayProducts.length === 0 && (
+              <div className="py-24 text-center text-gray-300 text-sm uppercase">
+                Sin resultados.
+                {searchTerm && <button onClick={() => setSearchTerm("")} className="block mx-auto mt-2 underline text-black">Limpiar búsqueda</button>}
+              </div>
+            )}
+          </section>
+        </div>
+      </div>
+
+      {/* MODAL */}
+      <AnimatePresence>
+        {selectedProduct && <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />}
+      </AnimatePresence>
+
+      {/* MENÚ MÓVIL */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/90 backdrop-blur flex items-center justify-center p-6 lg:hidden"
+          >
+            <motion.div
+              initial={{ y: 50 }} animate={{ y: 0 }} exit={{ y: 50 }}
+              className="bg-white w-full max-w-sm p-6 space-y-4 rounded"
+            >
+              <div className="flex justify-between items-center border-b pb-4">
+                <span className="font-bold uppercase tracking-widest text-sm">Categorías</span>
+                <button onClick={() => setIsMobileMenuOpen(false)}><X size={20} /></button>
+              </div>
+              <div className="flex flex-col gap-2 max-h-[60vh] overflow-y-auto">
+                <button onClick={() => { handleCategoryChange("TODAS"); setIsMobileMenuOpen(false); }} className="text-left py-3 border-b text-xs font-bold uppercase">Ver Todo</button>
+                {CATEGORIAS.map(cat => (
+                  <button key={cat} onClick={() => { handleCategoryChange(cat); setIsMobileMenuOpen(false); }} className="text-left py-3 border-b text-xs font-bold uppercase">{cat}</button>
+                ))}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+    </main>
+  );
+}
+
+export default function PuertasInteriorPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-white flex items-center justify-center"><Loader2 className="animate-spin" /></div>}>
+      <PuertasInteriorContent />
+    </Suspense>
+  );
+}

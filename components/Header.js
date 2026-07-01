@@ -2,6 +2,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -23,6 +24,8 @@ export default function Header() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   // Cargar el traductor de Google una sola vez (selector de idioma)
   useEffect(() => {
@@ -90,6 +93,15 @@ export default function Header() {
           : "bg-black"
       }`}
     >
+      {/* FRANJA SUPERIOR: eslogan de marca (solo en la home) */}
+      {isHome && (
+        <div className="w-full bg-gradient-to-r from-[#00C2FF] to-[#0091c2] text-black text-center px-4 py-2">
+          <p className="text-xs md:text-sm font-semibold uppercase tracking-[0.15em] leading-tight">
+            WONLY – Soluciones Integrales para Sistemas de Puertas Inteligentes
+          </p>
+        </div>
+      )}
+
       <div className={`container mx-auto px-6 h-20 flex items-center justify-between relative z-50 ${isMobileMenuOpen ? "bg-black" : ""}`}>
         {/* LOGO */}
         <div className="cursor-pointer z-50">
@@ -133,6 +145,7 @@ export default function Header() {
 
                 <ul className="space-y-4">
                   <MenuItem href="/puertas" text="Puertas de Seguridad" />
+                  <MenuItem href="/puertas-interior" text="Puertas de Interior" />
                   <MenuItem href="/ventanas" text="Ventanas Panorámicas" />
                   <MenuItem
                     href="/cerraduras"
@@ -257,6 +270,14 @@ export default function Header() {
               className="text-3xl font-bold uppercase tracking-widest text-white hover:text-[#00C2FF]"
             >
               Puertas
+            </Link>
+
+            <Link
+              href="/puertas-interior"
+              onClick={closeMobileMenu}
+              className="text-3xl font-bold uppercase tracking-widest text-white hover:text-[#00C2FF]"
+            >
+              Puertas Interior
             </Link>
 
             <Link
