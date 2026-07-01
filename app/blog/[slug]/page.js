@@ -135,19 +135,23 @@ export default function BlogPostPage({ params }) {
                         {beforeShots.map(renderThumb)}
                       </div>
 
-                      {/* DESPUÉS */}
-                      <div className="flex items-center gap-3 mb-6">
-                        <span className="text-xs font-bold uppercase tracking-[0.25em] bg-[#00C2FF] text-black px-3 py-1.5 rounded-full">
-                          Después
-                        </span>
-                        <h2 className="text-xl md:text-2xl font-bold uppercase tracking-widest text-[#00C2FF]">
-                          El resultado
-                        </h2>
-                        <div className="h-px bg-[#00C2FF]/30 flex-1" />
-                      </div>
-                      <div className="grid grid-cols-2 gap-4">
-                        {afterShots.map(renderThumb)}
-                      </div>
+                      {/* DESPUÉS (solo si ya hay fotos del resultado) */}
+                      {afterShots.length > 0 && (
+                        <>
+                          <div className="flex items-center gap-3 mb-6">
+                            <span className="text-xs font-bold uppercase tracking-[0.25em] bg-[#00C2FF] text-black px-3 py-1.5 rounded-full">
+                              Después
+                            </span>
+                            <h2 className="text-xl md:text-2xl font-bold uppercase tracking-widest text-[#00C2FF]">
+                              El resultado
+                            </h2>
+                            <div className="h-px bg-[#00C2FF]/30 flex-1" />
+                          </div>
+                          <div className="grid grid-cols-2 gap-4">
+                            {afterShots.map(renderThumb)}
+                          </div>
+                        </>
+                      )}
                     </>
                   ) : (
                     <>

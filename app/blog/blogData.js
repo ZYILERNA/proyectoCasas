@@ -25,6 +25,33 @@ export const TIPOS = {
 
 export const blogPosts = [
   {
+    slug: "canovelles",
+    title: "Instalación en Canovelles",
+    location: "Canovelles, Barcelona",
+    tipo: TIPOS.PUERTA,
+    excerpt:
+      "Proyecto en curso en una nave de Canovelles: documentamos el estado previo antes de la instalación.",
+    description:
+      "Reportaje del estado inicial de una nave en Canovelles antes de la instalación de la puerta de seguridad WONLY. El trabajo aún está en curso; próximamente añadiremos las fotografías y vídeos del resultado final.",
+    media: [
+      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes1.webp`, alt: "Estado previo de la nave en Canovelles" },
+      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes2.webp`, alt: "Estado previo de la nave en Canovelles" },
+      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes3.webp`, alt: "Estado previo de la nave en Canovelles" },
+      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes4.webp`, alt: "Estado previo de la nave en Canovelles" },
+      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes5.webp`, alt: "Estado previo de la nave en Canovelles" },
+      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes6.webp`, alt: "Estado previo de la nave en Canovelles" },
+      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes7.webp`, alt: "Estado previo de la nave en Canovelles" },
+      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes8.webp`, alt: "Estado previo de la nave en Canovelles" },
+      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes9.webp`, alt: "Estado previo de la nave en Canovelles" },
+      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes10.webp`, alt: "Estado previo de la nave en Canovelles" },
+      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes11.webp`, alt: "Estado previo de la nave en Canovelles" },
+      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes12.webp`, alt: "Estado previo de la nave en Canovelles" },
+      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes13.webp`, alt: "Estado previo de la nave en Canovelles" },
+      { type: "video", src: `${BASE}/CANOVELLES/video1.mp4`, alt: "Vídeo del estado previo de la nave en Canovelles" },
+      { type: "video", src: `${BASE}/CANOVELLES/video2.mp4`, alt: "Vídeo del estado previo de la nave en Canovelles" },
+    ],
+  },
+  {
     slug: "montgat",
     title: "Instalación de Puerta Acorazada en Montgat",
     location: "Montgat, Barcelona",
