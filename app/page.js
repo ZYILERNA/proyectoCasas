@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import { ShieldCheck, Lock, Home as HomeIcon, ChevronRight, ChevronLeft, Wind, Maximize2, Sun, BedDouble, Archive, Award, FileDown, X } from 'lucide-react';
+import { ShieldCheck, Lock, Home as HomeIcon, ChevronRight, ChevronLeft, Wind, Maximize2, Sun, BedDouble, Archive, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // --- Variantes de Animación Reutilizables ---
@@ -128,7 +128,65 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* ... (aquí continúa tu código con la SECCIÓN 2) ... */}
+      {/* =========================================
+         1b. SECCIÓN: CERTIFICACIONES (LOGOS)
+         ========================================= */}
+      <section className="py-16 bg-[#111] border-t border-white/5">
+        <div className="container mx-auto px-6">
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={staggerContainer}
+            className="flex flex-wrap items-start justify-center gap-16 md:gap-24"
+          >
+            {/* FSC */}
+            <motion.div variants={fadeInUp}>
+              <button
+                type="button"
+                onClick={() => setCertAbierto(certificados.fsc)}
+                className="group flex flex-col items-center cursor-pointer"
+              >
+                <div className="bg-white rounded-full p-6 mb-4 w-28 h-28 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                  <Image
+                    src="/images/Asset/CERTIFICADOS/LOGOS/FSC.png"
+                    alt="Certificado FSC"
+                    width={70}
+                    height={70}
+                    className="object-contain"
+                  />
+                </div>
+                <h4 className="text-base font-bold uppercase tracking-widest text-white group-hover:text-[#00C2FF] transition-colors">
+                  Certificado FSC
+                </h4>
+              </button>
+            </motion.div>
+
+            {/* ISO */}
+            <motion.div variants={fadeInUp}>
+              <button
+                type="button"
+                onClick={() => setCertAbierto(certificados.iso)}
+                className="group flex flex-col items-center cursor-pointer"
+              >
+                <div className="bg-white rounded-full p-6 mb-4 w-28 h-28 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                  <Image
+                    src="/images/Asset/CERTIFICADOS/LOGOS/ISO.png"
+                    alt="Certificado ISO"
+                    width={70}
+                    height={70}
+                    className="object-contain"
+                  />
+                </div>
+                <h4 className="text-base font-bold uppercase tracking-widest text-white group-hover:text-[#00C2FF] transition-colors">
+                  Certificado ISO
+                </h4>
+              </button>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* =========================================
          2. SECCIÓN PRIORITARIA: PUERTAS SMART
@@ -556,92 +614,7 @@ export default function Home() {
       </section>
 
       {/* =========================================
-         8. SECCIÓN: CERTIFICACIONES
-         ========================================= */}
-      <section className="py-24 bg-[#111] border-t border-white/5">
-        <div className="container mx-auto px-6">
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
-            className="text-center mb-16"
-          >
-            <h2 className="text-[#00C2FF] font-bold tracking-widest uppercase mb-2">Calidad Garantizada</h2>
-            <h3 className="text-4xl md:text-5xl font-bold text-white">CERTIFICACIONES</h3>
-            <p className="text-gray-400 max-w-2xl mx-auto mt-6 text-lg font-light">
-              Nuestros productos cumplen con los estándares internacionales más exigentes de calidad y sostenibilidad.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            variants={staggerContainer}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
-          >
-            {/* CARD: FSC */}
-            <motion.div variants={fadeInUp}>
-              <button
-                type="button"
-                onClick={() => setCertAbierto(certificados.fsc)}
-                className="group flex flex-col items-center bg-black border border-white/10 hover:border-[#00C2FF] p-10 transition-colors duration-500 h-full w-full cursor-pointer"
-              >
-                <div className="bg-white rounded-full p-6 mb-6 w-28 h-28 flex items-center justify-center">
-                  <Image
-                    src="/images/Asset/CERTIFICADOS/LOGOS/FSC.png"
-                    alt="Certificado FSC"
-                    width={70}
-                    height={70}
-                    className="object-contain"
-                  />
-                </div>
-                <Award className="text-[#00C2FF] w-8 h-8 mb-4" />
-                <h4 className="text-xl font-bold uppercase mb-2 text-center">Certificado FSC</h4>
-                <p className="text-gray-400 text-sm text-center mb-6">
-                  Madera de origen responsable, avalada por el Forest Stewardship Council.
-                </p>
-                <span className="mt-auto inline-flex items-center gap-2 text-[#00C2FF] text-xs font-bold uppercase tracking-widest border-b border-[#00C2FF] pb-1 group-hover:text-white group-hover:border-white transition-colors">
-                  Ver certificado <FileDown size={14} />
-                </span>
-              </button>
-            </motion.div>
-
-            {/* CARD: ISO */}
-            <motion.div variants={fadeInUp}>
-              <button
-                type="button"
-                onClick={() => setCertAbierto(certificados.iso)}
-                className="group flex flex-col items-center bg-black border border-white/10 hover:border-[#00C2FF] p-10 transition-colors duration-500 h-full w-full cursor-pointer"
-              >
-                <div className="bg-white rounded-full p-6 mb-6 w-28 h-28 flex items-center justify-center">
-                  <Image
-                    src="/images/Asset/CERTIFICADOS/LOGOS/ISO.png"
-                    alt="Certificado ISO"
-                    width={70}
-                    height={70}
-                    className="object-contain"
-                  />
-                </div>
-                <Award className="text-[#00C2FF] w-8 h-8 mb-4" />
-                <h4 className="text-xl font-bold uppercase mb-2 text-center">Certificado ISO</h4>
-                <p className="text-gray-400 text-sm text-center mb-6">
-                  Sistema de gestión de calidad certificado bajo normativa internacional ISO.
-                </p>
-                <span className="mt-auto inline-flex items-center gap-2 text-[#00C2FF] text-xs font-bold uppercase tracking-widest border-b border-[#00C2FF] pb-1 group-hover:text-white group-hover:border-white transition-colors">
-                  Ver certificado <FileDown size={14} />
-                </span>
-              </button>
-            </motion.div>
-          </motion.div>
-
-        </div>
-      </section>
-
-      {/* =========================================
-         8b. SECCIÓN: PATENTES DE INVENCIÓN (CARRUSEL)
+         8. SECCIÓN: PATENTES DE INVENCIÓN (CARRUSEL)
          ========================================= */}
       <section className="py-24 bg-black border-t border-white/5">
         <div className="container mx-auto px-6">
@@ -654,7 +627,7 @@ export default function Home() {
             className="text-center mb-12"
           >
             <h2 className="text-[#00C2FF] font-bold tracking-widest uppercase mb-2">Innovación Protegida</h2>
-            <h3 className="text-4xl md:text-5xl font-bold text-white uppercase">Certificado de Patente de Invención</h3>
+            <h3 className="text-4xl md:text-5xl font-bold text-white uppercase">Certificado de Patente de Invención 1000+</h3>
             <p className="text-gray-500 max-w-3xl mx-auto mt-6 text-sm italic font-light">
               Documento original emitido por la Administración Nacional de Propiedad Intelectual de China (CNIPA).
               La traducción al español se proporciona únicamente con fines informativos.

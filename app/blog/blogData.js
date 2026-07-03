@@ -12,6 +12,8 @@
 // Marca con "before: true" las fotos del ANTES de la reforma. Si un caso tiene
 // alguna, la página de detalle mostrará dos bloques separados: "Antes" y
 // "Después". Si no hay ninguna, se muestra una "Galería" normal.
+// Marca con "zona: true" las fotos del barrio/entorno: se muestran en un
+// bloque propio ("La zona") al final de la galería.
 // -----------------------------------------------------------------------------
 
 const BASE = "/images/BLOG";
@@ -26,10 +28,38 @@ export const TIPOS = {
 
 export const blogPosts = [
   {
+    slug: "canovelles",
+    title: "Instalación en Canovelles",
+    location: "Canovelles, Barcelona",
+    tipo: TIPOS.PUERTA,
+    excerpt:
+      "Proyecto en curso en una nave de Canovelles: documentamos el estado previo antes de la instalación.",
+    description:
+      "Reportaje del estado inicial de una nave en Canovelles antes de la instalación de la puerta de seguridad WONLY. El trabajo aún está en curso; próximamente añadiremos las fotografías y vídeos del resultado final.",
+    media: [
+      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes1.webp`, alt: "Estado previo de la nave en Canovelles" },
+      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes2.webp`, alt: "Estado previo de la nave en Canovelles" },
+      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes3.webp`, alt: "Estado previo de la nave en Canovelles" },
+      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes4.webp`, alt: "Estado previo de la nave en Canovelles" },
+      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes5.webp`, alt: "Estado previo de la nave en Canovelles" },
+      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes6.webp`, alt: "Estado previo de la nave en Canovelles" },
+      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes7.webp`, alt: "Estado previo de la nave en Canovelles" },
+      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes8.webp`, alt: "Estado previo de la nave en Canovelles" },
+      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes9.webp`, alt: "Estado previo de la nave en Canovelles" },
+      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes10.webp`, alt: "Estado previo de la nave en Canovelles" },
+      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes11.webp`, alt: "Estado previo de la nave en Canovelles" },
+      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes12.webp`, alt: "Estado previo de la nave en Canovelles" },
+      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes13.webp`, alt: "Estado previo de la nave en Canovelles" },
+      { type: "video", src: `${BASE}/CANOVELLES/video1.mp4`, alt: "Vídeo del estado previo de la nave en Canovelles" },
+      { type: "video", src: `${BASE}/CANOVELLES/video2.mp4`, alt: "Vídeo del estado previo de la nave en Canovelles" },
+    ],
+  },
+  {
     slug: "fabra-y-puig",
     title: "Instalación de Puerta Interior en la zona de Fabra y Puig",
     location: "Fabra i Puig, Barcelona",
     tipo: TIPOS.PUERTA_INTERIOR,
+    cover: `${BASE}/FABRAYPUIG/PUERTAINTERIOR1/zona2.webp`,
     excerpt:
       "Sustitución de las puertas de interior de una vivienda en la zona de Fabra y Puig: del estado original al acabado final, con vídeos de demostración.",
     description:
@@ -66,14 +96,14 @@ export const blogPosts = [
       { type: "image", src: `${BASE}/FABRAYPUIG/PUERTAINTERIOR1/despues29.webp`, alt: "Puerta de interior terminada" },
       { type: "image", src: `${BASE}/FABRAYPUIG/PUERTAINTERIOR1/despues30.webp`, alt: "Resultado final de la instalación" },
       { type: "image", src: `${BASE}/FABRAYPUIG/PUERTAINTERIOR1/despues31.webp`, alt: "Vista general del acabado final" },
-      { type: "image", before: true, src: `${BASE}/FABRAYPUIG/PUERTAINTERIOR1/antes1.webp`, alt: "Estado previo de la vivienda" },
-      { type: "image", before: true, src: `${BASE}/FABRAYPUIG/PUERTAINTERIOR1/antes2.webp`, alt: "Estado previo de la vivienda" },
-      { type: "image", before: true, src: `${BASE}/FABRAYPUIG/PUERTAINTERIOR1/antes3.webp`, alt: "Estado previo de la vivienda" },
       { type: "image", before: true, src: `${BASE}/FABRAYPUIG/PUERTAINTERIOR1/antes4.webp`, alt: "Estado previo de la vivienda" },
       { type: "image", before: true, src: `${BASE}/FABRAYPUIG/PUERTAINTERIOR1/antes5.webp`, alt: "Estado previo de la vivienda" },
       { type: "image", before: true, src: `${BASE}/FABRAYPUIG/PUERTAINTERIOR1/antes6.webp`, alt: "Estado previo de la vivienda" },
       { type: "image", before: true, src: `${BASE}/FABRAYPUIG/PUERTAINTERIOR1/antes7.webp`, alt: "Estado previo de la vivienda" },
       { type: "image", before: true, src: `${BASE}/FABRAYPUIG/PUERTAINTERIOR1/antes8.webp`, alt: "Estado previo de la vivienda" },
+      { type: "image", zona: true, src: `${BASE}/FABRAYPUIG/PUERTAINTERIOR1/zona1.webp`, alt: "Fotografía de la zona de Fabra i Puig" },
+      { type: "image", zona: true, src: `${BASE}/FABRAYPUIG/PUERTAINTERIOR1/zona2.webp`, alt: "Fotografía de la zona de Fabra i Puig" },
+      { type: "image", zona: true, src: `${BASE}/FABRAYPUIG/PUERTAINTERIOR1/zona3.webp`, alt: "Fotografía de la zona de Fabra i Puig" },
       { type: "video", src: `${BASE}/FABRAYPUIG/PUERTAINTERIOR1/videocalle.mp4`, alt: "Vídeo de la zona de la instalación" },
       { type: "video", src: `${BASE}/FABRAYPUIG/PUERTAINTERIOR1/instalacion.mp4`, alt: "Vídeo del proceso de instalación" },
       { type: "video", src: `${BASE}/FABRAYPUIG/PUERTAINTERIOR1/instalacio2.mp4`, alt: "Vídeo del proceso de instalación" },
@@ -84,33 +114,6 @@ export const blogPosts = [
       { type: "video", src: `${BASE}/FABRAYPUIG/PUERTAINTERIOR1/videodespues.mp4`, alt: "Vídeo del resultado final" },
       { type: "video", src: `${BASE}/FABRAYPUIG/PUERTAINTERIOR1/videodespues2.mp4`, alt: "Vídeo del resultado final" },
       { type: "video", src: `${BASE}/FABRAYPUIG/PUERTAINTERIOR1/videodespues3.mp4`, alt: "Vídeo del resultado final" },
-    ],
-  },
-  {
-    slug: "canovelles",
-    title: "Instalación en Canovelles",
-    location: "Canovelles, Barcelona",
-    tipo: TIPOS.PUERTA,
-    excerpt:
-      "Proyecto en curso en una nave de Canovelles: documentamos el estado previo antes de la instalación.",
-    description:
-      "Reportaje del estado inicial de una nave en Canovelles antes de la instalación de la puerta de seguridad WONLY. El trabajo aún está en curso; próximamente añadiremos las fotografías y vídeos del resultado final.",
-    media: [
-      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes1.webp`, alt: "Estado previo de la nave en Canovelles" },
-      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes2.webp`, alt: "Estado previo de la nave en Canovelles" },
-      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes3.webp`, alt: "Estado previo de la nave en Canovelles" },
-      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes4.webp`, alt: "Estado previo de la nave en Canovelles" },
-      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes5.webp`, alt: "Estado previo de la nave en Canovelles" },
-      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes6.webp`, alt: "Estado previo de la nave en Canovelles" },
-      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes7.webp`, alt: "Estado previo de la nave en Canovelles" },
-      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes8.webp`, alt: "Estado previo de la nave en Canovelles" },
-      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes9.webp`, alt: "Estado previo de la nave en Canovelles" },
-      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes10.webp`, alt: "Estado previo de la nave en Canovelles" },
-      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes11.webp`, alt: "Estado previo de la nave en Canovelles" },
-      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes12.webp`, alt: "Estado previo de la nave en Canovelles" },
-      { type: "image", before: true, src: `${BASE}/CANOVELLES/antes13.webp`, alt: "Estado previo de la nave en Canovelles" },
-      { type: "video", src: `${BASE}/CANOVELLES/video1.mp4`, alt: "Vídeo del estado previo de la nave en Canovelles" },
-      { type: "video", src: `${BASE}/CANOVELLES/video2.mp4`, alt: "Vídeo del estado previo de la nave en Canovelles" },
     ],
   },
   {
@@ -347,8 +350,10 @@ export function getPostBySlug(slug) {
   return blogPosts.find((post) => post.slug === slug);
 }
 
-// Devuelve la portada (primer elemento de tipo imagen, o el primer media)
+// Devuelve la portada: el campo "cover" si el post lo define, y si no,
+// el primer elemento de tipo imagen (o el primer media)
 export function getCover(post) {
+  if (post.cover) return post.cover;
   const firstImage = post.media.find((m) => m.type === "image");
   return (firstImage || post.media[0])?.src;
 }

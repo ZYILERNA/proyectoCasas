@@ -45,10 +45,11 @@ export default function BlogPostPage({ params }) {
     .filter((p) => p.slug !== post.slug)
     .slice(0, 3);
 
-  // Separamos "antes" y "después" conservando el índice global (para el lightbox)
+  // Separamos "antes", "después" y "zona" conservando el índice global (para el lightbox)
   const indexed = images.map((img, idx) => ({ img, idx }));
   const beforeShots = indexed.filter((it) => it.img.before);
-  const afterShots = indexed.filter((it) => !it.img.before);
+  const zonaShots = indexed.filter((it) => it.img.zona);
+  const afterShots = indexed.filter((it) => !it.img.before && !it.img.zona);
   const hasBeforeAfter = beforeShots.length > 0;
 
   // Si hay fotos Y vídeos, los mostramos en dos columnas (galería + vídeos al lado)
@@ -164,6 +165,24 @@ export default function BlogPostPage({ params }) {
                       </div>
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                         {afterShots.map(renderThumb)}
+                      </div>
+                    </>
+                  )}
+
+                  {/* LA ZONA (fotos del barrio/entorno, al final del todo) */}
+                  {zonaShots.length > 0 && (
+                    <>
+                      <div className="flex items-center gap-3 mb-6 mt-12">
+                        <span className="text-xs font-bold uppercase tracking-[0.25em] bg-white/10 text-gray-300 px-3 py-1.5 rounded-full">
+                          La zona
+                        </span>
+                        <h2 className="text-xl md:text-2xl font-bold uppercase tracking-widest text-gray-400">
+                          El entorno
+                        </h2>
+                        <div className="h-px bg-white/15 flex-1" />
+                      </div>
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        {zonaShots.map(renderThumb)}
                       </div>
                     </>
                   )}
