@@ -148,12 +148,12 @@ export default function Home() {
                 onClick={() => setCertAbierto(certificados.fsc)}
                 className="group flex flex-col items-center cursor-pointer"
               >
-                <div className="bg-white rounded-full p-6 mb-4 w-28 h-28 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                <div className="bg-white rounded-full p-2.5 mb-3 w-14 h-14 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                   <Image
                     src="/images/Asset/CERTIFICADOS/LOGOS/FSC.png"
                     alt="Certificado FSC"
-                    width={70}
-                    height={70}
+                    width={32}
+                    height={32}
                     className="object-contain"
                   />
                 </div>
@@ -170,12 +170,12 @@ export default function Home() {
                 onClick={() => setCertAbierto(certificados.iso)}
                 className="group flex flex-col items-center cursor-pointer"
               >
-                <div className="bg-white rounded-full p-6 mb-4 w-28 h-28 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                <div className="bg-white rounded-full p-2.5 mb-3 w-14 h-14 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                   <Image
                     src="/images/Asset/CERTIFICADOS/LOGOS/ISO.png"
                     alt="Certificado ISO"
-                    width={70}
-                    height={70}
+                    width={32}
+                    height={32}
                     className="object-contain"
                   />
                 </div>
