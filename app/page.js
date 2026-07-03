@@ -182,6 +182,9 @@ export default function Home() {
                 <h4 className="text-base font-bold uppercase tracking-widest text-white group-hover:text-[#00C2FF] transition-colors">
                   Certificado ISO
                 </h4>
+                <span className="text-sm text-gray-400 tracking-widest mt-1">
+                  ISO 9001:2015
+                </span>
               </button>
             </motion.div>
           </motion.div>
