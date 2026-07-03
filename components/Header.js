@@ -145,7 +145,7 @@ export default function Header() {
 
                 <ul className="space-y-4">
                   <MenuItem href="/puertas" text="Puertas de Seguridad" />
-                  <MenuItem href="/puertas-interior" text="Puertas de Interior" />
+                  <MenuItem href="/puertas?category=PUERTA ACÚSTICA DE MADERA" text="Puertas de Interior" />
                   <MenuItem href="/ventanas" text="Ventanas Panorámicas" />
                   <MenuItem
                     href="/cerraduras"
@@ -273,7 +273,7 @@ export default function Header() {
             </Link>
 
             <Link
-              href="/puertas-interior"
+              href="/puertas?category=PUERTA ACÚSTICA DE MADERA"
               onClick={closeMobileMenu}
               className="text-3xl font-bold uppercase tracking-widest text-white hover:text-[#00C2FF]"
             >

@@ -199,6 +199,7 @@ export default function BlogPostPage({ params }) {
                       <video
                         src={videos[videoIndex].src}
                         controls
+                        muted
                         playsInline
                         preload="metadata"
                         className="w-full h-auto max-h-[70vh] bg-black"

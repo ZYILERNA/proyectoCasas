@@ -2,8 +2,9 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { ShieldCheck, Lock, Home as HomeIcon, ChevronRight, Wind, Maximize2, Sun, BedDouble, Archive } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { ShieldCheck, Lock, Home as HomeIcon, ChevronRight, ChevronLeft, Wind, Maximize2, Sun, BedDouble, Archive, Award, FileDown, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 // --- Variantes de Animación Reutilizables ---
 const fadeInUp = {
@@ -20,6 +21,44 @@ const staggerContainer = {
 };
 
 export default function Home() {
+  // Certificado abierto en el modal (null = cerrado)
+  const [certAbierto, setCertAbierto] = useState(null);
+
+  // Índice del carrusel de patentes (0-12)
+  const [patenteActual, setPatenteActual] = useState(0);
+
+  const certificados = {
+    fsc: {
+      titulo: "Certificado FSC",
+      imagen: "/images/Asset/CERTIFICADOS/fsc-certificate-wangli.webp",
+      width: 1224,
+      height: 1584,
+    },
+    iso: {
+      titulo: "Certificado ISO",
+      imagen: "/images/Asset/CERTIFICADOS/iso-certificate.webp",
+      width: 2560,
+      height: 3606,
+    },
+  };
+
+  // Patentes CERT1-CERT13: original en chino + traducción al español
+  const patentes = Array.from({ length: 13 }, (_, i) => ({
+    numero: i + 1,
+    chino: {
+      titulo: `Patente de invención ${i + 1} — Documento original (CNIPA)`,
+      imagen: `/images/Asset/CERTIFICADOS/CERT${i + 1}/chino.webp`,
+      width: 960,
+      height: 1360,
+    },
+    espanol: {
+      titulo: `Patente de invención ${i + 1} — Traducción al español`,
+      imagen: `/images/Asset/CERTIFICADOS/CERT${i + 1}/espanol.webp`,
+      width: 1054,
+      height: 1492,
+    },
+  }));
+
   return (
     <main className="bg-black text-white selection:bg-[#00C2FF] selection:text-black overflow-hidden">
       
@@ -517,7 +556,232 @@ export default function Home() {
       </section>
 
       {/* =========================================
-         8. FOOTER VISUAL
+         8. SECCIÓN: CERTIFICACIONES
+         ========================================= */}
+      <section className="py-24 bg-[#111] border-t border-white/5">
+        <div className="container mx-auto px-6">
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeInUp}
+            className="text-center mb-16"
+          >
+            <h2 className="text-[#00C2FF] font-bold tracking-widest uppercase mb-2">Calidad Garantizada</h2>
+            <h3 className="text-4xl md:text-5xl font-bold text-white">CERTIFICACIONES</h3>
+            <p className="text-gray-400 max-w-2xl mx-auto mt-6 text-lg font-light">
+              Nuestros productos cumplen con los estándares internacionales más exigentes de calidad y sostenibilidad.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={staggerContainer}
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+          >
+            {/* CARD: FSC */}
+            <motion.div variants={fadeInUp}>
+              <button
+                type="button"
+                onClick={() => setCertAbierto(certificados.fsc)}
+                className="group flex flex-col items-center bg-black border border-white/10 hover:border-[#00C2FF] p-10 transition-colors duration-500 h-full w-full cursor-pointer"
+              >
+                <div className="bg-white rounded-full p-6 mb-6 w-28 h-28 flex items-center justify-center">
+                  <Image
+                    src="/images/Asset/CERTIFICADOS/LOGOS/FSC.png"
+                    alt="Certificado FSC"
+                    width={70}
+                    height={70}
+                    className="object-contain"
+                  />
+                </div>
+                <Award className="text-[#00C2FF] w-8 h-8 mb-4" />
+                <h4 className="text-xl font-bold uppercase mb-2 text-center">Certificado FSC</h4>
+                <p className="text-gray-400 text-sm text-center mb-6">
+                  Madera de origen responsable, avalada por el Forest Stewardship Council.
+                </p>
+                <span className="mt-auto inline-flex items-center gap-2 text-[#00C2FF] text-xs font-bold uppercase tracking-widest border-b border-[#00C2FF] pb-1 group-hover:text-white group-hover:border-white transition-colors">
+                  Ver certificado <FileDown size={14} />
+                </span>
+              </button>
+            </motion.div>
+
+            {/* CARD: ISO */}
+            <motion.div variants={fadeInUp}>
+              <button
+                type="button"
+                onClick={() => setCertAbierto(certificados.iso)}
+                className="group flex flex-col items-center bg-black border border-white/10 hover:border-[#00C2FF] p-10 transition-colors duration-500 h-full w-full cursor-pointer"
+              >
+                <div className="bg-white rounded-full p-6 mb-6 w-28 h-28 flex items-center justify-center">
+                  <Image
+                    src="/images/Asset/CERTIFICADOS/LOGOS/ISO.png"
+                    alt="Certificado ISO"
+                    width={70}
+                    height={70}
+                    className="object-contain"
+                  />
+                </div>
+                <Award className="text-[#00C2FF] w-8 h-8 mb-4" />
+                <h4 className="text-xl font-bold uppercase mb-2 text-center">Certificado ISO</h4>
+                <p className="text-gray-400 text-sm text-center mb-6">
+                  Sistema de gestión de calidad certificado bajo normativa internacional ISO.
+                </p>
+                <span className="mt-auto inline-flex items-center gap-2 text-[#00C2FF] text-xs font-bold uppercase tracking-widest border-b border-[#00C2FF] pb-1 group-hover:text-white group-hover:border-white transition-colors">
+                  Ver certificado <FileDown size={14} />
+                </span>
+              </button>
+            </motion.div>
+          </motion.div>
+
+        </div>
+      </section>
+
+      {/* =========================================
+         8b. SECCIÓN: PATENTES DE INVENCIÓN (CARRUSEL)
+         ========================================= */}
+      <section className="py-24 bg-black border-t border-white/5">
+        <div className="container mx-auto px-6">
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeInUp}
+            className="text-center mb-12"
+          >
+            <h2 className="text-[#00C2FF] font-bold tracking-widest uppercase mb-2">Innovación Protegida</h2>
+            <h3 className="text-4xl md:text-5xl font-bold text-white uppercase">Certificado de Patente de Invención</h3>
+            <p className="text-gray-500 max-w-3xl mx-auto mt-6 text-sm italic font-light">
+              Documento original emitido por la Administración Nacional de Propiedad Intelectual de China (CNIPA).
+              La traducción al español se proporciona únicamente con fines informativos.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={fadeInUp}
+            className="relative max-w-4xl mx-auto"
+          >
+            {/* Slide actual: original chino + traducción español */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={patenteActual}
+                initial={{ opacity: 0, x: 40 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -40 }}
+                transition={{ duration: 0.35, ease: "easeOut" }}
+                className="grid grid-cols-1 sm:grid-cols-2 gap-6 px-12 md:px-16"
+              >
+                {[patentes[patenteActual].chino, patentes[patenteActual].espanol].map((doc) => (
+                  <button
+                    key={doc.imagen}
+                    type="button"
+                    onClick={() => setCertAbierto(doc)}
+                    className="group bg-[#111] border border-white/10 hover:border-[#00C2FF] p-4 transition-colors duration-300 cursor-pointer"
+                  >
+                    <Image
+                      src={doc.imagen}
+                      alt={doc.titulo}
+                      width={doc.width}
+                      height={doc.height}
+                      className="w-full h-auto"
+                    />
+                    <span className="block mt-3 text-xs uppercase tracking-widest text-gray-400 group-hover:text-[#00C2FF] transition-colors">
+                      {doc.titulo.includes('original') ? 'Documento original' : 'Traducción al español'}
+                    </span>
+                  </button>
+                ))}
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Flechas */}
+            <button
+              type="button"
+              onClick={() => setPatenteActual((patenteActual - 1 + patentes.length) % patentes.length)}
+              aria-label="Patente anterior"
+              className="absolute left-0 top-1/2 -translate-y-1/2 text-white hover:text-[#00C2FF] transition-colors p-2"
+            >
+              <ChevronLeft size={36} />
+            </button>
+            <button
+              type="button"
+              onClick={() => setPatenteActual((patenteActual + 1) % patentes.length)}
+              aria-label="Patente siguiente"
+              className="absolute right-0 top-1/2 -translate-y-1/2 text-white hover:text-[#00C2FF] transition-colors p-2"
+            >
+              <ChevronRight size={36} />
+            </button>
+
+            {/* Indicadores */}
+            <div className="flex items-center justify-center gap-2 mt-8 flex-wrap">
+              {patentes.map((p, i) => (
+                <button
+                  key={p.numero}
+                  type="button"
+                  onClick={() => setPatenteActual(i)}
+                  aria-label={`Ir a la patente ${p.numero}`}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    i === patenteActual ? 'w-8 bg-[#00C2FF]' : 'w-2 bg-white/20 hover:bg-white/40'
+                  }`}
+                />
+              ))}
+            </div>
+            <p className="text-center text-gray-500 text-xs mt-3 tracking-widest">
+              {patenteActual + 1} / {patentes.length}
+            </p>
+          </motion.div>
+
+        </div>
+      </section>
+
+      {/* MODAL: Visor de certificado en imagen */}
+      <AnimatePresence>
+        {certAbierto && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            onClick={() => setCertAbierto(null)}
+            className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 md:p-10"
+          >
+            <button
+              type="button"
+              onClick={() => setCertAbierto(null)}
+              className="absolute top-6 right-6 text-white hover:text-[#00C2FF] transition-colors z-10"
+              aria-label="Cerrar"
+            >
+              <X size={32} />
+            </button>
+
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              onClick={(e) => e.stopPropagation()}
+              className="max-h-full overflow-y-auto"
+            >
+              <Image
+                src={certAbierto.imagen}
+                alt={certAbierto.titulo}
+                width={certAbierto.width}
+                height={certAbierto.height}
+                className="w-auto max-w-[90vw] md:max-w-[600px] h-auto shadow-2xl"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* =========================================
+         9. FOOTER VISUAL
          ========================================= */}
       <section className="relative py-24 border-t border-white/10 overflow-hidden">
          <div className="absolute inset-0 opacity-20 pointer-events-none">
