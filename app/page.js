@@ -187,6 +187,29 @@ export default function Home() {
                 </span>
               </button>
             </motion.div>
+
+            {/* LOW NOISE */}
+            <motion.div variants={fadeInUp}>
+              <a
+                href="/images/Asset/CERTIFICADOS/Lownoise.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center cursor-pointer"
+              >
+                <div className="bg-white rounded-full p-2.5 mb-3 w-14 h-14 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                  <Image
+                    src="/images/Asset/CERTIFICADOS/LOGOS/LOWNOISE.png"
+                    alt="Certificado Low Noise"
+                    width={32}
+                    height={32}
+                    className="object-contain"
+                  />
+                </div>
+                <h4 className="text-base font-bold uppercase tracking-widest text-white group-hover:text-[#00C2FF] transition-colors">
+                  Certificado Low Noise
+                </h4>
+              </a>
+            </motion.div>
           </motion.div>
         </div>
       </section>
