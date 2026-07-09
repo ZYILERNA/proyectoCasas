@@ -441,7 +441,9 @@ const ProductCard = ({ product, onClick, priority = false }) => {
 // --- PÁGINA PRINCIPAL ---
 function PuertasContent() {
   const searchParams = useSearchParams();
-  const [activeCategory, setActiveCategory] = useState("TODAS");
+  // Inicializar directamente desde la URL para no lanzar una consulta de "TODAS"
+  // que pueda resolverse tarde y pisar la de la categoría correcta
+  const [activeCategory, setActiveCategory] = useState(searchParams.get('category') || "TODAS");
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -449,7 +451,7 @@ function PuertasContent() {
   const [searchTerm, setSearchTerm] = useState("");
   const gridTopRef = useRef(null);
 
-  // Inicializar categoría desde URL
+  // Sincronizar categoría si la URL cambia con la página ya montada
   useEffect(() => {
     const categoryFromUrl = searchParams.get('category');
     if (categoryFromUrl) {
@@ -475,6 +477,8 @@ function PuertasContent() {
 
   // CARGAR DATOS DE SUPABASE
   useEffect(() => {
+    let cancelled = false;
+
     async function fetchProducts() {
       setLoading(true);
 
@@ -489,6 +493,9 @@ function PuertasContent() {
 
       const { data, error } = await query;
 
+      // Ignorar respuestas de una categoría que ya no está activa
+      if (cancelled) return;
+
       if (error) {
         console.error("Error cargando productos:", error);
       } else {
@@ -498,6 +505,7 @@ function PuertasContent() {
     }
 
     fetchProducts();
+    return () => { cancelled = true; };
   }, [activeCategory]);
 
   const displayProducts = useMemo(() => {

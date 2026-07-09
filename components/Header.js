@@ -93,8 +93,9 @@ export default function Header() {
           : "bg-black"
       }`}
     >
-      {/* FRANJA SUPERIOR: eslogan de marca (solo en la home) */}
-      {isHome && (
+      {/* FRANJA SUPERIOR: eslogan de marca (solo en la home; se oculta con el
+          menú móvil abierto porque este es fixed top-0 y se solaparían) */}
+      {isHome && !isMobileMenuOpen && (
         <div className="w-full bg-gradient-to-r from-[#00C2FF] to-[#0091c2] text-black text-center px-4 py-2">
           <p className="text-xs md:text-sm font-semibold uppercase tracking-[0.15em] leading-tight">
             WONLY – Soluciones Integrales para Sistemas de Puertas Inteligentes
