@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import { ShieldCheck, Lock, Home as HomeIcon, ChevronRight, ChevronLeft, ChevronDown, Wind, Maximize2, Sun, BedDouble, Archive, X } from 'lucide-react';
+import { ShieldCheck, Lock, Home as HomeIcon, ChevronRight, ChevronLeft, Wind, Maximize2, Sun, BedDouble, Archive, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // --- Variantes de Animación Reutilizables ---
@@ -30,8 +30,15 @@ export default function Home() {
   // Índice del carrusel de logos de certificados (solo móvil)
   const [logoActual, setLogoActual] = useState(0);
 
-  // Desplegable de hitos en móvil (false = solo se ve 1996)
-  const [hitosDesplegados, setHitosDesplegados] = useState(false);
+  // Hitos históricos de la marca (línea de tiempo)
+  const hitos = [
+    { year: "1996", title: "Fundación de la Marca", desc: "Nace WONLY, iniciando una trayectoria de innovación en seguridad." },
+    { year: "1998", title: "Cerradura Automática", desc: "Invención de la cerradura automática multidireccional." },
+    { year: "2003", title: "Desafío del Rey de la Cerradura", desc: "Reto con premio de hasta 1 millón. Nunca abierto en más de 20 años." },
+    { year: "2015", title: "Súper Seguridad", desc: "Tecnología de triple aislamiento acústico y térmico." },
+    { year: "2019", title: "Puertas con IA", desc: "Primera puerta de seguridad robótica impulsada por Inteligencia Artificial." },
+    { year: "2021", title: "Salida a Bolsa", desc: "Listado en el Main Board de Shanghai (605268) y distinción 'Fábrica del Futuro'." },
+  ];
 
   const certificados = {
     fsc: {
@@ -306,70 +313,47 @@ export default function Home() {
       </section>
 
       {/* =========================================
-         1c. SECCIÓN: HITOS (LÍNEA DE TIEMPO MINIMALISTA)
+         1c. SECCIÓN: HITOS (LÍNEA DE TIEMPO HORIZONTAL)
          ========================================= */}
-      <section className="py-24 bg-[#111]">
-        <div className="container mx-auto px-6">
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
-            className="mb-16"
-          >
-            <h2 className="text-[#00C2FF] font-bold tracking-widest uppercase mb-2">Nuestra Trayectoria</h2>
-            <h3 className="text-4xl md:text-5xl font-bold text-white">
-              HITOS QUE REDEFINEN <br className="hidden md:block"/> LOS ESTÁNDARES
-            </h3>
-          </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            variants={staggerContainer}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-14"
-          >
-            {[
-              { year: "1996", title: "Fundación de la Marca", desc: "Nace WONLY, iniciando una trayectoria de innovación en seguridad." },
-              { year: "1998", title: "Cerradura Automática", desc: "Invención de la cerradura automática multidireccional." },
-              { year: "2003", title: "Desafío del Rey de la Cerradura", desc: "Reto con premio de hasta 1 millón. Nunca abierto en más de 20 años." },
-              { year: "2015", title: "Súper Seguridad", desc: "Tecnología de triple aislamiento acústico y térmico." },
-              { year: "2019", title: "Puertas con IA", desc: "Primera puerta de seguridad robótica impulsada por Inteligencia Artificial." },
-              { year: "2021", title: "Salida a Bolsa", desc: "Listado en el Main Board de Shanghai (605268) y distinción 'Fábrica del Futuro'." },
-            ].map((hito, index) => (
+      <section className="py-24 bg-[#111] relative overflow-hidden">
+        <div className="container mx-auto px-6 relative z-10">
+          {/* Línea de tiempo horizontal: desplazable en pantallas estrechas */}
+          <div className="flex overflow-x-auto snap-x snap-mandatory pb-6 -mx-6 px-6 xl:mx-0 xl:px-0">
+            {hitos.map((item, index) => (
               <motion.div
-                key={hito.year}
-                variants={fadeInUp}
-                className={`border-t border-white/10 pt-6 group hover:border-[#00C2FF]/50 transition-colors duration-500 ${
-                  index > 0 && !hitosDesplegados ? "hidden sm:block" : ""
-                }`}
+                key={item.year}
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ delay: index * 0.1 }}
+                className="relative flex-shrink-0 w-[240px] xl:flex-shrink xl:flex-1 xl:w-auto snap-start pr-8 last:pr-0"
               >
-                <span className="text-[#00C2FF] font-mono text-sm tracking-widest">{hito.year}</span>
-                <h4 className="text-white font-bold text-lg mt-2 mb-2 group-hover:text-[#00C2FF] transition-colors">
-                  {hito.title}
-                </h4>
-                <p className="text-gray-500 text-sm leading-relaxed">
-                  {hito.desc}
+                <span className="block text-center text-5xl md:text-6xl font-bold text-white/10 font-mono tracking-tighter mb-8">
+                  {item.year}
+                </span>
+
+                {/* Línea y punto centrado */}
+                <div className="relative flex items-center justify-center h-4 mb-8">
+                  <div
+                    className={`absolute top-1/2 -translate-y-1/2 h-0.5 bg-[#00C2FF]/60 shadow-[0_0_10px_rgba(0,194,255,0.7)] ${
+                      index === 0
+                        ? "left-1/2 -right-8"
+                        : index === hitos.length - 1
+                        ? "left-0 right-1/2"
+                        : "left-0 -right-8"
+                    }`}
+                  />
+                  <div className="relative w-4 h-4 bg-[#00C2FF] rounded-full border-4 border-[#111] shadow-[0_0_15px_rgba(0,194,255,0.8)]"/>
+                </div>
+
+                <h3 className="text-xl font-bold text-white mb-2 text-center">
+                  {item.title}
+                </h3>
+                <p className="text-gray-400 text-sm md:text-base leading-relaxed max-w-sm mx-auto text-center px-2">
+                  {item.desc}
                 </p>
               </motion.div>
             ))}
-          </motion.div>
-
-          {/* MÓVIL: botón desplegable para ver el resto de hitos */}
-          <div className="sm:hidden mt-8 text-center">
-            <button
-              type="button"
-              onClick={() => setHitosDesplegados(!hitosDesplegados)}
-              className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-[#00C2FF] border border-white/10 hover:border-[#00C2FF]/50 rounded-full px-6 py-3 transition-colors"
-            >
-              {hitosDesplegados ? "Ver menos" : "Ver todos los hitos"}
-              <ChevronDown
-                size={16}
-                className={`transition-transform duration-300 ${hitosDesplegados ? "rotate-180" : ""}`}
-              />
-            </button>
           </div>
         </div>
       </section>
