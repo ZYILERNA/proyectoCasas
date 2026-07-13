@@ -2,8 +2,8 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
-import { ShieldCheck, Lock, Home as HomeIcon, ChevronRight, ChevronLeft, Wind, Maximize2, Sun, BedDouble, Archive, X } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { ShieldCheck, Lock, Home as HomeIcon, ChevronRight, ChevronLeft, ChevronDown, Wind, Maximize2, Sun, BedDouble, Archive, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // --- Variantes de Animación Reutilizables ---
@@ -27,6 +27,12 @@ export default function Home() {
   // Índice del carrusel de patentes (0-12)
   const [patenteActual, setPatenteActual] = useState(0);
 
+  // Índice del carrusel de logos de certificados (solo móvil)
+  const [logoActual, setLogoActual] = useState(0);
+
+  // Desplegable de hitos en móvil (false = solo se ve 1996)
+  const [hitosDesplegados, setHitosDesplegados] = useState(false);
+
   const certificados = {
     fsc: {
       titulo: "Certificado FSC",
@@ -41,6 +47,36 @@ export default function Home() {
       height: 3606,
     },
   };
+
+  // Logos de certificación mostrados en la sección 1b
+  const logosCertificados = [
+    {
+      logo: "/images/Asset/CERTIFICADOS/LOGOS/FSC.png",
+      titulo: "Certificado FSC",
+      sub: null,
+      cert: "fsc",
+    },
+    {
+      logo: "/images/Asset/CERTIFICADOS/LOGOS/ISO.png",
+      titulo: "Certificado ISO",
+      sub: "ISO 9001:2015",
+      cert: "iso",
+    },
+    {
+      logo: "/images/Asset/CERTIFICADOS/LOGOS/LOWNOISE.png",
+      titulo: "Certificado Low Noise",
+      sub: null,
+      pdf: "/images/Asset/CERTIFICADOS/Lownoise.pdf",
+    },
+  ];
+
+  // Rotación automática del carrusel de certificados en móvil
+  useEffect(() => {
+    const intervalo = setInterval(() => {
+      setLogoActual((actual) => (actual + 1) % logosCertificados.length);
+    }, 3000);
+    return () => clearInterval(intervalo);
+  }, [logosCertificados.length]);
 
   // Patentes CERT1-CERT13: original en chino + traducción al español
   const patentes = Array.from({ length: 13 }, (_, i) => ({
@@ -134,83 +170,207 @@ export default function Home() {
       <section className="py-16 bg-[#111] border-t border-white/5">
         <div className="container mx-auto px-6">
 
+          {/* ESCRITORIO: fila de logos */}
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
             variants={staggerContainer}
-            className="flex flex-wrap items-start justify-center gap-16 md:gap-24"
+            className="hidden md:flex flex-wrap items-start justify-center gap-16 md:gap-24"
           >
-            {/* FSC */}
-            <motion.div variants={fadeInUp}>
-              <button
-                type="button"
-                onClick={() => setCertAbierto(certificados.fsc)}
-                className="group flex flex-col items-center cursor-pointer"
-              >
-                <div className="bg-white rounded-full p-2.5 mb-3 w-14 h-14 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                  <Image
-                    src="/images/Asset/CERTIFICADOS/LOGOS/FSC.png"
-                    alt="Certificado FSC"
-                    width={32}
-                    height={32}
-                    className="object-contain"
-                  />
-                </div>
-                <h4 className="text-base font-bold uppercase tracking-widest text-white group-hover:text-[#00C2FF] transition-colors">
-                  Certificado FSC
-                </h4>
-              </button>
-            </motion.div>
+            {logosCertificados.map((item) => {
+              const contenido = (
+                <>
+                  <div className="bg-white rounded-full p-2.5 mb-3 w-14 h-14 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                    <Image
+                      src={item.logo}
+                      alt={item.titulo}
+                      width={32}
+                      height={32}
+                      className="object-contain"
+                    />
+                  </div>
+                  <h4 className="text-base font-bold uppercase tracking-widest text-white group-hover:text-[#00C2FF] transition-colors">
+                    {item.titulo}
+                  </h4>
+                  {item.sub && (
+                    <span className="text-sm text-gray-400 tracking-widest mt-1">
+                      {item.sub}
+                    </span>
+                  )}
+                </>
+              );
 
-            {/* ISO */}
-            <motion.div variants={fadeInUp}>
-              <button
-                type="button"
-                onClick={() => setCertAbierto(certificados.iso)}
-                className="group flex flex-col items-center cursor-pointer"
-              >
-                <div className="bg-white rounded-full p-2.5 mb-3 w-14 h-14 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                  <Image
-                    src="/images/Asset/CERTIFICADOS/LOGOS/ISO.png"
-                    alt="Certificado ISO"
-                    width={32}
-                    height={32}
-                    className="object-contain"
-                  />
-                </div>
-                <h4 className="text-base font-bold uppercase tracking-widest text-white group-hover:text-[#00C2FF] transition-colors">
-                  Certificado ISO
-                </h4>
-                <span className="text-sm text-gray-400 tracking-widest mt-1">
-                  ISO 9001:2015
-                </span>
-              </button>
-            </motion.div>
-
-            {/* LOW NOISE */}
-            <motion.div variants={fadeInUp}>
-              <a
-                href="/images/Asset/CERTIFICADOS/Lownoise.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex flex-col items-center cursor-pointer"
-              >
-                <div className="bg-white rounded-full p-2.5 mb-3 w-14 h-14 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                  <Image
-                    src="/images/Asset/CERTIFICADOS/LOGOS/LOWNOISE.png"
-                    alt="Certificado Low Noise"
-                    width={32}
-                    height={32}
-                    className="object-contain"
-                  />
-                </div>
-                <h4 className="text-base font-bold uppercase tracking-widest text-white group-hover:text-[#00C2FF] transition-colors">
-                  Certificado Low Noise
-                </h4>
-              </a>
-            </motion.div>
+              return (
+                <motion.div key={item.titulo} variants={fadeInUp}>
+                  {item.pdf ? (
+                    <a
+                      href={item.pdf}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex flex-col items-center cursor-pointer"
+                    >
+                      {contenido}
+                    </a>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => setCertAbierto(certificados[item.cert])}
+                      className="group flex flex-col items-center cursor-pointer"
+                    >
+                      {contenido}
+                    </button>
+                  )}
+                </motion.div>
+              );
+            })}
           </motion.div>
+
+          {/* MÓVIL: carrusel rotativo automático */}
+          <div className="md:hidden">
+            <div className="relative h-32 flex items-center justify-center">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={logoActual}
+                  initial={{ opacity: 0, x: 30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -30 }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
+                  className="absolute inset-0 flex items-center justify-center"
+                >
+                  {logosCertificados[logoActual].pdf ? (
+                    <a
+                      href={logosCertificados[logoActual].pdf}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex flex-col items-center"
+                    >
+                      <div className="bg-white rounded-full p-2.5 mb-3 w-14 h-14 flex items-center justify-center">
+                        <Image
+                          src={logosCertificados[logoActual].logo}
+                          alt={logosCertificados[logoActual].titulo}
+                          width={32}
+                          height={32}
+                          className="object-contain"
+                        />
+                      </div>
+                      <h4 className="text-base font-bold uppercase tracking-widest text-white">
+                        {logosCertificados[logoActual].titulo}
+                      </h4>
+                    </a>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => setCertAbierto(certificados[logosCertificados[logoActual].cert])}
+                      className="group flex flex-col items-center"
+                    >
+                      <div className="bg-white rounded-full p-2.5 mb-3 w-14 h-14 flex items-center justify-center">
+                        <Image
+                          src={logosCertificados[logoActual].logo}
+                          alt={logosCertificados[logoActual].titulo}
+                          width={32}
+                          height={32}
+                          className="object-contain"
+                        />
+                      </div>
+                      <h4 className="text-base font-bold uppercase tracking-widest text-white">
+                        {logosCertificados[logoActual].titulo}
+                      </h4>
+                      {logosCertificados[logoActual].sub && (
+                        <span className="text-sm text-gray-400 tracking-widest mt-1">
+                          {logosCertificados[logoActual].sub}
+                        </span>
+                      )}
+                    </button>
+                  )}
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            {/* Indicadores */}
+            <div className="flex items-center justify-center gap-2 mt-4">
+              {logosCertificados.map((item, i) => (
+                <button
+                  key={item.titulo}
+                  type="button"
+                  onClick={() => setLogoActual(i)}
+                  aria-label={`Ver ${item.titulo}`}
+                  className={`h-1.5 rounded-full transition-all duration-300 ${
+                    i === logoActual ? 'w-6 bg-[#00C2FF]' : 'w-1.5 bg-white/20'
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================
+         1c. SECCIÓN: HITOS (LÍNEA DE TIEMPO MINIMALISTA)
+         ========================================= */}
+      <section className="py-24 bg-[#111]">
+        <div className="container mx-auto px-6">
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeInUp}
+            className="mb-16"
+          >
+            <h2 className="text-[#00C2FF] font-bold tracking-widest uppercase mb-2">Nuestra Trayectoria</h2>
+            <h3 className="text-4xl md:text-5xl font-bold text-white">
+              HITOS QUE REDEFINEN <br className="hidden md:block"/> LOS ESTÁNDARES
+            </h3>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={staggerContainer}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-14"
+          >
+            {[
+              { year: "1996", title: "Fundación de la Marca", desc: "Nace WONLY, iniciando una trayectoria de innovación en seguridad." },
+              { year: "1998", title: "Cerradura Automática", desc: "Invención de la cerradura automática multidireccional." },
+              { year: "2003", title: "Desafío del Rey de la Cerradura", desc: "Reto con premio de hasta 1 millón. Nunca abierto en más de 20 años." },
+              { year: "2015", title: "Súper Seguridad", desc: "Tecnología de triple aislamiento acústico y térmico." },
+              { year: "2019", title: "Puertas con IA", desc: "Primera puerta de seguridad robótica impulsada por Inteligencia Artificial." },
+              { year: "2021", title: "Salida a Bolsa", desc: "Listado en el Main Board de Shanghai (605268) y distinción 'Fábrica del Futuro'." },
+            ].map((hito, index) => (
+              <motion.div
+                key={hito.year}
+                variants={fadeInUp}
+                className={`border-t border-white/10 pt-6 group hover:border-[#00C2FF]/50 transition-colors duration-500 ${
+                  index > 0 && !hitosDesplegados ? "hidden sm:block" : ""
+                }`}
+              >
+                <span className="text-[#00C2FF] font-mono text-sm tracking-widest">{hito.year}</span>
+                <h4 className="text-white font-bold text-lg mt-2 mb-2 group-hover:text-[#00C2FF] transition-colors">
+                  {hito.title}
+                </h4>
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  {hito.desc}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* MÓVIL: botón desplegable para ver el resto de hitos */}
+          <div className="sm:hidden mt-8 text-center">
+            <button
+              type="button"
+              onClick={() => setHitosDesplegados(!hitosDesplegados)}
+              className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-[#00C2FF] border border-white/10 hover:border-[#00C2FF]/50 rounded-full px-6 py-3 transition-colors"
+            >
+              {hitosDesplegados ? "Ver menos" : "Ver todos los hitos"}
+              <ChevronDown
+                size={16}
+                className={`transition-transform duration-300 ${hitosDesplegados ? "rotate-180" : ""}`}
+              />
+            </button>
+          </div>
         </div>
       </section>
 
