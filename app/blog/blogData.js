@@ -152,6 +152,24 @@ export const blogPosts = [
     ],
   },
   {
+    slug: "l2-monumental",
+    title: "Puerta de Seguridad en L2 Monumental",
+    location: "Arc de Triomf, Barcelona",
+    tipo: TIPOS.PUERTA,
+    excerpt:
+      "Instalación de puerta de seguridad en la zona de L2 Monumental, junto al Arc de Triomf: del estado original al resultado final.",
+    description:
+      "Instalación completa de puerta de seguridad WONLY en una vivienda de la zona de L2 Monumental, cerca del Arc de Triomf de Barcelona. Documentamos el estado previo del acceso con vídeos y fotografías, y mostramos el resultado final de la instalación.",
+    media: [
+      { type: "image", src: `${BASE}/ARCDETRIOMF/L2-MONUMENTAL/despues1.webp`, alt: "Puerta de seguridad instalada en L2 Monumental" },
+      { type: "video", src: `${BASE}/ARCDETRIOMF/L2-MONUMENTAL/despuesvideo.mp4`, alt: "Vídeo del resultado final de la instalación" },
+      { type: "image", before: true, src: `${BASE}/ARCDETRIOMF/L2-MONUMENTAL/antes1.webp`, alt: "Estado previo del acceso antes de la instalación" },
+      { type: "video", before: true, src: `${BASE}/ARCDETRIOMF/L2-MONUMENTAL/antesvideo.mp4`, alt: "Vídeo del estado previo del acceso" },
+      { type: "video", before: true, src: `${BASE}/ARCDETRIOMF/L2-MONUMENTAL/antesvideo2.mp4`, alt: "Vídeo del estado previo del acceso" },
+      { type: "video", before: true, src: `${BASE}/ARCDETRIOMF/L2-MONUMENTAL/antesvideo3.mp4`, alt: "Vídeo del estado previo del acceso" },
+    ],
+  },
+  {
     slug: "panaderia-arc-de-triomf",
     title: "Cerradura Inteligente para Panadería",
     location: "Arc de Triomf, Barcelona",
