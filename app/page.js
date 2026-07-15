@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import { ShieldCheck, Lock, Home as HomeIcon, ChevronRight, ChevronLeft, Wind, Maximize2, Sun, BedDouble, Archive, X } from 'lucide-react';
+import { ShieldCheck, Lock, Home as HomeIcon, ChevronRight, ChevronLeft, ChevronDown, Wind, Maximize2, Sun, BedDouble, Archive, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // --- Variantes de Animación Reutilizables ---
@@ -29,6 +29,9 @@ export default function Home() {
 
   // Índice del carrusel de logos de certificados (solo móvil)
   const [logoActual, setLogoActual] = useState(0);
+
+  // Desplegable de la línea de tiempo de hitos (cerrado por defecto)
+  const [hitosAbierto, setHitosAbierto] = useState(false);
 
   // Hitos históricos de la marca (línea de tiempo)
   const hitos = [
@@ -315,46 +318,85 @@ export default function Home() {
       {/* =========================================
          1c. SECCIÓN: HITOS (LÍNEA DE TIEMPO HORIZONTAL)
          ========================================= */}
-      <section className="py-24 bg-[#111] relative overflow-hidden">
+      <section className="py-8 bg-[#111] relative overflow-hidden border-t border-white/5">
         <div className="container mx-auto px-6 relative z-10">
-          {/* Línea de tiempo horizontal: desplazable en pantallas estrechas */}
-          <div className="flex overflow-x-auto snap-x snap-mandatory pb-6 -mx-6 px-6 xl:mx-0 xl:px-0">
-            {hitos.map((item, index) => (
+
+          {/* Cabecera del desplegable */}
+          <button
+            type="button"
+            onClick={() => setHitosAbierto(!hitosAbierto)}
+            aria-expanded={hitosAbierto}
+            className="group w-full flex items-center justify-between gap-4 py-2 cursor-pointer"
+          >
+            <div className="text-left">
+              <span className="text-[#00C2FF] font-bold tracking-widest uppercase text-xs block mb-1">
+                Nuestra Historia
+              </span>
+              <h2 className="text-xl md:text-2xl font-bold text-white uppercase group-hover:text-[#00C2FF] transition-colors">
+                Hitos de la Marca
+              </h2>
+            </div>
+            <div className="flex items-center gap-3 flex-shrink-0">
+              <span className="hidden md:block text-gray-500 text-xs uppercase tracking-widest">
+                {hitosAbierto ? 'Ocultar' : 'Ver línea de tiempo'}
+              </span>
+              <ChevronDown
+                className={`text-[#00C2FF] transition-transform duration-300 ${hitosAbierto ? 'rotate-180' : ''}`}
+                size={24}
+              />
+            </div>
+          </button>
+
+          {/* Contenido desplegable: línea de tiempo */}
+          <AnimatePresence initial={false}>
+            {hitosAbierto && (
               <motion.div
-                key={item.year}
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ delay: index * 0.1 }}
-                className="relative flex-shrink-0 w-[240px] xl:flex-shrink xl:flex-1 xl:w-auto snap-start pr-8 last:pr-0"
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.4, ease: 'easeInOut' }}
+                className="overflow-hidden"
               >
-                <span className="block text-center text-5xl md:text-6xl font-bold text-white/10 font-mono tracking-tighter mb-8">
-                  {item.year}
-                </span>
+                {/* Línea de tiempo horizontal: desplazable solo por debajo de lg */}
+                <div className="flex overflow-x-auto lg:overflow-x-visible snap-x snap-mandatory pb-6 lg:pb-4 pt-10 -mx-6 px-6 lg:mx-0 lg:px-0">
+                  {hitos.map((item, index) => (
+                    <motion.div
+                      key={item.year}
+                      initial={{ opacity: 0, x: 30 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      className="relative flex-shrink-0 w-[220px] lg:flex-shrink lg:flex-1 lg:w-auto lg:min-w-0 snap-start pr-4 last:pr-0"
+                    >
+                      <span className="block text-center text-5xl lg:text-4xl xl:text-5xl font-bold text-white/10 font-mono tracking-tighter mb-8">
+                        {item.year}
+                      </span>
 
-                {/* Línea y punto centrado */}
-                <div className="relative flex items-center justify-center h-4 mb-8">
-                  <div
-                    className={`absolute top-1/2 -translate-y-1/2 h-0.5 bg-[#00C2FF]/60 shadow-[0_0_10px_rgba(0,194,255,0.7)] ${
-                      index === 0
-                        ? "left-1/2 -right-8"
-                        : index === hitos.length - 1
-                        ? "left-0 right-1/2"
-                        : "left-0 -right-8"
-                    }`}
-                  />
-                  <div className="relative w-4 h-4 bg-[#00C2FF] rounded-full border-4 border-[#111] shadow-[0_0_15px_rgba(0,194,255,0.8)]"/>
+                      {/* Línea y punto centrado */}
+                      <div className="relative flex items-center justify-center h-4 mb-8">
+                        <div
+                          className={`absolute top-1/2 -translate-y-1/2 h-0.5 bg-[#00C2FF]/60 shadow-[0_0_10px_rgba(0,194,255,0.7)] ${
+                            index === 0
+                              ? "left-1/2 -right-4"
+                              : index === hitos.length - 1
+                              ? "left-0 right-1/2"
+                              : "left-0 -right-4"
+                          }`}
+                        />
+                        <div className="relative w-4 h-4 bg-[#00C2FF] rounded-full border-4 border-[#111] shadow-[0_0_15px_rgba(0,194,255,0.8)]"/>
+                      </div>
+
+                      <h3 className="text-xl lg:text-base xl:text-lg font-bold text-white mb-2 text-center">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-400 text-sm leading-relaxed max-w-sm mx-auto text-center px-2 lg:px-1">
+                        {item.desc}
+                      </p>
+                    </motion.div>
+                  ))}
                 </div>
-
-                <h3 className="text-xl font-bold text-white mb-2 text-center">
-                  {item.title}
-                </h3>
-                <p className="text-gray-400 text-sm md:text-base leading-relaxed max-w-sm mx-auto text-center px-2">
-                  {item.desc}
-                </p>
               </motion.div>
-            ))}
-          </div>
+            )}
+          </AnimatePresence>
         </div>
       </section>
 
