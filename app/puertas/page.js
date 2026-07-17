@@ -19,15 +19,19 @@ const CATEGORIAS = [
   "PUERTA DE ALUMINIO FUNDIDO",
   "PUERTA DE ACERO REFORZADO",
   "PUERTA DE SEGURIDAD ACORAZADA",
-  "PUERTA ACÚSTICA DE MADERA",
-  "PUERTA MINIMALISTA",
-  "PUERTA DE BAJO CARBONO",
-  "PUERTA DE PVC",
   "PUERTAS CORREDIZAS Y ABATIBLES",
   "PUERTA COMERCIAL CORTAFUEGO",
   "PUERTA DE EVACUACIÓN",
   "PUERTA DE COBRE COMPUESTA",
   "PUERTA MÉDICA",
+];
+
+// Categorías agrupadas bajo "PUERTAS INTERIOR"
+const CATEGORIAS_INTERIOR = [
+  "PUERTA ACÚSTICA DE MADERA",
+  "PUERTA MINIMALISTA",
+  "PUERTA DE BAJO CARBONO",
+  "PUERTA DE PVC",
 ];
 
 // NUEVO: Mapa de imágenes para el Hero según la categoría
@@ -130,10 +134,10 @@ const getWallpaper = (name) => {
 
 // --- 2. COMPONENTES UI ---
 
-const FilterButton = ({ label, active, onClick }) => (
+const FilterButton = ({ label, active, onClick, small = false }) => (
   <button
     onClick={onClick}
-    className={`w-full text-left px-4 py-3 text-[10px] font-bold uppercase border-b transition-all duration-300 flex justify-between items-center tracking-widest relative overflow-hidden group
+    className={`w-full text-left px-4 py-3 ${small ? 'text-[9px] py-2' : 'text-[10px]'} font-bold uppercase border-b transition-all duration-300 flex justify-between items-center tracking-widest relative overflow-hidden group
       ${active
         ? 'text-white border-black pl-6'
         : 'bg-white text-gray-500 border-gray-100 hover:bg-gray-50 hover:text-black hover:pl-6'
@@ -449,6 +453,7 @@ function PuertasContent() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
+  const [isInteriorOpen, setIsInteriorOpen] = useState(false);
   const gridTopRef = useRef(null);
 
   // Sincronizar categoría si la URL cambia con la página ya montada
@@ -456,6 +461,10 @@ function PuertasContent() {
     const categoryFromUrl = searchParams.get('category');
     if (categoryFromUrl) {
       setActiveCategory(categoryFromUrl);
+      // Abrir automáticamente el menú de PUERTAS INTERIOR si la categoría pertenece a ese grupo
+      if (CATEGORIAS_INTERIOR.includes(categoryFromUrl)) {
+        setIsInteriorOpen(true);
+      }
     }
   }, [searchParams]);
 
@@ -604,7 +613,51 @@ function PuertasContent() {
             </div>
             <div className="flex flex-col gap-1">
               <FilterButton label="Ver Todo" active={activeCategory === "TODAS"} onClick={() => handleCategoryChange("TODAS")} />
-              {CATEGORIAS.map((cat) => (
+
+              {/* Primeras 4 categorías antes de PUERTAS INTERIOR */}
+              {CATEGORIAS.slice(0, 4).map((cat) => (
+                <FilterButton key={cat} label={cat} active={activeCategory === cat} onClick={() => handleCategoryChange(cat)} />
+              ))}
+
+              {/* Categoría desplegable PUERTAS INTERIOR */}
+              <div className="flex flex-col">
+                <button
+                  onClick={() => setIsInteriorOpen(!isInteriorOpen)}
+                  className={`flex items-center justify-between w-full px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider transition-all duration-300 rounded ${
+                    CATEGORIAS_INTERIOR.includes(activeCategory)
+                      ? 'bg-black text-white'
+                      : 'text-gray-600 hover:bg-gray-50'
+                  }`}
+                >
+                  <span>Puertas Interior</span>
+                  <ChevronRight
+                    size={14}
+                    className={`transition-transform duration-300 ${isInteriorOpen ? 'rotate-90' : ''}`}
+                  />
+                </button>
+
+                {/* Subcategorías */}
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${
+                    isInteriorOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <div className="flex flex-col gap-1 ml-4 mt-1 pl-3 border-l-2 border-gray-200">
+                    {CATEGORIAS_INTERIOR.map((cat) => (
+                      <FilterButton
+                        key={cat}
+                        label={cat}
+                        active={activeCategory === cat}
+                        onClick={() => handleCategoryChange(cat)}
+                        small
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Resto de categorías después de PUERTAS INTERIOR */}
+              {CATEGORIAS.slice(4).map((cat) => (
                 <FilterButton key={cat} label={cat} active={activeCategory === cat} onClick={() => handleCategoryChange(cat)} />
               ))}
             </div>
@@ -680,6 +733,41 @@ function PuertasContent() {
                 {CATEGORIAS.map(cat => (
                   <button key={cat} onClick={() => { handleCategoryChange(cat); setIsMobileMenuOpen(false); }} className="text-left py-3 border-b text-xs font-bold uppercase">{cat}</button>
                 ))}
+
+                {/* Categoría desplegable PUERTAS INTERIOR en móvil */}
+                <div className="flex flex-col">
+                  <button
+                    onClick={() => setIsInteriorOpen(!isInteriorOpen)}
+                    className={`flex items-center justify-between w-full py-3 text-left text-xs font-bold uppercase border-b ${
+                      CATEGORIAS_INTERIOR.includes(activeCategory) ? 'text-black' : 'text-gray-600'
+                    }`}
+                  >
+                    <span>Puertas Interior</span>
+                    <ChevronRight
+                      size={14}
+                      className={`transition-transform duration-300 ${isInteriorOpen ? 'rotate-90' : ''}`}
+                    />
+                  </button>
+
+                  {/* Subcategorías móvil */}
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ${
+                      isInteriorOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    }`}
+                  >
+                    <div className="flex flex-col ml-4 border-l-2 border-gray-200">
+                      {CATEGORIAS_INTERIOR.map(cat => (
+                        <button
+                          key={cat}
+                          onClick={() => { handleCategoryChange(cat); setIsMobileMenuOpen(false); }}
+                          className="text-left py-2 pl-3 text-[11px] font-semibold uppercase text-gray-600 hover:text-black"
+                        >
+                          {cat}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
             </motion.div>
           </motion.div>
