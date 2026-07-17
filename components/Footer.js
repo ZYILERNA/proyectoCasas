@@ -106,6 +106,12 @@ export default function Footer() {
                           jennyqiu@wonlyspain.com
                         </a>
                       </div>
+                      <div>
+                        <p className="text-[10px] text-gray-500 uppercase tracking-wider">Growth Partner</p>
+                        <a href="mailto:mpeiret@wonlyspain.com" className="block text-sm text-gray-300 hover:text-white transition-colors break-all">
+                          mpeiret@wonlyspain.com
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
