@@ -110,10 +110,33 @@ export default function ContactoPage() {
                                 <Mail size={24} />
                             </div>
                             <div>
-                                <h3 className="text-lg font-bold text-white mb-1">Correo Electrónico</h3>
-                                <a href="mailto:info@wonlyspain.com" className="text-gray-400 hover:text-[#00C2FF] transition-colors">
-                                    info@wonlyspain.com
-                                </a>
+                                <h3 className="text-lg font-bold text-white mb-1">Correos Electrónicos</h3>
+                                <div className="flex flex-col gap-2">
+                                    <div>
+                                        <a href="mailto:info@wonlyspain.com" className="text-gray-400 hover:text-[#00C2FF] transition-colors">
+                                            info@wonlyspain.com
+                                        </a>
+                                        <span className="text-gray-600 text-sm ml-2">— Consultas y contacto</span>
+                                    </div>
+                                    <div>
+                                        <a href="mailto:jack@wonlyspain.com" className="text-gray-400 hover:text-[#00C2FF] transition-colors">
+                                            jack@wonlyspain.com
+                                        </a>
+                                        <span className="text-gray-600 text-sm ml-2">— Corporativo</span>
+                                    </div>
+                                    <div>
+                                        <a href="mailto:jennyqiu@wonlyspain.com" className="text-gray-400 hover:text-[#00C2FF] transition-colors">
+                                            jennyqiu@wonlyspain.com
+                                        </a>
+                                        <span className="text-gray-600 text-sm ml-2">— Marketing</span>
+                                    </div>
+                                    <div>
+                                        <a href="mailto:mpeiret@wonlyspain.com" className="text-gray-400 hover:text-[#00C2FF] transition-colors">
+                                            mpeiret@wonlyspain.com
+                                        </a>
+                                        <span className="text-gray-600 text-sm ml-2">— Growth Partner</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 

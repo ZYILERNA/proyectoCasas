@@ -59,6 +59,12 @@ export default function Home() {
       width: 2191,
       height: 3096,
     },
+    iso45001: {
+      titulo: "Certificado ISO 45001:2018",
+      imagen: "/images/Asset/CERTIFICADOS/iso-45001-certificate.webp",
+      width: 2180,
+      height: 3096,
+    },
   };
 
   // Logos de certificación mostrados en la sección 1b
@@ -80,6 +86,12 @@ export default function Home() {
       titulo: "Certificado ISO",
       sub: "ISO 14001:2015",
       cert: "iso14001",
+    },
+    {
+      logo: "/images/Asset/CERTIFICADOS/LOGOS/ISO.png",
+      titulo: "Certificado ISO",
+      sub: "ISO 45001:2018",
+      cert: "iso45001",
     },
     {
       logo: "/images/Asset/CERTIFICADOS/LOGOS/LOWNOISE.png",
