@@ -48,10 +48,16 @@ export default function Home() {
       height: 1584,
     },
     iso: {
-      titulo: "Certificado ISO",
+      titulo: "Certificado ISO 9001:2015",
       imagen: "/images/Asset/CERTIFICADOS/iso-certificate.webp",
-      width: 2560,
-      height: 3606,
+      width: 2191,
+      height: 3096,
+    },
+    iso14001: {
+      titulo: "Certificado ISO 14001:2015",
+      imagen: "/images/Asset/CERTIFICADOS/iso-14001-certificate.webp",
+      width: 2191,
+      height: 3096,
     },
   };
 
@@ -68,6 +74,12 @@ export default function Home() {
       titulo: "Certificado ISO",
       sub: "ISO 9001:2015",
       cert: "iso",
+    },
+    {
+      logo: "/images/Asset/CERTIFICADOS/LOGOS/ISO.png",
+      titulo: "Certificado ISO",
+      sub: "ISO 14001:2015",
+      cert: "iso14001",
     },
     {
       logo: "/images/Asset/CERTIFICADOS/LOGOS/LOWNOISE.png",
