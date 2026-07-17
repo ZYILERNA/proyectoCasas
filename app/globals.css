@@ -50,3 +50,15 @@ body {
   top: 0 !important;
   position: static !important;
 }
+
+/* Oculta la barra visual manteniendo el desplazamiento con botones, rueda o gesto. */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}

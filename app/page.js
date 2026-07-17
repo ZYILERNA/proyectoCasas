@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ShieldCheck, Lock, Home as HomeIcon, ChevronRight, ChevronLeft, Wind, Maximize2, Sun, BedDouble, Archive, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -30,6 +30,15 @@ export default function Home() {
   // Índice del carrusel de logos de certificados (solo móvil)
   const [logoActual, setLogoActual] = useState(0);
 
+  const certificadosCarruselRef = useRef(null);
+
+  const moverCertificados = (direccion) => {
+    certificadosCarruselRef.current?.scrollBy({
+      left: direccion * 280,
+      behavior: "smooth",
+    });
+  };
+
   // Hitos históricos de la marca (línea de tiempo)
   const hitos = [
     { year: "1996", title: "Fundación de la Marca", desc: "Nace WONLY, iniciando una trayectoria de innovación en seguridad." },
@@ -52,6 +61,12 @@ export default function Home() {
       imagen: "/images/Asset/CERTIFICADOS/iso-certificate.webp",
       width: 2191,
       height: 3096,
+    },
+    propiedadIntelectual: {
+      titulo: "Certificado de GestiÃ³n de la Propiedad Intelectual",
+      imagen: "/images/Asset/CERTIFICADOS/intellectual-property-certificate-2026.webp",
+      width: 2024,
+      height: 2867,
     },
     iso14001: {
       titulo: "Certificado ISO 14001:2015",
@@ -92,6 +107,12 @@ export default function Home() {
       titulo: "Certificado ISO",
       sub: "ISO 45001:2018",
       cert: "iso45001",
+    },
+    {
+      logo: "/images/Asset/CERTIFICADOS/intellectual-property-certificate-2026.webp",
+      titulo: "Propiedad Intelectual",
+      sub: "GB/T 29490-2023",
+      cert: "propiedadIntelectual",
     },
     {
       logo: "/images/Asset/CERTIFICADOS/LOGOS/LOWNOISE.png",
@@ -198,18 +219,31 @@ export default function Home() {
       {/* =========================================
          1b. SECCIÓN: CERTIFICACIONES (LOGOS)
          ========================================= */}
-      <section className="py-16 bg-[#111] border-t border-white/5">
+      <section className="py-10 bg-[#111] border-t border-white/5">
         <div className="container mx-auto px-6">
 
-          {/* ESCRITORIO: fila de logos */}
+          {/* ESCRITORIO: carrusel horizontal de logos */}
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
             variants={staggerContainer}
-            className="hidden md:flex flex-wrap items-start justify-center gap-16 md:gap-24"
+            className="relative hidden md:block max-w-6xl mx-auto px-12"
           >
-            {logosCertificados.map((item) => {
+            <button
+              type="button"
+              onClick={() => moverCertificados(-1)}
+              aria-label="Ver certificados anteriores"
+              className="absolute left-0 top-1/2 z-10 -translate-y-1/2 w-9 h-9 rounded-full border border-white/15 bg-black/30 grid place-items-center text-white hover:bg-[#00C2FF] hover:text-black transition-colors"
+            >
+              <ChevronLeft size={20} />
+            </button>
+
+            <div
+              ref={certificadosCarruselRef}
+              className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"
+            >
+              {logosCertificados.map((item) => {
               const contenido = (
                 <>
                   <div className="bg-white rounded-full p-2.5 mb-3 w-14 h-14 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
@@ -221,11 +255,11 @@ export default function Home() {
                       className="object-contain"
                     />
                   </div>
-                  <h4 className="text-base font-bold uppercase tracking-widest text-white group-hover:text-[#00C2FF] transition-colors">
+                  <h4 className="text-sm font-bold uppercase tracking-widest text-center text-white group-hover:text-[#00C2FF] transition-colors">
                     {item.titulo}
                   </h4>
                   {item.sub && (
-                    <span className="text-sm text-gray-400 tracking-widest mt-1">
+                    <span className="text-xs text-center text-gray-400 tracking-widest mt-1">
                       {item.sub}
                     </span>
                   )}
@@ -233,13 +267,17 @@ export default function Home() {
               );
 
               return (
-                <motion.div key={item.titulo} variants={fadeInUp}>
+                <motion.div
+                  key={item.cert || item.pdf || item.titulo}
+                  variants={fadeInUp}
+                  className="shrink-0 basis-1/3 lg:basis-1/4 snap-start px-4"
+                >
                   {item.pdf ? (
                     <a
                       href={item.pdf}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex flex-col items-center cursor-pointer"
+                      className="group flex min-h-28 w-full flex-col items-center cursor-pointer"
                     >
                       {contenido}
                     </a>
@@ -247,14 +285,24 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={() => setCertAbierto(certificados[item.cert])}
-                      className="group flex flex-col items-center cursor-pointer"
+                      className="group flex min-h-28 w-full flex-col items-center cursor-pointer"
                     >
                       {contenido}
                     </button>
                   )}
                 </motion.div>
               );
-            })}
+              })}
+            </div>
+
+            <button
+              type="button"
+              onClick={() => moverCertificados(1)}
+              aria-label="Ver certificados siguientes"
+              className="absolute right-0 top-1/2 z-10 -translate-y-1/2 w-9 h-9 rounded-full border border-white/15 bg-black/30 grid place-items-center text-white hover:bg-[#00C2FF] hover:text-black transition-colors"
+            >
+              <ChevronRight size={20} />
+            </button>
           </motion.div>
 
           {/* MÓVIL: carrusel rotativo automático */}
@@ -322,7 +370,7 @@ export default function Home() {
             <div className="flex items-center justify-center gap-2 mt-4">
               {logosCertificados.map((item, i) => (
                 <button
-                  key={item.titulo}
+                  key={item.cert || item.pdf || item.titulo}
                   type="button"
                   onClick={() => setLogoActual(i)}
                   aria-label={`Ver ${item.titulo}`}
