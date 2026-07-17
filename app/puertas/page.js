@@ -182,10 +182,16 @@ const SearchInput = ({ value, onChange }) => (
 
 // --- MODAL OPTIMIZADO PARA VELOCIDAD ---
 const ProductModal = ({ product, onClose }) => {
+  const [selectedColor, setSelectedColor] = useState(null);
+
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     return () => { document.body.style.overflow = 'unset'; };
   }, []);
+
+  useEffect(() => {
+    setSelectedColor(null);
+  }, [product?.name]);
 
   if (!product) return null;
 
@@ -258,7 +264,30 @@ const ProductModal = ({ product, onClose }) => {
               priority // Carga prioritaria
               className="object-contain mix-blend-multiply"
             />
+            <AnimatePresence>
+              {selectedColor && (
+                <motion.div
+                  key={selectedColor.hex}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 0.78 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.25 }}
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    backgroundColor: selectedColor.hex,
+                    mixBlendMode: "color",
+                  }}
+                  aria-hidden="true"
+                />
+              )}
+            </AnimatePresence>
           </motion.div>
+
+          {selectedColor && (
+            <div className="absolute bottom-5 left-1/2 -translate-x-1/2 rounded-full bg-white/90 px-4 py-2 text-[10px] font-bold uppercase tracking-widest text-gray-800 shadow-sm backdrop-blur">
+              Vista previa: {selectedColor.name}
+            </div>
+          )}
         </div>
 
         {/* Contenido en Modal */}
@@ -293,18 +322,42 @@ const ProductModal = ({ product, onClose }) => {
               <h3 className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-100 pb-2 mb-3 flex items-center gap-2">
                 <Palette size={14} /> Acabados y Carta de Colores
               </h3>
-              <div className="flex flex-wrap gap-4 mb-3 p-4 bg-gray-50 rounded-xl justify-center md:justify-start">
-                {DOOR_COLORS.map((color, i) => (
-                  <div key={i} className="text-center group flex flex-col items-center gap-2 cursor-help">
+              <div className="flex flex-wrap gap-4 mb-3 p-4 bg-gray-50 rounded-xl justify-center md:justify-start" role="group" aria-label="Seleccionar acabado de la puerta">
+                <button
+                  type="button"
+                  onClick={() => setSelectedColor(null)}
+                  aria-pressed={selectedColor === null}
+                  className="text-center group flex flex-col items-center gap-2"
+                  title="Ver color original"
+                >
+                  <span className={`w-12 h-12 rounded-full bg-white shadow-md border-2 grid place-items-center transition-all duration-300 ${selectedColor === null ? 'border-black scale-110 ring-2 ring-black/10' : 'border-white group-hover:scale-110'}`}>
+                    <X size={15} className="text-gray-400" />
+                  </span>
+                  <span className={`text-[9px] uppercase font-bold max-w-[60px] leading-tight ${selectedColor === null ? 'text-black' : 'text-gray-500'}`}>Original</span>
+                </button>
+                {DOOR_COLORS.map((color) => {
+                  const isSelected = selectedColor?.hex === color.hex;
+                  return (
+                  <button
+                    type="button"
+                    key={color.hex}
+                    onClick={() => setSelectedColor(color)}
+                    aria-pressed={isSelected}
+                    aria-label={`Ver puerta en ${color.name}`}
+                    className="text-center group flex flex-col items-center gap-2"
+                    title={`Ver en ${color.name}`}
+                  >
                     <div
-                      className="w-12 h-12 rounded-full shadow-md border-2 border-white group-hover:scale-110 transition-transform duration-300"
+                      className={`w-12 h-12 rounded-full shadow-md border-2 transition-all duration-300 ${isSelected ? 'border-black scale-110 ring-2 ring-black/10' : 'border-white group-hover:scale-110'}`}
                       style={{ backgroundColor: color.hex }}
-                      title={color.name}
-                    ></div>
-                    <span className="text-[9px] text-gray-500 uppercase font-bold max-w-[60px] leading-tight">{color.name}</span>
-                  </div>
-                ))}
+                    />
+                    <span className={`text-[9px] uppercase font-bold max-w-[60px] leading-tight ${isSelected ? 'text-black' : 'text-gray-500'}`}>{color.name}</span>
+                  </button>
+                )})}
               </div>
+              <p className="mb-3 text-[10px] leading-relaxed text-gray-400">
+                La visualizaciÃ³n es orientativa; el acabado puede variar segÃºn la pantalla y el material de la puerta.
+              </p>
               <div className="flex items-start gap-3 bg-gray-50 rounded-lg p-3 border border-gray-200">
                 <Palette size={16} className="text-gray-400 shrink-0 mt-0.5" />
                 <p className="text-xs text-gray-500 leading-relaxed">
