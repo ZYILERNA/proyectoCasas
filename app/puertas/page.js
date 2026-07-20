@@ -54,18 +54,292 @@ const IMAGENES_HERO = {
 
 // --- CARTA DE COLORES (igual para todas las puertas, de más oscuro a más claro) ---
 const DOOR_COLORS = [
-  { name: "Lacado Negro",          hex: "#1A1A1A" },
+  { name: "Lacado Negro",          hex: "#171717", saturation: 0.08, strength: 0.88 },
   { name: "Tinte Wengué",          hex: "#4A2E1A" },
-  { name: "Tinte Gris Oscuro",     hex: "#3D3530" },
-  { name: "Morado",                hex: "#6A0DAD" },
-  { name: "Lacado Gris Antracita", hex: "#3C3F42" },
-  { name: "Tinte Nogal Oscuro",    hex: "#7B3F1A" },
-  { name: "Azul",                  hex: "#1565C0" },
-  { name: "Tinte Roble",           hex: "#A0522D" },
-  { name: "Tinte Gris Claro",      hex: "#7A6E65" },
-  { name: "Tinte Natural",         hex: "#C47C2B" },
-  { name: "Lacado Blanco",         hex: "#F5F5F5" },
+  { name: "Tinte Gris Oscuro",     hex: "#36383A", saturation: 0.08, strength: 0.80 },
+  { name: "Lacado Gris Antracita", hex: "#484A4B", saturation: 0.06, strength: 0.76 },
+  { name: "Tinte Nogal Oscuro",    hex: "#5C3524", saturation: 0.48, strength: 0.78, aiVariants: { "door-x70-shunliu": "/images/PUERTAS/AI/x70-shunliu/door-x70-shunliu-nogal-ai.webp" } },
+  { name: "Tinte Roble",           hex: "#A8784E", saturation: 0.40, strength: 0.68 },
+  { name: "Tinte Gris Claro",      hex: "#A5A19A", saturation: 0.06, strength: 0.68 },
+  { name: "Tinte Natural",         hex: "#C19A6B", saturation: 0.34, strength: 0.62 },
+  { name: "Lacado Blanco",         hex: "#E8E5DE", saturation: 0.04, strength: 0.72, aiVariants: { "door-x70-shunliu": "/images/PUERTAS/AI/x70-shunliu/door-x70-shunliu-blanco-ai-v3.webp" } },
 ];
+
+const X70_SHUNLIU_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/AI/x70-shunliu/door-x70-shunliu-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/AI/x70-shunliu/door-x70-shunliu-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/AI/x70-shunliu/door-x70-shunliu-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/AI/x70-shunliu/door-x70-shunliu-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/AI/x70-shunliu/door-x70-shunliu-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/AI/x70-shunliu/door-x70-shunliu-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/AI/x70-shunliu/door-x70-shunliu-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/AI/x70-shunliu/door-x70-shunliu-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/AI/x70-shunliu/door-x70-shunliu-blanco-ai-v3.webp",
+};
+
+const X70_JINXIU_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/AI/x70-jinxiu/door-x70-jinxiu-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/AI/x70-jinxiu/door-x70-jinxiu-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/AI/x70-jinxiu/door-x70-jinxiu-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/AI/x70-jinxiu/door-x70-jinxiu-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/AI/x70-jinxiu/door-x70-jinxiu-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/AI/x70-jinxiu/door-x70-jinxiu-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/AI/x70-jinxiu/door-x70-jinxiu-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/AI/x70-jinxiu/door-x70-jinxiu-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/AI/x70-jinxiu/door-x70-jinxiu-blanco-ai.webp",
+};
+
+const X60_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/AI/x60/door-x60-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/AI/x60/door-x60-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/AI/x60/door-x60-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/AI/x60/door-x60-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/AI/x60/door-x60-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/AI/x60/door-x60-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/AI/x60/door-x60-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/AI/x60/door-x60-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/AI/x60/door-x60-blanco-ai.webp",
+};
+
+const X60_MAX_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/AI/x60-max/door-x60-max-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/AI/x60-max/door-x60-max-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/AI/x60-max/door-x60-max-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/AI/x60-max/door-x60-max-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/AI/x60-max/door-x60-max-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/AI/x60-max/door-x60-max-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/AI/x60-max/door-x60-max-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/AI/x60-max/door-x60-max-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/AI/x60-max/door-x60-max-blanco-ai.webp",
+};
+
+const X60_PRO_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/AI/x60-pro/door-x60-pro-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/AI/x60-pro/door-x60-pro-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/AI/x60-pro/door-x60-pro-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/AI/x60-pro/door-x60-pro-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/AI/x60-pro/door-x60-pro-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/AI/x60-pro/door-x60-pro-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/AI/x60-pro/door-x60-pro-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/AI/x60-pro/door-x60-pro-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/AI/x60-pro/door-x60-pro-blanco-ai.webp",
+};
+
+const X50_MAX_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/AI/x50-max/door-x50-max-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/AI/x50-max/door-x50-max-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/AI/x50-max/door-x50-max-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/AI/x50-max/door-x50-max-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/AI/x50-max/door-x50-max-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/AI/x50-max/door-x50-max-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/AI/x50-max/door-x50-max-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/AI/x50-max/door-x50-max-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/AI/x50-max/door-x50-max-blanco-ai.webp",
+};
+
+const X50_PRO_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/AI/x50-pro/door-x50-pro-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/AI/x50-pro/door-x50-pro-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/AI/x50-pro/door-x50-pro-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/AI/x50-pro/door-x50-pro-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/AI/x50-pro/door-x50-pro-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/AI/x50-pro/door-x50-pro-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/AI/x50-pro/door-x50-pro-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/AI/x50-pro/door-x50-pro-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/AI/x50-pro/door-x50-pro-blanco-ai.webp",
+};
+
+const X50_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/AI/x50/door-x50-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/AI/x50/door-x50-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/AI/x50/door-x50-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/AI/x50/door-x50-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/AI/x50/door-x50-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/AI/x50/door-x50-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/AI/x50/door-x50-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/AI/x50/door-x50-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/AI/x50/door-x50-blanco-ai.webp",
+};
+
+const K300_MAX_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/AI/k300-max/door-k300-max-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/AI/k300-max/door-k300-max-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/AI/k300-max/door-k300-max-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/AI/k300-max/door-k300-max-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/AI/k300-max/door-k300-max-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/AI/k300-max/door-k300-max-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/AI/k300-max/door-k300-max-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/AI/k300-max/door-k300-max-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/AI/k300-max/door-k300-max-blanco-ai.webp",
+};
+
+const K300_PRO_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/AI/k300-pro/door-k300-pro-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/AI/k300-pro/door-k300-pro-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/AI/k300-pro/door-k300-pro-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/AI/k300-pro/door-k300-pro-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/AI/k300-pro/door-k300-pro-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/AI/k300-pro/door-k300-pro-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/AI/k300-pro/door-k300-pro-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/AI/k300-pro/door-k300-pro-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/AI/k300-pro/door-k300-pro-blanco-ai.webp",
+};
+
+const L5857_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/AI/l5857/door-l5857-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/AI/l5857/door-l5857-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/AI/l5857/door-l5857-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/AI/l5857/door-l5857-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/AI/l5857/door-l5857-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/AI/l5857/door-l5857-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/AI/l5857/door-l5857-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/AI/l5857/door-l5857-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/AI/l5857/door-l5857-blanco-ai.webp",
+};
+
+const L5859_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/AI/l5859/door-l5859-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/AI/l5859/door-l5859-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/AI/l5859/door-l5859-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/AI/l5859/door-l5859-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/AI/l5859/door-l5859-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/AI/l5859/door-l5859-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/AI/l5859/door-l5859-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/AI/l5859/door-l5859-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/AI/l5859/door-l5859-blanco-ai.webp",
+};
+
+const P101_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/AI/p101/door-p101-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/AI/p101/door-p101-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/AI/p101/door-p101-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/AI/p101/door-p101-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/AI/p101/door-p101-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/AI/p101/door-p101-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/AI/p101/door-p101-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/AI/p101/door-p101-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/AI/p101/door-p101-blanco-ai.webp",
+};
+
+const P102_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/AI/p102/door-p102-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/AI/p102/door-p102-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/AI/p102/door-p102-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/AI/p102/door-p102-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/AI/p102/door-p102-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/AI/p102/door-p102-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/AI/p102/door-p102-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/AI/p102/door-p102-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/AI/p102/door-p102-blanco-ai.webp",
+};
+
+const P105_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/AI/p105/door-p105-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/AI/p105/door-p105-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/AI/p105/door-p105-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/AI/p105/door-p105-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/AI/p105/door-p105-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/AI/p105/door-p105-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/AI/p105/door-p105-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/AI/p105/door-p105-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/AI/p105/door-p105-blanco-ai.webp",
+};
+
+const P107_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/AI/p107/door-p107-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/AI/p107/door-p107-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/AI/p107/door-p107-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/AI/p107/door-p107-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/AI/p107/door-p107-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/AI/p107/door-p107-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/AI/p107/door-p107-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/AI/p107/door-p107-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/AI/p107/door-p107-blanco-ai.webp",
+};
+
+const T200_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/AI/t200/door-t200-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/AI/t200/door-t200-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/AI/t200/door-t200-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/AI/t200/door-t200-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/AI/t200/door-t200-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/AI/t200/door-t200-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/AI/t200/door-t200-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/AI/t200/door-t200-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/AI/t200/door-t200-blanco-ai.webp",
+};
+
+const P103_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/p103/door-p103-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/p103/door-p103-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/p103/door-p103-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/p103/door-p103-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/p103/door-p103-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/p103/door-p103-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/p103/door-p103-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/p103/door-p103-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/p103/door-p103-blanco-ai.webp",
+};
+
+const P106_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/p106/door-p106-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/p106/door-p106-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/p106/door-p106-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/p106/door-p106-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/p106/door-p106-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/p106/door-p106-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/p106/door-p106-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/p106/door-p106-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/p106/door-p106-blanco-ai.webp",
+};
+
+const P108_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/p108/door-p108-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/p108/door-p108-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/p108/door-p108-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/p108/door-p108-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/p108/door-p108-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/p108/door-p108-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/p108/door-p108-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/p108/door-p108-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/p108/door-p108-blanco-ai.webp",
+};
+
+const S108_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/s108/door-s108-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/s108/door-s108-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/s108/door-s108-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/s108/door-s108-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/s108/door-s108-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/s108/door-s108-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/s108/door-s108-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/s108/door-s108-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/s108/door-s108-blanco-ai.webp",
+};
+
+const AI_VARIANTS_BY_PRODUCT = {
+  "door-x70-shunliu": X70_SHUNLIU_AI_VARIANTS,
+  "door-x70-jinxiu": X70_JINXIU_AI_VARIANTS,
+  "door-x60": X60_AI_VARIANTS,
+  "door-x60-max": X60_MAX_AI_VARIANTS,
+  "door-x60-pro": X60_PRO_AI_VARIANTS,
+  "door-x50-max": X50_MAX_AI_VARIANTS,
+  "door-x50-pro": X50_PRO_AI_VARIANTS,
+  "door-x50": X50_AI_VARIANTS,
+  "door-k300-max": K300_MAX_AI_VARIANTS,
+  "door-k300-pro": K300_PRO_AI_VARIANTS,
+  "door-l5857": L5857_AI_VARIANTS,
+  "door-l5859": L5859_AI_VARIANTS,
+  "door-p101-ia": P101_AI_VARIANTS,
+  "door-p102-ia": P102_AI_VARIANTS,
+  "door-p105-ia": P105_AI_VARIANTS,
+  "door-p107-ia": P107_AI_VARIANTS,
+  "door-t200": T200_AI_VARIANTS,
+  "door-p103": P103_AI_VARIANTS,
+  "door-p106": P106_AI_VARIANTS,
+  "door-p108": P108_AI_VARIANTS,
+  "door-s108": S108_AI_VARIANTS,
+};
 
 const ACCESORIOS_CORREDIZAS = [
   { name: "Manilla VBH con base", tag: "Ventana abatible", img: "/images/Asset/Accesorios/manilla_vbh_base.webp" },
@@ -180,6 +454,218 @@ const SearchInput = ({ value, onChange }) => (
   </div>
 );
 
+const hexToRgb = (hex) => {
+  const value = hex.replace("#", "");
+  return [0, 2, 4].map((index) => parseInt(value.slice(index, index + 2), 16));
+};
+
+const rgbToHsl = (r, g, b) => {
+  r /= 255; g /= 255; b /= 255;
+  const max = Math.max(r, g, b);
+  const min = Math.min(r, g, b);
+  const lightness = (max + min) / 2;
+  const delta = max - min;
+  if (!delta) return [0, 0, lightness];
+
+  const saturation = delta / (1 - Math.abs(2 * lightness - 1));
+  let hue;
+  if (max === r) hue = ((g - b) / delta) % 6;
+  else if (max === g) hue = (b - r) / delta + 2;
+  else hue = (r - g) / delta + 4;
+  return [((hue * 60) + 360) % 360, saturation, lightness];
+};
+
+const hslToRgb = (h, s, l) => {
+  const chroma = (1 - Math.abs(2 * l - 1)) * s;
+  const x = chroma * (1 - Math.abs(((h / 60) % 2) - 1));
+  const match = l - chroma / 2;
+  let rgb = [0, 0, 0];
+  if (h < 60) rgb = [chroma, x, 0];
+  else if (h < 120) rgb = [x, chroma, 0];
+  else if (h < 180) rgb = [0, chroma, x];
+  else if (h < 240) rgb = [0, x, chroma];
+  else if (h < 300) rgb = [x, 0, chroma];
+  else rgb = [chroma, 0, x];
+  return rgb.map((channel) => Math.round((channel + match) * 255));
+};
+
+// Genera una mÃ¡scara por pÃ­xel: conserva fondo, cristales y herrajes, y tiÃ±e la superficie.
+const DoorFinishMask = ({ src, finish }) => {
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas || !finish || !src) return;
+    let cancelled = false;
+    const image = new window.Image();
+    image.crossOrigin = "anonymous";
+
+    image.onload = () => {
+      if (cancelled) return;
+      const maxDimension = 1200;
+      const scale = Math.min(1, maxDimension / Math.max(image.naturalWidth, image.naturalHeight));
+      canvas.width = Math.max(1, Math.round(image.naturalWidth * scale));
+      canvas.height = Math.max(1, Math.round(image.naturalHeight * scale));
+      const context = canvas.getContext("2d", { willReadFrequently: true });
+      context.drawImage(image, 0, 0, canvas.width, canvas.height);
+      const pixels = context.getImageData(0, 0, canvas.width, canvas.height);
+      const data = pixels.data;
+      const [targetR, targetG, targetB] = hexToRgb(finish.hex);
+      const [targetHue, targetSaturation, targetLightness] = rgbToHsl(targetR, targetG, targetB);
+      const finishSaturation = finish.saturation ?? targetSaturation;
+      const finishStrength = finish.strength ?? 0.76;
+
+      // Solo considera fondo los pÃ­xeles similares a las esquinas que estÃ¡n
+      // conectados con el borde. AsÃ­ una puerta blanca sigue siendo puerta.
+      const width = canvas.width;
+      const height = canvas.height;
+      const pixelCount = width * height;
+      const backgroundMask = new Uint8Array(pixelCount);
+      const cornerIndexes = [0, width - 1, (height - 1) * width, pixelCount - 1];
+      const cornerColors = cornerIndexes.map((index) => {
+        const offset = index * 4;
+        return [data[offset], data[offset + 1], data[offset + 2]];
+      });
+      const backgroundColor = [0, 1, 2].map((channel) =>
+        cornerColors.reduce((sum, color) => sum + color[channel], 0) / cornerColors.length
+      );
+      const backgroundLuminance = 0.2126 * backgroundColor[0] + 0.7152 * backgroundColor[1] + 0.0722 * backgroundColor[2];
+      const cornersAreSimilar = cornerColors.every((color) =>
+        color.reduce((distance, channel, index) => distance + Math.abs(channel - backgroundColor[index]), 0) < 38
+      );
+
+      if (backgroundLuminance > 215 && cornersAreSimilar) {
+        const queue = new Int32Array(pixelCount);
+        let head = 0;
+        let tail = 0;
+        const enqueueBackground = (index) => {
+          if (index < 0 || index >= pixelCount || backgroundMask[index]) return;
+          const offset = index * 4;
+          const distance = Math.abs(data[offset] - backgroundColor[0])
+            + Math.abs(data[offset + 1] - backgroundColor[1])
+            + Math.abs(data[offset + 2] - backgroundColor[2]);
+          if (distance > 28) return;
+          backgroundMask[index] = 1;
+          queue[tail++] = index;
+        };
+
+        for (let x = 0; x < width; x++) {
+          enqueueBackground(x);
+          enqueueBackground((height - 1) * width + x);
+        }
+        for (let y = 1; y < height - 1; y++) {
+          enqueueBackground(y * width);
+          enqueueBackground(y * width + width - 1);
+        }
+
+        while (head < tail) {
+          const index = queue[head++];
+          const x = index % width;
+          if (x > 0) enqueueBackground(index - 1);
+          if (x < width - 1) enqueueBackground(index + 1);
+          if (index >= width) enqueueBackground(index - width);
+          if (index < pixelCount - width) enqueueBackground(index + width);
+        }
+      }
+
+      // Una zona oscura solo se protege si tiene suficiente superficie continua.
+      // Esto conserva cerraduras y franjas, pero no confunde cada veta con un herraje.
+      const darkIntegral = new Uint32Array((width + 1) * (height + 1));
+      for (let y = 0; y < height; y++) {
+        let rowDarkPixels = 0;
+        for (let x = 0; x < width; x++) {
+          const pixelIndex = y * width + x;
+          const offset = pixelIndex * 4;
+          const r = data[offset];
+          const g = data[offset + 1];
+          const b = data[offset + 2];
+          const max = Math.max(r, g, b);
+          const min = Math.min(r, g, b);
+          const saturation = max === 0 ? 0 : (max - min) / max;
+          const luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+          if (luminance < 52 && saturation < 0.18) rowDarkPixels++;
+          darkIntegral[(y + 1) * (width + 1) + x + 1] = darkIntegral[y * (width + 1) + x + 1] + rowDarkPixels;
+        }
+      }
+
+      const hardwareMask = new Uint8Array(pixelCount);
+      const hardwareRadius = 2;
+      for (let y = 0; y < height; y++) {
+        const top = Math.max(0, y - hardwareRadius);
+        const bottom = Math.min(height - 1, y + hardwareRadius);
+        for (let x = 0; x < width; x++) {
+          const left = Math.max(0, x - hardwareRadius);
+          const right = Math.min(width - 1, x + hardwareRadius);
+          const count = darkIntegral[(bottom + 1) * (width + 1) + right + 1]
+            - darkIntegral[top * (width + 1) + right + 1]
+            - darkIntegral[(bottom + 1) * (width + 1) + left]
+            + darkIntegral[top * (width + 1) + left];
+          if (count >= 17) hardwareMask[y * width + x] = 1;
+        }
+      }
+
+      const detailStrength = targetLightness > 0.72
+        ? 0.16
+        : targetLightness < 0.18
+          ? 0.24
+          : 0.34;
+      const imageName = src.split("/").pop()?.toLowerCase() || "";
+      const hasX70PanelMask = imageName.includes("x70-shunliu");
+
+      for (let i = 0; i < data.length; i += 4) {
+        const pixelIndex = i / 4;
+        const pixelX = pixelIndex % width;
+        const pixelY = Math.floor(pixelIndex / width);
+        const normalizedX = pixelX / width;
+        const normalizedY = pixelY / height;
+        const r = data[i];
+        const g = data[i + 1];
+        const b = data[i + 2];
+        const luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+        const outsideX70Panels = hasX70PanelMask && (
+          normalizedX < 0.07 || normalizedX > 0.94 || normalizedY < 0.025 || normalizedY > 0.995
+          || (normalizedX > 0.345 && normalizedX < 0.43)
+        );
+
+        if (backgroundMask[pixelIndex] || hardwareMask[pixelIndex] || outsideX70Panels) {
+          data[i + 3] = 0;
+          continue;
+        }
+
+        const originalLightness = rgbToHsl(r, g, b)[2];
+        const detail = (originalLightness - 0.5) * detailStrength;
+        const recoloredLightness = Math.max(0.035, Math.min(0.94, targetLightness + detail));
+        const [newR, newG, newB] = hslToRgb(targetHue, finishSaturation, recoloredLightness);
+        data[i] = newR;
+        data[i + 1] = newG;
+        data[i + 2] = newB;
+
+        const highlightProtection = luminance > 235 ? 0.65 : 1;
+        data[i + 3] = Math.round(255 * finishStrength * highlightProtection);
+      }
+
+      context.putImageData(pixels, 0, 0);
+    };
+
+    image.onerror = () => {
+      const context = canvas.getContext("2d");
+      context?.clearRect(0, 0, canvas.width, canvas.height);
+    };
+    image.src = src;
+
+    return () => { cancelled = true; };
+  }, [src, finish]);
+
+  if (!finish) return null;
+  return (
+    <canvas
+      ref={canvasRef}
+      className="absolute inset-0 w-full h-full object-contain pointer-events-none"
+      aria-hidden="true"
+    />
+  );
+};
+
 // --- MODAL OPTIMIZADO PARA VELOCIDAD ---
 const ProductModal = ({ product, onClose }) => {
   const [selectedColor, setSelectedColor] = useState(null);
@@ -211,6 +697,9 @@ const ProductModal = ({ product, onClose }) => {
   else if (product.category.includes("BAJO CARBONO")) { accentColor = "text-green-600"; borderColor = "border-green-600"; Icon = Sparkles; }
 
   const wallpaper = getWallpaper(product.name);
+  const productImageKey = product.img?.split("/").pop()?.replace(/\.[^.]+$/, "");
+  const aiVariant = AI_VARIANTS_BY_PRODUCT[productImageKey]?.[selectedColor?.hex];
+  const selectedImage = aiVariant || selectedColor?.aiVariants?.[productImageKey] || product.img;
 
   return (
     <div className="fixed inset-0 z-[100] flex justify-end">
@@ -258,34 +747,33 @@ const ProductModal = ({ product, onClose }) => {
             className="relative w-full h-full max-h-[500px]"
           >
             <Image
-              src={product.img}
+              src={selectedImage}
               alt={product.name}
               fill
               priority // Carga prioritaria
               className="object-contain mix-blend-multiply"
             />
-            <AnimatePresence>
-              {selectedColor && (
-                <motion.div
-                  key={selectedColor.hex}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 0.78 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.25 }}
-                  className="absolute inset-0 pointer-events-none"
-                  style={{
-                    backgroundColor: selectedColor.hex,
-                    mixBlendMode: "color",
-                  }}
-                  aria-hidden="true"
-                />
-              )}
-            </AnimatePresence>
           </motion.div>
 
           {selectedColor && (
-            <div className="absolute bottom-5 left-1/2 -translate-x-1/2 rounded-full bg-white/90 px-4 py-2 text-[10px] font-bold uppercase tracking-widest text-gray-800 shadow-sm backdrop-blur">
-              Vista previa: {selectedColor.name}
+            <div className="absolute bottom-3 left-1/2 w-[min(280px,calc(100%-2rem))] -translate-x-1/2 rounded-2xl border border-black/10 bg-white/95 p-3 shadow-2xl backdrop-blur md:bottom-5 md:w-[min(360px,calc(100%-2rem))] md:p-4">
+              <div className="flex items-center gap-3 md:gap-4">
+                <div
+                  className="h-12 w-12 shrink-0 rounded-xl border border-black/10 shadow-inner md:h-20 md:w-20"
+                  style={{
+                    backgroundColor: selectedColor.hex,
+                    backgroundImage: "linear-gradient(135deg, rgba(255,255,255,.28), transparent 42%, rgba(0,0,0,.16))",
+                  }}
+                  aria-hidden="true"
+                />
+                <div className="min-w-0">
+                  <p className="text-[9px] font-bold uppercase tracking-widest text-gray-400 md:text-[10px]">Acabado seleccionado</p>
+                  <p className="truncate text-xs font-bold uppercase tracking-wide text-gray-900 md:text-base">{selectedColor.name}</p>
+                  <p className="mt-1 text-[10px] text-gray-500 md:text-xs">
+                    {aiVariant ? "Variante generada por IA" : "La foto se mantiene original"}
+                  </p>
+                </div>
+              </div>
             </div>
           )}
         </div>
