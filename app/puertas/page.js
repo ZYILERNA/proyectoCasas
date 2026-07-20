@@ -317,6 +317,330 @@ const S108_AI_VARIANTS = {
   "#E8E5DE": "/images/PUERTAS/ACERO/s108/door-s108-blanco-ai.webp",
 };
 
+const S108_PRO_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/s108-pro/door-s108-pro-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/s108-pro/door-s108-pro-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/s108-pro/door-s108-pro-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/s108-pro/door-s108-pro-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/s108-pro/door-s108-pro-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/s108-pro/door-s108-pro-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/s108-pro/door-s108-pro-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/s108-pro/door-s108-pro-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/s108-pro/door-s108-pro-blanco-ai.webp",
+};
+
+const S116_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/s116/door-s116-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/s116/door-s116-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/s116/door-s116-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/s116/door-s116-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/s116/door-s116-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/s116/door-s116-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/s116/door-s116-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/s116/door-s116-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/s116/door-s116-blanco-ai.webp",
+};
+
+const S118_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/s118/door-s118-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/s118/door-s118-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/s118/door-s118-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/s118/door-s118-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/s118/door-s118-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/s118/door-s118-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/s118/door-s118-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/s118/door-s118-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/s118/door-s118-blanco-ai.webp",
+};
+
+const S119_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/s119/door-s119-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/s119/door-s119-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/s119/door-s119-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/s119/door-s119-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/s119/door-s119-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/s119/door-s119-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/s119/door-s119-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/s119/door-s119-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/s119/door-s119-blanco-ai.webp",
+};
+
+const S121_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/s121/door-s121-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/s121/door-s121-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/s121/door-s121-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/s121/door-s121-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/s121/door-s121-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/s121/door-s121-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/s121/door-s121-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/s121/door-s121-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/s121/door-s121-blanco-ai.webp",
+};
+
+const Y106_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/y106/door-y106-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/y106/door-y106-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/y106/door-y106-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/y106/door-y106-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/y106/door-y106-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/y106/door-y106-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/y106/door-y106-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/y106/door-y106-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/y106/door-y106-blanco-ai.webp",
+};
+
+const Y116_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/y116/door-y116-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/y116/door-y116-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/y116/door-y116-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/y116/door-y116-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/y116/door-y116-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/y116/door-y116-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/y116/door-y116-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/y116/door-y116-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/y116/door-y116-blanco-ai.webp",
+};
+
+const Y118_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/y118/door-y118-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/y118/door-y118-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/y118/door-y118-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/y118/door-y118-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/y118/door-y118-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/y118/door-y118-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/y118/door-y118-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/y118/door-y118-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/y118/door-y118-blanco-ai.webp",
+};
+
+const Y119_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/y119/door-y119-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/y119/door-y119-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/y119/door-y119-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/y119/door-y119-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/y119/door-y119-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/y119/door-y119-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/y119/door-y119-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/y119/door-y119-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/y119/door-y119-blanco-ai.webp",
+};
+
+const CJ03_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/cj03/door-cj03-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/cj03/door-cj03-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/cj03/door-cj03-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/cj03/door-cj03-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/cj03/door-cj03-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/cj03/door-cj03-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/cj03/door-cj03-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/cj03/door-cj03-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/cj03/door-cj03-blanco-ai.webp",
+};
+
+const CL058_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/cl058/door-cl058-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/cl058/door-cl058-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/cl058/door-cl058-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/cl058/door-cl058-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/cl058/door-cl058-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/cl058/door-cl058-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/cl058/door-cl058-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/cl058/door-cl058-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/cl058/door-cl058-blanco-ai.webp",
+};
+
+const CL097_PRO_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/cl097-pro/door-cl097-pro-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/cl097-pro/door-cl097-pro-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/cl097-pro/door-cl097-pro-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/cl097-pro/door-cl097-pro-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/cl097-pro/door-cl097-pro-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/cl097-pro/door-cl097-pro-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/cl097-pro/door-cl097-pro-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/cl097-pro/door-cl097-pro-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/cl097-pro/door-cl097-pro-blanco-ai.webp",
+};
+
+const CL23_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/cl23/door-cl23-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/cl23/door-cl23-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/cl23/door-cl23-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/cl23/door-cl23-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/cl23/door-cl23-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/cl23/door-cl23-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/cl23/door-cl23-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/cl23/door-cl23-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/cl23/door-cl23-blanco-ai.webp",
+};
+
+const CL36_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/cl36/door-cl36-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/cl36/door-cl36-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/cl36/door-cl36-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/cl36/door-cl36-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/cl36/door-cl36-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/cl36/door-cl36-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/cl36/door-cl36-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/cl36/door-cl36-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/cl36/door-cl36-blanco-ai.webp",
+};
+
+const CL37_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/cl37/door-cl37-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/cl37/door-cl37-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/cl37/door-cl37-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/cl37/door-cl37-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/cl37/door-cl37-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/cl37/door-cl37-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/cl37/door-cl37-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/cl37/door-cl37-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/cl37/door-cl37-blanco-ai.webp",
+};
+
+const CL38_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/cl38/door-cl38-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/cl38/door-cl38-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/cl38/door-cl38-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/cl38/door-cl38-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/cl38/door-cl38-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/cl38/door-cl38-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/cl38/door-cl38-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/cl38/door-cl38-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/cl38/door-cl38-blanco-ai.webp",
+};
+
+const CL39_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/cl39/door-cl39-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/cl39/door-cl39-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/cl39/door-cl39-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/cl39/door-cl39-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/cl39/door-cl39-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/cl39/door-cl39-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/cl39/door-cl39-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/cl39/door-cl39-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/cl39/door-cl39-blanco-ai.webp",
+};
+
+const CL50_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/cl50/door-cl50-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/cl50/door-cl50-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/cl50/door-cl50-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/cl50/door-cl50-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/cl50/door-cl50-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/cl50/door-cl50-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/cl50/door-cl50-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/cl50/door-cl50-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/cl50/door-cl50-blanco-ai.webp",
+};
+
+const CL51_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/cl51/door-cl51-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/cl51/door-cl51-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/cl51/door-cl51-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/cl51/door-cl51-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/cl51/door-cl51-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/cl51/door-cl51-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/cl51/door-cl51-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/cl51/door-cl51-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/cl51/door-cl51-blanco-ai.webp",
+};
+
+const CL55_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/cl55/door-cl55-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/cl55/door-cl55-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/cl55/door-cl55-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/cl55/door-cl55-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/cl55/door-cl55-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/cl55/door-cl55-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/cl55/door-cl55-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/cl55/door-cl55-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/cl55/door-cl55-blanco-ai.webp",
+};
+
+const CL56_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/cl56/door-cl56-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/cl56/door-cl56-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/cl56/door-cl56-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/cl56/door-cl56-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/cl56/door-cl56-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/cl56/door-cl56-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/cl56/door-cl56-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/cl56/door-cl56-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/cl56/door-cl56-blanco-ai.webp",
+};
+
+const CL59_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/cl59/door-cl59-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/cl59/door-cl59-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/cl59/door-cl59-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/cl59/door-cl59-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/cl59/door-cl59-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/cl59/door-cl59-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/cl59/door-cl59-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/cl59/door-cl59-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/cl59/door-cl59-blanco-ai.webp",
+};
+
+const CL60_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/cl60/door-cl60-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/cl60/door-cl60-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/cl60/door-cl60-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/cl60/door-cl60-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/cl60/door-cl60-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/cl60/door-cl60-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/cl60/door-cl60-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/cl60/door-cl60-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/cl60/door-cl60-blanco-ai.webp",
+};
+
+const CL62_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/cl62/door-cl62-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/cl62/door-cl62-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/cl62/door-cl62-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/cl62/door-cl62-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/cl62/door-cl62-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/cl62/door-cl62-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/cl62/door-cl62-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/cl62/door-cl62-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/cl62/door-cl62-blanco-ai.webp",
+};
+
+const CL63_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/cl63/door-cl63-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/cl63/door-cl63-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/cl63/door-cl63-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/cl63/door-cl63-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/cl63/door-cl63-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/cl63/door-cl63-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/cl63/door-cl63-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/cl63/door-cl63-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/cl63/door-cl63-blanco-ai.webp",
+};
+
+const CL65_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/cl65/door-cl65-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/cl65/door-cl65-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/cl65/door-cl65-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/cl65/door-cl65-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/cl65/door-cl65-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/cl65/door-cl65-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/cl65/door-cl65-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/cl65/door-cl65-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/cl65/door-cl65-blanco-ai.webp",
+};
+
+const CL66_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/ACERO/cl66/door-cl66-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/ACERO/cl66/door-cl66-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/ACERO/cl66/door-cl66-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/ACERO/cl66/door-cl66-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/ACERO/cl66/door-cl66-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/ACERO/cl66/door-cl66-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/ACERO/cl66/door-cl66-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/ACERO/cl66/door-cl66-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/ACERO/cl66/door-cl66-blanco-ai.webp",
+};
+
 const AI_VARIANTS_BY_PRODUCT = {
   "door-x70-shunliu": X70_SHUNLIU_AI_VARIANTS,
   "door-x70-jinxiu": X70_JINXIU_AI_VARIANTS,
@@ -339,6 +663,33 @@ const AI_VARIANTS_BY_PRODUCT = {
   "door-p106": P106_AI_VARIANTS,
   "door-p108": P108_AI_VARIANTS,
   "door-s108": S108_AI_VARIANTS,
+  "door-s108-pro": S108_PRO_AI_VARIANTS,
+  "door-s116": S116_AI_VARIANTS,
+  "door-s118": S118_AI_VARIANTS,
+  "door-s119": S119_AI_VARIANTS,
+  "door-s121": S121_AI_VARIANTS,
+  "door-y106": Y106_AI_VARIANTS,
+  "door-y116": Y116_AI_VARIANTS,
+  "door-y118": Y118_AI_VARIANTS,
+  "door-y119": Y119_AI_VARIANTS,
+  "door-cj03": CJ03_AI_VARIANTS,
+  "door-cl058": CL058_AI_VARIANTS,
+  "door-cl097-pro": CL097_PRO_AI_VARIANTS,
+  "door-cl23": CL23_AI_VARIANTS,
+  "door-cl36": CL36_AI_VARIANTS,
+  "door-cl37": CL37_AI_VARIANTS,
+  "door-cl38": CL38_AI_VARIANTS,
+  "door-cl39": CL39_AI_VARIANTS,
+  "door-cl50": CL50_AI_VARIANTS,
+  "door-cl51": CL51_AI_VARIANTS,
+  "door-cl55": CL55_AI_VARIANTS,
+  "door-cl56": CL56_AI_VARIANTS,
+  "door-cl59": CL59_AI_VARIANTS,
+  "door-cl60": CL60_AI_VARIANTS,
+  "door-cl62": CL62_AI_VARIANTS,
+  "door-cl63": CL63_AI_VARIANTS,
+  "door-cl65": CL65_AI_VARIANTS,
+  "door-cl66": CL66_AI_VARIANTS,
 };
 
 const ACCESORIOS_CORREDIZAS = [
