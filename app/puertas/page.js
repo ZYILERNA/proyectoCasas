@@ -1769,6 +1769,715 @@ const TD_03_AI_VARIANTS = {
   "#E8E5DE": "/images/PUERTAS/CORTAFUEGO/td-03/door-td-03-blanco-ai.webp",
 };
 
+const GK_01_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/EVACUACION/gk-01/door-gk-01-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/EVACUACION/gk-01/door-gk-01-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/EVACUACION/gk-01/door-gk-01-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/EVACUACION/gk-01/door-gk-01-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/EVACUACION/gk-01/door-gk-01-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/EVACUACION/gk-01/door-gk-01-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/EVACUACION/gk-01/door-gk-01-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/EVACUACION/gk-01/door-gk-01-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/EVACUACION/gk-01/door-gk-01-blanco-ai.webp",
+};
+
+const GK_02_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/EVACUACION/gk-02/door-gk-02-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/EVACUACION/gk-02/door-gk-02-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/EVACUACION/gk-02/door-gk-02-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/EVACUACION/gk-02/door-gk-02-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/EVACUACION/gk-02/door-gk-02-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/EVACUACION/gk-02/door-gk-02-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/EVACUACION/gk-02/door-gk-02-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/EVACUACION/gk-02/door-gk-02-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/EVACUACION/gk-02/door-gk-02-blanco-ai.webp",
+};
+
+const GK_03_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/EVACUACION/gk-03/door-gk-03-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/EVACUACION/gk-03/door-gk-03-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/EVACUACION/gk-03/door-gk-03-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/EVACUACION/gk-03/door-gk-03-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/EVACUACION/gk-03/door-gk-03-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/EVACUACION/gk-03/door-gk-03-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/EVACUACION/gk-03/door-gk-03-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/EVACUACION/gk-03/door-gk-03-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/EVACUACION/gk-03/door-gk-03-blanco-ai.webp",
+};
+
+const MK_01_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/EVACUACION/mk-01/door-mk-01-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/EVACUACION/mk-01/door-mk-01-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/EVACUACION/mk-01/door-mk-01-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/EVACUACION/mk-01/door-mk-01-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/EVACUACION/mk-01/door-mk-01-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/EVACUACION/mk-01/door-mk-01-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/EVACUACION/mk-01/door-mk-01-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/EVACUACION/mk-01/door-mk-01-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/EVACUACION/mk-01/door-mk-01-blanco-ai.webp",
+};
+
+const MK_02_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/EVACUACION/mk-02/door-mk-02-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/EVACUACION/mk-02/door-mk-02-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/EVACUACION/mk-02/door-mk-02-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/EVACUACION/mk-02/door-mk-02-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/EVACUACION/mk-02/door-mk-02-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/EVACUACION/mk-02/door-mk-02-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/EVACUACION/mk-02/door-mk-02-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/EVACUACION/mk-02/door-mk-02-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/EVACUACION/mk-02/door-mk-02-blanco-ai.webp",
+};
+
+const MK_03_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/EVACUACION/mk-03/door-mk-03-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/EVACUACION/mk-03/door-mk-03-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/EVACUACION/mk-03/door-mk-03-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/EVACUACION/mk-03/door-mk-03-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/EVACUACION/mk-03/door-mk-03-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/EVACUACION/mk-03/door-mk-03-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/EVACUACION/mk-03/door-mk-03-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/EVACUACION/mk-03/door-mk-03-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/EVACUACION/mk-03/door-mk-03-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_5203_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/5203/door-5203-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/5203/door-5203-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/5203/door-5203-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/5203/door-5203-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/5203/door-5203-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/5203/door-5203-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/5203/door-5203-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/5203/door-5203-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/5203/door-5203-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_S203_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/s203/door-s203-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/s203/door-s203-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/s203/door-s203-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/s203/door-s203-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/s203/door-s203-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/s203/door-s203-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/s203/door-s203-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/s203/door-s203-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/s203/door-s203-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_5103_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-5103/door-wl-5103-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-5103/door-wl-5103-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-5103/door-wl-5103-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-5103/door-wl-5103-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-5103/door-wl-5103-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-5103/door-wl-5103-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-5103/door-wl-5103-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-5103/door-wl-5103-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-5103/door-wl-5103-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_5105_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-5105/door-wl-5105-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-5105/door-wl-5105-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-5105/door-wl-5105-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-5105/door-wl-5105-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-5105/door-wl-5105-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-5105/door-wl-5105-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-5105/door-wl-5105-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-5105/door-wl-5105-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-5105/door-wl-5105-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_5107_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-5107/door-wl-5107-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-5107/door-wl-5107-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-5107/door-wl-5107-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-5107/door-wl-5107-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-5107/door-wl-5107-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-5107/door-wl-5107-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-5107/door-wl-5107-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-5107/door-wl-5107-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-5107/door-wl-5107-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_5109_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-5109/door-wl-5109-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-5109/door-wl-5109-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-5109/door-wl-5109-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-5109/door-wl-5109-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-5109/door-wl-5109-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-5109/door-wl-5109-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-5109/door-wl-5109-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-5109/door-wl-5109-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-5109/door-wl-5109-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_5110_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-5110/door-wl-5110-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-5110/door-wl-5110-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-5110/door-wl-5110-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-5110/door-wl-5110-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-5110/door-wl-5110-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-5110/door-wl-5110-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-5110/door-wl-5110-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-5110/door-wl-5110-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-5110/door-wl-5110-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_5117_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-5117/door-wl-5117-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-5117/door-wl-5117-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-5117/door-wl-5117-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-5117/door-wl-5117-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-5117/door-wl-5117-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-5117/door-wl-5117-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-5117/door-wl-5117-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-5117/door-wl-5117-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-5117/door-wl-5117-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_5203_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-5203/door-wl-5203-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-5203/door-wl-5203-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-5203/door-wl-5203-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-5203/door-wl-5203-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-5203/door-wl-5203-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-5203/door-wl-5203-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-5203/door-wl-5203-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-5203/door-wl-5203-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-5203/door-wl-5203-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_5503_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-5503/door-wl-5503-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-5503/door-wl-5503-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-5503/door-wl-5503-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-5503/door-wl-5503-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-5503/door-wl-5503-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-5503/door-wl-5503-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-5503/door-wl-5503-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-5503/door-wl-5503-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-5503/door-wl-5503-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D001_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d001/door-wl-d001-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d001/door-wl-d001-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d001/door-wl-d001-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d001/door-wl-d001-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d001/door-wl-d001-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d001/door-wl-d001-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d001/door-wl-d001-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d001/door-wl-d001-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d001/door-wl-d001-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D002_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d002/door-wl-d002-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d002/door-wl-d002-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d002/door-wl-d002-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d002/door-wl-d002-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d002/door-wl-d002-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d002/door-wl-d002-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d002/door-wl-d002-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d002/door-wl-d002-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d002/door-wl-d002-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D003_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d003/door-wl-d003-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d003/door-wl-d003-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d003/door-wl-d003-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d003/door-wl-d003-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d003/door-wl-d003-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d003/door-wl-d003-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d003/door-wl-d003-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d003/door-wl-d003-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d003/door-wl-d003-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D005_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d005/door-wl-d005-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d005/door-wl-d005-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d005/door-wl-d005-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d005/door-wl-d005-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d005/door-wl-d005-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d005/door-wl-d005-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d005/door-wl-d005-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d005/door-wl-d005-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d005/door-wl-d005-blanco-ai.webp",
+};
+
+
+const MADERA_ACUSTICA_WL_D006_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d006/door-wl-d006-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d006/door-wl-d006-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d006/door-wl-d006-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d006/door-wl-d006-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d006/door-wl-d006-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d006/door-wl-d006-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d006/door-wl-d006-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d006/door-wl-d006-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d006/door-wl-d006-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D007_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d007/door-wl-d007-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d007/door-wl-d007-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d007/door-wl-d007-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d007/door-wl-d007-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d007/door-wl-d007-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d007/door-wl-d007-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d007/door-wl-d007-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d007/door-wl-d007-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d007/door-wl-d007-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D008_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d008/door-wl-d008-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d008/door-wl-d008-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d008/door-wl-d008-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d008/door-wl-d008-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d008/door-wl-d008-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d008/door-wl-d008-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d008/door-wl-d008-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d008/door-wl-d008-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d008/door-wl-d008-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D009_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d009/door-wl-d009-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d009/door-wl-d009-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d009/door-wl-d009-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d009/door-wl-d009-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d009/door-wl-d009-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d009/door-wl-d009-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d009/door-wl-d009-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d009/door-wl-d009-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d009/door-wl-d009-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D010_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d010/door-wl-d010-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d010/door-wl-d010-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d010/door-wl-d010-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d010/door-wl-d010-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d010/door-wl-d010-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d010/door-wl-d010-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d010/door-wl-d010-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d010/door-wl-d010-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d010/door-wl-d010-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D011_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d011/door-wl-d011-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d011/door-wl-d011-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d011/door-wl-d011-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d011/door-wl-d011-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d011/door-wl-d011-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d011/door-wl-d011-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d011/door-wl-d011-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d011/door-wl-d011-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d011/door-wl-d011-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D012_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d012/door-wl-d012-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d012/door-wl-d012-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d012/door-wl-d012-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d012/door-wl-d012-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d012/door-wl-d012-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d012/door-wl-d012-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d012/door-wl-d012-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d012/door-wl-d012-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d012/door-wl-d012-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D013_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d013/door-wl-d013-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d013/door-wl-d013-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d013/door-wl-d013-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d013/door-wl-d013-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d013/door-wl-d013-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d013/door-wl-d013-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d013/door-wl-d013-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d013/door-wl-d013-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d013/door-wl-d013-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D015_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d015/door-wl-d015-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d015/door-wl-d015-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d015/door-wl-d015-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d015/door-wl-d015-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d015/door-wl-d015-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d015/door-wl-d015-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d015/door-wl-d015-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d015/door-wl-d015-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d015/door-wl-d015-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D016_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d016/door-wl-d016-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d016/door-wl-d016-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d016/door-wl-d016-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d016/door-wl-d016-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d016/door-wl-d016-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d016/door-wl-d016-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d016/door-wl-d016-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d016/door-wl-d016-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d016/door-wl-d016-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D017_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d017/door-wl-d017-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d017/door-wl-d017-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d017/door-wl-d017-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d017/door-wl-d017-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d017/door-wl-d017-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d017/door-wl-d017-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d017/door-wl-d017-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d017/door-wl-d017-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d017/door-wl-d017-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D018_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d018/door-wl-d018-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d018/door-wl-d018-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d018/door-wl-d018-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d018/door-wl-d018-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d018/door-wl-d018-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d018/door-wl-d018-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d018/door-wl-d018-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d018/door-wl-d018-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d018/door-wl-d018-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D019_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d019/door-wl-d019-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d019/door-wl-d019-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d019/door-wl-d019-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d019/door-wl-d019-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d019/door-wl-d019-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d019/door-wl-d019-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d019/door-wl-d019-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d019/door-wl-d019-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d019/door-wl-d019-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D020_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d020/door-wl-d020-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d020/door-wl-d020-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d020/door-wl-d020-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d020/door-wl-d020-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d020/door-wl-d020-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d020/door-wl-d020-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d020/door-wl-d020-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d020/door-wl-d020-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d020/door-wl-d020-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D021_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d021/door-wl-d021-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d021/door-wl-d021-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d021/door-wl-d021-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d021/door-wl-d021-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d021/door-wl-d021-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d021/door-wl-d021-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d021/door-wl-d021-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d021/door-wl-d021-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d021/door-wl-d021-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D022_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d022/door-wl-d022-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d022/door-wl-d022-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d022/door-wl-d022-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d022/door-wl-d022-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d022/door-wl-d022-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d022/door-wl-d022-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d022/door-wl-d022-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d022/door-wl-d022-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d022/door-wl-d022-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D023_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d023/door-wl-d023-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d023/door-wl-d023-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d023/door-wl-d023-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d023/door-wl-d023-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d023/door-wl-d023-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d023/door-wl-d023-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d023/door-wl-d023-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d023/door-wl-d023-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d023/door-wl-d023-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D025_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d025/door-wl-d025-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d025/door-wl-d025-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d025/door-wl-d025-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d025/door-wl-d025-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d025/door-wl-d025-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d025/door-wl-d025-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d025/door-wl-d025-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d025/door-wl-d025-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d025/door-wl-d025-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D026_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d026/door-wl-d026-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d026/door-wl-d026-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d026/door-wl-d026-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d026/door-wl-d026-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d026/door-wl-d026-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d026/door-wl-d026-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d026/door-wl-d026-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d026/door-wl-d026-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d026/door-wl-d026-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D027_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d027/door-wl-d027-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d027/door-wl-d027-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d027/door-wl-d027-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d027/door-wl-d027-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d027/door-wl-d027-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d027/door-wl-d027-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d027/door-wl-d027-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d027/door-wl-d027-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d027/door-wl-d027-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D028_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d028/door-wl-d028-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d028/door-wl-d028-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d028/door-wl-d028-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d028/door-wl-d028-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d028/door-wl-d028-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d028/door-wl-d028-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d028/door-wl-d028-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d028/door-wl-d028-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d028/door-wl-d028-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D029_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d029/door-wl-d029-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d029/door-wl-d029-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d029/door-wl-d029-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d029/door-wl-d029-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d029/door-wl-d029-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d029/door-wl-d029-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d029/door-wl-d029-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d029/door-wl-d029-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d029/door-wl-d029-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D030_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d030/door-wl-d030-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d030/door-wl-d030-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d030/door-wl-d030-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d030/door-wl-d030-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d030/door-wl-d030-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d030/door-wl-d030-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d030/door-wl-d030-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d030/door-wl-d030-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d030/door-wl-d030-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D031_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d031/door-wl-d031-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d031/door-wl-d031-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d031/door-wl-d031-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d031/door-wl-d031-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d031/door-wl-d031-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d031/door-wl-d031-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d031/door-wl-d031-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d031/door-wl-d031-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d031/door-wl-d031-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D032_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d032/door-wl-d032-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d032/door-wl-d032-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d032/door-wl-d032-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d032/door-wl-d032-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d032/door-wl-d032-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d032/door-wl-d032-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d032/door-wl-d032-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d032/door-wl-d032-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d032/door-wl-d032-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D033_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d033/door-wl-d033-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d033/door-wl-d033-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d033/door-wl-d033-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d033/door-wl-d033-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d033/door-wl-d033-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d033/door-wl-d033-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d033/door-wl-d033-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d033/door-wl-d033-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d033/door-wl-d033-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D036_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d036/door-wl-d036-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d036/door-wl-d036-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d036/door-wl-d036-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d036/door-wl-d036-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d036/door-wl-d036-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d036/door-wl-d036-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d036/door-wl-d036-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d036/door-wl-d036-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d036/door-wl-d036-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D037_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d037/door-wl-d037-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d037/door-wl-d037-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d037/door-wl-d037-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d037/door-wl-d037-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d037/door-wl-d037-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d037/door-wl-d037-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d037/door-wl-d037-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d037/door-wl-d037-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d037/door-wl-d037-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_D038_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-d038/door-wl-d038-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-d038/door-wl-d038-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-d038/door-wl-d038-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-d038/door-wl-d038-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-d038/door-wl-d038-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-d038/door-wl-d038-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-d038/door-wl-d038-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-d038/door-wl-d038-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-d038/door-wl-d038-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_J001_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-j001/door-wl-j001-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-j001/door-wl-j001-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-j001/door-wl-j001-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-j001/door-wl-j001-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-j001/door-wl-j001-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-j001/door-wl-j001-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-j001/door-wl-j001-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-j001/door-wl-j001-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-j001/door-wl-j001-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_J002_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-j002/door-wl-j002-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-j002/door-wl-j002-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-j002/door-wl-j002-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-j002/door-wl-j002-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-j002/door-wl-j002-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-j002/door-wl-j002-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-j002/door-wl-j002-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-j002/door-wl-j002-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-j002/door-wl-j002-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_J003_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-j003/door-wl-j003-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-j003/door-wl-j003-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-j003/door-wl-j003-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-j003/door-wl-j003-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-j003/door-wl-j003-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-j003/door-wl-j003-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-j003/door-wl-j003-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-j003/door-wl-j003-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-j003/door-wl-j003-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_J005_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-j005/door-wl-j005-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-j005/door-wl-j005-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-j005/door-wl-j005-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-j005/door-wl-j005-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-j005/door-wl-j005-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-j005/door-wl-j005-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-j005/door-wl-j005-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-j005/door-wl-j005-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-j005/door-wl-j005-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_J006_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-j006/door-wl-j006-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-j006/door-wl-j006-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-j006/door-wl-j006-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-j006/door-wl-j006-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-j006/door-wl-j006-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-j006/door-wl-j006-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-j006/door-wl-j006-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-j006/door-wl-j006-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-j006/door-wl-j006-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_J008_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-j008/door-wl-j008-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-j008/door-wl-j008-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-j008/door-wl-j008-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-j008/door-wl-j008-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-j008/door-wl-j008-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-j008/door-wl-j008-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-j008/door-wl-j008-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-j008/door-wl-j008-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-j008/door-wl-j008-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_J009_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-j009/door-wl-j009-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-j009/door-wl-j009-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-j009/door-wl-j009-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-j009/door-wl-j009-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-j009/door-wl-j009-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-j009/door-wl-j009-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-j009/door-wl-j009-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-j009/door-wl-j009-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-j009/door-wl-j009-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_J010_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-j010/door-wl-j010-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-j010/door-wl-j010-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-j010/door-wl-j010-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-j010/door-wl-j010-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-j010/door-wl-j010-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-j010/door-wl-j010-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-j010/door-wl-j010-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-j010/door-wl-j010-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-j010/door-wl-j010-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_J011_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-j011/door-wl-j011-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-j011/door-wl-j011-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-j011/door-wl-j011-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-j011/door-wl-j011-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-j011/door-wl-j011-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-j011/door-wl-j011-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-j011/door-wl-j011-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-j011/door-wl-j011-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-j011/door-wl-j011-blanco-ai.webp",
+};
+
+const MADERA_ACUSTICA_WL_J012_AI_VARIANTS = {
+  "#171717": "/images/PUERTAS/MADERAACÚSTICA/wl-j012/door-wl-j012-negro-ai.webp",
+  "#4A2E1A": "/images/PUERTAS/MADERAACÚSTICA/wl-j012/door-wl-j012-wengue-ai.webp",
+  "#36383A": "/images/PUERTAS/MADERAACÚSTICA/wl-j012/door-wl-j012-gris-oscuro-ai.webp",
+  "#484A4B": "/images/PUERTAS/MADERAACÚSTICA/wl-j012/door-wl-j012-antracita-ai.webp",
+  "#5C3524": "/images/PUERTAS/MADERAACÚSTICA/wl-j012/door-wl-j012-nogal-ai.webp",
+  "#A8784E": "/images/PUERTAS/MADERAACÚSTICA/wl-j012/door-wl-j012-roble-ai.webp",
+  "#A5A19A": "/images/PUERTAS/MADERAACÚSTICA/wl-j012/door-wl-j012-gris-claro-ai.webp",
+  "#C19A6B": "/images/PUERTAS/MADERAACÚSTICA/wl-j012/door-wl-j012-natural-ai.webp",
+  "#E8E5DE": "/images/PUERTAS/MADERAACÚSTICA/wl-j012/door-wl-j012-blanco-ai.webp",
+};
+
 const AI_VARIANTS_BY_PRODUCT = {
   "door-x70-shunliu": X70_SHUNLIU_AI_VARIANTS,
   "door-x70-jinxiu": X70_JINXIU_AI_VARIANTS,
@@ -1920,6 +2629,65 @@ const AI_VARIANTS_BY_PRODUCT = {
   "door-td-01": TD_01_AI_VARIANTS,
   "door-td-02": TD_02_AI_VARIANTS,
   "door-td-03": TD_03_AI_VARIANTS,
+  "door-gk-01": GK_01_AI_VARIANTS,
+  "door-gk-02": GK_02_AI_VARIANTS,
+  "door-gk-03": GK_03_AI_VARIANTS,
+  "door-mk-01": MK_01_AI_VARIANTS,
+  "door-mk-02": MK_02_AI_VARIANTS,
+  "door-mk-03": MK_03_AI_VARIANTS,
+  "door-5203": MADERA_ACUSTICA_5203_AI_VARIANTS,
+  "door-s203": MADERA_ACUSTICA_S203_AI_VARIANTS,
+  "door-wl-5103": MADERA_ACUSTICA_WL_5103_AI_VARIANTS,
+  "door-wl-5105": MADERA_ACUSTICA_WL_5105_AI_VARIANTS,
+  "door-wl-5107": MADERA_ACUSTICA_WL_5107_AI_VARIANTS,
+  "door-wl-5109": MADERA_ACUSTICA_WL_5109_AI_VARIANTS,
+  "door-wl-5110": MADERA_ACUSTICA_WL_5110_AI_VARIANTS,
+  "door-wl-5117": MADERA_ACUSTICA_WL_5117_AI_VARIANTS,
+  "door-wl-5203": MADERA_ACUSTICA_WL_5203_AI_VARIANTS,
+  "door-wl-5503": MADERA_ACUSTICA_WL_5503_AI_VARIANTS,
+  "door-wl-d001": MADERA_ACUSTICA_WL_D001_AI_VARIANTS,
+  "door-wl-d002": MADERA_ACUSTICA_WL_D002_AI_VARIANTS,
+  "door-wl-d003": MADERA_ACUSTICA_WL_D003_AI_VARIANTS,
+  "door-wl-d005": MADERA_ACUSTICA_WL_D005_AI_VARIANTS,
+  "door-wl-d006": MADERA_ACUSTICA_WL_D006_AI_VARIANTS,
+  "door-wl-d007": MADERA_ACUSTICA_WL_D007_AI_VARIANTS,
+  "door-wl-d008": MADERA_ACUSTICA_WL_D008_AI_VARIANTS,
+  "door-wl-d009": MADERA_ACUSTICA_WL_D009_AI_VARIANTS,
+  "door-wl-d010": MADERA_ACUSTICA_WL_D010_AI_VARIANTS,
+  "door-wl-d011": MADERA_ACUSTICA_WL_D011_AI_VARIANTS,
+  "door-wl-d012": MADERA_ACUSTICA_WL_D012_AI_VARIANTS,
+  "door-wl-d013": MADERA_ACUSTICA_WL_D013_AI_VARIANTS,
+  "door-wl-d015": MADERA_ACUSTICA_WL_D015_AI_VARIANTS,
+  "door-wl-d016": MADERA_ACUSTICA_WL_D016_AI_VARIANTS,
+  "door-wl-d017": MADERA_ACUSTICA_WL_D017_AI_VARIANTS,
+  "door-wl-d018": MADERA_ACUSTICA_WL_D018_AI_VARIANTS,
+  "door-wl-d019": MADERA_ACUSTICA_WL_D019_AI_VARIANTS,
+  "door-wl-d020": MADERA_ACUSTICA_WL_D020_AI_VARIANTS,
+  "door-wl-d021": MADERA_ACUSTICA_WL_D021_AI_VARIANTS,
+  "door-wl-d022": MADERA_ACUSTICA_WL_D022_AI_VARIANTS,
+  "door-wl-d023": MADERA_ACUSTICA_WL_D023_AI_VARIANTS,
+  "door-wl-d025": MADERA_ACUSTICA_WL_D025_AI_VARIANTS,
+  "door-wl-d026": MADERA_ACUSTICA_WL_D026_AI_VARIANTS,
+  "door-wl-d027": MADERA_ACUSTICA_WL_D027_AI_VARIANTS,
+  "door-wl-d028": MADERA_ACUSTICA_WL_D028_AI_VARIANTS,
+  "door-wl-d029": MADERA_ACUSTICA_WL_D029_AI_VARIANTS,
+  "door-wl-d030": MADERA_ACUSTICA_WL_D030_AI_VARIANTS,
+  "door-wl-d031": MADERA_ACUSTICA_WL_D031_AI_VARIANTS,
+  "door-wl-d032": MADERA_ACUSTICA_WL_D032_AI_VARIANTS,
+  "door-wl-d033": MADERA_ACUSTICA_WL_D033_AI_VARIANTS,
+  "door-wl-d036": MADERA_ACUSTICA_WL_D036_AI_VARIANTS,
+  "door-wl-d037": MADERA_ACUSTICA_WL_D037_AI_VARIANTS,
+  "door-wl-d038": MADERA_ACUSTICA_WL_D038_AI_VARIANTS,
+  "door-wl-j001": MADERA_ACUSTICA_WL_J001_AI_VARIANTS,
+  "door-wl-j002": MADERA_ACUSTICA_WL_J002_AI_VARIANTS,
+  "door-wl-j003": MADERA_ACUSTICA_WL_J003_AI_VARIANTS,
+  "door-wl-j005": MADERA_ACUSTICA_WL_J005_AI_VARIANTS,
+  "door-wl-j006": MADERA_ACUSTICA_WL_J006_AI_VARIANTS,
+  "door-wl-j008": MADERA_ACUSTICA_WL_J008_AI_VARIANTS,
+  "door-wl-j009": MADERA_ACUSTICA_WL_J009_AI_VARIANTS,
+  "door-wl-j010": MADERA_ACUSTICA_WL_J010_AI_VARIANTS,
+  "door-wl-j011": MADERA_ACUSTICA_WL_J011_AI_VARIANTS,
+  "door-wl-j012": MADERA_ACUSTICA_WL_J012_AI_VARIANTS,
 };
 
 const ACCESORIOS_CORREDIZAS = [
