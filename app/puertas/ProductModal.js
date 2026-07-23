@@ -305,31 +305,6 @@ export default function ProductModal({
             />
           </div>
 
-          {selectedColor && (
-            <div className="relative mt-3 w-[min(280px,100%)] rounded-2xl border border-black/10 bg-white/95 p-3 shadow-2xl backdrop-blur md:absolute md:bottom-5 md:left-1/2 md:mt-0 md:w-[min(360px,calc(100%-2rem))] md:-translate-x-1/2 md:p-4">
-              <div className="flex items-center gap-3 md:gap-4">
-                <div
-                  className="h-12 w-12 shrink-0 rounded-xl border border-black/10 shadow-inner md:h-20 md:w-20"
-                  style={{
-                    backgroundColor: selectedColor.hex,
-                    backgroundImage: "linear-gradient(135deg, rgba(255,255,255,.28), transparent 42%, rgba(0,0,0,.16))",
-                  }}
-                  aria-hidden="true"
-                />
-                <div className="min-w-0">
-                  <p className="text-[9px] font-bold uppercase tracking-widest text-gray-400 md:text-[10px]">
-                    Acabado seleccionado
-                  </p>
-                  <p className="truncate text-xs font-bold uppercase tracking-wide text-gray-900 md:text-base">
-                    {selectedColor.name}
-                  </p>
-                  <p className="mt-1 text-[10px] text-gray-500 md:text-xs">
-                    {activeVariant ? "Variante generada por IA" : "La foto se mantiene original"}
-                  </p>
-                </div>
-              </div>
-            </div>
-          )}
         </div>
 
         <div className="scrollbar-hide w-full overflow-y-auto bg-white p-8 md:w-1/2 md:p-12">
