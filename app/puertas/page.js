@@ -372,8 +372,25 @@ const AI_VARIANTS_BY_PRODUCT = Object.freeze({
   "door-wl-p201": "/images/PUERTAS/PVC/wl-p201/door-wl-p201",
 });
 
+const normalizeProductImageKey = (value = "") => value
+  .normalize("NFD")
+  .replace(/[\u0300-\u036f]/g, "")
+  .toLowerCase()
+  .replace(/[^a-z0-9]+/g, "-")
+  .replace(/^-+|-+$/g, "");
+
+const AI_VARIANTS_BY_NORMALIZED_PRODUCT = Object.freeze(
+  Object.fromEntries(
+    Object.entries(AI_VARIANTS_BY_PRODUCT).map(([productImageKey, basePath]) => [
+      normalizeProductImageKey(productImageKey),
+      basePath,
+    ]),
+  ),
+);
+
 const getAiVariantPath = (productImageKey, colorHex) => {
-  const basePath = AI_VARIANTS_BY_PRODUCT[productImageKey];
+  const basePath = AI_VARIANTS_BY_PRODUCT[productImageKey]
+    || AI_VARIANTS_BY_NORMALIZED_PRODUCT[normalizeProductImageKey(productImageKey)];
   const suffix = AI_VARIANT_SUFFIX_BY_HEX[colorHex];
   return basePath && suffix ? `${basePath}-${suffix}-ai.webp` : null;
 };
@@ -841,6 +858,7 @@ const ProductModal = ({ product, onClose }) => {
             className="relative h-[300px] w-full shrink-0 md:h-full md:max-h-[500px]"
           >
             <Image
+              key={selectedImage}
               src={selectedImage}
               alt={product.name}
               fill
