@@ -1,190 +1,274 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Cookie, ShieldCheck, X, Settings } from 'lucide-react';
-import Link from 'next/link';
+import { Cookie, Settings, ShieldCheck, X } from "lucide-react";
+import Link from "next/link";
+import { useEffect, useId, useState } from "react";
 
-const CookieBanner = () => {
+const defaultPreferences = {
+  necessary: true,
+  analytics: false,
+};
+const CONSENT_VERSION = 2;
+const CONSENT_DURATION_MS = 180 * 24 * 60 * 60 * 1000;
+
+function readStoredPreferences() {
+  try {
+    const stored = localStorage.getItem("wonly_cookie_consent");
+    if (!stored) return null;
+    if (stored === "all" || stored === "necessary_only") return null;
+    const parsed = JSON.parse(stored);
+    if (
+      parsed.version !== CONSENT_VERSION ||
+      !parsed.expiresAt ||
+      Date.parse(parsed.expiresAt) <= Date.now()
+    ) {
+      localStorage.removeItem("wonly_cookie_consent");
+      return null;
+    }
+    return {
+      necessary: true,
+      analytics: parsed.analytics === true,
+    };
+  } catch {
+    return null;
+  }
+}
+
+function savePreferences(preferences) {
+  const payload = {
+    version: CONSENT_VERSION,
+    necessary: true,
+    analytics: preferences.analytics === true,
+    updatedAt: new Date().toISOString(),
+    expiresAt: new Date(Date.now() + CONSENT_DURATION_MS).toISOString(),
+  };
+  localStorage.setItem("wonly_cookie_consent", JSON.stringify(payload));
+  window.dispatchEvent(
+    new CustomEvent("wonly:consent-change", { detail: payload }),
+  );
+}
+
+export default function CookieBanner() {
+  const titleId = useId();
   const [isVisible, setIsVisible] = useState(false);
   const [showConfig, setShowConfig] = useState(false);
-  
-  // Opciones de configuración manual
-  const [preferences, setPreferences] = useState({
-    necessary: true, // Siempre true, no se puede desactivar
-    analytics: false,
-    marketing: false,
-  });
+  const [preferences, setPreferences] = useState(defaultPreferences);
 
-// Comprobar si el usuario ya ha tomado una decisión al cargar la página
   useEffect(() => {
-    const consent = localStorage.getItem('wonly_cookie_consent');
+    const stored = readStoredPreferences();
+    if (stored) setPreferences(stored);
+
     let timer;
-    if (!consent) {
-      // Si no hay registro, mostramos el banner después de 1 segundo
-      timer = setTimeout(() => setIsVisible(true), 1000);
+    if (!stored) {
+      timer = window.setTimeout(() => setIsVisible(true), 700);
     }
 
-    // NUEVO: Escuchar el botón de la página de Política de Cookies
     const handleOpenSettings = () => {
+      setPreferences(readStoredPreferences() || defaultPreferences);
+      setShowConfig(true);
       setIsVisible(true);
-      setShowConfig(true); // Abre directamente la vista de configuración
     };
-
-    window.addEventListener('openCookieSettings', handleOpenSettings);
+    window.addEventListener("openCookieSettings", handleOpenSettings);
 
     return () => {
-      if (timer) clearTimeout(timer);
-      window.removeEventListener('openCookieSettings', handleOpenSettings);
+      window.clearTimeout(timer);
+      window.removeEventListener("openCookieSettings", handleOpenSettings);
     };
   }, []);
 
-  const handleAcceptAll = () => {
-    localStorage.setItem('wonly_cookie_consent', 'all');
+  useEffect(() => {
+    window.dispatchEvent(
+      new CustomEvent("wonly:cookie-banner-visibility", {
+        detail: { visible: isVisible },
+      }),
+    );
+  }, [isVisible]);
+
+  const acceptAll = () => {
+    const next = { necessary: true, analytics: true };
+    setPreferences(next);
+    savePreferences(next);
     setIsVisible(false);
-    // Aquí podrías inicializar Google Analytics, Píxeles, etc.
   };
 
-  const handleRejectAll = () => {
-    localStorage.setItem('wonly_cookie_consent', 'necessary_only');
+  const rejectAll = () => {
+    setPreferences(defaultPreferences);
+    savePreferences(defaultPreferences);
     setIsVisible(false);
   };
 
-  const handleSavePreferences = () => {
-    localStorage.setItem('wonly_cookie_consent', JSON.stringify(preferences));
+  const saveCurrentPreferences = () => {
+    savePreferences(preferences);
     setIsVisible(false);
   };
 
   if (!isVisible) return null;
 
   return (
-    <AnimatePresence>
-      <motion.div 
-        initial={{ y: 100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        exit={{ y: 100, opacity: 0 }}
-        transition={{ type: "spring", stiffness: 260, damping: 20 }}
-        className="fixed bottom-0 left-0 w-full z-50 p-4 md:p-6 pointer-events-none flex justify-center"
+    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-[80] flex justify-center p-3 pb-[max(.75rem,env(safe-area-inset-bottom))] md:p-6">
+      <section
+        role="dialog"
+        aria-modal="false"
+        aria-labelledby={titleId}
+        className="pointer-events-auto relative max-h-[calc(100dvh-1.5rem)] w-full max-w-5xl overflow-y-auto rounded-3xl border border-white/15 bg-[#111]/95 p-5 text-white shadow-2xl shadow-black/60 backdrop-blur-xl md:p-7"
       >
-        <div className="bg-[#111]/95 backdrop-blur-md border border-white/10 p-6 md:p-8 rounded-2xl shadow-2xl shadow-black/50 max-w-4xl w-full pointer-events-auto relative overflow-hidden">
-          
-          {/* Brillo decorativo */}
-          <div className="absolute top-0 right-0 w-32 h-32 bg-[#00C2FF] opacity-[0.05] blur-[50px] rounded-full pointer-events-none" />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute right-0 top-0 h-36 w-36 rounded-full bg-cyan-300/5 blur-[60px]"
+        />
 
-          {!showConfig ? (
-            // VISTA 1: AVISO RÁPIDO
-            <div className="flex flex-col md:flex-row items-center gap-6">
-              <div className="p-3 bg-[#1a1a1a] border border-white/5 rounded-xl hidden md:block shrink-0">
-                <Cookie size={28} className="text-[#00C2FF]" />
-              </div>
-              <div className="flex-1 text-center md:text-left">
-                <h3 className="text-white font-bold text-lg mb-2 flex items-center justify-center md:justify-start gap-2">
-                  <ShieldCheck size={18} className="text-[#00C2FF] md:hidden" />
-                  Privacidad y Cookies
-                </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  Utilizamos cookies propias y de terceros para garantizar el correcto funcionamiento del portal, analizar la navegación y mostrarte publicidad personalizada en base a un perfil elaborado a partir de tus hábitos de navegación.
-                  Lee nuestra <Link href="/cookies" className="text-[#00C2FF] hover:underline">Política de Cookies</Link>.
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0">
-                <button 
-                  onClick={() => setShowConfig(true)}
-                  className="px-5 py-2.5 rounded-full text-sm font-medium text-white bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
-                >
-                  Configurar
-                </button>
-                <button 
-                  onClick={handleRejectAll}
-                  className="px-5 py-2.5 rounded-full text-sm font-medium text-gray-400 hover:text-white transition-colors"
-                >
-                  Rechazar
-                </button>
-                <button 
-                  onClick={handleAcceptAll}
-                  className="px-6 py-2.5 rounded-full text-sm font-bold text-black bg-[#00C2FF] hover:bg-white transition-colors shadow-lg shadow-[#00C2FF]/20"
-                >
-                  Aceptar Todo
-                </button>
-              </div>
+        {!showConfig ? (
+          <div className="relative flex flex-col gap-6 lg:flex-row lg:items-center">
+            <div className="hidden h-12 w-12 shrink-0 place-items-center rounded-2xl border border-white/10 bg-white/5 md:grid">
+              <Cookie size={24} className="text-cyan-300" aria-hidden="true" />
             </div>
-          ) : (
-            // VISTA 2: CONFIGURACIÓN DETALLADA
-            <motion.div 
-              initial={{ opacity: 0 }} 
-              animate={{ opacity: 1 }}
-              className="flex flex-col gap-6"
-            >
-              <div className="flex justify-between items-center border-b border-white/10 pb-4">
-                <h3 className="text-xl font-bold text-white flex items-center gap-2">
-                  <Settings size={20} className="text-[#00C2FF]" />
-                  Configuración de Cookies
-                </h3>
-                <button onClick={() => setShowConfig(false)} className="text-gray-400 hover:text-white">
-                  <X size={24} />
-                </button>
-              </div>
-
-              <div className="space-y-4">
-                {/* Técnicas */}
-                <div className="flex justify-between items-center p-4 bg-black/40 rounded-xl border border-white/5">
-                  <div>
-                    <h4 className="text-white font-medium mb-1">Estrictamente Necesarias</h4>
-                    <p className="text-gray-500 text-xs">Requeridas para el funcionamiento básico del sitio.</p>
-                  </div>
-                  <div className="text-gray-400 text-xs font-bold px-2 py-1 bg-white/5 rounded">Siempre Activas</div>
-                </div>
-
-                {/* Analíticas */}
-                <div className="flex justify-between items-center p-4 bg-black/40 rounded-xl border border-white/5">
-                  <div className="pr-4">
-                    <h4 className="text-white font-medium mb-1">Rendimiento y Analítica</h4>
-                    <p className="text-gray-500 text-xs">Ayudan a medir el tráfico y mejorar la experiencia.</p>
-                  </div>
-                  <label className="relative inline-flex items-center cursor-pointer shrink-0">
-                    <input 
-                      type="checkbox" 
-                      className="sr-only peer" 
-                      checked={preferences.analytics}
-                      onChange={(e) => setPreferences({...preferences, analytics: e.target.checked})}
-                    />
-                    <div className="w-11 h-6 bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#00C2FF]"></div>
-                  </label>
-                </div>
-
-                {/* Marketing */}
-                <div className="flex justify-between items-center p-4 bg-black/40 rounded-xl border border-white/5">
-                  <div className="pr-4">
-                    <h4 className="text-white font-medium mb-1">Marketing y Publicidad</h4>
-                    <p className="text-gray-500 text-xs">Usadas para ofrecer anuncios relevantes.</p>
-                  </div>
-                  <label className="relative inline-flex items-center cursor-pointer shrink-0">
-                    <input 
-                      type="checkbox" 
-                      className="sr-only peer" 
-                      checked={preferences.marketing}
-                      onChange={(e) => setPreferences({...preferences, marketing: e.target.checked})}
-                    />
-                    <div className="w-11 h-6 bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#00C2FF]"></div>
-                  </label>
-                </div>
-              </div>
-
-              <div className="flex justify-end gap-3 pt-4 border-t border-white/10">
-                <button 
-                  onClick={handleSavePreferences}
-                  className="px-6 py-2.5 rounded-full text-sm font-bold text-black bg-white hover:bg-[#00C2FF] transition-colors"
+            <div className="flex-1">
+              <h2
+                id={titleId}
+                className="flex items-center gap-2 text-lg font-semibold"
+              >
+                <ShieldCheck
+                  size={18}
+                  className="text-cyan-300 md:hidden"
+                  aria-hidden="true"
+                />
+                Tu privacidad, bajo tu control
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm leading-6 text-zinc-400">
+                Las cookies necesarias mantienen la web operativa. La medición
+                y el seguimiento permanecen desactivados hasta que los
+                autorices. Consulta la{" "}
+                <Link
+                  href="/cookies"
+                  className="text-cyan-300 underline-offset-4 hover:underline"
                 >
-                  Guardar Preferencias
-                </button>
-              </div>
-            </motion.div>
-          )}
+                  política de cookies
+                </Link>
+                .
+              </p>
+            </div>
+            <div className="grid gap-2 sm:grid-cols-3 lg:flex lg:shrink-0">
+              <button
+                type="button"
+                onClick={() => setShowConfig(true)}
+                className="min-h-11 rounded-full border border-white/15 px-5 text-sm font-medium transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300"
+              >
+                Configurar
+              </button>
+              <button
+                type="button"
+                onClick={rejectAll}
+                className="min-h-11 rounded-full px-5 text-sm font-medium text-zinc-300 transition hover:bg-white/5 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300"
+              >
+                Solo necesarias
+              </button>
+              <button
+                type="button"
+                onClick={acceptAll}
+                className="min-h-11 rounded-full bg-cyan-300 px-6 text-sm font-bold text-black transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
+              >
+                Aceptar todas
+              </button>
+            </div>
+          </div>
+        ) : (
+          <div className="relative">
+            <div className="flex items-center justify-between gap-4 border-b border-white/10 pb-4">
+              <h2
+                id={titleId}
+                className="flex items-center gap-2 text-xl font-semibold"
+              >
+                <Settings size={20} className="text-cyan-300" aria-hidden="true" />
+                Configuración de cookies
+              </h2>
+              <button
+                type="button"
+                onClick={() => setShowConfig(false)}
+                aria-label="Volver al aviso de cookies"
+                className="grid h-10 w-10 place-items-center rounded-full text-zinc-400 transition hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300"
+              >
+                <X size={21} aria-hidden="true" />
+              </button>
+            </div>
 
-        </div>
-      </motion.div>
-    </AnimatePresence>
+            <div className="mt-5 grid gap-3">
+              <PreferenceRow
+                title="Estrictamente necesarias"
+                description="Permiten el funcionamiento básico y no se pueden desactivar."
+                checked
+                disabled
+              />
+              <PreferenceRow
+                title="Rendimiento y analítica"
+                description="Nos permiten medir el uso de la web y detectar oportunidades de mejora."
+                checked={preferences.analytics}
+                onChange={(checked) =>
+                  setPreferences((current) => ({
+                    ...current,
+                    analytics: checked,
+                  }))
+                }
+              />
+            </div>
+
+            <div className="mt-5 flex flex-col-reverse gap-2 border-t border-white/10 pt-5 sm:flex-row sm:justify-end">
+              <button
+                type="button"
+                onClick={rejectAll}
+                className="min-h-11 rounded-full px-5 text-sm font-medium text-zinc-300 transition hover:bg-white/5 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300"
+              >
+                Rechazar opcionales
+              </button>
+              <button
+                type="button"
+                onClick={saveCurrentPreferences}
+                className="min-h-11 rounded-full bg-white px-6 text-sm font-bold text-black transition hover:bg-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              >
+                Guardar preferencias
+              </button>
+            </div>
+          </div>
+        )}
+      </section>
+    </div>
   );
-};
+}
 
-export default CookieBanner;
+function PreferenceRow({
+  title,
+  description,
+  checked,
+  disabled = false,
+  onChange,
+}) {
+  const id = useId();
+  return (
+    <div className="flex items-center justify-between gap-5 rounded-2xl border border-white/10 bg-black/35 p-4">
+      <div>
+        <h3 id={`${id}-title`} className="text-sm font-semibold text-white">
+          {title}
+        </h3>
+        <p id={`${id}-description`} className="mt-1 text-xs leading-5 text-zinc-500">
+          {description}
+        </p>
+      </div>
+      {disabled ? (
+        <span className="shrink-0 rounded-full bg-white/5 px-3 py-2 text-[10px] font-bold uppercase tracking-wider text-zinc-400">
+          Siempre activas
+        </span>
+      ) : (
+        <label className="relative inline-flex min-h-11 min-w-11 shrink-0 cursor-pointer items-center justify-center">
+          <input
+            type="checkbox"
+            className="peer sr-only"
+            checked={checked}
+            onChange={(event) => onChange(event.target.checked)}
+            aria-labelledby={`${id}-title`}
+            aria-describedby={`${id}-description`}
+          />
+          <span className="relative h-6 w-11 rounded-full bg-zinc-700 transition peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-cyan-300 peer-checked:bg-cyan-300 after:absolute after:left-0.5 after:top-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition after:content-[''] peer-checked:after:translate-x-5" />
+        </label>
+      )}
+    </div>
+  );
+}

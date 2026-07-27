@@ -5,12 +5,10 @@ import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronRight, DoorOpen, Palette, Filter, Search, Loader2 } from 'lucide-react';
-import { createClient } from '@supabase/supabase-js';
+import { supabase } from '../../lib/supabase';
+import useAccessibleDialog from '../../components/useAccessibleDialog';
 
 // --- CONFIGURACIÓN SUPABASE ---
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-const supabase = createClient(supabaseUrl, supabaseKey);
 
 // --- 1. CATEGORÍAS DE PUERTAS DE INTERIOR ---
 // IMPORTANTE: estos textos deben coincidir EXACTAMENTE con el campo "category"
@@ -97,15 +95,12 @@ const SearchInput = ({ value, onChange }) => (
 
 // --- MODAL DE PRODUCTO ---
 const ProductModal = ({ product, onClose }) => {
-  useEffect(() => {
-    document.body.style.overflow = 'hidden';
-    return () => { document.body.style.overflow = 'unset'; };
-  }, []);
+  const dialogRef = useAccessibleDialog(Boolean(product), onClose);
 
   if (!product) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex justify-end">
+    <div ref={dialogRef} role="dialog" aria-modal="true" aria-label={`Detalles de ${product.name}`} tabIndex={-1} className="fixed inset-0 z-[100] flex justify-end">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -123,7 +118,7 @@ const ProductModal = ({ product, onClose }) => {
         style={{ willChange: "transform" }}
         className="relative bg-white w-full max-w-[900px] h-full shadow-2xl flex flex-col md:flex-row z-10"
       >
-        <button onClick={onClose} className="absolute top-4 left-4 z-20 p-2 bg-white/80 backdrop-blur rounded-full hover:bg-black hover:text-white transition"><X size={20} /></button>
+        <button type="button" aria-label="Cerrar detalles" onClick={onClose} className="absolute top-4 left-4 z-20 p-2 bg-white/80 backdrop-blur rounded-full hover:bg-black hover:text-white transition"><X size={20} /></button>
 
         {/* Imagen */}
         <div className="w-full md:w-1/2 bg-[#F8F8F8] relative min-h-[300px] md:h-full flex items-center justify-center p-10">
@@ -227,13 +222,14 @@ const ProductCard = ({ product, onClick, priority = false }) => {
     .replace("PUERTA ", "");
 
   return (
-    <motion.div
+    <motion.button
+      type="button"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.2 }}
       onClick={onClick}
-      className="group cursor-pointer flex flex-col h-full"
+      className="group cursor-pointer flex flex-col h-full text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#A67C52]"
     >
       <div className="relative aspect-[3/5] bg-[#FCFCFC] mb-4 overflow-hidden border border-transparent group-hover:border-gray-100 transition-all rounded-sm">
         <Image
@@ -242,8 +238,7 @@ const ProductCard = ({ product, onClick, priority = false }) => {
           fill
           priority={priority}
           className="object-contain p-6 transition-transform duration-700 group-hover:scale-110 mix-blend-multiply"
-          sizes="100px"
-          unoptimized
+          sizes="(max-width: 768px) 50vw, (max-width: 1280px) 33vw, 25vw"
         />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 flex items-end justify-center pb-6">
           <span className="bg-white text-black text-[9px] font-bold uppercase px-3 py-2 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 shadow-sm tracking-widest">
@@ -270,7 +265,7 @@ const ProductCard = ({ product, onClick, priority = false }) => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </motion.button>
   );
 };
 
@@ -283,6 +278,10 @@ function PuertasInteriorContent() {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const mobileFilterRef = useAccessibleDialog(
+    isMobileMenuOpen,
+    () => setIsMobileMenuOpen(false),
+  );
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const gridTopRef = useRef(null);
@@ -494,12 +493,17 @@ function PuertasInteriorContent() {
             className="fixed inset-0 z-50 bg-black/90 backdrop-blur flex items-center justify-center p-6 lg:hidden"
           >
             <motion.div
+              ref={mobileFilterRef}
               initial={{ y: 50 }} animate={{ y: 0 }} exit={{ y: 50 }}
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="interior-filter-title"
+              tabIndex={-1}
               className="bg-white w-full max-w-sm p-6 space-y-4 rounded"
             >
               <div className="flex justify-between items-center border-b pb-4">
-                <span className="font-bold uppercase tracking-widest text-sm">Categorías</span>
-                <button onClick={() => setIsMobileMenuOpen(false)}><X size={20} /></button>
+                <span id="interior-filter-title" className="font-bold uppercase tracking-widest text-sm">Categorías</span>
+                <button type="button" onClick={() => setIsMobileMenuOpen(false)} aria-label="Cerrar filtros"><X size={20} aria-hidden="true" /></button>
               </div>
               <div className="flex flex-col gap-2 max-h-[60vh] overflow-y-auto">
                 <button onClick={() => { handleCategoryChange("TODAS"); setIsMobileMenuOpen(false); }} className="text-left py-3 border-b text-xs font-bold uppercase">Ver Todo</button>

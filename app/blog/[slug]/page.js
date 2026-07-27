@@ -1,12 +1,14 @@
 "use client";
 import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, useParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { MapPin, ArrowLeft, X, PlayCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import { blogPosts, getPostBySlug } from "../blogData";
+import useAccessibleDialog from "../../../components/useAccessibleDialog";
 
-export default function BlogPostPage({ params }) {
+export default function BlogPostPage() {
+  const params = useParams();
   const post = getPostBySlug(params.slug);
   const [lightboxIndex, setLightboxIndex] = useState(null); // índice de la imagen ampliada
   const [videoIndex, setVideoIndex] = useState(0); // vídeo actual del carrusel
@@ -15,6 +17,10 @@ export default function BlogPostPage({ params }) {
   const videos = post ? post.media.filter((m) => m.type === "video") : [];
 
   const closeLightbox = useCallback(() => setLightboxIndex(null), []);
+  const lightboxRef = useAccessibleDialog(
+    lightboxIndex !== null,
+    closeLightbox,
+  );
   const showPrev = useCallback(
     () => setLightboxIndex((i) => (i - 1 + images.length) % images.length),
     [images.length]
@@ -30,7 +36,6 @@ export default function BlogPostPage({ params }) {
     const onKey = (e) => {
       if (e.key === "ArrowLeft") showPrev();
       else if (e.key === "ArrowRight") showNext();
-      else if (e.key === "Escape") closeLightbox();
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -329,6 +334,11 @@ export default function BlogPostPage({ params }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            ref={lightboxRef}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Galería de imágenes del proyecto"
+            tabIndex={-1}
             onClick={closeLightbox}
             className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-sm flex items-center justify-center p-4 cursor-zoom-out"
           >

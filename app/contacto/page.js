@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from 'react';
-import Header from '../../components/Header';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, ArrowRight, CheckCircle, Clock, MessageSquare, AlertCircle } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ContactoPage() {
   const [formStatus, setFormStatus] = useState('idle'); // idle, submitting, success, error
@@ -38,8 +38,6 @@ export default function ContactoPage() {
 
   return (
     <main className="bg-black min-h-screen text-white selection:bg-[#00C2FF] selection:text-black flex flex-col">
-      <Header />
-
       {/* 1. HERO & INTRO */}
       <section className="pt-40 pb-10 px-6 relative overflow-hidden">
          <div className="container mx-auto text-center relative z-10">
@@ -171,19 +169,18 @@ export default function ContactoPage() {
                         </div>
                     </div>
 
-                    {/* --- GOOGLE MAPS IFRAME (Modo Oscuro) --- */}
-                    <div className="mt-12 h-72 bg-[#111] rounded-2xl border border-white/10 overflow-hidden relative shadow-2xl">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.6558661642236!2d2.0163353765665857!3d41.31612060041834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49c36236bb6b1%3A0x6283b5443314050d!2sCarrer+Noi+del+Sucre%2C+13%2C+08840+Viladecans%2C+Barcelona!5e0!3m2!1ses!2ses!4v1709664585123!5m2!1ses!2ses" 
-                            width="100%" 
-                            height="100%" 
-                            style={{ border: 0, filter: 'grayscale(100%) invert(92%) contrast(83%)' }} 
-                            allowFullScreen="" 
-                            loading="lazy" 
-                            referrerPolicy="no-referrer-when-downgrade">
-                        </iframe>
-                        <div className="absolute inset-0 pointer-events-none border-2 border-transparent hover:border-[#00C2FF]/30 transition-colors duration-500 rounded-2xl z-10"></div>
-                    </div>
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=Carrer+Noi+del+Sucre+13+08840+Viladecans"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group mt-12 flex min-h-56 flex-col items-center justify-center rounded-2xl border border-white/10 bg-[radial-gradient(circle_at_center,_rgba(0,194,255,.12),_transparent_65%)] p-8 text-center shadow-2xl transition hover:border-[#00C2FF]/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#00C2FF]"
+                    >
+                        <span className="mb-5 grid h-16 w-16 place-items-center rounded-full border border-[#00C2FF]/30 bg-[#00C2FF]/10 text-[#00C2FF] transition group-hover:scale-105">
+                            <MapPin size={28} aria-hidden="true" />
+                        </span>
+                        <span className="text-lg font-bold text-white">Abrir ubicación en Google Maps</span>
+                        <span className="mt-2 text-sm text-gray-400">Carrer Noi del Sucre, 13 · 08840 Viladecans</span>
+                    </a>
 
                 </motion.div>
 
@@ -233,23 +230,23 @@ export default function ContactoPage() {
                     <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-2">
-                                <label className="text-sm text-gray-400 ml-1">Nombre</label>
-                                <input name="nombre" required type="text" placeholder="Su nombre" className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#00C2FF] transition-colors text-white placeholder-gray-600" />
+                                <label htmlFor="contact-name" className="text-sm text-gray-400 ml-1">Nombre</label>
+                                <input id="contact-name" name="nombre" autoComplete="name" required type="text" placeholder="Su nombre" className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#00C2FF] transition-colors text-white placeholder-gray-600" />
                             </div>
                             <div className="space-y-2">
-                                <label className="text-sm text-gray-400 ml-1">Empresa</label>
-                                <input name="empresa" type="text" placeholder="Su empresa" className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#00C2FF] transition-colors text-white placeholder-gray-600" />
+                                <label htmlFor="contact-company" className="text-sm text-gray-400 ml-1">Empresa</label>
+                                <input id="contact-company" name="empresa" autoComplete="organization" type="text" placeholder="Su empresa" className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#00C2FF] transition-colors text-white placeholder-gray-600" />
                             </div>
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-sm text-gray-400 ml-1">Correo Electrónico</label>
-                            <input name="email" required type="email" placeholder="ejemplo@correo.com" className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#00C2FF] transition-colors text-white placeholder-gray-600" />
+                            <label htmlFor="contact-email" className="text-sm text-gray-400 ml-1">Correo Electrónico</label>
+                            <input id="contact-email" name="email" autoComplete="email" required type="email" placeholder="ejemplo@correo.com" className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#00C2FF] transition-colors text-white placeholder-gray-600" />
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-sm text-gray-400 ml-1">Asunto</label>
-                            <select name="asunto" className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#00C2FF] transition-colors text-white text-gray-400 appearance-none cursor-pointer">
+                            <label htmlFor="contact-subject" className="text-sm text-gray-400 ml-1">Asunto</label>
+                            <select id="contact-subject" name="asunto" className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#00C2FF] transition-colors text-gray-400 appearance-none cursor-pointer">
                                 <option value="Presupuesto">Presupuesto</option>
                                 <option value="Producto">Información de Producto</option>
                                 <option value="Soporte">Soporte Técnico</option>
@@ -258,8 +255,26 @@ export default function ContactoPage() {
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-sm text-gray-400 ml-1">Mensaje</label>
-                            <textarea name="mensaje" required rows={4} placeholder="¿En qué podemos ayudarte?" className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#00C2FF] transition-colors text-white placeholder-gray-600 resize-none"></textarea>
+                            <label htmlFor="contact-message" className="text-sm text-gray-400 ml-1">Mensaje</label>
+                            <textarea id="contact-message" name="mensaje" required rows={4} placeholder="¿En qué podemos ayudarte?" className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#00C2FF] transition-colors text-white placeholder-gray-600 resize-none"></textarea>
+                        </div>
+
+                        <div className="flex items-start gap-3 rounded-xl border border-white/10 bg-black/30 p-4">
+                            <input
+                                id="contact-privacy"
+                                name="privacidad_aceptada"
+                                type="checkbox"
+                                value="sí"
+                                required
+                                className="mt-1 h-4 w-4 shrink-0 accent-[#00C2FF]"
+                            />
+                            <label htmlFor="contact-privacy" className="text-xs leading-relaxed text-gray-400">
+                                He leído la{" "}
+                                <Link href="/privacidad" className="font-semibold text-[#00C2FF] underline underline-offset-4 hover:text-white">
+                                    política de privacidad
+                                </Link>
+                                . Entiendo que este formulario utiliza Formspree como proveedor técnico para entregar mi consulta a WONLY.
+                            </label>
                         </div>
 
                         <button 

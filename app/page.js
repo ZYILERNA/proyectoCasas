@@ -1,1032 +1,631 @@
-"use client"; // Necesario en Next.js App Router para usar Framer Motion
+import Image from "next/image";
+import Link from "next/link";
+import {
+  ArrowRight,
+  BedDouble,
+  Box,
+  Check,
+  ChevronRight,
+  Fingerprint,
+  Layers3,
+  LockKeyhole,
+  ScanFace,
+  ShieldCheck,
+  Sofa,
+  Sparkles,
+  Sun,
+  TableProperties,
+  Warehouse,
+  Waves,
+  Wind,
+} from "lucide-react";
+import CertificateShowcase from "../components/home/CertificateShowcase";
+import PatentCarousel from "../components/home/PatentCarousel";
 
-import Link from 'next/link';
-import Image from 'next/image';
-import { useState, useEffect, useRef } from 'react';
-import { ShieldCheck, Lock, Home as HomeIcon, ChevronRight, ChevronLeft, Wind, Maximize2, Sun, BedDouble, Archive, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
-
-// --- Variantes de Animación Reutilizables ---
-const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+export const metadata = {
+  title: "Puertas inteligentes, seguridad y diseño",
+  description:
+    "Puertas de seguridad inteligentes, cerraduras biométricas, ventanas panorámicas y soluciones de interior WONLY en España.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "WONLY España | Seguridad inteligente y diseño",
+    description:
+      "Soluciones integrales para puertas inteligentes, cerramientos y espacios de interior.",
+    url: "/",
+    type: "website",
+  },
 };
 
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.2 }
-  }
+const securityCollections = [
+  {
+    eyebrow: "Acceso inteligente",
+    title: "Puertas con IA",
+    description:
+      "Reconocimiento biométrico, control conectado y una entrada diseñada como parte de la arquitectura.",
+    href: "/puertas?category=PUERTA%20DE%20SEGURIDAD%20IA",
+    image: "/images/PUERTAS/AI/door-x60-pro.webp",
+    imageAlt: "Puerta inteligente WONLY X60 Pro",
+    icon: ScanFace,
+    tone: "cyan",
+  },
+  {
+    eyebrow: "Protección estructural",
+    title: "Puertas acorazadas",
+    description:
+      "Estructuras reforzadas, cierres multipunto y acabados contemporáneos para proyectos exigentes.",
+    href: "/puertas?category=PUERTA%20DE%20SEGURIDAD%20ACORAZADA",
+    image: "/images/PUERTAS/ACORAZADA/door-wl001.webp",
+    imageAlt: "Puerta acorazada WONLY",
+    icon: ShieldCheck,
+    tone: "white",
+  },
+  {
+    eyebrow: "Soluciones especiales",
+    title: "Una puerta para cada proyecto",
+    description:
+      "Modelos cortafuego, acústicos, de aluminio y colecciones a medida en un catálogo unificado.",
+    href: "/puertas?category=TODAS",
+    image: "/images/todas.webp",
+    imageAlt: "Colección de puertas especiales WONLY",
+    icon: Layers3,
+    tone: "white",
+  },
+];
+
+const interiorCollections = [
+  {
+    title: "Sofás",
+    text: "Confort modular y proporciones contemporáneas.",
+    href: "/sofas",
+    image: "/images/sofa-home.webp",
+    imageAlt: "Sofá contemporáneo de la colección WONLY",
+    icon: Sofa,
+  },
+  {
+    title: "Mesas",
+    text: "Piezas escultóricas para espacios residenciales y contract.",
+    href: "/mesas",
+    image: "/images/mesas-home.webp",
+    imageAlt: "Mesa de diseño de la colección WONLY",
+    icon: TableProperties,
+  },
+  {
+    title: "Dormitorios",
+    text: "Sistemas de descanso con una estética serena y precisa.",
+    href: "/dormitorios",
+    image: "/images/dormitorios-header.webp",
+    imageAlt: "Dormitorio de la colección WONLY",
+    icon: BedDouble,
+  },
+  {
+    title: "Gabinetes",
+    text: "Almacenaje integrado, iluminación y módulos configurables.",
+    href: "/gabinetes",
+    image: "/images/gabinetes-header.webp",
+    imageAlt: "Sistema de gabinetes WONLY",
+    icon: Warehouse,
+  },
+];
+
+const milestones = [
+  {
+    year: "1996",
+    title: "Nace WONLY",
+    text: "Comienza una trayectoria dedicada a la seguridad y la fabricación avanzada.",
+  },
+  {
+    year: "2003",
+    title: "Reto de seguridad",
+    text: "La marca lleva la resistencia de sus sistemas de cierre a una prueba pública.",
+  },
+  {
+    year: "2019",
+    title: "Puertas con IA",
+    text: "La biometría y la automatización pasan a formar parte de la puerta de entrada.",
+  },
+  {
+    year: "2021",
+    title: "Grupo Wangli en bolsa",
+    text: "Wangli Security & Surveillance Product Co., Ltd. cotiza en Shanghái con el código 605268.",
+  },
+];
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "WONLY España",
+  legalName: "Zhongyuankeji S.L.",
+  url: "https://www.wonlyspain.com",
+  logo: "https://www.wonlyspain.com/images/logo-wonly.webp",
+  email: "info@wonlyspain.com",
+  telephone: "+34689858129",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Carrer Noi del Sucre, 13",
+    postalCode: "08840",
+    addressLocality: "Viladecans",
+    addressRegion: "Barcelona",
+    addressCountry: "ES",
+  },
+  sameAs: [
+    "https://www.instagram.com/wonlyspain/",
+    "https://www.facebook.com/people/WONLY/61580719733874/",
+    "https://www.tiktok.com/@wonlyspain",
+  ],
 };
 
 export default function Home() {
-  // Certificado abierto en el modal (null = cerrado)
-  const [certAbierto, setCertAbierto] = useState(null);
-
-  // Índice del carrusel de patentes (0-12)
-  const [patenteActual, setPatenteActual] = useState(0);
-
-  // Índice del carrusel de logos de certificados (solo móvil)
-  const [logoActual, setLogoActual] = useState(0);
-
-  const certificadosCarruselRef = useRef(null);
-
-  const moverCertificados = (direccion) => {
-    certificadosCarruselRef.current?.scrollBy({
-      left: direccion * 280,
-      behavior: "smooth",
-    });
-  };
-
-  // Hitos históricos de la marca (línea de tiempo)
-  const hitos = [
-    { year: "1996", title: "Fundación de la Marca", desc: "Nace WONLY, iniciando una trayectoria de innovación en seguridad." },
-    { year: "1998", title: "Cerradura Automática", desc: "Invención de la cerradura automática multidireccional." },
-    { year: "2003", title: "Desafío del Rey de la Cerradura", desc: "Reto con premio de hasta 1 millón. Nunca abierto en más de 20 años." },
-    { year: "2015", title: "Súper Seguridad", desc: "Tecnología de triple aislamiento acústico y térmico." },
-    { year: "2019", title: "Puertas con IA", desc: "Primera puerta de seguridad robótica impulsada por Inteligencia Artificial." },
-    { year: "2021", title: "Salida a Bolsa", desc: "Listado en el Main Board de Shanghai (605268) y distinción 'Fábrica del Futuro'." },
-  ];
-
-  const certificados = {
-    fsc: {
-      titulo: "Certificado FSC",
-      imagen: "/images/Asset/CERTIFICADOS/fsc-certificate-wangli.webp",
-      width: 1224,
-      height: 1584,
-    },
-    iso: {
-      titulo: "Certificado ISO 9001:2015",
-      imagen: "/images/Asset/CERTIFICADOS/iso-certificate.webp",
-      width: 2191,
-      height: 3096,
-    },
-    propiedadIntelectual: {
-      titulo: "Certificado de GestiÃ³n de la Propiedad Intelectual",
-      imagen: "/images/Asset/CERTIFICADOS/intellectual-property-certificate-2026.webp",
-      width: 2024,
-      height: 2867,
-    },
-    iso14001: {
-      titulo: "Certificado ISO 14001:2015",
-      imagen: "/images/Asset/CERTIFICADOS/iso-14001-certificate.webp",
-      width: 2191,
-      height: 3096,
-    },
-    iso45001: {
-      titulo: "Certificado ISO 45001:2018",
-      imagen: "/images/Asset/CERTIFICADOS/iso-45001-certificate.webp",
-      width: 2180,
-      height: 3096,
-    },
-  };
-
-  // Logos de certificación mostrados en la sección 1b
-  const logosCertificados = [
-    {
-      logo: "/images/Asset/CERTIFICADOS/LOGOS/FSC.png",
-      titulo: "Certificado FSC",
-      sub: null,
-      cert: "fsc",
-    },
-    {
-      logo: "/images/Asset/CERTIFICADOS/LOGOS/ISO.png",
-      titulo: "Certificado ISO",
-      sub: "ISO 9001:2015",
-      cert: "iso",
-    },
-    {
-      logo: "/images/Asset/CERTIFICADOS/LOGOS/ISO.png",
-      titulo: "Certificado ISO",
-      sub: "ISO 14001:2015",
-      cert: "iso14001",
-    },
-    {
-      logo: "/images/Asset/CERTIFICADOS/LOGOS/ISO.png",
-      titulo: "Certificado ISO",
-      sub: "ISO 45001:2018",
-      cert: "iso45001",
-    },
-    {
-      logo: "/images/Asset/CERTIFICADOS/intellectual-property-certificate-2026.webp",
-      titulo: "Propiedad Intelectual",
-      sub: "GB/T 29490-2023",
-      cert: "propiedadIntelectual",
-    },
-    {
-      logo: "/images/Asset/CERTIFICADOS/LOGOS/LOWNOISE.png",
-      titulo: "Certificado Low Noise",
-      sub: null,
-      pdf: "/images/Asset/CERTIFICADOS/Lownoise.pdf",
-    },
-  ];
-
-  // Rotación automática del carrusel de certificados en móvil
-  useEffect(() => {
-    const intervalo = setInterval(() => {
-      setLogoActual((actual) => (actual + 1) % logosCertificados.length);
-    }, 3000);
-    return () => clearInterval(intervalo);
-  }, [logosCertificados.length]);
-
-  // Patentes CERT1-CERT13: original en chino + traducción al español
-  const patentes = Array.from({ length: 13 }, (_, i) => ({
-    numero: i + 1,
-    chino: {
-      titulo: `Patente de invención ${i + 1} — Documento original (CNIPA)`,
-      imagen: `/images/Asset/CERTIFICADOS/CERT${i + 1}/chino.webp`,
-      width: 960,
-      height: 1360,
-    },
-    espanol: {
-      titulo: `Patente de invención ${i + 1} — Traducción al español`,
-      imagen: `/images/Asset/CERTIFICADOS/CERT${i + 1}/espanol.webp`,
-      width: 1054,
-      height: 1492,
-    },
-  }));
-
   return (
-    <main className="bg-black text-white selection:bg-[#00C2FF] selection:text-black overflow-hidden">
-      
-      {/* =========================================
-         1. HERO SECTION: MARCA Y SEGURIDAD
-         ========================================= */}
-      {/* CAMBIOS APLICADOS AQUÍ: 
-          - mt-[80px]: Empuja la sección por debajo del header. 
-          - h-[calc(100vh-80px)]: Mantiene el diseño a pantalla completa restando la altura del header. 
-          (Nota: Si tu header es más grande o más pequeño, ajusta el "80px" por tu medida real) */}
-      <section className="relative w-full h-[calc(100vh-120px)] mt-[120px] flex items-center">
-        
-        {/* FONDO: Imagen del Robot con animación de zoom lento */}
-        <motion.div 
-          initial={{ scale: 1.1, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-          className="absolute inset-0 z-0"
-        >
+    <main className="overflow-hidden bg-[#050505] pt-28 text-white selection:bg-cyan-300 selection:text-black">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+
+      <section
+        aria-labelledby="hero-title"
+        className="relative isolate min-h-[calc(100svh-7rem)] overflow-hidden border-b border-white/10"
+      >
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_42%,rgba(0,194,255,0.2),transparent_28%),linear-gradient(120deg,#050505_18%,#07101a_58%,#02060a)]" />
+        <div className="absolute inset-y-0 right-0 w-full md:w-[58%]">
           <Image
             src="/images/hero-robot.webp"
-            alt="WONLY Technology"
+            alt="Robot tecnológico de WONLY, símbolo de innovación en seguridad"
             fill
             priority
-            className="object-cover"
-            style={{ objectPosition: "top center" }}
-            sizes="100vw"
+            quality={82}
+            className="object-cover object-top opacity-45 md:object-contain md:opacity-90"
+            sizes="(max-width: 768px) 100vw, 58vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent"></div>
-        </motion.div>
-        
-        {/* CONTENIDO TEXTO */}
-        {/* He quitado el 'mt-20' que tenías aquí para que el texto quede bien centrado ahora que la sección bajó */}
-        <motion.div 
-          variants={staggerContainer}
-          initial="hidden"
-          animate="visible"
-          className="relative z-10 container mx-auto px-6"
-        >
-          <motion.span variants={fadeInUp} className="text-[#00C2FF] font-bold tracking-[0.3em] uppercase text-sm md:text-base">
-            Tecnología & Seguridad S.L.
-          </motion.span>
-          <motion.h1 variants={fadeInUp} className="text-5xl md:text-8xl font-bold mt-4 mb-6 leading-tight max-w-4xl">
-            EL FUTURO <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">
-              ES SEGURO
-            </span>
-          </motion.h1>
-          <motion.p variants={fadeInUp} className="text-gray-300 text-lg md:text-xl max-w-xl mb-10 font-light border-l-2 border-[#00C2FF] pl-6">
-            Especialistas en puertas de seguridad, cerraduras inteligentes y blindaje de alta tecnología. Protegemos lo que más importa.
-          </motion.p>
-          
-          <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
-            <Link 
-              href="/puertas?category=PUERTA DE SEGURIDAD IA" 
-              className="bg-[#00C2FF] text-black px-8 py-4 font-bold uppercase tracking-widest hover:bg-white transition duration-300"
-            >
-              Ver Puertas
-            </Link>
-            <Link 
-              href="/contacto" 
-              className="border border-white px-8 py-4 font-bold uppercase tracking-widest hover:bg-white hover:text-black transition duration-300"
-            >
-              Contactar
-            </Link>
-          </motion.div>
-        </motion.div>
-      </section>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/55 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]/30" />
+        </div>
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 opacity-[0.08] [background-image:linear-gradient(rgba(255,255,255,.2)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.2)_1px,transparent_1px)] [background-size:72px_72px]"
+        />
 
-      {/* =========================================
-         1b. SECCIÓN: CERTIFICACIONES (LOGOS)
-         ========================================= */}
-      <section className="py-10 bg-[#111] border-t border-white/5">
-        <div className="container mx-auto px-6">
-
-          {/* ESCRITORIO: carrusel horizontal de logos */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            variants={staggerContainer}
-            className="relative hidden md:block max-w-6xl mx-auto px-12"
-          >
-            <button
-              type="button"
-              onClick={() => moverCertificados(-1)}
-              aria-label="Ver certificados anteriores"
-              className="absolute left-0 top-1/2 z-10 -translate-y-1/2 w-9 h-9 rounded-full border border-white/15 bg-black/30 grid place-items-center text-white hover:bg-[#00C2FF] hover:text-black transition-colors"
-            >
-              <ChevronLeft size={20} />
-            </button>
-
-            <div
-              ref={certificadosCarruselRef}
-              className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"
-            >
-              {logosCertificados.map((item) => {
-              const contenido = (
-                <>
-                  <div className="bg-white rounded-full p-2.5 mb-3 w-14 h-14 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                    <Image
-                      src={item.logo}
-                      alt={item.titulo}
-                      width={32}
-                      height={32}
-                      className="object-contain"
-                    />
-                  </div>
-                  <h4 className="text-sm font-bold uppercase tracking-widest text-center text-white group-hover:text-[#00C2FF] transition-colors">
-                    {item.titulo}
-                  </h4>
-                  {item.sub && (
-                    <span className="text-xs text-center text-gray-400 tracking-widest mt-1">
-                      {item.sub}
-                    </span>
-                  )}
-                </>
-              );
-
-              return (
-                <motion.div
-                  key={item.cert || item.pdf || item.titulo}
-                  variants={fadeInUp}
-                  className="shrink-0 basis-1/3 lg:basis-1/4 snap-start px-4"
-                >
-                  {item.pdf ? (
-                    <a
-                      href={item.pdf}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group flex min-h-28 w-full flex-col items-center cursor-pointer"
-                    >
-                      {contenido}
-                    </a>
-                  ) : (
-                    <button
-                      type="button"
-                      onClick={() => setCertAbierto(certificados[item.cert])}
-                      className="group flex min-h-28 w-full flex-col items-center cursor-pointer"
-                    >
-                      {contenido}
-                    </button>
-                  )}
-                </motion.div>
-              );
-              })}
+        <div className="container relative z-10 mx-auto flex min-h-[calc(100svh-7rem)] items-center px-6 py-16 md:py-20">
+          <div className="hero-enter max-w-3xl">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-300/10 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.22em] text-cyan-200">
+              <span className="h-1.5 w-1.5 rounded-full bg-cyan-300 shadow-[0_0_12px_#67e8f9]" />
+              WONLY España · Desde 1996
             </div>
 
-            <button
-              type="button"
-              onClick={() => moverCertificados(1)}
-              aria-label="Ver certificados siguientes"
-              className="absolute right-0 top-1/2 z-10 -translate-y-1/2 w-9 h-9 rounded-full border border-white/15 bg-black/30 grid place-items-center text-white hover:bg-[#00C2FF] hover:text-black transition-colors"
+            <h1
+              id="hero-title"
+              className="max-w-3xl text-balance text-5xl font-semibold leading-[0.96] tracking-[-0.055em] sm:text-6xl md:text-8xl"
             >
-              <ChevronRight size={20} />
-            </button>
-          </motion.div>
+              Seguridad que también{" "}
+              <span className="text-cyan-300">define tu espacio.</span>
+            </h1>
 
-          {/* MÓVIL: carrusel rotativo automático */}
-          <div className="md:hidden">
-            <div className="relative h-32 flex items-center justify-center">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={logoActual}
-                  initial={{ opacity: 0, x: 30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -30 }}
-                  transition={{ duration: 0.4, ease: "easeOut" }}
-                  className="absolute inset-0 flex items-center justify-center"
-                >
-                  {logosCertificados[logoActual].pdf ? (
-                    <a
-                      href={logosCertificados[logoActual].pdf}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group flex flex-col items-center"
-                    >
-                      <div className="bg-white rounded-full p-2.5 mb-3 w-14 h-14 flex items-center justify-center">
-                        <Image
-                          src={logosCertificados[logoActual].logo}
-                          alt={logosCertificados[logoActual].titulo}
-                          width={32}
-                          height={32}
-                          className="object-contain"
-                        />
-                      </div>
-                      <h4 className="text-base font-bold uppercase tracking-widest text-white">
-                        {logosCertificados[logoActual].titulo}
-                      </h4>
-                    </a>
-                  ) : (
-                    <button
-                      type="button"
-                      onClick={() => setCertAbierto(certificados[logosCertificados[logoActual].cert])}
-                      className="group flex flex-col items-center"
-                    >
-                      <div className="bg-white rounded-full p-2.5 mb-3 w-14 h-14 flex items-center justify-center">
-                        <Image
-                          src={logosCertificados[logoActual].logo}
-                          alt={logosCertificados[logoActual].titulo}
-                          width={32}
-                          height={32}
-                          className="object-contain"
-                        />
-                      </div>
-                      <h4 className="text-base font-bold uppercase tracking-widest text-white">
-                        {logosCertificados[logoActual].titulo}
-                      </h4>
-                      {logosCertificados[logoActual].sub && (
-                        <span className="text-sm text-gray-400 tracking-widest mt-1">
-                          {logosCertificados[logoActual].sub}
-                        </span>
-                      )}
-                    </button>
-                  )}
-                </motion.div>
-              </AnimatePresence>
-            </div>
+            <p className="mt-7 max-w-2xl text-pretty text-lg leading-8 text-zinc-300 md:text-xl">
+              Puertas inteligentes, cerraduras biométricas y soluciones
+              arquitectónicas que combinan protección, tecnología y diseño.
+            </p>
 
-            {/* Indicadores */}
-            <div className="flex items-center justify-center gap-2 mt-4">
-              {logosCertificados.map((item, i) => (
-                <button
-                  key={item.cert || item.pdf || item.titulo}
-                  type="button"
-                  onClick={() => setLogoActual(i)}
-                  aria-label={`Ver ${item.titulo}`}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${
-                    i === logoActual ? 'w-6 bg-[#00C2FF]' : 'w-1.5 bg-white/20'
-                  }`}
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="/puertas"
+                className="group inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-cyan-300 px-7 py-3 text-sm font-bold uppercase tracking-[0.14em] text-black transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+              >
+                Explorar puertas
+                <ArrowRight
+                  size={18}
+                  aria-hidden="true"
+                  className="transition-transform group-hover:translate-x-1"
                 />
-              ))}
+              </Link>
+              <Link
+                href="/contacto"
+                className="inline-flex min-h-12 items-center justify-center gap-3 rounded-full border border-white/25 bg-black/25 px-7 py-3 text-sm font-bold uppercase tracking-[0.14em] text-white backdrop-blur transition hover:border-white hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+              >
+                Hablar con un experto
+              </Link>
             </div>
+
+            <p className="mt-5 flex items-center gap-2 text-sm text-zinc-400">
+              <Check size={16} className="text-cyan-300" aria-hidden="true" />
+              Asesoramiento técnico para vivienda, obra nueva y proyectos
+              profesionales.
+            </p>
+
+            <dl className="mt-12 grid max-w-2xl grid-cols-3 gap-3 border-t border-white/10 pt-6">
+              <div>
+                <dt className="text-xs uppercase tracking-[0.16em] text-zinc-500">
+                  Trayectoria
+                </dt>
+                <dd className="mt-1 text-xl font-semibold text-white md:text-2xl">
+                  30 años
+                </dd>
+              </div>
+              <div>
+                <dt className="text-xs uppercase tracking-[0.16em] text-zinc-500">
+                  Innovación
+                </dt>
+                <dd className="mt-1 text-xl font-semibold text-white md:text-2xl">
+                  1.000+
+                </dd>
+              </div>
+              <div>
+                <dt className="text-xs uppercase tracking-[0.16em] text-zinc-500">
+                  Bolsa
+                </dt>
+                <dd className="mt-1 text-xl font-semibold text-white md:text-2xl">
+                  605268
+                </dd>
+              </div>
+            </dl>
           </div>
         </div>
       </section>
 
-      {/* =========================================
-         1c. SECCIÓN: HITOS (LÍNEA DE TIEMPO HORIZONTAL)
-         ========================================= */}
-      <section className="pb-16 bg-[#111] relative overflow-hidden">
-        <div className="container mx-auto px-6 relative z-10">
-          {/* Línea de tiempo horizontal compacta: desplazable solo por debajo de lg */}
-          <div className="flex overflow-x-auto lg:overflow-x-visible snap-x snap-mandatory pb-2 lg:pb-0 -mx-6 px-6 lg:mx-0 lg:px-0">
-            {hitos.map((item, index) => (
-              <motion.div
-                key={item.year}
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ delay: index * 0.08 }}
-                title={item.desc}
-                className="relative flex-shrink-0 w-[150px] lg:flex-shrink lg:flex-1 lg:w-auto lg:min-w-0 snap-start pr-4 last:pr-0"
-              >
-                <span className="block text-center text-2xl font-bold text-white font-mono tracking-tighter mb-3">
-                  {item.year}
-                </span>
+      <section
+        aria-label="Principales garantías de WONLY"
+        className="border-b border-white/10 bg-[#090909]"
+      >
+        <div className="container mx-auto grid grid-cols-1 divide-y divide-white/10 px-6 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+          {[
+            [Fingerprint, "Acceso biométrico", "Tecnología para una entrada más cómoda y controlada."],
+            [LockKeyhole, "Protección multicapa", "Estructura, cerradura y control de acceso trabajan en conjunto."],
+            [Sparkles, "Diseño integral", "Acabados pensados para convivir con la arquitectura."],
+          ].map(([Icon, title, text]) => (
+            <div key={title} className="flex gap-4 py-7 sm:px-7 first:pl-0 last:pr-0">
+              <Icon className="mt-0.5 shrink-0 text-cyan-300" size={22} aria-hidden="true" />
+              <div>
+                <h2 className="text-sm font-semibold uppercase tracking-[0.12em]">
+                  {title}
+                </h2>
+                <p className="mt-1 text-sm leading-6 text-zinc-500">{text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
-                {/* Línea y punto centrado */}
-                <div className="relative flex items-center justify-center h-3 mb-3">
-                  <div
-                    className={`absolute top-1/2 -translate-y-1/2 h-px bg-[#00C2FF]/50 shadow-[0_0_8px_rgba(0,194,255,0.6)] ${
-                      index === 0
-                        ? "left-1/2 -right-4"
-                        : index === hitos.length - 1
-                        ? "left-0 right-1/2"
-                        : "left-0 -right-4"
-                    }`}
-                  />
-                  <div className="relative w-2.5 h-2.5 bg-[#00C2FF] rounded-full border-2 border-[#111] shadow-[0_0_10px_rgba(0,194,255,0.8)]"/>
-                </div>
+      <section
+        aria-labelledby="security-title"
+        className="content-auto bg-[#080808] py-20 md:py-28"
+      >
+        <div className="container mx-auto px-6">
+          <SectionHeading
+            eyebrow="Seguridad inteligente"
+            title="Elige cómo quieres proteger tu entrada"
+            description="Desde el acceso conectado hasta la resistencia estructural: una gama preparada para diferentes necesidades y lenguajes arquitectónicos."
+            id="security-title"
+            action={{ href: "/puertas", label: "Ver catálogo completo" }}
+          />
 
-                <h3 className="text-xs font-bold text-white text-center uppercase tracking-wide px-1">
-                  {item.title}
-                </h3>
-              </motion.div>
+          <div className="mt-12 grid gap-5 lg:grid-cols-3">
+            {securityCollections.map((item, index) => (
+              <SecurityCard key={item.title} item={item} index={index} />
             ))}
           </div>
         </div>
       </section>
 
-      {/* =========================================
-         2. SECCIÓN PRIORITARIA: PUERTAS SMART
-         ========================================= */}
-      <section className="py-24 bg-[#111]">
-        <div className="container mx-auto px-6">
-          
-          <motion.div 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
-            className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6"
-          >
-            <div>
-              <h2 className="text-[#00C2FF] font-bold tracking-widest uppercase mb-2">Nuestro Enfoque Principal</h2>
-              <h3 className="text-4xl md:text-5xl font-bold text-white">SEGURIDAD INTELIGENTE</h3>
-            </div>
-            <Link href="/puertas?category=TODAS" className="group flex items-center gap-2 text-gray-400 hover:text-white transition">
-              Ver catálogo completo <ChevronRight className="group-hover:translate-x-1 transition-transform"/>
-            </Link>
-          </motion.div>
-
-          {/* GRID DE CATEGORÍAS DE PUERTAS - Animación en cascada */}
-          <motion.div 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            variants={staggerContainer}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
-          >
-            {/* CARD 1: SMART */}
-            <motion.div variants={fadeInUp}>
-              <Link href="/puertas?category=PUERTA DE SEGURIDAD IA" className="group relative block h-[500px] overflow-hidden bg-gray-900 border border-white/10 hover:border-[#00C2FF] transition-colors duration-500">
-                <Image src="/images/PUERTAS/AI/door-x60-pro.webp" alt="Smart Door" fill className="object-cover opacity-70 group-hover:scale-110 transition-transform duration-700" sizes="(max-width: 768px) 100vw, 33vw"/>
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
-                <div className="absolute bottom-0 left-0 p-8 w-full">
-                  <ShieldCheck className="text-[#00C2FF] w-10 h-10 mb-4" />
-                  <h4 className="text-2xl font-bold uppercase mb-2">Puertas Inteligentes</h4>
-                  <p className="text-gray-400 text-sm">Acceso biométrico, control por app y máxima tecnología.</p>
-                </div>
-              </Link>
-            </motion.div>
-
-            {/* CARD 2: ACORAZADAS */}
-            <motion.div variants={fadeInUp}>
-              <Link href="/puertas?category=PUERTA DE SEGURIDAD ACORAZADA" className="group relative block h-[500px] overflow-hidden bg-gray-900 border border-white/10 hover:border-white transition-colors duration-500">
-                <Image src="/images/PUERTAS/ACORAZADA/door-wl001.webp" alt="Acorazada" fill className="object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" sizes="(max-width: 768px) 100vw, 33vw"/>
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
-                <div className="absolute bottom-0 left-0 p-8 w-full">
-                  <Lock className="text-white w-10 h-10 mb-4" />
-                  <h4 className="text-2xl font-bold uppercase mb-2">Acorazadas</h4>
-                  <p className="text-gray-400 text-sm">Resistencia de grado militar y acero reforzado.</p>
-                </div>
-              </Link>
-            </motion.div>
-
-            {/* CARD 3: COLECCIONES / TODAS */}
-            <motion.div variants={fadeInUp}>
-              <Link href="/puertas?category=TODAS" className="group relative block h-[500px] overflow-hidden bg-gray-900 border border-white/10 hover:border-white transition-colors duration-500">
-                <div className="absolute inset-0 flex flex-col justify-center items-center bg-[#1a1a1a] p-8 text-center group-hover:bg-[#222] transition-colors">
-                  <div className="border border-white/20 rounded-full p-6 mb-6 group-hover:border-[#00C2FF] transition-colors">
-                      <span className="text-3xl font-light text-white">+10</span>
-                  </div>
-                  <h4 className="text-xl font-bold uppercase mb-2">Colecciones Especiales</h4>
-                  <p className="text-gray-400 text-sm mb-6">Cortafuegos, Médicas, Aluminio y más.</p>
-                  <span className="text-[#00C2FF] text-xs font-bold uppercase tracking-widest border-b border-[#00C2FF] pb-1">Descargar Catálogo</span>
-                </div>
-              </Link>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* =========================================
-         3. SECCIÓN: VENTANAS Y CERRAMIENTOS
-         ========================================= */}
-      <section className="py-24 bg-zinc-900 relative overflow-hidden">
-        <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                
-                {/* LADO IZQUIERDO: IMAGEN GRANDE */}
-                <motion.div 
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
-                  className="relative group"
+      <section
+        aria-labelledby="windows-title"
+        className="content-auto relative border-y border-white/10 bg-[#0d1115] py-20 md:py-28"
+      >
+        <div
+          aria-hidden="true"
+          className="absolute right-0 top-0 h-full w-1/2 bg-[radial-gradient(circle_at_center,rgba(0,194,255,.1),transparent_60%)]"
+        />
+        <div className="container relative mx-auto grid items-center gap-12 px-6 lg:grid-cols-[1.1fr_.9fr]">
+          <div className="group relative min-h-[360px] overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-900 md:min-h-[520px]">
+            <Image
+              src="/images/windows-view.webp"
+              alt="Ventana panorámica WONLY abierta hacia un paisaje de montaña"
+              fill
+              className="object-cover transition duration-700 group-hover:scale-[1.025]"
+              sizes="(max-width: 1024px) 100vw, 55vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent" />
+            <div className="absolute bottom-5 left-5 right-5 flex flex-wrap gap-2">
+              {["Aislamiento", "Luz natural", "Perfil minimalista"].map((label) => (
+                <span
+                  key={label}
+                  className="rounded-full border border-white/15 bg-black/55 px-3 py-2 text-xs font-medium text-white backdrop-blur"
                 >
-                    <div className="relative aspect-[16/10] overflow-hidden border border-white/10">
-                        <Image
-                            src="/images/windows-view.webp"
-                            alt="Ventanas Panorámicas WONLY"
-                            fill
-                            className="object-cover transition-transform duration-1000 group-hover:scale-105"
-                            sizes="(max-width: 1024px) 100vw, 50vw"
-                        />
-                    </div>
-                    {/* Detalle flotante técnico */}
-                    <motion.div 
-                      initial={{ scale: 0 }}
-                      whileInView={{ scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.4, duration: 0.5, type: "spring" }}
-                      className="absolute -bottom-6 -right-6 bg-black border border-[#00C2FF] p-6 hidden md:block z-10"
-                    >
-                        <p className="text-[#00C2FF] text-3xl font-bold">50<span className="text-sm align-top">mm</span></p>
-                        <p className="text-xs text-gray-400 uppercase tracking-widest">Grosor de Hoja</p>
-                    </motion.div>
-                </motion.div>
-
-                {/* LADO DERECHO: TEXTO TÉCNICO */}
-                <motion.div 
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, margin: "-100px" }}
-                  variants={staggerContainer}
-                  className="lg:pl-10"
-                >
-                    <motion.span variants={fadeInUp} className="text-[#00C2FF] font-bold tracking-[0.2em] uppercase text-xs mb-4 block">
-                        Nueva Colección 2025
-                    </motion.span>
-                    <motion.h2 variants={fadeInUp} className="text-4xl md:text-6xl font-bold text-white mb-6 leading-none">
-                        VISIÓN <br/>
-                        <span className="text-gray-500">INFINITA</span>
-                    </motion.h2>
-                    <motion.p variants={fadeInUp} className="text-gray-300 text-lg mb-8 font-light">
-                        Rompe la barrera entre tu hogar y el mundo. Nuestras ventanas de aluminio combinan un <strong>diseño minimalista</strong> con la revolucionaria tecnología de <strong>sellado de doble escalón</strong> para un aislamiento acústico y térmico absoluto.
-                    </motion.p>
-
-                    {/* Features Icons */}
-                    <motion.div variants={fadeInUp} className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10 border-t border-white/10 pt-8">
-                        <div className="flex flex-col gap-2">
-                            <Wind className="text-[#00C2FF] w-6 h-6" aria-hidden="true" />
-                            <h3 className="font-bold uppercase text-sm">Hermético</h3>
-                            <p className="text-xs text-gray-500">A prueba de humo y polvo.</p>
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <Maximize2 className="text-[#00C2FF] w-6 h-6" aria-hidden="true" />
-                            <h3 className="font-bold uppercase text-sm">Panorámico</h3>
-                            <p className="text-xs text-gray-500">Marcos reducidos, más luz.</p>
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <Sun className="text-[#00C2FF] w-6 h-6" aria-hidden="true" />
-                            <h3 className="font-bold uppercase text-sm">Térmico</h3>
-                            <p className="text-xs text-gray-500">Eficiencia energética total.</p>
-                        </div>
-                    </motion.div>
-
-                    <motion.div variants={fadeInUp}>
-                      <Link 
-                          href="/ventanas" 
-                          className="inline-flex items-center gap-3 text-white font-bold uppercase tracking-widest border-b border-white pb-2 hover:text-[#00C2FF] hover:border-[#00C2FF] transition-all"
-                      >
-                          Ver Modelos <ChevronRight size={18} />
-                      </Link>
-                    </motion.div>
-                </motion.div>
-            </div>
-        </div>
-      </section>
-
-      {/* =========================================
-         4. SECCIÓN SOFÁS
-         ========================================= */}
-      <section className="py-24 bg-black relative overflow-hidden">
-        {/* Decoración de fondo animada */}
-        <motion.div 
-          initial={{ opacity: 0, x: "50%" }}
-          whileInView={{ opacity: 1, x: "25%" }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-          className="absolute right-0 top-0 w-1/2 h-full bg-[#1a1a1a]/50 -skew-x-12 transform pointer-events-none"
-        ></motion.div>
-
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            
-            {/* TEXTO */}
-            <motion.div 
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={staggerContainer}
-            >
-              <motion.span variants={fadeInUp} className="text-gray-500 font-bold tracking-widest uppercase text-sm mb-2 block">
-                Interior & Confort
-              </motion.span>
-              <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl font-bold text-white mb-6">
-                DISEÑO PARA <br/> TU HOGAR
-              </motion.h2>
-              <motion.p variants={fadeInUp} className="text-gray-400 text-lg mb-8 leading-relaxed">
-                Más allá de la seguridad, creamos espacios únicos. Descubre nuestra exclusiva línea de sofás modulares y mobiliario de alta gama, diseñados para el confort absoluto.
-              </motion.p>
-              
-              <motion.div variants={fadeInUp}>
-                <Link href="/sofas" className="inline-flex items-center gap-4 group bg-white/5 hover:bg-white/10 px-6 py-4 rounded-lg transition-colors border border-white/10">
-                  <div className="w-10 h-10 bg-[#00C2FF] flex items-center justify-center text-black rounded-full">
-                    <HomeIcon size={18}/>
-                  </div>
-                  <div>
-                    <p className="text-white font-bold uppercase text-sm">Colección de Sofás</p>
-                    <span className="text-[#00C2FF] text-xs font-bold uppercase tracking-widest">Explorar catálogo</span>
-                  </div>
-                </Link>
-              </motion.div>
-            </motion.div>
-
-            {/* IMAGEN GRANDE */}
-            <motion.div 
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="relative"
-            >
-              <div className="aspect-[4/3] bg-gray-800 border border-white/10 p-2">
-                 <div className="relative w-full h-full">
-                   <Image
-                     src="/images/sofa-home.webp"
-                     alt="Sofá WONLY"
-                     fill
-                     className="object-cover"
-                     sizes="(max-width: 1024px) 100vw, 50vw"
-                   />
-                 </div>
-              </div>
-              <div className="absolute -bottom-6 -left-6 bg-[#00C2FF] text-black p-6 w-48 hidden md:block">
-                 <p className="font-bold text-2xl mb-1">2025</p>
-                 <p className="text-xs font-bold uppercase tracking-widest">Nueva Colección</p>
-              </div>
-            </motion.div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================
-         5. SECCIÓN: MESAS
-         ========================================= */}
-      <section className="py-24 bg-zinc-950 relative overflow-hidden border-t border-white/5">
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            
-            {/* IMAGEN GRANDE (A la izquierda para romper el ritmo visual) */}
-            <motion.div 
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="relative order-2 lg:order-1"
-            >
-              <div className="aspect-[4/3] bg-gray-800 border border-white/10 p-2">
-                 <div className="relative w-full h-full">
-                   <Image
-                     src="/images/mesas-home.webp"
-                     alt="Colección Mesas WONLY"
-                     fill
-                     className="object-cover"
-                     sizes="(max-width: 1024px) 100vw, 50vw"
-                   />
-                 </div>
-              </div>
-            </motion.div>
-
-            {/* TEXTO (A la derecha) */}
-            <motion.div 
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={staggerContainer}
-              className="order-1 lg:order-2 lg:pl-8"
-            >
-              <motion.span variants={fadeInUp} className="text-gray-500 font-bold tracking-widest uppercase text-sm mb-2 block">
-                Arte & Funcionalidad
-              </motion.span>
-              <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl font-bold text-white mb-6">
-                COLECCIÓN <br/> DE MESAS
-              </motion.h2>
-              <motion.p variants={fadeInUp} className="text-gray-400 text-lg mb-8 leading-relaxed">
-                Diseño escultórico y materiales nobles. Explora nuestra gama de mesas creadas para ser el centro de atención de cualquier espacio, combinando estética minimalista con durabilidad extrema.
-              </motion.p>
-              
-              <motion.div variants={fadeInUp}>
-                <Link href="/mesas" className="inline-flex items-center gap-4 group bg-white/5 hover:bg-white/10 px-6 py-4 rounded-lg transition-colors border border-white/10">
-                  <div className="w-10 h-10 bg-white flex items-center justify-center text-black rounded-full transition-transform group-hover:scale-110">
-                    <span className="font-serif italic font-bold text-lg">M</span>
-                  </div>
-                  <div>
-                    <p className="text-white font-bold uppercase text-sm">Ver Mesas</p>
-                    <span className="text-[#00C2FF] text-xs font-bold uppercase tracking-widest">Descubrir Modelos</span>
-                  </div>
-                </Link>
-              </motion.div>
-            </motion.div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================
-         6. SECCIÓN: DORMITORIOS (NUEVA)
-         ========================================= */}
-      <section className="py-24 bg-[#0a0a0a] relative overflow-hidden border-t border-white/5">
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            
-            {/* TEXTO (Izquierda para continuar el zig-zag) */}
-            <motion.div 
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={staggerContainer}
-            >
-              <motion.span variants={fadeInUp} className="text-gray-500 font-bold tracking-widest uppercase text-sm mb-2 block">
-                Descanso & Elegancia
-              </motion.span>
-              <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl font-bold text-white mb-6">
-                SANTUARIO <br/> PERSONAL
-              </motion.h2>
-              <motion.p variants={fadeInUp} className="text-gray-400 text-lg mb-8 leading-relaxed">
-                Camas tapizadas, bases reforzadas y mesitas de noche diseñadas con precisión arquitectónica. Transforma tu habitación en un espacio de paz con la más alta calidad en materiales y confort.
-              </motion.p>
-              
-              <motion.div variants={fadeInUp}>
-                <Link href="/dormitorios" className="inline-flex items-center gap-4 group bg-white/5 hover:bg-white/10 px-6 py-4 rounded-lg transition-colors border border-white/10">
-                  <div className="w-10 h-10 bg-[#00C2FF] flex items-center justify-center text-black rounded-full transition-transform group-hover:scale-110">
-                    <BedDouble size={18}/>
-                  </div>
-                  <div>
-                    <p className="text-white font-bold uppercase text-sm">Dormitorios</p>
-                    <span className="text-[#00C2FF] text-xs font-bold uppercase tracking-widest">Catálogo de Descanso</span>
-                  </div>
-                </Link>
-              </motion.div>
-            </motion.div>
-
-            {/* IMAGEN GRANDE (Derecha) */}
-            <motion.div 
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="relative"
-            >
-              <div className="relative aspect-[4/3] bg-gray-800 border border-white/10 p-2 group overflow-hidden">
-                 <Image
-                   src="/images/dormitorios-header.webp"
-                   alt="Colección Dormitorios WONLY"
-                   fill
-                   className="object-cover transition-transform duration-1000 group-hover:scale-105"
-                   sizes="(max-width: 1024px) 100vw, 50vw"
-                 />
-              </div>
-            </motion.div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================
-         7. SECCIÓN: GABINETES (NUEVA)
-         ========================================= */}
-      <section className="py-24 bg-zinc-950 relative overflow-hidden border-t border-white/5">
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            
-            {/* IMAGEN GRANDE (Izquierda) */}
-            <motion.div 
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="relative order-2 lg:order-1"
-            >
-              <div className="relative aspect-[4/3] bg-gray-800 border border-white/10 p-2 group overflow-hidden">
-                 <Image
-                   src="/images/gabinetes-header.webp"
-                   alt="Sistemas de Gabinetes WONLY"
-                   fill
-                   className="object-cover transition-transform duration-1000 group-hover:scale-105"
-                   sizes="(max-width: 1024px) 100vw, 50vw"
-                 />
-              </div>
-              <div className="absolute -bottom-6 -right-6 bg-white text-black p-6 w-48 hidden md:block z-10">
-                 <Archive className="mb-2" size={28} />
-                 <p className="font-bold text-lg mb-1 leading-tight">Módulos a Medida</p>
-                 <p className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Piedra Sinterizada & MDF</p>
-              </div>
-            </motion.div>
-
-            {/* TEXTO (Derecha) */}
-            <motion.div 
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={staggerContainer}
-              className="order-1 lg:order-2 lg:pl-8"
-            >
-              <motion.span variants={fadeInUp} className="text-[#00C2FF] font-bold tracking-widest uppercase text-sm mb-2 block">
-                Organización Inteligente
-              </motion.span>
-              <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl font-bold text-white mb-6">
-                SISTEMAS DE <br/> ALMACENAJE
-              </motion.h2>
-              <motion.p variants={fadeInUp} className="text-gray-400 text-lg mb-8 leading-relaxed">
-                Armarios, vestidores y muebles de TV creados para maximizar tus espacios. La perfección de la piedra sinterizada combinada con la tecnología de iluminación integrada y un diseño minimalista.
-              </motion.p>
-              
-              <motion.div variants={fadeInUp}>
-                <Link href="/gabinetes" className="inline-flex items-center gap-4 group bg-white/5 hover:bg-white/10 px-6 py-4 rounded-lg transition-colors border border-white/10">
-                  <div className="w-10 h-10 bg-white flex items-center justify-center text-black rounded-full transition-transform group-hover:scale-110">
-                    <Archive size={18}/>
-                  </div>
-                  <div>
-                    <p className="text-white font-bold uppercase text-sm">Ver Gabinetes</p>
-                    <span className="text-[#00C2FF] text-xs font-bold uppercase tracking-widest">Explorar Módulos</span>
-                  </div>
-                </Link>
-              </motion.div>
-            </motion.div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================
-         8. SECCIÓN: PATENTES DE INVENCIÓN (CARRUSEL)
-         ========================================= */}
-      <section className="py-24 bg-black border-t border-white/5">
-        <div className="container mx-auto px-6">
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
-            className="text-center mb-12"
-          >
-            <h2 className="text-[#00C2FF] font-bold tracking-widest uppercase mb-2">Innovación Protegida</h2>
-            <h3 className="text-4xl md:text-5xl font-bold text-white uppercase">Certificado de Patente de Invención 1000+</h3>
-            <p className="text-gray-500 max-w-3xl mx-auto mt-6 text-sm italic font-light">
-              Documento original emitido por la Administración Nacional de Propiedad Intelectual de China (CNIPA).
-              La traducción al español se proporciona únicamente con fines informativos.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            variants={fadeInUp}
-            className="relative max-w-4xl mx-auto"
-          >
-            {/* Slide actual: original chino + traducción español */}
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={patenteActual}
-                initial={{ opacity: 0, x: 40 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -40 }}
-                transition={{ duration: 0.35, ease: "easeOut" }}
-                className="grid grid-cols-1 sm:grid-cols-2 gap-6 px-12 md:px-16"
-              >
-                {[patentes[patenteActual].chino, patentes[patenteActual].espanol].map((doc) => (
-                  <button
-                    key={doc.imagen}
-                    type="button"
-                    onClick={() => setCertAbierto(doc)}
-                    className="group bg-[#111] border border-white/10 hover:border-[#00C2FF] p-4 transition-colors duration-300 cursor-pointer"
-                  >
-                    <Image
-                      src={doc.imagen}
-                      alt={doc.titulo}
-                      width={doc.width}
-                      height={doc.height}
-                      className="w-full h-auto"
-                    />
-                    <span className="block mt-3 text-xs uppercase tracking-widest text-gray-400 group-hover:text-[#00C2FF] transition-colors">
-                      {doc.titulo.includes('original') ? 'Documento original' : 'Traducción al español'}
-                    </span>
-                  </button>
-                ))}
-              </motion.div>
-            </AnimatePresence>
-
-            {/* Flechas */}
-            <button
-              type="button"
-              onClick={() => setPatenteActual((patenteActual - 1 + patentes.length) % patentes.length)}
-              aria-label="Patente anterior"
-              className="absolute left-0 top-1/2 -translate-y-1/2 text-white hover:text-[#00C2FF] transition-colors p-2"
-            >
-              <ChevronLeft size={36} />
-            </button>
-            <button
-              type="button"
-              onClick={() => setPatenteActual((patenteActual + 1) % patentes.length)}
-              aria-label="Patente siguiente"
-              className="absolute right-0 top-1/2 -translate-y-1/2 text-white hover:text-[#00C2FF] transition-colors p-2"
-            >
-              <ChevronRight size={36} />
-            </button>
-
-            {/* Indicadores */}
-            <div className="flex items-center justify-center gap-2 mt-8 flex-wrap">
-              {patentes.map((p, i) => (
-                <button
-                  key={p.numero}
-                  type="button"
-                  onClick={() => setPatenteActual(i)}
-                  aria-label={`Ir a la patente ${p.numero}`}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    i === patenteActual ? 'w-8 bg-[#00C2FF]' : 'w-2 bg-white/20 hover:bg-white/40'
-                  }`}
-                />
+                  {label}
+                </span>
               ))}
             </div>
-            <p className="text-center text-gray-500 text-xs mt-3 tracking-widest">
-              {patenteActual + 1} / {patentes.length}
-            </p>
-          </motion.div>
+          </div>
 
+          <div className="lg:pl-8">
+            <p className="text-xs font-bold uppercase tracking-[0.24em] text-cyan-300">
+              Ventanas panorámicas
+            </p>
+            <h2
+              id="windows-title"
+              className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-[-0.035em] md:text-6xl"
+            >
+              Más horizonte. Menos barreras.
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-zinc-400">
+              Cerramientos de aluminio con perfiles limpios, sellado avanzado y
+              una apertura visual que conecta interior y exterior.
+            </p>
+
+            <div className="mt-8 grid gap-5 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+              {[
+                [Wind, "Hermeticidad", "Protección frente a aire, polvo y humedad."],
+                [Sun, "Eficiencia", "Mejor control térmico y aprovechamiento de luz."],
+                [Waves, "Confort acústico", "Soluciones pensadas para reducir el ruido exterior."],
+              ].map(([Icon, title, text]) => (
+                <div key={title} className="border-t border-white/10 pt-4">
+                  <Icon size={20} className="text-cyan-300" aria-hidden="true" />
+                  <h3 className="mt-3 text-sm font-semibold">{title}</h3>
+                  <p className="mt-1 text-sm leading-6 text-zinc-500">{text}</p>
+                </div>
+              ))}
+            </div>
+
+            <Link
+              href="/ventanas"
+              className="group mt-9 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.14em] text-white hover:text-cyan-300"
+            >
+              Descubrir ventanas
+              <ChevronRight
+                size={18}
+                aria-hidden="true"
+                className="transition-transform group-hover:translate-x-1"
+              />
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* MODAL: Visor de certificado en imagen */}
-      <AnimatePresence>
-        {certAbierto && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            onClick={() => setCertAbierto(null)}
-            className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 md:p-10"
-          >
-            <button
-              type="button"
-              onClick={() => setCertAbierto(null)}
-              className="absolute top-6 right-6 text-white hover:text-[#00C2FF] transition-colors z-10"
-              aria-label="Cerrar"
-            >
-              <X size={32} />
-            </button>
+      <section
+        aria-labelledby="interior-title"
+        className="content-auto bg-[#070707] py-20 md:py-28"
+      >
+        <div className="container mx-auto px-6">
+          <SectionHeading
+            eyebrow="Interior WONLY"
+            title="Un mismo criterio, en todo el espacio"
+            description="Colecciones de mobiliario para crear interiores coherentes, funcionales y visualmente serenos."
+            id="interior-title"
+          />
 
-            <motion.div
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.95, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              onClick={(e) => e.stopPropagation()}
-              className="max-h-full overflow-y-auto"
-            >
-              <Image
-                src={certAbierto.imagen}
-                alt={certAbierto.titulo}
-                width={certAbierto.width}
-                height={certAbierto.height}
-                className="w-auto max-w-[90vw] md:max-w-[600px] h-auto shadow-2xl"
-              />
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* =========================================
-         9. FOOTER VISUAL
-         ========================================= */}
-      <section className="relative py-24 border-t border-white/10 overflow-hidden">
-         <div className="absolute inset-0 opacity-20 pointer-events-none">
-            <motion.div 
-              animate={{ 
-                scale: [1, 1.2, 1],
-                opacity: [0.5, 0.8, 0.5] 
-              }}
-              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute right-0 top-0 w-[500px] h-[500px] bg-[#00C2FF] blur-[150px] rounded-full mix-blend-screen"
-            />
-         </div>
-         
-         <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="container mx-auto px-6 text-center relative z-10"
-         >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">El Futuro de la Seguridad y el Diseño</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto mb-10 text-lg">
-              Contáctanos para recibir asesoramiento técnico personalizado y catálogos exclusivos.
-            </p>
-            <Link 
-            href="/contacto" 
-            className="inline-block bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-[#00C2FF] hover:text-white transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-[#00C2FF]/50">
-               CONTACTAR CON VENTAS
-            </Link>
-         </motion.div>
+          <div className="mt-12 grid gap-5 md:grid-cols-2">
+            {interiorCollections.map((item) => {
+              const Icon = item.icon;
+              return (
+                <Link
+                  key={item.title}
+                  href={item.href}
+                  className="group relative min-h-[360px] overflow-hidden rounded-[1.75rem] border border-white/10 bg-zinc-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300 md:min-h-[440px]"
+                >
+                  <Image
+                    src={item.image}
+                    alt={item.imageAlt}
+                    fill
+                    className="object-cover transition duration-700 group-hover:scale-[1.035]"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 p-7 md:p-9">
+                    <div className="flex items-end justify-between gap-6">
+                      <div>
+                        <Icon className="mb-4 text-cyan-300" size={24} aria-hidden="true" />
+                        <h3 className="text-3xl font-semibold tracking-[-0.03em]">
+                          {item.title}
+                        </h3>
+                        <p className="mt-2 max-w-sm text-sm leading-6 text-zinc-300">
+                          {item.text}
+                        </p>
+                      </div>
+                      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-white/20 bg-black/30 transition group-hover:border-cyan-300 group-hover:bg-cyan-300 group-hover:text-black">
+                        <ArrowRight size={18} aria-hidden="true" />
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
       </section>
 
+      <section
+        aria-labelledby="history-title"
+        className="content-auto border-y border-white/10 bg-[#0a0a0a] py-20 md:py-24"
+      >
+        <div className="container mx-auto px-6">
+          <SectionHeading
+            eyebrow="Una marca industrial"
+            title="Tres décadas convirtiendo seguridad en innovación"
+            description="Los hitos que explican por qué WONLY aborda cada puerta como un sistema completo."
+            id="history-title"
+          />
+
+          <ol className="mt-12 grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 md:grid-cols-4">
+            {milestones.map((item) => (
+              <li key={item.year} className="bg-[#0a0a0a] p-7">
+                <span className="font-mono text-3xl font-semibold text-cyan-300">
+                  {item.year}
+                </span>
+                <h3 className="mt-5 text-lg font-semibold">{item.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-zinc-500">{item.text}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section
+        aria-labelledby="certifications-title"
+        className="content-auto bg-[#070707] py-20 md:py-28"
+      >
+        <div className="container mx-auto px-6">
+          <SectionHeading
+            eyebrow="Confianza documentada"
+            title="Certificaciones y propiedad intelectual"
+            description="Consulta los documentos que respaldan los procesos, la gestión y la capacidad de innovación de la marca."
+            id="certifications-title"
+          />
+          <div className="mt-12">
+            <CertificateShowcase />
+          </div>
+        </div>
+      </section>
+
+      <section
+        aria-labelledby="patents-title"
+        className="content-auto border-y border-white/10 bg-[#0b0f13] py-20 md:py-28"
+      >
+        <div className="container mx-auto px-6">
+          <div className="grid gap-10 lg:grid-cols-[.75fr_1.25fr] lg:items-start">
+            <div className="lg:sticky lg:top-32">
+              <p className="text-xs font-bold uppercase tracking-[0.24em] text-cyan-300">
+                Innovación protegida
+              </p>
+              <h2
+                id="patents-title"
+                className="mt-4 text-balance text-4xl font-semibold tracking-[-0.04em] md:text-5xl"
+              >
+                Patentes que se pueden consultar
+              </h2>
+              <p className="mt-5 text-lg leading-8 text-zinc-400">
+                Una selección de documentos originales y sus traducciones al
+                español, presentada de forma clara y accesible.
+              </p>
+              <div className="mt-7 flex items-center gap-3 text-sm text-zinc-400">
+                <Box size={18} className="text-cyan-300" aria-hidden="true" />
+                13 documentos de invención disponibles
+              </div>
+            </div>
+            <PatentCarousel />
+          </div>
+        </div>
+      </section>
+
+      <section
+        aria-labelledby="contact-title"
+        className="relative isolate overflow-hidden bg-cyan-300 py-20 text-black md:py-24"
+      >
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 opacity-20 [background-image:radial-gradient(circle_at_80%_0%,white,transparent_36%)]"
+        />
+        <div className="container relative mx-auto flex flex-col items-start justify-between gap-8 px-6 lg:flex-row lg:items-end">
+          <div className="max-w-3xl">
+            <p className="text-xs font-bold uppercase tracking-[0.24em]">
+              Tu proyecto empieza aquí
+            </p>
+            <h2
+              id="contact-title"
+              className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-[-0.045em] md:text-6xl"
+            >
+              Cuéntanos qué quieres proteger y cómo quieres vivirlo.
+            </h2>
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-black/70">
+              Te ayudamos a encontrar una solución coherente con el uso, el
+              espacio y la estética de tu proyecto.
+            </p>
+          </div>
+          <Link
+            href="/contacto"
+            className="group inline-flex min-h-14 shrink-0 items-center justify-center gap-3 rounded-full bg-black px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] text-white transition hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black"
+          >
+            Solicitar asesoramiento
+            <ArrowRight
+              size={18}
+              aria-hidden="true"
+              className="transition-transform group-hover:translate-x-1"
+            />
+          </Link>
+        </div>
+      </section>
     </main>
+  );
+}
+
+function SectionHeading({ eyebrow, title, description, id, action }) {
+  return (
+    <div className="flex flex-col justify-between gap-7 md:flex-row md:items-end">
+      <div className="max-w-3xl">
+        <p className="text-xs font-bold uppercase tracking-[0.24em] text-cyan-300">
+          {eyebrow}
+        </p>
+        <h2
+          id={id}
+          className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-[-0.04em] md:text-6xl"
+        >
+          {title}
+        </h2>
+        <p className="mt-5 max-w-2xl text-lg leading-8 text-zinc-400">
+          {description}
+        </p>
+      </div>
+      {action && (
+        <Link
+          href={action.href}
+          className="group inline-flex shrink-0 items-center gap-2 text-sm font-bold uppercase tracking-[0.14em] text-zinc-300 hover:text-cyan-300"
+        >
+          {action.label}
+          <ChevronRight
+            size={18}
+            aria-hidden="true"
+            className="transition-transform group-hover:translate-x-1"
+          />
+        </Link>
+      )}
+    </div>
+  );
+}
+
+function SecurityCard({ item, index }) {
+  const Icon = item.icon;
+  return (
+    <Link
+      href={item.href}
+      className="group relative min-h-[520px] overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#111] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+    >
+      <div className="absolute inset-x-0 top-0 h-[64%]">
+        <Image
+          src={item.image}
+          alt={item.imageAlt}
+          fill
+          className={`transition duration-700 group-hover:scale-[1.035] ${
+            index < 2 ? "object-contain object-top" : "object-cover"
+          }`}
+          sizes="(max-width: 1024px) 100vw, 33vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#111] via-transparent to-transparent" />
+      </div>
+      <div className="absolute inset-x-0 bottom-0 p-7 md:p-8">
+        <div
+          className={`mb-5 grid h-11 w-11 place-items-center rounded-full border ${
+            item.tone === "cyan"
+              ? "border-cyan-300/30 bg-cyan-300 text-black"
+              : "border-white/15 bg-white/5 text-white"
+          }`}
+        >
+          <Icon size={20} aria-hidden="true" />
+        </div>
+        <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-cyan-300">
+          {item.eyebrow}
+        </p>
+        <h3 className="mt-2 text-2xl font-semibold tracking-[-0.025em]">
+          {item.title}
+        </h3>
+        <p className="mt-3 text-sm leading-6 text-zinc-400">{item.description}</p>
+        <span className="mt-5 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-white">
+          Explorar
+          <ArrowRight
+            size={16}
+            aria-hidden="true"
+            className="transition-transform group-hover:translate-x-1"
+          />
+        </span>
+      </div>
+    </Link>
   );
 }

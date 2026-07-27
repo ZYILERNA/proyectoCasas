@@ -20,7 +20,7 @@ const legalSections = [
     id: "datos-identificativos",
     title: "1. Datos Identificativos",
     icon: <Building2 size={24} className="text-[#00C2FF]"/>,
-    content: "En cumplimiento con el deber de información recogido en el artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico, se reflejan los siguientes datos: la empresa titular de dominio web es Zhongyuankeji S.L. (operando bajo la marca comercial WONLY, en adelante, La Empresa), con domicilio a estos efectos en Carrer Noi del Sucre, 13, 08840 Viladecans, Barcelona, España, inscrita en el Registro Mercantil de Barcelona. Correo electrónico de contacto: Zhongyuankejisl@gmail.com."
+    content: "En cumplimiento con el deber de información recogido en el artículo 10 de la Ley 34/2002, la titular del dominio es Zhongyuankeji S.L., que opera bajo la marca comercial WONLY, con domicilio en Carrer Noi del Sucre, 13, 08840 Viladecans, Barcelona, España. Correo electrónico de contacto: info@wonlyspain.com."
   },
   {
     id: "usuarios",
@@ -132,7 +132,7 @@ const AvisoLegalPage = () => {
         </div>
       </section>
 
-      {/* 4. SECCIÓN CONTACTO DPO / LEGAL */}
+      {/* 4. SECCIÓN DE CONTACTO LEGAL */}
       <section className="py-16 bg-[#0a0a0a] border-t border-white/10">
         <div className="container mx-auto px-6 max-w-4xl text-center">
           <div className="inline-flex p-4 bg-white/5 rounded-full mb-6">

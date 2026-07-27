@@ -9,6 +9,7 @@ import {
   Volume2, CloudRain, Maximize 
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import useAccessibleDialog from '../../components/useAccessibleDialog';
 
 // --- VARIANTES DE ANIMACIÓN (OPTIMIZADAS PARA GPU) ---
 const fadeInUp = {
@@ -186,10 +187,11 @@ const PRODUCTOS = [
 
 // --- 2. COMPONENTES UI ---
 const ProductCard = ({ product, onClick, variants }) => (
-  <motion.div 
+  <motion.button
+    type="button"
     variants={variants}
     onClick={onClick} 
-    className="group cursor-pointer flex flex-col gap-4 bg-[#111] pb-6 border border-transparent hover:border-[#00C2FF]/30 transition-all duration-500 rounded-lg overflow-hidden"
+    className="group cursor-pointer flex flex-col gap-4 bg-[#111] pb-6 border border-transparent hover:border-[#00C2FF]/30 transition-all duration-500 rounded-lg overflow-hidden text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#00C2FF]"
   >
     <div className="relative aspect-[4/3] overflow-hidden w-full bg-gray-900">
       <Image 
@@ -214,15 +216,16 @@ const ProductCard = ({ product, onClick, variants }) => (
          ))}
       </div>
     </div>
-  </motion.div>
+  </motion.button>
 );
 
 // --- COMPONENTE MODAL DE PRODUCTO ---
 const ProductModal = ({ product, onClose }) => {
+  const dialogRef = useAccessibleDialog(Boolean(product), onClose);
   return (
     <AnimatePresence>
       {product && (
-        <div className="fixed inset-0 z-[100] flex justify-end">
+        <div ref={dialogRef} role="dialog" aria-modal="true" aria-label={`Detalles de ${product.name}`} tabIndex={-1} className="fixed inset-0 z-[100] flex justify-end">
           {/* Overlay oscuro de fondo sin desenfoque (backdrop-blur eliminado por rendimiento) */}
           <motion.div 
             initial={{ opacity: 0 }} 
@@ -248,7 +251,7 @@ const ProductModal = ({ product, onClose }) => {
                     <span className="text-[#00C2FF] text-xs font-bold uppercase tracking-widest">{product.category} / {product.type}</span>
                     <h2 className="text-4xl font-bold text-white mt-2">{product.name}</h2>
                 </div>
-                <button onClick={onClose} className="text-white hover:text-[#00C2FF] transition-colors bg-white/5 p-2 rounded-full hover:bg-white/10">
+                <button type="button" aria-label="Cerrar detalles" onClick={onClose} className="text-white hover:text-[#00C2FF] transition-colors bg-white/5 p-2 rounded-full hover:bg-white/10">
                     <X size={24} />
                 </button>
             </div>

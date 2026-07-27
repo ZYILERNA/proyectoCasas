@@ -21,13 +21,13 @@ const privacySections = [
     id: "responsable",
     title: "1. Responsable del Tratamiento",
     icon: <Database size={24} className="text-[#00C2FF]"/>,
-    content: "La entidad responsable del tratamiento de sus datos personales es WONLY (en adelante, 'La Empresa'), con NIF [Tu NIF] y domicilio social en [Tu Dirección]. Puede contactar con nuestro Delegado de Protección de Datos (DPO) a través del correo electrónico: dpo@wonly.com."
+    content: "La entidad responsable del tratamiento de sus datos personales es Zhongyuankeji S.L., operando bajo la marca WONLY, con domicilio en Carrer Noi del Sucre, 13, 08840 Viladecans, Barcelona, España. Para cualquier consulta relativa a privacidad puede escribir a info@wonlyspain.com."
   },
   {
     id: "datos-recopilados",
     title: "2. Datos que Recopilamos",
     icon: <Fingerprint size={24} className="text-[#00C2FF]"/>,
-    content: "Recopilamos datos de identificación (nombre, apellidos), datos de contacto (email, teléfono, dirección postal), datos de navegación (dirección IP, comportamiento en la web) y, en el caso de clientes, datos transaccionales necesarios para la prestación de nuestros servicios y entrega de productos."
+    content: "Recopilamos los datos que usted facilita en el formulario (nombre, empresa, email, asunto y mensaje), los necesarios para prestar un servicio contratado y, solo si acepta la analítica, datos técnicos de navegación como página visitada, referencia, dispositivo y agente de usuario."
   },
   {
     id: "finalidad",
@@ -39,31 +39,31 @@ const privacySections = [
     id: "legitimacion",
     title: "4. Legitimación",
     icon: <ShieldAlert size={24} className="text-[#00C2FF]"/>,
-    content: "La base legal para el tratamiento de sus datos es: la ejecución de un contrato para la compra de productos, el consentimiento expreso otorgado para el envío de comunicaciones comerciales y nuestro interés legítimo para garantizar la seguridad de la plataforma y prevenir el fraude."
+    content: "La base legal depende de cada tratamiento: la aplicación de medidas precontractuales solicitadas por usted al pedir información o presupuesto, la ejecución de un contrato, el consentimiento para las comunicaciones o mediciones que lo requieran, y el interés legítimo en mantener la seguridad del sitio."
   },
   {
     id: "destinatarios",
     title: "5. Destinatarios y Transferencias",
     icon: <Share2 size={24} className="text-[#00C2FF]"/>,
-    content: "Sus datos no se cederán a terceros, salvo obligación legal o cuando sea estrictamente necesario para la prestación del servicio (por ejemplo, agencias de transporte logístico o pasarelas de pago). Exigimos a todos nuestros proveedores el mismo nivel de cumplimiento del RGPD."
+    content: "Para prestar el servicio podemos utilizar proveedores con acceso limitado a los datos, como Formspree para tramitar el formulario, alojamiento web, logística o pagos. También podremos comunicar información por obligación legal. Cuando un proveedor trate datos fuera del Espacio Económico Europeo, exigiremos una base y garantías válidas conforme a la normativa aplicable."
   },
   {
     id: "derechos",
     title: "6. Derechos del Usuario",
     icon: <UserCheck size={24} className="text-[#00C2FF]"/>,
-    content: "Usted tiene derecho a acceder, rectificar y suprimir sus datos, así como a limitar su tratamiento, oponerse al mismo y solicitar la portabilidad de los datos. Podrá ejercer estos derechos enviando un correo a legal@wonly.com acompañado de una copia de su documento de identidad."
+    content: "Usted puede acceder, rectificar y suprimir sus datos, limitar u oponerse al tratamiento, solicitar la portabilidad y retirar un consentimiento sin afectar a la licitud previa. Puede ejercerlos en info@wonlyspain.com y reclamar ante la Agencia Española de Protección de Datos (www.aepd.es). Solo pediremos la información imprescindible para verificar su identidad."
   },
   {
     id: "retencion",
     title: "7. Retención de Datos",
     icon: <Clock size={24} className="text-[#00C2FF]"/>,
-    content: "Conservaremos sus datos personales mientras exista una relación contractual o comercial. Una vez finalizada, los datos se mantendrán debidamente bloqueados durante el tiempo legalmente establecido para atender a posibles responsabilidades nacidas del tratamiento."
+    content: "Las consultas se conservan mientras se atienden y, cuando proceda, durante los plazos legales de responsabilidad. La analítica interna depura los registros anteriores a 13 meses cuando recibe nueva actividad. Las preferencias de consentimiento se renuevan cada seis meses."
   },
   {
     id: "seguridad",
     title: "8. Seguridad de la Información",
     icon: <LockKeyhole size={24} className="text-[#00C2FF]"/>,
-    content: "Hemos implementado medidas técnicas y organizativas de última generación, incluyendo encriptación en tránsito y en reposo, para garantizar la seguridad de sus datos y evitar su alteración, pérdida, tratamiento o acceso no autorizado, habida cuenta del estado de la tecnología."
+    content: "Aplicamos medidas técnicas y organizativas razonables y proporcionadas al riesgo para reducir la posibilidad de alteración, pérdida, tratamiento o acceso no autorizado. Ningún sistema es infalible; revisamos estas medidas cuando cambian el servicio, los riesgos o la tecnología disponible."
   }
 ];
 
@@ -93,7 +93,7 @@ const PrivacidadPage = () => {
               Política de <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Privacidad</span>
             </h1>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-              Cómo protegemos, gestionamos y utilizamos tu información personal con los más altos estándares de seguridad.
+              Cómo recopilamos, utilizamos, conservamos y protegemos tu información personal.
             </p>
           </motion.div>
         </div>
@@ -102,18 +102,21 @@ const PrivacidadPage = () => {
       {/* 2. CINTA DE DATOS */}
       <div className="border-b border-white/10 bg-[#111] py-3 overflow-hidden relative">
         <div className="flex gap-8 md:gap-12 items-center justify-center opacity-70 font-mono text-xs md:text-sm whitespace-nowrap overflow-x-auto px-4">
-           <span>ENCRIPTACIÓN E2E</span>
+           <span>DATOS MÍNIMOS</span>
            <span className="w-1 h-1 bg-gray-500 rounded-full"/>
-           <span>ISO 27001 COMPLIANT</span>
+           <span>CONTROL DE PREFERENCIAS</span>
            <span className="w-1 h-1 bg-gray-500 rounded-full hidden md:inline"/>
-           <span className="hidden md:inline">AUDITORÍA CONTINUA</span>
+           <span className="hidden md:inline">DERECHOS RGPD</span>
            <span className="w-1 h-1 bg-gray-500 rounded-full"/>
-           <span className="text-[#00C2FF]">CERO BRECHAS DE DATOS</span>
+           <span className="text-[#00C2FF]">CONTACTO DIRECTO</span>
         </div>
       </div>
 
       {/* 3. CONTENIDO LEGAL (GRID DE TARJETAS) */}
       <section className="py-20 container mx-auto px-6 max-w-5xl">
+        <p className="mb-8 text-center text-xs uppercase tracking-[0.16em] text-gray-500">
+          Última actualización: 27 de julio de 2026
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {privacySections.map((section, index) => (
             <motion.div
@@ -145,21 +148,21 @@ const PrivacidadPage = () => {
         </div>
       </section>
 
-      {/* 4. SECCIÓN CONTACTO DPO / LEGAL */}
+      {/* 4. SECCIÓN DE CONTACTO SOBRE PRIVACIDAD */}
       <section className="py-16 bg-[#0a0a0a] border-t border-white/10">
         <div className="container mx-auto px-6 max-w-4xl text-center">
           <div className="inline-flex p-4 bg-white/5 rounded-full mb-6">
             <Mail className="text-[#00C2FF]" size={32}/>
           </div>
-          <h3 className="text-2xl md:text-3xl font-bold mb-4">Ejerce tus Derechos ARCO</h3>
+          <h3 className="text-2xl md:text-3xl font-bold mb-4">Ejerce tus derechos</h3>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-            Si deseas acceder, rectificar, cancelar u oponerte al tratamiento de tus datos, o contactar con nuestro Delegado de Protección de Datos (DPO), envíanos un mensaje.
+            Si deseas acceder, rectificar, suprimir o portar tus datos, limitar su tratamiento u oponerte, escríbenos a info@wonlyspain.com o utiliza el formulario de contacto.
           </p>
           <Link 
             href="/contacto" 
             className="inline-flex items-center gap-2 bg-[#111] border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:border-[#00C2FF] hover:text-[#00C2FF] transition-all duration-300"
           >
-            Contactar con el DPO
+            Contactar sobre privacidad
           </Link>
         </div>
       </section>

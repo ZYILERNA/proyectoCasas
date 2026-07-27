@@ -26,25 +26,25 @@ const cookieSections = [
     id: "tecnicas",
     title: "2. Cookies Técnicas y Estrictamente Necesarias",
     icon: <ShieldCheck size={24} className="text-[#00C2FF]"/>,
-    content: "Son esenciales para que la página web funcione correctamente. Permiten la navegación, el uso de opciones como añadir productos al carrito, mantener la sesión iniciada o configurar sus preferencias de privacidad. Estas cookies no pueden ser desactivadas en nuestros sistemas."
+    content: "Son necesarias para recordar sus preferencias de privacidad y, cuando usted cambia el idioma, conservar esa elección. No se utilizan para elaborar perfiles publicitarios."
   },
   {
     id: "analiticas",
     title: "3. Cookies de Rendimiento y Análisis",
     icon: <BarChart3 size={24} className="text-[#00C2FF]"/>,
-    content: "Nos permiten cuantificar el número de usuarios y realizar la medición y análisis estadístico de cómo interactúan con nuestra plataforma. Toda la información que recogen estas cookies es agregada y, por lo tanto, anónima. Nos ayudan a mejorar el diseño y la velocidad del sitio."
+    content: "Si las acepta, activamos Vercel Analytics, Speed Insights y nuestra medición interna de visitas para conocer el uso y el rendimiento del sitio. Permanecen desactivados hasta que usted presta su consentimiento y puede retirarlo en cualquier momento."
   },
   {
-    id: "publicidad",
-    title: "4. Cookies de Publicidad Comportamental",
+    id: "traduccion",
+    title: "4. Traducción Solicitada por el Usuario",
     icon: <Target size={24} className="text-[#00C2FF]"/>,
-    content: "Estas cookies pueden ser establecidas por nuestros socios publicitarios. Se utilizan para construir un perfil de sus intereses y mostrarle anuncios relevantes en otros sitios. No almacenan información personal directamente, sino que se basan en la identificación única de su navegador y dispositivo."
+    content: "El selector de idioma es local hasta que elige traducir a un idioma distinto del español. En ese momento se carga Google Translate y se guarda la cookie googtrans para recordar su elección. Puede volver a español para eliminarla."
   },
   {
     id: "terceros",
-    title: "5. Cookies de Terceros",
+    title: "5. Servicios de Terceros",
     icon: <Globe size={24} className="text-[#00C2FF]"/>,
-    content: "Algunas características de nuestro sitio web utilizan servicios proporcionados por terceros (como Google Analytics o proveedores de vídeo). Estas entidades pueden establecer sus propias cookies, sobre las cuales WONLY no tiene control directo, rigiéndose por sus propias políticas de privacidad."
+    content: "Utilizamos Vercel para analítica y rendimiento únicamente con consentimiento, Google Translate cuando usted solicita una traducción y Formspree para entregar las consultas enviadas desde el formulario. Cada proveedor se rige además por su propia política de privacidad."
   },
   {
     id: "gestion",
@@ -88,11 +88,11 @@ const CookiesPage = () => {
       {/* 2. CINTA DE DATOS */}
       <div className="border-b border-white/10 bg-[#111] py-3 overflow-hidden relative">
         <div className="flex gap-8 md:gap-12 items-center justify-center opacity-70 font-mono text-xs md:text-sm whitespace-nowrap overflow-x-auto px-4">
-           <span>ZERO-PARTY DATA</span>
+           <span>ANALÍTICA OPCIONAL</span>
            <span className="w-1 h-1 bg-gray-500 rounded-full"/>
-           <span>GDPR COMPLIANT</span>
+           <span>SIN PUBLICIDAD</span>
            <span className="w-1 h-1 bg-gray-500 rounded-full hidden md:inline"/>
-           <span className="hidden md:inline">NO VENDEMOS TUS DATOS</span>
+           <span className="hidden md:inline">PREFERENCIAS REVOCABLES</span>
            <span className="w-1 h-1 bg-gray-500 rounded-full"/>
            <span className="text-[#00C2FF]">CONTROL DE USUARIO</span>
         </div>
@@ -128,6 +128,33 @@ const CookiesPage = () => {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-10 rounded-2xl border border-white/10 bg-[#111] p-6 md:p-8">
+          <div className="flex flex-col gap-2 border-b border-white/10 pb-5 md:flex-row md:items-end md:justify-between">
+            <h2 className="text-xl font-bold">Inventario actual</h2>
+            <p className="text-xs text-gray-500">Última actualización: 27 de julio de 2026</p>
+          </div>
+          <dl className="mt-5 grid gap-4 text-sm md:grid-cols-3">
+            <div>
+              <dt className="font-mono text-xs text-[#00C2FF]">wonly_cookie_consent</dt>
+              <dd className="mt-2 leading-relaxed text-gray-400">
+                Almacenamiento local propio. Guarda la elección de analítica durante seis meses.
+              </dd>
+            </div>
+            <div>
+              <dt className="font-mono text-xs text-[#00C2FF]">googtrans</dt>
+              <dd className="mt-2 leading-relaxed text-gray-400">
+                Cookie funcional de sesión. Solo se crea al solicitar una traducción con Google Translate.
+              </dd>
+            </div>
+            <div>
+              <dt className="font-mono text-xs text-[#00C2FF]">wonly_admin_session</dt>
+              <dd className="mt-2 leading-relaxed text-gray-400">
+                Cookie técnica, segura y HTTP-only del panel privado. Caduca a las 12 horas.
+              </dd>
+            </div>
+          </dl>
         </div>
       </section>
 

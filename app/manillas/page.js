@@ -7,14 +7,11 @@ import {
   DoorOpen, Ruler, Layers, ScanLine, Package, Hammer, Gem, Tag
 } from 'lucide-react';
 import Link from 'next/link';
-import { createClient } from '@supabase/supabase-js';
+import { supabase } from '../../lib/supabase';
+import useAccessibleDialog from '../../components/useAccessibleDialog';
 
 // --- CONFIGURACIÓN SUPABASE ---
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-const supabase = createClient(supabaseUrl, supabaseKey);
 
-const AUTOPLAY_INTERVAL = 3000;
 
 // --- PILARES (franja superior estilo cerraduras) ---
 const PILLARS = [
@@ -37,13 +34,14 @@ const SPEC_LABELS = {
 
 // --- TARJETA DE PRODUCTO (estilo cerraduras) ---
 const ProductCard = memo(({ product, onClick, index }) => (
-  <motion.div
+  <motion.button
+    type="button"
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.3, delay: index * 0.04 }}
     whileHover={{ y: -4 }}
     onClick={onClick}
-    className="group relative bg-[#0d0d0d] rounded-2xl overflow-hidden border border-white/8 cursor-pointer hover:border-[#00C2FF]/40 transition-all duration-300 flex flex-col"
+    className="group relative bg-[#0d0d0d] rounded-2xl overflow-hidden border border-white/8 cursor-pointer hover:border-[#00C2FF]/40 transition-all duration-300 flex flex-col text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#00C2FF]"
   >
     {/* Imagen — fondo blanco para encajar las fotos */}
     <div className="relative aspect-[4/3] bg-white overflow-hidden flex items-center justify-center p-6">
@@ -92,14 +90,14 @@ const ProductCard = memo(({ product, onClick, index }) => (
         Ver detalles <ChevronRight size={14} />
       </div>
     </div>
-  </motion.div>
+  </motion.button>
 ));
 ProductCard.displayName = 'ProductCard';
 
 // --- PANEL LATERAL (estilo sofás: galería izq + datos der) ---
 const ProductDrawer = memo(({ product, onClose }) => {
+  const dialogRef = useAccessibleDialog(Boolean(product), onClose);
   const [galleryIndex, setGalleryIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
   const [mobileImageIndex, setMobileImageIndex] = useState(0);
   const mobileScrollRef = useRef(null);
 
@@ -110,22 +108,9 @@ const ProductDrawer = memo(({ product, onClose }) => {
   const hasMultiple = allImages.length > 1;
 
   useEffect(() => {
-    document.body.style.overflow = 'hidden';
-    return () => { document.body.style.overflow = ''; };
-  }, []);
-
-  useEffect(() => {
     setGalleryIndex(0);
     if (mobileScrollRef.current) mobileScrollRef.current.scrollTo({ left: 0, behavior: 'instant' });
   }, [product?.id]);
-
-  useEffect(() => {
-    if (!hasMultiple || isPaused) return;
-    const timer = setInterval(() => {
-      setGalleryIndex(prev => (prev === allImages.length - 1 ? 0 : prev + 1));
-    }, AUTOPLAY_INTERVAL);
-    return () => clearInterval(timer);
-  }, [allImages, isPaused, hasMultiple]);
 
   if (!product) return null;
 
@@ -134,7 +119,7 @@ const ProductDrawer = memo(({ product, onClose }) => {
   const isKit = product.has_kit && galleryIndex === allImages.length - 1;
 
   return (
-    <div className="fixed inset-0 z-[100] flex justify-end h-[100dvh]">
+    <div ref={dialogRef} role="dialog" aria-modal="true" aria-label={`Detalles de ${product.name}`} tabIndex={-1} className="fixed inset-0 z-[100] flex justify-end h-[100dvh]">
       {/* BACKDROP — wallpaper = imagen activa del carrusel (solo escritorio) */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -147,8 +132,6 @@ const ProductDrawer = memo(({ product, onClose }) => {
         {/* Zona del wallpaper: ocupa todo menos el panel lateral */}
         <div
           className="hidden md:block absolute inset-0 right-[620px] overflow-hidden bg-white"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
         >
           <AnimatePresence mode="wait">
             <motion.img
@@ -219,7 +202,7 @@ const ProductDrawer = memo(({ product, onClose }) => {
       >
         {/* MÓVIL: carrusel deslizable (no hay wallpaper en móvil) */}
         <div className="md:hidden relative w-full bg-white h-[42vh] shrink-0">
-          <button onClick={onClose} className="absolute top-4 right-4 bg-white/90 p-2 rounded-full shadow-md border border-gray-100 z-20 text-gray-900">
+          <button type="button" aria-label="Cerrar detalles" onClick={onClose} className="absolute top-4 right-4 bg-white/90 p-2 rounded-full shadow-md border border-gray-100 z-20 text-gray-900">
             <X size={20} />
           </button>
           <div
@@ -262,7 +245,7 @@ const ProductDrawer = memo(({ product, onClose }) => {
                 <h2 className="text-2xl md:text-3xl font-bold text-white leading-tight">{product.name}</h2>
                 <p className="text-[10px] text-[#00C2FF] uppercase tracking-widest mt-1 font-bold">{product.category}</p>
               </div>
-              <button onClick={onClose} className="hidden md:block text-gray-400 hover:text-white hover:bg-white/10 p-2 rounded-full transition-colors"><X size={24} /></button>
+              <button type="button" aria-label="Cerrar detalles" onClick={onClose} className="hidden md:block text-gray-400 hover:text-white hover:bg-white/10 p-2 rounded-full transition-colors"><X size={24} /></button>
             </div>
           </div>
 

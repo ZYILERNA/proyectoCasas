@@ -88,7 +88,7 @@ const EmpresaPage = () => {
             transition={{ duration: 0.8 }}
           >
             <span className="inline-block py-1 px-3 rounded border border-[#00C2FF]/30 bg-[#00C2FF]/10 text-[#00C2FF] text-xs font-mono mb-4 tracking-widest backdrop-blur-md">
-              EST. 1996 // STOCK CODE: 605268
+              EST. 1996 // GRUPO WANGLI · SSE 605268
             </span>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
               Liderazgo a <br/>
@@ -157,7 +157,7 @@ const EmpresaPage = () => {
           >
              <img 
               src="/images/COMPANY/ipo-celebration.webp" 
-              alt="Salida a Bolsa 2021" 
+              alt="Salida a bolsa del grupo Wangli Security en 2021"
               className="absolute inset-0 w-full h-full object-cover object-top opacity-60 group-hover:scale-105 transition-transform duration-700"
              />
              <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent p-8 md:p-12 flex flex-col justify-end">
@@ -166,14 +166,14 @@ const EmpresaPage = () => {
                     24 FEB 2021
                   </span>
                   <span className="bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-bold px-3 py-1 rounded">
-                    SHA: 605268
+                    SSE: 605268
                   </span>
                 </div>
                 <h3 className="text-3xl md:text-5xl font-bold mb-4 text-white drop-shadow-md">
-                  Primera Cotizada del Sector
+                  Grupo industrial cotizado
                 </h3>
                 <p className="text-gray-300 font-medium text-base md:text-lg max-w-2xl leading-relaxed">
-                  WONLY hizo historia al listar en la Bolsa de Shanghai (Main Board). En 2024, nos convertimos en la primera empresa de la industria en cotizar activos de datos en la Bolsa de Datos de Shanghai.
+                  Wangli Security &amp; Surveillance Product Co., Ltd., sociedad industrial del grupo de origen de la marca, cotiza en el mercado principal de Shanghái con el código 605268.
                 </p>
              </div>
           </motion.div>
@@ -481,7 +481,7 @@ const EmpresaPage = () => {
               { year: "2003", title: "Desafío del Rey de la Cerradura", desc: "Lanzamiento del reto con premio de hasta 1 millón. Nunca abierto en más de 20 años." },
               { year: "2015", title: "Súper Seguridad", desc: "Tecnología de triple aislamiento acústico y térmico." },
               { year: "2019", title: "Puertas con IA", desc: "Lanzamiento global de la primera puerta de seguridad robótica impulsada por Inteligencia Artificial." },
-              { year: "2021", title: "Salida a Bolsa", desc: "Listado oficial en el Main Board de Shanghai (605268) y distinción como 'Fábrica del Futuro'." },
+              { year: "2021", title: "Salida a Bolsa", desc: "Wangli Security & Surveillance Product Co., Ltd. comienza a cotizar en el mercado principal de Shanghái con el código 605268." },
             ].map((item, index) => (
               <motion.div 
                 key={index}
@@ -558,8 +558,8 @@ const EmpresaPage = () => {
                 </div>
                 
                 <div>
-                  <p className="text-white font-bold text-xl md:text-2xl mb-1">Primera Empresa Cotizada</p>
-                  <p className="text-gray-400 text-sm font-mono">STOCK CODE: 605268 (Bolsa de Shanghai)</p>
+                  <p className="text-white font-bold text-xl md:text-2xl mb-1">Grupo industrial cotizado</p>
+                  <p className="text-gray-400 text-sm font-mono">Wangli Security · SSE 605268</p>
                 </div>
               </div>
 
@@ -627,7 +627,7 @@ const EmpresaPage = () => {
               Top 500 Marcas <br className="hidden md:block"/> de Asia
             </h2>
             <p className="text-xl md:text-3xl text-[#E5B869] font-bold mb-2 drop-shadow-md tracking-wider">
-              Valor de Marca: ¥376.59 Billones
+              Reconocimiento corporativo del grupo Wangli
             </p>
             <p className="text-lg md:text-xl text-white/90 mb-10 drop-shadow-md font-light">
               Líder indiscutible de la industria por <span className="font-bold text-white">14 años consecutivos</span>
@@ -723,7 +723,7 @@ const EmpresaPage = () => {
               </p>
               
               <p className="text-gray-400 text-sm leading-relaxed max-w-md">
-                Como primera empresa cotizada a nivel nacional en la industria, hemos establecido asociaciones estratégicas a largo plazo con gigantes del desarrollo inmobiliario (Greentown, Sunac, Vanke, etc.), consolidándonos como la opción número uno del mercado.
+                El grupo industrial mantiene colaboraciones de largo plazo con promotores como Greentown, Sunac y Vanke para desarrollar soluciones de seguridad destinadas a proyectos residenciales.
               </p>
             </motion.div>
 

@@ -1,18 +1,14 @@
-// components/LanguageSwitcher.js
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { Globe, Check, ChevronDown } from "lucide-react";
+import { Check, ChevronDown, Globe } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
-// Idioma original de la web (el que se escribe en el código)
 const PAGE_LANG = "es";
-
-// Idiomas disponibles (Google Translate soporta muchos más; estos son los más comunes)
 const LANGS = [
   { code: "es", label: "Español" },
   { code: "en", label: "English" },
-  { code: "zh-CN", label: "中文 (简体)" },
-  { code: "zh-TW", label: "中文 (繁體)" },
+  { code: "zh-CN", label: "中文（简体）" },
+  { code: "zh-TW", label: "中文（繁體）" },
   { code: "fr", label: "Français" },
   { code: "de", label: "Deutsch" },
   { code: "it", label: "Italiano" },
@@ -36,34 +32,70 @@ const LANGS = [
   { code: "he", label: "עברית" },
 ];
 
+let translatorPromise;
+
+function ensureGoogleTranslate() {
+  if (window.google?.translate?.TranslateElement) {
+    return Promise.resolve();
+  }
+  if (translatorPromise) return translatorPromise;
+
+  translatorPromise = new Promise((resolve, reject) => {
+    window.googleTranslateElementInit = () => {
+      try {
+        new window.google.translate.TranslateElement(
+          { pageLanguage: PAGE_LANG, autoDisplay: false },
+          "google_translate_element",
+        );
+        resolve();
+      } catch (error) {
+        reject(error);
+      }
+    };
+
+    const existingScript = document.querySelector(
+      'script[data-wonly-google-translate="true"]',
+    );
+    if (existingScript) return;
+
+    const script = document.createElement("script");
+    script.src =
+      "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    script.async = true;
+    script.dataset.wonlyGoogleTranslate = "true";
+    script.onerror = () => {
+      translatorPromise = undefined;
+      reject(new Error("No se pudo cargar Google Translate"));
+    };
+    document.body.appendChild(script);
+  });
+
+  return translatorPromise;
+}
+
 function readCookieLang() {
   if (typeof document === "undefined") return PAGE_LANG;
-  const m = document.cookie.match(/(?:^|;\s*)googtrans=\/[^/]+\/([^;]+)/);
-  return m ? decodeURIComponent(m[1]) : PAGE_LANG;
+  const match = document.cookie.match(/(?:^|;\s*)googtrans=\/[^/]+\/([^;]+)/);
+  return match ? decodeURIComponent(match[1]) : PAGE_LANG;
 }
 
 function setGoogTransCookie(lang) {
   const host = window.location.hostname;
   const value = `/${PAGE_LANG}/${lang}`;
-  document.cookie = `googtrans=${value};path=/`;
-  document.cookie = `googtrans=${value};path=/;domain=${host}`;
-  document.cookie = `googtrans=${value};path=/;domain=.${host}`;
+  document.cookie = `googtrans=${value};path=/;SameSite=Lax`;
+  document.cookie = `googtrans=${value};path=/;domain=${host};SameSite=Lax`;
+  document.cookie = `googtrans=${value};path=/;domain=.${host};SameSite=Lax`;
 }
 
 function clearGoogTransCookie() {
   const host = window.location.hostname;
-  const expired = "expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
-
-  // 1) Cookie sin dominio (host-only)
+  const expired =
+    "expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;SameSite=Lax";
   document.cookie = `googtrans=;${expired}`;
 
-  // 2) Borrar en cada nivel de dominio: host, .host y todos los dominios padre
-  //    (p. ej. www.example.com -> www.example.com, .www.example.com,
-  //     example.com, .example.com). Así cubrimos el scope donde Google
-  //     o setGoogTransCookie hayan dejado escrita la cookie.
   const parts = host.split(".");
-  for (let i = 0; i < parts.length; i++) {
-    const domain = parts.slice(i).join(".");
+  for (let index = 0; index < parts.length; index += 1) {
+    const domain = parts.slice(index).join(".");
     if (!domain) continue;
     document.cookie = `googtrans=;${expired};domain=${domain}`;
     document.cookie = `googtrans=;${expired};domain=.${domain}`;
@@ -72,46 +104,84 @@ function clearGoogTransCookie() {
 
 export default function LanguageSwitcher({ variant = "desktop" }) {
   const isMobile = variant === "mobile";
+  const rootRef = useRef(null);
+  const buttonRef = useRef(null);
+  const menuRef = useRef(null);
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState(PAGE_LANG);
-  const ref = useRef(null);
 
   useEffect(() => {
-    setCurrent(readCookieLang());
+    const cookieLang = readCookieLang();
+    setCurrent(cookieLang);
+    document.documentElement.lang = cookieLang;
 
-    // Guard "cinturón y tirantes": si pedimos volver a español pero la cookie
-    // googtrans sobrevivió a la recarga, la volvemos a borrar y recargamos
-    // UNA sola vez (con tope) para evitar bucles de recarga.
-    if (sessionStorage.getItem("wonly_force_es") === "1") {
-      const stillTranslated = readCookieLang() !== PAGE_LANG;
-      const tries = Number(sessionStorage.getItem("wonly_force_es_tries") || "0");
-      if (stillTranslated && tries < 1) {
-        sessionStorage.setItem("wonly_force_es_tries", String(tries + 1));
-        clearGoogTransCookie();
-        window.location.reload();
+    if (sessionStorage.getItem("wonly_force_es") !== "1") return;
+
+    const stillTranslated = cookieLang !== PAGE_LANG;
+    const tries = Number(
+      sessionStorage.getItem("wonly_force_es_tries") || "0",
+    );
+    if (stillTranslated && tries < 1) {
+      sessionStorage.setItem("wonly_force_es_tries", String(tries + 1));
+      clearGoogTransCookie();
+      window.location.reload();
+      return;
+    }
+
+    sessionStorage.removeItem("wonly_force_es");
+    sessionStorage.removeItem("wonly_force_es_tries");
+    if (!stillTranslated) setCurrent(PAGE_LANG);
+  }, []);
+
+  useEffect(() => {
+    if (!open) return;
+
+    const handlePointerDown = (event) => {
+      if (!rootRef.current?.contains(event.target)) setOpen(false);
+    };
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+        buttonRef.current?.focus();
         return;
       }
-      // Limpio: quitamos las marcas
-      sessionStorage.removeItem("wonly_force_es");
-      sessionStorage.removeItem("wonly_force_es_tries");
-      if (!stillTranslated) setCurrent(PAGE_LANG);
-    }
-  }, []);
 
-  // Cerrar al hacer clic fuera
-  useEffect(() => {
-    const onDoc = (e) => {
-      if (ref.current && !ref.current.contains(e.target)) setOpen(false);
+      if (!["ArrowDown", "ArrowUp", "Home", "End"].includes(event.key)) {
+        return;
+      }
+
+      const items = [...(menuRef.current?.querySelectorAll('[role="menuitemradio"]') || [])];
+      if (!items.length) return;
+      event.preventDefault();
+
+      const focusedIndex = items.indexOf(document.activeElement);
+      if (event.key === "Home") items[0].focus();
+      else if (event.key === "End") items[items.length - 1].focus();
+      else if (event.key === "ArrowDown") {
+        items[(focusedIndex + 1 + items.length) % items.length].focus();
+      } else {
+        items[(focusedIndex - 1 + items.length) % items.length].focus();
+      }
     };
-    document.addEventListener("mousedown", onDoc);
-    return () => document.removeEventListener("mousedown", onDoc);
-  }, []);
 
-  const applyLanguage = (lang) => {
+    document.addEventListener("pointerdown", handlePointerDown);
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [open]);
+
+  const toggleMenu = () => {
+    setOpen((value) => !value);
+  };
+
+  const applyLanguage = async (lang) => {
     setCurrent(lang);
     setOpen(false);
+    document.documentElement.lang = lang;
 
-    // Volver al idioma original: limpiar cookie y recargar
     if (lang === PAGE_LANG) {
       sessionStorage.setItem("wonly_force_es", "1");
       sessionStorage.removeItem("wonly_force_es_tries");
@@ -122,73 +192,87 @@ export default function LanguageSwitcher({ variant = "desktop" }) {
 
     setGoogTransCookie(lang);
 
-    // Disparar el traductor de Google si su <select> ya existe; si no, reintentar
+    try {
+      await ensureGoogleTranslate();
+    } catch {
+      window.location.reload();
+      return;
+    }
+
     const trigger = (attempt = 0) => {
       const combo = document.querySelector(".goog-te-combo");
       if (combo) {
         combo.value = lang;
         combo.dispatchEvent(new Event("change"));
       } else if (attempt < 20) {
-        setTimeout(() => trigger(attempt + 1), 250);
+        window.setTimeout(() => trigger(attempt + 1), 250);
       } else {
-        // El widget aún no cargó: la cookie ya está puesta, recargamos
         window.location.reload();
       }
     };
     trigger();
   };
 
-  const currentLang = LANGS.find((l) => l.code === current);
+  const currentLang = LANGS.find((lang) => lang.code === current);
   const currentShort = (current.split("-")[0] || PAGE_LANG).toUpperCase();
 
   return (
     <div
-      ref={ref}
+      ref={rootRef}
       translate="no"
       className={`notranslate relative ${isMobile ? "w-full" : ""}`}
     >
       <button
-        onClick={() => setOpen((o) => !o)}
+        ref={buttonRef}
+        type="button"
+        onClick={toggleMenu}
         aria-label="Cambiar idioma"
+        aria-haspopup="menu"
         aria-expanded={open}
         className={
           isMobile
-            ? "flex items-center justify-between w-full bg-white/5 border border-white/10 rounded-full px-5 py-3.5 text-sm font-bold uppercase tracking-widest text-gray-200 hover:text-[#00C2FF] hover:border-[#00C2FF]/40 transition-colors"
-            : "flex items-center gap-1.5 text-gray-300 hover:text-[#00C2FF] transition-colors duration-300 text-xs font-bold uppercase tracking-widest"
+            ? "flex min-h-11 w-full items-center justify-between rounded-full px-3 text-sm font-bold uppercase tracking-widest text-zinc-200 transition hover:text-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300"
+            : "flex min-h-11 items-center gap-1.5 rounded-full px-2 text-xs font-bold uppercase tracking-widest text-zinc-300 transition hover:text-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300"
         }
       >
         <span className="flex items-center gap-2">
-          <Globe size={isMobile ? 18 : 16} aria-hidden="true" />
+          {!isMobile && <Globe size={16} aria-hidden="true" />}
           <span>{isMobile ? currentLang?.label || "Idioma" : currentShort}</span>
         </span>
         <ChevronDown
           size={14}
-          className={`transition-transform duration-300 ${open ? "rotate-180" : ""}`}
           aria-hidden="true"
+          className={`transition-transform ${open ? "rotate-180" : ""}`}
         />
       </button>
 
       {open && (
         <div
+          ref={menuRef}
+          role="menu"
+          aria-label="Idiomas disponibles"
           className={
             isMobile
-              ? "mt-3 w-full bg-black/40 border border-white/10 rounded-2xl py-2 max-h-64 overflow-y-auto"
-              : "absolute right-0 top-full mt-3 w-52 bg-[#0a0a0a]/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl py-2 max-h-80 overflow-y-auto z-[60]"
+              ? "mt-3 max-h-64 w-full overflow-y-auto rounded-2xl border border-white/10 bg-black/60 py-2"
+              : "absolute right-0 top-full z-[70] mt-2 max-h-80 w-56 overflow-y-auto rounded-2xl border border-white/10 bg-[#0a0a0a]/95 py-2 shadow-2xl backdrop-blur-xl"
           }
         >
-          {LANGS.map((l) => {
-            const active = l.code === current;
+          {LANGS.map((lang) => {
+            const active = lang.code === current;
             return (
               <button
-                key={l.code}
-                onClick={() => applyLanguage(l.code)}
-                className={`flex items-center justify-between w-full text-left px-4 py-2.5 text-sm transition-colors ${
+                key={lang.code}
+                type="button"
+                role="menuitemradio"
+                aria-checked={active}
+                onClick={() => applyLanguage(lang.code)}
+                className={`flex w-full items-center justify-between px-4 py-2.5 text-left text-sm transition focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-cyan-300 ${
                   active
-                    ? "text-[#00C2FF] bg-white/5"
-                    : "text-gray-300 hover:text-white hover:bg-white/5"
+                    ? "bg-white/5 text-cyan-300"
+                    : "text-zinc-300 hover:bg-white/5 hover:text-white"
                 }`}
               >
-                <span>{l.label}</span>
+                <span>{lang.label}</span>
                 {active && <Check size={14} aria-hidden="true" />}
               </button>
             );

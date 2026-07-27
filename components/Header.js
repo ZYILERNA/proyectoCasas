@@ -1,425 +1,533 @@
-// components/Header.js
 "use client";
 
-import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import dynamic from "next/dynamic";
+import { usePathname } from "next/navigation";
 import {
-  Search,
-  Menu,
-  ChevronDown,
-  X,
-  ShieldCheck,
-  Home as HomeIcon,
   Activity,
-  Globe
+  ChevronDown,
+  Globe,
+  Home as HomeIcon,
+  Menu,
+  Search,
+  ShieldCheck,
+  X,
 } from "lucide-react";
-import StockTicker from "./StockTicker";
+import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import LanguageSwitcher from "./LanguageSwitcher";
-import SearchOverlay from "./SearchOverlay";
+import StockTicker from "./StockTicker";
+
+const SearchOverlay = dynamic(() => import("./SearchOverlay"), {
+  ssr: false,
+});
+
+const primaryLinks = [
+  { href: "/empresa", label: "Empresa" },
+  { href: "/proyectos", label: "Proyectos" },
+  { href: "/blog", label: "Blog" },
+];
+
+const securityLinks = [
+  { href: "/puertas", label: "Puertas de seguridad" },
+  {
+    href: "/puertas-interior",
+    label: "Puertas de interior",
+  },
+  { href: "/ventanas", label: "Ventanas panorámicas" },
+  { href: "/cerraduras", label: "Cerraduras inteligentes" },
+  { href: "/manillas", label: "Manillas de diseño" },
+];
+
+const interiorLinks = [
+  { href: "/sofas", label: "Sofás" },
+  { href: "/mesas", label: "Mesas" },
+  { href: "/sillas", label: "Sillas y sillones" },
+  { href: "/dormitorios", label: "Dormitorios" },
+  { href: "/gabinetes", label: "Gabinetes" },
+];
 
 export default function Header() {
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const pathname = usePathname();
   const isHome = pathname === "/";
+  const headerRef = useRef(null);
+  const productsRef = useRef(null);
+  const mobileMenuRef = useRef(null);
+  const previousFocusRef = useRef(null);
+  const lastScrollYRef = useRef(0);
+  const tickingRef = useRef(false);
 
-  // Cargar el traductor de Google una sola vez (selector de idioma)
+  const [isVisible, setIsVisible] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
   useEffect(() => {
-    if (window.__gtInjected) return;
-    window.__gtInjected = true;
-    window.googleTranslateElementInit = () => {
-      new window.google.translate.TranslateElement(
-        { pageLanguage: "es", autoDisplay: false },
-        "google_translate_element"
-      );
-    };
-    const s = document.createElement("script");
-    s.src =
-      "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-    s.async = true;
-    document.body.appendChild(s);
+    setIsMounted(true);
   }, []);
 
-  // Smart Hide Navbar
   useEffect(() => {
-    const controlNavbar = () => {
-      const currentScrollY = window.scrollY;
+    const overlayVisible = isMobileMenuOpen || isSearchOpen;
 
-      if (isMobileMenuOpen) {
+    document.body.toggleAttribute(
+      "data-wonly-overlay-open",
+      overlayVisible,
+    );
+    window.dispatchEvent(
+      new CustomEvent("wonly:overlay-visibility", {
+        detail: { visible: overlayVisible },
+      }),
+    );
+
+    return () => {
+      document.body.removeAttribute("data-wonly-overlay-open");
+    };
+  }, [isMobileMenuOpen, isSearchOpen]);
+
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+    setIsProductsOpen(false);
+    setIsSearchOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    const updateHeader = () => {
+      tickingRef.current = false;
+      const currentY = Math.max(window.scrollY, 0);
+      const delta = currentY - lastScrollYRef.current;
+      const headerHasFocus = headerRef.current?.contains(
+        document.activeElement,
+      );
+      const shouldStayVisible =
+        reduceMotion ||
+        isMobileMenuOpen ||
+        isProductsOpen ||
+        isSearchOpen ||
+        headerHasFocus;
+
+      setIsScrolled(currentY > 16);
+
+      if (shouldStayVisible || currentY < 120 || delta < -8) {
         setIsVisible(true);
-        return;
-      }
-
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      } else if (delta > 10 && currentY > 180) {
         setIsVisible(false);
-      } else {
-        setIsVisible(true);
       }
 
-      setLastScrollY(currentScrollY);
+      lastScrollYRef.current = currentY;
     };
 
-    window.addEventListener("scroll", controlNavbar);
-    return () => window.removeEventListener("scroll", controlNavbar);
-  }, [lastScrollY, isMobileMenuOpen]);
+    const handleScroll = () => {
+      if (tickingRef.current) return;
+      tickingRef.current = true;
+      window.requestAnimationFrame(updateHeader);
+    };
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+    lastScrollYRef.current = window.scrollY;
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isMobileMenuOpen, isProductsOpen, isSearchOpen]);
 
-    if (!isMobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-  };
+  useEffect(() => {
+    if (!isProductsOpen) return;
 
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-    document.body.style.overflow = "unset";
-  };
+    const closeOnOutsideClick = (event) => {
+      if (!productsRef.current?.contains(event.target)) {
+        setIsProductsOpen(false);
+      }
+    };
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") {
+        setIsProductsOpen(false);
+        productsRef.current?.querySelector("button")?.focus();
+      }
+    };
+
+    document.addEventListener("pointerdown", closeOnOutsideClick);
+    window.addEventListener("keydown", closeOnEscape);
+    return () => {
+      document.removeEventListener("pointerdown", closeOnOutsideClick);
+      window.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [isProductsOpen]);
+
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+
+    previousFocusRef.current = document.activeElement;
+    const previousOverflow = document.body.style.overflow;
+    const main = document.querySelector("[data-site-content]");
+    const footer = document.querySelector("footer");
+
+    document.body.style.overflow = "hidden";
+    main?.setAttribute("inert", "");
+    footer?.setAttribute("inert", "");
+
+    const focusableSelector =
+      'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
+    const getFocusable = () =>
+      [
+        headerRef.current?.querySelector(
+          'button[aria-controls="mobile-navigation"]',
+        ),
+        ...(mobileMenuRef.current?.querySelectorAll(focusableSelector) || []),
+      ]
+        .filter(Boolean)
+        .filter((element) => !element.hasAttribute("hidden"))
+        .filter((element) => element.getClientRects().length > 0);
+
+    window.requestAnimationFrame(() => getFocusable()[0]?.focus());
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setIsMobileMenuOpen(false);
+        return;
+      }
+      if (event.key !== "Tab") return;
+
+      const focusable = getFocusable();
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      main?.removeAttribute("inert");
+      footer?.removeAttribute("inert");
+      window.removeEventListener("keydown", handleKeyDown);
+      previousFocusRef.current?.focus?.();
+    };
+  }, [isMobileMenuOpen]);
+
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
     <>
-    <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out border-b border-white/5 ${
-        isVisible ? "translate-y-0" : "-translate-y-full"
-      } ${
-        lastScrollY > 20
-          ? "bg-black/90 backdrop-blur-md"
-          : "bg-black"
-      }`}
-    >
-      {/* FRANJA SUPERIOR: eslogan de marca (solo en la home; se oculta con el
-          menú móvil abierto porque este es fixed top-0 y se solaparían) */}
-      {isHome && !isMobileMenuOpen && (
-        <div className="w-full bg-gradient-to-r from-[#00C2FF] to-[#0091c2] text-black text-center px-4 py-2">
-          <p className="text-xs md:text-sm font-semibold uppercase tracking-[0.15em] leading-tight">
-            WONLY – Soluciones Integrales para Sistemas de Puertas Inteligentes
-          </p>
-        </div>
-      )}
+      <header
+        ref={headerRef}
+        className={`fixed inset-x-0 top-0 z-50 border-b transition duration-300 ${
+          isVisible ? "translate-y-0" : "-translate-y-full"
+        } ${
+          isScrolled || isMobileMenuOpen
+            ? "border-white/10 bg-black/90 shadow-[0_10px_35px_rgba(0,0,0,.25)] backdrop-blur-xl"
+            : "border-white/5 bg-black"
+        }`}
+      >
+        {isHome && !isMobileMenuOpen && (
+          <div className="flex h-8 items-center justify-center overflow-hidden bg-cyan-300 px-4 text-black">
+            <p className="truncate text-center text-[10px] font-bold uppercase tracking-[0.15em] sm:text-xs">
+              Soluciones integrales para sistemas de puertas inteligentes
+            </p>
+          </div>
+        )}
 
-      <div className={`container mx-auto px-6 h-20 flex items-center justify-between relative z-50 ${isMobileMenuOpen ? "bg-black" : ""}`}>
-        {/* LOGO */}
-        <div className="cursor-pointer z-50">
+        <div className="container relative z-50 mx-auto flex h-20 items-center justify-between px-6">
           <Link
             href="/"
             onClick={closeMobileMenu}
-            className="block transition-transform duration-300 hover:scale-105"
+            aria-label="WONLY España, ir a inicio"
+            className="rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
           >
             <Image
               src="/images/logo-wonly.webp"
               alt="WONLY"
               width={160}
               height={40}
-              className="h-8 md:h-10 w-auto object-contain"
               priority
+              className="h-8 w-auto object-contain md:h-9"
             />
           </Link>
-        </div>
 
-        {/* DESKTOP MENU */}
-        <nav className="hidden md:flex h-full items-center space-x-10">
-          <div className="group h-full flex items-center relative cursor-pointer">
-            <span className="text-sm font-semibold uppercase tracking-widest flex items-center gap-1.5 text-gray-200 hover:text-[#00C2FF] transition-colors duration-300">
-              Productos
-              <ChevronDown
-                size={14}
-                className="group-hover:rotate-180 transition-transform duration-300"
-              />
-            </span>
+          <nav
+            aria-label="Navegación principal"
+            className="hidden h-full items-center gap-7 lg:flex xl:gap-9"
+          >
+            <div
+              ref={productsRef}
+              className="relative flex h-full items-center"
+              onMouseEnter={() => setIsProductsOpen(true)}
+              onMouseLeave={() => setIsProductsOpen(false)}
+              onBlur={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget)) {
+                  setIsProductsOpen(false);
+                }
+              }}
+            >
+              <button
+                type="button"
+                aria-expanded={isProductsOpen}
+                aria-controls="products-menu"
+                onClick={() => setIsProductsOpen((open) => !open)}
+                className="flex h-full items-center gap-1.5 text-sm font-semibold uppercase tracking-[0.12em] text-zinc-200 transition hover:text-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+              >
+                Productos
+                <ChevronDown
+                  size={14}
+                  aria-hidden="true"
+                  className={`transition-transform ${
+                    isProductsOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
 
-            {/* MEGA MENU */}
-            <div className="absolute top-[80px] -left-32 w-[600px] bg-[#0a0a0a]/95 backdrop-blur-xl text-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 shadow-2xl border border-white/10 rounded-b-2xl overflow-hidden flex">
-              {/* Seguridad */}
-              <div className="flex-1 p-8 bg-[#111]/50 border-r border-white/5">
-                <div className="flex items-center gap-2 mb-6 text-[#00C2FF]">
-                  <ShieldCheck size={18} />
-                  <h3 className="text-xs font-bold uppercase tracking-widest">
-                    Seguridad & Exterior
-                  </h3>
-                </div>
-
-                <ul className="space-y-4">
-                  <MenuItem href="/puertas" text="Puertas de Seguridad" />
-                  <MenuItem href="/puertas?category=PUERTA ACÚSTICA DE MADERA" text="Puertas de Interior" />
-                  <MenuItem href="/ventanas" text="Ventanas Panorámicas" />
-                  <MenuItem
-                    href="/cerraduras"
-                    text="Cerraduras Inteligentes"
+              <div
+                id="products-menu"
+                className={`absolute left-1/2 top-full w-[680px] -translate-x-1/2 overflow-hidden rounded-b-3xl border border-white/10 bg-[#080808]/95 text-white shadow-2xl backdrop-blur-xl transition duration-200 ${
+                  isProductsOpen
+                    ? "visible translate-y-0 opacity-100"
+                    : "invisible -translate-y-2 opacity-0"
+                }`}
+              >
+                <div className="grid grid-cols-2">
+                  <ProductMenuColumn
+                    icon={ShieldCheck}
+                    title="Seguridad y exterior"
+                    links={securityLinks}
+                    bordered
+                    onNavigate={() => setIsProductsOpen(false)}
                   />
-                  <MenuItem href="/manillas" text="Manillas de Diseño" />
-                </ul>
-              </div>
-
-              {/* Interior */}
-              <div className="flex-1 p-8">
-                <div className="flex items-center gap-2 mb-6 text-gray-400">
-                  <HomeIcon size={18} />
-                  <h3 className="text-xs font-bold uppercase tracking-widest">
-                    Interior & Mobiliario
-                  </h3>
+                  <ProductMenuColumn
+                    icon={HomeIcon}
+                    title="Interior y mobiliario"
+                    links={interiorLinks}
+                    onNavigate={() => setIsProductsOpen(false)}
+                  />
                 </div>
-
-                <ul className="space-y-4">
-                  <MenuItem href="/sofas" text="Colección Sofás" />
-                  <MenuItem href="/mesas" text="Mesas de Diseño" />
-                  <MenuItem href="/sillas" text="Sillas y Sillones" />
-                  <MenuItem href="/dormitorios" text="Dormitorios" />
-                  <MenuItem href="/gabinetes" text="Sistemas de Gabinetes" />
-                </ul>
+                <Link
+                  href="/contacto"
+                  onClick={() => setIsProductsOpen(false)}
+                  className="flex items-center justify-between border-t border-white/10 bg-white/[0.035] px-7 py-4 text-sm text-zinc-300 transition hover:bg-white/[0.07] hover:text-white"
+                >
+                  ¿Necesitas ayuda para elegir?
+                  <span className="font-semibold text-cyan-300">
+                    Solicitar asesoramiento
+                  </span>
+                </Link>
               </div>
             </div>
+
+            {primaryLinks.map((link) => (
+              <HeaderLink
+                key={link.href}
+                {...link}
+                active={pathname.startsWith(link.href)}
+              />
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-2 sm:gap-3">
+            <div className="hidden 2xl:block">
+              <StockTicker />
+            </div>
+
+            <button
+              type="button"
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                setIsSearchOpen(true);
+              }}
+              aria-label="Buscar en WONLY"
+              className="grid h-11 w-11 place-items-center rounded-full text-zinc-300 transition hover:bg-white/5 hover:text-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300"
+            >
+              <Search size={19} aria-hidden="true" />
+            </button>
+
+            <div className="hidden lg:block">
+              <LanguageSwitcher variant="desktop" />
+            </div>
+
+            <Link
+              href="/contacto"
+              className="hidden min-h-11 items-center justify-center rounded-full bg-white px-5 text-xs font-bold uppercase tracking-[0.12em] text-black transition hover:bg-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300 xl:flex"
+            >
+              Contacto
+            </Link>
+
+            <button
+              type="button"
+              onClick={() => setIsMobileMenuOpen((open) => !open)}
+              aria-label={isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-navigation"
+              className="grid h-11 w-11 place-items-center rounded-full text-zinc-200 transition hover:bg-white/5 hover:text-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300 lg:hidden"
+            >
+              {isMobileMenuOpen ? (
+                <X size={24} aria-hidden="true" />
+              ) : (
+                <Menu size={24} aria-hidden="true" />
+              )}
+            </button>
           </div>
-
-          <Link
-            href="/empresa"
-            className="relative text-sm font-semibold text-gray-200 uppercase tracking-widest hover:text-[#00C2FF] transition-colors duration-300 group"
-          >
-            Empresa
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00C2FF] transition-all duration-300 group-hover:w-full"></span>
-          </Link>
-
-          <Link
-            href="/proyectos"
-            className="relative text-sm font-semibold text-gray-200 uppercase tracking-widest hover:text-[#00C2FF] transition-colors duration-300 group"
-          >
-            Proyectos
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00C2FF] transition-all duration-300 group-hover:w-full"></span>
-          </Link>
-
-          <Link
-            href="/blog"
-            className="relative text-sm font-semibold text-gray-200 uppercase tracking-widest hover:text-[#00C2FF] transition-colors duration-300 group"
-          >
-            Blog
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00C2FF] transition-all duration-300 group-hover:w-full"></span>
-          </Link>
-        </nav>
-
-        {/* ICONS & DESKTOP TICKER */}
-        <div className="flex items-center gap-4 md:gap-6 z-50">
-          
-          {/* Ticker Desktop (Oculto en móvil) */}
-          <div className="hidden lg:block">
-            <StockTicker />
-          </div>
-
-          <button onClick={() => setIsSearchOpen(true)} className="group p-2" aria-label="Buscar">
-            <Search className="w-5 h-5 text-gray-300 group-hover:text-[#00C2FF] group-hover:scale-110 transition-all duration-300" aria-hidden="true" />
-          </button>
-
-          {/* Selector de idioma (Google Translate) */}
-          <div className="hidden md:block">
-            <LanguageSwitcher variant="desktop" />
-          </div>
-
-          <Link
-            href="/contacto"
-            className="hidden md:flex items-center justify-center bg-white text-black px-6 py-2.5 text-xs font-bold uppercase tracking-widest hover:bg-[#00C2FF] hover:text-white transition-all duration-300 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-[0_0_20px_rgba(0,194,255,0.3)]"
-          >
-            Contacto
-          </Link>
-
-          {/* Elemento oculto requerido por Google Translate */}
-          <div id="google_translate_element" className="hidden" aria-hidden="true" />
-
-          <button
-            className="md:hidden text-gray-300 hover:text-[#00C2FF] transition-colors focus:outline-none p-2"
-            onClick={toggleMobileMenu}
-            aria-label={isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
-            aria-expanded={isMobileMenuOpen}
-          >
-            {isMobileMenuOpen ? <X size={28} aria-hidden="true" /> : <Menu size={28} aria-hidden="true" />}
-          </button>
         </div>
-      </div>
 
-      {/* MOBILE MENU */}
-      <div
-        className={`md:hidden fixed top-0 left-0 w-full h-screen z-40 bg-black/95 backdrop-blur-xl border-t border-white/10 flex flex-col pt-24 overflow-y-auto transition-all duration-500 ease-in-out ${
-          isMobileMenuOpen
-            ? "opacity-100 visible translate-y-0"
-            : "opacity-0 invisible -translate-y-8"
-        }`}
-      >
-        <div className="flex flex-col px-8 pb-20 gap-10">
-          
-          {/* TICKER EN MÓVIL (Nuevo bloque destacado) */}
-          <div className="bg-white/5 border border-white/10 p-5 rounded-2xl flex flex-col gap-3">
-            <div className="flex items-center justify-between">
-              <span className="text-[10px] text-gray-400 font-bold uppercase tracking-[0.2em] flex items-center gap-2">
-                <Activity size={12} className="text-[#00C2FF]" /> Mercado Shanghai
-              </span>
-              <span className="text-[10px] text-[#00C2FF] font-mono font-bold animate-pulse">LIVE</span>
+        <div id="google_translate_element" className="hidden" aria-hidden="true" />
+
+        {isMounted &&
+          createPortal(
+            <div
+              ref={mobileMenuRef}
+              id="mobile-navigation"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Menú de navegación"
+              className={`fixed inset-x-0 bottom-0 top-20 z-[45] overflow-y-auto bg-black/95 px-6 pb-10 pt-6 backdrop-blur-xl transition duration-300 lg:hidden ${
+                isMobileMenuOpen
+                  ? "visible translate-y-0 opacity-100"
+                  : "invisible -translate-y-3 opacity-0"
+              }`}
+            >
+              <div className="mx-auto flex max-w-xl flex-col">
+            <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-cyan-300">
+              Seguridad y exterior
+            </p>
+            <div className="flex flex-col border-y border-white/10">
+              {securityLinks.map((link) => (
+                <MobileLink
+                  key={link.href}
+                  {...link}
+                  close={closeMobileMenu}
+                  active={pathname === link.href.split("?")[0]}
+                />
+              ))}
             </div>
-            {/* Ocultamos el 'hidden md:flex' interno del StockTicker forzando display flex aquí */}
-            <div className="flex items-center">
-               <StockTicker />
+
+            <p className="mb-5 mt-9 text-xs font-bold uppercase tracking-[0.2em] text-cyan-300">
+              Interior
+            </p>
+            <div className="grid grid-cols-2 gap-2">
+              {interiorLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={closeMobileMenu}
+                  className="rounded-2xl border border-white/10 bg-white/[0.035] px-4 py-4 text-sm font-medium text-zinc-300 transition hover:border-cyan-300/50 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
-          </div>
 
-          {/* Links Principales */}
-          <div className="flex flex-col gap-6">
-            <Link
-              href="/puertas"
-              onClick={closeMobileMenu}
-              className="text-3xl font-bold uppercase tracking-widest text-white hover:text-[#00C2FF]"
-            >
-              Puertas
-            </Link>
+            <div className="mt-9 flex flex-col border-y border-white/10">
+              {primaryLinks.map((link) => (
+                <MobileLink
+                  key={link.href}
+                  {...link}
+                  close={closeMobileMenu}
+                  active={pathname.startsWith(link.href)}
+                />
+              ))}
+            </div>
 
-            <Link
-              href="/puertas?category=PUERTA ACÚSTICA DE MADERA"
-              onClick={closeMobileMenu}
-              className="text-3xl font-bold uppercase tracking-widest text-white hover:text-[#00C2FF]"
-            >
-              Puertas Interior
-            </Link>
+            <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.035] p-5">
+              <div className="mb-4 flex items-center justify-between gap-3">
+                <span className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.18em] text-zinc-500">
+                  <Activity size={13} className="text-cyan-300" aria-hidden="true" />
+                  Grupo Wangli · SSE
+                </span>
+                <span className="font-mono text-xs font-semibold text-white">
+                  605268
+                </span>
+              </div>
+              <div className="flex items-center gap-2 border-t border-white/10 pt-4">
+                <Globe size={16} className="text-cyan-300" aria-hidden="true" />
+                <LanguageSwitcher variant="mobile" />
+              </div>
+            </div>
 
-            <Link
-              href="/ventanas"
-              onClick={closeMobileMenu}
-              className="text-3xl font-bold uppercase tracking-widest text-white hover:text-[#00C2FF]"
-            >
-              Ventanas
-            </Link>
-
-            <Link
-              href="/cerraduras"
-              onClick={closeMobileMenu}
-              className="text-3xl font-bold uppercase tracking-widest text-white hover:text-[#00C2FF]"
-            >
-              Cerraduras
-            </Link>
-
-            <Link
-              href="/manillas"
-              onClick={closeMobileMenu}
-              className="text-3xl font-bold uppercase tracking-widest text-white hover:text-[#00C2FF]"
-            >
-              Manillas
-            </Link>
-
-            <Link
-              href="/empresa"
-              onClick={closeMobileMenu}
-              className="text-3xl font-bold uppercase tracking-widest text-white hover:text-[#00C2FF]"
-            >
-              Empresa
-            </Link>
-
-            <Link
-              href="/proyectos"
-              onClick={closeMobileMenu}
-              className="text-3xl font-bold uppercase tracking-widest text-white hover:text-[#00C2FF]"
-            >
-              Proyectos
-            </Link>
-
-            <Link
-              href="/blog"
-              onClick={closeMobileMenu}
-              className="text-3xl font-bold uppercase tracking-widest text-white hover:text-[#00C2FF]"
-            >
-              Blog
-            </Link>
-          </div>
-
-          <hr className="border-white/10" />
-
-          {/* Submenú Interior */}
-          <div>
-            <h3 className="text-xs font-bold text-[#00C2FF] uppercase tracking-widest mb-6 flex items-center gap-2">
-              <HomeIcon size={14} /> Interior & Mobiliario
-            </h3>
-
-            <ul className="flex flex-col gap-4 pl-4 border-l border-white/10">
-              <MobileMenuItem
-                href="/sofas"
-                text="Sofás"
-                close={closeMobileMenu}
-              />
-              <MobileMenuItem
-                href="/mesas"
-                text="Mesas"
-                close={closeMobileMenu}
-              />
-              <MobileMenuItem
-                href="/sillas"
-                text="Sillas y Sillones"
-                close={closeMobileMenu}
-              />
-              <MobileMenuItem
-                href="/dormitorios"
-                text="Dormitorios"
-                close={closeMobileMenu}
-              />
-              <MobileMenuItem
-                href="/gabinetes"
-                text="Gabinetes"
-                close={closeMobileMenu}
-              />
-            </ul>
-          </div>
-
-          {/* Selector de idioma (móvil) */}
-          <div>
-            <h3 className="text-xs font-bold text-[#00C2FF] uppercase tracking-widest mb-4 flex items-center gap-2">
-              <Globe size={14} /> Idioma
-            </h3>
-            <LanguageSwitcher variant="mobile" />
-          </div>
-
-          {/* Botón de Contacto */}
-          <div className="mt-4 pb-10">
             <Link
               href="/contacto"
               onClick={closeMobileMenu}
-              className="flex items-center justify-center w-full bg-[#00C2FF] text-black py-4 text-sm font-bold uppercase tracking-widest hover:bg-white transition-colors rounded-full shadow-[0_0_20px_rgba(0,194,255,0.2)]"
+              className="mt-6 flex min-h-14 items-center justify-center rounded-full bg-cyan-300 px-7 text-sm font-bold uppercase tracking-[0.14em] text-black transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
             >
-              Contactar Ahora
+              Solicitar asesoramiento
             </Link>
-          </div>
-        </div>
-      </div>
-    </header>
+              </div>
+            </div>,
+            document.body,
+          )}
+      </header>
 
-    {/* BUSCADOR (overlay) — fuera del <header> porque este usa transform */}
-    <SearchOverlay open={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+      {isSearchOpen && (
+        <SearchOverlay open onClose={() => setIsSearchOpen(false)} />
+      )}
     </>
   );
 }
 
-// SUBCOMPONENTES
-function MenuItem({ text, href }) {
+function HeaderLink({ href, label, active }) {
   return (
-    <li>
-      <Link
-        href={href}
-        className="group flex items-center text-sm font-medium text-gray-400 hover:text-white transition-colors"
-      >
-        <span className="w-0 h-px bg-[#00C2FF] mr-0 transition-all duration-300 group-hover:w-3 group-hover:mr-2"></span>
-        {text}
-      </Link>
-    </li>
+    <Link
+      href={href}
+      aria-current={active ? "page" : undefined}
+      className={`relative py-2 text-sm font-semibold uppercase tracking-[0.12em] transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300 ${
+        active ? "text-cyan-300" : "text-zinc-200 hover:text-cyan-300"
+      }`}
+    >
+      {label}
+    </Link>
   );
 }
 
-function MobileMenuItem({ text, href, close }) {
+function ProductMenuColumn({
+  icon: Icon,
+  title,
+  links,
+  bordered = false,
+  onNavigate,
+}) {
   return (
-    <li>
-      <Link
-        href={href}
-        onClick={close}
-        className="block text-xl font-medium text-gray-400 hover:text-white transition-colors"
-      >
-        {text}
-      </Link>
-    </li>
+    <div className={`p-7 ${bordered ? "border-r border-white/10 bg-white/[0.02]" : ""}`}>
+      <div className="mb-6 flex items-center gap-2 text-cyan-300">
+        <Icon size={18} aria-hidden="true" />
+        <p className="text-xs font-bold uppercase tracking-[0.18em]">{title}</p>
+      </div>
+      <ul className="space-y-1">
+        {links.map((link) => (
+          <li key={link.href}>
+            <Link
+              href={link.href}
+              onClick={onNavigate}
+              className="block rounded-lg px-3 py-2.5 text-sm text-zinc-400 transition hover:bg-white/5 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300"
+            >
+              {link.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function MobileLink({ href, label, close, active }) {
+  return (
+    <Link
+      href={href}
+      onClick={close}
+      aria-current={active ? "page" : undefined}
+      className={`flex min-h-14 items-center justify-between border-b border-white/10 py-3 text-xl font-semibold last:border-b-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300 ${
+        active ? "text-cyan-300" : "text-white"
+      }`}
+    >
+      {label}
+      <span aria-hidden="true" className="text-zinc-600">
+        ↗
+      </span>
+    </Link>
   );
 }

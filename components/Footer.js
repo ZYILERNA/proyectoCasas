@@ -1,193 +1,235 @@
-// components/Footer.js
-import Link from 'next/link';
-import Image from 'next/image';
-import { Mail, Phone, MapPin, ChevronRight, Instagram, Linkedin, Facebook, Sparkles, Music2, Youtube } from 'lucide-react';
+import Image from "next/image";
+import Link from "next/link";
+import {
+  ChevronRight,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Mail,
+  MapPin,
+  MessageCircle,
+  Music2,
+  Phone,
+  Youtube,
+} from "lucide-react";
+import CookieSettingsButton from "./CookieSettingsButton";
+
+const securityLinks = [
+  { href: "/puertas", label: "Puertas de seguridad" },
+  { href: "/cerraduras", label: "Cerraduras inteligentes" },
+  { href: "/ventanas", label: "Ventanas panorámicas" },
+  { href: "/manillas", label: "Manillas" },
+];
+
+const interiorLinks = [
+  { href: "/sofas", label: "Sofás" },
+  { href: "/mesas", label: "Mesas" },
+  { href: "/sillas", label: "Sillas y sillones" },
+  { href: "/dormitorios", label: "Dormitorios" },
+  { href: "/gabinetes", label: "Gabinetes" },
+];
+
+const socialLinks = [
+  {
+    href: "https://www.instagram.com/wonlyspain/",
+    label: "Instagram de WONLY",
+    icon: Instagram,
+  },
+  {
+    href: "https://www.facebook.com/people/WONLY/61580719733874/",
+    label: "Facebook de WONLY",
+    icon: Facebook,
+  },
+  {
+    href: "https://www.tiktok.com/@wonlyspain",
+    label: "TikTok de WONLY",
+    icon: Music2,
+  },
+  {
+    href: "https://www.youtube.com/@jackjiang-u4r",
+    label: "YouTube de WONLY",
+    icon: Youtube,
+  },
+  {
+    href: "https://www.linkedin.com/in/jack-jiang-a024483a9/",
+    label: "LinkedIn de WONLY",
+    icon: Linkedin,
+  },
+];
 
 export default function Footer() {
   return (
-    <footer className="bg-[#030303] text-white pt-24 pb-8 border-t border-white/10 relative overflow-hidden">
+    <footer className="relative overflow-hidden border-t border-white/10 bg-[#030303] text-white">
+      <div
+        aria-hidden="true"
+        className="absolute left-1/2 top-0 h-px w-full max-w-5xl -translate-x-1/2 bg-gradient-to-r from-transparent via-cyan-300/50 to-transparent"
+      />
 
-      {/* Efecto de fondo (Resplandor sutil) */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-px bg-gradient-to-r from-transparent via-[#00C2FF]/50 to-transparent"></div>
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-xl h-32 bg-[#00C2FF]/5 blur-[100px] pointer-events-none"></div>
-
-      <div className="container mx-auto px-6 relative z-10">
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20">
-
-          {/* COLUMNA 1: LOGO Y RAZÓN SOCIAL (Ocupa 4 espacios en PC) */}
-          <div className="lg:col-span-4 flex flex-col">
-            <Link href="/" className="mb-6 inline-block">
+      <div className="container mx-auto px-6 pb-8 pt-16 md:pt-20">
+        <div className="grid gap-12 border-b border-white/10 pb-14 lg:grid-cols-12">
+          <div className="lg:col-span-4">
+            <Link
+              href="/"
+              aria-label="WONLY España, ir a inicio"
+              className="inline-block rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+            >
               <Image
                 src="/images/logo-wonly.webp"
                 alt="WONLY"
                 width={160}
                 height={40}
-                className="h-10 w-auto object-contain hover:opacity-80 transition-opacity"
+                className="h-10 w-auto object-contain"
               />
             </Link>
-            <div className="inline-flex items-center gap-2 mb-4">
-              <p className="text-xs font-bold text-gray-300 tracking-[0.2em] uppercase">
-                Zhongyuankeji S.L
-              </p>
-            </div>
-            <p className="text-gray-400 text-sm leading-relaxed mb-8 max-w-sm font-light">
-              Líderes en diseño y fabricación de puertas de seguridad, cerramientos panorámicos y mobiliario de alta tecnología. La innovación al servicio de tu hogar.
+            <p className="mt-5 max-w-sm text-sm leading-7 text-zinc-400">
+              Puertas inteligentes, soluciones de seguridad y colecciones de
+              interior diseñadas para convivir con la arquitectura.
             </p>
-            {/* Redes Sociales */}
-            <div className="flex gap-4 items-center mt-auto">
-              <SocialIcon Icon={Instagram} href="https://www.instagram.com/wonlyspain/" label="Instagram de WONLY" />
-              <SocialIcon Icon={Facebook} href="https://www.facebook.com/people/WONLY/61580719733874/" label="Facebook de WONLY" />
-              <SocialIcon Icon={Music2} href="https://www.tiktok.com/@wonlyspain" label="TikTok de WONLY" />
-              <SocialIcon Icon={Youtube} href="https://www.youtube.com/@jackjiang-u4r" label="YouTube de WONLY" />
-              <SocialIcon Icon={Linkedin} href="https://www.linkedin.com/in/jack-jiang-a024483a9/" label="LinkedIn de WONLY" />
+            <p className="mt-4 text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-600">
+              Zhongyuankeji S.L.
+            </p>
+
+            <div className="mt-7 flex flex-wrap gap-2">
+              {socialLinks.map(({ href, label, icon: Icon }) => (
+                <a
+                  key={href}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="grid h-11 w-11 place-items-center rounded-full border border-white/10 bg-white/[0.035] text-zinc-400 transition hover:border-white hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300"
+                >
+                  <Icon size={17} aria-hidden="true" />
+                </a>
+              ))}
             </div>
           </div>
 
-          {/* COLUMNA 2: ARQUITECTURA & SEGURIDAD (Ocupa 2.5 espacios) */}
-          <div className="lg:col-span-3">
-            <h3 className="text-xs font-bold text-white uppercase tracking-[0.2em] mb-8 flex items-center gap-2">
-               <span className="w-4 h-[1px] bg-[#00C2FF]"></span> Seguridad
-            </h3>
-            <ul className="space-y-4 text-sm">
-              <FooterLink href="/puertas" text="Puertas de Seguridad" />
-              <FooterLink href="/ventanas" text="Ventanas Panorámicas" />
-              <FooterLink href="/cerraduras" text="Cerraduras Inteligentes" />
-              <li role="separator" aria-hidden="true" className="w-full h-px bg-white/5 my-4"></li>
-              <FooterLink href="/proyectos" text="Proyectos Contract" />
-              <FooterLink href="/blog" text="Blog · Instalaciones" />
-            </ul>
-          </div>
+          <FooterColumn
+            title="Seguridad"
+            links={securityLinks}
+            className="lg:col-span-2"
+          />
+          <FooterColumn
+            title="Interior"
+            links={interiorLinks}
+            className="lg:col-span-2"
+          />
 
-          {/* COLUMNA 3: INTERIORISMO (Ocupa 2.5 espacios) */}
-          <div className="lg:col-span-2">
-            <h3 className="text-xs font-bold text-white uppercase tracking-[0.2em] mb-8 flex items-center gap-2">
-               <span className="w-4 h-[1px] bg-[#00C2FF]"></span> Mobiliario
-            </h3>
-            <ul className="space-y-4 text-sm">
-              <FooterLink href="/sofas" text="Colección Sofás" />
-              <FooterLink href="/mesas" text="Mesas de Diseño" />
-              <FooterLink href="/sillas" text="Sillas y Sillones" />
-              <FooterLink href="/dormitorios" text="Dormitorios" />
-              <FooterLink href="/gabinetes" text="Sistemas Gabinetes" />
-            </ul>
-          </div>
-
-          {/* COLUMNA 4: CONTACTO (Ocupa 3 espacios) */}
-          <div className="lg:col-span-3">
-            <h3 className="text-xs font-bold text-white uppercase tracking-[0.2em] mb-8 flex items-center gap-2">
-               <span className="w-4 h-[1px] bg-[#00C2FF]"></span> Contacto
-            </h3>
-
-            <div className="flex flex-col gap-6">
-                {/* Email */}
-                <div className="group flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0 border border-white/10 group-hover:border-[#00C2FF] group-hover:bg-[#00C2FF]/10 transition-colors">
-                      <Mail size={16} className="text-gray-400 group-hover:text-[#00C2FF] transition-colors" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <p className="text-[10px] text-gray-400 uppercase tracking-widest mb-1 font-semibold">Email</p>
-                    <div className="space-y-2">
-                      <div>
-                        <p className="text-[10px] text-gray-500 uppercase tracking-wider">Consultas y contacto</p>
-                        <a href="mailto:info@wonlyspain.com" className="block text-sm text-gray-300 hover:text-white transition-colors break-all">
-                          info@wonlyspain.com
-                        </a>
-                      </div>
-                      <div>
-                        <p className="text-[10px] text-gray-500 uppercase tracking-wider">Corporativo</p>
-                        <a href="mailto:jack@wonlyspain.com" className="block text-sm text-gray-300 hover:text-white transition-colors break-all">
-                          jack@wonlyspain.com
-                        </a>
-                      </div>
-                      <div>
-                        <p className="text-[10px] text-gray-500 uppercase tracking-wider">Marketing</p>
-                        <a href="mailto:jennyqiu@wonlyspain.com" className="block text-sm text-gray-300 hover:text-white transition-colors break-all">
-                          jennyqiu@wonlyspain.com
-                        </a>
-                      </div>
-                      <div>
-                        <p className="text-[10px] text-gray-500 uppercase tracking-wider">Growth Partner</p>
-                        <a href="mailto:mpeiret@wonlyspain.com" className="block text-sm text-gray-300 hover:text-white transition-colors break-all">
-                          mpeiret@wonlyspain.com
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Teléfonos */}
-                <div className="group flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0 border border-white/10 group-hover:border-[#00C2FF] group-hover:bg-[#00C2FF]/10 transition-colors">
-                      <Phone size={16} className="text-gray-400 group-hover:text-[#00C2FF] transition-colors" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <p className="text-[10px] text-gray-400 uppercase tracking-widest mb-1 font-semibold">Teléfonos</p>
-                    <a href="tel:+34689858129" className="block text-sm text-gray-300 hover:text-white transition-colors mb-1">+34 689 858 129</a>
-                    <a href="tel:+34615772136" className="block text-sm text-gray-300 hover:text-white transition-colors">+34 615 772 136</a>
-                  </div>
-                </div>
-
-                {/* Dirección */}
-                <div className="group flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0 border border-white/10 group-hover:border-[#00C2FF] group-hover:bg-[#00C2FF]/10 transition-colors">
-                      <MapPin size={16} className="text-gray-400 group-hover:text-[#00C2FF] transition-colors" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <p className="text-[10px] text-gray-400 uppercase tracking-widest mb-1 font-semibold">Sede Principal</p>
-                    <p className="text-sm text-gray-300 leading-relaxed">
-                      Carrer Noi del Sucre, 13<br/>
-                      08840 Viladecans<br/>
-                      Barcelona, España
-                    </p>
-                  </div>
-                </div>
+          <div className="lg:col-span-4 lg:pl-6">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-white">
+              Hablemos de tu proyecto
+            </p>
+            <div className="mt-6 grid gap-4">
+              <ContactLink
+                href="mailto:info@wonlyspain.com"
+                icon={Mail}
+                label="Correo"
+                value="info@wonlyspain.com"
+              />
+              <ContactLink
+                href="tel:+34689858129"
+                icon={Phone}
+                label="Teléfono"
+                value="+34 689 858 129"
+              />
+              <ContactLink
+                href="https://wa.me/34689858129"
+                icon={MessageCircle}
+                label="WhatsApp"
+                value="Abrir conversación"
+                external
+              />
+              <ContactLink
+                href="https://www.google.com/maps/search/?api=1&query=Carrer+Noi+del+Sucre+13+08840+Viladecans"
+                icon={MapPin}
+                label="Showroom"
+                value="Carrer Noi del Sucre, 13 · Viladecans"
+                external
+              />
             </div>
           </div>
         </div>
 
-        {/* BOTTOM: COPYRIGHT Y LEGAL */}
-        <div className="border-t border-white/10 pt-8 flex flex-col lg:flex-row justify-between items-center gap-6">
-          <p className="text-xs text-gray-400 font-medium">
-            © {new Date().getFullYear()} Zhongyuankeji S.L. Todos los derechos reservados.
+        <div className="flex flex-col items-center justify-between gap-5 pt-7 text-xs text-zinc-500 lg:flex-row">
+          <p>
+            © {new Date().getFullYear()} Zhongyuankeji S.L. Todos los derechos
+            reservados.
           </p>
-
-          <ul className="flex flex-wrap justify-center gap-6 text-xs text-gray-400 font-medium">
-            <li><Link href="/empresa" className="hover:text-white transition-colors">Sobre Nosotros</Link></li>
-            <li><Link href="/aviso-legal" className="hover:text-white transition-colors">Aviso Legal</Link></li>
-            <li><Link href="/privacidad" className="hover:text-white transition-colors">Política de Privacidad</Link></li>
-            <li><Link href="/cookies" className="hover:text-white transition-colors">Cookies</Link></li>
-          </ul>
+          <nav aria-label="Enlaces legales">
+            <ul className="flex flex-wrap justify-center gap-x-5 gap-y-3">
+              <li>
+                <Link href="/aviso-legal" className="transition hover:text-white">
+                  Aviso legal
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacidad" className="transition hover:text-white">
+                  Privacidad
+                </Link>
+              </li>
+              <li>
+                <Link href="/cookies" className="transition hover:text-white">
+                  Cookies
+                </Link>
+              </li>
+              <li>
+                <CookieSettingsButton />
+              </li>
+            </ul>
+          </nav>
         </div>
-
       </div>
     </footer>
   );
 }
 
-// Subcomponente reutilizable para los enlaces con efecto hover moderno
-function FooterLink({ href, text }) {
+function FooterColumn({ title, links, className = "" }) {
   return (
-    <li className="group">
-      <Link href={href} className="flex items-center text-gray-400 hover:text-white transition-colors duration-300">
-        <ChevronRight size={14} className="opacity-0 -ml-4 mr-0 text-[#00C2FF] group-hover:opacity-100 group-hover:mr-2 group-hover:ml-0 transition-all duration-300" aria-hidden="true" />
-        <span className="transform group-hover:translate-x-1 transition-transform duration-300">{text}</span>
-      </Link>
-    </li>
+    <div className={className}>
+      <p className="text-xs font-bold uppercase tracking-[0.18em] text-white">
+        {title}
+      </p>
+      <ul className="mt-6 space-y-3">
+        {links.map((link) => (
+          <li key={link.href}>
+            <Link
+              href={link.href}
+              className="group inline-flex items-center text-sm text-zinc-500 transition hover:text-white"
+            >
+              <ChevronRight
+                size={14}
+                className="mr-0 w-0 overflow-hidden text-cyan-300 opacity-0 transition-all group-hover:mr-1.5 group-hover:w-3.5 group-hover:opacity-100"
+                aria-hidden="true"
+              />
+              {link.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
-// Subcomponente para los iconos de redes sociales
-function SocialIcon({ Icon, href, label }) {
+function ContactLink({ href, icon: Icon, label, value, external = false }) {
   return (
     <a
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={label}
-      className="w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-gray-400 hover:text-black hover:bg-white hover:border-white transition-all duration-300 hover:scale-110"
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
+      className="group flex items-center gap-3 rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300"
     >
-      <Icon size={18} aria-hidden="true" />
+      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-white/10 bg-white/[0.035] text-zinc-500 transition group-hover:border-cyan-300/50 group-hover:text-cyan-300">
+        <Icon size={16} aria-hidden="true" />
+      </span>
+      <span>
+        <span className="block text-[10px] font-bold uppercase tracking-[0.15em] text-zinc-600">
+          {label}
+        </span>
+        <span className="mt-0.5 block text-sm text-zinc-300 transition group-hover:text-white">
+          {value}
+        </span>
+      </span>
     </a>
   );
 }

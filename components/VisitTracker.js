@@ -13,9 +13,9 @@ export default function VisitTracker() {
     fetch('/api/track', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
+      keepalive: true,
       body: JSON.stringify({
         page: pathname,
-        userAgent: navigator.userAgent,
         referrer: document.referrer || '',
       }),
     }).catch(() => {});

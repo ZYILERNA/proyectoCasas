@@ -1,6 +1,5 @@
 ﻿"use client";
 import React from 'react';
-import Header from '../../components/Header';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { MapPin, Award, Cpu, Globe, Plane } from 'lucide-react';
@@ -134,8 +133,6 @@ const stats = [
 export default function ProyectosPage() {
   return (
     <main className="bg-black min-h-screen text-white selection:bg-[#00C2FF] selection:text-black">
-      <Header />
-
       {/* 1. HERO SECTION */}
       <section className="pt-40 pb-20 px-6 relative overflow-hidden">
         <div className="container mx-auto text-center relative z-10">

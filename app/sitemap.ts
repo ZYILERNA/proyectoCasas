@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/privacidad',
     '/proyectos',
     '/puertas',
+    '/puertas-interior',
     '/sillas',
     '/sofas',
     '/ventanas',
@@ -29,8 +30,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Generamos el sitemap automáticamente recorriendo la lista
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    // Le damos más prioridad a la página de inicio
     changeFrequency: route === '' ? 'weekly' : 'monthly',
     priority: route === '' ? 1 : 0.8,
   }));

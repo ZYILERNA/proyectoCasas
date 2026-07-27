@@ -4,18 +4,15 @@ import React, { useState, useEffect, useMemo, memo, useRef, Suspense } from 'rea
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { createClient } from '@supabase/supabase-js';
+import { supabase } from '../../lib/supabase';
+import useAccessibleDialog from '../../components/useAccessibleDialog';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight, ScanLine, Ruler, Box, Palette, RefreshCw, Lock, Layers, Armchair, Maximize2, Barcode, Search } from 'lucide-react';
 
 // --- CONFIGURACIÓN SUPABASE ---
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 // --- CONSTANTES ---
 const EXCHANGE_RATE = 0.13;
-const AUTOPLAY_INTERVAL = 3000;
 
 const formatPrice = (priceCNY) => {
     if (!priceCNY) return "-";
@@ -38,9 +35,10 @@ const staggerContainer = {
 
 // --- COMPONENTE MODAL PRECIOS ---
 const PriceTableModal = memo(({ isOpen, onClose, data, title }) => {
+    const dialogRef = useAccessibleDialog(Boolean(isOpen && data), onClose);
     if (!isOpen || !data) return null;
     return (
-        <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-black/80" onClick={onClose}>
+        <div ref={dialogRef} role="dialog" aria-modal="true" aria-label={`Lista de precios: ${title}`} tabIndex={-1} className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-black/80" onClick={onClose}>
             <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -54,7 +52,7 @@ const PriceTableModal = memo(({ isOpen, onClose, data, title }) => {
                         <h3 className="font-bold text-lg text-gray-900">Lista de Precios: {title}</h3>
                         <p className="text-xs text-gray-500">Estimación en Euros (€) basada en tasa de cambio actual.</p>
                     </div>
-                    <button onClick={onClose} className="p-2 hover:bg-gray-200 rounded-full transition-colors">
+                    <button type="button" aria-label="Cerrar lista de precios" onClick={onClose} className="p-2 hover:bg-gray-200 rounded-full transition-colors">
                         <X size={20} className="text-gray-500" />
                     </button>
                 </div>
@@ -100,8 +98,8 @@ PriceTableModal.displayName = 'PriceTableModal';
 
 // --- COMPONENTE DRAWER ---
 const ProductDrawer = memo(({ selectedProduct, onClose }) => {
+    const dialogRef = useAccessibleDialog(Boolean(selectedProduct), onClose);
     const [currentSchematicIndex, setCurrentSchematicIndex] = useState(0);
-    const [isPaused, setIsPaused] = useState(false);
     const [showPriceModal, setShowPriceModal] = useState(false);
     const [mobileImageIndex, setMobileImageIndex] = useState(0);
     const [selectedColorIdx, setSelectedColorIdx] = useState(null);
@@ -146,14 +144,6 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
         return () => { document.body.style.overflow = ''; };
     }, []);
 
-    useEffect(() => {
-        if (!hasMultipleImages || isPaused) return;
-        const timer = setInterval(() => {
-            setCurrentSchematicIndex((prev) => prev === selectedProduct.schematics.length - 1 ? 0 : prev + 1);
-        }, AUTOPLAY_INTERVAL);
-        return () => clearInterval(timer);
-    }, [selectedProduct, isPaused, hasMultipleImages, currentSchematicIndex]);
-
     const nextSchematic = () => {
         if (!hasMultipleImages) return;
         setCurrentSchematicIndex((prev) => prev === selectedProduct.schematics.length - 1 ? 0 : prev + 1);
@@ -180,6 +170,11 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
+                ref={dialogRef}
+                role="dialog"
+                aria-modal="true"
+                aria-label={`Detalles de ${selectedProduct?.name || "producto"}`}
+                tabIndex={-1}
                 className="fixed inset-0 z-50 flex justify-end bg-black/80 h-[100dvh]"
                 onClick={onClose}
             >
@@ -194,7 +189,7 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
                 >
                     {/* IZQUIERDA: GALERÍA */}
                     <div className="md:w-3/5 bg-gray-50 md:p-8 flex flex-col md:gap-6 relative shrink-0 border-b md:border-b-0 border-gray-100">
-                        <button onClick={onClose} className="absolute top-4 right-4 md:hidden bg-white/90 p-2 rounded-full shadow-md border border-gray-100 z-20 text-gray-900">
+                        <button type="button" aria-label="Cerrar detalles" onClick={onClose} className="absolute top-4 right-4 md:hidden bg-white/90 p-2 rounded-full shadow-md border border-gray-100 z-20 text-gray-900">
                             <X size={20} />
                         </button>
 
@@ -263,8 +258,6 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
                             {selectedProduct.schematics && selectedProduct.schematics.length > 0 && (
                                 <div
                                     className="bg-white rounded-xl border border-gray-100 overflow-hidden shrink-0 group"
-                                    onMouseEnter={() => setIsPaused(true)}
-                                    onMouseLeave={() => setIsPaused(false)}
                                 >
                                     <div className="flex items-center gap-1.5 text-gray-400 px-4 pt-3 pb-2">
                                         <ScanLine size={11} />
@@ -326,7 +319,7 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
                                     </div>
                                     <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">{selectedProduct.name}</h2>
                                 </div>
-                                <button onClick={onClose} className="hidden md:block hover:bg-gray-100 p-2 rounded-full transition-colors"><X size={24} /></button>
+                                <button type="button" aria-label="Cerrar detalles" onClick={onClose} className="hidden md:block hover:bg-gray-100 p-2 rounded-full transition-colors"><X size={24} /></button>
                             </div>
                         </div>
 
@@ -470,7 +463,7 @@ const ProductCard = memo(({ item, index, onSelect }) => {
             const img = item.colors?.interior?.[hoverColorIdx]?.image;
             if (img) return img;
         }
-        return item.image || "/images/placeholder.webp";
+        return item.image || "/images/sillas-header.webp";
     }, [item, hoverColorIdx]);
 
     return (
@@ -482,9 +475,10 @@ const ProductCard = memo(({ item, index, onSelect }) => {
             transition={{ duration: 0.3, delay: index * 0.05 }}
             className="group block h-full flex flex-col relative"
         >
-            <div
+            <button
+                type="button"
                 onClick={() => onSelect(item)}
-                className="relative aspect-[4/3] overflow-hidden rounded-sm bg-white mb-4 cursor-pointer"
+                className="relative aspect-[4/3] w-full overflow-hidden rounded-sm bg-white mb-4 cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-black"
             >
                 <div className="absolute top-3 left-3 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="bg-white/90 backdrop-blur text-black border border-gray-100 text-[10px] font-mono px-2 py-1 flex items-center gap-2 rounded shadow-sm">
@@ -496,9 +490,7 @@ const ProductCard = memo(({ item, index, onSelect }) => {
                         src={cardImage}
                         alt={item.name}
                         fill
-                        priority={index < 6}
-                        sizes="400px"
-                        unoptimized
+                        sizes="(max-width: 768px) 50vw, (max-width: 1280px) 33vw, 25vw"
                         className="object-contain"
                     />
                 </div>
@@ -507,10 +499,10 @@ const ProductCard = memo(({ item, index, onSelect }) => {
                         Ver Detalles
                     </span>
                 </div>
-            </div>
+            </button>
             <div className="flex flex-col gap-0.5">
                 <div className="flex justify-between items-baseline gap-1">
-                    <h3 className="text-sm md:text-lg font-medium text-gray-900 leading-tight group-hover:text-gray-600 transition-colors cursor-pointer" onClick={() => onSelect(item)}>{item.name}</h3>
+                    <button type="button" className="text-left text-sm md:text-lg font-medium text-gray-900 leading-tight group-hover:text-gray-600 transition-colors cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-black" onClick={() => onSelect(item)}>{item.name}</button>
                     <span className="text-xs md:text-sm font-bold text-gray-900 whitespace-nowrap">{formatPrice(item.priceBase)}</span>
                 </div>
                 <div className="flex items-center gap-1.5 mt-0.5">
@@ -518,13 +510,18 @@ const ProductCard = memo(({ item, index, onSelect }) => {
                     {item.colors?.interior && (
                         <div className="flex -space-x-1">
                             {item.colors.interior.slice(0, 4).map((c, i) => (
-                                <div
+                                <button
+                                    type="button"
                                     key={i}
+                                    aria-label={`Previsualizar acabado ${c.name || i + 1}`}
                                     className={`w-4 h-4 rounded-full border-2 shadow-sm cursor-pointer transition-all duration-200 overflow-hidden
                                         ${hoverColorIdx === i ? 'border-black scale-125' : 'border-white hover:scale-110'}`}
                                     style={c.image
                                         ? { backgroundImage: `url(${c.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }
                                         : { backgroundColor: c.hex }}
+                                    onClick={() => setHoverColorIdx(i)}
+                                    onFocus={() => setHoverColorIdx(i)}
+                                    onBlur={() => setHoverColorIdx(null)}
                                     onMouseEnter={() => setHoverColorIdx(i)}
                                     onMouseLeave={() => setHoverColorIdx(null)}
                                 />
@@ -662,14 +659,14 @@ function SillasContent() {
                     transition={{ duration: 1.2, ease: "easeOut" }}
                     className="absolute inset-0"
                 >
-                    <video
-                        autoPlay loop muted playsInline preload="auto"
-                        poster="/images/sillas-header.webp"
+                    <Image
+                        src="/images/sillas-header.webp"
+                        alt=""
+                        fill
+                        priority
+                        sizes="100vw"
                         className="w-full h-full object-cover opacity-60 scale-110"
-                    >
-                        <source src="/videos/sillas-hero.webm" type="video/webm" />
-                        <source src="/videos/sillas-hero.mp4" type="video/mp4" />
-                    </video>
+                    />
                 </motion.div>
                 <motion.div
                     variants={staggerContainer}

@@ -19,6 +19,7 @@ import {
   X,
 } from "lucide-react";
 import { supabase } from "../../lib/supabase";
+import useAccessibleDialog from "../../components/useAccessibleDialog";
 import {
   CATALOGUE_CACHE_TTL_MS,
   CATEGORIAS,
@@ -237,6 +238,10 @@ export default function PuertasClient({
   const [loadingProductDetails, setLoadingProductDetails] = useState(false);
   const [openingProductId, setOpeningProductId] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const mobileFilterRef = useAccessibleDialog(
+    isMobileMenuOpen,
+    () => setIsMobileMenuOpen(false),
+  );
   const [loading, setLoading] = useState(!initialLoadSucceeded);
   const [loadingMore, setLoadingMore] = useState(false);
   const [totalProducts, setTotalProducts] = useState(initialTotalProducts);
@@ -685,9 +690,11 @@ export default function PuertasClient({
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-6 backdrop-blur lg:hidden">
           <div
+            ref={mobileFilterRef}
             role="dialog"
             aria-modal="true"
             aria-labelledby="mobile-filter-title"
+            tabIndex={-1}
             className="w-full max-w-sm space-y-4 rounded bg-white p-6"
           >
             <div className="flex justify-between border-b pb-4">

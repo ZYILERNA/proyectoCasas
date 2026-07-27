@@ -2,13 +2,21 @@ import { createClient } from '@supabase/supabase-js';
 import { cookies } from 'next/headers';
 import LoginForm from './LoginForm';
 import { logout } from './actions';
+import {
+  ADMIN_COOKIE_NAME,
+  isValidAdminSession,
+} from '../../lib/admin-auth';
 
 export const dynamic = 'force-dynamic';
+export const metadata = {
+  title: 'Panel privado',
+  robots: { index: false, follow: false },
+};
 
 async function getData() {
   const supabase = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+    process.env.SUPABASE_SERVICE_ROLE_KEY
   );
 
   const { data: visits, error } = await supabase
@@ -31,10 +39,15 @@ async function getData() {
   return { total, byPage, byDevice, byDay, recent: visits.slice(0, 50) };
 }
 
-export default async function AdminPanel() {
+export default async function AdminPanel({ searchParams }) {
   const cookieStore = await cookies();
-  const authed = cookieStore.get('wonly_auth')?.value === 'ok';
-  if (!authed) return <LoginForm />;
+  const resolvedSearchParams = await searchParams;
+  const authed = isValidAdminSession(
+    cookieStore.get(ADMIN_COOKIE_NAME)?.value,
+  );
+  if (!authed) {
+    return <LoginForm error={resolvedSearchParams?.error} />;
+  }
 
   const data = await getData();
 

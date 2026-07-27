@@ -8,12 +8,10 @@ import {
   CheckCircle, X, Loader2, ChevronRight, Lock, Star, Search
 } from 'lucide-react';
 import Link from 'next/link';
-import { createClient } from '@supabase/supabase-js';
+import { supabase } from '../../lib/supabase';
+import useAccessibleDialog from '../../components/useAccessibleDialog';
 
 // --- CONFIGURACIÓN SUPABASE ---
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-const supabase = createClient(supabaseUrl, supabaseKey);
 
 // --- DATOS ESTÁTICOS ---
 const COMPARATIVA_DATA = [
@@ -50,13 +48,14 @@ const getPerformanceIcon = (label) => {
 
 // --- PRODUCT CARD ---
 const ProductCard = memo(({ product, onClick, index }) => (
-  <motion.div
+  <motion.button
+    type="button"
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.3, delay: index * 0.05 }}
     whileHover={{ y: -4 }}
     onClick={onClick}
-    className="group relative bg-[#0d0d0d] rounded-2xl overflow-hidden border border-white/8 cursor-pointer hover:border-[#00C2FF]/40 transition-all duration-300 flex flex-col"
+    className="group relative bg-[#0d0d0d] rounded-2xl overflow-hidden border border-white/8 cursor-pointer hover:border-[#00C2FF]/40 transition-all duration-300 flex flex-col text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#00C2FF]"
   >
     {/* Imagen — fondo blanco para que encajen las fotos con bg blanco */}
     <div className="relative aspect-[4/3] bg-white overflow-hidden flex items-center justify-center p-6">
@@ -101,21 +100,18 @@ const ProductCard = memo(({ product, onClick, index }) => (
         Ver detalles <ChevronRight size={14} />
       </div>
     </div>
-  </motion.div>
+  </motion.button>
 ));
 
 // --- PRODUCT MODAL ---
 const ProductModal = memo(({ product, onClose }) => {
-  useEffect(() => {
-    document.body.style.overflow = 'hidden';
-    return () => { document.body.style.overflow = 'unset'; };
-  }, []);
+  const dialogRef = useAccessibleDialog(Boolean(product), onClose);
   if (!product) return null;
 
   const hasWallpaper = !!product?.wallpaper;
 
   return (
-    <div className="fixed inset-0 z-[100] flex justify-end">
+    <div ref={dialogRef} role="dialog" aria-modal="true" aria-label={`Detalles de ${product.name}`} tabIndex={-1} className="fixed inset-0 z-[100] flex justify-end">
       {/* BACKDROP — wallpaper animado para S80, oscuro para el resto */}
       {hasWallpaper ? (
         <motion.div
@@ -169,6 +165,8 @@ const ProductModal = memo(({ product, onClose }) => {
             <h2 className="text-3xl font-bold text-white">{product.name}</h2>
           </div>
           <button
+            type="button"
+            aria-label="Cerrar detalles"
             onClick={onClose}
             className="text-gray-400 hover:text-white transition-colors p-2 rounded-xl hover:bg-white/8 mt-1"
           >
