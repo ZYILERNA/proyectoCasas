@@ -32,6 +32,13 @@ const interiorLinks = [
   { href: "/gabinetes", label: "Sistemas de gabinetes" },
 ];
 
+const contactEmails = [
+  { label: "Consultas y contacto", address: "info@wonlyspain.com" },
+  { label: "Corporativo", address: "jack@wonlyspain.com" },
+  { label: "Marketing", address: "jennyqiu@wonlyspain.com" },
+  { label: "Growth Partner", address: "mpeiret@wonlyspain.com" },
+];
+
 const socialLinks = [
   {
     href: "https://www.instagram.com/wonlyspain/",
@@ -129,13 +136,22 @@ export default function Footer() {
             <FooterTitle>Contacto</FooterTitle>
 
             <address className="flex flex-col gap-6 not-italic">
-              <ContactItem icon={Mail} label="Email">
-                <a
-                  href="mailto:info@wonlyspain.com"
-                  className="break-all text-sm text-zinc-300 transition-colors hover:text-white"
-                >
-                  info@wonlyspain.com
-                </a>
+              <ContactItem icon={Mail} label="Emails">
+                <span className="flex flex-col gap-3">
+                  {contactEmails.map(({ label, address }) => (
+                    <span key={address}>
+                      <span className="block text-[10px] uppercase tracking-wider text-zinc-500">
+                        {label}
+                      </span>
+                      <a
+                        href={`mailto:${address}`}
+                        className="break-all text-sm text-zinc-300 transition-colors hover:text-white"
+                      >
+                        {address}
+                      </a>
+                    </span>
+                  ))}
+                </span>
               </ContactItem>
 
               <ContactItem icon={Phone} label="Teléfono">
