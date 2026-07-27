@@ -28,6 +28,22 @@ export const TIPOS = {
 
 export const blogPosts = [
   {
+    slug: "l2-encants",
+    title: "Cerradura Inteligente en L2 Encants",
+    location: "Encants, Barcelona",
+    tipo: TIPOS.CERRADURA,
+    cover: `${BASE}/L2 ENCANÇ/despues1.webp`,
+    excerpt:
+      "Sustitución de una manilla convencional por una cerradura inteligente en la zona de L2 Encants.",
+    description:
+      "Instalación de una cerradura inteligente WONLY en una vivienda de la zona de Encants, en Barcelona. Mostramos el estado original de la puerta y el resultado final con teclado numérico y lector biométrico integrados.",
+    media: [
+      { type: "image", before: true, src: `${BASE}/L2 ENCANÇ/antes1.webp`, alt: "Manilla convencional antes de instalar la cerradura inteligente en Encants" },
+      { type: "image", src: `${BASE}/L2 ENCANÇ/despues1.webp`, alt: "Cerradura inteligente WONLY instalada en una vivienda de Encants" },
+      { type: "image", src: `${BASE}/L2 ENCANÇ/despues2.webp`, alt: "Detalle de la cerradura inteligente instalada en Encants" },
+    ],
+  },
+  {
     slug: "canovelles",
     title: "Instalación en Canovelles",
     location: "Canovelles, Barcelona",
