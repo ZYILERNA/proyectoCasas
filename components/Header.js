@@ -32,7 +32,7 @@ const primaryLinks = [
 const securityLinks = [
   { href: "/puertas", label: "Puertas de seguridad" },
   {
-    href: "/puertas-interior",
+    href: "/puertas?category=PUERTA%20AC%C3%9ASTICA%20DE%20MADERA",
     label: "Puertas de interior",
   },
   { href: "/ventanas", label: "Ventanas panorámicas" },

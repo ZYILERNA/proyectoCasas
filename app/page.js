@@ -4,7 +4,6 @@ import {
   ArrowRight,
   BedDouble,
   Box,
-  Check,
   ChevronRight,
   Fingerprint,
   Layers3,
@@ -49,6 +48,7 @@ const securityCollections = [
     imageAlt: "Puerta inteligente WONLY X60 Pro",
     icon: ScanFace,
     tone: "cyan",
+    imageFit: "contain",
   },
   {
     eyebrow: "Protección estructural",
@@ -60,6 +60,31 @@ const securityCollections = [
     imageAlt: "Puerta acorazada WONLY",
     icon: ShieldCheck,
     tone: "white",
+    imageFit: "contain",
+  },
+  {
+    eyebrow: "Resistencia reforzada",
+    title: "Puertas de acero",
+    description:
+      "Construcción robusta, acabados duraderos y soluciones versátiles para viviendas y proyectos profesionales.",
+    href: "/puertas?category=PUERTA%20DE%20ACERO%20REFORZADO",
+    image: "/images/PUERTAS/ACERO/contemporary/original.webp",
+    imageAlt: "Puerta de acero reforzado WONLY",
+    icon: LockKeyhole,
+    tone: "white",
+    imageFit: "contain",
+  },
+  {
+    eyebrow: "Diseño interior",
+    title: "Puertas de interior",
+    description:
+      "Colecciones lacadas, de madera, vidriadas y correderas para dar continuidad a cada estancia.",
+    href: "/puertas?category=PUERTA%20AC%C3%9ASTICA%20DE%20MADERA",
+    image: "/images/madera.webp",
+    imageAlt: "Puerta de interior WONLY instalada en una vivienda",
+    icon: Sparkles,
+    tone: "white",
+    imageFit: "cover",
   },
   {
     eyebrow: "Soluciones especiales",
@@ -71,6 +96,7 @@ const securityCollections = [
     imageAlt: "Colección de puertas especiales WONLY",
     icon: Layers3,
     tone: "white",
+    imageFit: "cover",
   },
 ];
 
@@ -168,97 +194,56 @@ export default function Home() {
         aria-labelledby="hero-title"
         className="relative isolate min-h-[calc(100svh-7rem)] overflow-hidden border-b border-white/10"
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_42%,rgba(0,194,255,0.2),transparent_28%),linear-gradient(120deg,#050505_18%,#07101a_58%,#02060a)]" />
-        <div className="absolute inset-y-0 right-0 w-full md:w-[58%]">
+        <div className="hero-background-enter absolute inset-0 z-0">
           <Image
             src="/images/hero-robot.webp"
-            alt="Robot tecnológico de WONLY, símbolo de innovación en seguridad"
+            alt="Tecnología de seguridad WONLY"
             fill
             priority
             quality={82}
-            className="object-cover object-top opacity-45 md:object-contain md:opacity-90"
-            sizes="(max-width: 768px) 100vw, 58vw"
+            className="object-cover object-top"
+            sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/55 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/65 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/20 md:hidden" />
         </div>
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 opacity-[0.08] [background-image:linear-gradient(rgba(255,255,255,.2)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.2)_1px,transparent_1px)] [background-size:72px_72px]"
-        />
 
         <div className="container relative z-10 mx-auto flex min-h-[calc(100svh-7rem)] items-center px-6 py-16 md:py-20">
-          <div className="hero-enter max-w-3xl">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-300/10 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.22em] text-cyan-200">
-              <span className="h-1.5 w-1.5 rounded-full bg-cyan-300 shadow-[0_0_12px_#67e8f9]" />
-              WONLY España · Desde 1996
-            </div>
+          <div className="hero-enter max-w-4xl">
+            <p className="text-sm font-bold uppercase tracking-[0.3em] text-cyan-300 md:text-base">
+              Tecnología &amp; Seguridad S.L.
+            </p>
 
             <h1
               id="hero-title"
-              className="max-w-3xl text-balance text-5xl font-semibold leading-[0.96] tracking-[-0.055em] sm:text-6xl md:text-8xl"
+              className="mt-4 max-w-4xl text-5xl font-bold uppercase leading-tight tracking-tight md:text-8xl"
             >
-              Seguridad que también{" "}
-              <span className="text-cyan-300">define tu espacio.</span>
+              El futuro
+              <br />
+              <span className="bg-gradient-to-r from-white to-zinc-500 bg-clip-text text-transparent">
+                es seguro
+              </span>
             </h1>
 
-            <p className="mt-7 max-w-2xl text-pretty text-lg leading-8 text-zinc-300 md:text-xl">
-              Puertas inteligentes, cerraduras biométricas y soluciones
-              arquitectónicas que combinan protección, tecnología y diseño.
+            <p className="mb-10 mt-6 max-w-xl border-l-2 border-cyan-300 pl-6 text-lg font-light leading-8 text-zinc-300 md:text-xl">
+              Especialistas en puertas de seguridad, cerraduras inteligentes y
+              blindaje de alta tecnología. Protegemos lo que más importa.
             </p>
 
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <div className="flex flex-wrap gap-4">
               <Link
-                href="/puertas"
-                className="group inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-cyan-300 px-7 py-3 text-sm font-bold uppercase tracking-[0.14em] text-black transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+                href="/puertas?category=PUERTA%20DE%20SEGURIDAD%20IA"
+                className="inline-flex min-h-14 items-center justify-center bg-cyan-400 px-8 py-4 text-sm font-bold uppercase tracking-widest text-black transition duration-300 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
               >
-                Explorar puertas
-                <ArrowRight
-                  size={18}
-                  aria-hidden="true"
-                  className="transition-transform group-hover:translate-x-1"
-                />
+                Ver puertas
               </Link>
               <Link
                 href="/contacto"
-                className="inline-flex min-h-12 items-center justify-center gap-3 rounded-full border border-white/25 bg-black/25 px-7 py-3 text-sm font-bold uppercase tracking-[0.14em] text-white backdrop-blur transition hover:border-white hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                className="inline-flex min-h-14 items-center justify-center border border-white px-8 py-4 text-sm font-bold uppercase tracking-widest text-white transition duration-300 hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
               >
-                Hablar con un experto
+                Contactar
               </Link>
             </div>
-
-            <p className="mt-5 flex items-center gap-2 text-sm text-zinc-400">
-              <Check size={16} className="text-cyan-300" aria-hidden="true" />
-              Asesoramiento técnico para vivienda, obra nueva y proyectos
-              profesionales.
-            </p>
-
-            <dl className="mt-12 grid max-w-2xl grid-cols-3 gap-3 border-t border-white/10 pt-6">
-              <div>
-                <dt className="text-xs uppercase tracking-[0.16em] text-zinc-500">
-                  Trayectoria
-                </dt>
-                <dd className="mt-1 text-xl font-semibold text-white md:text-2xl">
-                  30 años
-                </dd>
-              </div>
-              <div>
-                <dt className="text-xs uppercase tracking-[0.16em] text-zinc-500">
-                  Innovación
-                </dt>
-                <dd className="mt-1 text-xl font-semibold text-white md:text-2xl">
-                  1.000+
-                </dd>
-              </div>
-              <div>
-                <dt className="text-xs uppercase tracking-[0.16em] text-zinc-500">
-                  Bolsa
-                </dt>
-                <dd className="mt-1 text-xl font-semibold text-white md:text-2xl">
-                  605268
-                </dd>
-              </div>
-            </dl>
           </div>
         </div>
       </section>
@@ -299,7 +284,7 @@ export default function Home() {
             action={{ href: "/puertas", label: "Ver catálogo completo" }}
           />
 
-          <div className="mt-12 grid gap-5 lg:grid-cols-3">
+          <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-6">
             {securityCollections.map((item, index) => (
               <SecurityCard key={item.title} item={item} index={index} />
             ))}
@@ -445,14 +430,43 @@ export default function Home() {
             id="history-title"
           />
 
-          <ol className="mt-12 grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 md:grid-cols-4">
-            {milestones.map((item) => (
-              <li key={item.year} className="bg-[#0a0a0a] p-7">
-                <span className="font-mono text-3xl font-semibold text-cyan-300">
+          <ol
+            aria-label="Cronología de WONLY"
+            className="scrollbar-hide -mx-6 mt-12 flex snap-x snap-mandatory overflow-x-auto px-6 pb-3 md:mx-0 md:px-0"
+          >
+            {milestones.map((item, index) => (
+              <li
+                key={item.year}
+                className="relative w-[190px] shrink-0 snap-start md:min-w-0 md:flex-1"
+                title={item.text}
+                aria-describedby={`milestone-${item.year}`}
+              >
+                <time
+                  dateTime={item.year}
+                  className="mb-3 block text-center font-mono text-2xl font-semibold tracking-tight text-white"
+                >
                   {item.year}
+                </time>
+
+                <div
+                  aria-hidden="true"
+                  className="relative mb-3 flex h-3 items-center justify-center"
+                >
+                  {index > 0 && (
+                    <span className="absolute left-0 right-1/2 top-1/2 h-px -translate-y-1/2 bg-cyan-300/50 shadow-[0_0_8px_rgba(103,232,249,.45)]" />
+                  )}
+                  {index < milestones.length - 1 && (
+                    <span className="absolute left-1/2 right-0 top-1/2 h-px -translate-y-1/2 bg-cyan-300/50 shadow-[0_0_8px_rgba(103,232,249,.45)]" />
+                  )}
+                  <span className="relative h-2.5 w-2.5 rounded-full border-2 border-[#0a0a0a] bg-cyan-300 shadow-[0_0_12px_rgba(103,232,249,.8)]" />
+                </div>
+
+                <h3 className="px-3 text-center text-xs font-bold uppercase tracking-wide text-white md:text-sm">
+                  {item.title}
+                </h3>
+                <span id={`milestone-${item.year}`} className="sr-only">
+                  {item.text}
                 </span>
-                <h3 className="mt-5 text-lg font-semibold">{item.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-zinc-500">{item.text}</p>
               </li>
             ))}
           </ol>
@@ -508,11 +522,11 @@ export default function Home() {
 
       <section
         aria-labelledby="contact-title"
-        className="relative isolate overflow-hidden bg-cyan-300 py-20 text-black md:py-24"
+        className="relative isolate overflow-hidden border-t border-white/10 bg-black py-20 text-white md:py-24"
       >
         <div
           aria-hidden="true"
-          className="absolute inset-0 opacity-20 [background-image:radial-gradient(circle_at_80%_0%,white,transparent_36%)]"
+          className="absolute inset-0 opacity-20 [background-image:radial-gradient(circle_at_80%_0%,rgba(103,232,249,.35),transparent_36%)]"
         />
         <div className="container relative mx-auto flex flex-col items-start justify-between gap-8 px-6 lg:flex-row lg:items-end">
           <div className="max-w-3xl">
@@ -525,14 +539,14 @@ export default function Home() {
             >
               Cuéntanos qué quieres proteger y cómo quieres vivirlo.
             </h2>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-black/70">
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-white/70">
               Te ayudamos a encontrar una solución coherente con el uso, el
               espacio y la estética de tu proyecto.
             </p>
           </div>
           <Link
             href="/contacto"
-            className="group inline-flex min-h-14 shrink-0 items-center justify-center gap-3 rounded-full bg-black px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] text-white transition hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black"
+            className="group inline-flex min-h-14 shrink-0 items-center justify-center gap-3 whitespace-nowrap rounded-full border border-white bg-white/5 px-6 py-4 text-[11px] font-bold uppercase tracking-[0.1em] text-white transition hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300 sm:px-8 sm:text-sm sm:tracking-[0.14em]"
           >
             Solicitar asesoramiento
             <ArrowRight
@@ -583,10 +597,12 @@ function SectionHeading({ eyebrow, title, description, id, action }) {
 
 function SecurityCard({ item, index }) {
   const Icon = item.icon;
+  const desktopSpan = index < 3 ? "xl:col-span-2" : "xl:col-span-3";
+
   return (
     <Link
       href={item.href}
-      className="group relative min-h-[520px] overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#111] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+      className={`group relative min-h-[520px] overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#111] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300 ${desktopSpan}`}
     >
       <div className="absolute inset-x-0 top-0 h-[64%]">
         <Image
@@ -594,9 +610,15 @@ function SecurityCard({ item, index }) {
           alt={item.imageAlt}
           fill
           className={`transition duration-700 group-hover:scale-[1.035] ${
-            index < 2 ? "object-contain object-top" : "object-cover"
+            item.imageFit === "contain"
+              ? "object-contain object-top"
+              : "object-cover"
           }`}
-          sizes="(max-width: 1024px) 100vw, 33vw"
+          sizes={
+            index < 3
+              ? "(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
+              : "(max-width: 767px) 100vw, 50vw"
+          }
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#111] via-transparent to-transparent" />
       </div>

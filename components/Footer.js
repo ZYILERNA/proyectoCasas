@@ -7,7 +7,6 @@ import {
   Linkedin,
   Mail,
   MapPin,
-  MessageCircle,
   Music2,
   Phone,
   Youtube,
@@ -16,17 +15,21 @@ import CookieSettingsButton from "./CookieSettingsButton";
 
 const securityLinks = [
   { href: "/puertas", label: "Puertas de seguridad" },
-  { href: "/cerraduras", label: "Cerraduras inteligentes" },
+  {
+    href: "/puertas?category=PUERTA%20AC%C3%9ASTICA%20DE%20MADERA",
+    label: "Puertas de interior",
+  },
   { href: "/ventanas", label: "Ventanas panorámicas" },
-  { href: "/manillas", label: "Manillas" },
+  { href: "/cerraduras", label: "Cerraduras inteligentes" },
+  { href: "/manillas", label: "Manillas de diseño" },
 ];
 
 const interiorLinks = [
-  { href: "/sofas", label: "Sofás" },
-  { href: "/mesas", label: "Mesas" },
+  { href: "/sofas", label: "Colección sofás" },
+  { href: "/mesas", label: "Mesas de diseño" },
   { href: "/sillas", label: "Sillas y sillones" },
   { href: "/dormitorios", label: "Dormitorios" },
-  { href: "/gabinetes", label: "Gabinetes" },
+  { href: "/gabinetes", label: "Sistemas de gabinetes" },
 ];
 
 const socialLinks = [
@@ -59,48 +62,49 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 bg-[#030303] text-white">
+    <footer className="relative overflow-hidden border-t border-white/10 bg-[#030303] pb-8 pt-20 text-white md:pt-24">
       <div
         aria-hidden="true"
-        className="absolute left-1/2 top-0 h-px w-full max-w-5xl -translate-x-1/2 bg-gradient-to-r from-transparent via-cyan-300/50 to-transparent"
+        className="absolute left-1/2 top-0 h-px w-full max-w-4xl -translate-x-1/2 bg-gradient-to-r from-transparent via-cyan-300/50 to-transparent"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-0 h-32 w-full max-w-xl -translate-x-1/2 bg-cyan-300/5 blur-[100px]"
       />
 
-      <div className="container mx-auto px-6 pb-8 pt-16 md:pt-20">
-        <div className="grid gap-12 border-b border-white/10 pb-14 lg:grid-cols-12">
-          <div className="lg:col-span-4">
+      <div className="container relative z-10 mx-auto px-6">
+        <div className="mb-20 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-12 lg:gap-8">
+          <div className="flex flex-col lg:col-span-4">
             <Link
               href="/"
               aria-label="WONLY España, ir a inicio"
-              className="inline-block rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+              className="mb-6 inline-block rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
             >
               <Image
                 src="/images/logo-wonly.webp"
                 alt="WONLY"
                 width={160}
                 height={40}
-                className="h-10 w-auto object-contain"
+                className="h-10 w-auto object-contain transition-opacity hover:opacity-80"
               />
             </Link>
-            <p className="mt-5 max-w-sm text-sm leading-7 text-zinc-400">
+
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-zinc-300">
+              Zhongyuankeji S.L.
+            </p>
+            <p className="mb-8 max-w-sm text-sm font-light leading-7 text-zinc-400">
               Puertas inteligentes, soluciones de seguridad y colecciones de
               interior diseñadas para convivir con la arquitectura.
             </p>
-            <p className="mt-4 text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-600">
-              Zhongyuankeji S.L.
-            </p>
 
-            <div className="mt-7 flex flex-wrap gap-2">
+            <div className="mt-auto flex flex-wrap items-center gap-3">
               {socialLinks.map(({ href, label, icon: Icon }) => (
-                <a
+                <SocialIcon
                   key={href}
                   href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="grid h-11 w-11 place-items-center rounded-full border border-white/10 bg-white/[0.035] text-zinc-400 transition hover:border-white hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300"
-                >
-                  <Icon size={17} aria-hidden="true" />
-                </a>
+                  label={label}
+                  icon={Icon}
+                />
               ))}
             </div>
           </div>
@@ -108,68 +112,90 @@ export default function Footer() {
           <FooterColumn
             title="Seguridad"
             links={securityLinks}
-            className="lg:col-span-2"
+            className="lg:col-span-3"
+            extraLinks={[
+              { href: "/proyectos", label: "Proyectos contract" },
+              { href: "/blog", label: "Blog · Instalaciones" },
+            ]}
           />
+
           <FooterColumn
-            title="Interior"
+            title="Mobiliario"
             links={interiorLinks}
             className="lg:col-span-2"
           />
 
-          <div className="lg:col-span-4 lg:pl-6">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-white">
-              Hablemos de tu proyecto
-            </p>
-            <div className="mt-6 grid gap-4">
-              <ContactLink
-                href="mailto:info@wonlyspain.com"
-                icon={Mail}
-                label="Correo"
-                value="info@wonlyspain.com"
-              />
-              <ContactLink
-                href="tel:+34689858129"
-                icon={Phone}
-                label="Teléfono"
-                value="+34 689 858 129"
-              />
-              <ContactLink
-                href="https://wa.me/34689858129"
-                icon={MessageCircle}
-                label="WhatsApp"
-                value="Abrir conversación"
-                external
-              />
-              <ContactLink
-                href="https://www.google.com/maps/search/?api=1&query=Carrer+Noi+del+Sucre+13+08840+Viladecans"
-                icon={MapPin}
-                label="Showroom"
-                value="Carrer Noi del Sucre, 13 · Viladecans"
-                external
-              />
-            </div>
+          <div className="lg:col-span-3">
+            <FooterTitle>Contacto</FooterTitle>
+
+            <address className="flex flex-col gap-6 not-italic">
+              <ContactItem icon={Mail} label="Email">
+                <a
+                  href="mailto:info@wonlyspain.com"
+                  className="break-all text-sm text-zinc-300 transition-colors hover:text-white"
+                >
+                  info@wonlyspain.com
+                </a>
+              </ContactItem>
+
+              <ContactItem icon={Phone} label="Teléfono">
+                <a
+                  href="tel:+34689858129"
+                  className="text-sm text-zinc-300 transition-colors hover:text-white"
+                >
+                  +34 689 858 129
+                </a>
+              </ContactItem>
+
+              <ContactItem icon={MapPin} label="Sede principal">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Carrer+Noi+del+Sucre+13+08840+Viladecans"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm leading-6 text-zinc-300 transition-colors hover:text-white"
+                >
+                  Carrer Noi del Sucre, 13
+                  <br />
+                  08840 Viladecans
+                  <br />
+                  Barcelona, España
+                </a>
+              </ContactItem>
+            </address>
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-5 pt-7 text-xs text-zinc-500 lg:flex-row">
-          <p>
+        <div className="flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-8 lg:flex-row">
+          <p className="text-xs font-medium text-zinc-500">
             © {new Date().getFullYear()} Zhongyuankeji S.L. Todos los derechos
             reservados.
           </p>
+
           <nav aria-label="Enlaces legales">
-            <ul className="flex flex-wrap justify-center gap-x-5 gap-y-3">
+            <ul className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-xs font-medium text-zinc-500">
               <li>
-                <Link href="/aviso-legal" className="transition hover:text-white">
+                <Link href="/empresa" className="transition-colors hover:text-white">
+                  Sobre nosotros
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/aviso-legal"
+                  className="transition-colors hover:text-white"
+                >
                   Aviso legal
                 </Link>
               </li>
               <li>
-                <Link href="/privacidad" className="transition hover:text-white">
-                  Privacidad
+                <Link
+                  href="/privacidad"
+                  className="transition-colors hover:text-white"
+                >
+                  Política de privacidad
                 </Link>
               </li>
               <li>
-                <Link href="/cookies" className="transition hover:text-white">
+                <Link href="/cookies" className="transition-colors hover:text-white">
                   Cookies
                 </Link>
               </li>
@@ -184,52 +210,80 @@ export default function Footer() {
   );
 }
 
-function FooterColumn({ title, links, className = "" }) {
+function FooterTitle({ children }) {
+  return (
+    <h2 className="mb-8 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-white">
+      <span className="h-px w-4 bg-cyan-300" aria-hidden="true" />
+      {children}
+    </h2>
+  );
+}
+
+function FooterColumn({ title, links, extraLinks = [], className = "" }) {
   return (
     <div className={className}>
-      <p className="text-xs font-bold uppercase tracking-[0.18em] text-white">
-        {title}
-      </p>
-      <ul className="mt-6 space-y-3">
+      <FooterTitle>{title}</FooterTitle>
+      <ul className="space-y-4 text-sm">
         {links.map((link) => (
-          <li key={link.href}>
-            <Link
-              href={link.href}
-              className="group inline-flex items-center text-sm text-zinc-500 transition hover:text-white"
-            >
-              <ChevronRight
-                size={14}
-                className="mr-0 w-0 overflow-hidden text-cyan-300 opacity-0 transition-all group-hover:mr-1.5 group-hover:w-3.5 group-hover:opacity-100"
-                aria-hidden="true"
-              />
-              {link.label}
-            </Link>
-          </li>
+          <FooterLink key={link.href} {...link} />
+        ))}
+        {extraLinks.length > 0 && (
+          <li role="separator" aria-hidden="true" className="my-4 h-px w-full bg-white/5" />
+        )}
+        {extraLinks.map((link) => (
+          <FooterLink key={link.href} {...link} />
         ))}
       </ul>
     </div>
   );
 }
 
-function ContactLink({ href, icon: Icon, label, value, external = false }) {
+function FooterLink({ href, label }) {
   return (
-    <a
-      href={href}
-      target={external ? "_blank" : undefined}
-      rel={external ? "noopener noreferrer" : undefined}
-      className="group flex items-center gap-3 rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300"
-    >
-      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-white/10 bg-white/[0.035] text-zinc-500 transition group-hover:border-cyan-300/50 group-hover:text-cyan-300">
+    <li className="group">
+      <Link
+        href={href}
+        className="flex items-center text-zinc-400 transition-colors duration-300 hover:text-white"
+      >
+        <ChevronRight
+          size={14}
+          aria-hidden="true"
+          className="-ml-4 mr-0 text-cyan-300 opacity-0 transition-all duration-300 group-hover:ml-0 group-hover:mr-2 group-hover:opacity-100"
+        />
+        <span className="transition-transform duration-300 group-hover:translate-x-1">
+          {label}
+        </span>
+      </Link>
+    </li>
+  );
+}
+
+function ContactItem({ icon: Icon, label, children }) {
+  return (
+    <div className="group flex items-start gap-4">
+      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-white/10 bg-white/5 text-zinc-400 transition-colors group-hover:border-cyan-300 group-hover:bg-cyan-300/10 group-hover:text-cyan-300">
         <Icon size={16} aria-hidden="true" />
       </span>
       <span>
-        <span className="block text-[10px] font-bold uppercase tracking-[0.15em] text-zinc-600">
+        <span className="mb-1 block text-[10px] font-semibold uppercase tracking-widest text-zinc-500">
           {label}
         </span>
-        <span className="mt-0.5 block text-sm text-zinc-300 transition group-hover:text-white">
-          {value}
-        </span>
+        {children}
       </span>
+    </div>
+  );
+}
+
+function SocialIcon({ icon: Icon, href, label }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={label}
+      className="grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-white/5 text-zinc-400 transition duration-300 hover:scale-110 hover:border-white hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300"
+    >
+      <Icon size={18} aria-hidden="true" />
     </a>
   );
 }

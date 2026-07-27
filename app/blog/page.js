@@ -34,9 +34,14 @@ export default function BlogPage() {
       ? blogPosts
       : blogPosts.filter((p) => p.tipo === filtro);
 
-  // Solo destacamos un post cuando no hay filtro activo
-  const destacado = filtro === "Todos" ? filtrados[0] : null;
-  const grid = destacado ? filtrados.slice(1) : filtrados;
+  // Canovelles es el caso destacado cuando no hay un filtro activo.
+  const destacado =
+    filtro === "Todos"
+      ? blogPosts.find((post) => post.slug === "canovelles")
+      : null;
+  const grid = destacado
+    ? filtrados.filter((post) => post.slug !== destacado.slug)
+    : filtrados;
 
   return (
     <main className="bg-[#070707] min-h-screen text-white selection:bg-[#00C2FF] selection:text-black">
