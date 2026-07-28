@@ -271,6 +271,8 @@ export default function Home() {
         </div>
       </section>
 
+      <Timeline />
+
       <section
         aria-labelledby="security-title"
         className="content-auto bg-[#080808] py-20 md:py-28"
@@ -419,61 +421,6 @@ export default function Home() {
       </section>
 
       <section
-        aria-labelledby="history-title"
-        className="content-auto border-y border-white/10 bg-[#0a0a0a] py-20 md:py-24"
-      >
-        <div className="container mx-auto px-6">
-          <SectionHeading
-            eyebrow="Una marca industrial"
-            title="Tres décadas convirtiendo seguridad en innovación"
-            description="Los hitos que explican por qué WONLY aborda cada puerta como un sistema completo."
-            id="history-title"
-          />
-
-          <ol
-            aria-label="Cronología de WONLY"
-            className="scrollbar-hide -mx-6 mt-12 flex snap-x snap-mandatory overflow-x-auto px-6 pb-3 md:mx-0 md:px-0"
-          >
-            {milestones.map((item, index) => (
-              <li
-                key={item.year}
-                className="relative w-[190px] shrink-0 snap-start md:min-w-0 md:flex-1"
-                title={item.text}
-                aria-describedby={`milestone-${item.year}`}
-              >
-                <time
-                  dateTime={item.year}
-                  className="mb-3 block text-center font-mono text-2xl font-semibold tracking-tight text-white"
-                >
-                  {item.year}
-                </time>
-
-                <div
-                  aria-hidden="true"
-                  className="relative mb-3 flex h-3 items-center justify-center"
-                >
-                  {index > 0 && (
-                    <span className="absolute left-0 right-1/2 top-1/2 h-px -translate-y-1/2 bg-cyan-300/50 shadow-[0_0_8px_rgba(103,232,249,.45)]" />
-                  )}
-                  {index < milestones.length - 1 && (
-                    <span className="absolute left-1/2 right-0 top-1/2 h-px -translate-y-1/2 bg-cyan-300/50 shadow-[0_0_8px_rgba(103,232,249,.45)]" />
-                  )}
-                  <span className="relative h-2.5 w-2.5 rounded-full border-2 border-[#0a0a0a] bg-cyan-300 shadow-[0_0_12px_rgba(103,232,249,.8)]" />
-                </div>
-
-                <h3 className="px-3 text-center text-xs font-bold uppercase tracking-wide text-white md:text-sm">
-                  {item.title}
-                </h3>
-                <span id={`milestone-${item.year}`} className="sr-only">
-                  {item.text}
-                </span>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      <section
         aria-labelledby="certifications-title"
         className="content-auto bg-[#070707] py-20 md:py-28"
       >
@@ -561,6 +508,58 @@ export default function Home() {
   );
 }
 
+function Timeline() {
+  return (
+    <section
+      aria-label="Historia de WONLY"
+      className="content-auto border-b border-white/10 bg-[#0a0a0a] py-10 md:py-12"
+    >
+      <div className="container mx-auto px-6">
+        <ol
+          aria-label="Cronología de WONLY"
+          className="scrollbar-hide -mx-6 flex snap-x snap-mandatory overflow-x-auto px-6 pb-3 md:mx-0 md:px-0"
+        >
+          {milestones.map((item, index) => (
+            <li
+              key={item.year}
+              className="relative w-[190px] shrink-0 snap-start md:min-w-0 md:flex-1"
+              title={item.text}
+              aria-describedby={`milestone-${item.year}`}
+            >
+              <time
+                dateTime={item.year}
+                className="mb-3 block text-center font-mono text-2xl font-semibold tracking-tight text-white"
+              >
+                {item.year}
+              </time>
+
+              <div
+                aria-hidden="true"
+                className="relative mb-3 flex h-3 items-center justify-center"
+              >
+                {index > 0 && (
+                  <span className="absolute left-0 right-1/2 top-1/2 h-px -translate-y-1/2 bg-cyan-300/50 shadow-[0_0_8px_rgba(103,232,249,.45)]" />
+                )}
+                {index < milestones.length - 1 && (
+                  <span className="absolute left-1/2 right-0 top-1/2 h-px -translate-y-1/2 bg-cyan-300/50 shadow-[0_0_8px_rgba(103,232,249,.45)]" />
+                )}
+                <span className="relative h-2.5 w-2.5 rounded-full border-2 border-[#0a0a0a] bg-cyan-300 shadow-[0_0_12px_rgba(103,232,249,.8)]" />
+              </div>
+
+              <h2 className="px-3 text-center text-xs font-bold uppercase tracking-wide text-white md:text-sm">
+                {item.title}
+              </h2>
+              <span id={`milestone-${item.year}`} className="sr-only">
+                {item.text}
+              </span>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  );
+}
+
 function SectionHeading({ eyebrow, title, description, id, action }) {
   return (
     <div className="flex flex-col justify-between gap-7 md:flex-row md:items-end">
@@ -597,12 +596,15 @@ function SectionHeading({ eyebrow, title, description, id, action }) {
 
 function SecurityCard({ item, index }) {
   const Icon = item.icon;
-  const desktopSpan = index < 3 ? "xl:col-span-2" : "xl:col-span-3";
+  const desktopPosition =
+    index === 3
+      ? "xl:col-span-2 xl:col-start-2"
+      : "xl:col-span-2";
 
   return (
     <Link
       href={item.href}
-      className={`group relative min-h-[520px] overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#111] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300 ${desktopSpan}`}
+      className={`group relative min-h-[520px] overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#111] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300 ${desktopPosition}`}
     >
       <div className="absolute inset-x-0 top-0 h-[64%]">
         <Image
@@ -614,11 +616,7 @@ function SecurityCard({ item, index }) {
               ? "object-contain object-top"
               : "object-cover"
           }`}
-          sizes={
-            index < 3
-              ? "(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
-              : "(max-width: 767px) 100vw, 50vw"
-          }
+          sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#111] via-transparent to-transparent" />
       </div>
