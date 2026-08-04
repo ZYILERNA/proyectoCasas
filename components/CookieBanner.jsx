@@ -77,11 +77,19 @@ export default function CookieBanner() {
   }, []);
 
   useEffect(() => {
+    document.body.toggleAttribute(
+      "data-wonly-cookie-banner-visible",
+      isVisible,
+    );
     window.dispatchEvent(
       new CustomEvent("wonly:cookie-banner-visibility", {
         detail: { visible: isVisible },
       }),
     );
+
+    return () => {
+      document.body.removeAttribute("data-wonly-cookie-banner-visible");
+    };
   }, [isVisible]);
 
   const acceptAll = () => {
@@ -105,7 +113,7 @@ export default function CookieBanner() {
   if (!isVisible) return null;
 
   return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-[80] flex justify-center p-3 pb-[max(.75rem,env(safe-area-inset-bottom))] md:p-6">
+    <div data-wonly-cookie-banner className="pointer-events-none fixed inset-x-0 bottom-0 z-[80] flex justify-center p-3 pb-[max(.75rem,env(safe-area-inset-bottom))] md:p-6">
       <section
         role="dialog"
         aria-modal="false"

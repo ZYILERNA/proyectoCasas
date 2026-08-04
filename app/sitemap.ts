@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/privacidad',
     '/proyectos',
     '/puertas',
+    '/puertas/interior/de-madera/wl-j001',
     '/puertas-interior',
     '/sillas',
     '/sofas',

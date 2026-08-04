@@ -1,11 +1,75 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, ArrowRight, CheckCircle, Clock, MessageSquare, AlertCircle } from 'lucide-react';
 import Link from 'next/link';
+import {
+  WL_J001_FINISH_OPTIONS,
+  WL_J001_OPENING_OPTIONS,
+} from '../../lib/wl-j001-product';
+
+const ALLOWED_WL_J001_FINISHES = new Set(
+  WL_J001_FINISH_OPTIONS.map(({ name }) => name),
+);
+
+const ALLOWED_WL_J001_OPENINGS = new Set(
+  WL_J001_OPENING_OPTIONS.map(({ label }) => label),
+);
 
 export default function ContactoPage() {
   const [formStatus, setFormStatus] = useState('idle'); // idle, submitting, success, error
+  const [subject, setSubject] = useState('Presupuesto');
+  const [message, setMessage] = useState('');
+  const [hasProductConfiguration, setHasProductConfiguration] = useState(false);
+  const [configuredProduct, setConfiguredProduct] = useState('');
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const readParam = (key, maxLength = 80) => (params.get(key) || '')
+      .replace(/[\u0000-\u001F\u007F]/g, ' ')
+      .trim()
+      .slice(0, maxLength);
+
+    const product = readParam('producto');
+    if (product !== 'WL-J001') return;
+
+    const readPositiveInteger = (key, maxLength) => {
+      const value = (params.get(key) || '').trim();
+      return value.length <= maxLength && /^\d+$/.test(value) && Number(value) > 0
+        ? value
+        : '';
+    };
+    const requestedFinish = readParam('acabado');
+    const requestedOpening = readParam('apertura');
+    const finish = ALLOWED_WL_J001_FINISHES.has(requestedFinish)
+      ? requestedFinish
+      : '';
+    const width = readPositiveInteger('ancho', 5);
+    const height = readPositiveInteger('alto', 5);
+    const wallThickness = readPositiveInteger('espesor', 5);
+    const opening = ALLOWED_WL_J001_OPENINGS.has(requestedOpening)
+      ? requestedOpening
+      : '';
+    const quantity = readPositiveInteger('cantidad', 3);
+    const lines = [
+      `Hola, quiero solicitar información sobre el modelo ${product}.`,
+      '',
+      `Modelo: ${product}`,
+      finish ? `Acabado orientativo: ${finish}` : false,
+      width ? `Ancho del hueco: ${width} mm` : false,
+      height ? `Alto del hueco: ${height} mm` : false,
+      wallThickness ? `Espesor del muro: ${wallThickness} mm` : false,
+      opening ? `Posición de bisagras: ${opening}` : false,
+      quantity ? `Cantidad: ${quantity}` : false,
+      '',
+      'Las medidas son preliminares y deben comprobarse técnicamente.',
+    ].filter((line) => line !== false && line !== undefined);
+
+    setSubject('Producto');
+    setMessage(lines.join('\n'));
+    setConfiguredProduct(product);
+    setHasProductConfiguration(true);
+  }, []);
 
   // --- TU CONFIGURACIÓN REAL DE FORMSPREE ---
   const FORMSPREE_ID = "xrewlllz";
@@ -28,6 +92,10 @@ export default function ContactoPage() {
         if (response.ok) {
             setFormStatus('success');
             e.target.reset(); // Limpiar formulario tras envío exitoso
+            setSubject('Presupuesto');
+            setMessage('');
+            setConfiguredProduct('');
+            setHasProductConfiguration(false);
         } else {
             setFormStatus('error');
         }
@@ -226,8 +294,19 @@ export default function ContactoPage() {
                     )}
 
                     <h3 className="text-2xl font-bold mb-6">Envíanos un mensaje</h3>
+
+                    {hasProductConfiguration && (
+                        <div className="mb-6 border border-[#00C2FF]/30 bg-[#00C2FF]/10 p-4" role="status">
+                            <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#00C2FF]">
+                                Configuración de producto cargada
+                            </p>
+                            <p className="mt-2 text-sm leading-6 text-gray-300">
+                                Hemos trasladado el acabado y las medidas de {configuredProduct} al mensaje. Puedes revisarlos antes de enviarlo.
+                            </p>
+                        </div>
+                    )}
                     
-                    <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
+                    <form id="formulario-contacto" onSubmit={handleSubmit} className="scroll-mt-28 space-y-6 relative z-10">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-2">
                                 <label htmlFor="contact-name" className="text-sm text-gray-400 ml-1">Nombre</label>
@@ -246,7 +325,7 @@ export default function ContactoPage() {
 
                         <div className="space-y-2">
                             <label htmlFor="contact-subject" className="text-sm text-gray-400 ml-1">Asunto</label>
-                            <select id="contact-subject" name="asunto" className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#00C2FF] transition-colors text-gray-400 appearance-none cursor-pointer">
+                            <select id="contact-subject" name="asunto" value={subject} onChange={(event) => setSubject(event.target.value)} className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#00C2FF] transition-colors text-gray-400 appearance-none cursor-pointer">
                                 <option value="Presupuesto">Presupuesto</option>
                                 <option value="Producto">Información de Producto</option>
                                 <option value="Soporte">Soporte Técnico</option>
@@ -256,7 +335,7 @@ export default function ContactoPage() {
 
                         <div className="space-y-2">
                             <label htmlFor="contact-message" className="text-sm text-gray-400 ml-1">Mensaje</label>
-                            <textarea id="contact-message" name="mensaje" required rows={4} placeholder="¿En qué podemos ayudarte?" className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#00C2FF] transition-colors text-white placeholder-gray-600 resize-none"></textarea>
+                            <textarea id="contact-message" name="mensaje" required rows={7} value={message} onChange={(event) => setMessage(event.target.value)} placeholder="¿En qué podemos ayudarte?" className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#00C2FF] transition-colors text-white placeholder-gray-600 resize-y"></textarea>
                         </div>
 
                         <div className="flex items-start gap-3 rounded-xl border border-white/10 bg-black/30 p-4">

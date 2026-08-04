@@ -19,7 +19,13 @@ import {
   X,
 } from "lucide-react";
 import { supabase } from "../../lib/supabase";
+import {
+  InteriorAtmosphereShowcase,
+  InteriorCollectionNav,
+} from "../../components/doors/InteriorShowcase";
+import WLJ001FeatureCard from "../../components/doors/WLJ001FeatureCard";
 import useAccessibleDialog from "../../components/useAccessibleDialog";
+import { getDedicatedDoorProductPath } from "../../lib/door-product-routes";
 import {
   CATALOGUE_CACHE_TTL_MS,
   CATEGORIAS,
@@ -493,9 +499,10 @@ export default function PuertasClient({
   const clearSearch = useCallback(() => setSearchTerm(""), []);
   const hasMoreProducts = products.length < totalProducts;
   const heroImage = IMAGENES_HERO[activeCategory] || IMAGENES_HERO.TODAS;
+  const isInteriorCategory = CATEGORIAS_INTERIOR.includes(activeCategory);
 
   return (
-    <main className="min-h-screen bg-white pb-20 font-sans text-black selection:bg-black selection:text-white">
+    <main className="min-h-screen bg-white font-sans text-black selection:bg-black selection:text-white">
       <div className="relative mb-16 mt-20 h-[45vh] w-full overflow-hidden bg-black md:h-[62vh]">
         <Image
           key={heroImage}
@@ -513,12 +520,18 @@ export default function PuertasClient({
           <p className="mx-auto max-w-2xl text-sm font-light leading-relaxed text-gray-200 drop-shadow-md md:text-base">
             {activeCategory === "TODAS"
               ? "Catálogo completo Wonly. Tecnología IA, resistencia extrema, lujo en aluminio, colección acústica de madera y la nueva línea vanguardista en PVC."
-              : `Explora nuestra exclusiva línea de productos clasificados en ${activeCategory.toLowerCase()} con la mejor tecnología, máxima seguridad y diseño de vanguardia.`}
+              : isInteriorCategory
+                ? "Diseño interior, materiales cálidos y acabados pensados para integrarse con naturalidad en cada espacio."
+                : `Explora nuestra exclusiva línea de productos clasificados en ${activeCategory.toLowerCase()} con la mejor tecnología, máxima seguridad y diseño de vanguardia.`}
           </p>
         </div>
       </div>
 
-      <div className="container mx-auto px-6">
+      {isInteriorCategory && (
+        <InteriorCollectionNav activeCategory={activeCategory} />
+      )}
+
+      <div className="container mx-auto px-6 pb-16 md:pb-20">
         <div className="flex flex-col gap-12 lg:flex-row">
           <aside className="sticky top-32 hidden h-fit w-64 flex-shrink-0 lg:block">
             <div className="mb-8">
@@ -624,15 +637,26 @@ export default function PuertasClient({
               ) : (
                 <>
                   <div className={`grid grid-cols-2 gap-x-6 gap-y-12 transition-opacity md:grid-cols-3 xl:grid-cols-4 ${loading ? "opacity-45" : "opacity-100"}`}>
-                    {products.map((product, index) => (
-                      <ProductCard
-                        key={product.id}
-                        product={product}
-                        onSelect={loadProductDetails}
-                        opening={openingProductId === product.id}
-                        priority={index < 4}
-                      />
-                    ))}
+                    {products.map((product, index) => {
+                      const dedicatedProductPath = getDedicatedDoorProductPath(product);
+
+                      return dedicatedProductPath ? (
+                        <WLJ001FeatureCard
+                          key={product.id}
+                          product={product}
+                          href={dedicatedProductPath}
+                          priority={index < 4}
+                        />
+                      ) : (
+                        <ProductCard
+                          key={product.id}
+                          product={product}
+                          onSelect={loadProductDetails}
+                          opening={openingProductId === product.id}
+                          priority={index < 4}
+                        />
+                      );
+                    })}
                   </div>
                   {loading && (
                     <div className="absolute inset-x-0 top-8 flex justify-center" role="status">
@@ -678,6 +702,8 @@ export default function PuertasClient({
           </section>
         </div>
       </div>
+
+      {isInteriorCategory && <InteriorAtmosphereShowcase />}
 
       {selectedProduct && (
         <ProductModal

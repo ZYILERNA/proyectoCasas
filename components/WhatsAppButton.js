@@ -1,8 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { WL_J001_PRODUCT_PATH } from "../lib/door-product-routes";
 
 export default function WhatsAppButton() {
+  const pathname = usePathname();
   const [cookieBannerVisible, setCookieBannerVisible] = useState(false);
   const [overlayVisible, setOverlayVisible] = useState(false);
 
@@ -46,7 +49,9 @@ export default function WhatsAppButton() {
       aria-label="Contactar con WONLY por WhatsApp"
       aria-hidden={isSuppressed}
       tabIndex={isSuppressed ? -1 : undefined}
-      className={`group fixed bottom-[max(1rem,env(safe-area-inset-bottom))] right-4 z-40 flex min-h-14 items-center rounded-full bg-[#25D366] text-white shadow-xl shadow-black/30 transition duration-200 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white md:right-6 ${
+      className={`group fixed bottom-[max(1rem,env(safe-area-inset-bottom))] right-4 z-40 min-h-14 items-center rounded-full bg-[#25D366] text-white shadow-xl shadow-black/30 transition duration-200 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white md:right-6 ${
+        pathname === WL_J001_PRODUCT_PATH ? "hidden lg:flex" : "flex"
+      } ${
         isSuppressed
           ? "pointer-events-none translate-y-3 opacity-0"
           : "translate-y-0 opacity-100"

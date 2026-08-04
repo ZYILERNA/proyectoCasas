@@ -69,7 +69,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 bg-[#030303] pb-8 pt-20 text-white md:pt-24">
+    <footer data-site-footer className="relative overflow-hidden border-t border-white/10 bg-[#030303] pb-8 pt-20 text-white md:pt-24">
       <div
         aria-hidden="true"
         className="absolute left-1/2 top-0 h-px w-full max-w-4xl -translate-x-1/2 bg-gradient-to-r from-transparent via-cyan-300/50 to-transparent"

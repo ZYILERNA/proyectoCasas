@@ -2,7 +2,9 @@ import { Suspense } from "react";
 import { unstable_cache } from "next/cache";
 import { createClient } from "@supabase/supabase-js";
 import { Loader2 } from "lucide-react";
+import { redirect } from "next/navigation";
 import PuertasClient from "./PuertasClient";
+import { getDedicatedDoorProductPath } from "../../lib/door-product-routes";
 import {
   ALL_CATEGORIES,
   PRODUCT_CARD_FIELDS,
@@ -74,6 +76,9 @@ export default async function PuertasPage({ searchParams = {} }) {
     ? requestedCategory
     : "TODAS";
   const requestedProduct = getFirstSearchParam(resolvedSearchParams.producto);
+
+  const dedicatedProductPath = getDedicatedDoorProductPath(requestedProduct);
+  if (dedicatedProductPath) redirect(dedicatedProductPath);
 
   let initialCatalogue = { products: [], total: 0 };
   let initialProduct = null;
