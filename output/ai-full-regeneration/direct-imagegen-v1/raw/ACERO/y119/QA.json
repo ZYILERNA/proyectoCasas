@@ -1,0 +1,56 @@
+{
+  "schema": "wonly-direct-imagegen-qa/v2",
+  "model": "ACERO/y119",
+  "status": "PASS_10_OF_10",
+  "policy": "NO_LOGO",
+  "reviewedAt": "2026-08-14",
+  "execution": {
+    "mode": "built-in ImageGen",
+    "oneIndependentCallPerActiveAsset": true,
+    "soleReference": "output/ai-full-regeneration/pilots/ACERO/y119/master-no-logo-ai-tight.png",
+    "logoReference": false,
+    "generatedOutputsUsedAsReferences": false,
+    "filtersOrRecolor": false,
+    "masksOrComposite": false,
+    "cropOrResize": false,
+    "converted": false,
+    "publicWritten": false
+  },
+  "criteria": {
+    "framing": "complete frame and threshold, nearly edge-to-edge; RGB<245 margins 0-8 px preferred and up to 11 px accepted with >98% coverage",
+    "architecture": "wide header, full ornamental grille, central circular motif, panel seams and four-line trim preserved",
+    "hardware": "one right smart lock with geometric functional controls and long pull",
+    "branding": "no logo, badge, letters, words, microtext or pseudotext"
+  },
+  "summary": {
+    "assets": 10,
+    "pass": 10,
+    "fail": 0,
+    "uniqueSha256": 10,
+    "maximumMarginPx": 9,
+    "promotionAllowed": false
+  },
+  "results": [
+    {"finish":"original","status":"PASS","margins245":[3,4,3,0]},
+    {"finish":"negro","status":"PASS","margins245":[0,0,0,0]},
+    {"finish":"wengue","status":"PASS","margins245":[0,0,0,0]},
+    {"finish":"gris-oscuro","status":"PASS","margins245":[0,0,0,0]},
+    {"finish":"antracita","status":"PASS","margins245":[0,0,0,0]},
+    {"finish":"nogal","status":"PASS","margins245":[2,4,7,0]},
+    {"finish":"roble","status":"PASS","margins245":[0,0,0,0]},
+    {"finish":"gris-claro","status":"PASS","margins245":[2,2,9,0]},
+    {"finish":"natural","status":"PASS","margins245":[0,0,0,0]},
+    {"finish":"blanco","status":"PASS","margins245":[3,4,2,0]}
+  ],
+  "visualReview": {
+    "completeDoorAndFrame": "PASS_10_OF_10",
+    "architectureAndOrnament": "PASS_10_OF_10",
+    "singleIntactHardwareSet": "PASS_10_OF_10",
+    "noLogoOrText": "PASS_10_OF_10",
+    "noHalosOrRectangularPatches": "PASS_10_OF_10"
+  },
+  "evidence": [
+    "_inspection/contact-sheet.png",
+    "_inspection/lock-detail-sheet.png"
+  ]
+}

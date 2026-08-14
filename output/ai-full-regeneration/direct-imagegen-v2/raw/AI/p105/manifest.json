@@ -1,0 +1,37 @@
+{
+  "schema": "direct-imagegen-raw-active-manifest/v2",
+  "model": "AI/p105",
+  "policy": "NO_LOGO",
+  "status": "PASS_10_OF_10",
+  "master": "output/ai-full-regeneration/masters/AI/p105/master-no-logo-ai-tight.png",
+  "latestRecovery": {
+    "name": "straight-flutes-blank-lock-2026-08-14",
+    "method": "built-in ImageGen independent calls",
+    "onlyReference": "output/ai-full-regeneration/masters/AI/p105/master-no-logo-ai-tight.png",
+    "finishes": ["original", "antracita", "negro"],
+    "calls": 4,
+    "maximumAttemptsPerFinish": 2,
+    "attemptsUsed": { "original": 1, "antracita": 1, "negro": 2 },
+    "outputOrLogoReferencesUsed": false,
+    "filtersRecolorsMasksCropsResizesCompositesConversionsUsed": false
+  },
+  "validatedActive": [
+    { "finish": "original", "file": "original.png", "generatorId": "exec-f0e811cc-3880-4f03-a700-a3f5a543dafa", "sourceAttempt": 1, "sha256": "7f9c56db35af5f78c5c141a04c84ff7e17478389b886985e94ce6d8d0dc0d9f3" },
+    { "finish": "antracita", "file": "antracita.png", "generatorId": "exec-2df88ffe-565f-4c38-a483-d4db1cedf573", "sourceAttempt": 1, "sha256": "c986e5c380ac266a9b601861abb1c1c09c067e3ad14cda4e7b143119da1e3d88" },
+    { "finish": "negro", "file": "negro.png", "generatorId": "exec-ce0b4437-145d-4610-8cf8-0fd74d4bc3ed", "sourceAttempt": 2, "sha256": "8e63048111efa67663a27d912d8e30f014adf309a45863bc3f924f6a3bfd000b" },
+    { "finish": "wengue", "file": "wengue.png", "sha256": "7e4bc8fd5fc48bcef510ee2f1c3d1677155241db9cee10aca1f5b4eb997789f7" },
+    { "finish": "nogal", "file": "nogal.png", "sha256": "bbc6f8e6fc0d235cc65bc03c6cad72dfabb9448ac9bd7662661923dc083bf940" },
+    { "finish": "roble", "file": "roble.png", "sha256": "22d11c1518f6531c2784d58912fee94fbea2fe280e8fb458363f2109daac3de1" },
+    { "finish": "gris-oscuro", "file": "gris-oscuro.png", "sha256": "ad722843901629d4755ddc534873993c571a9f2619041aa613f989311fc7d455" },
+    { "finish": "gris-claro", "file": "gris-claro.png", "sha256": "f2adc3986b6ea2a39f35ee48563426c391855b80c20caca5488de2f5497463ba" },
+    { "finish": "natural", "file": "natural.png", "sha256": "f8d86226823dc20d15dacc196db669600d8ba010c900bdfcdfe0a169536bacb7" },
+    { "finish": "blanco", "file": "blanco.png", "sha256": "686e5e447f53023e94511b9edf01757075c4a19081e3548273427887b8a00369" }
+  ],
+  "blocked": null,
+  "activeRootArchive": "_archive/final-round-preactivation-2026-08-14/active-root",
+  "straightFlutesPreactivationArchive": "_archive/straight-flutes-preactivation-2026-08-14/active-root",
+  "blocked9Archive": "_archive/final-round-blocked9-before-radical-pass-2026-08-14",
+  "rawOnly": true,
+  "converted": false,
+  "publicWritten": false
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "model": "puerta-automatica-plana-hermetica-y-abatible",
+  "category": "MEDICA",
+  "complete": true,
+  "logoPolicy": "NO_LOGO",
+  "referenceCountPerCall": 1,
+  "reference": "output/ai-full-regeneration/large-doors/MEDICA/puerta-automatica-plana-hermetica-y-abatible/master-no-logo-ai.png",
+  "pipeline": "direct built-in ImageGen only",
+  "operationsNotUsed": ["filter", "recolor", "mask", "crop", "resize", "composite", "conversion"],
+  "publicWritten": false,
+  "outputs": [
+    {"finish":"original","file":"original.png","source":"exec-03c2bb5a-a64e-4069-b118-6ce1e0febb20.png","sha256":"7c5d100ccaf96792bdaceb834b595f094babb20463a48cdce2905ca6b56d66f1"},
+    {"finish":"negro","file":"negro.png","source":"exec-e84283b1-bc4f-45da-b60d-25099a4210b0.png","sha256":"06c09ec337bfdb7b0a47648255d8c78b7691d13d558adc2b02e88f1e03bd50a2"},
+    {"finish":"wengue","file":"wengue.png","source":"exec-ef85f18c-fb8d-48bb-aafa-ace8dbb746d7.png","sha256":"462dddd30ee1b025e3639931a1bf1cd4ae03b332d0910662ca30dcedc38cd5e3"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","source":"exec-b8571ea3-79ed-414a-a698-1df40837e27b.png","sha256":"c39f9bb2fe2e95ad438d00afa29b6ea976cea6e74c805ad4a87a116f28caf554"},
+    {"finish":"antracita","file":"antracita.png","source":"exec-024937b7-34f8-46d8-94e6-74c51bebd477.png","sha256":"60cd32a02746712cb96cdb6a5e409ef0e7471991f61900098877dacea60595ff"},
+    {"finish":"nogal","file":"nogal.png","source":"exec-eb0d4e06-43fb-46d7-965c-0327533f90cf.png","sha256":"6740ad347f0ad8a5917817f058d835f0d2c287302b3a27d9e31a7c15d7f194af"},
+    {"finish":"roble","file":"roble.png","source":"exec-c81e900e-1b31-400a-8185-1161ebbcec21.png","sha256":"d1c9a7890a83fc0f173f293292720d9de71d515637ea52ed5020ca3f002c2b15"},
+    {"finish":"gris-claro","file":"gris-claro.png","source":"exec-c4952617-decb-4892-a183-478ea599d5c1.png","sha256":"0411e9f590ec3dbe08a3e4e152c42d3c129237ec8eb577ab914df7541eaa645a"},
+    {"finish":"natural","file":"natural.png","source":"exec-6985a89d-6c45-4eaf-83bc-7ae3ad2bd3ed.png","sha256":"e3ed76d6fdc3304c0c038f6e5518f54f7fb82b350abaaff5bf52229c10edf0b2"},
+    {"finish":"blanco","file":"blanco.png","source":"exec-8647b1da-4dc3-4d72-b2e1-ee1a73daee69.png","sha256":"9673fe5e0f845811156dcf087db05cbe37b89701b3aec5b42675592aa91d85a7"}
+  ],
+  "rejected": [
+    {"finish":"original","attempt":1,"file":"_rejected/original-attempt1-margin.png","reason":"left/right white margin exceeded tolerance"},
+    {"finish":"antracita","attempt":1,"file":"_rejected/antracita-attempt1-margin.png","reason":"white margin exceeded tolerance"}
+  ]
+}

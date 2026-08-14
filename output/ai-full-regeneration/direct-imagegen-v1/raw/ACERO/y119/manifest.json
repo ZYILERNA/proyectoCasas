@@ -1,0 +1,27 @@
+{
+  "schema": "wonly-direct-imagegen-raw-manifest/v2",
+  "model": "ACERO/y119",
+  "status": "PASS_10_OF_10",
+  "policy": "NO_LOGO",
+  "master": {
+    "path": "output/ai-full-regeneration/pilots/ACERO/y119/master-no-logo-ai-tight.png",
+    "sha256": "d906fbcbbc7c97e1c06dc9517188c47db56086d3c69013f65c68c8c4b7a2e677"
+  },
+  "activeAssets": [
+    {"finish":"original","file":"original.png","sha256":"1231530decbef0c0536da73eba204d2420754e9b1029d6ce60df8205e41a54bb","width":848,"height":1854},
+    {"finish":"negro","file":"negro.png","sha256":"c1f38d5d69b9982d4dbb943a5f38aea87dcbf26d208faaee458dff3659966d60","width":847,"height":1857,"imageGenOutput":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-1c41f153-61f1-441a-8a0e-1470d90c53cf.png"},
+    {"finish":"wengue","file":"wengue.png","sha256":"2acf8c52db35b2fad1327b0c592ea81268a9e1d5371a789c8149bc49ea87d9d8","width":848,"height":1855,"imageGenOutput":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-329e2cab-2706-4c55-9dab-cbac7e33d46d.png"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","sha256":"45e09e86c7be662862a753fa04613d25093da4ebd96f670071ff4a348d46b924","width":847,"height":1857,"imageGenOutput":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-5aae414b-112c-4aa2-9ca5-75a5b17a0fca.png"},
+    {"finish":"antracita","file":"antracita.png","sha256":"2bf7f113187e8894060d58585a2a2a27bb0275e98c9f5baebe41dc856f15e5e8","width":848,"height":1855,"imageGenOutput":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-8ed60ef8-c439-4e18-9409-1b70f468162e.png"},
+    {"finish":"nogal","file":"nogal.png","sha256":"3b698e674f7d3ab30f22ad50a3e55884269741f82d43777e71cdb12fc40afef7","width":848,"height":1855},
+    {"finish":"roble","file":"roble.png","sha256":"9bce0d633dd438401ef80f5d4a2459c10ecc1b1d9685cdc26009626a3692e58b","width":847,"height":1857,"imageGenOutput":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-7e06e400-dd29-4b86-827e-f04c98cc8c67.png"},
+    {"finish":"gris-claro","file":"gris-claro.png","sha256":"110f629731e5ec02d03b3024a87c89e6f59694c74034f7c5afd4aff9609951b7","width":848,"height":1855},
+    {"finish":"natural","file":"natural.png","sha256":"a6ccf728ca112ae721f59e87b1948ecbe70a29ca4e18a59fb6f5aed02f968e29","width":848,"height":1855,"imageGenOutput":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-599ba279-5fb0-4cf1-99a0-e57d58352420.png"},
+    {"finish":"blanco","file":"blanco.png","sha256":"95b6987c53f59ebb102a6c7239ad7c9332c2f8f17fa6ba3f83122ac78b84689f","width":848,"height":1855}
+  ],
+  "activeAssetCount": 10,
+  "uniqueAssetHashes": 10,
+  "converted": false,
+  "publicWritten": false,
+  "applyAuthorized": false
+}

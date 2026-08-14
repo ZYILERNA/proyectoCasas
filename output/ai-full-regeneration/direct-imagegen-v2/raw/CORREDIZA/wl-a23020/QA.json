@@ -1,0 +1,57 @@
+{
+  "schema": "wonly-direct-imagegen-raw-qa/v2",
+  "category": "CORREDIZA",
+  "model": "wl-a23020",
+  "status": "PASS_10_OF_10",
+  "policy": "NO_LOGO",
+  "generation": {
+    "engine": "built-in ImageGen",
+    "independentCallPerAsset": true,
+    "singleReferenceOnly": true,
+    "reference": "output/ai-full-regeneration/large-doors/CORREDIZA/wl-a23020/master-no-logo-ai.png",
+    "referenceSha256": "bcd7050d73cf77bce0ff3646e15a432bc9388f9990fc2c0e21dfb754085c9a81",
+    "usedPreviousOutputAsReference": false,
+    "usedLogoReference": false,
+    "filters": false,
+    "localRecolor": false,
+    "masks": false,
+    "crop": false,
+    "resize": false,
+    "composite": false,
+    "converted": false,
+    "publicWritten": false
+  },
+  "visualQa": {
+    "completeOuterFrame": true,
+    "frontOrthographic": true,
+    "twoSlidingGlassPanels": true,
+    "centralOverlappingMeetingStile": true,
+    "muntinLayoutPreserved": true,
+    "twoRecessedPulls": true,
+    "logoCount": 0,
+    "visibleTextOrPseudotextCount": 0,
+    "reviewedAtOriginalDetail": true
+  },
+  "marginPolicy": {
+    "preferredMaxPx": 8,
+    "documentedTolerancePx": 11,
+    "allFramesComplete": true,
+    "maximumObservedPx": 4,
+    "minimumCoveragePercent": 99.114
+  },
+  "assets": [
+    {"finish":"original","file":"original.png","generatorId":"exec-5a63ef4c-9515-40ba-8659-8a050ce1a435","attempt":1,"width":1145,"height":1374,"marginsLTRB":[3,3,3,2],"coveragePercent":99.114,"sha256":"5d758d7804b8333677de62f8bf9885c32c9e73000c345c3d9557d040257725bd","pass":true},
+    {"finish":"negro","file":"negro.png","generatorId":"exec-81d568e6-09af-452d-8bc9-90341ee2a461","attempt":1,"width":1145,"height":1374,"marginsLTRB":[1,0,0,0],"coveragePercent":99.913,"sha256":"d8efde76673a33286e65c945635d9db02ed8852cf7fc56764736fb7b6b7895ab","pass":true},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-fec969f1-c8bd-4a39-9156-07e668b7e418","attempt":1,"width":1145,"height":1374,"marginsLTRB":[0,0,0,0],"coveragePercent":100.000,"sha256":"2b5187cbbec58fee57b7d4fc68189964d03a8073c9eb27fbc41f789461bead93","pass":true},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-48b06fe2-0baf-4735-b120-3306997eb8cd","attempt":1,"width":1144,"height":1375,"marginsLTRB":[2,2,2,2],"coveragePercent":99.360,"sha256":"ce515432b72ae6055a1bc1bc671521ba8687f73f23f26c39a2a90cc4cb6ecd2d","pass":true},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-2b413878-e7bf-4645-99c4-926dd183acfb","attempt":1,"width":1145,"height":1373,"marginsLTRB":[2,2,2,2],"coveragePercent":99.360,"sha256":"716efe5110b4ae6d755b0160768fe4b138fda8bfac4e99a1ae6fa48a6c8bcf65","pass":true},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-57b8994e-8424-40ef-b778-83976834c987","attempt":1,"width":1145,"height":1373,"marginsLTRB":[0,0,0,0],"coveragePercent":100.000,"sha256":"0e997b47f8b3ee2816c855b3a4bfe1c00163320055986a2066d4630da29a44bc","pass":true},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-4a54b696-df24-4653-9fed-a4807dc3ec6f","attempt":1,"width":1145,"height":1373,"marginsLTRB":[0,0,0,0],"coveragePercent":100.000,"sha256":"3530b30bc7cebcd83419275e54993352b9b0c0a411603a32752c6734be3851a1","pass":true},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-33cc5b3e-78a7-456f-8ee0-b1f64e7c32f4","attempt":1,"width":1145,"height":1373,"marginsLTRB":[3,3,4,0],"coveragePercent":99.171,"sha256":"1807d10a4c66e27956f13d2ea3aa5e5590d1d22878b6358e2023c9a16bed5c50","pass":true},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-f3cd2706-4656-4711-9d89-6757aa2793a9","attempt":1,"width":1145,"height":1374,"marginsLTRB":[2,2,3,2],"coveragePercent":99.273,"sha256":"eea1ad9d83651f8f1b8ee8079cc6534891170d077782ec1c4f4842f9bc342cce","pass":true},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-44c80baf-271a-4279-89cd-447ec79be64c","attempt":1,"width":1144,"height":1375,"marginsLTRB":[2,2,2,3],"coveragePercent":99.288,"sha256":"81b10bee4c9652f76498c15a11ebbf097739366983d5fb80c366471ff194eda8","pass":true}
+  ],
+  "rejectedAttempts": 0,
+  "safeToPromote": false,
+  "promotionStatus": "NOT_REQUESTED"
+}

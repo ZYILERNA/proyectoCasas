@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "model": "AI/x70-shunliu",
+  "policy": "NO_LOGO",
+  "generatedAt": "2026-08-13",
+  "generation": {
+    "method": "built-in ImageGen direct independent calls",
+    "onlyReference": "output/ai-full-regeneration/masters/AI/x70-shunliu/master-no-logo-ai-tight.png",
+    "onlyReferenceSha256": "3f4e70ac3308e66c0bcea3f8b41ad3e37d15e53c2d729724aec870b040299fb1",
+    "logoReferenceUsed": false,
+    "generatedOutputUsedAsInput": false,
+    "filtersRecolorMasksCompositeCropResize": false
+  },
+  "promotion": {"converted":false,"publicWritten":false,"applyAuthorized":false,"status":"RAW_STAGING_ONLY"},
+  "accepted": [
+    {"finish":"original","file":"original.png","generatorId":"exec-5056fca5-b980-412b-875a-0a3126289b81","width":916,"height":1718,"margin":{"left":1,"top":1,"right":3,"bottom":0,"maximum":3},"sha256":"adf04f5b7679a138a927b104c09f27e9cecf5ba34982458f02dd2a38ed603846"},
+    {"finish":"negro","file":"negro.png","generatorId":"exec-7f47c4bd-db02-4560-958f-f62a8f725ceb","width":916,"height":1717,"margin":{"left":0,"top":0,"right":0,"bottom":0,"maximum":0},"sha256":"a36e0f2055c700c0bffe1fde58611f009972ec06f5d39ef0dfd36d6723ed7e66"},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-ba8b8c6e-b588-4ae8-8957-cbe31c5c9136","width":916,"height":1718,"margin":{"left":0,"top":0,"right":0,"bottom":0,"maximum":0},"sha256":"44d3748386cd454012564154a9abe737fc21c29f04cd6a0afbe41c00ccf6e81d"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-99494dd7-4518-4686-a0ab-75fe45a31987","width":916,"height":1717,"margin":{"left":0,"top":0,"right":0,"bottom":0,"maximum":0},"sha256":"39962ed83a82917314b87590d1cd709902136525645ea2d8992db2b46e4aa4ac"},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-371aef5b-630d-4879-a36a-9471e82f3947","width":915,"height":1718,"margin":{"left":0,"top":0,"right":0,"bottom":0,"maximum":0},"sha256":"20a82d714864d6d043cac62813734b98de9d363e1e89530b6c87a49c7933a309"},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-ebc09b59-0689-4fce-9f67-253552d5bc0f","width":916,"height":1718,"margin":{"left":0,"top":0,"right":0,"bottom":0,"maximum":0},"sha256":"014845f354b062f98482a0196d5fd6d72cae50926a384e7791f78625f84fb169"},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-52dfd156-9a24-47a1-9eaf-43ee278c401c","width":915,"height":1718,"margin":{"left":0,"top":0,"right":0,"bottom":0,"maximum":0},"sha256":"daf7db62d46b72d46ae5177ea5f345393bc0373534aacab47345e60b39931d71"},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-a7e1503a-476d-4f8c-807d-be0555981b33","width":916,"height":1718,"margin":{"left":0,"top":2,"right":2,"bottom":0,"maximum":2},"sha256":"1498f80e4722d1abe5fc2adde7289f0e60295eb0de478854e8c891a92e92d7bd"},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-eb23b5ff-07b6-4d28-9c69-58a6f5cf8391","width":916,"height":1718,"margin":{"left":0,"top":0,"right":0,"bottom":0,"maximum":0},"sha256":"0cd65b35518c7d3db189dc556ff24fac87e23aef539567617bcbb575f311384f"},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-16a4401c-e9dd-4fc3-8e6e-e23bbdd8fc98","width":916,"height":1718,"margin":{"left":0,"top":0,"right":0,"bottom":0,"maximum":0},"sha256":"232474125d7f69bf235de3f8b2b4ad652c04bfc15c2a9772123903d83c386657"}
+  ],
+  "rejectedAttempts": 5,
+  "invalidatedLegacy": {"path":"output/ai-full-regeneration/_invalidated-no-logo-policy/invalid-logo-policy-2026-08-13/AI/x70-shunliu","copiedFileCount":51,"status":"NEVER_PROMOTE"}
+}
+

@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "model": "AI/x50",
+  "status": "PASS",
+  "score": "10/10",
+  "auditedAt": "2026-08-14",
+  "policy": "KEEP_WONLY: exactly one official WONLY logo and no other text, letters, digits, badges or pseudotext; non-alphabetic functional keypad dots/icons are allowed.",
+  "summary": {
+    "requested": 10,
+    "pass": 10,
+    "fail": 0,
+    "uniqueSha256": 10,
+    "firstAttemptAccepted": 10,
+    "secondAttemptsUsed": 0
+  },
+  "sourcePolicy": "Every accepted PNG comes from an independent built-in ImageGen call that referenced only master-no-logo-ai-tight.png and the official logo-wonly.webp. No generated output was used as an input.",
+  "processing": "None on accepted assets. Raw ImageGen PNGs only; no filters, local recolor, masks, crop, resize, composite or conversion. The files under qa/ are non-promotable inspection derivatives only.",
+  "promotion": "Raw staging only. No public write or conversion was performed.",
+  "visualAudit": {
+    "completeOuterFrameAllTen": true,
+    "straightOnSingleLeafArchitectureAllTen": true,
+    "wideTopPanelAndSingleHorizontalSeamAllTen": true,
+    "leftRibbedZoneAndSmoothRightPanelAllTen": true,
+    "upperElectronicKeypadAndLowerReaderAllTen": true,
+    "exactlyOneOfficialWonlyAllTen": true,
+    "logoUpperRightTopPanelAllTen": true,
+    "zeroAdditionalTextOrPseudotextAllTen": true
+  },
+  "mechanicalAudit": {
+    "method": "Bounding box of pixels having any RGB channel below 245 on each untouched accepted PNG.",
+    "preferredMaximumMarginPx": 8,
+    "allowedTolerancePx": 11,
+    "observedMaximumRangePx": [3, 11],
+    "minimumObservedAxisCoveragePct": 98.1,
+    "allWithinTolerance": true,
+    "allAbove98PercentAxisCoverage": true
+  },
+  "qaSheets": [
+    {
+      "path": "output/ai-full-regeneration/direct-imagegen-v2/raw/AI/x50/qa/contact-sheet.png",
+      "sha256": "07c0014285d387c0eae8f4bbcb429f8ce01732dfddd9d972700816c44a5c6941"
+    },
+    {
+      "path": "output/ai-full-regeneration/direct-imagegen-v2/raw/AI/x50/qa/hardware-detail-sheet.png",
+      "sha256": "f6409c8bc2789527c4c8335332d47008482b26b72e05d9718c98382a9978a0cb"
+    },
+    {
+      "path": "output/ai-full-regeneration/direct-imagegen-v2/raw/AI/x50/qa/logo-detail-sheet.png",
+      "sha256": "6b38253fde2fd0ec21f03321c23c93545746bea4589dcd2080ffe8dcbf648757"
+    }
+  ],
+  "assets": [
+    {
+      "finish": "original",
+      "path": "output/ai-full-regeneration/direct-imagegen-v2/raw/AI/x50/original.png",
+      "generationOutput": "exec-0c0d2548-8e71-45b0-a88d-a5a0c0a8f72b.png",
+      "dimensions": { "width": 843, "height": 1864 },
+      "marginsPx": { "left": 2, "top": 2, "right": 3, "bottom": 0, "maximum": 3 },
+      "minimumAxisCoveragePct": 99.41,
+      "sha256": "c01630b21303887511ff055878929294c1dd486fcf41f665dc8d2ea1d554e97f",
+      "status": "PASS"
+    },
+    {
+      "finish": "negro",
+      "path": "output/ai-full-regeneration/direct-imagegen-v2/raw/AI/x50/negro.png",
+      "generationOutput": "exec-4e659f7d-b911-4a5a-8c63-2d8e21d21804.png",
+      "dimensions": { "width": 843, "height": 1864 },
+      "marginsPx": { "left": 9, "top": 9, "right": 7, "bottom": 7, "maximum": 9 },
+      "minimumAxisCoveragePct": 98.1,
+      "sha256": "728a528ac6f0a699220a761084d846f412763c29f325df426965b428eb897afd",
+      "status": "PASS_TOLERANCE"
+    },
+    {
+      "finish": "wengue",
+      "path": "output/ai-full-regeneration/direct-imagegen-v2/raw/AI/x50/wengue.png",
+      "generationOutput": "exec-3b878c40-8cdc-4ef2-b8d9-4f20075dff94.png",
+      "dimensions": { "width": 844, "height": 1864 },
+      "marginsPx": { "left": 9, "top": 11, "right": 7, "bottom": 0, "maximum": 11 },
+      "minimumAxisCoveragePct": 98.1,
+      "sha256": "6c6b8f133885b25318d2dbc71f3978ac777f04aa5053489a763d430609963320",
+      "status": "PASS_TOLERANCE"
+    },
+    {
+      "finish": "gris-oscuro",
+      "path": "output/ai-full-regeneration/direct-imagegen-v2/raw/AI/x50/gris-oscuro.png",
+      "generationOutput": "exec-8dabb95c-e167-425f-b7ce-ac5fb7e16cab.png",
+      "dimensions": { "width": 843, "height": 1866 },
+      "marginsPx": { "left": 1, "top": 7, "right": 4, "bottom": 0, "maximum": 7 },
+      "minimumAxisCoveragePct": 99.41,
+      "sha256": "59b50d89549a5eaf9b1983cca9719603c6c7d2996e925878999925c2d78ce926",
+      "status": "PASS"
+    },
+    {
+      "finish": "antracita",
+      "path": "output/ai-full-regeneration/direct-imagegen-v2/raw/AI/x50/antracita.png",
+      "generationOutput": "exec-9b757cd1-2b04-4f79-b3e4-932f15a5a59b.png",
+      "dimensions": { "width": 844, "height": 1864 },
+      "marginsPx": { "left": 6, "top": 10, "right": 6, "bottom": 6, "maximum": 10 },
+      "minimumAxisCoveragePct": 98.58,
+      "sha256": "0f4c7415cff936e8036a3e58b8ad251480c5055424a573f71b6047f5aaeb463b",
+      "status": "PASS_TOLERANCE"
+    },
+    {
+      "finish": "nogal",
+      "path": "output/ai-full-regeneration/direct-imagegen-v2/raw/AI/x50/nogal.png",
+      "generationOutput": "exec-0527d767-dbba-45c2-adc2-b6e4d776aff4.png",
+      "dimensions": { "width": 843, "height": 1866 },
+      "marginsPx": { "left": 7, "top": 9, "right": 6, "bottom": 5, "maximum": 9 },
+      "minimumAxisCoveragePct": 98.46,
+      "sha256": "317b7ed49cfeef77ebe51ece6598bce530f97a9c0d0f50a04ad8720b59c62df5",
+      "status": "PASS_TOLERANCE"
+    },
+    {
+      "finish": "roble",
+      "path": "output/ai-full-regeneration/direct-imagegen-v2/raw/AI/x50/roble.png",
+      "generationOutput": "exec-9f144931-daaf-4597-b979-b1867485efc8.png",
+      "dimensions": { "width": 844, "height": 1863 },
+      "marginsPx": { "left": 6, "top": 6, "right": 6, "bottom": 6, "maximum": 6 },
+      "minimumAxisCoveragePct": 98.58,
+      "sha256": "a03519e327342cfcc0d92e378436c4e27e307af89a53adb3b5113ef14747e5e5",
+      "status": "PASS"
+    },
+    {
+      "finish": "gris-claro",
+      "path": "output/ai-full-regeneration/direct-imagegen-v2/raw/AI/x50/gris-claro.png",
+      "generationOutput": "exec-01b524a7-fbcb-4f37-887e-76f3a0a2cf73.png",
+      "dimensions": { "width": 844, "height": 1864 },
+      "marginsPx": { "left": 3, "top": 6, "right": 6, "bottom": 0, "maximum": 6 },
+      "minimumAxisCoveragePct": 98.93,
+      "sha256": "7580135bd2a7fe7764b1bd274e630996da12a1189a9522dfe17d4d800e37c99e",
+      "status": "PASS"
+    },
+    {
+      "finish": "natural",
+      "path": "output/ai-full-regeneration/direct-imagegen-v2/raw/AI/x50/natural.png",
+      "generationOutput": "exec-ca92e099-0bee-4e88-ab14-f90941d9e38a.png",
+      "dimensions": { "width": 843, "height": 1864 },
+      "marginsPx": { "left": 4, "top": 3, "right": 6, "bottom": 0, "maximum": 6 },
+      "minimumAxisCoveragePct": 98.81,
+      "sha256": "d147662d0469924fca0146cbce612812105c64148237ea2ea9564679494ff998",
+      "status": "PASS"
+    },
+    {
+      "finish": "blanco",
+      "path": "output/ai-full-regeneration/direct-imagegen-v2/raw/AI/x50/blanco.png",
+      "generationOutput": "exec-2ff5d78e-a6ca-48a5-bad4-82ffd48ca117.png",
+      "dimensions": { "width": 843, "height": 1864 },
+      "marginsPx": { "left": 4, "top": 8, "right": 4, "bottom": 11, "maximum": 11 },
+      "minimumAxisCoveragePct": 98.98,
+      "sha256": "4fe98514473dbe93c925dc21d0e30f44b5452b8f11e27b8961e5b1599baf8e3f",
+      "status": "PASS_TOLERANCE"
+    }
+  ]
+}

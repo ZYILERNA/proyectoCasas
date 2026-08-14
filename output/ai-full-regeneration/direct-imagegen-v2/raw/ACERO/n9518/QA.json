@@ -1,0 +1,38 @@
+{
+  "schema": "direct-imagegen-no-logo-qa/v1",
+  "model": "ACERO/n9518",
+  "status": "PASS_10_OF_10",
+  "sourceMaster": "output/ai-full-regeneration/masters/ACERO/n9518/master-no-logo-ai-tight.png",
+  "sourceMasterSha256": "c7733426281884c777dc6b0aa8174a356f9d91e39465e77a460db2f1f9fd815e",
+  "policy": "NO_LOGO",
+  "generation": {
+    "mode": "built-in ImageGen",
+    "independentCallPerAsset": true,
+    "masterOnlyReference": true,
+    "logoReference": false,
+    "outputReference": false,
+    "filters": false,
+    "localRecolor": false,
+    "masks": false,
+    "crop": false,
+    "resize": false,
+    "composite": false
+  },
+  "visualQA": {
+    "completeFrameAndThreshold": true,
+    "architecturePreserved": true,
+    "smartLockPreserved": true,
+    "zeroLogoWordmarkTextMicrotextPseudotext": true,
+    "contactSheet": "output/ai-full-regeneration/direct-imagegen-v2/qa-cross/ACERO/n9518/contact-sheet.png",
+    "lockDetailSheet": "output/ai-full-regeneration/direct-imagegen-v2/qa-cross/ACERO/n9518/lock-detail-sheet.png"
+  },
+  "framing": {
+    "preferredMaximumMarginPixels": 8,
+    "documentedTolerancePixels": 11,
+    "exceptions": ["original", "negro", "wengue", "nogal"],
+    "exceptionBasis": "complete frame, almost no white, and greater than 98 percent product coverage"
+  },
+  "converted": false,
+  "publicWritten": false,
+  "promotionAuthorized": false
+}

@@ -1,0 +1,54 @@
+{
+  "schema": "wonly-direct-imagegen-qa/v2",
+  "model": "AI/x50-pro",
+  "status": "PASS_10_OF_10",
+  "policy": "KEEP_WONLY",
+  "reviewedAt": "2026-08-14",
+  "execution": {
+    "mode": "built-in ImageGen",
+    "oneIndependentCallPerActiveAsset": true,
+    "referencesPerCall": [
+      "output/ai-full-regeneration/masters/AI/x50-pro/master-no-logo-ai-tight.png",
+      "public/images/logo-wonly.webp"
+    ],
+    "generatedOutputsUsedAsReferences": false,
+    "filtersOrRecolor": false,
+    "masksOrComposite": false,
+    "cropOrResize": false,
+    "converted": false,
+    "publicWritten": false
+  },
+  "criteria": {
+    "framing": "complete frame, nearly edge-to-edge, RGB<245 margin target 0-8 px",
+    "architecture": "X50 Pro header, three vertical fields and ribbing preserved",
+    "hardware": "one empty upper black-glass plate plus one intact lower module",
+    "branding": "exactly one official WONLY and no other text or pseudotext"
+  },
+  "summary": {
+    "assets": 10,
+    "pass": 10,
+    "fail": 0,
+    "uniqueSha256": 10,
+    "maximumMarginPx": 8,
+    "promotionAllowed": false
+  },
+  "results": [
+    {"finish":"original","status":"PASS","margins245":[5,5,5,3]},
+    {"finish":"negro","status":"PASS","margins245":[8,8,8,7]},
+    {"finish":"wengue","status":"PASS","margins245":[5,5,7,4]},
+    {"finish":"gris-oscuro","status":"PASS","margins245":[2,3,3,0]},
+    {"finish":"antracita","status":"PASS","margins245":[2,2,7,0]},
+    {"finish":"nogal","status":"PASS","margins245":[7,8,6,0]},
+    {"finish":"roble","status":"PASS","margins245":[0,0,0,0]},
+    {"finish":"gris-claro","status":"PASS","margins245":[7,5,6,5]},
+    {"finish":"natural","status":"PASS","margins245":[3,2,2,0],"note":"final clean direct ImageGen replacement; upper lock plate is featureless"},
+    {"finish":"blanco","status":"PASS","margins245":[5,3,7,7]}
+  ],
+  "visualReview": {
+    "completeDoorAndFrame": "PASS_10_OF_10",
+    "architectureAndHardware": "PASS_10_OF_10",
+    "exactlyOneWonly": "PASS_10_OF_10",
+    "noAdditionalTextOrPseudotext": "PASS_10_OF_10",
+    "noHalosOrRectangularPatches": "PASS_10_OF_10"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "wonly-direct-imagegen-raw-manifest/v2",
+  "category": "EVACUACION",
+  "model": "mk-01",
+  "status": "PASS_10_OF_10",
+  "logoPolicy": "NO_LOGO",
+  "referenceImages": [
+    {
+      "role": "sole-master",
+      "path": "output/ai-full-regeneration/new-defects/EVACUACION/mk-01/master-no-logo-ai.png",
+      "sha256": "bc15ecc297b33781223a18274a09d42c5b7cce597435f1773c9aabb4ead38b20"
+    }
+  ],
+  "activeFinishes": ["original","negro","wengue","gris-oscuro","antracita","nogal","roble","gris-claro","natural","blanco"],
+  "activeCount": 10,
+  "rejectedCount": 6,
+  "generation": {
+    "tool": "built-in ImageGen",
+    "independentCallPerAsset": true,
+    "outputUsedAsReference": false,
+    "logoReferenceUsed": false,
+    "postprocessingUsed": false
+  },
+  "converted": false,
+  "publicWritten": false,
+  "safeToPromote": false,
+  "qa": "QA.json",
+  "prompts": "PROMPTS.md"
+}

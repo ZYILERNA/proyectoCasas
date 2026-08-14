@@ -1,0 +1,175 @@
+{
+  "schema": "direct-imagegen-model-qa/v2",
+  "model": "ACORAZADA/wl008",
+  "status": "PASS",
+  "master": "output/ai-full-regeneration/masters/ACORAZADA/wl008/master-no-logo-ai-tight.png",
+  "generation": {
+    "tool": "built-in ImageGen",
+    "totalIndependentCalls": 15,
+    "activeIndependentCalls": 10,
+    "rejectedAttempts": 5,
+    "onlyMasterReferencedPerCall": true,
+    "outputReferencesUsed": false,
+    "logoReferencesUsed": false,
+    "filtersMasksCropsResizesCompositesUsed": false
+  },
+  "criteria": {
+    "marginDetection": "First pixel with any RGB channel below 245, measured independently from each canvas edge",
+    "maximumMarginPixels": 8,
+    "visual": "Complete frontal WL008 and frame; exactly six panels; preserved central stile, lock, sensor, rosette, lever and hinge arrangement; zero logo/text/microtext/pseudotext or extra hardware"
+  },
+  "assets": [
+    {
+      "finish": "original",
+      "generatorId": "exec-0ae0c863-ddf4-4b83-9aee-187a1dbaf5b0",
+      "file": "original.png",
+      "width": 912,
+      "height": 1725,
+      "margins": { "left": 4, "top": 4, "right": 6, "bottom": 6 },
+      "sha256": "27e7b16daed7908ea6660084add9d1530f9def4b378c2bd2c9608b231c4fbc21",
+      "visual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "finish": "negro",
+      "generatorId": "exec-55584839-3286-40fb-a480-161992cee014",
+      "file": "negro.png",
+      "width": 912,
+      "height": 1725,
+      "margins": { "left": 7, "top": 5, "right": 8, "bottom": 5 },
+      "sha256": "91af89690b98927dec33b836c4af72bbf477d6fbce4bb3438c234280944858aa",
+      "visual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "finish": "wengue",
+      "generatorId": "exec-79c4d1ae-045a-4eeb-a231-d706cbf82e1c",
+      "file": "wengue.png",
+      "width": 912,
+      "height": 1725,
+      "margins": { "left": 8, "top": 4, "right": 6, "bottom": 0 },
+      "sha256": "8d36c9d3b14d3912fef24c708362ba2640ca7dcd24c55d543202ecfa711b16f9",
+      "visual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "finish": "gris-oscuro",
+      "generatorId": "exec-d91ce2c8-0bf9-42a8-a92f-aa927e704053",
+      "file": "gris-oscuro.png",
+      "width": 912,
+      "height": 1725,
+      "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 },
+      "sha256": "e53706f8223d3903a5983accd726fc0326b255a217528d771dfe223daf02529d",
+      "visual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "finish": "antracita",
+      "generatorId": "exec-2486b816-0ec7-4c57-849c-0547cf9459cb",
+      "file": "antracita.png",
+      "width": 912,
+      "height": 1725,
+      "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 },
+      "sha256": "034074c9afaa8b157006d4ec817f1c855b4ffbab8bd28c3c13f916858a55dc07",
+      "visual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "finish": "nogal",
+      "generatorId": "exec-7088eda0-3b38-4e99-a8e6-00aa9cbeaa54",
+      "file": "nogal.png",
+      "width": 912,
+      "height": 1725,
+      "margins": { "left": 5, "top": 4, "right": 5, "bottom": 8 },
+      "sha256": "c7ed372a338aefa78a89c50f8ab6885df3ed77d51276775207b1aea35317e744",
+      "visual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "finish": "roble",
+      "generatorId": "exec-3424d2f5-5e36-4e3a-887b-37829f7ec7a2",
+      "file": "roble.png",
+      "width": 912,
+      "height": 1725,
+      "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 },
+      "sha256": "aeb2426d13bfd05beeadbad842985493018050172a65dac0a71b0cdda637ffe8",
+      "visual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "finish": "gris-claro",
+      "generatorId": "exec-c38eb20f-64c3-4495-bc24-b466dcd124ce",
+      "file": "gris-claro.png",
+      "width": 911,
+      "height": 1726,
+      "margins": { "left": 0, "top": 2, "right": 1, "bottom": 0 },
+      "sha256": "4abc5c9d3a74ae866a82071fb43107417a4064269add76eb3f74b8a140884ae4",
+      "visual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "finish": "natural",
+      "generatorId": "exec-c5328bc6-ca8e-4ac8-aef1-eb3c792c4d1f",
+      "file": "natural.png",
+      "width": 912,
+      "height": 1725,
+      "margins": { "left": 3, "top": 3, "right": 3, "bottom": 5 },
+      "sha256": "e47ae771a5ca8e65eee0d11e56f9132a4fe4ad02c00c2fce48e444de3dc9a846",
+      "visual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "finish": "blanco",
+      "generatorId": "exec-2928f93b-f256-4906-af95-637494d1d410",
+      "file": "blanco.png",
+      "width": 912,
+      "height": 1725,
+      "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 },
+      "sha256": "75c496bc3f4ae512d7c507735da6b7d2fe4a7d690fab8edb319a9e1f1ff453a4",
+      "visual": "PASS",
+      "status": "PASS"
+    }
+  ],
+  "rejectedAttempts": [
+    {
+      "finish": "gris-oscuro",
+      "generatorId": "exec-b4022277-f039-4022-8957-57997420413b",
+      "reason": "top margin 9 px",
+      "path": "_rejected/gris-oscuro-margin-top9.png"
+    },
+    {
+      "finish": "antracita",
+      "generatorId": "exec-4dc14cf6-243b-4a5f-87ce-63e5c11a8ffd",
+      "reason": "bottom margin 10 px",
+      "path": "_rejected/antracita-margin-bottom10.png"
+    },
+    {
+      "finish": "roble",
+      "generatorId": "exec-c4e892c9-2cb9-45d7-a3ee-033719fd160a",
+      "reason": "margins 21/8/22/16 px",
+      "path": "_rejected/roble-margin-wide.png"
+    },
+    {
+      "finish": "gris-claro",
+      "generatorId": "exec-1ec1bc82-3317-466c-8431-5ee43d45d8ae",
+      "reason": "margins 8/8/13/12 px",
+      "path": "_rejected/gris-claro-margin-wide.png"
+    },
+    {
+      "finish": "blanco",
+      "generatorId": "exec-36ed4774-25a0-4dc2-8a99-7c1c592b75f0",
+      "reason": "margins 11/5/11/5 px",
+      "path": "_rejected/blanco-margin-wide.png"
+    }
+  ],
+  "summary": {
+    "active": 10,
+    "uniqueHashes": 10,
+    "visualPass": 10,
+    "marginPass": 10,
+    "maximumMarginPixels": 8,
+    "overall": "PASS",
+    "conversionPerformed": false,
+    "publicFilesModified": false
+  }
+}

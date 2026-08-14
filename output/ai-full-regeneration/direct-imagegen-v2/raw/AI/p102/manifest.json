@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "model": "AI/p102",
+  "policy": "KEEP_WONLY",
+  "generatedAt": "2026-08-14",
+  "generation": {
+    "method": "built-in ImageGen direct independent calls",
+    "onlyArchitecturalReference": "output/ai-full-regeneration/masters/AI/p102/master-no-logo-ai-tight.png",
+    "architecturalReferenceSha256": "75e228a47241527564e8215b9ed59da44df0c5bcc3c537e5ec72346ba9a06bc1",
+    "onlyLogoReference": "public/images/logo-wonly.webp",
+    "logoReferenceSha256": "f55b5ae0b73967e7395c9e8f16dedb07c7d20e430e03f9c3a289c348e9fb2e1b",
+    "generatedOutputUsedAsInput": false,
+    "filtersRecolorMasksCompositeCropResize": false,
+    "conversion": false
+  },
+  "promotion": {
+    "publicWritten": false,
+    "applyAuthorized": false,
+    "status": "RAW_STAGING_ONLY"
+  },
+  "accepted": [
+    { "finish": "original", "file": "original.png", "generatorId": "exec-2f839bed-e8fd-4dd4-b0c7-c93747901e6c", "width": 863, "height": 1822, "margin": { "left": 2, "top": 3, "right": 0, "bottom": 0, "maximum": 3 }, "sha256": "d9a4b86c11a05c7c0ddad090a72538e410fd855f695d295366c013931ba9d84d" },
+    { "finish": "negro", "file": "negro.png", "generatorId": "exec-934c6bc1-7f2f-4734-9b58-a0c5fc06f830", "width": 864, "height": 1821, "margin": { "left": 2, "top": 3, "right": 2, "bottom": 4, "maximum": 4 }, "sha256": "7c4399249122beb9a3137abb6f9f81674d44c4b6ae9ad165b3996c25f7c7d885" },
+    { "finish": "wengue", "file": "wengue.png", "generatorId": "exec-bcae44e1-ccbd-40a2-bfc7-b6f614f161ae", "width": 864, "height": 1820, "margin": { "left": 9, "top": 5, "right": 8, "bottom": 0, "maximum": 9 }, "sha256": "bbcb46ecb9e13e1fa4f95253617ffa3eadedc74604e763cb97b0d38eceb5b5b8" },
+    { "finish": "gris-oscuro", "file": "gris-oscuro.png", "generatorId": "exec-3722fd3d-c7db-444d-b5dd-84deb4e3501a", "width": 864, "height": 1821, "margin": { "left": 2, "top": 2, "right": 2, "bottom": 0, "maximum": 2 }, "sha256": "7c0b884844c569e03b513ea5fbd0f936f233ccc30cbc61f770a0549f4cfdd1d6" },
+    { "finish": "antracita", "file": "antracita.png", "generatorId": "exec-7be2e5ff-ed29-4fb6-bb55-340f5f85cef5", "width": 864, "height": 1820, "margin": { "left": 8, "top": 8, "right": 8, "bottom": 0, "maximum": 8 }, "sha256": "71dcf9c7f5f92e0f5f61e0049dd3b46491fdb719a541fec5f0ddaf25e7967049" },
+    { "finish": "nogal", "file": "nogal.png", "generatorId": "exec-ea0b671d-8bac-4b41-90ee-c0f4febc5a62", "width": 864, "height": 1820, "margin": { "left": 2, "top": 2, "right": 2, "bottom": 0, "maximum": 2 }, "sha256": "e1075f470d792ea6ae96011167b1b05d634c32b21fc533d65d4a7dd9688041b0" },
+    { "finish": "roble", "file": "roble.png", "generatorId": "exec-8ad4e005-e5c0-434f-8754-9e1151186970", "width": 864, "height": 1820, "margin": { "left": 0, "top": 2, "right": 3, "bottom": 0, "maximum": 3 }, "sha256": "c83817dbd0ce857496a92acb11b80ced079ab610e301a0d59620f2762cd36769" },
+    { "finish": "gris-claro", "file": "gris-claro.png", "generatorId": "exec-3114d378-29ed-4f99-b2dc-12f20819ba84", "width": 864, "height": 1821, "margin": { "left": 0, "top": 0, "right": 0, "bottom": 0, "maximum": 0 }, "sha256": "28dd69d8d2afd7f3461c6ab995c2922a7aa4abbf3e1747806cc146aaa0de4158" },
+    { "finish": "natural", "file": "natural.png", "generatorId": "exec-645fabee-83c1-4849-8291-0c4443527739", "width": 864, "height": 1820, "margin": { "left": 2, "top": 2, "right": 2, "bottom": 0, "maximum": 2 }, "sha256": "e71fd3b5fa9fa318c9549a7e6922ae1aff3661087f575de1ce8ff5f1c76cad26" },
+    { "finish": "blanco", "file": "blanco.png", "generatorId": "exec-21481035-d5a8-4cee-beb3-6637379c33c5", "width": 864, "height": 1821, "margin": { "left": 9, "top": 4, "right": 9, "bottom": 0, "maximum": 9 }, "sha256": "7c4a01a71d33fcbf68242eea77e7777b35723ab6a87b8401b729e053fa0fc274" }
+  ],
+  "rejected": {
+    "directory": "_rejected",
+    "neverPromote": true,
+    "reason": "Earlier candidates with excessive exterior margins; retained only as audit history."
+  }
+}

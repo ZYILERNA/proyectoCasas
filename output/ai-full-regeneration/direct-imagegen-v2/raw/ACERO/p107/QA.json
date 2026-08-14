@@ -1,0 +1,52 @@
+{
+  "schema": "wonly-direct-imagegen-qa/v2",
+  "model": "ACERO/p107",
+  "status": "PASS_10_OF_10",
+  "policy": "NO_LOGO",
+  "sourceMaster": "output/ai-full-regeneration/masters/ACERO/p107/master-no-logo-ai-tight.png",
+  "sourceMasterSha256": "3e950109308f15820c03dbed57cb09468bb484dba3f7b1f70f6e8aeac5f63436",
+  "generation": {
+    "tool": "built-in ImageGen",
+    "independentCalls": true,
+    "masterOnly": true,
+    "outputReferences": false,
+    "logoReference": false,
+    "filters": false,
+    "recolor": false,
+    "masks": false,
+    "crop": false,
+    "resize": false,
+    "composite": false,
+    "conversion": false,
+    "publicWritten": false
+  },
+  "visualQA": {
+    "completeFrame": true,
+    "straightFluting": true,
+    "singleSmartLock": true,
+    "canonicalLockFeatures": "one upper sensor, regular unlabeled keypad dots, and the canonical circular feature on the lower recessed pull",
+    "logoCount": 0,
+    "textOrPseudotextCount": 0,
+    "result": "PASS"
+  },
+  "summary": {
+    "activeAssets": 10,
+    "uniqueHashes": 10,
+    "rejectedFilesRetained": 17,
+    "maxObservedMarginPixels": 7,
+    "mechanicalPass": true,
+    "visualPass": true
+  },
+  "assets": [
+    {"finish":"original","file":"original.png","dimensions":[854,1842],"margins245":[2,2,2,0],"coveragePercent":[99.5316,99.8914],"sha256":"f2af828fc2f9ab7ab68a33b5bd359bc981e015ccf7e245018904bef8d092a015"},
+    {"finish":"negro","file":"negro.png","dimensions":[854,1842],"margins245":[4,4,5,0],"coveragePercent":[98.9461,99.7828],"sha256":"fe75a9c846ca7af8b8e5fdfb0e83edcb900943810ecfa54ca67d0bf4863417b2"},
+    {"finish":"wengue","file":"wengue.png","dimensions":[854,1842],"margins245":[0,0,0,0],"coveragePercent":[100.0,100.0],"sha256":"cdc360c6cab8852390015fc3d5deaf843dc4a1a91d13bdf036800a5e47d0911b"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","dimensions":[854,1842],"margins245":[3,3,3,5],"coveragePercent":[99.2974,99.5657],"sha256":"f3db8014464a882b084cf8681b9560ccc8043d1a9a7fbcbfd7148f2429090a92"},
+    {"finish":"antracita","file":"antracita.png","dimensions":[854,1842],"margins245":[0,0,0,0],"coveragePercent":[100.0,100.0],"sha256":"c9ed59fcfa485a4c8e993d481ab25a526d72fa783defc2f0fc60d670407ec15d"},
+    {"finish":"nogal","file":"nogal.png","dimensions":[854,1842],"margins245":[5,4,4,0],"coveragePercent":[98.9461,99.7828],"sha256":"feb5207616d6aca97007d5763620523892b7056110479326cdafe20dd9ee1cc7"},
+    {"finish":"roble","file":"roble.png","dimensions":[854,1842],"margins245":[0,0,0,0],"coveragePercent":[100.0,100.0],"sha256":"8dcc88e0e96587f542c098b4f027938d15a78b211f4906cc0844796bd2aa3b09"},
+    {"finish":"gris-claro","file":"gris-claro.png","dimensions":[854,1842],"margins245":[2,2,0,0],"coveragePercent":[99.7658,99.8914],"sha256":"b59d76bc26fd1230b71803651673a67d21a45370bf42cca1cb0b27d90de4f2e7"},
+    {"finish":"natural","file":"natural.png","dimensions":[854,1842],"margins245":[4,4,6,0],"coveragePercent":[98.829,99.7828],"sha256":"a5af9fff239d18012c5c6ce28821dbe3deabc1fb9b19ef1d86d6b81cafe0b68e","note":"Reclassified after comparison with the master: the circular feature on the lower pull is canonical hardware, not branding or invented text."},
+    {"finish":"blanco","file":"blanco.png","dimensions":[854,1842],"margins245":[5,6,7,2],"coveragePercent":[98.5948,99.5657],"sha256":"20e6b34450de1e03032284f7b3b77583a39ac924eb905fad7ff3b5ba67a61b15"}
+  ]
+}

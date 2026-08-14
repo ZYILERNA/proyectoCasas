@@ -1,0 +1,45 @@
+{
+  "schema": "direct-imagegen-model-qa/v2",
+  "model": "ACORAZADA/wl016",
+  "status": "PASS",
+  "auditedAt": "2026-08-13",
+  "master": "output/ai-full-regeneration/masters/ACORAZADA/wl016/master-no-logo-ai-tight.png",
+  "masterSha256": "adf9ab9ec6e8054f5b314aaf7cc569847fad9f2d9c8435eb1144551f6f776b83",
+  "generation": {
+    "tool": "built-in ImageGen",
+    "totalIndependentCalls": 10,
+    "activeIndependentCalls": 10,
+    "rejectedAttempts": 0,
+    "onlyMasterReferencedPerCall": true,
+    "generatedOutputReferencesUsed": false,
+    "logoReferencesUsed": false,
+    "filtersMasksCropsResizesCompositesUsed": false
+  },
+  "criteria": {
+    "marginDetection": "First pixel with any RGB channel below 248, measured independently from each canvas edge",
+    "maximumMarginPixels": 8,
+    "visual": "Complete frontal WL016 with full mitered frame and silver threshold; exactly one long vertical routed groove and five horizontal routed grooves, one central peephole, four right-side cylindrical hinges, one tall blank lock plate and one lever; zero logo, text, microtext or pseudotext"
+  },
+  "assets": [
+    { "finish": "original", "generatorId": "exec-31f8529f-098f-4f00-adb2-669be31098a4", "file": "original.png", "width": 860, "height": 1829, "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 }, "sha256": "f7aa83840ecc3a50043ff45ca28906146193e96930ac589b57aa7b213712d17e", "visual": "PASS", "status": "PASS" },
+    { "finish": "negro", "generatorId": "exec-5074de83-f113-4164-a68d-cee6f7f55a9b", "file": "negro.png", "width": 860, "height": 1829, "margins": { "left": 1, "top": 3, "right": 3, "bottom": 0 }, "sha256": "43672d6f68e5f8bb39524c76b6747537106e8f926144d678eb5ebc01cd90fd3f", "visual": "PASS", "status": "PASS" },
+    { "finish": "wengue", "generatorId": "exec-d4b40fe7-9ccc-4b09-8290-79c7ee4f44d4", "file": "wengue.png", "width": 860, "height": 1829, "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 }, "sha256": "f10060c99f3ac47f380f49215c5a0ebbbd8d2a1bc6fca2a1b3db39e649c6861d", "visual": "PASS", "status": "PASS" },
+    { "finish": "gris-oscuro", "generatorId": "exec-1ba9f079-5833-49e5-bc91-814ee65f8416", "file": "gris-oscuro.png", "width": 860, "height": 1829, "margins": { "left": 1, "top": 2, "right": 1, "bottom": 0 }, "sha256": "91db2e2bd8db40c7cf54a5a089c32b096a7e25b37a535eeaf3ae6665ee86e2fe", "visual": "PASS", "status": "PASS" },
+    { "finish": "antracita", "generatorId": "exec-779e605a-81c2-495d-b217-6697c793140b", "file": "antracita.png", "width": 860, "height": 1829, "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 }, "sha256": "7f27e60f0f2314c6dc45c4ee533c998abe93398d2bcd056f7e09cde12fb116ef", "visual": "PASS", "status": "PASS" },
+    { "finish": "nogal", "generatorId": "exec-831c81c6-40e9-4506-96cc-fa43a7246121", "file": "nogal.png", "width": 860, "height": 1829, "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 }, "sha256": "30b3972c3a52fa7ef234cb2c4cf5fd6f3bd6e12e5f2b24d699d7e3e733545b34", "visual": "PASS", "status": "PASS" },
+    { "finish": "roble", "generatorId": "exec-7920b38b-a6f2-4082-9fb3-68c2392769fd", "file": "roble.png", "width": 860, "height": 1829, "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 }, "sha256": "538ff4222152ecc79df729e7dd0ee3da77ce5cbb59437c2f32b840bb5367dc9e", "visual": "PASS", "status": "PASS" },
+    { "finish": "gris-claro", "generatorId": "exec-53fff523-2732-4b5c-a175-cb5b975d60ce", "file": "gris-claro.png", "width": 860, "height": 1829, "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 }, "sha256": "ee370f901920ca3f11077554fec2b8c77d06de8a1cc8a78ca07a36213082e7cc", "visual": "PASS", "status": "PASS" },
+    { "finish": "natural", "generatorId": "exec-fa45649f-373e-40c0-a5e0-74dcf81579ae", "file": "natural.png", "width": 860, "height": 1828, "margins": { "left": 1, "top": 2, "right": 3, "bottom": 0 }, "sha256": "81814c48795b9ac0570d0a98a04d73bc8940559ad2dfd6d376da90577df34fc8", "visual": "PASS", "status": "PASS" },
+    { "finish": "blanco", "generatorId": "exec-8ce90552-bb3a-4a1b-aa3f-abba9b17d3e2", "file": "blanco.png", "width": 860, "height": 1829, "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 }, "sha256": "ededf6c627bbf9cfaf73c5666ae8c6f4e2dcfb5cd8777dc73e507ee09dbaff20", "visual": "PASS", "status": "PASS" }
+  ],
+  "summary": {
+    "active": 10,
+    "uniqueHashes": 10,
+    "visualPass": 10,
+    "marginPass": 10,
+    "maximumObservedMarginPixels": 3,
+    "overall": "PASS",
+    "conversionPerformed": false,
+    "publicFilesModified": false
+  }
+}

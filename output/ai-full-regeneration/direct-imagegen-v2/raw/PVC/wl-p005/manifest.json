@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "model": "PVC/wl-p005",
+  "policy": "NO_LOGO",
+  "status": "PASS_10_OF_10",
+  "generatedAt": "2026-08-14",
+  "generation": {
+    "method": "independent built-in ImageGen calls",
+    "onlyReference": "output/ai-full-regeneration/new-defects/PVC/wl-p005/master-no-logo-ai.png",
+    "onlyReferenceSha256": "19ac3f0fbe589dc59930c941ab025ea1d10304e6ceba1b408a477997cada7d50",
+    "logoReferenceUsed": false,
+    "generatedOutputUsedAsInput": false,
+    "filtersRecolorMasksCropResizeComposite": false
+  },
+  "promotion": {
+    "converted": false,
+    "publicWritten": false,
+    "promoted": false,
+    "applyAuthorized": false,
+    "status": "RAW_STAGING_ONLY"
+  },
+  "accepted": [
+    {"finish":"original","file":"original.png","generatorId":"exec-e1069e14-129e-4069-8938-8aae949380be","sha256":"6f9dad68dbb6b553db1ba3f87fce46a3de53e43524a01c997ffa25d75b4daa53"},
+    {"finish":"negro","file":"negro.png","generatorId":"exec-7f233a71-be3d-4b1a-970d-7005e2c0df65","sha256":"02883285b2b5378b9acb984e5c4ac1cae8ef591f6915ed70e832e280463d6ff3"},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-8ff5b9c9-b41d-4912-a594-01dddbb939bb","sha256":"19d915990393a2a44ddfa5a7ecc6084906620da7da33a0916690e4c623135ac5"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-e5e71927-5a69-4623-bd46-8ecc5b5fff14","sha256":"5a03d80c397a9768fba8a4994b651a6d0550d6701cc5f8a56a82eaef6702f73d"},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-fb6aaae9-73c4-40b8-a5d0-d148f586da0f","sha256":"3cef502f907464e503cd32d2e89dda4a944c4e29ef825faeabfa29e64262dcb9"},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-ac897d0d-1547-4ad8-9334-8ced03fe32ff","sha256":"daebb46cfb5e4a7e25e346e14814967828d9c2a61ca0bd7d26dd3a71aeb1f2cf"},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-16bba555-d5bb-45ba-93c1-eb5ef7fdeee5","sha256":"da79a536f52006e35e630a0b23544a54586fc8174b6c8074040980d367cbac18"},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-6739a549-4ab3-4ef3-817c-ccf644e51028","sha256":"fff77e8489d1c35b0f81dbc6149fa12333ebdea3b4a1af4de7845acfa5c11613"},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-b71c7751-ac64-430a-a648-51ec25ffb222","sha256":"c3bb1e49e1aae478e7b2a9ebb48bd0d98e1ebffdc8da748bc545e13d6cc92a7d"},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-d5965ed0-9c18-4495-bd63-8168ed303efd","sha256":"2a931689bdaa9f90cedbeab29f0d66230020603f031ee0b73e739d0a17347e1e"}
+  ],
+  "naturalRecovery": {
+    "newAttemptLimit": 2,
+    "newAttemptsUsed": 1,
+    "sourceGeneratedImage": "C:/Users/zhen/.codex/generated_images/019fff83-7e4f-70d1-8540-77523b642109/exec-b71c7751-ac64-430a-a648-51ec25ffb222.png",
+    "workspaceCopyByteExact": true
+  },
+  "archivedPreviousBlockedState": "_rejected/QA-GENERATION-BLOCKED-pre-natural-recovery-2026-08-14.json"
+}

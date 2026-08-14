@@ -1,0 +1,49 @@
+{
+  "schema": "direct-imagegen-model-qa/v2",
+  "model": "ACERO/mid-night",
+  "status": "PASS",
+  "logoPolicy": "KEEP_WONLY",
+  "master": "output/ai-full-regeneration/masters/ACERO/mid-night/master-no-logo-ai-tight.png",
+  "canonicalLogo": "public/images/logo-wonly.webp",
+  "generation": {
+    "tool": "built-in ImageGen",
+    "totalIndependentCalls": 13,
+    "activeIndependentCalls": 10,
+    "rejectedAttempts": 3,
+    "maximumAttemptsUsedPerFinish": 2,
+    "onlyMasterAndCanonicalLogoReferencedPerCall": true,
+    "generatedOutputReferencesUsed": false,
+    "activeAssetPixelProcessing": "none",
+    "filtersRecolorsMasksCropsResizesCompositesUsedOnActiveAssets": false
+  },
+  "criteria": {
+    "marginDetection": "First pixel with any RGB channel below 235, measured independently from each canvas edge.",
+    "preferredMarginPixels": "0-8",
+    "acceptedMaximumMarginPixels": 11,
+    "minimumCoveragePerAxis": 0.98,
+    "architecture": "Complete straight-on mid-night frame, top header, narrow left fluted strip, large smooth slab, peephole and brushed-silver handle/lock preserved.",
+    "branding": "Exactly one canonical WONLY wordmark on the upper-right header in every active asset; a small plain dark contrast backing is accepted on light finishes.",
+    "otherMarks": "Zero other logo, wordmark, text, letters, numbers, microtext, pseudotext or watermark."
+  },
+  "assets": [
+    {"finish":"original","generatorId":"exec-1b79d960-3e8f-4b41-8f12-f941a0ee969a","file":"original.png","width":852,"height":1846,"margins":{"left":8,"top":8,"right":9,"bottom":7},"sha256":"20503628526d842641eebee8ee014da1d1306bd17fa1575a0df5762eb6aa2549","status":"PASS"},
+    {"finish":"negro","generatorId":"exec-c6b2bcce-72f2-49eb-bfba-bbb138d4a3e1","file":"negro.png","width":851,"height":1849,"margins":{"left":0,"top":0,"right":0,"bottom":0},"sha256":"7392a46537eacb5419d17c2b1701672cb2f0e3494f3855ad79da7a03df54433b","status":"PASS"},
+    {"finish":"wengue","generatorId":"exec-f724d293-b0d5-46cc-8948-eea6c90dd948","file":"wengue.png","width":851,"height":1848,"margins":{"left":5,"top":4,"right":6,"bottom":5},"sha256":"623ae2a67b785706c747abbf1b68cdf61fe9bd9c0d31f46529914792a7e64dcf","status":"PASS"},
+    {"finish":"gris-oscuro","generatorId":"exec-002be02a-7416-4cec-a87c-277b74307e27","file":"gris-oscuro.png","width":851,"height":1848,"margins":{"left":6,"top":7,"right":11,"bottom":7},"sha256":"092ad78b1757761712063f35b111fcb4e69bf0d21334410802fe897b25671020","status":"PASS"},
+    {"finish":"antracita","generatorId":"exec-0617c275-5036-45f4-bf38-14fe993e1139","file":"antracita.png","width":851,"height":1847,"margins":{"left":8,"top":8,"right":8,"bottom":5},"sha256":"86b1384486d3697f759d1598645322eb5c94ae5d00fafba362685885406e70ae","status":"PASS"},
+    {"finish":"nogal","generatorId":"exec-6a97a8c5-2f28-420a-bdb4-727202aa1077","file":"nogal.png","width":851,"height":1848,"margins":{"left":0,"top":0,"right":0,"bottom":0},"sha256":"f0b55c4774f44f6dc66d0ab93788b4f124630dec0864ee97b95a024c1d0cb1c9","status":"PASS"},
+    {"finish":"roble","generatorId":"exec-395882f9-984b-4801-9a94-a55e8afdac2a","file":"roble.png","width":858,"height":1832,"margins":{"left":0,"top":0,"right":0,"bottom":3},"sha256":"5b6358b7bf3ba5f11727c052a5c24f96b9327a6fd789097de07f878ed4e981a7","status":"PASS"},
+    {"finish":"gris-claro","generatorId":"exec-6245d454-1be6-44dc-a758-9a899cefe85f","file":"gris-claro.png","width":851,"height":1847,"margins":{"left":5,"top":4,"right":7,"bottom":6},"sha256":"897e917241c7bd567b4156816fd66b2f4cc283bbef5554d96672aed404d1c786","status":"PASS"},
+    {"finish":"natural","generatorId":"exec-b78d8ade-b4fd-4771-86b4-0aac205be124","file":"natural.png","width":852,"height":1846,"margins":{"left":5,"top":6,"right":8,"bottom":5},"sha256":"2eb692ae9614d111b4445833d1a69b4db2cf8870b48e52e5efdfe9f8a59af0e2","status":"PASS"},
+    {"finish":"blanco","generatorId":"exec-fd579fce-3f5e-4533-bb61-88ddf9b562c7","file":"blanco.png","width":851,"height":1848,"margins":{"left":0,"top":0,"right":0,"bottom":0},"sha256":"6dc7dfd5f832f4db20e7310beb4fa1b5cce4254c97ba919a60dd2fcc07bf1524","status":"PASS"}
+  ],
+  "summary": {
+    "requested": 10,
+    "pass": 10,
+    "fail": 0,
+    "uniqueHashes": 10,
+    "largestMeasuredMarginPixels": 11,
+    "visualInspection": "PASS: complete mid-night frame and hardware retained; exactly one canonical WONLY; no other text or pseudotext."
+  },
+  "promotion": {"stagingOnly":true,"converted":false,"publicWritten":false}
+}

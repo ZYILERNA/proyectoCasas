@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "model": "MEDICA/puerta-cortafuego-aislante1",
+  "date": "2026-08-13",
+  "generator": "built-in ImageGen",
+  "generationMode": "one independent call per finish",
+  "canonicalLogoPolicy": "NO_LOGO",
+  "soleReference": "output/ai-full-regeneration/large-doors/MEDICA/puerta-cortafuego-aislante1/master-no-logo-ai.png",
+  "generatedOutputReferenceUsed": false,
+  "logoReferenceUsed": false,
+  "postProcessing": "none; each raw ImageGen PNG was copied byte-for-byte into the workspace",
+  "filtersRecolorsMasksCropsResizesCompositesUsedOnActiveAssets": false,
+  "converted": false,
+  "publicFilesChanged": false,
+  "maxAttemptsPerFinish": 2,
+  "status": "PASS_10_OF_10",
+  "finishes": [
+    {
+      "finish": "original",
+      "file": "original.png",
+      "attempts": 1,
+      "generatorId": "exec-9aedacce-a095-4801-bb4c-d4d0a9b98fa2",
+      "sourceImageGenFile": "C:/Users/zhen/.codex/generated_images/019ffbd5-9cee-7a11-86ae-2ba61eb6a22b/exec-9aedacce-a095-4801-bb4c-d4d0a9b98fa2.png",
+      "bytes": 1369826,
+      "sha256": "393484fcef358e39ef9f709fbff7d215ce025d1a25d9957fd02e95b02485d95c"
+    },
+    {
+      "finish": "negro",
+      "file": "negro.png",
+      "attempts": 1,
+      "generatorId": "exec-5d229530-bd07-4b3c-b995-d33cbe54612e",
+      "sourceImageGenFile": "C:/Users/zhen/.codex/generated_images/019ffbd5-9cee-7a11-86ae-2ba61eb6a22b/exec-5d229530-bd07-4b3c-b995-d33cbe54612e.png",
+      "bytes": 1457071,
+      "sha256": "257abf613f2394c7f4bbc25bf5985db57be87cf9642677b851ce6ecedea05cea"
+    },
+    {
+      "finish": "wengue",
+      "file": "wengue.png",
+      "attempts": 1,
+      "generatorId": "exec-758fe904-6bfb-487b-a9ba-12dab373f33d",
+      "sourceImageGenFile": "C:/Users/zhen/.codex/generated_images/019ffbd5-9cee-7a11-86ae-2ba61eb6a22b/exec-758fe904-6bfb-487b-a9ba-12dab373f33d.png",
+      "bytes": 1609726,
+      "sha256": "314a9a23778a3d69d977e28fccbb183ea84c0b2c5fbd8284856be206e4942a9b"
+    },
+    {
+      "finish": "gris-oscuro",
+      "file": "gris-oscuro.png",
+      "attempts": 1,
+      "generatorId": "exec-4423f5e7-7ec8-4ff3-996c-e34002b11b99",
+      "sourceImageGenFile": "C:/Users/zhen/.codex/generated_images/019ffbd5-9cee-7a11-86ae-2ba61eb6a22b/exec-4423f5e7-7ec8-4ff3-996c-e34002b11b99.png",
+      "bytes": 1493548,
+      "sha256": "e19b25a5c590f20253912b138d2fbe73fe6f25cca1ccec5be95facf1804e4f52"
+    },
+    {
+      "finish": "antracita",
+      "file": "antracita.png",
+      "attempts": 1,
+      "generatorId": "exec-52feb964-2fd8-4cca-9111-1fe1cece7bff",
+      "sourceImageGenFile": "C:/Users/zhen/.codex/generated_images/019ffbd5-9cee-7a11-86ae-2ba61eb6a22b/exec-52feb964-2fd8-4cca-9111-1fe1cece7bff.png",
+      "bytes": 1572234,
+      "sha256": "9e828f222440d945eb4ae467a1225a6fa04c6bd4f2e67335b97428ae8369de52"
+    },
+    {
+      "finish": "nogal",
+      "file": "nogal.png",
+      "attempts": 1,
+      "generatorId": "exec-78d30cd5-7116-44e3-bd36-2079caaed7a7",
+      "sourceImageGenFile": "C:/Users/zhen/.codex/generated_images/019ffbd5-9cee-7a11-86ae-2ba61eb6a22b/exec-78d30cd5-7116-44e3-bd36-2079caaed7a7.png",
+      "bytes": 1916311,
+      "sha256": "006d34e0eeabbb11e3e62dbbcf6de6b419a486d311ab69344a865520044b2355"
+    },
+    {
+      "finish": "roble",
+      "file": "roble.png",
+      "attempts": 1,
+      "generatorId": "exec-1dbadf5e-b6e2-4531-8804-39cfd82a4762",
+      "sourceImageGenFile": "C:/Users/zhen/.codex/generated_images/019ffbd5-9cee-7a11-86ae-2ba61eb6a22b/exec-1dbadf5e-b6e2-4531-8804-39cfd82a4762.png",
+      "bytes": 1933670,
+      "sha256": "8c09d5e496853223f66027d0fe78707dffcb42c7e8dea795f3ff7d970045841b"
+    },
+    {
+      "finish": "gris-claro",
+      "file": "gris-claro.png",
+      "attempts": 1,
+      "generatorId": "exec-d80a0269-3679-47f5-8a67-a42c4a145c09",
+      "sourceImageGenFile": "C:/Users/zhen/.codex/generated_images/019ffbd5-9cee-7a11-86ae-2ba61eb6a22b/exec-d80a0269-3679-47f5-8a67-a42c4a145c09.png",
+      "bytes": 1340029,
+      "sha256": "0f559ee93fce6c495e33d89f82f5492b368c96c6bae6cdb9100f13f9f800a6d6"
+    },
+    {
+      "finish": "natural",
+      "file": "natural.png",
+      "attempts": 1,
+      "generatorId": "exec-f214dc4e-830d-46b8-b7ad-ca9da32c622e",
+      "sourceImageGenFile": "C:/Users/zhen/.codex/generated_images/019ffbd5-9cee-7a11-86ae-2ba61eb6a22b/exec-f214dc4e-830d-46b8-b7ad-ca9da32c622e.png",
+      "bytes": 1722728,
+      "sha256": "4d2c36a9de82fd0d95251739c2601414407b22acfa67370911bb04a01b1e5ab1"
+    },
+    {
+      "finish": "blanco",
+      "file": "blanco.png",
+      "attempts": 1,
+      "generatorId": "exec-d96d0440-b43b-46ab-bae7-7e1943319fc5",
+      "sourceImageGenFile": "C:/Users/zhen/.codex/generated_images/019ffbd5-9cee-7a11-86ae-2ba61eb6a22b/exec-d96d0440-b43b-46ab-bae7-7e1943319fc5.png",
+      "bytes": 1164950,
+      "sha256": "0e2153a5d17483858013569b9768d006cf6ae035c615bdd1ed703ecb668e8d36"
+    }
+  ]
+}

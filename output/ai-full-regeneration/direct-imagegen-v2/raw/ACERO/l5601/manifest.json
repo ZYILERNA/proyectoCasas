@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 3,
+  "model": "ACERO/l5601",
+  "canonicalSet": "output/ai-full-regeneration/direct-imagegen-v2/raw/ACERO/l5601",
+  "status": "PASS10",
+  "policy": "NO_LOGO",
+  "reconciledAt": "2026-08-14",
+  "generation": {
+    "method": "built-in ImageGen direct independent calls",
+    "onlyReference": "output/ai-full-regeneration/masters/ACERO/l5601/master-no-logo-ai-tight.png",
+    "onlyReferenceSha256": "8F7A26F979D19B85CE8A1A3BE59DBCC48F9B728D0C495D72FA6C6908469EF08F",
+    "logoReferenceUsed": false,
+    "generatedOutputUsedAsInput": false,
+    "filtersOrRecolorUsed": false,
+    "maskCompositeCropResizeUsedOnActiveAssets": false,
+    "converted": false,
+    "publicWritten": false,
+    "provenanceNote": "Eight retained assets inherit the documented master-only built-in ImageGen provenance of l5601-correction. Gris-oscuro and gris-claro were directly regenerated during this reconciliation from the same sole master."
+  },
+  "accepted": [
+    {
+      "finish": "original",
+      "file": "original.png",
+      "width": 876,
+      "height": 1796,
+      "sha256": "1451344D576CF50EEBCAF4ECD57590CD944F3A02FB732ECE14FA7B914C19F48B",
+      "margins": { "left": 4, "top": 3, "right": 6, "bottom": 1 },
+      "source": "l5601-correction/original.png"
+    },
+    {
+      "finish": "negro",
+      "file": "negro.png",
+      "width": 875,
+      "height": 1797,
+      "sha256": "136980495F53E3BA50F14BB798D94185923536B732E44DDDC33D320DBD46F8F0",
+      "margins": { "left": 8, "top": 8, "right": 8, "bottom": 0 },
+      "source": "l5601-correction/negro.png"
+    },
+    {
+      "finish": "wengue",
+      "file": "wengue.png",
+      "width": 875,
+      "height": 1797,
+      "sha256": "8CEB52F68DD077335C3CEB6040A4B4B4BF502F4DC589BEA1F2FBEA9FFDFFEC12",
+      "margins": { "left": 2, "top": 0, "right": 0, "bottom": 0 },
+      "source": "l5601-correction/wengue.png"
+    },
+    {
+      "finish": "gris-oscuro",
+      "file": "gris-oscuro.png",
+      "width": 876,
+      "height": 1796,
+      "sha256": "87BBF80C4FC8AE8FB6CDED8D52D30F81ABFABAF2BF9258564FDABB5DBE1F5538",
+      "margins": { "left": 2, "top": 3, "right": 2, "bottom": 0 },
+      "source": "built-in ImageGen 2026-08-14, independent master-only call, accepted attempt 2"
+    },
+    {
+      "finish": "antracita",
+      "file": "antracita.png",
+      "width": 876,
+      "height": 1796,
+      "sha256": "13ADB05BFB9879DCEA9D3A6A6031125B96FAF253DDECA9D589057B8E00E72630",
+      "margins": { "left": 9, "top": 7, "right": 8, "bottom": 0 },
+      "coveragePercent": { "horizontal": 98.059, "vertical": 99.610 },
+      "framingException": "PASS: complete frame and >98% horizontal occupancy",
+      "source": "l5601-correction/antracita.png"
+    },
+    {
+      "finish": "nogal",
+      "file": "nogal.png",
+      "width": 875,
+      "height": 1798,
+      "sha256": "80C4880F9B08A7318BD83BD67BE94F591CBEE3A2F2C4365D9674D18FA154DA24",
+      "margins": { "left": 3, "top": 3, "right": 3, "bottom": 0 },
+      "source": "l5601-correction/nogal.png"
+    },
+    {
+      "finish": "roble",
+      "file": "roble.png",
+      "width": 876,
+      "height": 1796,
+      "sha256": "3F7AA1C442ED7CE8B49765F5E8C6E448984DB9245CF8FC2F8BED1CC75E6F9E24",
+      "margins": { "left": 7, "top": 7, "right": 8, "bottom": 0 },
+      "source": "l5601-correction/roble.png"
+    },
+    {
+      "finish": "gris-claro",
+      "file": "gris-claro.png",
+      "width": 876,
+      "height": 1796,
+      "sha256": "7715E7EF4D537E745552FBECB71E19037BC34D4AE43ADD54E0396F702CA3FE86",
+      "margins": { "left": 4, "top": 3, "right": 2, "bottom": 0 },
+      "source": "built-in ImageGen 2026-08-14, independent master-only call, accepted attempt 1"
+    },
+    {
+      "finish": "natural",
+      "file": "natural.png",
+      "width": 875,
+      "height": 1797,
+      "sha256": "B8AFD94C61B525A529C6C9C70D524FD21386AA9FE9920B36FE5D501250F04454",
+      "margins": { "left": 4, "top": 5, "right": 0, "bottom": 1 },
+      "source": "l5601-correction/natural.png"
+    },
+    {
+      "finish": "blanco",
+      "file": "blanco.png",
+      "width": 876,
+      "height": 1795,
+      "sha256": "8AD10EE23316250C0EE5C05777776DCDEA3554254ADA4093A0AA99480D84D000",
+      "margins": { "left": 6, "top": 5, "right": 1, "bottom": 2 },
+      "source": "l5601-correction/blanco.png"
+    }
+  ],
+  "archives": {
+    "invalidV1": "output/ai-full-regeneration/direct-imagegen-v1/raw/ACERO/l5601",
+    "supersededCorrectionCandidate": "output/ai-full-regeneration/direct-imagegen-v2/raw/ACERO/l5601-correction",
+    "rejectedCopies": "_rejected"
+  },
+  "qa": "QA.json",
+  "hashes": "hashes.json",
+  "prompts": "PROMPTS.md"
+}

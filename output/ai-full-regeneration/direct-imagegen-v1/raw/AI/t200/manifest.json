@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "model": "AI/t200",
+  "logoPolicy": "KEEP_WONLY",
+  "generationMode": "built-in-imagegen-direct",
+  "generatedOn": "2026-08-13",
+  "sourcePolicy": "Each accepted finish is an independent direct ImageGen render based on the same T200 master and official logo; no accepted finish is derived from another generated finish.",
+  "pixelProcessing": "none",
+  "sources": {
+    "master": {
+      "path": "output/ai-full-regeneration/masters/AI/t200/master-no-logo-ai-tight.png",
+      "sha256": "76D0FA1C21C8864750B69F998691D14EABDCA1497826B14B3742B6E51D22F260"
+    },
+    "logo": {
+      "path": "public/images/logo-wonly.webp",
+      "sha256": "F55B5AE0B73967E7395C9E8F16DEDB07C7D20E430E03F9C3A289C348E9FB2E1B"
+    }
+  },
+  "accepted": [
+    { "finish": "original", "file": "original.png", "width": 889, "height": 1769, "sha256": "40B880D73FBE4F5CEF7FFF3FC6AC63BD0070739D10635C128535CB33CF5F53CF" },
+    { "finish": "negro", "file": "negro.png", "width": 889, "height": 1769, "sha256": "E57C3165D0B99F8DA29A9FB73662E2A2F6A20A5F0808537F209BCAF856CD1B6D" },
+    { "finish": "wengue", "file": "wengue.png", "width": 889, "height": 1769, "sha256": "474AA7723849559F74A7533403FA959F91CD53567569092889A27FD5C96592AE" },
+    { "finish": "gris-oscuro", "file": "gris-oscuro.png", "width": 889, "height": 1769, "sha256": "4C157D7A648DADFE3E7CA54BC79AF3DAE88BA58E8A5B38587CF82D8D73759A68" },
+    { "finish": "antracita", "file": "antracita.png", "width": 889, "height": 1769, "sha256": "8C7F1C124BD3D6B2AC64D69105D5E910FEBD3397FBEF1CF923891067252BF83D" },
+    { "finish": "nogal", "file": "nogal.png", "width": 889, "height": 1769, "sha256": "7CD4FA3D090EAB6FBAB9B64BE45D23DA08FC3304F389E60466BB5947DAB41804" },
+    { "finish": "roble", "file": "roble.png", "width": 889, "height": 1770, "sha256": "F7722D662C8C597311E4E6AF1CC54F6E8647FB556BDC1D45A9721195A7DE150B" },
+    { "finish": "gris-claro", "file": "gris-claro.png", "width": 889, "height": 1770, "sha256": "1A5F2DC3C484E26E7C0656D3DC96BF10CE1D8145C786339107E161CD8C5450A0" },
+    { "finish": "natural", "file": "natural.png", "width": 889, "height": 1769, "sha256": "E0885698F62FD2A60EDBE63F8D994B94EF88C9A776D583575A4921E19ED555CD" },
+    { "finish": "blanco", "file": "blanco.png", "width": 889, "height": 1769, "sha256": "2BF99DE32256E2248CFBFB36F6E820EB88FE849AB0499D2F5625228EED990172" }
+  ],
+  "rejectedDirectory": "_rejected",
+  "qa": "QA.json",
+  "promotion": {
+    "converted": false,
+    "publicWritten": false
+  }
+}

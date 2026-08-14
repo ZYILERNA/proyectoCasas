@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 2,
+  "model": {"category":"ACERO","slug":"contemporary"},
+  "status": "PASS_10_OF_10",
+  "logoPolicy": "KEEP_WONLY",
+  "generationMode": "built-in ImageGen only",
+  "sourceContract": {
+    "master": "output/ai-full-regeneration/masters/ACERO/contemporary/master-no-logo-ai-tight.png",
+    "masterSha256": "dcc40c5d348b6428538396bf7e4c97766aa78e40b95900289959203d7eabda18",
+    "logo": "public/images/logo-wonly.webp",
+    "logoSha256": "f55b5ae0b73967e7395c9e8f16dedb07c7d20e430e03f9c3a289c348e9fb2e1b",
+    "generatedOutputsUsedAsReferences": false
+  },
+  "localProcessing": {"filters":false,"recolor":false,"masks":false,"crop":false,"resize":false,"composite":false,"retouch":false,"conversion":false,"publicWritten":false},
+  "visualQA": {
+    "reviewedAtOriginalDetail": true,
+    "completeDoorAndOuterFrame": "PASS 10/10",
+    "contemporaryArchitecture": "PASS 10/10",
+    "singleSmartLockWithoutTextOrPseudotext": "PASS 10/10",
+    "exactlyOneOfficialWonly": "PASS 10/10",
+    "noOtherTextOrLogo": "PASS 10/10",
+    "almostNoWhitePerimeter": "PASS 10/10",
+    "contactSheet": "qa/contact-sheet.png",
+    "lockDetailSheet": "qa/lock-detail-sheet.png"
+  },
+  "assets": [
+    {"finish":"original","file":"original.png","width":890,"height":1767,"margins245":[0,0,0,0],"sha256":"1363cfe0a2cb36401034d2e53660556c9f97f43c52a54beef83e52553f75ca41"},
+    {"finish":"negro","file":"negro.png","width":891,"height":1766,"margins245":[2,0,0,0],"sha256":"cc9a6e6336831823de172421e9548c73483b0e4d7c40be26bd87ea497002a246"},
+    {"finish":"wengue","file":"wengue.png","width":891,"height":1766,"margins245":[0,2,0,0],"sha256":"952bb2535a781d58b72132ade17e6b5dd48333a60c4b733d318a33e2f3563285"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","width":890,"height":1767,"margins245":[0,0,0,0],"sha256":"2626192d6a8fd37ac4ab108abc7f7dcba063c862aefce92db85b9dd5d9f1e62e"},
+    {"finish":"antracita","file":"antracita.png","width":891,"height":1766,"margins245":[4,4,4,4],"sha256":"218b8caa677bf308044bfc1c4f0c6d973631248822c12d2ae2b380a869516810"},
+    {"finish":"nogal","file":"nogal.png","width":891,"height":1766,"margins245":[1,0,2,0],"sha256":"3622642698a5faf030ec3d0eaf0c54bb38aa890093631621e30c864fa3e5274d"},
+    {"finish":"roble","file":"roble.png","width":890,"height":1767,"margins245":[3,3,4,0],"sha256":"8d422fe2052ebbe7ed18bf4d60fb87e34cace51012fc0e4ebf6e3cbc66dc6e4c"},
+    {"finish":"gris-claro","file":"gris-claro.png","width":890,"height":1767,"margins245":[0,6,8,0],"sha256":"6cfca1c49d63093c5a9f610f5d179430a41ec0144e3695ca438d0e51fb5b0d2a"},
+    {"finish":"natural","file":"natural.png","width":890,"height":1767,"margins245":[0,0,0,0],"sha256":"d5c24c0d8529f5defad511e6ac6818fc7adca996d71c9180cc1af9be2f9b3009"},
+    {"finish":"blanco","file":"blanco.png","width":890,"height":1767,"margins245":[0,0,0,0],"sha256":"27baec0bb7d4e63b9ee7cb98b1c02343a10b65acf30d5496629d9f14334b0f44"}
+  ],
+  "summary": {"activeAssets":10,"uniqueHashes":10,"visualPass":true,"mechanicalPass":true,"converted":false,"publicWritten":false}
+}

@@ -1,0 +1,146 @@
+{
+  "model": "ACORAZADA/wl007",
+  "status": "PASS_10_OF_10",
+  "summary": {
+    "expected": 10,
+    "accepted": 10,
+    "blocked": 0,
+    "blockedFinishes": []
+  },
+  "criteria": {
+    "logoPolicy": "NO_LOGO: no logo, wordmark, badge, decorative emblem, letters, digits, UI marks or pseudotext.",
+    "architecture": "Complete frame; silver vertical strip; blank black lock and lever; peephole; divided lower plinth; exactly four visible hinges per side.",
+    "framing": "0-8 px ideal. Up to 11 px accepted only when frame is complete and measured subject coverage exceeds 98%.",
+    "background": "Plain white only.",
+    "postProcessing": "None; all accepted files are raw built-in ImageGen PNG outputs copied byte-for-byte into staging."
+  },
+  "measurement": {
+    "method": "Bounding box of pixels for which at least one RGB channel is below 245; margins measured from raw PNG edges.",
+    "threshold": 245
+  },
+  "accepted": [
+    {
+      "finish": "original",
+      "file": "original.png",
+      "dimensions": "926x1699",
+      "marginsLTRB": [1, 3, 2, 0],
+      "maxMargin": 3,
+      "coverageXY": [99.57, 99.88],
+      "architecture": "PASS",
+      "noLogoOrText": "PASS",
+      "frameComplete": "PASS",
+      "sha256": "3bf60a44e17aa78941ad0085a01be5a41de07569206a08febcf897164b4d8ec0"
+    },
+    {
+      "finish": "negro",
+      "file": "negro.png",
+      "dimensions": "926x1698",
+      "marginsLTRB": [3, 4, 3, 0],
+      "maxMargin": 4,
+      "coverageXY": [99.24, 99.82],
+      "architecture": "PASS",
+      "noLogoOrText": "PASS",
+      "frameComplete": "PASS",
+      "sha256": "1b3dbb138a59bca76541b5484a5304e64447e1fb02a962b1f0750c768aab0382"
+    },
+    {
+      "finish": "wengue",
+      "file": "wengue.png",
+      "dimensions": "926x1699",
+      "marginsLTRB": [7, 10, 6, 4],
+      "maxMargin": 10,
+      "coverageXY": [98.16, 99.41],
+      "architecture": "PASS",
+      "noLogoOrText": "PASS",
+      "frameComplete": "PASS",
+      "exception": "Maximum margin is 10 px; horizontal coverage exceeds 98% and the full frame is intact.",
+      "sha256": "1e40932acb54c3530e46c5f9554d20df53dda74bd23f65b2cb74b5e434a39a6b"
+    },
+    {
+      "finish": "gris-oscuro",
+      "file": "gris-oscuro.png",
+      "dimensions": "926x1699",
+      "marginsLTRB": [5, 8, 6, 5],
+      "maxMargin": 8,
+      "coverageXY": [98.6, 99.35],
+      "architecture": "PASS",
+      "noLogoOrText": "PASS",
+      "frameComplete": "PASS",
+      "sha256": "bb29c98cab19bf203af2fc10c667ceb0f05a2553aff901dd77a28883c1834156"
+    },
+    {
+      "finish": "antracita",
+      "file": "antracita.png",
+      "dimensions": "926x1699",
+      "marginsLTRB": [2, 6, 3, 0],
+      "maxMargin": 6,
+      "coverageXY": [99.14, 99.82],
+      "architecture": "PASS",
+      "noLogoOrText": "PASS",
+      "frameComplete": "PASS",
+      "sha256": "a7551f2f5093b4352088391c538451e85bac0f185ae0467f0079d249a1ff6f2b"
+    },
+    {
+      "finish": "nogal",
+      "file": "nogal.png",
+      "dimensions": "926x1698",
+      "marginsLTRB": [3, 7, 4, 0],
+      "maxMargin": 7,
+      "coverageXY": [98.92, 99.76],
+      "architecture": "PASS",
+      "noLogoOrText": "PASS",
+      "frameComplete": "PASS",
+      "sha256": "5fbbb5dc872ee1d35f363f743f42fb34551743769dd197b7d6eb0c478fafe5cf"
+    },
+    {
+      "finish": "roble",
+      "file": "roble.png",
+      "dimensions": "926x1699",
+      "marginsLTRB": [1, 3, 0, 0],
+      "maxMargin": 3,
+      "coverageXY": [99.57, 100.0],
+      "architecture": "PASS",
+      "noLogoOrText": "PASS",
+      "frameComplete": "PASS",
+      "sha256": "95da173267d04828d0da18c152a54d50926310f0672c013e48d3ce019904da8e"
+    },
+    {
+      "finish": "gris-claro",
+      "file": "gris-claro.png",
+      "dimensions": "926x1699",
+      "marginsLTRB": [6, 4, 6, 2],
+      "maxMargin": 6,
+      "coverageXY": [98.7, 99.65],
+      "architecture": "PASS",
+      "noLogoOrText": "PASS",
+      "frameComplete": "PASS",
+      "sha256": "32a79cdcece8ecba332b2647ae992c28837f45f0be08e8b1f9b263a1705bf5a8"
+    },
+    {
+      "finish": "natural",
+      "file": "natural.png",
+      "dimensions": "926x1699",
+      "marginsLTRB": [0, 8, 6, 8],
+      "maxMargin": 8,
+      "coverageXY": [99.14, 99.18],
+      "architecture": "PASS",
+      "noLogoOrText": "PASS",
+      "frameComplete": "PASS",
+      "sha256": "fb8dd1efc938c5ba7126b1485e92b2513e9a19655770acccf415e77a209d8610"
+    },
+    {
+      "finish": "blanco",
+      "file": "blanco.png",
+      "dimensions": "926x1699",
+      "marginsLTRB": [3, 4, 1, 0],
+      "maxMargin": 4,
+      "coverageXY": [99.24, 99.94],
+      "architecture": "PASS",
+      "noLogoOrText": "PASS",
+      "frameComplete": "PASS",
+      "sha256": "f671bb57df6d1c9c9e0c3b9bef3d945d87b43c39fa187f4508c20d562130bf62"
+    }
+  ],
+  "blocked": [],
+  "publication": "NOT_CONVERTED_NOT_PROMOTED"
+}

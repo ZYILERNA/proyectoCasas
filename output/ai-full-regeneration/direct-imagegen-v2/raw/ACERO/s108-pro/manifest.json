@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 2,
+  "model": "ACERO/s108-pro",
+  "status": "PASS_10_OF_10",
+  "generatedAt": "2026-08-13",
+  "generationMode": "built-in ImageGen, one independent call per finish",
+  "logoPolicy": "KEEP_WONLY",
+  "sourcePolicy": "Every accepted PNG is a separate built-in ImageGen generation using only the same no-logo master plus the official WONLY logo. No generated output was ever referenced.",
+  "sources": [
+    {
+      "role": "door architecture reference",
+      "path": "output/ai-full-regeneration/masters/ACERO/s108-pro/master-no-logo-ai-tight.png",
+      "sha256": "e77d942f2fa4cbbaebad3841fc9a6495141e9b8910040ec015c5d06dcc82ea52"
+    },
+    {
+      "role": "sole official brand reference",
+      "path": "public/images/logo-wonly.webp",
+      "sha256": "f55b5ae0b73967e7395c9e8f16dedb07c7d20e430e03f9c3a289c348e9fb2e1b"
+    }
+  ],
+  "pixelProcessing": {
+    "filters": false,
+    "recolor": false,
+    "masks": false,
+    "crop": false,
+    "resize": false,
+    "composite": false,
+    "conversion": false,
+    "operationAfterGeneration": "byte-for-byte Copy-Item into this raw staging folder"
+  },
+  "accepted": [
+    { "finish": "original", "file": "original.png", "generatorId": "exec-e29e5dd3-8d0c-4740-ae96-bbf7ae943860", "attempt": 2, "width": 1254, "height": 1254, "sha256": "f89e9450f7cf10b94bf43cd1c50f7887a960e534409a885965f8140f27443dda" },
+    { "finish": "negro", "file": "negro.png", "generatorId": "exec-db8576c1-ade2-4814-9489-f92f20e2c3d7", "attempt": 1, "width": 1254, "height": 1254, "sha256": "6904c170460a68d3fff36847128774c259898423a1ef8f364ab2edfc1e8f092d" },
+    { "finish": "wengue", "file": "wengue.png", "generatorId": "exec-9a43b9e8-254b-4bc2-904a-7195528fcc88", "attempt": 1, "width": 1254, "height": 1254, "sha256": "a7313171cf59944391e1f29e4dbd419b3717abec95738fe1166770304b4b5bc2" },
+    { "finish": "gris-oscuro", "file": "gris-oscuro.png", "generatorId": "exec-534b1617-96ef-4953-a545-9dab556188ee", "attempt": 1, "width": 1254, "height": 1254, "sha256": "29d8ba76e5d83151176a14c5ed7fa6ff112bde41157d41553dd6de321bbace98" },
+    { "finish": "antracita", "file": "antracita.png", "generatorId": "exec-87d91b93-469c-434e-a6af-3de2d7673f8d", "attempt": 1, "width": 1254, "height": 1254, "sha256": "525104028073f984f19f651818beaf19dbca60a35f2ffdeafca218efa21b021b" },
+    { "finish": "nogal", "file": "nogal.png", "generatorId": "exec-5cd81154-30f8-4100-adc5-78bb9a4c806f", "attempt": 1, "width": 1254, "height": 1254, "sha256": "0380d928ab9605af8bc5fc78b5d914546efdda6585981a61ca30af34d5d178ce" },
+    { "finish": "roble", "file": "roble.png", "generatorId": "exec-d1040be4-bd1c-40ac-a86a-712c1878f125", "attempt": 1, "width": 1254, "height": 1254, "sha256": "4429b953b2d6c214b1ca8356419171f396b7b9be1ac6d3fca44676197afea5b2" },
+    { "finish": "gris-claro", "file": "gris-claro.png", "generatorId": "exec-f0634822-168f-42c6-9be5-2a04e5853193", "attempt": 1, "width": 1254, "height": 1254, "sha256": "12da024a39789598d54d7e9f94aeaa2fe8757f5c4a3f5753499c855035a92112" },
+    { "finish": "natural", "file": "natural.png", "generatorId": "exec-7f2395c5-0bd1-41cb-98e9-56e9a565f01c", "attempt": 1, "width": 1254, "height": 1254, "sha256": "b56956786919cd9f9499bff18e78e4737a79ed338a3e2dfc9be77f942fb839c9" },
+    { "finish": "blanco", "file": "blanco.png", "generatorId": "exec-461504ec-850f-47df-84aa-00314f302fa3", "attempt": 2, "width": 1254, "height": 1254, "sha256": "f62e49127d655280dca33a493055171438a494832624397aecbf1c787d8e53ec" }
+  ],
+  "rejected": [
+    { "finish": "original", "generatorId": "exec-4231e042-8d0c-4ad2-b402-26978388835d", "file": "_rejected/original-attempt-1/candidate.png", "reason": "large white side margins; product did not reach the compact-frame target" },
+    { "finish": "blanco", "generatorId": "exec-601d4351-7d7f-4f44-9ebd-4a7f2f10bd5e", "file": "_rejected/blanco-attempt-1/candidate.png", "reason": "lock face contained avoidable curved pseudo-symbols; retried with a blank lock face" }
+  ],
+  "qa": {
+    "path": "QA.json",
+    "status": "PASS_10_OF_10"
+  },
+  "promotion": {
+    "stagingOnly": true,
+    "converted": false,
+    "publicWritten": false
+  }
+}

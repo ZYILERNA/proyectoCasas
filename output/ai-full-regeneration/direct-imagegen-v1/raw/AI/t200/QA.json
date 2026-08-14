@@ -1,0 +1,124 @@
+{
+  "schema": "wonly-direct-imagegen-qa/v1",
+  "model": "AI/t200",
+  "reviewDate": "2026-08-13",
+  "reviewType": "independent visual and pixel-bound QA",
+  "publicModified": false,
+  "summary": {
+    "activeAssetCount": 10,
+    "rejectedAttemptCount": 1,
+    "approvedVisually": 10,
+    "uniqueHashCount": 10,
+    "overall": "PASS"
+  },
+  "criteria": {
+    "architecture": "complete frontal T200 with full dark outer frame, upper header, three vertical sections, brushed-silver center strip, one recessed pull handle, and two black control modules",
+    "framing": "complete frame visible with a 0-8 px visually white outer margin",
+    "branding": "exactly one WONLY wordmark in the upper area and no duplicate or altered brand",
+    "controls": "both control modules preserved without letters, words, numbers, labels, or pseudo-writing",
+    "scene": "plain white catalog background; no room, wall, floor, cast shadow, halo, decorative border, watermark, or invented hardware",
+    "derivation": "direct built-in ImageGen output; no filter, recolor, mask, crop, resize, composite, or local repair"
+  },
+  "marginDetection": {
+    "method": "First pixel with any RGB channel below 245, measured from each canvas edge; measurement only, no crop",
+    "maximumAllowedPixels": 8
+  },
+  "assets": [
+    {
+      "finish": "original",
+      "file": "original.png",
+      "dimensions": "889x1769",
+      "sha256": "40B880D73FBE4F5CEF7FFF3FC6AC63BD0070739D10635C128535CB33CF5F53CF",
+      "margins": { "left": 6, "top": 3, "right": 5, "bottom": 0 },
+      "visual": "PASS"
+    },
+    {
+      "finish": "negro",
+      "file": "negro.png",
+      "dimensions": "889x1769",
+      "sha256": "E57C3165D0B99F8DA29A9FB73662E2A2F6A20A5F0808537F209BCAF856CD1B6D",
+      "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 },
+      "visual": "PASS"
+    },
+    {
+      "finish": "wengue",
+      "file": "wengue.png",
+      "dimensions": "889x1769",
+      "sha256": "474AA7723849559F74A7533403FA959F91CD53567569092889A27FD5C96592AE",
+      "margins": { "left": 0, "top": 3, "right": 0, "bottom": 0 },
+      "visual": "PASS"
+    },
+    {
+      "finish": "gris-oscuro",
+      "file": "gris-oscuro.png",
+      "dimensions": "889x1769",
+      "sha256": "4C157D7A648DADFE3E7CA54BC79AF3DAE88BA58E8A5B38587CF82D8D73759A68",
+      "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 },
+      "visual": "PASS"
+    },
+    {
+      "finish": "antracita",
+      "file": "antracita.png",
+      "dimensions": "889x1769",
+      "sha256": "8C7F1C124BD3D6B2AC64D69105D5E910FEBD3397FBEF1CF923891067252BF83D",
+      "margins": { "left": 0, "top": 2, "right": 3, "bottom": 0 },
+      "visual": "PASS"
+    },
+    {
+      "finish": "nogal",
+      "file": "nogal.png",
+      "dimensions": "889x1769",
+      "sha256": "7CD4FA3D090EAB6FBAB9B64BE45D23DA08FC3304F389E60466BB5947DAB41804",
+      "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 },
+      "visual": "PASS"
+    },
+    {
+      "finish": "roble",
+      "file": "roble.png",
+      "dimensions": "889x1770",
+      "sha256": "F7722D662C8C597311E4E6AF1CC54F6E8647FB556BDC1D45A9721195A7DE150B",
+      "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 },
+      "visual": "PASS"
+    },
+    {
+      "finish": "gris-claro",
+      "file": "gris-claro.png",
+      "dimensions": "889x1770",
+      "sha256": "1A5F2DC3C484E26E7C0656D3DC96BF10CE1D8145C786339107E161CD8C5450A0",
+      "margins": { "left": 0, "top": 2, "right": 3, "bottom": 0 },
+      "visual": "PASS"
+    },
+    {
+      "finish": "natural",
+      "file": "natural.png",
+      "dimensions": "889x1769",
+      "sha256": "E0885698F62FD2A60EDBE63F8D994B94EF88C9A776D583575A4921E19ED555CD",
+      "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 },
+      "visual": "PASS"
+    },
+    {
+      "finish": "blanco",
+      "file": "blanco.png",
+      "dimensions": "889x1769",
+      "sha256": "2BF99DE32256E2248CFBFB36F6E820EB88FE849AB0499D2F5625228EED990172",
+      "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 },
+      "visual": "PASS"
+    }
+  ],
+  "visualChecks": {
+    "completeDoorAndOuterFrame": "PASS 10/10",
+    "t200ArchitectureAndHardwarePreserved": "PASS 10/10",
+    "exactlyOneWONLYLogo": "PASS 10/10",
+    "controlModulesWithoutLettersOrLabels": "PASS 10/10",
+    "marginAtMostEightPixels": "PASS 10/10",
+    "noRoomFloorShadowHaloOrDecorativeBorder": "PASS 10/10",
+    "finishIsVisuallyDistinct": "PASS 10/10"
+  },
+  "rejected": [
+    {
+      "file": "_rejected/gris-claro-no-wonly.png",
+      "reason": "Rejected before this review because the required WONLY wordmark was absent. It is not part of the active ten-asset set."
+    }
+  ],
+  "notes": "The accepted PNG files remain raw built-in ImageGen results. No pixel-changing post-processing or public promotion was performed."
+}

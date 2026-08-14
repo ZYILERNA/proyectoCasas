@@ -1,0 +1,19 @@
+{
+  "schema": "wonly-direct-imagegen-raw/v2",
+  "category": "ACERO",
+  "model": "contemporary",
+  "status": "PASS_10_OF_10",
+  "logoPolicy": "KEEP_WONLY",
+  "sourceMaster": "output/ai-full-regeneration/masters/ACERO/contemporary/master-no-logo-ai-tight.png",
+  "sourceMasterSha256": "dcc40c5d348b6428538396bf7e4c97766aa78e40b95900289959203d7eabda18",
+  "logoReference": "public/images/logo-wonly.webp",
+  "logoSha256": "f55b5ae0b73967e7395c9e8f16dedb07c7d20e430e03f9c3a289c348e9fb2e1b",
+  "independentImageGenCalls": true,
+  "generatedOutputUsedAsInput": false,
+  "filtersOrLocalImageEdits": false,
+  "converted": false,
+  "publicWritten": false,
+  "activeFinishes": ["original","negro","wengue","gris-oscuro","antracita","nogal","roble","gris-claro","natural","blanco"],
+  "activeCount": 10,
+  "qa": "QA.json"
+}

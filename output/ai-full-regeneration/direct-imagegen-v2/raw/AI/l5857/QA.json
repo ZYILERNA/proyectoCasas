@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "score": "10/10",
+  "auditedAt": "2026-08-14",
+  "freshOriginalDetailReopenAllTen": true,
+  "geometryHardware": {
+    "completeFrame": true,
+    "singlePlainUpperPanel": true,
+    "twoDiagonalRibbedPanels": true,
+    "singleSmoothControlStile": true,
+    "singleUpperInsetSmartLockModule": true,
+    "singleLowerRectangularModule": true,
+    "noDuplicatedHardware": true
+  },
+  "content": {
+    "zeroLogo": true,
+    "zeroWonlyMark": true,
+    "zeroTextLettersDigits": true,
+    "zeroMicrotextPseudotext": true,
+    "zeroWatermark": true,
+    "zeroExtraHardware": true
+  },
+  "mechanical": {
+    "pngCount": 10,
+    "uniqueSha256Count": 10,
+    "pixelThreshold": "any RGB channel < 248",
+    "preferredMarginPx": "0-8",
+    "maximumAllowedTolerancePx": 11,
+    "observedMarginRangePx": [0, 11],
+    "minimumDoorHeightCoveragePct": 99.261,
+    "allWithinTolerance": true,
+    "completeFrameAtTolerance": true
+  },
+  "provenance": {
+    "method": "built-in ImageGen direct independent calls",
+    "masterOnly": true,
+    "logoReferenceUsed": false,
+    "generatedOutputUsedAsInput": false,
+    "attemptsPerFinish": 1
+  },
+  "writes": {
+    "filters": 0,
+    "recolor": 0,
+    "masks": 0,
+    "composite": 0,
+    "crop": 0,
+    "resize": 0,
+    "conversion": 0,
+    "public": 0
+  }
+}

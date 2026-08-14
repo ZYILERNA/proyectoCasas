@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "model": "AI/l5857",
+  "policy": "NO_LOGO",
+  "generatedAt": "2026-08-14",
+  "generation": {
+    "method": "built-in ImageGen direct independent calls",
+    "onlyReference": "output/ai-full-regeneration/masters/AI/l5857/master-no-logo-ai-tight.png",
+    "onlyReferenceSha256": "8b7c705aab56cab46847c5d13a4cf30539871b2663a7b72d606ebb089a760a47",
+    "logoReferenceUsed": false,
+    "generatedOutputUsedAsInput": false,
+    "filtersRecolorMasksCompositeCropResize": false
+  },
+  "promotion": {
+    "converted": false,
+    "publicWritten": false,
+    "applyAuthorized": false,
+    "status": "RAW_STAGING_ONLY"
+  },
+  "accepted": [
+    {"finish":"original","file":"original.png","generatorId":"exec-b4204adf-ec8b-46b2-995f-286b88f44393","width":894,"height":1758,"margin":{"left":9,"top":7,"right":8,"bottom":0},"sha256":"f22cb2119fcefa4bcc3026785ba08cc0b4bf5d484299c975104215ea97ef0b92"},
+    {"finish":"negro","file":"negro.png","generatorId":"exec-36dd5e17-afcb-4bb7-afe3-a000189da6bf","width":894,"height":1759,"margin":{"left":6,"top":5,"right":7,"bottom":0},"sha256":"87814cc0a414a6cc39ee3c8fe07041b88a1d5ee4c1de9ba0a9a49a12b6e405ee"},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-dd1e7108-ce61-471e-b0e6-17ab35769a8d","width":894,"height":1759,"margin":{"left":0,"top":0,"right":7,"bottom":0},"sha256":"952eebe0e82684bbcda618f72546294be6cdb70b2c424f5fa05f2f69862f8a5e"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-31583e35-1a50-4b39-8df0-53aaed2467cf","width":894,"height":1759,"margin":{"left":8,"top":7,"right":10,"bottom":6},"sha256":"baaadb97a4131cd47e75c9e836abd6342a3ee80e91e2be1106489bdeabedac4e"},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-9be20171-affb-4161-8ecd-a222ed7c2b9f","width":894,"height":1759,"margin":{"left":9,"top":9,"right":11,"bottom":0},"sha256":"84cce17784f265817472caf74700a916e0eacd4593837fb0b56f648d0bd28e26"},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-739a276b-936d-4a89-879d-d78ae767d4f6","width":894,"height":1758,"margin":{"left":5,"top":5,"right":7,"bottom":0},"sha256":"eb04a1b6fb9a72b89075295b4eb399333e52a9f8148a9ebe521576fcf6ccec66"},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-56675dc2-691b-4ab4-926c-416ad6df2006","width":894,"height":1759,"margin":{"left":5,"top":8,"right":5,"bottom":0},"sha256":"9c4dbd43d0bfd283db888b9ad860f8a794d09d6e3d4c9e465cdb69d88f599199"},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-ba8f983a-3696-447a-b915-7d8e488bffbe","width":895,"height":1758,"margin":{"left":3,"top":5,"right":7,"bottom":0},"sha256":"715bd93e28bd5ef6766b792afa74b44df920fa3ce49cea556f5fe37fae1cab91"},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-8ef88053-9eb4-4346-ae93-a75894ed30b1","width":894,"height":1760,"margin":{"left":0,"top":7,"right":3,"bottom":0},"sha256":"d115b40cfc30f472d117fe20d111b5a7ff0e62f7c82d7b08e7c8f55cdbde0efa"},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-892d7a3a-f3e6-43e4-9e35-b8798c240406","width":894,"height":1758,"margin":{"left":3,"top":3,"right":4,"bottom":2},"sha256":"209cd766217ad868881902f93413a34b6781ea20cf29b87a9a78826516e6157a"}
+  ]
+}

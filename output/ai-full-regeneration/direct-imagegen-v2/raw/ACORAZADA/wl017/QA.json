@@ -1,0 +1,10 @@
+{
+  "schema":"wonly-direct-imagegen-qa/v2",
+  "model":"ACORAZADA/wl017",
+  "summary":{"active":10,"uniqueHashes":10,"visualPass":10,"maxMargin":5,"overall":"PASS"},
+  "visualChecks":{"completeFrame":"PASS 10/10","threeRaisedPanels":"PASS 10/10","threeRightHinges":"PASS 10/10","goldLockAndLever":"PASS 10/10","zeroLogoTextMicrotext":"PASS 10/10","marginZeroToEight":"PASS 10/10","noSceneShadowExtraHardware":"PASS 10/10"},
+  "margins":{
+    "original":[0,0,0,0],"negro":[0,0,0,0],"wengue":[2,0,5,0],"gris-oscuro":[0,0,0,0],"antracita":[4,0,5,0],"nogal":[2,0,4,0],"roble":[0,0,0,0],"gris-claro":[3,3,3,4],"natural":[0,0,0,0],"blanco":[3,3,3,3]
+  },
+  "notes":"Active files are raw built-in ImageGen PNGs. No conversion, staging promotion, or public write was performed."
+}

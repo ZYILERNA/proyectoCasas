@@ -1,0 +1,153 @@
+{
+  "schema": "direct-imagegen-model-qa/v2",
+  "model": "ACERO/s108",
+  "status": "PASS",
+  "logoPolicy": "KEEP_WONLY",
+  "master": "output/ai-full-regeneration/masters/ACERO/s108/master-no-logo-ai-tight.png",
+  "canonicalLogo": "public/images/logo-wonly.webp",
+  "generation": {
+    "tool": "built-in ImageGen",
+    "totalIndependentCalls": 14,
+    "activeIndependentCalls": 10,
+    "rejectedAttempts": 4,
+    "maximumAttemptsUsedPerFinish": 2,
+    "onlyMasterAndCanonicalLogoReferencedPerCall": true,
+    "generatedOutputReferencesUsed": false,
+    "activeAssetPixelProcessing": "none",
+    "filtersRecolorsMasksCropsResizesCompositesUsedOnActiveAssets": false
+  },
+  "criteria": {
+    "marginDetection": "First pixel with any RGB channel below 235, measured independently from each canvas edge.",
+    "preferredMarginPixels": "0-8",
+    "acceptedMaximumMarginPixels": 11,
+    "architecture": "Complete straight-on S108 and full outer frame; one smooth top header, one smooth left strip, dense vertical fluting, sill and smart-lock placement preserved.",
+    "branding": "Exactly one canonical WONLY plaque on the upper-right header in every active asset.",
+    "otherMarks": "Zero other logo, wordmark, text, letters, numbers, microtext, pseudotext or watermark. Simple unlit functional sensor dots are not counted as text.",
+    "smartLock": "Camera/sensor aperture and blank functional surfaces only; no invented emblem, wing, chevron, hand, wireless icon, digits or lettering."
+  },
+  "assets": [
+    {
+      "finish": "original",
+      "generatorId": "exec-b925da21-353a-48bf-9563-9872577fae1f",
+      "file": "original.png",
+      "width": 824,
+      "height": 1909,
+      "margins": { "left": 3, "top": 4, "right": 4, "bottom": 3 },
+      "sha256": "d0cbda51ece3c4d15a96b2d8b3eb39869a2c16f7248d69a4fe88475406043167",
+      "gates": { "decodes": true, "maxMarginAtMost11": true, "frameComplete": true, "architecturePreserved": true, "exactlyOneCanonicalWonly": true, "noOtherTextPseudoText": true, "independentTwoReferenceCall": true },
+      "status": "PASS"
+    },
+    {
+      "finish": "negro",
+      "generatorId": "exec-138d277d-b522-44e1-9868-5941ec00f219",
+      "file": "negro.png",
+      "width": 824,
+      "height": 1909,
+      "margins": { "left": 7, "top": 8, "right": 7, "bottom": 3 },
+      "sha256": "d8d63f3e1cfe0cac196566b94003c3124ff4b290208325ab8612d49f401a1607",
+      "gates": { "decodes": true, "maxMarginAtMost11": true, "frameComplete": true, "architecturePreserved": true, "exactlyOneCanonicalWonly": true, "noOtherTextPseudoText": true, "independentTwoReferenceCall": true },
+      "status": "PASS"
+    },
+    {
+      "finish": "wengue",
+      "generatorId": "exec-a86146bc-ba46-4baa-b4e5-185d5b4cb6d4",
+      "file": "wengue.png",
+      "width": 824,
+      "height": 1909,
+      "margins": { "left": 6, "top": 6, "right": 7, "bottom": 10 },
+      "sha256": "fc01994ef20b8751d6d4cd3d45c69a5cf65fffcb708e95899987af50e702e1dd",
+      "gates": { "decodes": true, "maxMarginAtMost11": true, "frameComplete": true, "architecturePreserved": true, "exactlyOneCanonicalWonly": true, "noOtherTextPseudoText": true, "independentTwoReferenceCall": true },
+      "status": "PASS"
+    },
+    {
+      "finish": "gris-oscuro",
+      "generatorId": "exec-4969ccba-a1f6-4469-8936-38fd7a61b2ad",
+      "file": "gris-oscuro.png",
+      "width": 824,
+      "height": 1909,
+      "margins": { "left": 9, "top": 8, "right": 11, "bottom": 4 },
+      "sha256": "5965bbee2e14de714ccfd5a76ed8d489073e1c484a1a5a01a11f94f61d75fd97",
+      "gates": { "decodes": true, "maxMarginAtMost11": true, "frameComplete": true, "architecturePreserved": true, "exactlyOneCanonicalWonly": true, "noOtherTextPseudoText": true, "independentTwoReferenceCall": true },
+      "status": "PASS"
+    },
+    {
+      "finish": "antracita",
+      "generatorId": "exec-1b901cde-4c2a-4ad5-a91f-670745c1dc0a",
+      "file": "antracita.png",
+      "width": 824,
+      "height": 1909,
+      "margins": { "left": 9, "top": 7, "right": 9, "bottom": 6 },
+      "sha256": "3ccbc48cbb6f9541b6df4fd7edc412b10293057ebb3caf7b22faace1539eb1ec",
+      "gates": { "decodes": true, "maxMarginAtMost11": true, "frameComplete": true, "architecturePreserved": true, "exactlyOneCanonicalWonly": true, "noOtherTextPseudoText": true, "independentTwoReferenceCall": true },
+      "status": "PASS"
+    },
+    {
+      "finish": "nogal",
+      "generatorId": "exec-cc0d06ec-8a2c-4a82-9546-6cca744555a2",
+      "file": "nogal.png",
+      "width": 824,
+      "height": 1909,
+      "margins": { "left": 3, "top": 3, "right": 3, "bottom": 3 },
+      "sha256": "60f95a56af14a6d720a606abf99e0eabb06fdca34b34ab5a9a47f6804cfabb71",
+      "gates": { "decodes": true, "maxMarginAtMost11": true, "frameComplete": true, "architecturePreserved": true, "exactlyOneCanonicalWonly": true, "noOtherTextPseudoText": true, "independentTwoReferenceCall": true },
+      "status": "PASS"
+    },
+    {
+      "finish": "roble",
+      "generatorId": "exec-f064ada9-c8ed-4599-a21d-1990329a0520",
+      "file": "roble.png",
+      "width": 824,
+      "height": 1909,
+      "margins": { "left": 6, "top": 6, "right": 5, "bottom": 4 },
+      "sha256": "13bf2d58e9009a8fbed5f1d32cabec1dddde0caeb76b6d65d215bddf81cbaaa3",
+      "gates": { "decodes": true, "maxMarginAtMost11": true, "frameComplete": true, "architecturePreserved": true, "exactlyOneCanonicalWonly": true, "noOtherTextPseudoText": true, "independentTwoReferenceCall": true },
+      "status": "PASS"
+    },
+    {
+      "finish": "gris-claro",
+      "generatorId": "exec-d31ecd66-e0d7-4bf7-bcd7-352a2475788d",
+      "file": "gris-claro.png",
+      "width": 824,
+      "height": 1909,
+      "margins": { "left": 2, "top": 2, "right": 1, "bottom": 0 },
+      "sha256": "51993018021dd8a9812bb6bbe49daa8c5f542ab4357ed8893389cf52941363ec",
+      "gates": { "decodes": true, "maxMarginAtMost11": true, "frameComplete": true, "architecturePreserved": true, "exactlyOneCanonicalWonly": true, "noOtherTextPseudoText": true, "independentTwoReferenceCall": true },
+      "status": "PASS"
+    },
+    {
+      "finish": "natural",
+      "generatorId": "exec-8ae5a493-d173-49f5-a331-24cc3fda928d",
+      "file": "natural.png",
+      "width": 823,
+      "height": 1910,
+      "margins": { "left": 5, "top": 3, "right": 4, "bottom": 0 },
+      "sha256": "9d0b8f756a7abbb7e21287f15079da909745d413ffbdab73740c8792f4744bdb",
+      "gates": { "decodes": true, "maxMarginAtMost11": true, "frameComplete": true, "architecturePreserved": true, "exactlyOneCanonicalWonly": true, "noOtherTextPseudoText": true, "independentTwoReferenceCall": true },
+      "status": "PASS"
+    },
+    {
+      "finish": "blanco",
+      "generatorId": "exec-099fd939-a981-4247-ac9a-478a2c7782e7",
+      "file": "blanco.png",
+      "width": 823,
+      "height": 1910,
+      "margins": { "left": 6, "top": 9, "right": 7, "bottom": 6 },
+      "sha256": "cd500e9edcb84d69408ad2b80766bd2214ab7b4ae33377fdb3a2bde15fbb6618",
+      "gates": { "decodes": true, "maxMarginAtMost11": true, "frameComplete": true, "architecturePreserved": true, "exactlyOneCanonicalWonly": true, "noOtherTextPseudoText": true, "independentTwoReferenceCall": true },
+      "status": "PASS"
+    }
+  ],
+  "summary": {
+    "requested": 10,
+    "pass": 10,
+    "fail": 0,
+    "uniqueHashes": 10,
+    "largestMeasuredMarginPixels": 11,
+    "visualInspection": "PASS: complete frame and S108 relief retained; exactly one canonical WONLY plaque; no other text/pseudotext."
+  },
+  "promotion": {
+    "stagingOnly": true,
+    "converted": false,
+    "publicWritten": false
+  }
+}

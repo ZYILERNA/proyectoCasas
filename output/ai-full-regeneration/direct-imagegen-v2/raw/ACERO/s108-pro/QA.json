@@ -1,0 +1,34 @@
+{
+  "model": "ACERO/s108-pro",
+  "status": "PASS_10_OF_10",
+  "generatedAt": "2026-08-13",
+  "reviewMode": "visual inspection of every built-in ImageGen result plus file dimension and SHA-256 verification",
+  "qaCriteria": {
+    "architecture": "complete heavy rectangular frame, broad smooth upper header, fine full-height ribbing on both side fields, narrow smooth center strip and one slim smart lock",
+    "framing": "complete frame reaches or nearly reaches all canvas edges; no large white surround; product occupancy visually exceeds 98%",
+    "logo": "exactly one canonical WONLY logo from the official reference",
+    "additionalText": "no other letters, digits, words, pseudo-text, microtext, labels or watermarks",
+    "lock": "camera/fingerprint/status components and simple unlabeled geometric controls only",
+    "generation": "one independent built-in ImageGen call per attempt; only the master and official logo were referenced",
+    "postProcessing": "none; accepted PNGs were copied byte-for-byte"
+  },
+  "items": [
+    { "finish": "original", "attempt": 2, "frame": "PASS_EDGE_TO_EDGE", "architecture": "PASS", "wonlyLogo": "PASS_EXACTLY_ONE", "additionalText": "PASS_NONE", "lockMarks": "PASS_UNLABELED_GEOMETRY_ONLY", "finishAppearance": "PASS_GRAPHITE_ORIGINAL", "result": "PASS" },
+    { "finish": "negro", "attempt": 1, "frame": "PASS_EDGE_TO_EDGE", "architecture": "PASS", "wonlyLogo": "PASS_EXACTLY_ONE", "additionalText": "PASS_NONE", "lockMarks": "PASS_UNLABELED_GEOMETRY_ONLY", "finishAppearance": "PASS_DEEP_SATIN_BLACK", "result": "PASS" },
+    { "finish": "wengue", "attempt": 1, "frame": "PASS_EDGE_TO_EDGE", "architecture": "PASS", "wonlyLogo": "PASS_EXACTLY_ONE", "additionalText": "PASS_NONE", "lockMarks": "PASS_UNLABELED_GEOMETRY_ONLY", "finishAppearance": "PASS_DARK_WENGE", "result": "PASS" },
+    { "finish": "gris-oscuro", "attempt": 1, "frame": "PASS_EDGE_TO_EDGE", "architecture": "PASS", "wonlyLogo": "PASS_EXACTLY_ONE", "additionalText": "PASS_NONE", "lockMarks": "PASS_UNLABELED_GEOMETRY_ONLY", "finishAppearance": "PASS_DARK_NEUTRAL_GRAY", "result": "PASS" },
+    { "finish": "antracita", "attempt": 1, "frame": "PASS_EDGE_TO_EDGE", "architecture": "PASS", "wonlyLogo": "PASS_EXACTLY_ONE", "additionalText": "PASS_NONE", "lockMarks": "PASS_UNLABELED_GEOMETRY_ONLY", "finishAppearance": "PASS_ANTHRACITE", "result": "PASS" },
+    { "finish": "nogal", "attempt": 1, "frame": "PASS_EDGE_TO_EDGE", "architecture": "PASS", "wonlyLogo": "PASS_EXACTLY_ONE", "additionalText": "PASS_NONE", "lockMarks": "PASS_UNLABELED_GEOMETRY_ONLY", "finishAppearance": "PASS_WALNUT", "result": "PASS" },
+    { "finish": "roble", "attempt": 1, "frame": "PASS_EDGE_TO_EDGE", "architecture": "PASS", "wonlyLogo": "PASS_EXACTLY_ONE", "additionalText": "PASS_NONE", "lockMarks": "PASS_UNLABELED_GEOMETRY_ONLY", "finishAppearance": "PASS_LIGHT_OAK", "result": "PASS" },
+    { "finish": "gris-claro", "attempt": 1, "frame": "PASS_EDGE_TO_EDGE", "architecture": "PASS", "wonlyLogo": "PASS_EXACTLY_ONE", "additionalText": "PASS_NONE", "lockMarks": "PASS_UNLABELED_GEOMETRY_ONLY", "finishAppearance": "PASS_LIGHT_NEUTRAL_GRAY", "result": "PASS" },
+    { "finish": "natural", "attempt": 1, "frame": "PASS_EDGE_TO_EDGE", "architecture": "PASS", "wonlyLogo": "PASS_EXACTLY_ONE", "additionalText": "PASS_NONE", "lockMarks": "PASS_UNLABELED_GEOMETRY_ONLY", "finishAppearance": "PASS_PALE_HONEY_NATURAL", "result": "PASS" },
+    { "finish": "blanco", "attempt": 2, "frame": "PASS_EDGE_TO_EDGE_WHITE_FRAME_DISTINGUISHED_BY_BEVELS", "architecture": "PASS", "wonlyLogo": "PASS_EXACTLY_ONE", "additionalText": "PASS_NONE", "lockMarks": "PASS_BLANK_LOCK_FACE", "finishAppearance": "PASS_SATIN_WHITE", "result": "PASS" }
+  ],
+  "integrity": {
+    "acceptedPngCount": 10,
+    "allDimensions": "1254x1254",
+    "uniqueSha256Count": 10,
+    "allIndependent": true
+  },
+  "promotion": "NOT_PERFORMED"
+}

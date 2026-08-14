@@ -1,0 +1,2 @@
+output/ai-full-regeneration/direct-imagegen-v1/raw/**/*.png filter=lfs diff=lfs merge=lfs -text
+output/ai-full-regeneration/direct-imagegen-v2/raw/**/*.png filter=lfs diff=lfs merge=lfs -text

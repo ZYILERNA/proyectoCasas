@@ -1,0 +1,177 @@
+{
+  "schema": "direct-imagegen-model-qa/v2",
+  "model": "ACORAZADA/wl015",
+  "status": "PASS",
+  "auditedAt": "2026-08-13",
+  "master": "output/ai-full-regeneration/masters/ACORAZADA/wl015/master-no-logo-ai-tight.png",
+  "masterSha256": "8a8e116a2c5b03e0de2660625dbc38120cb0b1d4a1aa4e23eefbc3225425a479",
+  "generation": {
+    "tool": "built-in ImageGen",
+    "totalIndependentCalls": 15,
+    "activeIndependentCalls": 10,
+    "rejectedAttempts": 5,
+    "onlyMasterReferencedPerCall": true,
+    "generatedOutputReferencesUsed": false,
+    "logoReferencesUsed": false,
+    "filtersMasksCropsResizesCompositesUsed": false
+  },
+  "criteria": {
+    "marginDetection": "First pixel with any RGB channel below 248, measured independently from each canvas edge",
+    "maximumMarginPixels": 8,
+    "visual": "Complete frontal WL015 with full mitered frame and threshold; narrow left stile plus wide right leaf; exactly two horizontal joints, four right-side cylindrical hinges, tall black lock plate with tiny optical peephole, gold lever rosette and dark lever; zero logo, text, microtext or pseudotext"
+  },
+  "assets": [
+    {
+      "finish": "original",
+      "generatorId": "exec-70ed610b-6e30-4a86-9d10-dc991406794a",
+      "file": "original.png",
+      "width": 857,
+      "height": 1835,
+      "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 },
+      "sha256": "7010c4c88f186d48230457b59c8a6a34781dcd36ae1dd74e98b9041f206dd916",
+      "visual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "finish": "negro",
+      "generatorId": "exec-a7d04b5f-92d7-4ead-80d5-f97a361bcf21",
+      "file": "negro.png",
+      "width": 857,
+      "height": 1835,
+      "margins": { "left": 6, "top": 0, "right": 0, "bottom": 0 },
+      "sha256": "0b15f4379aac77887bd2e784e874127e650d603d1bf074d3a1b4e1479ffd5353",
+      "visual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "finish": "wengue",
+      "generatorId": "exec-7f5755dd-0585-49e9-a42b-78f552eb3396",
+      "file": "wengue.png",
+      "width": 857,
+      "height": 1835,
+      "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 },
+      "sha256": "2978cc3795d302012220230d2c1ec30673799dc43a57687c4c2c9024055a5f89",
+      "visual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "finish": "gris-oscuro",
+      "generatorId": "exec-1529fb87-65e8-4027-8d45-00bf46ac21de",
+      "file": "gris-oscuro.png",
+      "width": 857,
+      "height": 1835,
+      "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 },
+      "sha256": "82e4c19cd231833d8e0ff0c9354bafd8e9c2403026695219defc835956c17f2f",
+      "visual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "finish": "antracita",
+      "generatorId": "exec-1ab27839-2fd1-448b-bef7-55414ad259d6",
+      "file": "antracita.png",
+      "width": 857,
+      "height": 1836,
+      "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 },
+      "sha256": "4e615c76f5e500fe364db96fc29109a852638aa40df5b51ebc6d406fed820d36",
+      "visual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "finish": "nogal",
+      "generatorId": "exec-8f121027-8392-44af-9c1b-5ea2d43cc4d3",
+      "file": "nogal.png",
+      "width": 857,
+      "height": 1835,
+      "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 },
+      "sha256": "f6bb56258dd20c79fa5e037194c8074c45e7ce2d4827852d975ea29825a5fe1f",
+      "visual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "finish": "roble",
+      "generatorId": "exec-03d4b437-2f8f-48f5-aecf-62af09576cd9",
+      "file": "roble.png",
+      "width": 857,
+      "height": 1835,
+      "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 },
+      "sha256": "baaf701b00c28f80677977db5e6fc25a76df349142196534b22be6e20ea49b6c",
+      "visual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "finish": "gris-claro",
+      "generatorId": "exec-853ba06d-6470-4af7-9a23-7fab6adb485f",
+      "file": "gris-claro.png",
+      "width": 857,
+      "height": 1835,
+      "margins": { "left": 4, "top": 4, "right": 3, "bottom": 0 },
+      "sha256": "b25f39b44d0c902c8960649b2bb2ea25f2976230718753322fd41e7262e657b0",
+      "visual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "finish": "natural",
+      "generatorId": "exec-698f7e15-78d9-4910-9feb-ffb67d41a041",
+      "file": "natural.png",
+      "width": 857,
+      "height": 1835,
+      "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 },
+      "sha256": "bcf82775e18b2d493f94a605bc213c07c476b58442d742b9376670b795258a29",
+      "visual": "PASS",
+      "status": "PASS"
+    },
+    {
+      "finish": "blanco",
+      "generatorId": "exec-90f8e158-5c94-4559-81e9-e3a81023b920",
+      "file": "blanco.png",
+      "width": 858,
+      "height": 1834,
+      "margins": { "left": 0, "top": 2, "right": 0, "bottom": 0 },
+      "sha256": "de570a02f7c18df2c66e0b9da3176f5a17c615963a1a09646db906012afed55e",
+      "visual": "PASS",
+      "status": "PASS"
+    }
+  ],
+  "rejectedAttempts": [
+    {
+      "finish": "nogal",
+      "generatorId": "exec-f0e5e640-7049-4f67-9b28-3940bff143f8",
+      "reason": "right margin 9 px",
+      "path": "_rejected/nogal-right-margin9.png"
+    },
+    {
+      "finish": "roble",
+      "generatorId": "exec-3fd949c3-1fb6-4390-b952-b0dc4e2efce1",
+      "reason": "extra oversized circular reader-like outline on lock plate",
+      "path": "_rejected/roble-extra-large-lock-ring.png"
+    },
+    {
+      "finish": "roble",
+      "generatorId": "exec-f9d7e8df-2298-49c8-a2ee-06265210d6f2",
+      "reason": "peephole moved from lock plate onto main door panel",
+      "path": "_rejected/roble-peephole-on-main-panel.png"
+    },
+    {
+      "finish": "gris-claro",
+      "generatorId": "exec-081e4de7-8cc4-488c-80b6-5091b1ea886b",
+      "reason": "third hinge displaced onto horizontal-joint height",
+      "path": "_rejected/gris-claro-third-hinge-displaced.png"
+    },
+    {
+      "finish": "blanco",
+      "generatorId": "exec-6d27edb5-3557-4c6c-98fb-dc9e69331825",
+      "reason": "peephole not unambiguously visible on lock plate",
+      "path": "_rejected/blanco-peephole-not-visible.png"
+    }
+  ],
+  "summary": {
+    "active": 10,
+    "uniqueHashes": 10,
+    "visualPass": 10,
+    "marginPass": 10,
+    "maximumObservedMarginPixels": 6,
+    "overall": "PASS",
+    "conversionPerformed": false,
+    "publicFilesModified": false
+  }
+}

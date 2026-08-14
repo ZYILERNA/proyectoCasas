@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 2,
+  "model": "ACERO/p101",
+  "status": "PASS_10_OF_10",
+  "promotionEligible": true,
+  "generationMode": "built-in ImageGen only",
+  "policy": "KEEP_WONLY",
+  "referenceContract": {
+    "architecture": "output/ai-full-regeneration/masters/ACERO/p101/master-no-logo-ai-tight.png",
+    "architectureSha256": "1ad7f5e6f30b401e127018048b33e1ecf00581551247a454dd10ea5e78e2c3f3",
+    "logo": "public/images/logo-wonly.webp",
+    "logoSha256": "f55b5ae0b73967e7395c9e8f16dedb07c7d20e430e03f9c3a289c348e9fb2e1b",
+    "generatedOutputsUsedAsReferences": false
+  },
+  "localProcessing": {
+    "filters": false,
+    "recolor": false,
+    "mask": false,
+    "crop": false,
+    "resize": false,
+    "composite": false,
+    "retouch": false,
+    "conversion": false
+  },
+  "visualQA": {
+    "completeDoorAndFrame": true,
+    "architecturePreserved": true,
+    "blankSmartLock": true,
+    "rightHinges": 3,
+    "wonlyCountPerAsset": 1,
+    "otherTextOrPseudoText": false,
+    "almostNoWhite": true,
+    "reviewedAtOriginalDetail": true,
+    "contactSheet": "qa/contact-sheet.png",
+    "detailSheet": "qa/lock-logo-detail-sheet.png"
+  },
+  "assets": [
+    {"finish":"original","file":"original.png","width":822,"height":1914,"margins245":[10,8,5,0],"sha256":"f2a3e574d1476e7195aca0522fb01afb5f9cffd8e0d41e3117f9ea63ec255e0a"},
+    {"finish":"negro","file":"negro.png","width":822,"height":1914,"margins245":[6,6,6,4],"sha256":"4391e752841e2e76fa4a5eb89ee32266a1d1a1ede3dcc210f421ee2ef802e569"},
+    {"finish":"wengue","file":"wengue.png","width":824,"height":1909,"margins245":[2,3,6,0],"sha256":"d3ecb969e9b3dfea9bae3b5e3e1d2e5cdcd037b77c7d8d19cc375b8955c2ca61"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","width":822,"height":1913,"margins245":[10,10,8,0],"sha256":"4164e93f2ee0d975cae6144d0c4fd723628ec1175686e86033701770b1d315d0"},
+    {"finish":"antracita","file":"antracita.png","width":822,"height":1914,"margins245":[0,0,0,0],"sha256":"82f1bad8b0863ec7fff82292fb277c33cb44c7b2d361882da75e80d2cdb79859"},
+    {"finish":"nogal","file":"nogal.png","width":822,"height":1914,"margins245":[5,3,5,0],"sha256":"c8fd970ef986e50886b7d395ce7fbeb4a2ff4b9c5503aae628756743be236e9f"},
+    {"finish":"roble","file":"roble.png","width":822,"height":1914,"margins245":[0,0,2,0],"sha256":"259f6e316cfb9054352150252bb4f58c091dc713e902da55ee9c5e71f26eb4fd"},
+    {"finish":"gris-claro","file":"gris-claro.png","width":821,"height":1915,"margins245":[6,7,9,0],"sha256":"e56b7dc8b013b63f34287bad404fe1331699481b95848b840de3c817175bce24"},
+    {"finish":"natural","file":"natural.png","width":823,"height":1912,"margins245":[0,2,3,0],"sha256":"636ba78a538d4b6985b9a5f9d4ea09af87f697b84bb844448abdb3fcc03f4ec9"},
+    {"finish":"blanco","file":"blanco.png","width":823,"height":1912,"margins245":[2,2,3,1],"sha256":"f06192308e6c8eb0ddc983c3558cb7c27447ff672ba9a7129319643fbcd55f36"}
+  ],
+  "summary": "10/10 direct independent ImageGen assets pass visual and mechanical QA. Raw PNG staging only; no conversion or public write."
+}

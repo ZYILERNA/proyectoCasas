@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "model": "ACERO/cl96",
+  "date": "2026-08-13",
+  "generator": "built-in ImageGen",
+  "generationMode": "one independent call per finish",
+  "canonicalLogoPolicy": "NO_LOGO",
+  "soleReference": "output/ai-full-regeneration/masters/ACERO/cl96/master-no-logo-ai-tight.png",
+  "generatedOutputReferenceUsed": false,
+  "logoReferenceUsed": false,
+  "postProcessing": "none; raw ImageGen PNG copied byte-for-byte into workspace",
+  "publicFilesChanged": false,
+  "maxAttemptsPerFinish": 2,
+  "status": "PASS_10_OF_10",
+  "finishes": [
+    {
+      "finish": "original",
+      "file": "original.png",
+      "attempts": 1,
+      "sourceImageGenFile": "C:/Users/zhen/.codex/generated_images/019ffb89-a5e7-71f0-bf87-88de06f7d209/exec-97f237e8-57e3-4d92-b60b-ffd3343b14dd.png",
+      "bytes": 1272627,
+      "sha256": "13e7c109e8678a42890c742ef2ed70aa4e459dee654492d296aab4217e34b3f0"
+    },
+    {
+      "finish": "negro",
+      "file": "negro.png",
+      "attempts": 1,
+      "sourceImageGenFile": "C:/Users/zhen/.codex/generated_images/019ffb89-a5e7-71f0-bf87-88de06f7d209/exec-9d59e9d9-4d17-4aee-8bbd-d9d0786b1083.png",
+      "bytes": 1196023,
+      "sha256": "c92249878843cbe98de2970f95fec1f151142e5abbb62b8a834bfb26220c097c"
+    },
+    {
+      "finish": "wengue",
+      "file": "wengue.png",
+      "attempts": 2,
+      "sourceImageGenFile": "C:/Users/zhen/.codex/generated_images/019ffb89-a5e7-71f0-bf87-88de06f7d209/exec-a69f1bd9-0018-4558-8a2c-2cd8bd152f47.png",
+      "rejectedAttempt": "_rejected/wengue-attempt1-pseudomark.png",
+      "bytes": 1470159,
+      "sha256": "31d879fab29d269011f4fbc9875f07c47654315c32bcf2b39269363ea269d5b6"
+    },
+    {
+      "finish": "gris-oscuro",
+      "file": "gris-oscuro.png",
+      "attempts": 2,
+      "sourceImageGenFile": "C:/Users/zhen/.codex/generated_images/019ffb89-a5e7-71f0-bf87-88de06f7d209/exec-cc445b4f-cc9f-470a-a805-c6c9d4f4fca5.png",
+      "rejectedAttempt": "_rejected/gris-oscuro-attempt1-pseudolines.png",
+      "bytes": 1273897,
+      "sha256": "a0269df0e4c86fe02884f5e084a51931f1428fb104ed6214ac83df7242019076"
+    },
+    {
+      "finish": "antracita",
+      "file": "antracita.png",
+      "attempts": 2,
+      "sourceImageGenFile": "C:/Users/zhen/.codex/generated_images/019ffb89-a5e7-71f0-bf87-88de06f7d209/exec-9c127943-3ed9-434f-bf08-293013b33d40.png",
+      "rejectedAttempt": "_rejected/antracita-attempt1-extra-circles.png",
+      "bytes": 1235430,
+      "sha256": "81f224a8b6a661e33411e8769dbc22fe51caf6ea7098cba52c6da8790eaab64e"
+    },
+    {
+      "finish": "nogal",
+      "file": "nogal.png",
+      "attempts": 1,
+      "sourceImageGenFile": "C:/Users/zhen/.codex/generated_images/019ffb89-a5e7-71f0-bf87-88de06f7d209/exec-6c968c19-7d69-446f-8a02-b2292779df83.png",
+      "bytes": 1548969,
+      "sha256": "0bb1e627553e9df252a7ab90688178c6669b99da814cf9467f96c98ea311fd7c"
+    },
+    {
+      "finish": "roble",
+      "file": "roble.png",
+      "attempts": 1,
+      "sourceImageGenFile": "C:/Users/zhen/.codex/generated_images/019ffb89-a5e7-71f0-bf87-88de06f7d209/exec-4bc97eaf-1987-422e-9bc6-a3cf84269bf0.png",
+      "bytes": 1718291,
+      "sha256": "d17325e4a3c4e7aa214c4788c48d0064430694cdbd27467d272f4961abbdbe2e"
+    },
+    {
+      "finish": "gris-claro",
+      "file": "gris-claro.png",
+      "attempts": 1,
+      "sourceImageGenFile": "C:/Users/zhen/.codex/generated_images/019ffb89-a5e7-71f0-bf87-88de06f7d209/exec-a3c8a563-0563-4054-b44b-5bd36cd15758.png",
+      "bytes": 1325439,
+      "sha256": "6533cfdc645120d6c264367f9010810e72ed53f0b26482eaa7f54429c5ef029d"
+    },
+    {
+      "finish": "natural",
+      "file": "natural.png",
+      "attempts": 1,
+      "sourceImageGenFile": "C:/Users/zhen/.codex/generated_images/019ffb89-a5e7-71f0-bf87-88de06f7d209/exec-c28e57de-5deb-4317-8094-115d801aa346.png",
+      "bytes": 1438075,
+      "sha256": "a45e89b5ca57b234e7d3c65b63d65e0e2ab646503a2c525c2bd94d0931a477d7"
+    },
+    {
+      "finish": "blanco",
+      "file": "blanco.png",
+      "attempts": 1,
+      "sourceImageGenFile": "C:/Users/zhen/.codex/generated_images/019ffb89-a5e7-71f0-bf87-88de06f7d209/exec-6a492115-ca23-48d0-b4a4-0b131c286071.png",
+      "bytes": 1109440,
+      "sha256": "066aae654ef03ccd497125ffac9e3458fbfd6ffaddefafa88b286206b635706a"
+    }
+  ]
+}

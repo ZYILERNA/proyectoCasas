@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "model": "ACORAZADA/wl007",
+  "logoPolicy": "NO_LOGO",
+  "status": "PASS_10_OF_10",
+  "generator": "built-in ImageGen",
+  "referencePolicy": "Each attempt independently referenced only the canonical master; no generated output was reused as a reference.",
+  "reference": "output/ai-full-regeneration/masters/ACORAZADA/wl007/master-no-logo-ai-tight.png",
+  "postProcessing": [],
+  "expectedFinishes": [
+    "original",
+    "negro",
+    "wengue",
+    "gris-oscuro",
+    "antracita",
+    "nogal",
+    "roble",
+    "gris-claro",
+    "natural",
+    "blanco"
+  ],
+  "acceptedCount": 10,
+  "missingFinishes": [],
+  "assets": [
+    {
+      "finish": "original",
+      "file": "original.png",
+      "attempt": 1,
+      "imagegenCall": "exec-10017bc6-2578-4269-ac3b-265e4878a4a7",
+      "status": "PASS"
+    },
+    {
+      "finish": "negro",
+      "file": "negro.png",
+      "attempt": 1,
+      "imagegenCall": "exec-a3e2dccd-f7fb-4d6b-af44-83a69acac7c4",
+      "status": "PASS"
+    },
+    {
+      "finish": "wengue",
+      "file": "wengue.png",
+      "attempt": 2,
+      "imagegenCall": "exec-e02ee9a3-59f4-44ae-90b3-b6efa6b4f18f",
+      "status": "PASS"
+    },
+    {
+      "finish": "gris-oscuro",
+      "file": "gris-oscuro.png",
+      "attempt": 2,
+      "imagegenCall": "exec-d96accc7-e598-4721-9803-24380c06c670",
+      "status": "PASS"
+    },
+    {
+      "finish": "antracita",
+      "file": "antracita.png",
+      "attempt": 2,
+      "imagegenCall": "exec-ee5b316e-81b6-44ba-b5a7-58189310e4c8",
+      "status": "PASS"
+    },
+    {
+      "finish": "nogal",
+      "file": "nogal.png",
+      "attempt": 2,
+      "imagegenCall": "exec-b3263720-eef0-4fe5-a0fd-7587c0a54354",
+      "status": "PASS"
+    },
+    {
+      "finish": "roble",
+      "file": "roble.png",
+      "attempt": 2,
+      "imagegenCall": "exec-835560eb-9145-4147-ba03-ab8720d63017",
+      "status": "PASS"
+    },
+    {
+      "finish": "gris-claro",
+      "file": "gris-claro.png",
+      "attempt": 3,
+      "newAttemptsAfterAudit": 1,
+      "imagegenCall": "exec-3b04f01d-e1a8-4579-9686-baaaeaa6e375",
+      "status": "PASS"
+    },
+    {
+      "finish": "natural",
+      "file": "natural.png",
+      "attempt": 1,
+      "imagegenCall": "exec-11635112-5a87-4cf9-b354-12ee86292aea",
+      "status": "PASS"
+    },
+    {
+      "finish": "blanco",
+      "file": "blanco.png",
+      "attempt": 1,
+      "imagegenCall": "exec-c4a2d9d4-a425-4eb0-8201-8ef3279c054f",
+      "status": "PASS"
+    }
+  ],
+  "rejectedAttempts": [
+    {
+      "finish": "wengue",
+      "attempt": 1,
+      "file": "_rejected/wengue-attempt1-margin.png",
+      "imagegenCall": "exec-7676d2c5-1e85-4f8c-a55d-c1f700c4c33d",
+      "reason": "Horizontal subject coverage was 97.95%, below the greater-than-98% exception threshold."
+    },
+    {
+      "finish": "gris-oscuro",
+      "attempt": 1,
+      "file": "_rejected/gris-oscuro-attempt1-margin.png",
+      "imagegenCall": "exec-f62ada02-b526-4ce0-9e22-c19a7be0453d",
+      "reason": "Maximum measured white margin was 14 px."
+    },
+    {
+      "finish": "antracita",
+      "attempt": 1,
+      "file": "_rejected/antracita-attempt1-margin.png",
+      "imagegenCall": "exec-393ddb0b-2733-406a-b604-9c071fd1af7a",
+      "reason": "Maximum measured white margin was 25 px."
+    },
+    {
+      "finish": "nogal",
+      "attempt": 1,
+      "file": "_rejected/nogal-attempt1-margin.png",
+      "imagegenCall": "exec-ca6a99ec-f712-4981-9f06-edbc69e3cff3",
+      "reason": "Maximum measured white margin was 17 px."
+    },
+    {
+      "finish": "roble",
+      "attempt": 1,
+      "file": "_rejected/roble-attempt1-margin.png",
+      "imagegenCall": "exec-74981118-c2e7-455b-be1a-2c144661f399",
+      "reason": "Maximum measured white margin was 29 px."
+    },
+    {
+      "finish": "gris-claro",
+      "attempt": 1,
+      "file": "_rejected/gris-claro-attempt1-margin.png",
+      "imagegenCall": "exec-290e1476-c8ce-43c7-a594-268094d732b4",
+      "reason": "Maximum measured white margin was 17 px."
+    },
+    {
+      "finish": "gris-claro",
+      "attempt": 2,
+      "file": "_rejected/gris-claro-attempt2-margin.png",
+      "imagegenCall": "exec-b3f9911a-9385-46c3-9d82-a64d903c99e4",
+      "reason": "Maximum measured white margin was 20 px."
+    }
+  ],
+  "provenanceAudit": {
+    "activeFiles": 10,
+    "byteExactImageGenMatches": 10,
+    "result": "PASS",
+    "method": "SHA-256 comparison against the corresponding built-in ImageGen PNG source for every active finish."
+  },
+  "publication": {
+    "converted": false,
+    "promotedToPublic": false
+  }
+}

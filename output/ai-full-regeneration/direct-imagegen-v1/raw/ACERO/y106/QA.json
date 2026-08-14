@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "model": "ACERO/y106",
+  "policy": "NO_LOGO",
+  "status": "PASS_10_OF_10",
+  "generationMethod": "built-in ImageGen only; one independent call per attempt",
+  "acceptedAssetCount": 10,
+  "requiredAssetCount": 10,
+  "totalImageGenCalls": 22,
+  "independence": {
+    "soleReferenceForEveryCall": "output/ai-full-regeneration/masters/ACERO/y106/master-no-logo-ai-tight.png",
+    "masterSha256": "2e7e18edee1946ee7ccff0befa37bd188204f1d700a50aee1ee51b3bba80fbd7",
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingOfAcceptedAssets": false,
+    "compositingUsed": false,
+    "conversionUsed": false
+  },
+  "acceptanceRules": {
+    "fullFrameVisible": true,
+    "exactGrille": "6 columns x 12 rows",
+    "blankElectronicLockScreenAndLowerControl": true,
+    "zeroLogoTextOrPseudotext": true,
+    "targetMarginPixels": "0-8",
+    "relaxedMaximumMarginPixels": 11
+  },
+  "qaMethod": "Manual full-resolution visual review plus read-only pixel-boundary measurement. Accepted PNG files were copied byte-for-byte from built-in ImageGen output and were not altered during QA.",
+  "accepted": [
+    {
+      "finish": "original",
+      "file": "original.png",
+      "sha256": "ddc0e694dd96c1266422dcb445b9368fe9f121f5f6ebf55d44cce6caed461bbd",
+      "dimensions": "843x1866",
+      "marginsPx": { "left": 7, "top": 3, "right": 6, "bottom": 7 },
+      "coveragePct": { "width": 98.458, "height": 99.464 },
+      "attempt": 3,
+      "result": "PASS"
+    },
+    {
+      "finish": "negro",
+      "file": "negro.png",
+      "sha256": "bdb3b58cc995fe0f0110e9ad36cd8edc200df8776d2469b0cee5830e7990cf63",
+      "dimensions": "843x1866",
+      "marginsPx": { "left": 8, "top": 3, "right": 8, "bottom": 0 },
+      "coveragePct": { "width": 98.102, "height": 99.839 },
+      "attempt": 2,
+      "result": "PASS"
+    },
+    {
+      "finish": "wengue",
+      "file": "wengue.png",
+      "sha256": "115235dbaada2a9ed826cd50bd0a306de0dd6f3e89759fac7ca1006f7aec6673",
+      "dimensions": "845x1862",
+      "marginsPx": { "left": 7, "top": 6, "right": 6, "bottom": 6 },
+      "coveragePct": { "width": 98.462, "height": 99.356 },
+      "attempt": 3,
+      "result": "PASS"
+    },
+    {
+      "finish": "gris-oscuro",
+      "file": "gris-oscuro.png",
+      "sha256": "4393b4f791455ce3a7f8a1f5ec3e940106e8d54d5d6acf1b0f6434759f25b225",
+      "dimensions": "844x1864",
+      "marginsPx": { "left": 3, "top": 2, "right": 3, "bottom": 0 },
+      "coveragePct": { "width": 99.289, "height": 99.893 },
+      "attempt": 2,
+      "result": "PASS"
+    },
+    {
+      "finish": "antracita",
+      "file": "antracita.png",
+      "sha256": "40a06248b06059e87e520a24b6826530c66dccd3da670013ccb091e88da74632",
+      "dimensions": "843x1866",
+      "marginsPx": { "left": 6, "top": 6, "right": 6, "bottom": 6 },
+      "coveragePct": { "width": 98.577, "height": 99.357 },
+      "attempt": 2,
+      "result": "PASS"
+    },
+    {
+      "finish": "nogal",
+      "file": "nogal.png",
+      "sha256": "6af569a2e854b6a3e974cd5b4d66ff5244c72a3c15f25f6bcdd32159fe94a1ba",
+      "dimensions": "843x1866",
+      "marginsPx": { "left": 1, "top": 4, "right": 5, "bottom": 0 },
+      "coveragePct": { "width": 99.288, "height": 99.786 },
+      "attempt": 1,
+      "result": "PASS"
+    },
+    {
+      "finish": "roble",
+      "file": "roble.png",
+      "sha256": "cecec1563bec8bfd91750f3d83a9584c1130cc6538665974048113b9e7ee4ed2",
+      "dimensions": "843x1866",
+      "marginsPx": { "left": 0, "top": 3, "right": 3, "bottom": 4 },
+      "coveragePct": { "width": 99.644, "height": 99.625 },
+      "attempt": 1,
+      "result": "PASS"
+    },
+    {
+      "finish": "gris-claro",
+      "file": "gris-claro.png",
+      "sha256": "a49ba9c319ce0f78274e7f2aec12fee3866f1deecd1eb0334fd9ad2c5f6b120c",
+      "dimensions": "843x1864",
+      "marginsPx": { "left": 5, "top": 3, "right": 6, "bottom": 4 },
+      "coveragePct": { "width": 98.695, "height": 99.624 },
+      "attempt": 4,
+      "result": "PASS"
+    },
+    {
+      "finish": "natural",
+      "file": "natural.png",
+      "sha256": "9fa5186afbc67b8670c483c77410b356776082cd4a11497f2bbd51ca34a8ce06",
+      "dimensions": "843x1864",
+      "marginsPx": { "left": 4, "top": 2, "right": 4, "bottom": 4 },
+      "coveragePct": { "width": 99.051, "height": 99.678 },
+      "attempt": 2,
+      "result": "PASS"
+    },
+    {
+      "finish": "blanco",
+      "file": "blanco.png",
+      "sha256": "f87be7f1964cbfee8dbbce86870b116773be954870d39226eb0055f64092e0aa",
+      "dimensions": "845x1862",
+      "marginsPx": { "left": 6, "top": 5, "right": 9, "bottom": 3 },
+      "coveragePct": { "width": 98.225, "height": 99.570 },
+      "attempt": 2,
+      "result": "PASS"
+    }
+  ],
+  "rejectedCount": 12,
+  "rejectedDirectory": "_rejected",
+  "rejectedReasons": {
+    "excessMargin": 6,
+    "sensorPseudotext": 5,
+    "sensorAndGrilleDefect": 1
+  },
+  "publicFilesModified": false,
+  "converted": false,
+  "publication": "NOT CONVERTED; NOT PROMOTED"
+}

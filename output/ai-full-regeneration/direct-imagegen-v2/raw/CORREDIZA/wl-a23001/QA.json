@@ -1,0 +1,50 @@
+{
+  "schema": "wonly-direct-imagegen-raw-qa/v2",
+  "category": "CORREDIZA",
+  "model": "wl-a23001",
+  "status": "PASS_10_OF_10",
+  "policy": "NO_LOGO",
+  "generation": {
+    "engine": "built-in ImageGen",
+    "independentCallPerAsset": true,
+    "singleReferenceOnly": true,
+    "reference": "output/ai-full-regeneration/large-doors/CORREDIZA/wl-a23001/master-no-logo-ai.png",
+    "referenceSha256": "f66af93584f66c81c53768efa554039998ac069583fd3ae3b1b13a504048a359",
+    "usedPreviousOutputAsReference": false,
+    "usedLogoReference": false,
+    "filters": false,
+    "localRecolor": false,
+    "masks": false,
+    "crop": false,
+    "resize": false,
+    "composite": false,
+    "converted": false,
+    "publicWritten": false
+  },
+  "visualQa": {
+    "completeFrameAndThreshold": true,
+    "frontOrthographic": true,
+    "fourPanels": true,
+    "threeVerticalMullions": true,
+    "twoRecessedPulls": true,
+    "logoCount": 0,
+    "visibleTextOrPseudotextCount": 0,
+    "reviewedAtOriginalDetail": true
+  },
+  "marginPolicy": {"preferredMaxPx":8,"documentedTolerancePx":11,"allFramesComplete":true,"maximumObservedPx":10},
+  "assets": [
+    {"finish":"original","file":"original.png","width":1254,"height":1254,"marginsLTRB":[5,4,7,0],"sha256":"c4bb1ba1652337da9d606fec605c10530db0235efba191fd492240646052b1de","pass":true},
+    {"finish":"negro","file":"negro.png","width":1141,"height":1378,"marginsLTRB":[3,5,5,2],"sha256":"efdd5adc2f0c4efbfe2f3b6b528467c8dfa58fee1e8b2f82f368e07f2bd21226","pass":true},
+    {"finish":"wengue","file":"wengue.png","width":1254,"height":1254,"marginsLTRB":[0,0,7,1],"sha256":"eca0f73428ff5696d7fbad884baf563af3d4f942510c561cf7ddd25d553ff5e5","pass":true},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","width":1140,"height":1380,"marginsLTRB":[10,6,8,1],"sha256":"0ec19c17720fcb59af62e8f7b13659d6caf5734a2861985f72668e2ff1df8d80","pass":true},
+    {"finish":"antracita","file":"antracita.png","width":1142,"height":1377,"marginsLTRB":[3,0,4,0],"sha256":"e8d8816a0c4307b88d05576b12acb14f8e49271d3fc7d10df5f99b30bc1a8710","pass":true},
+    {"finish":"nogal","file":"nogal.png","width":1142,"height":1378,"marginsLTRB":[0,0,0,0],"sha256":"41836fc82411f57b627d9989bb5fcd86723707545796b240d7f3404842c9267a","pass":true},
+    {"finish":"roble","file":"roble.png","width":1142,"height":1378,"marginsLTRB":[0,0,0,0],"sha256":"1a8faf463c46f1db740b4fc514b357f3a628d40c65187d02dd6b0f0efcd13f32","pass":true},
+    {"finish":"gris-claro","file":"gris-claro.png","width":1141,"height":1379,"marginsLTRB":[0,0,0,0],"sha256":"757caafd5661198497fd9912aa3c1adb89e56f8b077d229db9d1e3f4ad05ae0b","pass":true},
+    {"finish":"natural","file":"natural.png","width":1142,"height":1378,"marginsLTRB":[0,0,2,0],"sha256":"a5df784df92c1821162d4b2b56b4adb65910ea0794cabd7086b34ab62424c51e","pass":true},
+    {"finish":"blanco","file":"blanco.png","width":1141,"height":1379,"marginsLTRB":[3,3,4,1],"sha256":"42461d56b22ed2c3721aeb55dbf2de8338bb435d7b63a70364c5a1f2543cfad0","pass":true}
+  ],
+  "rejectedAttempts": 1,
+  "safeToPromote": false,
+  "promotionStatus": "NOT_REQUESTED"
+}

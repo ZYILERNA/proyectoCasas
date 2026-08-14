@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "model": "ACERO/gl099",
+  "policy": "NO_LOGO",
+  "generatedAt": "2026-08-13",
+  "generation": {
+    "method": "built-in ImageGen direct independent calls",
+    "onlyReference": "output/ai-full-regeneration/masters/ACERO/gl099/master-no-logo-ai-tight.png",
+    "onlyReferenceSha256": "2379340b5da022a38b6e9bd7697c735c3e3693c30bcc0d52db18132a1c2529a9",
+    "logoReferenceUsed": false,
+    "generatedOutputUsedAsInput": false,
+    "filtersOrRecolorUsed": false,
+    "maskCompositeCropResizeUsed": false
+  },
+  "promotion": {
+    "converted": false,
+    "publicWritten": false,
+    "applyAuthorized": false,
+    "status": "RAW_STAGING_ONLY"
+  },
+  "accepted": [
+    {"finish":"original","file":"original.png","generatorId":"exec-a53b74c4-af55-427f-94be-4d35dde21021","width":972,"height":1618,"channels":3,"margin":{"left":0,"top":0,"right":0,"bottom":0},"sha256":"afc171cc71225e34955545976cf1c4d40e22ca8609cb3dd428f2b4c7c4d659b0"},
+    {"finish":"negro","file":"negro.png","generatorId":"exec-3552fe1e-c35e-44e0-9be8-f109ac80d3de","width":972,"height":1618,"channels":3,"margin":{"left":0,"top":0,"right":0,"bottom":0},"sha256":"2cccf38d3d625cbce64afc4fe912df27f648b2d9f736832757f369df394e2ad2"},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-ff48820a-065f-4750-8fba-e5b762d5d3ff","width":972,"height":1619,"channels":3,"margin":{"left":0,"top":0,"right":4,"bottom":0},"sha256":"a1d0a902c8f7e76510932740f8483a94da9a4ff87144f456b567961385475ec6"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-7e532c65-f2f4-49e8-9629-9d6f1552e24f","width":972,"height":1619,"channels":3,"margin":{"left":0,"top":0,"right":0,"bottom":0},"sha256":"1aa5e8b9840e06eda60cad4d8f20249f936c22720b2eee97e3082fc3f4b0c827"},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-de0c608d-a97d-4371-b264-5d55d34c1092","width":972,"height":1618,"channels":3,"margin":{"left":0,"top":0,"right":0,"bottom":0},"sha256":"953cd8da8f3a355de0f8d375ec96dde3fff66b6ff44912d61cf622f47f655334"},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-0c62dd37-dcf0-4cc0-90b9-f092f71e99de","width":972,"height":1618,"channels":3,"margin":{"left":0,"top":1,"right":0,"bottom":0},"sha256":"4326ea30cf8edf8af8c12cb8df19ceb1847d5fb064ab250aaed8e745cbcf69f2"},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-67a22a40-2ac6-4150-a541-1d422dc5c43e","width":972,"height":1618,"channels":3,"margin":{"left":2,"top":0,"right":4,"bottom":0},"sha256":"c87786de0afdd8232a20a14571a5a22ea7d3ac5f98efc05bdea41e9862447912"},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-cd33737b-7e58-4f4d-b901-cd8dea031de6","width":973,"height":1616,"channels":3,"margin":{"left":1,"top":0,"right":4,"bottom":0},"sha256":"32eab3b5da02ad486386cf29e7a1ccbd1192fa5c9c2964bfd003438dfdc08112"},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-1adb7f64-7e8b-4724-a922-9093b2f3fe9e","width":972,"height":1617,"channels":3,"margin":{"left":7,"top":4,"right":8,"bottom":1},"sha256":"43f37bf8fbb6e1dc47da00dc1d006f23a0d99b8663eb4813434c184b29b139c0"},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-38aa58de-cfac-4cca-95d1-1288b3673381","width":972,"height":1617,"channels":3,"margin":{"left":7,"top":4,"right":8,"bottom":1},"sha256":"f928903838529fd35ce1a05d2ca63818dbf51761e151a672f0bad98e15ad2a7a"}
+  ],
+  "rejectedDirectory": "_rejected",
+  "invalidatedLegacy": "output/ai-full-regeneration/_invalidated-no-logo-policy/invalid-logo-policy-2026-08-13/ACERO/gl099"
+}

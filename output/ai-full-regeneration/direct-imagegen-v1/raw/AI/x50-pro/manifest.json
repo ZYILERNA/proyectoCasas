@@ -1,0 +1,31 @@
+{
+  "schema": "wonly-direct-imagegen-raw-manifest/v2",
+  "model": "AI/x50-pro",
+  "status": "PASS_10_OF_10",
+  "policy": "KEEP_WONLY",
+  "master": {
+    "path": "output/ai-full-regeneration/masters/AI/x50-pro/master-no-logo-ai-tight.png",
+    "sha256": "ddc5567b4525f32f48906d39b4771004876b7e00a9fcc37714101c95c8ad794e"
+  },
+  "logoReference": {
+    "path": "public/images/logo-wonly.webp",
+    "sha256": "f55b5ae0b73967e7395c9e8f16dedb07c7d20e430e03f9c3a289c348e9fb2e1b"
+  },
+  "activeAssets": [
+    {"finish":"original","file":"original.png","sha256":"21e87ff7b847d51f5d97e6fa8de3c55cd569fb31226cffef66d8dc5234188ebb","width":935,"height":1683},
+    {"finish":"negro","file":"negro.png","sha256":"47100142cfee0b69677158795b076d86285a170030a619a5c9724a47249e0065","width":935,"height":1682},
+    {"finish":"wengue","file":"wengue.png","sha256":"9b2553c114b4d63d2ccb667a305a79a3140682b8283db8503d297caef007c174","width":935,"height":1681},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","sha256":"7959a81a2a73d489a78c3012ad903dd279d43475a700209ca0c0e8da0faeae18","width":935,"height":1682},
+    {"finish":"antracita","file":"antracita.png","sha256":"249eb5fed83713bd3412eebb11d533230ccbc79ff6a2c7141f358e8a6c3b688d","width":935,"height":1682},
+    {"finish":"nogal","file":"nogal.png","sha256":"3fc9471e4807a23535aec6bedcc68949bbb71c31bf986e643656a5929e19157d","width":935,"height":1683},
+    {"finish":"roble","file":"roble.png","sha256":"b1687fd71bb6dd0df014391cd01a08578f1cce37b4d0e36121e48cd0714bae50","width":935,"height":1683},
+    {"finish":"gris-claro","file":"gris-claro.png","sha256":"b684b404c4d8cb23526c43154e9caaf0bd74a8d3af51f4afdd35f8ea8028a46f","width":935,"height":1683},
+    {"finish":"natural","file":"natural.png","sha256":"c3162537637327adf67e8bfaacaaa76faffd2be60017759457aa225a9a59a11d","width":935,"height":1682,"imageGenOutput":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-a18ba470-e8f6-4626-95bd-9aee1c6ac887.png"},
+    {"finish":"blanco","file":"blanco.png","sha256":"160a9f98e4d6c060587b3d1549b17eef2b796a3b0581c9d8e1a99b28f5fd703c","width":935,"height":1682}
+  ],
+  "activeAssetCount": 10,
+  "uniqueAssetHashes": 10,
+  "converted": false,
+  "publicWritten": false,
+  "applyAuthorized": false
+}

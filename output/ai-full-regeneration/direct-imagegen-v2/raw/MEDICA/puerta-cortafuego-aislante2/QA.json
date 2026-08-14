@@ -1,0 +1,57 @@
+{
+  "schema": "wonly-direct-imagegen-raw-qa/v2",
+  "model": "puerta-cortafuego-aislante2",
+  "category": "MEDICA",
+  "status": "PASS_10_OF_10",
+  "policy": "NO_LOGO",
+  "generation": {
+    "engine": "built-in ImageGen",
+    "independentCallPerAsset": true,
+    "singleReferenceOnly": true,
+    "reference": "output/ai-full-regeneration/large-doors/MEDICA/puerta-cortafuego-aislante2/master-no-logo-ai.png",
+    "referenceSha256": "de21b027c5f079b7a49c03d2dca5f55a62b60f0378564f6afc7244c5a1078510",
+    "usedPreviousOutputAsReference": false,
+    "usedLogoReference": false,
+    "filters": false,
+    "localRecolor": false,
+    "masks": false,
+    "crop": false,
+    "resize": false,
+    "composite": false,
+    "converted": false,
+    "publicWritten": false
+  },
+  "visualQa": {
+    "completeSingleLeafAndFrame": true,
+    "frontOrthographic": true,
+    "leftVerticalVisionPanelPreserved": true,
+    "completeSilverPanicBarPreserved": true,
+    "panicBarCurvedEndMountCount": 2,
+    "logoCount": 0,
+    "visibleTextOrPseudotextCount": 0,
+    "reviewedAtOriginalDetail": true,
+    "crossFinishContactSheet": "output/ai-full-regeneration/direct-imagegen-v2/qa-cross/MEDICA/puerta-cortafuego-aislante2/contact-sheet.png"
+  },
+  "marginPolicy": {
+    "preferredMaxPx": 8,
+    "documentedTolerancePx": 11,
+    "allFramesComplete": true,
+    "maximumObservedPx": 11,
+    "method": "Original-resolution visual edge tracing supported by approximate RGB threshold measurement; pale white-frame bevels were traced manually against the white background."
+  },
+  "assets": [
+    {"finish":"original","file":"original.png","attempt":1,"width":873,"height":1802,"marginsLTRB":[0,4,4,0],"minSpanCoveragePct":99.54,"sha256":"3ce08a742311a5d44322bcc8df739915b1ae78899205664a3702ffe017a63643","pass":true},
+    {"finish":"negro","file":"negro.png","attempt":1,"width":873,"height":1802,"marginsLTRB":[1,3,4,0],"minSpanCoveragePct":99.43,"sha256":"59bf951417a5e85b678bd5471731122fde0069c982c84ee5ef8468325ee9be54","pass":true},
+    {"finish":"wengue","file":"wengue.png","attempt":2,"width":872,"height":1804,"marginsLTRB":[7,0,9,4],"minSpanCoveragePct":98.17,"sha256":"4698372a85494804d0e24078b345260cbc83e8bf1bd0de8c1cd2c328e519d65e","pass":true,"note":"9 px right-side tolerance; faint complete outer bevel remains visible and horizontal span is above 98%"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","attempt":1,"width":873,"height":1802,"marginsLTRB":[3,3,7,0],"minSpanCoveragePct":98.85,"sha256":"c84640555b0bc46a1c7aa051b989a344e963931c8fff8009121dad13c0f94894","pass":true},
+    {"finish":"antracita","file":"antracita.png","attempt":1,"width":873,"height":1802,"marginsLTRB":[2,2,2,0],"minSpanCoveragePct":99.54,"sha256":"1803c6933678fea5bb2c7c808f4a15321d8789522b537cfe510036d3dc379b21","pass":true},
+    {"finish":"nogal","file":"nogal.png","attempt":1,"width":872,"height":1802,"marginsLTRB":[6,8,7,4],"minSpanCoveragePct":98.51,"sha256":"4c194ba4a770408a1238832152b1180dd758c6a53ba60297c81ef1febebd837d","pass":true},
+    {"finish":"roble","file":"roble.png","attempt":1,"width":873,"height":1802,"marginsLTRB":[2,0,7,0],"minSpanCoveragePct":98.97,"sha256":"130f4f953519e13390e57bfe8bd4ff4e7b1c3da1166f33a7c50d3b5e650a5914","pass":true},
+    {"finish":"gris-claro","file":"gris-claro.png","attempt":2,"width":872,"height":1803,"marginsLTRB":[3,4,7,0],"minSpanCoveragePct":98.85,"sha256":"f9b350b25a44bcce6b46738c0f69e419ffc8aab3f4b7f853cf061f7a889422e5","pass":true},
+    {"finish":"natural","file":"natural.png","attempt":1,"width":873,"height":1802,"marginsLTRB":[0,2,0,0],"minSpanCoveragePct":99.89,"sha256":"70007b98d0041661cf2d45d4da1e86c5ea2a080d2ee7b76f256c37a260e06aa1","pass":true},
+    {"finish":"blanco","file":"blanco.png","attempt":2,"width":873,"height":1802,"marginsLTRB":[6,7,11,4],"minSpanCoveragePct":98.05,"sha256":"62775a5a72ffa2275e5c67d981ac364bbd0b8048a5a93daab51ccf38fde03cd4","pass":true,"note":"11 px right-side tolerance; complete pale outer bevel was confirmed at original detail and horizontal span remains above 98%"}
+  ],
+  "rejectedAttempts": 3,
+  "safeToPromote": false,
+  "promotionStatus": "NOT_REQUESTED"
+}

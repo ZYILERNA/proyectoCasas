@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "score": "10/10",
+  "auditedAt": "2026-08-13",
+  "auditedFromFiles": true,
+  "visualInspection": {
+    "detail": "original",
+    "allTenReopened": true,
+    "completeOuterFrame": true,
+    "upperTransomPreserved": true,
+    "narrowLeftAndBroadRightLeavesPreserved": true,
+    "singleVerticalSeam": true,
+    "singleBlankRectangularPlate": true,
+    "singleRoundKnob": true,
+    "silverThreshold": true,
+    "zeroLogoTextMicrotextPseudotext": true,
+    "zeroExtraHardware": true,
+    "noSceneOrShadow": true
+  },
+  "mechanicalInspection": {
+    "pixelThreshold": "any RGB channel < 248",
+    "maximumMarginPx": 8,
+    "observedMarginRangePx": [0, 8],
+    "allWithinLimit": true,
+    "pngCount": 10,
+    "uniqueSha256Count": 10,
+    "allRgbThreeChannels": true
+  },
+  "provenance": {
+    "masterOnly": true,
+    "logoReferenceUsed": false,
+    "outputReferenceUsed": false,
+    "retriesReadMasterOnly": true
+  },
+  "writes": {
+    "conversion": 0,
+    "public": 0
+  },
+  "notes": "Eight failed attempts were retained under _rejected. Legacy WONLY raw/final/staging was isolated and marked NEVER-PROMOTE."
+}

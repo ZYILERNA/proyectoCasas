@@ -1,0 +1,43 @@
+{
+  "schema": "wonly-direct-imagegen-qa/v2",
+  "model": "EVACUACION/mk-01",
+  "status": "PASS_10_OF_10",
+  "policy": "NO_LOGO",
+  "method": "built-in ImageGen; one independent call per active asset; master-only reference",
+  "sourceMaster": "output/ai-full-regeneration/new-defects/EVACUACION/mk-01/master-no-logo-ai.png",
+  "sourceMasterSha256": "bc15ecc297b33781223a18274a09d42c5b7cce597435f1773c9aabb4ead38b20",
+  "constraints": {
+    "filters": false,
+    "recolor": false,
+    "masks": false,
+    "crop": false,
+    "resize": false,
+    "composite": false,
+    "conversion": false,
+    "publicWritten": false,
+    "logoCount": 0,
+    "extraTextCount": 0,
+    "expectedHardware": "one circular cylinder above one separate lever on a round rosette",
+    "framing": "complete frame and threshold, 0-8 px preferred; up to 11 px accepted when visually complete"
+  },
+  "summary": {
+    "activeAssets": 10,
+    "uniqueHashes": 10,
+    "rejectedAttempts": 6,
+    "maxObservedMarginPixels": 11,
+    "visualPass": true,
+    "mechanicalPass": true
+  },
+  "assets": [
+    {"finish":"original","file":"original.png","width":919,"height":1712,"margins245":[3,3,3,3],"coveragePercent":[99.3471,99.6495],"sha256":"be7a5165f2266921bc888be2da36d9625127792b1135e9d9e14aaddd280a8f78","imagegenOutput":"exec-4f87c53f-77b4-4bdd-a98e-4b435f214cfe.png"},
+    {"finish":"negro","file":"negro.png","width":919,"height":1711,"margins245":[0,0,0,0],"coveragePercent":[100.0,100.0],"sha256":"d0a80470e8c7f8be94a6e615586e6e84ad3d28320f10fab55babe1fd68d5df3c","imagegenOutput":"exec-6fe1ef84-3301-49fb-af3f-2213dca7aa7e.png"},
+    {"finish":"wengue","file":"wengue.png","width":920,"height":1710,"margins245":[10,8,11,7],"coveragePercent":[97.7174,99.1228],"sha256":"8dc2fb555eecced24325c7d1ca789809fbe32b5ec20cc5b307cb626e9ab26017","imagegenOutput":"exec-632d0d68-33db-4433-8672-851f58a0cbd6.png"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","width":943,"height":1667,"margins245":[0,0,0,0],"coveragePercent":[100.0,100.0],"sha256":"68614bbf042d7c150f4960deee42e72f19f19d5fb05c0869cbee5c18571290b1","imagegenOutput":"exec-de81a535-1c24-468d-a9ca-01c0b1f096a3.png"},
+    {"finish":"antracita","file":"antracita.png","width":919,"height":1711,"margins245":[0,0,0,0],"coveragePercent":[100.0,100.0],"sha256":"46837b8019ef494ac98eb26ab3d848d0282b413effb422b17a9e6904ff715d5f","imagegenOutput":"exec-72767fa7-a03a-40cc-9664-cbd0c0620cdd.png"},
+    {"finish":"nogal","file":"nogal.png","width":919,"height":1711,"margins245":[11,9,10,5],"coveragePercent":[97.7149,99.1818],"sha256":"53086fe5608e523a9a192cc3b6ea9b9e02344c3c1a1bab5a9fc964e83ba541d6","imagegenOutput":"exec-7b1fa062-6463-4e4b-b463-705ca9977f06.png"},
+    {"finish":"roble","file":"roble.png","width":919,"height":1711,"margins245":[8,6,9,5],"coveragePercent":[98.1502,99.3571],"sha256":"04961f0d135a610b6c517994cc0fb25387dbf3ee703857a92cdcc6f1cab510ce","imagegenOutput":"exec-12a10ef9-1c3a-4eed-95b2-1dc60db5a2d1.png"},
+    {"finish":"gris-claro","file":"gris-claro.png","width":919,"height":1710,"margins245":[0,0,0,0],"coveragePercent":[100.0,100.0],"sha256":"f37d3d30cac118b57fa1223964346705ed10812bbee115b783a961874858a8e9","imagegenOutput":"exec-f4ee6cc6-0136-4a16-9cab-950f021cb944.png"},
+    {"finish":"natural","file":"natural.png","width":919,"height":1711,"margins245":[0,0,0,0],"coveragePercent":[100.0,100.0],"sha256":"c0d6079651e679136cedd65ec659204d84c34acf1f3a3ec65597dc232008384e","imagegenOutput":"exec-31ae0d56-b773-4640-82be-138ff3620015.png"},
+    {"finish":"blanco","file":"blanco.png","width":919,"height":1711,"margins245":[1,2,2,0],"coveragePercent":[99.6736,99.8831],"sha256":"4fb5a7e03790ea08b609e0114685ad85d4d758edd84ba775f13697f3064fef73","imagegenOutput":"exec-a79c18ee-6a21-4018-8fe4-bb67d995381d.png"}
+  ]
+}

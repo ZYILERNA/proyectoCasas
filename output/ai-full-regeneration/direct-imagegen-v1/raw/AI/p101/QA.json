@@ -1,0 +1,60 @@
+{
+  "schema": "direct-imagegen-no-logo-qa/v1",
+  "model": "AI/p101",
+  "reviewDate": "2026-08-13",
+  "reviewType": "independent visual and pixel-bound QA",
+  "publicModified": false,
+  "summary": {
+    "activeAssetCount": 10,
+    "rejectedAttemptCount": 1,
+    "approvedVisually": 10,
+    "uniqueHashCount": 10,
+    "overall": "PASS"
+  },
+  "criteria": {
+    "architecture": "complete frontal P101 with full dark outer frame, narrow inner jamb, one high horizontal seam with two metallic end caps, exactly three right-side hinges, and one tall left-side smart lock",
+    "framing": "complete frame visible with target 0-8 px visually white margin; up to 11 px accepted only with more than 98% assembly coverage",
+    "branding": "NO_LOGO: zero logo, brand, badge, plaque, text, microtext, pseudo-writing, letters, numbers, icons, or symbol-like marks",
+    "lock": "smart-lock face and handle remain blank and unlabelled; physical bevels and handle outlines are not display marks",
+    "scene": "plain white catalog background; no room, wall, floor, perspective, props, watermark, or decorative border",
+    "derivation": "direct built-in ImageGen output; no filter, recolor, mask, crop, resize, composite, retouch, or local repair"
+  },
+  "marginDetection": {
+    "method": "First pixel with any RGB channel below 245, measured from each canvas edge; measurement only, no crop",
+    "targetMaximumPixels": 8,
+    "exceptionMaximumPixels": 11
+  },
+  "assets": [
+    { "finish": "original", "file": "original.png", "dimensions": "823x1910", "sha256": "2E4E31CFF74E0282DF175A116727E155C824D19E25D87E226D4CFA442FD4188C", "margins": { "left": 8, "top": 6, "right": 8, "bottom": 4 }, "visual": "PASS" },
+    { "finish": "negro", "file": "negro.png", "dimensions": "823x1911", "sha256": "F80869D5F73820BC60AF105FDCB239EC39047E30F0AF95DB8239318694B81CA6", "margins": { "left": 1, "top": 4, "right": 2, "bottom": 0 }, "visual": "PASS" },
+    { "finish": "wengue", "file": "wengue.png", "dimensions": "825x1907", "sha256": "0574A35FCC7C72FB8847FD4036225C1B51E305E9BFCEC4FFD713515286912616", "margins": { "left": 2, "top": 3, "right": 6, "bottom": 0 }, "visual": "PASS" },
+    { "finish": "gris-oscuro", "file": "gris-oscuro.png", "dimensions": "824x1909", "sha256": "0BAED16F60D42BFFB70C5E14348ABC802343FADB9F65CDC3B2E0F3D96DF3615B", "margins": { "left": 8, "top": 10, "right": 7, "bottom": 0 }, "visual": "PASS", "note": "Top margin uses the <=11 px exception; measured non-white assembly covers 98.18% of width and 99.48% of height." },
+    { "finish": "antracita", "file": "antracita.png", "dimensions": "824x1908", "sha256": "67414AC56BCF0DC6FD999840096AE256995EE0EC9F9651DEC0094B9DAB41B7DE", "margins": { "left": 7, "top": 5, "right": 5, "bottom": 0 }, "visual": "PASS" },
+    { "finish": "nogal", "file": "nogal.png", "dimensions": "825x1906", "sha256": "5426FA9669019A6447F1908AFABB5C91053B6B3BD7BB7C08CF9940F7DBE48262", "margins": { "left": 1, "top": 4, "right": 3, "bottom": 0 }, "visual": "PASS" },
+    { "finish": "roble", "file": "roble.png", "dimensions": "822x1913", "sha256": "04EFE9DE542A24A479712255A10E18D0CF94A576BCD17474122544F11C34FAFE", "margins": { "left": 1, "top": 4, "right": 4, "bottom": 0 }, "visual": "PASS" },
+    { "finish": "gris-claro", "file": "gris-claro.png", "dimensions": "823x1912", "sha256": "6B40DA519DA3F9F80E941EE6FF0749102D6BE032AA4C6306D5866E1C325F0B2C", "margins": { "left": 5, "top": 6, "right": 5, "bottom": 0 }, "visual": "PASS" },
+    { "finish": "natural", "file": "natural.png", "dimensions": "824x1909", "sha256": "B98565C07437F1495270973C45B1B604F8F75A23A726496FB8739AD88A9E8718", "margins": { "left": 7, "top": 5, "right": 8, "bottom": 0 }, "visual": "PASS" },
+    { "finish": "blanco", "file": "blanco.png", "dimensions": "827x1902", "sha256": "DA3E8364418EB5937E07EB0CDC48203E895DBB2278A08B3E2C2C61714E57D0A7", "margins": { "left": 5, "top": 6, "right": 6, "bottom": 4 }, "visual": "PASS" }
+  ],
+  "visualChecks": {
+    "completeDoorAndOuterFrame": "PASS 10/10",
+    "p101ArchitectureAndHardwarePreserved": "PASS 10/10",
+    "noLogoTextOrPseudoText": "PASS 10/10",
+    "blankSmartLock": "PASS 10/10",
+    "marginWithinPolicy": "PASS 10/10",
+    "noRoomFloorPerspectiveOrDecorativeBorder": "PASS 10/10",
+    "finishIsVisuallyDistinct": "PASS 10/10"
+  },
+  "rejected": [
+    {
+      "file": "_rejected/gris-oscuro-attempt1-margin12.png",
+      "reason": "Rejected because both lateral visually white margins measured 12 px, above the 11 px exception. It is excluded from the active set and must never be promoted."
+    }
+  ],
+  "excludedLegacySets": [
+    "output/ai-regeneration-raw/AI/p101",
+    "output/ai-full-regeneration/finished-staging/AI/p101",
+    "output/ai-full-regeneration/finished-staging-v2/AI/p101"
+  ],
+  "notes": "The ten accepted PNGs remain untouched raw built-in ImageGen results. QA contact sheets are derived review artifacts only and are not promotable assets. No conversion or public promotion was performed."
+}

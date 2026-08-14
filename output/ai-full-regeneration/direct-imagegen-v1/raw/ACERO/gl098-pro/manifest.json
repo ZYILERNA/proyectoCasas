@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "createdOn": "2026-08-12",
+  "category": "ACERO",
+  "model": "gl098-pro",
+  "logoPolicy": "KEEP_WONLY",
+  "assetRoot": "output/ai-full-regeneration/direct-imagegen-v1/raw/ACERO/gl098-pro",
+  "sourceMaster": "output/ai-full-regeneration/masters/ACERO/gl098-pro/master-no-logo-ai-tight.png",
+  "logoReference": "public/images/logo-wonly.webp",
+  "generation": {
+    "mode": "built-in ImageGen",
+    "strategy": "one independent direct AI edit per attempt, always from the same master and official logo reference",
+    "totalCalls": 13,
+    "acceptedCalls": 10,
+    "rejectedCalls": 3,
+    "filters": false,
+    "recoloring": false,
+    "masks": false,
+    "compositing": false,
+    "cropping": false,
+    "resizing": false,
+    "localPixelPostprocessing": false,
+    "conversionPerformed": false,
+    "publicPromotionPerformed": false
+  },
+  "expectedAssetCount": 10,
+  "actualAssetCount": 10,
+  "qaSummary": {
+    "status": "PASS",
+    "visualInspection": "10/10",
+    "validPng": "10/10",
+    "completeFrontDoor": "10/10",
+    "singleWonly": "10/10",
+    "extraTextOrLockLetters": "0/10",
+    "singleCleanSmartLock": "10/10",
+    "hardwareHaloOrPatch": "0/10",
+    "robustWhiteMarginAtMost8Px": "10/10",
+    "uniqueSha256": "10/10"
+  },
+  "assets": [
+    {
+      "finish": "original",
+      "filename": "original.png",
+      "bytes": 1372630,
+      "width": 880,
+      "height": 1788,
+      "sha256": "960c556e106a08db4726f76c9c8202818459f34aacf8d4b9a4b54f4f0a5316d0",
+      "robustWhiteMarginPx": { "left": 0, "top": 0, "right": 0, "bottom": 0 },
+      "leafSampleMeanRgb": [50.2, 50.4, 54.6],
+      "leafSampleLuminance": 50.7,
+      "visualQa": "PASS",
+      "attempt": 2
+    },
+    {
+      "finish": "negro",
+      "filename": "negro.png",
+      "bytes": 1158613,
+      "width": 880,
+      "height": 1788,
+      "sha256": "20bc1ed2800bd5bb8175f1697e07010fb63cb3c3f1d06f4af3c409da2bdee118",
+      "robustWhiteMarginPx": { "left": 0, "top": 0, "right": 0, "bottom": 0 },
+      "leafSampleMeanRgb": [34.8, 34.7, 36.4],
+      "leafSampleLuminance": 34.8,
+      "visualQa": "PASS",
+      "attempt": 2
+    },
+    {
+      "finish": "wengue",
+      "filename": "wengue.png",
+      "bytes": 1581168,
+      "width": 880,
+      "height": 1788,
+      "sha256": "acfa8414c2ab05ea561fd78906d4334cf62867ca9bc9accd41f5478783c1be96",
+      "robustWhiteMarginPx": { "left": 0, "top": 0, "right": 0, "bottom": 0 },
+      "leafSampleMeanRgb": [35.4, 25.2, 20.6],
+      "leafSampleLuminance": 27.0,
+      "visualQa": "PASS",
+      "attempt": 1
+    },
+    {
+      "finish": "gris-oscuro",
+      "filename": "gris-oscuro.png",
+      "bytes": 1635762,
+      "width": 880,
+      "height": 1788,
+      "sha256": "089208ecb3fb68b6d23d221f4b94e562a9d93466f626684f126332468e6bbaec",
+      "robustWhiteMarginPx": { "left": 2, "top": 2, "right": 3, "bottom": 0 },
+      "leafSampleMeanRgb": [79.9, 79.9, 81.0],
+      "leafSampleLuminance": 80.0,
+      "visualQa": "PASS",
+      "attempt": 2
+    },
+    {
+      "finish": "antracita",
+      "filename": "antracita.png",
+      "bytes": 1659590,
+      "width": 880,
+      "height": 1788,
+      "sha256": "04b8e3228635f1a241585ad7b7f33e2fb895d59f038154446349214f6ef511e9",
+      "robustWhiteMarginPx": { "left": 7, "top": 5, "right": 4, "bottom": 7 },
+      "leafSampleMeanRgb": [56.0, 57.0, 59.9],
+      "leafSampleLuminance": 57.0,
+      "visualQa": "PASS",
+      "attempt": 1
+    },
+    {
+      "finish": "nogal",
+      "filename": "nogal.png",
+      "bytes": 1809731,
+      "width": 880,
+      "height": 1788,
+      "sha256": "6dd49fc283e553673d8c8050ddc6244b3763e0938c5156eef10102c369f710c3",
+      "robustWhiteMarginPx": { "left": 5, "top": 4, "right": 6, "bottom": 4 },
+      "leafSampleMeanRgb": [112.8, 73.0, 51.2],
+      "leafSampleLuminance": 79.9,
+      "visualQa": "PASS",
+      "attempt": 1
+    },
+    {
+      "finish": "roble",
+      "filename": "roble.png",
+      "bytes": 1881715,
+      "width": 879,
+      "height": 1789,
+      "sha256": "ef61c6fce4e238ec5ccbb4e9d1f92439ee50e50d34a5726531014c42188334af",
+      "robustWhiteMarginPx": { "left": 2, "top": 3, "right": 5, "bottom": 0 },
+      "leafSampleMeanRgb": [200.9, 142.2, 70.8],
+      "leafSampleLuminance": 149.5,
+      "visualQa": "PASS",
+      "attempt": 1
+    },
+    {
+      "finish": "gris-claro",
+      "filename": "gris-claro.png",
+      "bytes": 1395386,
+      "width": 879,
+      "height": 1789,
+      "sha256": "1b581c283fe7262eb34bbeb9a1386af4e4c3c7855ee2962011554e5fc2bbf23a",
+      "robustWhiteMarginPx": { "left": 4, "top": 3, "right": 4, "bottom": 5 },
+      "leafSampleMeanRgb": [173.1, 168.7, 166.8],
+      "leafSampleLuminance": 169.5,
+      "visualQa": "PASS",
+      "attempt": 1
+    },
+    {
+      "finish": "natural",
+      "filename": "natural.png",
+      "bytes": 1636235,
+      "width": 880,
+      "height": 1788,
+      "sha256": "d337457559998c1d9ca2708dc2a84ce96207964f57d3dfdf1bafb8ee6c42007f",
+      "robustWhiteMarginPx": { "left": 3, "top": 2, "right": 3, "bottom": 3 },
+      "leafSampleMeanRgb": [218.0, 199.4, 175.9],
+      "leafSampleLuminance": 201.7,
+      "visualQa": "PASS",
+      "attempt": 1
+    },
+    {
+      "finish": "blanco",
+      "filename": "blanco.png",
+      "bytes": 1209166,
+      "width": 880,
+      "height": 1787,
+      "sha256": "bf31b4037780438e2bb217b243109af819b873f200a6a42f4f7df4279fecd76e",
+      "robustWhiteMarginPx": { "left": 7, "top": 5, "right": 4, "bottom": 4 },
+      "leafSampleMeanRgb": [236.3, 232.7, 227.9],
+      "leafSampleLuminance": 233.1,
+      "visualQa": "PASS",
+      "attempt": 1
+    }
+  ],
+  "rejectedAttempts": [
+    {
+      "finish": "original",
+      "filename": "rejected/original-attempt-1-margin-11-7-12-6.png",
+      "sha256": "17e3ce6dd13ddd3a0351ee37f21b1e632e7a4a48924d94015afc098d1ca72691",
+      "reason": "robust white margin exceeded 8 px on left and right"
+    },
+    {
+      "finish": "negro",
+      "filename": "rejected/negro-attempt-1-margin-17-13-24-12.png",
+      "sha256": "5d7ed2e0594d94b29e5712e28a9e7d57001af3294d4d8aef84a4b22b780ffafe",
+      "reason": "robust white margin exceeded 8 px on every side"
+    },
+    {
+      "finish": "gris-oscuro",
+      "filename": "rejected/gris-oscuro-attempt-1-margin-13-7-13-4.png",
+      "sha256": "62470f888efcae6300d9bf559524f60d096eea0ca961b8024c0d3073eadc2dd8",
+      "reason": "robust white margin exceeded 8 px on left and right"
+    }
+  ]
+}

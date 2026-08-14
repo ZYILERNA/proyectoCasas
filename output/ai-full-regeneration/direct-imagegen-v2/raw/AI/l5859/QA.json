@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "score": "10/10",
+  "auditedAt": "2026-08-13",
+  "freshOriginalDetailReopenAllTen": true,
+  "geometryHardware": {"completeFrame":true,"singleLeftSeam":true,"fullHeightGoldStrip":true,"singleLongRecessedPull":true,"singleKeypad":true,"blankFunctionalButtonCirclesOnly":true,"singleLowerDisk":true},
+  "content": {"zeroLogo":true,"zeroTextLettersDigits":true,"zeroMicrotextPseudotext":true,"zeroExtraHardware":true},
+  "mechanical": {"pngCount":10,"uniqueSha256Count":10,"pixelThreshold":"any RGB channel < 248","maximumAllowedMarginPx":8,"observedMarginRangePx":[0,7],"allWithinLimit":true},
+  "provenance": {"masterOnly":true,"logoReferenceUsed":false,"outputReferenceUsed":false},
+  "writes": {"conversion":0,"public":0},
+  "legacy": "34 old files isolated with NEVER-PROMOTE"
+}

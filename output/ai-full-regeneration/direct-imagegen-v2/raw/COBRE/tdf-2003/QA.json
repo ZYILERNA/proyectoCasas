@@ -1,0 +1,56 @@
+{
+  "schema": "wonly-direct-imagegen-raw-qa/v2",
+  "model": "tdf-2003",
+  "category": "COBRE",
+  "status": "PASS_10_OF_10",
+  "policy": "NO_LOGO",
+  "generation": {
+    "engine": "built-in ImageGen",
+    "independentCallPerAsset": true,
+    "singleReferenceOnly": true,
+    "reference": "output/ai-full-regeneration/large-doors/COBRE/tdf-2003/base-tight.png",
+    "referenceSha256": "e3b534bae96f5f9f4e8a1570f91b6f485b7d175d5f67803766e372015f753515",
+    "usedPreviousOutputAsReference": false,
+    "usedLogoReference": false,
+    "filters": false,
+    "localRecolor": false,
+    "masks": false,
+    "crop": false,
+    "resize": false,
+    "composite": false,
+    "converted": false,
+    "publicWritten": false
+  },
+  "visualQa": {
+    "completeDoubleDoorAndFrame": true,
+    "frontOrthographic": true,
+    "twoLeaves": true,
+    "steppedBlackFramePreserved": true,
+    "goldInlaysPreserved": true,
+    "twoOrnateGoldPullsPreserved": true,
+    "logoCount": 0,
+    "visibleTextOrPseudotextCount": 0,
+    "reviewedAtOriginalDetail": true
+  },
+  "marginPolicy": {
+    "preferredMaxPx": 8,
+    "documentedTolerancePx": 11,
+    "allFramesComplete": true,
+    "maximumObservedPx": 11
+  },
+  "assets": [
+    {"finish":"original","file":"original.png","width":1082,"height":1454,"marginsLTRB":[1,0,1,0],"sha256":"ba2dadec45b21bd04495a0fc25bbc3de1831730f56a97c351e831f07ac4aeac2","pass":true},
+    {"finish":"negro","file":"negro.png","width":1076,"height":1461,"marginsLTRB":[7,8,11,5],"sha256":"06727281d3eb3973fe1ddbf21b368c1c00b411b99606aec04f05e4e9ca070ef9","pass":true,"note":"11 px right-side tolerance; full frame remains visible"},
+    {"finish":"wengue","file":"wengue.png","width":1077,"height":1460,"marginsLTRB":[0,0,1,0],"sha256":"6dd849ffdf72a81ae1aa54a1d820f536959e0c9027baab2fad49bd2cbf0500e9","pass":true},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","width":1077,"height":1461,"marginsLTRB":[4,3,6,5],"sha256":"7d4282182cf22f1c417084e5cc2ce67a1d34671fd09ace65e4267c4a66d08bb5","pass":true},
+    {"finish":"antracita","file":"antracita.png","width":1076,"height":1462,"marginsLTRB":[7,4,9,2],"sha256":"1f817045e50546944d11626d76c9f5f76b9c543134ef773739e95b63b7f87257","pass":true},
+    {"finish":"nogal","file":"nogal.png","width":1077,"height":1461,"marginsLTRB":[0,0,4,0],"sha256":"d4cfab43660542f4071d8073509f30c811d4eee265e696a1ba8c2c3302689e23","pass":true},
+    {"finish":"roble","file":"roble.png","width":1079,"height":1457,"marginsLTRB":[2,0,1,0],"sha256":"a9698d63e96ad663921966d2d4b337cd22ac8f60274332cbe6baa96a2270d5e1","pass":true},
+    {"finish":"gris-claro","file":"gris-claro.png","width":1078,"height":1460,"marginsLTRB":[9,7,8,5],"sha256":"9ac15abd61dd7a1b309bf56af197ac1f4f123a6971e7dec6bb39951d99c96b77","pass":true},
+    {"finish":"natural","file":"natural.png","width":1076,"height":1461,"marginsLTRB":[0,0,1,0],"sha256":"836c2ec278f7ff733ae1079e761d0cceae4143d3300063a1974a8eda107e49af","pass":true},
+    {"finish":"blanco","file":"blanco.png","width":1078,"height":1460,"marginsLTRB":[0,0,4,2],"sha256":"f02c60085e9d6edb95edf805cbacd80c332b45df0a3b4be2d83556159215cae5","pass":true}
+  ],
+  "rejectedAttempts": 4,
+  "safeToPromote": false,
+  "promotionStatus": "NOT_REQUESTED"
+}

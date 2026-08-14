@@ -1,0 +1,31 @@
+{
+  "schema":"wonly-direct-imagegen-qa/v2",
+  "model":"ACORAZADA/wl006",
+  "reviewDate":"2026-08-13",
+  "publicModified":false,
+  "summary":{"activeAssetCount":10,"approvedVisually":10,"uniqueHashCount":10,"overall":"PASS"},
+  "criteria":{
+    "source":"no-logo tight master only",
+    "architecture":"full frame and threshold, vertical gold strip, two right seams, one peephole, one lock/backplate and lever",
+    "hinges":"exactly six silver hinge barrels: three left and three right",
+    "branding":"zero WONLY, logos, plaques or text",
+    "framing":"complete visible frame, 0-8 px white margin",
+    "derivation":"raw direct ImageGen output; no filter, recolor, mask, crop, resize, composite or repair"
+  },
+  "marginDetection":{"method":"First pixel with any RGB channel below 245 from each edge; measurement only","maximumAllowedPixels":8},
+  "assets":[
+    {"finish":"original","sha256":"E5D4502406F0F407E379716C17CF47020D387B9017A94844424CAD1D804EAECE","margins":{"left":0,"top":0,"right":0,"bottom":0},"visual":"PASS"},
+    {"finish":"negro","sha256":"BD6C84E24D1BB6C98C1BDD54C0B3EE608317B6BD8AE2DDA6C98C7A2EABBCD38A","margins":{"left":6,"top":7,"right":8,"bottom":0},"visual":"PASS"},
+    {"finish":"wengue","sha256":"F4CA78A50194435EDA08EA77F9C974603BDF1DA15A315A00AEE427713D59E3BB","margins":{"left":7,"top":6,"right":5,"bottom":4},"visual":"PASS"},
+    {"finish":"gris-oscuro","sha256":"D7985BF466DC1CC7196529E5C473226420B966916EF30FC92FDC8E699AA3D6B1","margins":{"left":0,"top":1,"right":2,"bottom":0},"visual":"PASS"},
+    {"finish":"antracita","sha256":"D14F90E2849FCE4D4672C1576DE40E8888EA9928FBBD29BEF4EFCE64E31375B6","margins":{"left":0,"top":0,"right":0,"bottom":0},"visual":"PASS"},
+    {"finish":"nogal","sha256":"221DFE822B83AE73DE3E0E65C0C0DCFDA4FCB5965E13E4B67632DA310DF17348","margins":{"left":0,"top":0,"right":0,"bottom":0},"visual":"PASS"},
+    {"finish":"roble","sha256":"DBFA5CB578653E3F6DAD06BEC18EAB175B6C6B09BF6FA4F1DD67321FD98FCACE","margins":{"left":0,"top":0,"right":4,"bottom":0},"visual":"PASS"},
+    {"finish":"gris-claro","sha256":"0F71E6E00B12B8A5DC03D8D50878F16F79E439072F2FBB21C2C029370B001504","margins":{"left":7,"top":6,"right":7,"bottom":7},"visual":"PASS"},
+    {"finish":"natural","sha256":"4ACB86FA1D643651693B0296DB0322F97A1D1DE3E1398457EDFA8B76591F86ED","margins":{"left":7,"top":6,"right":7,"bottom":7},"visual":"PASS"},
+    {"finish":"blanco","sha256":"FD0C5F92AEAE608512F33D6C6AFF275917D03BDF49663601EE1B8F626C8FF852","margins":{"left":0,"top":0,"right":0,"bottom":0},"visual":"PASS"}
+  ],
+  "visualChecks":{"completeFrameAndThreshold":"PASS 10/10","exactSixHinges":"PASS 10/10","lockSeamsPeephole":"PASS 10/10","zeroLogoTextPseudoText":"PASS 10/10","marginAtMostEight":"PASS 10/10","distinctFinishes":"PASS 10/10"},
+  "rejectedNotes":"Prior WONLY batch quarantined under _rejected/invalid-with-wonly; wide-margin no-logo attempts also rejected. Never promote rejected files.",
+  "notes":"No conversion or public promotion performed."
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 2,
+  "model": "EVACUACION/gk-03",
+  "logoPolicy": "NO_LOGO",
+  "generationMode": "built-in-imagegen-direct",
+  "sourcePolicy": "Every active PNG is a separate built-in ImageGen call using only the same canonical no-logo master. No generated output or logo asset was referenced.",
+  "pixelProcessing": "none",
+  "sources": [
+    {
+      "role": "sole-architecture-and-hardware-reference",
+      "path": "output/ai-full-regeneration/new-defects/EVACUACION/gk-03/master-no-logo-ai.png",
+      "sha256": "ac9e14459d838baeefa869096b21c98cd1357157c722c86ab13b2302b0434923"
+    }
+  ],
+  "accepted": [
+    {"finish":"original","file":"original.png","generatorId":"exec-4429e38f-a870-4ace-9142-f2ab55ad4bdb","sha256":"a3f5e32c48bc83df87e6b3894d00cc3aee54724a5f47d810bb3d19243bba6c62"},
+    {"finish":"negro","file":"negro.png","generatorId":"exec-f44c8216-8263-4e53-a462-ea665b61d7eb","sha256":"4b4ba18ae5e767f6fa5bcd8b87bd9b85d6938a0d1be420490725d306f2ef647d"},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-4f8acbb5-b6ab-4e4c-8267-fefba72832ec","sha256":"b8fc0161100c381017e12122fedd49661bcbfa86915087789b7a26216dda229d"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-bfc9f3c8-452c-444e-b2f9-57d009a34387","sha256":"38b706ceab0ebda58bc8358a278df2afe7051c6e5f80eb284227dd7141faefb0"},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-a2db6198-e294-4371-88a7-5a7101a03204","sha256":"d863a6d78418511f74077291daee5569c959fe488800bb7faeadaa82950c7ba3"},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-e21f7aca-e938-4be0-8d06-7ea4abd6907e","sha256":"9e6ea8ec7cb94302a5779e58c8ffe9de3a3fdbf98e5af2735bbb62013aeb3d2b"},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-fee082ef-d560-4c85-bf2b-f58b0c85056d","sha256":"e8a3e2bef41b9516cb68ea9fc6280df34990537b8ff20a699254b7180afb731c"},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-b39cc98f-21fe-4865-b97a-78ddffc2c2a5","sha256":"72df10eef827eee5b5ce5eb0be5fd9ace634c0ca682405795f34675ec99de850"},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-6d840a0a-279e-4d8d-8b33-fa5a9b02682a","sha256":"0ce2622439c4d3a0c470559db9e0eed52bc3d36d9f65aec44b0ace09212012dd"},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-e3e8e860-d6b3-46b3-a178-b906a3afab45","sha256":"62aa333f1eca10bcfe940f699e5c9c6d78ac40b7eb5e7f394bd1408a0041ba58"}
+  ],
+  "qa": {
+    "path": "QA.json",
+    "status": "PASS_10_OF_10",
+    "maximumMeasuredMarginPixels": 8,
+    "logoInstancesPerAsset": 0,
+    "otherTextOrPseudotextInstancesPerAsset": 0
+  },
+  "promotion": {
+    "stagingOnly": true,
+    "converted": false,
+    "publicWritten": false
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "model": "ACERO/y106",
+  "policy": "NO_LOGO",
+  "status": "PASS_10_OF_10",
+  "master": {
+    "path": "output/ai-full-regeneration/masters/ACERO/y106/master-no-logo-ai-tight.png",
+    "sha256": "2e7e18edee1946ee7ccff0befa37bd188204f1d700a50aee1ee51b3bba80fbd7"
+  },
+  "method": "Independent built-in ImageGen calls using the sole master reference for every attempt",
+  "deliverables": [
+    "original.png",
+    "negro.png",
+    "wengue.png",
+    "gris-oscuro.png",
+    "antracita.png",
+    "nogal.png",
+    "roble.png",
+    "gris-claro.png",
+    "natural.png",
+    "blanco.png"
+  ],
+  "newAcceptedSourceGeneratedImages": {
+    "gris-claro": "C:/Users/zhen/.codex/generated_images/019fff7b-62ee-7611-8c76-c3c993b5ae29/exec-d9eca0d3-8b24-41b2-9bf5-8cf7943be1b4.png",
+    "blanco": "C:/Users/zhen/.codex/generated_images/019fff7b-62ee-7611-8c76-c3c993b5ae29/exec-58622c02-a0fe-4bbe-935e-0f6140e199c8.png"
+  },
+  "rejectedDirectory": "_rejected",
+  "generatedOutputsUsedAsReferences": false,
+  "logoReferencesUsed": false,
+  "acceptedAssetsAlteredAfterGeneration": false,
+  "filtersOrRecoloringUsed": false,
+  "masksUsed": false,
+  "croppingOrResizingUsed": false,
+  "compositingUsed": false,
+  "conversionUsed": false,
+  "publicFilesModified": false
+}

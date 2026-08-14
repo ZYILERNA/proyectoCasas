@@ -1,0 +1,49 @@
+{
+  "schema": "direct-imagegen-model-qa/v2",
+  "model": "CORREDIZA/wl-a23019",
+  "status": "PASS",
+  "master": "output/ai-full-regeneration/large-doors/CORREDIZA/wl-a23019/master-no-logo-ai.png",
+  "generation": {
+    "tool": "built-in ImageGen",
+    "acceptedIndependentCalls": 10,
+    "rejectedAttempts": 1,
+    "maximumAttemptsUsedPerFinish": 2,
+    "onlyMasterReferencedPerCall": true,
+    "outputReferencesUsed": false,
+    "logoReferencesUsed": false,
+    "activeAssetPixelProcessing": "none",
+    "filtersMasksCropsResizesCompositesConversionsUsedOnActiveAssets": false
+  },
+  "criteria": {
+    "marginDetection": "Non-background bounding rectangle measured with RGB channel minimum below 245; complete outside frame confirmed visually for every active PNG.",
+    "maximumAllowedMarginPixels": 8,
+    "minimumAllowedCoveragePercent": 98,
+    "architecture": "Complete straight-on single-leaf sliding glass door with full rectangular outer frame, one large frosted-glass field, exactly two slim vertical muntins near the right, exactly two horizontal rails across the lower-middle, and one black rectangular lever handle with backplate at the left.",
+    "unbranded": "Zero WONLY, logo, brand, wordmark, badge, letters, numbers, words, microtext, pseudotext, decorative pictogram, signature or watermark."
+  },
+  "assets": [
+    { "finish": "original", "file": "original.png", "generatorId": "exec-96c97097-4c15-4767-ae52-c84bba0dcbfc", "width": 793, "height": 1983, "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 }, "coveragePercent": 100.00, "sha256": "b00fbb4a77fa6c572a3c0c99304787b8af859deba62f279e7b34595480c0d905", "gates": { "decodes": true, "maxMarginAtMost8": true, "coverageAtLeast98": true, "frameComplete": true, "architecturePreserved": true, "hardwarePreserved": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true }, "status": "PASS" },
+    { "finish": "negro", "file": "negro.png", "generatorId": "exec-262cca73-7d22-41d3-bc43-2d546850b0f4", "width": 803, "height": 1959, "margins": { "left": 3, "top": 1, "right": 2, "bottom": 0 }, "coveragePercent": 99.33, "sha256": "232070311064d8fb4e5ed4d33fcefe255938d8acb3e35b76834d5651fd8d3456", "gates": { "decodes": true, "maxMarginAtMost8": true, "coverageAtLeast98": true, "frameComplete": true, "architecturePreserved": true, "hardwarePreserved": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true }, "status": "PASS" },
+    { "finish": "wengue", "file": "wengue.png", "generatorId": "exec-9d99318a-2ba2-4f63-a153-7c5a34d7a631", "width": 803, "height": 1958, "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 }, "coveragePercent": 100.00, "sha256": "bf16e9744a6d3fd1a975b645bc9ab6b131c5f6b9108a33ee9057ea341de9084f", "gates": { "decodes": true, "maxMarginAtMost8": true, "coverageAtLeast98": true, "frameComplete": true, "architecturePreserved": true, "hardwarePreserved": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true }, "status": "PASS" },
+    { "finish": "gris-oscuro", "file": "gris-oscuro.png", "generatorId": "exec-3b994716-2879-4b29-980b-2f961e6115cc", "width": 828, "height": 1899, "margins": { "left": 5, "top": 2, "right": 6, "bottom": 0 }, "coveragePercent": 98.57, "sha256": "5ad68e5d11781b9b08ced4efd31607b71eced639a2231ba27575f7617b0d6dc5", "gates": { "decodes": true, "maxMarginAtMost8": true, "coverageAtLeast98": true, "frameComplete": true, "architecturePreserved": true, "hardwarePreserved": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true }, "status": "PASS" },
+    { "finish": "antracita", "file": "antracita.png", "generatorId": "exec-4a62f9e0-008c-4645-b52f-f38900b1aece", "width": 803, "height": 1959, "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 }, "coveragePercent": 100.00, "sha256": "07e46035d1d618235d0d93ecac1975f57a3ac61becb329a151d25639a1fcbd2c", "gates": { "decodes": true, "maxMarginAtMost8": true, "coverageAtLeast98": true, "frameComplete": true, "architecturePreserved": true, "hardwarePreserved": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true }, "status": "PASS" },
+    { "finish": "nogal", "file": "nogal.png", "generatorId": "exec-5c2e3436-bf46-4341-afa3-e66a361fbfab", "width": 847, "height": 1857, "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 }, "coveragePercent": 100.00, "sha256": "ba43f750165375b3ba7220780719605f31ad56349792a9ffc9c05d6141bbbb3b", "gates": { "decodes": true, "maxMarginAtMost8": true, "coverageAtLeast98": true, "frameComplete": true, "architecturePreserved": true, "hardwarePreserved": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true }, "status": "PASS" },
+    { "finish": "roble", "file": "roble.png", "generatorId": "exec-1d026a4a-6d1e-49fe-81fb-48ab3d68adb2", "width": 803, "height": 1958, "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 }, "coveragePercent": 100.00, "sha256": "0b7fe0cb5d1b590d35c09213b440bb7a1948195af050b6aa8995f5c237ae6e5f", "gates": { "decodes": true, "maxMarginAtMost8": true, "coverageAtLeast98": true, "frameComplete": true, "architecturePreserved": true, "hardwarePreserved": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true }, "status": "PASS" },
+    { "finish": "gris-claro", "file": "gris-claro.png", "generatorId": "exec-a2511b12-2169-472d-9953-927804e8c918", "width": 802, "height": 1960, "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 }, "coveragePercent": 100.00, "sha256": "267d79529579c238308b53d653aec4a35d14094de2f70eaf8d5fc4de3723fa94", "gates": { "decodes": true, "maxMarginAtMost8": true, "coverageAtLeast98": true, "frameComplete": true, "architecturePreserved": true, "hardwarePreserved": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true }, "status": "PASS" },
+    { "finish": "natural", "file": "natural.png", "generatorId": "exec-7fb1f9b8-136a-4ae6-9a2a-930cfcbcf4ee", "width": 803, "height": 1959, "margins": { "left": 0, "top": 1, "right": 2, "bottom": 1 }, "coveragePercent": 99.65, "sha256": "a3068e1a6a427c4bb3fa2272fc2e9131d1d0eee3e98653f7aa9e52ae06365696", "gates": { "decodes": true, "maxMarginAtMost8": true, "coverageAtLeast98": true, "frameComplete": true, "architecturePreserved": true, "hardwarePreserved": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true }, "status": "PASS" },
+    { "finish": "blanco", "file": "blanco.png", "generatorId": "exec-bf30d617-bdc5-4b60-8210-8afdad714da5", "width": 793, "height": 1983, "margins": { "left": 4, "top": 3, "right": 3, "bottom": 3 }, "coveragePercent": 98.82, "sha256": "083d5e29ba98fab9e128052de232096c8889c765afcaa16fecddc5225a43b6bd", "gates": { "decodes": true, "maxMarginAtMost8": true, "coverageAtLeast98": true, "frameComplete": true, "architecturePreserved": true, "hardwarePreserved": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true }, "status": "PASS" }
+  ],
+  "summary": {
+    "requested": 10,
+    "pass": 10,
+    "fail": 0,
+    "uniqueHashes": 10,
+    "largestMeasuredMarginPixels": 6,
+    "lowestMeasuredCoveragePercent": 98.57
+  },
+  "promotion": {
+    "stagingOnly": true,
+    "converted": false,
+    "publicWritten": false
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "model": "AI/l5859",
+  "policy": "NO_LOGO",
+  "generatedAt": "2026-08-13",
+  "generation": {
+    "method": "built-in ImageGen direct independent calls",
+    "onlyReference": "output/ai-full-regeneration/masters/AI/l5859/master-no-logo-ai-tight.png",
+    "onlyReferenceSha256": "a5cbe1fabb2e9ad73316d99cae17e600a0ff14908d7d2ec11a90487759a434c5",
+    "logoReferenceUsed": false,
+    "generatedOutputUsedAsInput": false,
+    "filtersRecolorMasksCompositeCropResize": false
+  },
+  "promotion": {"converted": false, "publicWritten": false, "applyAuthorized": false, "status": "RAW_STAGING_ONLY"},
+  "accepted": [
+    {"finish":"original","file":"original.png","generatorId":"exec-5bb81d08-c69f-4509-b7cb-29b2ce6482b5","width":879,"height":1789,"margin":{"left":7,"top":1,"right":5,"bottom":2},"sha256":"d921c0088cb329a6e01c1beceb3fbe89cac6b6c43c0b85bf43e38f0514f92bbd"},
+    {"finish":"negro","file":"negro.png","generatorId":"exec-2476e0d7-569e-4b46-a041-cc1d6681c992","width":879,"height":1789,"margin":{"left":0,"top":0,"right":0,"bottom":0},"sha256":"f78c31e7aeda4756876a5d18c17af908333d5a3064438e6ada98e3e4f1b6bd58"},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-34001b9e-446c-42b7-b1de-8eee43eb2a1e","width":879,"height":1789,"margin":{"left":2,"top":3,"right":3,"bottom":0},"sha256":"f743827d2a07fa890d87e1250ef7cbc665d0ed9299da067fd882fe105d38243b"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-cf189630-0238-4b02-ae87-45341058c466","width":879,"height":1789,"margin":{"left":2,"top":5,"right":5,"bottom":3},"sha256":"02e279525fab083adc6fd4b34495d536a14f703adbb1971cbd1d3c38ae0daa9c"},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-76ad5503-f757-4171-a1c8-2aca2a0fe996","width":880,"height":1788,"margin":{"left":1,"top":1,"right":3,"bottom":0},"sha256":"08fc47f829544253ace29baf01f1ee8db5ffd6047f30793db394ec7e19093bd8"},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-25835157-ee20-46ea-a95d-618182a61381","width":879,"height":1789,"margin":{"left":1,"top":3,"right":4,"bottom":0},"sha256":"573d29c08b764d573e5b28bda8c05370e314a3457f551a91dfd5033aa4f180b4"},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-f364b73d-39eb-4c62-95cb-81affa75eff4","width":879,"height":1789,"margin":{"left":1,"top":2,"right":1,"bottom":0},"sha256":"e8f49706d820f27b39a9a32b0781c50cce0e91773f49b42be7e63fc3f5912f9d"},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-16094748-2a9b-445c-b800-525932d71f1d","width":879,"height":1789,"margin":{"left":2,"top":1,"right":1,"bottom":0},"sha256":"8a649dd95e0eb1bbc3146318c41eb13d055820b5bd7e4cba19331d293f258ae7"},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-4d549061-7bc3-4c77-b251-d8c5dc37f10c","width":879,"height":1789,"margin":{"left":7,"top":0,"right":5,"bottom":0},"sha256":"49748e3af0ac9f9b9189348ebf12dfb759739b591bc3f1f62b248e2e76a705c1"},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-e96e1243-6378-48e6-8708-e4501e16bc29","width":880,"height":1788,"margin":{"left":0,"top":2,"right":1,"bottom":0},"sha256":"17313873942eb3a711c329a6dc6aac770e5d1e8bc912d611b650975cc4704ea2"}
+  ],
+  "invalidatedLegacy": "output/ai-full-regeneration/_invalidated-no-logo-policy/invalid-logo-policy-2026-08-13/AI/l5859"
+}

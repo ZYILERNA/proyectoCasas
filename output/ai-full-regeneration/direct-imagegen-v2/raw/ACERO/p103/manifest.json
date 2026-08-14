@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 2,
+  "model": "ACERO/p103",
+  "logoPolicy": "NO_LOGO",
+  "generationMode": "built-in-imagegen-direct-unbranded",
+  "sourcePolicy": "Every active PNG is a separate built-in ImageGen call using only the same ACERO p103 no-logo tight master. No generated output or logo asset was referenced.",
+  "pixelProcessing": "none",
+  "source": {
+    "path": "output/ai-full-regeneration/masters/ACERO/p103/master-no-logo-ai-tight.png"
+  },
+  "accepted": [
+    { "finish": "original", "file": "original.png", "generatorId": "exec-e15cbc02-2eaf-4158-abee-646c75a9e1c6", "width": 862, "height": 1825, "sha256": "1fe93f1784e5f4ec519fbea786f72266aee0cb22292d1f3fbda892e9d07e1af2" },
+    { "finish": "negro", "file": "negro.png", "generatorId": "exec-cc60aea6-a4f2-49d4-b7df-75deab3f961e", "width": 863, "height": 1823, "sha256": "c3976566f55a0c64b46bf43f69024e4273ae87e9ec0219f31063467d8e7e605f" },
+    { "finish": "wengue", "file": "wengue.png", "generatorId": "exec-240a61c8-234f-4f2e-9c64-747681b5b7ad", "width": 862, "height": 1825, "sha256": "edf2f70b2ecf2c8a812395869b6e8b3413e8152e15bc613f35f474d83825a2ee" },
+    { "finish": "gris-oscuro", "file": "gris-oscuro.png", "generatorId": "exec-0c1e4dae-de43-4057-a413-d8df32def724", "width": 863, "height": 1823, "sha256": "2cda1d6c564d561656582d857d2e71286693f64e5e3395c87d58d21b0f750226" },
+    { "finish": "antracita", "file": "antracita.png", "generatorId": "exec-a5e0ea8b-18f7-43ff-a7c8-636826cb1308", "width": 862, "height": 1825, "sha256": "e3dbda815da164392687eb2a9819e2942fbd5230bb0e2e0676c996cfb981d566" },
+    { "finish": "nogal", "file": "nogal.png", "generatorId": "exec-9c407f1c-cd46-46df-8ad0-37473531271c", "width": 862, "height": 1825, "sha256": "78f47137f003b09b338f3d006f5094c0df0df0fda9cc6a50e8f5d93151852d1b" },
+    { "finish": "roble", "file": "roble.png", "generatorId": "exec-7d065a6e-8d67-4c99-b7e7-a994e05a015d", "width": 863, "height": 1823, "sha256": "e5d0a55bb81a1a66563950ef76f34b3577965b77e6444fe68f42290d1669cc1f" },
+    { "finish": "gris-claro", "file": "gris-claro.png", "generatorId": "exec-0fdd3c87-46ad-4321-8ea8-8342ae00073f", "width": 862, "height": 1825, "sha256": "2a5ceb094cfaa0196ab8f6637c588dda1e139a0f4b39fab2f7d39b6a7f34d530" },
+    { "finish": "natural", "file": "natural.png", "generatorId": "exec-978b01fe-b06e-4a4c-82ae-8f07a46e07fa", "width": 862, "height": 1825, "sha256": "1cb062eee81885bb76931a3dd1d924d7d1e2f9307672f0bfecffee85cb7a23c8" },
+    { "finish": "blanco", "file": "blanco.png", "generatorId": "exec-95280b1e-ded0-43b4-8349-3002151a8c29", "width": 862, "height": 1824, "sha256": "67e85aff75ac5bb8a568db85c102f8774f05adf697e06fe5b1289e826066ca61" }
+  ],
+  "qa": {
+    "path": "QA.json",
+    "status": "PASS",
+    "maximumMarginPixels": 8,
+    "crossAuditCorrection": "Removed the recurring white wing/bowl badge from the bottom of every smart-lock"
+  },
+  "promotion": {
+    "stagingOnly": true,
+    "converted": false,
+    "publicWritten": false
+  }
+}

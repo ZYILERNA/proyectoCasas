@@ -1,0 +1,48 @@
+{
+  "schema": "wonly-direct-imagegen-qa/v2",
+  "model": "ACERO/y118",
+  "reviewDate": "2026-08-13",
+  "reviewType": "visual and read-only pixel-edge QA under canonical NO_LOGO policy",
+  "publicModified": false,
+  "summary": {
+    "activeAssetCount": 10,
+    "approvedVisually": 10,
+    "uniqueHashCount": 10,
+    "overall": "PASS"
+  },
+  "criteria": {
+    "source": "master-no-logo-ai-tight.png only; no logo reference; no generated output as reference",
+    "architecture": "complete frontal y118 door with full frame, unchanged side fields, central rib array, two mesh sections and threshold",
+    "framing": "complete frame visible with 0-8 px near-white outer margin",
+    "branding": "zero logos, zero WONLY marks, zero plaques and zero text",
+    "hardware": "one slim black lock with exactly two plain circular sensors and one blank lower rectangle; no letters, digits, labels, pseudo-writing or microtext",
+    "derivation": "untouched raw direct built-in ImageGen PNG; no filter, recolor, mask, crop, resize, composite, repair or conversion"
+  },
+  "marginDetection": {
+    "method": "First row/column containing any RGB channel below 245, read-only scan from each original edge",
+    "maximumAllowedPixels": 8
+  },
+  "assets": [
+    {"finish":"original","file":"original.png","dimensions":"823x1910","sha256":"9093B307AE6A054569C505F6818E200C7E408263213F407B0BD7DDAC85FDD3DB","margins":{"left":3,"top":4,"right":3,"bottom":0},"visual":"PASS"},
+    {"finish":"negro","file":"negro.png","dimensions":"824x1908","sha256":"B7AB2E4CDB2250E2EF51FADE69319CCC8918481282EC3084E4B21815E2512B7A","margins":{"left":2,"top":3,"right":3,"bottom":0},"visual":"PASS"},
+    {"finish":"wengue","file":"wengue.png","dimensions":"823x1910","sha256":"AD7FB23C6226048B020AF312456983ADA56F71CF6BAD1F085BEE1508F4870873","margins":{"left":8,"top":7,"right":6,"bottom":4},"visual":"PASS"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","dimensions":"823x1910","sha256":"EBED4205664034F5A566170E3FF2E0DE19D5A9FF56A1DCD54FD621AEAA8719F2","margins":{"left":2,"top":3,"right":4,"bottom":4},"visual":"PASS"},
+    {"finish":"antracita","file":"antracita.png","dimensions":"824x1909","sha256":"254E5588FD52612250672DB77C3D27FF6BCDA45A54A42A37D0DFB07EA9CCF4EB","margins":{"left":2,"top":3,"right":3,"bottom":0},"visual":"PASS"},
+    {"finish":"nogal","file":"nogal.png","dimensions":"823x1911","sha256":"1AF4CADB37E2B31A6FFB4F1FED1BBF8EAECB0950FDDDCAF1406FE67548AA1CBA","margins":{"left":2,"top":0,"right":1,"bottom":0},"visual":"PASS"},
+    {"finish":"roble","file":"roble.png","dimensions":"823x1910","sha256":"16131CA09D097D56ECDEC682D8396D538D69638BC3A4BCE277AECE59928A2654","margins":{"left":2,"top":3,"right":3,"bottom":0},"visual":"PASS"},
+    {"finish":"gris-claro","file":"gris-claro.png","dimensions":"823x1910","sha256":"5B1B182113EE397A6F0B712EC853F6B57C1F124803C095C818137D7FFF2DFA55","margins":{"left":1,"top":4,"right":4,"bottom":0},"visual":"PASS"},
+    {"finish":"natural","file":"natural.png","dimensions":"823x1910","sha256":"B85682C7B6E27E12DBD17BB9FCD8966736177CE52E1B9CA88DF65BDB2CE15DB0","margins":{"left":1,"top":4,"right":4,"bottom":0},"visual":"PASS"},
+    {"finish":"blanco","file":"blanco.png","dimensions":"824x1909","sha256":"4E99D2A69DA4CE7EEB4D183159C14F303AA2EB518E0D2A6EF0BB715913B27941","margins":{"left":5,"top":5,"right":4,"bottom":4},"visual":"PASS"}
+  ],
+  "visualChecks": {
+    "completeDoorAndOuterFrame": "PASS 10/10",
+    "y118ArchitecturePreserved": "PASS 10/10",
+    "exactlyTwoSensorsAndOneBlankLowerPlate": "PASS 10/10",
+    "zeroLogoAndZeroText": "PASS 10/10",
+    "noMicrotextOrPseudoText": "PASS 10/10",
+    "marginAtMostEightPixels": "PASS 10/10",
+    "finishVisuallyDistinct": "PASS 10/10"
+  },
+  "rejectedNotes": "Three original attempts, one anthracite attempt and one oak attempt were rejected for excessive margin, pseudo-text, extra sensor, or ghost mark. They remain isolated under _rejected and are not active.",
+  "notes": "Accepted files are raw built-in ImageGen outputs copied byte-for-byte into staging. No conversion or public promotion was performed."
+}

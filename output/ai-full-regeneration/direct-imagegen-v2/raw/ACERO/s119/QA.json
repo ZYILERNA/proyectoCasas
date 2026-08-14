@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "model": "ACERO/s119",
+  "status": "PASS",
+  "score": "10/10",
+  "auditedAt": "2026-08-14",
+  "supersedesHistoricalQa": "QA-GENERATION-BLOCKED.json",
+  "policy": "NO_LOGO: no logo, brand, text, letters, digits, microtext, pseudotext, watermark or irregular writing-like marks. Regular functional geometric lock controls are allowed; the recovered white finish uses an explicitly authorized completely blank black-glass face while preserving the elongated lock casing and physical pull handle.",
+  "summary": {
+    "requested": 10,
+    "activePass": 10,
+    "blocked": 0,
+    "uniqueActiveSha256": 10,
+    "newIndependentCallsThisRecovery": 16,
+    "initialNewAttemptLimitPerFinish": 2,
+    "priorFinalExtraWhiteAttemptAuthorized": true,
+    "smoothLockAdditionalCallsAuthorized": 3,
+    "smoothLockAdditionalCallsUsed": 1,
+    "stoppedAtFirstPass": true,
+    "authorizationRespected": true
+  },
+  "sourcePolicy": "Every new recovery call referenced only output/ai-full-regeneration/masters/ACERO/s119/master-no-logo-ai-tight.png. No logo and no generated output were referenced. The historical original and gris-oscuro candidates promoted after re-audit were also independent built-in ImageGen calls from the same sole master, as recorded by QA-GENERATION-BLOCKED.json.",
+  "processing": "None on active assets. Raw built-in ImageGen PNGs only; no filters, local recolor, masks, crop, resize, composite or conversion. Files under qa-recovery/ are non-promotable inspection derivatives only.",
+  "promotion": "Raw staging only. No public write or conversion was performed.",
+  "visualAudit": {
+    "completeFrameAllTenActive": true,
+    "straightOnSingleSlabAllTenActive": true,
+    "verticalAccentAndTwoMetalEdgesPreservedAllTenActive": true,
+    "lockCasingAndPhysicalHandlePreservedAllTenActive": true,
+    "whiteLockFaceCompletelyBlank": true,
+    "zeroLogoOrTextAllTenActive": true,
+    "zeroMicrotextOrPseudotextAllTenActive": true
+  },
+  "mechanicalAudit": {
+    "method": "Bounding box of pixels having any RGB channel below 245 on each untouched PNG.",
+    "preferredMaximumMarginPx": 8,
+    "conditionalMaximumMarginPx": 11,
+    "conditionalMinimumAxisCoveragePct": 98,
+    "activeObservedMaximumRangePx": [0, 6],
+    "activeMinimumAxisCoveragePct": 98.69,
+    "allTenActivePass": true,
+    "whiteMaximumMarginPx": 4,
+    "whiteMinimumAxisCoveragePct": 99.16
+  },
+  "qaSheets": [
+    {
+      "path": "output/ai-full-regeneration/direct-imagegen-v2/raw/ACERO/s119/qa-recovery/contact-sheet-final-audit.png",
+      "sha256": "d85fc2d3c0ccf3de02ed92ac4a6e475fd0c28d9d05a9bf27b2cb0e0759d7188b"
+    },
+    {
+      "path": "output/ai-full-regeneration/direct-imagegen-v2/raw/ACERO/s119/qa-recovery/lock-detail-sheet-final-audit.png",
+      "sha256": "b5f77faa3ebf3e6950c7afa946962b2cd35ec619a4f53d83e99db0826c6221fa"
+    },
+    {
+      "path": "output/ai-full-regeneration/direct-imagegen-v2/raw/ACERO/s119/qa-recovery/blanco-final-lock.png",
+      "sha256": "784a530bc62c0ed9f8482e6e19fb59009f0bfe20f6c9ce42294c9c02b767c341"
+    },
+    {
+      "path": "output/ai-full-regeneration/direct-imagegen-v2/raw/ACERO/s119/qa-recovery/blanco-smooth-lock-attempt1-detail.png",
+      "sha256": "1001adf72e1fa4ba26d7ae2cd4deb94b7a39747bb048a87838358ed24fbc145b"
+    }
+  ],
+  "activeAssets": [
+    {
+      "finish": "original",
+      "path": "output/ai-full-regeneration/direct-imagegen-v2/raw/ACERO/s119/original.png",
+      "generationOutput": "exec-b9c7779c-c52b-44df-99f1-9c21683c7720.png",
+      "origin": "historical independent attempt2 re-audited under the current functional-geometry lock policy",
+      "dimensions": { "width": 838, "height": 1877 },
+      "marginsPx": { "left": 0, "top": 0, "right": 0, "bottom": 0, "maximum": 0 },
+      "minimumAxisCoveragePct": 100,
+      "sha256": "072f93bb895f9e6466050607fbba10946c013ee64c74553bc653b64fe3663b51",
+      "status": "PASS"
+    },
+    {
+      "finish": "negro",
+      "path": "output/ai-full-regeneration/direct-imagegen-v2/raw/ACERO/s119/negro.png",
+      "generationOutput": "exec-0be907fa-aab2-4cf7-9d6a-0ac134f7552a.png",
+      "origin": "recovery attempt1",
+      "dimensions": { "width": 837, "height": 1879 },
+      "marginsPx": { "left": 1, "top": 2, "right": 3, "bottom": 0, "maximum": 3 },
+      "minimumAxisCoveragePct": 99.52,
+      "sha256": "ede9ba7d89feee6927d59a275dbd8fb100fdb9d3d5cb6af0ccc52534958408bf",
+      "status": "PASS"
+    },
+    {
+      "finish": "wengue",
+      "path": "output/ai-full-regeneration/direct-imagegen-v2/raw/ACERO/s119/wengue.png",
+      "generationOutput": "exec-cfc92139-6772-471b-8ad4-4e1f654a0ef3.png",
+      "origin": "recovery attempt1",
+      "dimensions": { "width": 838, "height": 1877 },
+      "marginsPx": { "left": 1, "top": 2, "right": 3, "bottom": 0, "maximum": 3 },
+      "minimumAxisCoveragePct": 99.52,
+      "sha256": "de2762b25b5cea5aec3c6fbec5d12c8108f3b9ade54af8758f76287cf8354ea5",
+      "status": "PASS"
+    },
+    {
+      "finish": "gris-oscuro",
+      "path": "output/ai-full-regeneration/direct-imagegen-v2/raw/ACERO/s119/gris-oscuro.png",
+      "generationOutput": "exec-de1ace6e-3e6b-4545-a5d2-5cee707735db.png",
+      "origin": "historical independent attempt2, previously recorded as a valid candidate",
+      "dimensions": { "width": 838, "height": 1877 },
+      "marginsPx": { "left": 1, "top": 2, "right": 2, "bottom": 0, "maximum": 2 },
+      "minimumAxisCoveragePct": 99.64,
+      "sha256": "ee73fe96493c320a19c58dc205761a000d35e1c78370cf4cafa826eeff662c98",
+      "status": "PASS"
+    },
+    {
+      "finish": "antracita",
+      "path": "output/ai-full-regeneration/direct-imagegen-v2/raw/ACERO/s119/antracita.png",
+      "generationOutput": "exec-64d09878-2c74-4b8c-8de0-69f6cb85511f.png",
+      "origin": "recovery attempt1",
+      "dimensions": { "width": 837, "height": 1879 },
+      "marginsPx": { "left": 3, "top": 3, "right": 5, "bottom": 0, "maximum": 5 },
+      "minimumAxisCoveragePct": 99.04,
+      "sha256": "b0ada522361e09ca7bdcd9630842eea07984cefb03c17687494783afe70537a0",
+      "status": "PASS"
+    },
+    {
+      "finish": "nogal",
+      "path": "output/ai-full-regeneration/direct-imagegen-v2/raw/ACERO/s119/nogal.png",
+      "generationOutput": "exec-b3f17c90-e714-4bef-bc63-47a5ea47bb98.png",
+      "origin": "recovery attempt1",
+      "dimensions": { "width": 838, "height": 1877 },
+      "marginsPx": { "left": 1, "top": 2, "right": 2, "bottom": 0, "maximum": 2 },
+      "minimumAxisCoveragePct": 99.64,
+      "sha256": "5d0b8c6a4a35fd3f94ba6b47588af67f36d692a7c457cb1e954e325705a92ddb",
+      "status": "PASS"
+    },
+    {
+      "finish": "roble",
+      "path": "output/ai-full-regeneration/direct-imagegen-v2/raw/ACERO/s119/roble.png",
+      "generationOutput": "exec-e72fc16a-d483-4e0c-a5ec-17261e0c8e85.png",
+      "origin": "recovery attempt1",
+      "dimensions": { "width": 838, "height": 1877 },
+      "marginsPx": { "left": 0, "top": 2, "right": 2, "bottom": 0, "maximum": 2 },
+      "minimumAxisCoveragePct": 99.76,
+      "sha256": "ae426c7fdfe94ca23f0cbb5d0a384a4bb84dea312ebd70b44169bac8f6860da9",
+      "status": "PASS"
+    },
+    {
+      "finish": "gris-claro",
+      "path": "output/ai-full-regeneration/direct-imagegen-v2/raw/ACERO/s119/gris-claro.png",
+      "generationOutput": "exec-fd1b680e-3018-4005-bb20-022124279df0.png",
+      "origin": "recovery attempt1",
+      "dimensions": { "width": 837, "height": 1879 },
+      "marginsPx": { "left": 6, "top": 4, "right": 5, "bottom": 0, "maximum": 6 },
+      "minimumAxisCoveragePct": 98.69,
+      "sha256": "66587f496e486c2b72012943bb850cc8fa13345b8580f3c4b50c5743c700f4c1",
+      "status": "PASS"
+    },
+    {
+      "finish": "natural",
+      "path": "output/ai-full-regeneration/direct-imagegen-v2/raw/ACERO/s119/natural.png",
+      "generationOutput": "exec-96ff01a4-e6f5-4c03-b53e-8c2ab7fe17de.png",
+      "origin": "recovery attempt2",
+      "dimensions": { "width": 838, "height": 1877 },
+      "marginsPx": { "left": 4, "top": 4, "right": 4, "bottom": 4, "maximum": 4 },
+      "minimumAxisCoveragePct": 99.05,
+      "sha256": "caf89200e2f0a41f3e83d0c787341466ede0a1990eb66bf39b8425a023b5272c",
+      "status": "PASS"
+    },
+    {
+      "finish": "blanco",
+      "path": "output/ai-full-regeneration/direct-imagegen-v2/raw/ACERO/s119/blanco.png",
+      "generationOutput": "exec-3cbc9909-2e75-4b6c-bb41-276c88c62e1f.png",
+      "origin": "smooth-lock recovery additional attempt1; stopped at first pass",
+      "dimensions": { "width": 837, "height": 1879 },
+      "marginsPx": { "left": 3, "top": 0, "right": 4, "bottom": 0, "maximum": 4 },
+      "minimumAxisCoveragePct": 99.16,
+      "sha256": "24ae3e09aef4a3d1064927a0b150cd981ccc30e9ecf730ccb22fca339a163883",
+      "status": "PASS"
+    }
+  ],
+  "resolvedWhiteRecovery": [
+    {
+      "finish": "blanco",
+      "status": "RESOLVED_BY_SMOOTH_LOCK_ATTEMPT1",
+      "attempt1": {
+        "generationOutput": "exec-af2f40a8-6772-4be4-90a4-c8742f64ddf0.png",
+        "file": "_rejected/recovery-2026-08-14/blanco-attempt1-faint-top-mark.png",
+        "failure": "Faint writing-like mark remains in the upper lock face."
+      },
+      "attempt2": {
+        "generationOutput": "exec-91ccfcca-8a2b-43e1-80c4-bd479426fb63.png",
+        "file": "_rejected/recovery-2026-08-14/blanco-attempt2-margin20.png",
+        "dimensions": { "width": 837, "height": 1879 },
+        "marginsPx": { "left": 20, "top": 18, "right": 19, "bottom": 18, "maximum": 20 },
+        "minimumAxisCoveragePct": 95.34,
+        "sha256": "882bde36616ae23f6d3c9384aa48ecfec8256182d5b2a74ab64d7d586d60c334",
+        "failure": "Lock is clean and text-free, but the untouched raw image exceeds the 11 px framing limit and falls below 98% coverage."
+      },
+      "finalAuthorizedAttempt": {
+        "generationOutput": "exec-00faa595-d691-41bf-b559-4f96d99ec4c1.png",
+        "file": "_rejected/recovery-2026-08-14/blanco-final-authorized-pseudotext-m3.png",
+        "dimensions": { "width": 838, "height": 1877 },
+        "marginsPx": { "left": 3, "top": 2, "right": 2, "bottom": 0, "maximum": 3 },
+        "minimumAxisCoveragePct": 99.4,
+        "sha256": "535fa6c633270bd0551beadec44b9153eabbe234a86222a17ef733369b9cc812",
+        "failure": "Framing passes, but original-detail lock inspection shows writing-like micro-marks above the sensor and faint irregular marks below the circular control matrix."
+      },
+      "smoothLockAttempt1": {
+        "generationOutput": "exec-3cbc9909-2e75-4b6c-bb41-276c88c62e1f.png",
+        "candidateFile": "_candidates/recovery-2026-08-14-smooth-lock/blanco-attempt1.png",
+        "activeFile": "blanco.png",
+        "dimensions": { "width": 837, "height": 1879 },
+        "marginsPx": { "left": 3, "top": 0, "right": 4, "bottom": 0, "maximum": 4 },
+        "minimumAxisCoveragePct": 99.16,
+        "sha256": "24ae3e09aef4a3d1064927a0b150cd981ccc30e9ecf730ccb22fca339a163883",
+        "result": "PASS: completely blank black-glass lock face with elongated casing and physical pull handle preserved; no logo, text, pseudotext or graphic elements."
+      },
+      "activeRootFileWritten": true
+    }
+  ]
+}

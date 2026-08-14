@@ -1,0 +1,158 @@
+{
+  "schema": "direct-imagegen-model-qa/v2",
+  "model": "ACERO/p103",
+  "status": "PASS",
+  "auditTrigger": {
+    "report": "output/ai-full-regeneration/direct-imagegen-v2/qa-cross/unbranded-sets-audit.md",
+    "priorResult": "FAIL 0/10",
+    "defect": "White wing/bowl badge at the bottom of every smart-lock face",
+    "resolution": "All ten active smart-locks now end in an empty matte-black lower face with no badge, icon, mark, text or pseudotext"
+  },
+  "master": "output/ai-full-regeneration/masters/ACERO/p103/master-no-logo-ai-tight.png",
+  "generation": {
+    "tool": "built-in ImageGen",
+    "correctionRoundIndependentCalls": 10,
+    "activeIndependentCalls": 10,
+    "rejectedAttemptsThisRound": 0,
+    "maximumAttemptsUsedPerFinish": 1,
+    "onlyMasterReferencedPerCall": true,
+    "outputReferencesUsed": false,
+    "logoReferencesUsed": false,
+    "activeAssetPixelProcessing": "none",
+    "filtersMasksCropsResizesCompositesUsedOnActiveAssets": false
+  },
+  "criteria": {
+    "marginDetection": "First pixel with any RGB channel below 245, measured independently from each canvas edge",
+    "maximumMarginPixels": 8,
+    "architecture": "Complete straight-on ACERO p103 and full frame; original stepped black frame, sill, flat graphite left strip, narrow ribbed charcoal strip, broad right finish panel and smart-lock placement preserved",
+    "smartLock": "Only the top camera/reader, plain sensor dots and one unmarked plain button; the face below the button is empty matte black with no wing, bowl, cup, bird, chevron, smile, shield, triangle, arrow, swoosh, emblem, glyph, icon, badge, stripe, lettering or symbol",
+    "unbranded": "Zero logo, brand, wordmark, text, letters, numbers, microtext, pseudotext or watermark"
+  },
+  "assets": [
+    {
+      "finish": "original",
+      "generatorId": "exec-e15cbc02-2eaf-4158-abee-646c75a9e1c6",
+      "file": "original.png",
+      "width": 862,
+      "height": 1825,
+      "margins": { "left": 2, "top": 2, "right": 2, "bottom": 0 },
+      "sha256": "1fe93f1784e5f4ec519fbea786f72266aee0cb22292d1f3fbda892e9d07e1af2",
+      "gates": { "decodes": true, "maxMarginAtMost8": true, "frameComplete": true, "architecturePreserved": true, "lowerSmartLockBlank": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true },
+      "status": "PASS"
+    },
+    {
+      "finish": "negro",
+      "generatorId": "exec-cc60aea6-a4f2-49d4-b7df-75deab3f961e",
+      "file": "negro.png",
+      "width": 863,
+      "height": 1823,
+      "margins": { "left": 1, "top": 2, "right": 4, "bottom": 0 },
+      "sha256": "c3976566f55a0c64b46bf43f69024e4273ae87e9ec0219f31063467d8e7e605f",
+      "gates": { "decodes": true, "maxMarginAtMost8": true, "frameComplete": true, "architecturePreserved": true, "lowerSmartLockBlank": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true },
+      "status": "PASS"
+    },
+    {
+      "finish": "wengue",
+      "generatorId": "exec-240a61c8-234f-4f2e-9c64-747681b5b7ad",
+      "file": "wengue.png",
+      "width": 862,
+      "height": 1825,
+      "margins": { "left": 1, "top": 2, "right": 3, "bottom": 0 },
+      "sha256": "edf2f70b2ecf2c8a812395869b6e8b3413e8152e15bc613f35f474d83825a2ee",
+      "gates": { "decodes": true, "maxMarginAtMost8": true, "frameComplete": true, "architecturePreserved": true, "lowerSmartLockBlank": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true },
+      "status": "PASS"
+    },
+    {
+      "finish": "gris-oscuro",
+      "generatorId": "exec-0c1e4dae-de43-4057-a413-d8df32def724",
+      "file": "gris-oscuro.png",
+      "width": 863,
+      "height": 1823,
+      "margins": { "left": 3, "top": 3, "right": 4, "bottom": 0 },
+      "sha256": "2cda1d6c564d561656582d857d2e71286693f64e5e3395c87d58d21b0f750226",
+      "gates": { "decodes": true, "maxMarginAtMost8": true, "frameComplete": true, "architecturePreserved": true, "lowerSmartLockBlank": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true },
+      "status": "PASS"
+    },
+    {
+      "finish": "antracita",
+      "generatorId": "exec-a5e0ea8b-18f7-43ff-a7c8-636826cb1308",
+      "file": "antracita.png",
+      "width": 862,
+      "height": 1825,
+      "margins": { "left": 1, "top": 2, "right": 1, "bottom": 0 },
+      "sha256": "e3dbda815da164392687eb2a9819e2942fbd5230bb0e2e0676c996cfb981d566",
+      "gates": { "decodes": true, "maxMarginAtMost8": true, "frameComplete": true, "architecturePreserved": true, "lowerSmartLockBlank": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true },
+      "status": "PASS"
+    },
+    {
+      "finish": "nogal",
+      "generatorId": "exec-9c407f1c-cd46-46df-8ad0-37473531271c",
+      "file": "nogal.png",
+      "width": 862,
+      "height": 1825,
+      "margins": { "left": 2, "top": 2, "right": 2, "bottom": 0 },
+      "sha256": "78f47137f003b09b338f3d006f5094c0df0df0fda9cc6a50e8f5d93151852d1b",
+      "gates": { "decodes": true, "maxMarginAtMost8": true, "frameComplete": true, "architecturePreserved": true, "lowerSmartLockBlank": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true },
+      "status": "PASS"
+    },
+    {
+      "finish": "roble",
+      "generatorId": "exec-7d065a6e-8d67-4c99-b7e7-a994e05a015d",
+      "file": "roble.png",
+      "width": 863,
+      "height": 1823,
+      "margins": { "left": 0, "top": 3, "right": 0, "bottom": 0 },
+      "sha256": "e5d0a55bb81a1a66563950ef76f34b3577965b77e6444fe68f42290d1669cc1f",
+      "gates": { "decodes": true, "maxMarginAtMost8": true, "frameComplete": true, "architecturePreserved": true, "lowerSmartLockBlank": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true },
+      "status": "PASS"
+    },
+    {
+      "finish": "gris-claro",
+      "generatorId": "exec-0fdd3c87-46ad-4321-8ea8-8342ae00073f",
+      "file": "gris-claro.png",
+      "width": 862,
+      "height": 1825,
+      "margins": { "left": 0, "top": 2, "right": 0, "bottom": 0 },
+      "sha256": "2a5ceb094cfaa0196ab8f6637c588dda1e139a0f4b39fab2f7d39b6a7f34d530",
+      "gates": { "decodes": true, "maxMarginAtMost8": true, "frameComplete": true, "architecturePreserved": true, "lowerSmartLockBlank": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true },
+      "status": "PASS"
+    },
+    {
+      "finish": "natural",
+      "generatorId": "exec-978b01fe-b06e-4a4c-82ae-8f07a46e07fa",
+      "file": "natural.png",
+      "width": 862,
+      "height": 1825,
+      "margins": { "left": 3, "top": 2, "right": 3, "bottom": 0 },
+      "sha256": "1cb062eee81885bb76931a3dd1d924d7d1e2f9307672f0bfecffee85cb7a23c8",
+      "gates": { "decodes": true, "maxMarginAtMost8": true, "frameComplete": true, "architecturePreserved": true, "lowerSmartLockBlank": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true },
+      "status": "PASS"
+    },
+    {
+      "finish": "blanco",
+      "generatorId": "exec-95280b1e-ded0-43b4-8349-3002151a8c29",
+      "file": "blanco.png",
+      "width": 862,
+      "height": 1824,
+      "margins": { "left": 1, "top": 2, "right": 2, "bottom": 0 },
+      "sha256": "67e85aff75ac5bb8a568db85c102f8774f05adf697e06fe5b1289e826066ca61",
+      "gates": { "decodes": true, "maxMarginAtMost8": true, "frameComplete": true, "architecturePreserved": true, "lowerSmartLockBlank": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true },
+      "status": "PASS"
+    }
+  ],
+  "summary": {
+    "requested": 10,
+    "pass": 10,
+    "fail": 0,
+    "uniqueHashes": 10,
+    "largestMeasuredMarginPixels": 4
+  },
+  "inspectionArtifacts": [
+    "_inspection/qa-cross-v2-attempt1/p103-lock-detail-sheet-attempt1.png"
+  ],
+  "promotion": {
+    "stagingOnly": true,
+    "converted": false,
+    "publicWritten": false
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "model": "ACERO/s121",
+  "status": "PASS_10_OF_10",
+  "generatedAt": "2026-08-13",
+  "generationMode": "built-in ImageGen, one independent call per finish",
+  "referencePolicy": {
+    "onlyReference": "output/ai-full-regeneration/masters/ACERO/s121/master-no-logo-ai-tight.png",
+    "onlyReferenceSha256": "42a1fba3d425d976169f00e9cd5f287daee08aa3d5d95d66dea2e2fea654b14b",
+    "logoReferenceUsed": false,
+    "generatedOutputUsedAsReference": false
+  },
+  "postProcessing": {
+    "filters": false,
+    "recolor": false,
+    "masks": false,
+    "crop": false,
+    "resize": false,
+    "composite": false,
+    "conversion": false,
+    "operationAfterGeneration": "byte-for-byte Copy-Item into the staging folder"
+  },
+  "qaCriteria": {
+    "fullOuterFrameVisible": true,
+    "targetWhiteBorderPixels": "0-8; up to 11 allowed when product occupancy exceeds 98%",
+    "geometryPreserved": "narrow fluted left panel, broad right slab, seam and frame",
+    "hardwarePreserved": "very long recessed pull, rectangular reader and circular knob",
+    "textPolicy": "zero logo, text, pseudo-text or microtext; reader retains only simple circular sensor dots"
+  },
+  "items": [
+    {
+      "finish": "original",
+      "file": "original.png",
+      "sha256": "affaba603b1e493611bc60dd01f453bd1c1662b1ed8a033731f01b0aecf085e2",
+      "dimensions": "811x1939",
+      "attempt": 2,
+      "detectedBorderPx": {"left": 6, "top": 7, "right": 7, "bottom": 4},
+      "geometryHardware": "PASS",
+      "logoText": "PASS_NONE",
+      "result": "PASS"
+    },
+    {
+      "finish": "negro",
+      "file": "negro.png",
+      "sha256": "6f8c43e40a5a810dc4fcb3a455212f2724e6a67273485db041809ad13f27bc63",
+      "dimensions": "811x1940",
+      "attempt": 1,
+      "detectedBorderPx": {"left": 4, "top": 5, "right": 5, "bottom": 0},
+      "geometryHardware": "PASS",
+      "logoText": "PASS_NONE",
+      "result": "PASS"
+    },
+    {
+      "finish": "antracita",
+      "file": "antracita.png",
+      "sha256": "b70f2b354c6dcc346055b73183eedc438b5751bc69d078eea6bf7ef171939cb3",
+      "dimensions": "811x1940",
+      "attempt": 1,
+      "detectedBorderPx": {"left": 4, "top": 5, "right": 6, "bottom": 0},
+      "geometryHardware": "PASS",
+      "logoText": "PASS_NONE",
+      "result": "PASS"
+    },
+    {
+      "finish": "gris-oscuro",
+      "file": "gris-oscuro.png",
+      "sha256": "1c0701bf6ac6b077c12bb0ac9ce335e223fd7533e2b524e773fe2044fa6fd09d",
+      "dimensions": "811x1940",
+      "attempt": 1,
+      "detectedBorderPx": {"left": 6, "top": 7, "right": 7, "bottom": 0},
+      "geometryHardware": "PASS",
+      "logoText": "PASS_NONE",
+      "result": "PASS"
+    },
+    {
+      "finish": "gris-claro",
+      "file": "gris-claro.png",
+      "sha256": "e2518fef0a09090de502f75b3105cd3698d60f9cc4692e36072169b642a2f7fd",
+      "dimensions": "811x1940",
+      "attempt": 1,
+      "detectedBorderPx": {"left": 8, "top": 9, "right": 8, "bottom": 4},
+      "geometryHardware": "PASS",
+      "logoText": "PASS_NONE",
+      "result": "PASS"
+    },
+    {
+      "finish": "blanco",
+      "file": "blanco.png",
+      "sha256": "737d157e39c65be344a6973f5fe25faf84d1a8e99525af8495501fac9da9c02f",
+      "dimensions": "811x1940",
+      "attempt": 1,
+      "detectedBorderPx": {"left": 2, "top": 6, "right": 5, "bottom": 0},
+      "geometryHardware": "PASS",
+      "logoText": "PASS_NONE",
+      "result": "PASS"
+    },
+    {
+      "finish": "natural",
+      "file": "natural.png",
+      "sha256": "b810679e978163df5cf1ea836110433901e85c6629c2d8e886f3e4d6a67dd0b3",
+      "dimensions": "811x1940",
+      "attempt": 1,
+      "detectedBorderPx": {"left": 2, "top": 5, "right": 3, "bottom": 0},
+      "geometryHardware": "PASS",
+      "logoText": "PASS_NONE",
+      "result": "PASS"
+    },
+    {
+      "finish": "roble",
+      "file": "roble.png",
+      "sha256": "8560978c45f389a8759591b905d1cb77dcae9b0540b059d6827679b7771e2180",
+      "dimensions": "811x1940",
+      "attempt": 1,
+      "detectedBorderPx": {"left": 5, "top": 7, "right": 6, "bottom": 4},
+      "geometryHardware": "PASS",
+      "logoText": "PASS_NONE",
+      "result": "PASS"
+    },
+    {
+      "finish": "nogal",
+      "file": "nogal.png",
+      "sha256": "dc9d41427cd8bbc4963582e2bbfa827cdaf4771f34fd57f5408be691f62fe599",
+      "dimensions": "811x1940",
+      "attempt": 1,
+      "detectedBorderPx": {"left": 0, "top": 0, "right": 0, "bottom": 0},
+      "geometryHardware": "PASS",
+      "logoText": "PASS_NONE",
+      "result": "PASS"
+    },
+    {
+      "finish": "wengue",
+      "file": "wengue.png",
+      "sha256": "cb4ec7cf588991cf25e4db73ec38179cebbf2eb57023062db9eb92257b7e85a1",
+      "dimensions": "811x1938",
+      "attempt": 1,
+      "detectedBorderPx": {"left": 3, "top": 5, "right": 4, "bottom": 0},
+      "geometryHardware": "PASS",
+      "logoText": "PASS_NONE",
+      "result": "PASS"
+    }
+  ],
+  "rejected": [
+    {
+      "file": "_rejected/original-attempt1-margin.png",
+      "reason": "white border visibly exceeded the accepted compact-frame limit"
+    }
+  ],
+  "promotion": "NOT_PERFORMED"
+}

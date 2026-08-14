@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 2,
+  "model": "ACORAZADA/wl017",
+  "logoPolicy": "NO_LOGO",
+  "generationMode": "built-in-imagegen-direct-unbranded",
+  "sourcePolicy": "Each active PNG is an independent ImageGen call using only the same no-logo WL017 master; no logo reference or generated output was used.",
+  "pixelProcessing": "none",
+  "source": { "path": "output/ai-full-regeneration/pilots/ACORAZADA/wl017/master-no-logo-ai-tight.png" },
+  "accepted": [
+    {"finish":"original","file":"original.png","width":853,"height":1844,"sha256":"8D3BCC8B1E4E36A930E891C89DD9737A2D012BBE41CDC99B1396DAC8D542388C"},
+    {"finish":"negro","file":"negro.png","width":853,"height":1843,"sha256":"889E569B85F522451BA962DDF91B33DC5091D6EECFD9D6833D0857C9C59E0032"},
+    {"finish":"wengue","file":"wengue.png","width":854,"height":1842,"sha256":"2857E490AF571A9528A23163A0812B8DCF56430E85D61B4F4DE9DBC5075990CA"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","width":854,"height":1840,"sha256":"1B0F82085FC8E668613BD7BCF8F2A3C3FFF1D8F2AAAD34B1D54FF3B4C61625D5"},
+    {"finish":"antracita","file":"antracita.png","width":854,"height":1842,"sha256":"CB62FD9FE1082E2BCF43356D4F68FB73E9606AD9400A7904F233F0980356887A"},
+    {"finish":"nogal","file":"nogal.png","width":854,"height":1840,"sha256":"A590E634AD6E6EF2DF027AF1A2F4C654B2291613D66F3810DCAB4F514CA92590"},
+    {"finish":"roble","file":"roble.png","width":853,"height":1843,"sha256":"60BCAA9A7DE69D160506BB5B9DF0F8FBE937C11795C8C67A9F3E02202C9819C2"},
+    {"finish":"gris-claro","file":"gris-claro.png","width":854,"height":1842,"sha256":"B9277A23EA8715368F7C155BFD2FBE2D12AFB52C5C9EB721E35BD144F9C97AE1"},
+    {"finish":"natural","file":"natural.png","width":854,"height":1842,"sha256":"34C13ABCE556B3BA57C7F0BA8A498FE86B36270206406588C19DB940CCE74A5C"},
+    {"finish":"blanco","file":"blanco.png","width":854,"height":1842,"sha256":"2CAC753EE94574121875AE4ED3A08D07653F46E9A96676561C5942F979C35489"}
+  ],
+  "promotion": {"converted":false,"publicWritten":false}
+}

@@ -1,0 +1,23 @@
+{
+  "schema":"wonly-direct-imagegen-qa/v2",
+  "model":"ACERO/p106",
+  "reviewDate":"2026-08-13",
+  "publicModified":false,
+  "summary":{"activeAssetCount":10,"approvedVisually":10,"uniqueHashCount":10,"overall":"PASS"},
+  "criteria":{"source":"no-logo master only","architecture":"full stepped frame, plain slab, vertical brushed band, full silver threshold","lock":"exactly one camera, isolated functional dots and one blank control; zero text","branding":"zero WONLY/logo/text","framing":"complete frame with 0-8 px margin","derivation":"raw direct ImageGen; no filters/crop/resize/composite/repair"},
+  "assets":[
+    {"finish":"original","sha256":"A4C3EFD3E8DE53422B7E7A108AC20FD4D051C56F0F19B713B90ECDB80E2358A6","margins":{"left":5,"top":5,"right":7,"bottom":6},"visual":"PASS"},
+    {"finish":"negro","sha256":"CE60017441BC048D26D4466034F712052B6DB8DAE76D58E7C0B404928C901E4C","margins":{"left":0,"top":0,"right":0,"bottom":0},"visual":"PASS"},
+    {"finish":"wengue","sha256":"EA20DA94D789F0BFC549655A18A61A21C70AA326BAC53BEFBEDACE5BA0228D7C","margins":{"left":6,"top":8,"right":7,"bottom":5},"visual":"PASS"},
+    {"finish":"gris-oscuro","sha256":"3F529B49442AD765B029E63982F5EFA7F99CAAC9D9D714070FCF789E002E7875","margins":{"left":7,"top":6,"right":8,"bottom":5},"visual":"PASS"},
+    {"finish":"antracita","sha256":"28722A57FCB3190AC8EAD8C1D546B6A265214569A493F0A10C07D3B82F8C3280","margins":{"left":0,"top":0,"right":0,"bottom":0},"visual":"PASS","note":"Frame and threshold remain complete at edge-to-edge framing."},
+    {"finish":"nogal","sha256":"E72F15F9D6A69DE3813B938D00301B97650B9903288627ACBD9B1B718521463B","margins":{"left":1,"top":0,"right":0,"bottom":2},"visual":"PASS"},
+    {"finish":"roble","sha256":"99232B070C7BDDB9083F708A705DCE77E34E792CD480C86079D024C53E4B0630","margins":{"left":5,"top":5,"right":6,"bottom":0},"visual":"PASS"},
+    {"finish":"gris-claro","sha256":"99F07733DF95CE80177F133BBAFD088D25FD1F17FAFD1E4E530067CB1B2A4242","margins":{"left":0,"top":0,"right":0,"bottom":0},"visual":"PASS"},
+    {"finish":"natural","sha256":"FB84283A51B44FBE2DBF8CE3C6B18C37D4466A0C7B28A06FF3ED501F3753FDF9","margins":{"left":4,"top":7,"right":5,"bottom":0},"visual":"PASS"},
+    {"finish":"blanco","sha256":"B7EFA91D31E8C4096E7E0AD07587820EDEC4E6639D3EF67CCE4DE2F51E24D084","margins":{"left":4,"top":7,"right":5,"bottom":0},"visual":"PASS"}
+  ],
+  "visualChecks":{"completeFrameAndThreshold":"PASS 10/10","lockCameraDotsBlankControl":"PASS 10/10","zeroLogoTextPseudoText":"PASS 10/10","marginAtMostEight":"PASS 10/10","distinctFinishes":"PASS 10/10"},
+  "rejectedNotes":"Rejected negro attempts and the first blanco with 9 px top margin remain in _rejected and are inactive.",
+  "notes":"No conversion or public promotion performed."
+}

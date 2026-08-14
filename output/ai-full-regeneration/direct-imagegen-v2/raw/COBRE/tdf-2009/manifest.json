@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 2,
+  "model": "COBRE/tdf-2009",
+  "policy": "NO_LOGO",
+  "generationMode": "built-in-imagegen-direct-unbranded",
+  "sourcePolicy": "Each active PNG was created by a separate built-in ImageGen call using only the same COBRE/tdf-2009 base-tight reference. No generated output and no logo asset was referenced.",
+  "pixelProcessing": "none",
+  "source": {
+    "path": "output/ai-full-regeneration/large-doors/COBRE/tdf-2009/base-tight.png",
+    "sha256": "441fef22ea1845cb404d5098817b5faf3f2cc73b93eb97917d5b28d3658cb1d9"
+  },
+  "accepted": [
+    {
+      "finish": "original",
+      "file": "original.png",
+      "generatorId": "exec-74b71daa-f77b-448e-bd8e-2b6e0ba8558f",
+      "width": 1062,
+      "height": 1482,
+      "sha256": "456292b0dc02d9314fc8639d28fc90602aa1422549d54d6dcb9cd0de5f41cef2",
+      "marginsPx": { "left": 2, "top": 2, "right": 1, "bottom": 0 },
+      "boundingCoveragePercent": 99.583
+    },
+    {
+      "finish": "negro",
+      "file": "negro.png",
+      "generatorId": "exec-c3b48a8e-011e-4bd9-b1a7-2009a49f143d",
+      "width": 1062,
+      "height": 1482,
+      "sha256": "8e82df8a965b5b5d81a9d1d5cd914655b67a0f70b779e3ce03e92b487d5a9ec1",
+      "marginsPx": { "left": 2, "top": 0, "right": 4, "bottom": 0 },
+      "boundingCoveragePercent": 99.435
+    },
+    {
+      "finish": "wengue",
+      "file": "wengue.png",
+      "generatorId": "exec-ee7eb0c1-76d0-4c69-a1ba-b980c444f82f",
+      "width": 1062,
+      "height": 1480,
+      "sha256": "f24c60c824bbc1b9820025e8d8927405e886ce1954a69a86a576116b78a1b789",
+      "marginsPx": { "left": 0, "top": 0, "right": 1, "bottom": 0 },
+      "boundingCoveragePercent": 99.906
+    },
+    {
+      "finish": "gris-oscuro",
+      "file": "gris-oscuro.png",
+      "generatorId": "exec-a0416742-2248-4916-b0ab-99af8e21b38e",
+      "width": 1063,
+      "height": 1480,
+      "sha256": "9d196a71992b8fe97497f4bcbcbc13760286a1b9af9f088b940665765ec958c2",
+      "marginsPx": { "left": 3, "top": 3, "right": 1, "bottom": 0 },
+      "boundingCoveragePercent": 99.422
+    },
+    {
+      "finish": "antracita",
+      "file": "antracita.png",
+      "generatorId": "exec-d87fcb36-6abc-4416-8ff1-e5bde83ffc1f",
+      "width": 1062,
+      "height": 1480,
+      "sha256": "ac591584997a11128b47a43f87d6e7499142340e0b0827132456078437396409",
+      "marginsPx": { "left": 2, "top": 3, "right": 4, "bottom": 1 },
+      "boundingCoveragePercent": 99.166
+    },
+    {
+      "finish": "nogal",
+      "file": "nogal.png",
+      "generatorId": "exec-80980031-c813-4786-af7e-5af4a1577794",
+      "width": 1062,
+      "height": 1480,
+      "sha256": "e716746e659bedc97b126773cc178285933f88060ccf694e35970904b77eada5",
+      "marginsPx": { "left": 0, "top": 0, "right": 3, "bottom": 0 },
+      "boundingCoveragePercent": 99.718
+    },
+    {
+      "finish": "roble",
+      "file": "roble.png",
+      "generatorId": "exec-0022449a-a99f-4ab8-87e1-648a9c48591f",
+      "width": 1063,
+      "height": 1480,
+      "sha256": "28d5c13bb65e0c63a3f1ded822f57d9263524ffa0091b851a82dfd87af75b176",
+      "marginsPx": { "left": 0, "top": 0, "right": 3, "bottom": 0 },
+      "boundingCoveragePercent": 99.718
+    },
+    {
+      "finish": "gris-claro",
+      "file": "gris-claro.png",
+      "generatorId": "exec-2717bdf3-9e8d-4dfb-8278-1262fb4720af",
+      "width": 1061,
+      "height": 1483,
+      "sha256": "b2581654f39f7e2fdf68108b1017b8b58e9ddd9dfb6040e8064136423e7f56e9",
+      "marginsPx": { "left": 2, "top": 3, "right": 1, "bottom": 0 },
+      "boundingCoveragePercent": 99.516
+    },
+    {
+      "finish": "natural",
+      "file": "natural.png",
+      "generatorId": "exec-d746ddcc-533d-4669-af30-8a58b09819ef",
+      "width": 1063,
+      "height": 1479,
+      "sha256": "843aa1aa46d8cd1cf06457dd6cdc6aea6e0d5b807149b64d4fdf05718afdc441",
+      "marginsPx": { "left": 0, "top": 0, "right": 3, "bottom": 0 },
+      "boundingCoveragePercent": 99.718
+    },
+    {
+      "finish": "blanco",
+      "file": "blanco.png",
+      "generatorId": "exec-e919cbaf-9663-48a2-9f7c-5d27504ffe92",
+      "width": 1062,
+      "height": 1480,
+      "sha256": "9d49316e7bee1e84bb95f6a34b9c153ca0caec4a34cc9f267df5bc525876bc7c",
+      "marginsPx": { "left": 0, "top": 0, "right": 1, "bottom": 0 },
+      "boundingCoveragePercent": 99.906
+    }
+  ],
+  "qa": {
+    "path": "QA.json",
+    "status": "PASS_10_OF_10",
+    "maximumMeasuredMarginPixels": 4,
+    "minimumBoundingCoveragePercent": 99.166
+  },
+  "promotion": {
+    "stagingOnly": true,
+    "converted": false,
+    "publicWritten": false
+  }
+}

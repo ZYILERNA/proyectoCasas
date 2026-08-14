@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 2,
+  "model": "PVC/wl-p010",
+  "policy": "NO_LOGO",
+  "status": "PASS_10_OF_10",
+  "master": {
+    "path": "output/ai-full-regeneration/new-defects/PVC/wl-p010/master-no-logo-ai.png",
+    "sha256": "301e0ed28641ca5bbd15b9d27b2949d169dfc1e91f8c6f773cc860c5b5a9e8ed"
+  },
+  "generationMode": "built-in-imagegen-direct-from-single-master",
+  "sourcePolicy": "Every accepted PNG is the untouched output of a separate built-in ImageGen call using only the same local no-logo master. No generated variant or logo asset was referenced.",
+  "pixelProcessing": "none",
+  "acceptedAssetsAlteredAfterGeneration": false,
+  "sourceGeneratedImages": {
+    "original": "C:/Users/zhen/.codex/generated_images/019fff71-0a2a-7802-adfc-b2bdb5bbf9d3/exec-264264ef-332f-46dc-a8b3-81f60b8469ac.png",
+    "negro": "C:/Users/zhen/.codex/generated_images/019ffbe3-39da-7bc3-be6a-b330663abd41/exec-7bc71dcb-faeb-41d3-906d-fd2e51c4015a.png",
+    "wengue": "C:/Users/zhen/.codex/generated_images/019ffbe3-39da-7bc3-be6a-b330663abd41/exec-f5d8a259-25b6-4d86-a707-c30f57742c4a.png",
+    "gris-oscuro": "C:/Users/zhen/.codex/generated_images/019ffbe3-39da-7bc3-be6a-b330663abd41/exec-1d6aec82-78a1-4bdf-9b59-352441186541.png",
+    "antracita": "C:/Users/zhen/.codex/generated_images/019ffbe3-39da-7bc3-be6a-b330663abd41/exec-6a8b01ba-c3f9-4d4d-8ee2-3d9088a3fe92.png",
+    "nogal": "C:/Users/zhen/.codex/generated_images/019ffbe3-39da-7bc3-be6a-b330663abd41/exec-2b3b1dd0-42b2-4862-bc5d-5cf5c2a0f73d.png",
+    "roble": "C:/Users/zhen/.codex/generated_images/019ffbe3-39da-7bc3-be6a-b330663abd41/exec-706c84ec-dfa8-48f6-b532-3d86fcf6d294.png",
+    "gris-claro": "C:/Users/zhen/.codex/generated_images/019ffbe3-39da-7bc3-be6a-b330663abd41/exec-3b3a64b8-073a-4f6e-a6cc-343b3eae3e5f.png",
+    "natural": "C:/Users/zhen/.codex/generated_images/019fff71-0a2a-7802-adfc-b2bdb5bbf9d3/exec-b7c2594b-6e62-491d-a85c-047c4e6c87b2.png",
+    "blanco": "C:/Users/zhen/.codex/generated_images/019fff71-0a2a-7802-adfc-b2bdb5bbf9d3/exec-ff2f923c-9a2d-4a25-85ec-9ee62115bf7f.png"
+  },
+  "accepted": [
+    { "finish": "original", "file": "original.png", "generatorId": "exec-264264ef-332f-46dc-a8b3-81f60b8469ac", "sha256": "8abf48f8bc52d9e73498f827c82bd60651fd7cd5420af0f4863086bc3700e2e2" },
+    { "finish": "negro", "file": "negro.png", "generatorId": "exec-7bc71dcb-faeb-41d3-906d-fd2e51c4015a", "sha256": "a2fcb23a5b2f155f4889b34c5951f2e27115801bc9373b08b808136abe655b0b" },
+    { "finish": "wengue", "file": "wengue.png", "generatorId": "exec-f5d8a259-25b6-4d86-a707-c30f57742c4a", "sha256": "8cc3fc8e5be94b3fd2b45d41f55c50c789837271eb4b8d3e6ffdb457563fdba2" },
+    { "finish": "gris-oscuro", "file": "gris-oscuro.png", "generatorId": "exec-1d6aec82-78a1-4bdf-9b59-352441186541", "sha256": "09587426dc7af129cfbe4e0f041a1d1e4bec723f5593acb4fc269da90a01e51f" },
+    { "finish": "antracita", "file": "antracita.png", "generatorId": "exec-6a8b01ba-c3f9-4d4d-8ee2-3d9088a3fe92", "sha256": "f8df44e6f61b2038dbfc428739d319288ae54a88aae16b33f99a2b3a92f125b8" },
+    { "finish": "nogal", "file": "nogal.png", "generatorId": "exec-2b3b1dd0-42b2-4862-bc5d-5cf5c2a0f73d", "sha256": "f291816e64392d815f6fe963a7be041b04c967150a031e0b62cd1c4d0c6b8d8f" },
+    { "finish": "roble", "file": "roble.png", "generatorId": "exec-706c84ec-dfa8-48f6-b532-3d86fcf6d294", "sha256": "e42e61459614ec9cba8bb5f3f40ea2fe1216968861a335167336493fa9e3a3d5" },
+    { "finish": "gris-claro", "file": "gris-claro.png", "generatorId": "exec-3b3a64b8-073a-4f6e-a6cc-343b3eae3e5f", "sha256": "75b1a78aced0c2fb4bc2bfb177235646c7e1b778893bdc23153702280eabcf51" },
+    { "finish": "natural", "file": "natural.png", "generatorId": "exec-b7c2594b-6e62-491d-a85c-047c4e6c87b2", "sha256": "6a6eee5355c7558824423d2a6ee673d27cacbb587202087c5c4ffff8fb33be1e" },
+    { "finish": "blanco", "file": "blanco.png", "generatorId": "exec-ff2f923c-9a2d-4a25-85ec-9ee62115bf7f", "sha256": "ded32fec6126d50e17dadb24b60573a0f85660964e10c6a7eb0217f27345a309" }
+  ],
+  "rejected": [
+    {
+      "finish": "original",
+      "file": "_rejected/original-proportion-attempt1.png",
+      "source": "C:/Users/zhen/.codex/generated_images/019ffbe3-39da-7bc3-be6a-b330663abd41/exec-2ca511cc-cabd-4905-8028-f889bc397a00.png",
+      "generatorId": "exec-2ca511cc-cabd-4905-8028-f889bc397a00",
+      "sha256": "ba81e1628375fe4c2ade0abf77729cdfd460e27939a2c7c8270b42678270154e",
+      "reason": "incorrect wide aspect ratio"
+    }
+  ],
+  "qa": {
+    "path": "QA.json",
+    "status": "PASS_10_OF_10",
+    "maximumMeasuredMarginPixels": 3,
+    "logoTextOrPseudotextInstancesPerAsset": 0,
+    "uniqueAcceptedHashes": 10
+  },
+  "promotion": { "stagingOnly": true, "converted": false, "publicWritten": false }
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "wonly-direct-imagegen-raw-manifest/v2",
+  "category": "ACERO",
+  "model": "p105",
+  "status": "PASS_10_OF_10",
+  "logoPolicy": "NO_LOGO",
+  "sourceMaster": "output/ai-full-regeneration/masters/ACERO/p105/master-no-logo-ai-tight.png",
+  "activeFinishes": ["original","negro","wengue","gris-oscuro","antracita","nogal","roble","gris-claro","natural","blanco"],
+  "activeCount": 10,
+  "generation": {
+    "tool": "built-in ImageGen",
+    "masterOnlyReferences": true,
+    "independentCallPerActiveAsset": true,
+    "outputReferenceUsed": false,
+    "logoReferenceUsed": false,
+    "filters": false,
+    "recolor": false,
+    "masks": false,
+    "crop": false,
+    "resize": false,
+    "composite": false
+  },
+  "converted": false,
+  "publicWritten": false,
+  "safeToPromote": false,
+  "qa": "QA.json",
+  "prompts": "PROMPTS.md"
+}

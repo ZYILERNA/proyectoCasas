@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "score": "10/10",
+  "auditedAt": "2026-08-13",
+  "freshOriginalDetailReopenAllTen": true,
+  "geometryHardware": {
+    "completeFrame": true,
+    "singleTopTransom": true,
+    "exactThreeLowerFields": true,
+    "narrowFlutedLeft": true,
+    "fullHeightSmoothCenterStrip": true,
+    "wideFlutedRight": true,
+    "exactTwoBlackDevices": true,
+    "upperLongLock": true,
+    "lowerDeviceSilverCap": true,
+    "blankFunctionalGeometricIndicatorsOnly": true
+  },
+  "content": {
+    "zeroWonly": true,
+    "zeroOtherLogo": true,
+    "zeroTextLettersDigits": true,
+    "zeroMicrotextPseudotext": true,
+    "zeroExtraHardware": true
+  },
+  "mechanical": {
+    "pngCount": 10,
+    "uniqueSha256Count": 10,
+    "pixelThreshold": "any RGB channel < 248",
+    "maximumAllowedMarginPx": 8,
+    "observedMarginRangePx": [0, 5],
+    "allWithinLimit": true,
+    "dimensionsObserved": ["899x1748", "900x1748", "899x1749"]
+  },
+  "provenance": {
+    "masterOnly": true,
+    "logoReferenceUsed": false,
+    "outputReferenceUsed": false,
+    "independentBuiltInCalls": 10
+  },
+  "writes": {
+    "conversion": 0,
+    "public": 0
+  },
+  "qaArtifacts": [
+    "qa/contact-sheet.png",
+    "qa/hardware-detail-sheet.png"
+  ],
+  "legacy": "61 old filter-derived/WONLY-era files copied into a NEVER-PROMOTE archive"
+}
+

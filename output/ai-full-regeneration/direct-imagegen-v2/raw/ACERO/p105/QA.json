@@ -1,0 +1,169 @@
+{
+  "model": "ACERO/p105",
+  "status": "PASS_10_OF_10",
+  "publicModified": false,
+  "conversionPerformed": false,
+  "promotionPerformed": false,
+  "generation": {
+    "tool": "built-in ImageGen",
+    "masterOnly": "output/ai-full-regeneration/masters/ACERO/p105/master-no-logo-ai-tight.png",
+    "independentCalls": 15,
+    "filters": false,
+    "recolorOperations": false,
+    "masks": false,
+    "crops": false,
+    "resizes": false,
+    "compositing": false,
+    "outputAsReference": false,
+    "logoReference": false
+  },
+  "criteria": {
+    "expectedAssets": 10,
+    "required": "original plus nine finishes",
+    "branding": "zero logo, text, number, pseudo-text, icon, micro-label or watermark anywhere",
+    "hardware": "same long smart-lock and distinct pull-handle geometry, but blank surfaces",
+    "framing": "0-8 px preferred; up to 11 px only when occupancy exceeds 98 percent",
+    "geometry": "complete frame and ruler-straight parallel fluting"
+  },
+  "summary": {
+    "activePassedAssets": 10,
+    "blockedAssets": 0,
+    "rejectedAttempts": 5,
+    "decision": "PASS_RAW_STAGING_ONLY"
+  },
+  "assets": [
+    {
+      "finish": "original",
+      "file": "original.png",
+      "attempt": 2,
+      "dimensions": "832x1890",
+      "sha256": "5d24e95317c60058bb5321de61f62fd3b690c07c98759ab2e8a6e017c933b50e",
+      "margins245": { "left": 5, "top": 5, "right": 8, "bottom": 5 },
+      "occupancyPercent": { "width": 98.44, "height": 99.47 },
+      "visualQA": "PASS"
+    },
+    {
+      "finish": "negro",
+      "file": "negro.png",
+      "attempt": 1,
+      "dimensions": "832x1890",
+      "sha256": "a9dde302a347153cb979ed95b8d41be33942768cc3217954a0db93711ea3c58d",
+      "margins245": { "left": 5, "top": 6, "right": 6, "bottom": 5 },
+      "occupancyPercent": { "width": 98.68, "height": 99.42 },
+      "visualQA": "PASS"
+    },
+    {
+      "finish": "antracita",
+      "file": "antracita.png",
+      "attempt": 3,
+      "dimensions": "832x1890",
+      "sha256": "97759b5f7051b3e7bdd93b5cd6b80328ea41e440fb9377862231b27b64805230",
+      "margins245": { "left": 4, "top": 4, "right": 5, "bottom": 5 },
+      "occupancyPercent": { "width": 98.92, "height": 99.52 },
+      "imagegenOutput": "exec-1de59f90-58cd-4a7f-9769-b1bea7cc79a8.png",
+      "visualQA": "PASS"
+    },
+    {
+      "finish": "gris-oscuro",
+      "file": "gris-oscuro.png",
+      "attempt": 2,
+      "dimensions": "832x1890",
+      "sha256": "c0569f262125d8505b0c4f837ef9e335ad2bd9cd35c66be3ad26e2384427610d",
+      "margins245": { "left": 2, "top": 2, "right": 4, "bottom": 0 },
+      "occupancyPercent": { "width": 99.28, "height": 99.89 },
+      "visualQA": "PASS"
+    },
+    {
+      "finish": "gris-claro",
+      "file": "gris-claro.png",
+      "attempt": 1,
+      "dimensions": "831x1891",
+      "sha256": "9f34013be777d4fc240169dbd24cbcae5fe8afe4eb728d556e2586ed3e90c5b7",
+      "margins245": { "left": 5, "top": 9, "right": 7, "bottom": 4 },
+      "occupancyPercent": { "width": 98.56, "height": 99.31 },
+      "visualQA": "PASS_CONDITIONAL_MARGIN"
+    },
+    {
+      "finish": "blanco",
+      "file": "blanco.png",
+      "attempt": 2,
+      "dimensions": "832x1891",
+      "sha256": "8077b8d8daa17035ba3a7b0b987c543057e8c7e97cff2291672030da1b8e446b",
+      "margins245": { "left": 3, "top": 3, "right": 5, "bottom": 6 },
+      "occupancyPercent": { "width": 99.04, "height": 99.52 },
+      "visualQA": "PASS"
+    },
+    {
+      "finish": "natural",
+      "file": "natural.png",
+      "attempt": 1,
+      "dimensions": "832x1891",
+      "sha256": "b821cdb41ed214a2b928e6f623ea1446b791cb705329450846365fad8b79cc28",
+      "margins245": { "left": 3, "top": 2, "right": 4, "bottom": 4 },
+      "occupancyPercent": { "width": 99.16, "height": 99.68 },
+      "visualQA": "PASS"
+    },
+    {
+      "finish": "roble",
+      "file": "roble.png",
+      "attempt": 1,
+      "dimensions": "832x1890",
+      "sha256": "24d1b97e1a2b888ff1e5c11de2ff1b0040dcd7a6c7e10c1a07ddb9ed6f8e10c8",
+      "margins245": { "left": 4, "top": 2, "right": 6, "bottom": 4 },
+      "occupancyPercent": { "width": 98.8, "height": 99.68 },
+      "visualQA": "PASS"
+    },
+    {
+      "finish": "nogal",
+      "file": "nogal.png",
+      "attempt": 1,
+      "dimensions": "832x1890",
+      "sha256": "d56b56facf565dbcd99d17c7200fc17e7f326decb0189ad00eb9147c37c5a6c2",
+      "margins245": { "left": 8, "top": 8, "right": 8, "bottom": 5 },
+      "occupancyPercent": { "width": 98.08, "height": 99.31 },
+      "visualQA": "PASS"
+    },
+    {
+      "finish": "wengue",
+      "file": "wengue.png",
+      "attempt": 1,
+      "dimensions": "832x1889",
+      "sha256": "545efbfed9d5807ed85d6743eb8cc9787aebac0440c4268e88a9a4bdb31856e4",
+      "margins245": { "left": 6, "top": 7, "right": 7, "bottom": 4 },
+      "occupancyPercent": { "width": 98.44, "height": 99.42 },
+      "visualQA": "PASS"
+    }
+  ],
+  "rejected": [
+    {
+      "file": "_rejected/original-attempt1-lock-marks.png",
+      "sha256": "821525ecfd5d6478e36adbab1289b1638ae786d4402e70d8788769956a047b6a",
+      "reason": "invented marks on the lock"
+    },
+    {
+      "file": "_rejected/antracita-attempt1-hardware-incomplete.png",
+      "sha256": "8291bf43c1595935cb98aa2304ed593e417c6b36c340535e62f48ec3b9f4cd48",
+      "reason": "distinct inset pull-handle missing"
+    },
+    {
+      "file": "_rejected/antracita-attempt2-margin9-10-coverage97.72.png",
+      "sha256": "28832d0e25820fdcebc098bdf0685c5383e2bbe0190894de6697c18aefc7be87",
+      "reason": "conditional margin tolerance failed"
+    },
+    {
+      "file": "_rejected/gris-oscuro-attempt1-right-margin14.png",
+      "sha256": "4ae0f4c808c130f6017d715a16e0dcb6b652bbeeae2f6ee96beb1de9f00fa517",
+      "reason": "14 px right margin"
+    },
+    {
+      "file": "_rejected/blanco-attempt1-width-occupancy-under98.png",
+      "sha256": "8fe61fa77c5f6ad3bbde8e7b520dd5718ede73841bbb10a9f47e6f994d87235f",
+      "reason": "9-11 px horizontal margins with occupancy under 98 percent"
+    }
+  ],
+  "inspection": {
+    "contactSheet": "_inspection/contact-sheet.png",
+    "hardwareDetailSheet": "_inspection/hardware-detail-sheet.png",
+    "result": "All ten active assets show complete frames, straight flutes, both required hardware components, and blank hardware without logos, text or pseudo-text."
+  }
+}

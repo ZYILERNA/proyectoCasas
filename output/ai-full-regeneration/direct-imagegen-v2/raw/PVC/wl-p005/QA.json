@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "model": "PVC/wl-p005",
+  "status": "PASS_10_OF_10",
+  "score": "10/10",
+  "auditedAt": "2026-08-14",
+  "logoPolicy": "NO_LOGO",
+  "freshOriginalDetailReopenAllTen": true,
+  "visual": {
+    "completeDoorAndOuterFrame": true,
+    "singleTallLeaf": true,
+    "singleRoundedRectangleDoubleLineMolding": true,
+    "singleSilverHorizontalLever": true,
+    "singleRoundLeverRosette": true,
+    "singleSeparateRoundKeyCylinderBelow": true,
+    "hardwareSideSpacingAndOrientationStable": true,
+    "zeroDuplicatedOrExtraHardware": true,
+    "zeroLogoOrWonlyMark": true,
+    "zeroLettersDigitsTextPseudotext": true,
+    "zeroWatermarkBadgeOrSticker": true
+  },
+  "mechanical": {
+    "activePngCount": 10,
+    "uniqueActiveSha256Count": 10,
+    "pixelThreshold": "foreground when any RGB channel < 245",
+    "preferredMarginPx": "0-8",
+    "maximumAllowedTolerancePx": 11,
+    "observedMarginRangePx": [0, 11],
+    "minimumDoorHeightCoveragePct": 99.325,
+    "allWithinTolerance": true,
+    "allToleranceCasesAbove98PctHeightCoverage": true,
+    "allFramesComplete": true
+  },
+  "accepted": [
+    {"finish":"original","file":"original.png","dimensions":"759x2073","margin":{"left":11,"top":6,"right":10,"bottom":4},"sha256":"6f9dad68dbb6b553db1ba3f87fce46a3de53e43524a01c997ffa25d75b4daa53"},
+    {"finish":"negro","file":"negro.png","dimensions":"820x1919","margin":{"left":4,"top":1,"right":0,"bottom":0},"sha256":"02883285b2b5378b9acb984e5c4ac1cae8ef591f6915ed70e832e280463d6ff3"},
+    {"finish":"wengue","file":"wengue.png","dimensions":"759x2072","margin":{"left":0,"top":1,"right":0,"bottom":1},"sha256":"19d915990393a2a44ddfa5a7ecc6084906620da7da33a0916690e4c623135ac5"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","dimensions":"758x2073","margin":{"left":7,"top":9,"right":0,"bottom":5},"sha256":"5a03d80c397a9768fba8a4994b651a6d0550d6701cc5f8a56a82eaef6702f73d"},
+    {"finish":"antracita","file":"antracita.png","dimensions":"758x2073","margin":{"left":5,"top":4,"right":4,"bottom":3},"sha256":"3cef502f907464e503cd32d2e89dda4a944c4e29ef825faeabfa29e64262dcb9"},
+    {"finish":"nogal","file":"nogal.png","dimensions":"759x2073","margin":{"left":0,"top":2,"right":4,"bottom":0},"sha256":"daebb46cfb5e4a7e25e346e14814967828d9c2a61ca0bd7d26dd3a71aeb1f2cf"},
+    {"finish":"roble","file":"roble.png","dimensions":"758x2075","margin":{"left":0,"top":0,"right":0,"bottom":0},"sha256":"da79a536f52006e35e630a0b23544a54586fc8174b6c8074040980d367cbac18"},
+    {"finish":"gris-claro","file":"gris-claro.png","dimensions":"758x2076","margin":{"left":0,"top":0,"right":0,"bottom":0},"sha256":"fff77e8489d1c35b0f81dbc6149fa12333ebdea3b4a1af4de7845acfa5c11613"},
+    {"finish":"natural","file":"natural.png","dimensions":"758x2075","margin":{"left":3,"top":2,"right":2,"bottom":0},"sha256":"c3bb1e49e1aae478e7b2a9ebb48bd0d98e1ebffdc8da748bc545e13d6cc92a7d"},
+    {"finish":"blanco","file":"blanco.png","dimensions":"758x2073","margin":{"left":0,"top":0,"right":0,"bottom":0},"sha256":"2a931689bdaa9f90cedbeab29f0d66230020603f031ee0b73e739d0a17347e1e"}
+  ],
+  "naturalRecovery": {
+    "newCallsAuthorized": 2,
+    "newCallsUsed": 1,
+    "acceptedGeneratorId": "exec-b71c7751-ac64-430a-a648-51ec25ffb222",
+    "copiedByteExact": true,
+    "secondNewCallSkippedBecauseFirstPassed": true
+  },
+  "auditedHistoricalNaturalRejects": [
+    {"file":"_rejected/natural-new-attempt1-cropped-architecture.png","result":"REJECT","reason":"outer frame, molding and hardware omitted by extreme close-up"},
+    {"file":"_rejected/natural-new-attempt2-margin12.png","result":"REJECT","reason":"12 px bottom margin exceeded the absolute 11 px tolerance"}
+  ],
+  "provenance": {
+    "builtInImageGenOnly": true,
+    "canonicalMasterOnlyPerCall": true,
+    "generatedOutputUsedAsInput": false,
+    "logoReferenceUsed": false
+  },
+  "writes": {
+    "filters": 0,
+    "recolor": 0,
+    "masks": 0,
+    "crop": 0,
+    "resize": 0,
+    "composite": 0,
+    "conversion": 0,
+    "public": 0,
+    "promotion": 0
+  },
+  "archivedBlockedState": {
+    "file": "_rejected/QA-GENERATION-BLOCKED-pre-natural-recovery-2026-08-14.json",
+    "sha256": "bd1fb0f5453d96e0079df66bbd9758b98a1561b1d2fb0a3676cc3f3b1f7ad668"
+  }
+}

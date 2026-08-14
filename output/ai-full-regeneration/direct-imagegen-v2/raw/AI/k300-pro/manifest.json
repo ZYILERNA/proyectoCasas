@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 2,
+  "createdOn": "2026-08-14",
+  "category": "AI",
+  "model": "k300-pro",
+  "activeSetVersion": "v2",
+  "result": "PASS10",
+  "logoPolicy": "NO_LOGO",
+  "assetRoot": "output/ai-full-regeneration/direct-imagegen-v2/raw/AI/k300-pro",
+  "sourcePolicy": "Six visually re-audited direct ImageGen PNGs were copied byte-for-byte; four missing finishes were generated through independent built-in ImageGen calls using only the canonical no-logo master. No logo or output reference was used.",
+  "master": { "path": "output/ai-full-regeneration/pilots/AI/k300-pro/master-no-logo-ai-tight.png", "sha256": "fd0583eed5ebe8a8ff5b48ecb84139f1cce19d405a67d53c329345e646c83d66" },
+  "generation": {
+    "reusedCleanDirectAssets": 6,
+    "newMissingFinishes": 4,
+    "newIndependentCalls": 7,
+    "newRejectedCalls": 3,
+    "maximumNewAttemptsPerMissingFinish": 2,
+    "filters": false,
+    "recoloring": false,
+    "masks": false,
+    "compositingOnActiveAssets": false,
+    "cropping": false,
+    "resizing": false,
+    "localPixelPostprocessing": false,
+    "conversionPerformed": false,
+    "publicPromotionPerformed": false
+  },
+  "accepted": [
+    { "finish": "original", "file": "original.png", "generatorId": "exec-2ff3b990-1e5b-479e-9a95-560e9339ea0d", "width": 882, "height": 1783, "sha256": "d82182c0ce0f9cb0f16be20927110b11dfad784beee819ee190bcaf777724db5" },
+    { "finish": "negro", "file": "negro.png", "generatorId": "exec-3777787d-8bc7-4c68-a48d-34a39c4ee929", "width": 884, "height": 1779, "sha256": "811ca88040bb3c7f1af88f6b155bab3112f97f3e7cb1296570fcdf6e66e72ee5" },
+    { "finish": "wengue", "file": "wengue.png", "generatorId": "exec-f47e5550-1db8-418e-9129-b6ba71ab253a", "width": 884, "height": 1780, "sha256": "abbfc434d160805faeed2057e864cff6793e95def1070ff8432c5ee45865592b" },
+    { "finish": "gris-oscuro", "file": "gris-oscuro.png", "source": "reused-direct-v1", "width": 883, "height": 1780, "sha256": "9577c5654fbb4544c58abf76e9a8e36a777bf247c75c1af918b22f8df9dac6f7" },
+    { "finish": "antracita", "file": "antracita.png", "source": "reused-direct-correction", "width": 887, "height": 1774, "sha256": "1425ad3b9966dc19d509d0eac379b21aa754bd42b1497d2b85d379ff1338bad8" },
+    { "finish": "nogal", "file": "nogal.png", "source": "reused-direct-correction", "width": 884, "height": 1779, "sha256": "7d77f6430f433005b805414cbc8a4a59926cb2bf4cc458fe7e5473f7deef5aba" },
+    { "finish": "roble", "file": "roble.png", "source": "reused-direct-correction", "width": 884, "height": 1779, "sha256": "da9deacc067a3f2d3c4ef5ba639c497e7ad2e42926bc69887a9ff4179dd85321" },
+    { "finish": "gris-claro", "file": "gris-claro.png", "source": "reused-direct-correction", "width": 884, "height": 1779, "sha256": "893152a1e2a55c28236800cd9f1f608c24e7b7f3fd93d8544c25c5ecce74abd0" },
+    { "finish": "natural", "file": "natural.png", "generatorId": "exec-04fc9e4a-edca-488d-bff2-320e7b5bfb9b", "width": 884, "height": 1780, "sha256": "6541148e1c53488bc2aec439db5f50e53283c2aa6c3a555732190c9f11c98050" },
+    { "finish": "blanco", "file": "blanco.png", "source": "reused-direct-correction", "width": 884, "height": 1780, "sha256": "000f70b80c26729e302e2f904e857fa9ed5af31fcae115ce3b591ea76970c35c" }
+  ],
+  "invalidatedPriorSets": [
+    "output/ai-full-regeneration/direct-imagegen-v1/raw/AI/k300-pro",
+    "output/ai-full-regeneration/direct-imagegen-v2/corrections/AI/k300-pro"
+  ],
+  "qa": { "path": "QA.json", "status": "PASS", "result": "PASS10", "uniqueSha256": "10/10", "zeroLogoTextPseudotext": "10/10", "exactlyTwoModules": "10/10" },
+  "promotion": { "converted": false, "publicWritten": false }
+}

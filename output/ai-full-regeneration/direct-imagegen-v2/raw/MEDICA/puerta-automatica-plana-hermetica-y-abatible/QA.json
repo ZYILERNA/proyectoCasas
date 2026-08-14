@@ -1,0 +1,28 @@
+{
+  "model": "MEDICA/puerta-automatica-plana-hermetica-y-abatible",
+  "status": "PASS",
+  "accepted": 10,
+  "requested": 10,
+  "policy": "NO_LOGO",
+  "generationMode": "built-in ImageGen; one independent call per finish",
+  "masterReference": "output/ai-full-regeneration/large-doors/MEDICA/puerta-automatica-plana-hermetica-y-abatible/master-no-logo-ai.png",
+  "postProcessing": "none",
+  "validation": {
+    "visualReview": "Every accepted PNG was inspected at original detail. The full frame, glazed window, both upper mechanisms, three right hinges, left lever and round cylinder are present. No logo, text, pseudo-text or watermark was found.",
+    "marginMethod": "Approximate non-white/non-neutral bounding box at RGB threshold 245; coverage is the smaller of horizontal and vertical subject span percentages.",
+    "targetMarginPx": "0-8",
+    "tolerance": "9-11 only when the complete assembly is intact and span coverage remains above 98%"
+  },
+  "finishes": [
+    {"finish":"original","file":"original.png","attempt":2,"marginsLTRB":[0,0,0,0],"minSpanCoveragePct":100.00,"result":"PASS"},
+    {"finish":"negro","file":"negro.png","attempt":1,"marginsLTRB":[5,5,6,10],"minSpanCoveragePct":98.87,"result":"PASS_TOLERANCE"},
+    {"finish":"wengue","file":"wengue.png","attempt":1,"marginsLTRB":[7,0,0,0],"minSpanCoveragePct":99.28,"result":"PASS"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","attempt":1,"marginsLTRB":[5,2,5,0],"minSpanCoveragePct":98.97,"result":"PASS"},
+    {"finish":"antracita","file":"antracita.png","attempt":2,"marginsLTRB":[3,1,4,0],"minSpanCoveragePct":99.22,"result":"PASS"},
+    {"finish":"nogal","file":"nogal.png","attempt":1,"marginsLTRB":[4,2,6,5],"minSpanCoveragePct":98.97,"result":"PASS"},
+    {"finish":"roble","file":"roble.png","attempt":1,"marginsLTRB":[3,2,5,3],"minSpanCoveragePct":99.18,"result":"PASS"},
+    {"finish":"gris-claro","file":"gris-claro.png","attempt":1,"marginsLTRB":[9,4,10,6],"minSpanCoveragePct":98.04,"result":"PASS_TOLERANCE"},
+    {"finish":"natural","file":"natural.png","attempt":1,"marginsLTRB":[3,2,3,3],"minSpanCoveragePct":99.07,"result":"PASS"},
+    {"finish":"blanco","file":"blanco.png","attempt":1,"marginsLTRB":[3,3,2,5],"minSpanCoveragePct":98.99,"result":"PASS"}
+  ]
+}

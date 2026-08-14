@@ -1,0 +1,108 @@
+{
+  "schema": "direct-imagegen-model-qa/v2",
+  "model": "ALUMINIO/lange",
+  "status": "PASS",
+  "logoPolicy": "NO_LOGO",
+  "master": "output/ai-full-regeneration/other-categories/ALUMINIO/lange/master-no-logo-ai-tight.png",
+  "generation": {
+    "tool": "built-in ImageGen",
+    "totalIndependentCalls": 10,
+    "activeIndependentCalls": 10,
+    "rejectedAttempts": 0,
+    "maximumAttemptsUsedPerFinish": 1,
+    "onlyMasterReferencedPerCall": true,
+    "generatedOutputReferencesUsed": false,
+    "activeAssetPixelProcessing": "none",
+    "filtersRecolorsMasksCropsResizesCompositesUsedOnActiveAssets": false
+  },
+  "criteria": {
+    "marginDetection": "First row or column containing a pixel with any RGB channel below 235, measured independently from each canvas edge.",
+    "preferredMarginPixels": "0-8",
+    "acceptedMaximumMarginPixels": 11,
+    "minimumBoundingBoxCoveragePercent": 98,
+    "architecture": "Complete straight-on Lange door and full outer frame; dense vertical fluting, central divider, lower horizontal joint, threshold and tall lock placement preserved.",
+    "branding": "Zero logos or brand plaques.",
+    "otherMarks": "Zero words, letters, digits, numbers, microtext, pseudotext, watermark, badge or emblem. Simple unlabeled functional sensor apertures are not text.",
+    "smartLock": "Same tall matte-black lock with only blank functional surfaces and simple circular controls."
+  },
+  "assets": [
+    {
+      "finish": "original", "generatorId": "exec-00846c7e-f0a1-404e-bf4c-cb25d626fd5c", "file": "original.png", "width": 971, "height": 1619,
+      "margins": { "left": 5, "top": 4, "right": 8, "bottom": 1 }, "boundingBoxCoveragePercent": 98.356,
+      "sha256": "fdc3a94983bc0e2e35745f75969814d5e028fd0a48bde85ad7f14e3ee9f3f809",
+      "gates": { "decodes": true, "maxMarginAtMost11": true, "coverageAbove98Percent": true, "frameComplete": true, "architecturePreserved": true, "noLogo": true, "noTextPseudoText": true, "independentSingleReferenceCall": true }, "status": "PASS"
+    },
+    {
+      "finish": "negro", "generatorId": "exec-c41e873a-66ba-4f63-98b2-d892a39107d1", "file": "negro.png", "width": 971, "height": 1620,
+      "margins": { "left": 4, "top": 5, "right": 8, "bottom": 3 }, "boundingBoxCoveragePercent": 98.276,
+      "sha256": "9ba6c32f01b731655e17b95d03b1e25ce893eb63dce8706c678a8d16df8f8450",
+      "gates": { "decodes": true, "maxMarginAtMost11": true, "coverageAbove98Percent": true, "frameComplete": true, "architecturePreserved": true, "noLogo": true, "noTextPseudoText": true, "independentSingleReferenceCall": true }, "status": "PASS"
+    },
+    {
+      "finish": "wengue", "generatorId": "exec-ded97e90-189a-46d3-8f11-2e6e92df884f", "file": "wengue.png", "width": 971, "height": 1620,
+      "margins": { "left": 3, "top": 5, "right": 5, "bottom": 4 }, "boundingBoxCoveragePercent": 98.625,
+      "sha256": "eb30dcb63d3f4a615a37cd7bbb8b368448c994a68160a6e565f235a604ebcdeb",
+      "gates": { "decodes": true, "maxMarginAtMost11": true, "coverageAbove98Percent": true, "frameComplete": true, "architecturePreserved": true, "noLogo": true, "noTextPseudoText": true, "independentSingleReferenceCall": true }, "status": "PASS"
+    },
+    {
+      "finish": "gris-oscuro", "generatorId": "exec-69249ac5-2ff3-44e3-910a-c6057ae4b81a", "file": "gris-oscuro.png", "width": 970, "height": 1621,
+      "margins": { "left": 3, "top": 3, "right": 9, "bottom": 4 }, "boundingBoxCoveragePercent": 98.336,
+      "sha256": "29d8f7ff09d73ea9075c9bd374ff9984886697836de30ce774fbe8fee6d50ee4",
+      "gates": { "decodes": true, "maxMarginAtMost11": true, "coverageAbove98Percent": true, "frameComplete": true, "architecturePreserved": true, "noLogo": true, "noTextPseudoText": true, "independentSingleReferenceCall": true }, "status": "PASS"
+    },
+    {
+      "finish": "antracita", "generatorId": "exec-a68897a6-c235-4aa6-ba1b-4ec3a02f1ff1", "file": "antracita.png", "width": 971, "height": 1620,
+      "margins": { "left": 3, "top": 4, "right": 6, "bottom": 4 }, "boundingBoxCoveragePercent": 98.584,
+      "sha256": "e26aa89a8ef703da5a6c48b1114911ddf203bc057d47d334b3e3cab5145751ef",
+      "gates": { "decodes": true, "maxMarginAtMost11": true, "coverageAbove98Percent": true, "frameComplete": true, "architecturePreserved": true, "noLogo": true, "noTextPseudoText": true, "independentSingleReferenceCall": true }, "status": "PASS"
+    },
+    {
+      "finish": "nogal", "generatorId": "exec-fd487c0d-225c-4759-bc6a-c76ec14d1d8b", "file": "nogal.png", "width": 970, "height": 1622,
+      "margins": { "left": 3, "top": 4, "right": 5, "bottom": 0 }, "boundingBoxCoveragePercent": 98.931,
+      "sha256": "452d3e2860df9c2d3fce6d67c1e0fb267dac23c50f69ef363f7d62704953076e",
+      "gates": { "decodes": true, "maxMarginAtMost11": true, "coverageAbove98Percent": true, "frameComplete": true, "architecturePreserved": true, "noLogo": true, "noTextPseudoText": true, "independentSingleReferenceCall": true }, "status": "PASS"
+    },
+    {
+      "finish": "roble", "generatorId": "exec-80ef79a9-06a5-493d-8d5e-b30ab1ea6200", "file": "roble.png", "width": 970, "height": 1621,
+      "margins": { "left": 3, "top": 3, "right": 6, "bottom": 4 }, "boundingBoxCoveragePercent": 98.644,
+      "sha256": "d6b52557bbe8a40b90f04a022b598fd5747cec1834d3069959ce4f5e7f7af3e5",
+      "gates": { "decodes": true, "maxMarginAtMost11": true, "coverageAbove98Percent": true, "frameComplete": true, "architecturePreserved": true, "noLogo": true, "noTextPseudoText": true, "independentSingleReferenceCall": true }, "status": "PASS"
+    },
+    {
+      "finish": "gris-claro", "generatorId": "exec-fce53d5b-f7ae-4a24-a139-1657a4ae3439", "file": "gris-claro.png", "width": 970, "height": 1622,
+      "margins": { "left": 1, "top": 2, "right": 1, "bottom": 1 }, "boundingBoxCoveragePercent": 99.609,
+      "sha256": "96b7302ccd76baa51589860fe4e23c6706691df3e25240ecaddb2b08330c18a7",
+      "gates": { "decodes": true, "maxMarginAtMost11": true, "coverageAbove98Percent": true, "frameComplete": true, "architecturePreserved": true, "noLogo": true, "noTextPseudoText": true, "independentSingleReferenceCall": true }, "status": "PASS"
+    },
+    {
+      "finish": "natural", "generatorId": "exec-1c308f4f-7e06-41c3-8568-d081b72a013b", "file": "natural.png", "width": 970, "height": 1622,
+      "margins": { "left": 3, "top": 2, "right": 6, "bottom": 4 }, "boundingBoxCoveragePercent": 98.706,
+      "sha256": "4711cfd229ff57ea50f8215fec9a7757ece436d410cbf9794c9c6f804957d4c7",
+      "gates": { "decodes": true, "maxMarginAtMost11": true, "coverageAbove98Percent": true, "frameComplete": true, "architecturePreserved": true, "noLogo": true, "noTextPseudoText": true, "independentSingleReferenceCall": true }, "status": "PASS"
+    },
+    {
+      "finish": "blanco", "generatorId": "exec-5ab3f697-05f9-4313-b32c-b4e63075e637", "file": "blanco.png", "width": 971, "height": 1620,
+      "margins": { "left": 2, "top": 2, "right": 0, "bottom": 0 }, "boundingBoxCoveragePercent": 99.671,
+      "sha256": "2d9fb01c88da5c661d085eae67284f0f89c807d627d72734e22c678b387e5103",
+      "gates": { "decodes": true, "maxMarginAtMost11": true, "coverageAbove98Percent": true, "frameComplete": true, "architecturePreserved": true, "noLogo": true, "noTextPseudoText": true, "independentSingleReferenceCall": true }, "status": "PASS"
+    }
+  ],
+  "summary": {
+    "requested": 10,
+    "pass": 10,
+    "fail": 0,
+    "uniqueHashes": 10,
+    "largestMeasuredMarginPixels": 9,
+    "minimumBoundingBoxCoveragePercent": 98.276,
+    "visualInspection": "PASS: complete Lange frame and ribbed architecture retained; locks contain only unlabeled functional geometry; zero logo, text or pseudotext."
+  },
+  "evidence": {
+    "contactSheet": "output/ai-full-regeneration/direct-imagegen-v2/qa-cross/ALUMINIO/lange/contact-sheet.png",
+    "lockDetailSheet": "output/ai-full-regeneration/direct-imagegen-v2/qa-cross/ALUMINIO/lange/lock-detail-sheet.png"
+  },
+  "promotion": {
+    "stagingOnly": true,
+    "converted": false,
+    "publicWritten": false
+  }
+}

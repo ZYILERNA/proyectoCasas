@@ -1,0 +1,18 @@
+{
+  "schema":"wonly-direct-imagegen-raw-qa/v2","category":"MEDICA","model":"puertas-automaticas-hermeticas","status":"PASS_10_OF_10","policy":"NO_LOGO",
+  "generation":{"engine":"built-in ImageGen","independentCallPerAsset":true,"singleReferenceOnly":true,"reference":"output/ai-full-regeneration/large-doors/MEDICA/puertas-automaticas-hermeticas/master-no-logo-ai.png","referenceSha256":"8ec1016a0e80811c74e9f1c4bf5e83cea81502e4ca2dbcb781998504127246a3","usedPreviousOutputAsReference":false,"usedLogoReference":false,"filters":false,"localRecolor":false,"masks":false,"crop":false,"resize":false,"composite":false,"converted":false,"publicWritten":false},
+  "visualQa":{"completeHeaderLeafAndGuides":true,"frontOrthographic":true,"oneObservationWindow":true,"oneLongVerticalPull":true,"oneSilverProtectionBand":true,"logoCount":0,"visibleTextOrPseudotextCount":0,"reviewedAtOriginalDetail":true},
+  "marginPolicy":{"preferredMaxPx":8,"allFramesComplete":true,"maximumObservedPx":7},
+  "assets":[
+    {"finish":"original","file":"original.png","width":1193,"height":1318,"marginsLTRB":[0,0,1,0],"sha256":"eeb9c4e52c124160c034d74660072f371573186c055793861f323e2f8c056b67","pass":true},
+    {"finish":"negro","file":"negro.png","width":1193,"height":1319,"marginsLTRB":[0,0,0,0],"sha256":"12d145bc198dcd0ced220ee919da6edf0edd30835132b17a1b083a5d722798da","pass":true},
+    {"finish":"wengue","file":"wengue.png","width":1193,"height":1319,"marginsLTRB":[0,0,0,0],"sha256":"843744085d55a4569b546c25980dc97aa29b2ff51579c2c76664508f3854798c","pass":true},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","width":1193,"height":1318,"marginsLTRB":[0,1,1,0],"sha256":"f3795a939cde61d93cb66cf2c8e40e15b6e7faee56fca58c3239fe462c2fd3b7","pass":true},
+    {"finish":"antracita","file":"antracita.png","width":1192,"height":1319,"marginsLTRB":[0,3,7,0],"sha256":"4f10310642fece885aa1e3292794c19443cbf8b21c0c81725d5ec4a6af6c8ba2","pass":true},
+    {"finish":"nogal","file":"nogal.png","width":1193,"height":1319,"marginsLTRB":[0,0,0,0],"sha256":"0674cf26538f195417c2121c8558b4057cc880294c540cbb8e6574f56aea2a53","pass":true},
+    {"finish":"roble","file":"roble.png","width":1194,"height":1317,"marginsLTRB":[0,0,1,0],"sha256":"519601192e6c034848240e81516add429c36e7072e823d22ca9a2b97a5ed097f","pass":true},
+    {"finish":"gris-claro","file":"gris-claro.png","width":1192,"height":1319,"marginsLTRB":[4,2,5,0],"sha256":"4005231847bc027b5fc24adf60cbda3f40cad9e58c2a78e4a8054e4c90abc595","pass":true},
+    {"finish":"natural","file":"natural.png","width":1192,"height":1320,"marginsLTRB":[1,3,3,0],"sha256":"f935a984f07490e4f9d91f54f1a631f88bd5bbe278377bd60f3e1caadd22a3e1","pass":true},
+    {"finish":"blanco","file":"blanco.png","width":1194,"height":1317,"marginsLTRB":[0,4,1,0],"sha256":"f008dd5fd3bad807962d598092272d8ebcb9fccf940ebd84c685937a2061096b","pass":true}
+  ],"rejectedAttempts":0,"safeToPromote":false,"promotionStatus":"NOT_REQUESTED"
+}

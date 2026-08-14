@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 2,
+  "createdOn": "2026-08-14",
+  "category": "ACERO",
+  "model": "gl098",
+  "result": "PASS10",
+  "logoPolicy": "KEEP_WONLY",
+  "assetRoot": "output/ai-full-regeneration/direct-imagegen-v2/raw/ACERO/gl098",
+  "generationMode": "built-in-imagegen-direct-independent",
+  "sourcePolicy": "Every accepted PNG is a separate built-in ImageGen call using only the same canonical tight no-logo ACERO/gl098 master plus the official WONLY logo reference. No generated output was referenced by another call.",
+  "source": {
+    "master": "output/ai-full-regeneration/pilots/ACERO/gl098/master-no-logo-ai-tight.png",
+    "logo": "public/images/logo-wonly.webp"
+  },
+  "generation": {
+    "totalCalls": 10,
+    "acceptedCalls": 10,
+    "rejectedCalls": 0,
+    "maximumAttemptsPerFinish": 1,
+    "filters": false,
+    "recoloring": false,
+    "masks": false,
+    "compositingOnActiveAssets": false,
+    "cropping": false,
+    "resizing": false,
+    "localPixelPostprocessing": false,
+    "conversionPerformed": false,
+    "publicPromotionPerformed": false
+  },
+  "accepted": [
+    { "finish": "original", "file": "original.png", "generatorId": "exec-55c848aa-6d59-45d9-bbec-cfd00f8b38f6", "width": 922, "height": 1706, "sha256": "2ef8a841b7dbcd169038fd6f558a8aac587b0f1b9605e381fad0e67ac543af7b" },
+    { "finish": "negro", "file": "negro.png", "generatorId": "exec-9145f7e2-9bcc-4077-8935-872f74b7c6f9", "width": 922, "height": 1706, "sha256": "378edab30d691bf5d10ec8a6932a41dc0490a87eff13f26043d488cbd9c72bb5" },
+    { "finish": "wengue", "file": "wengue.png", "generatorId": "exec-daea0637-8347-4e12-89c0-a7ca217c49ce", "width": 921, "height": 1707, "sha256": "d4b6ad39b1c536121b5de154fce58b6521d97554ad9680cb45eee9567f41e894" },
+    { "finish": "gris-oscuro", "file": "gris-oscuro.png", "generatorId": "exec-cde532a9-099a-4541-8bc9-985f8cc93645", "width": 922, "height": 1706, "sha256": "0172108b5ec3cfe85dfcaa26a30c941ebf5aa568de02091b073afd53eee7fe7a" },
+    { "finish": "antracita", "file": "antracita.png", "generatorId": "exec-e7e54bde-caa8-4607-bb50-27b31d52a4b5", "width": 922, "height": 1706, "sha256": "079cd0aa4579852439ae206cf98625370f0df48ffb7080639f955e0da450e578" },
+    { "finish": "nogal", "file": "nogal.png", "generatorId": "exec-16320154-f237-4070-b493-96fcfb3edf84", "width": 921, "height": 1707, "sha256": "528ad5171690e8d1fa61f09c63fd6b2660faddb94fff725c0b57ba7f8822936a" },
+    { "finish": "roble", "file": "roble.png", "generatorId": "exec-24c34f9d-f314-4f60-81c0-64700d125ee6", "width": 922, "height": 1706, "sha256": "ae560955ae93fee671272ef281158a4bd1687079bb8856326c8b26549e2beb96" },
+    { "finish": "gris-claro", "file": "gris-claro.png", "generatorId": "exec-befdedf6-7432-4a98-8921-bc9cabcc1ecc", "width": 922, "height": 1706, "sha256": "e382f75a53cad47dce8e4c9ce761dc60ace40eecf8d4cf0504d38f8b2e30929c" },
+    { "finish": "natural", "file": "natural.png", "generatorId": "exec-845a6836-ee11-406f-820d-e6398866f57f", "width": 922, "height": 1706, "sha256": "afcd3dad49442c9e56d161033978b734ee6c772bcad72057950427992d415a89" },
+    { "finish": "blanco", "file": "blanco.png", "generatorId": "exec-7b2329a7-4498-4de8-a2fa-cff933fe88f9", "width": 922, "height": 1706, "sha256": "ed0fc8d71615f0a6256ec44af7f087f9eeb888fcd22861b7514bc7cb89eda870" }
+  ],
+  "qa": {
+    "path": "QA.json",
+    "status": "PASS",
+    "result": "PASS10",
+    "singleOfficialWonly": "10/10",
+    "extraTextOrPseudotext": "0/10",
+    "completeFrameAndThreshold": "10/10",
+    "uniqueSha256": "10/10",
+    "inspectionSheet": "_inspection/contact-sheet.png"
+  }
+}

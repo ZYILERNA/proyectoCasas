@@ -1,0 +1,57 @@
+{
+  "schema": "direct-imagegen-large-door-no-logo-qa/v1",
+  "model": "COBRE/tdf-2009",
+  "status": "PASS_10_OF_10",
+  "policy": "NO_LOGO",
+  "source": "output/ai-full-regeneration/large-doors/COBRE/tdf-2009/base-tight.png",
+  "generation": {
+    "mode": "built-in ImageGen",
+    "independentCallPerAsset": true,
+    "attemptsPerFinish": 1,
+    "referencePerCall": "base-tight.png only",
+    "generatedOutputUsedAsReference": false,
+    "logoReferenceUsed": false,
+    "filters": false,
+    "localRecolor": false,
+    "masks": false,
+    "crop": false,
+    "resize": false,
+    "composite": false
+  },
+  "visualQA": {
+    "completeDoubleLeafDoor": true,
+    "completeSteppedOuterFrame": true,
+    "centralDarkRecessPreserved": true,
+    "twoGoldVerticalPilastersPreserved": true,
+    "singleBlackPullHandlePreserved": true,
+    "geometryAndPlacementConsistent": true,
+    "finishRestrictedToBroadLeafFaces": true,
+    "zeroLogoWordmarkTextMicrotextPseudotextBadgeOrSymbol": true,
+    "plainWhiteCatalogBackground": true,
+    "noRoomWallFloorPropsOrScene": true
+  },
+  "framingQA": {
+    "measurement": "bounding box of pixels with any RGB channel below 248",
+    "preferredMaximumMarginPixels": 8,
+    "documentedTolerancePixels": 11,
+    "maximumMeasuredMarginPixels": 4,
+    "minimumBoundingCoveragePercent": 99.166,
+    "allAssetsPass": true
+  },
+  "finishes": [
+    "original",
+    "negro",
+    "wengue",
+    "gris-oscuro",
+    "antracita",
+    "nogal",
+    "roble",
+    "gris-claro",
+    "natural",
+    "blanco"
+  ],
+  "rejectedAttempts": 0,
+  "converted": false,
+  "publicWritten": false,
+  "promotionAuthorized": false
+}

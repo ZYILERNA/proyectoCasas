@@ -1,0 +1,94 @@
+{
+  "schema": "direct-imagegen-model-qa/v2",
+  "model": "ALUMINIO/chaohe",
+  "status": "PASS",
+  "logoPolicy": "NO_LOGO",
+  "master": "output/ai-full-regeneration/other-categories/ALUMINIO/chaohe/master-no-logo-ai-tight.png",
+  "generation": {
+    "tool": "built-in ImageGen",
+    "totalIndependentCallsIncludingHistoricalAttempts": 18,
+    "activeIndependentCalls": 10,
+    "nonActiveHistoricalAttempts": 8,
+    "newAttemptsUsedForOriginalNogalRoble": 1,
+    "newAttemptsAllowedPerBlockedFinish": 2,
+    "onlyMasterReferencedPerCall": true,
+    "generatedOutputReferencesUsed": false,
+    "activeAssetPixelProcessing": "none",
+    "filtersRecolorsMasksCropsResizesCompositesUsedOnActiveAssets": false
+  },
+  "criteria": {
+    "marginDetection": "Read-only scan from each canvas edge; first pixel with any RGB channel below 245 defines the door bounding box.",
+    "preferredMarginPixels": "0-8",
+    "acceptedMaximumMarginPixels": 11,
+    "minimumBoundingBoxCoveragePercentForException": 98,
+    "architecture": "Complete straight-on Chaohe door and full outer frame; lintel, smooth upper panel, two fields of fine vertical slats, central smooth strip, threshold and tall smart-lock placement preserved.",
+    "branding": "Zero WONLY or other logos and zero brand plaques.",
+    "otherMarks": "Zero words, letters, digits, numbers, microtext, pseudotext, watermark, badge or emblem. The lock contains only unlabeled functional dots and one simple ring."
+  },
+  "assets": [
+    {
+      "finish": "original", "generatorId": "exec-42855cbf-cd77-4027-9d56-ac08537aced2", "file": "original.png", "width": 972, "height": 1619,
+      "margins": { "left": 2, "top": 2, "right": 4, "bottom": 2 }, "boundingBoxCoveragePercent": 99.14,
+      "sha256": "1f64feb504cded08106dfdbeaaaa8529cf42e75aba1ac0a62bc8c7a435006b7a", "status": "PASS"
+    },
+    {
+      "finish": "negro", "generatorId": "exec-b316d640-7eb6-481d-965a-2e99125d2184", "file": "negro.png", "width": 972, "height": 1619,
+      "margins": { "left": 2, "top": 3, "right": 3, "bottom": 0 }, "boundingBoxCoveragePercent": 99.30,
+      "sha256": "e45ac293d38a62830a4faae50e23233ae5746a9f0fda9e976fb05a33e13e9ddd", "status": "PASS"
+    },
+    {
+      "finish": "wengue", "generatorId": "exec-10e0c4b4-eac3-4f3a-bcfb-a2826e5ff592", "file": "wengue.png", "width": 972, "height": 1619,
+      "margins": { "left": 5, "top": 8, "right": 6, "bottom": 4 }, "boundingBoxCoveragePercent": 98.14,
+      "sha256": "b752ad11f80c48e78636b5b5ad3ac9de661ec22cb95d62bf478916c837b636e1", "status": "PASS"
+    },
+    {
+      "finish": "gris-oscuro", "generatorId": "exec-3ba3c2dc-5928-4b09-9e30-584ef6c80ab8", "file": "gris-oscuro.png", "width": 971, "height": 1619,
+      "margins": { "left": 5, "top": 6, "right": 6, "bottom": 4 }, "boundingBoxCoveragePercent": 98.26,
+      "sha256": "46d7516e20a03212cf6637edc18d2af3412f541c8967c1923a4f4e640a65e5d3", "status": "PASS"
+    },
+    {
+      "finish": "antracita", "generatorId": "exec-64ea9588-4b01-4210-80e7-d94615b2a9a5", "file": "antracita.png", "width": 972, "height": 1619,
+      "margins": { "left": 4, "top": 6, "right": 5, "bottom": 4 }, "boundingBoxCoveragePercent": 98.46,
+      "sha256": "67e1bc46ab1352309b6102b52e62dedd6cddd79707499c4097a56cdc9a071a9f", "status": "PASS"
+    },
+    {
+      "finish": "nogal", "generatorId": "exec-43c2d0e2-d225-4afd-a7bb-0cf00bedcdd6", "file": "nogal.png", "width": 972, "height": 1619,
+      "margins": { "left": 5, "top": 1, "right": 5, "bottom": 0 }, "boundingBoxCoveragePercent": 98.91,
+      "sha256": "9a1eb69f2dc7990efa55ac5514af64720a0ebabe70e9745ce6cc367325f8b84e", "status": "PASS"
+    },
+    {
+      "finish": "roble", "generatorId": "exec-d7f71b0d-5fe7-4804-8165-72743c32d9b0", "file": "roble.png", "width": 971, "height": 1619,
+      "margins": { "left": 0, "top": 2, "right": 4, "bottom": 0 }, "boundingBoxCoveragePercent": 99.47,
+      "sha256": "09beff14d96945b092c08529eb2856bac6bafd9dca99c6025ba4b0ad0a386978", "status": "PASS"
+    },
+    {
+      "finish": "gris-claro", "generatorId": "exec-859935cd-fb29-45bc-97c3-210351c5415d", "file": "gris-claro.png", "width": 972, "height": 1619,
+      "margins": { "left": 3, "top": 3, "right": 6, "bottom": 3 }, "boundingBoxCoveragePercent": 98.71,
+      "sha256": "120bec03e6aaaa255891282348fc6e986172b12dd49fe9dcc603fed793253914", "status": "PASS"
+    },
+    {
+      "finish": "natural", "generatorId": "exec-ac6096cf-5a5a-497d-8e40-8e1ca1beccb0", "file": "natural.png", "width": 971, "height": 1619,
+      "margins": { "left": 4, "top": 5, "right": 5, "bottom": 2 }, "boundingBoxCoveragePercent": 98.64,
+      "sha256": "d351f19e634fe1755e755fd24702f3d3a0b913e65a13cbd8fe92e6036269f363", "status": "PASS"
+    },
+    {
+      "finish": "blanco", "generatorId": "exec-1b01e1b3-3c13-4401-bf6d-2aa649aed10b", "file": "blanco.png", "width": 971, "height": 1619,
+      "margins": { "left": 4, "top": 4, "right": 8, "bottom": 5 }, "boundingBoxCoveragePercent": 98.22,
+      "sha256": "064d3894a3f7fa4412f8150238dbb3f2c47b36b2293e653eb3e4cfec8cc590ff", "status": "PASS"
+    }
+  ],
+  "summary": {
+    "requested": 10,
+    "pass": 10,
+    "fail": 0,
+    "uniqueHashes": 10,
+    "largestMeasuredMarginPixels": 8,
+    "minimumBoundingBoxCoveragePercent": 98.14,
+    "visualInspection": "PASS: all ten active PNGs inspected individually; frame, slats, central strip, threshold and lock architecture remain complete; zero logo, text or pseudotext."
+  },
+  "promotion": {
+    "stagingOnly": true,
+    "converted": false,
+    "publicWritten": false
+  }
+}

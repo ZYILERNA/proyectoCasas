@@ -1,0 +1,50 @@
+{
+  "schema": "direct-imagegen-model-qa/v2",
+  "model": "ACERO/jd073",
+  "status": "PASS",
+  "master": "output/ai-full-regeneration/masters/ACERO/jd073/master-no-logo-ai-tight.png",
+  "generation": {
+    "tool": "built-in ImageGen",
+    "acceptedIndependentCalls": 10,
+    "rejectedAttempts": 2,
+    "maximumAttemptsUsedPerFinish": 2,
+    "onlyMasterReferencedPerCall": true,
+    "outputReferencesUsed": false,
+    "logoReferencesUsed": false,
+    "activeAssetPixelProcessing": "none",
+    "filtersMasksCropsResizesCompositesUsedOnActiveAssets": false
+  },
+  "criteria": {
+    "marginDetection": "Continuous near-white border measured independently from each edge using RGB >= 245 sampling; complete frame confirmed visually.",
+    "maximumAllowedMarginPixels": 8,
+    "minimumAllowedCoveragePercent": 98,
+    "architecture": "Complete straight-on JD073 with black beveled frame and threshold, fine vertical ribs, narrow top panel and seam, upper-left silver element, and left smart-lock placement preserved.",
+    "smartLock": "Only functional geometric camera/sensor/control elements on an otherwise blank lock face; no readable or pseudo-readable marks.",
+    "unbranded": "Zero WONLY, logo, brand, wordmark, badge, letters, numbers, words, microtext, pseudotext, decorative pictogram or watermark."
+  },
+  "assets": [
+    { "finish": "original", "file": "original.png", "generatorId": "exec-d031525c-9ced-4c9b-b014-d24a19fe6da4", "width": 800, "height": 1967, "margins": { "left": 0, "top": 1, "right": 0, "bottom": 0 }, "coveragePercent": 99.949, "sha256": "2629a9c8aa79d4f85e26ced336e53da6603aa924ad0e2ad2303ca054ce55cecb", "gates": { "decodes": true, "maxMarginAtMost8": true, "coverageAbove98": true, "frameComplete": true, "architecturePreserved": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true }, "status": "PASS" },
+    { "finish": "negro", "file": "negro.png", "generatorId": "exec-09ad2824-346c-4e16-aba3-72ea62334c56", "width": 798, "height": 1971, "margins": { "left": 0, "top": 2, "right": 1, "bottom": 0 }, "coveragePercent": 99.773, "sha256": "906f05833407713ce8b655dfa9e7c1fc1b6d47652d08c5c865d3490c2be61389", "gates": { "decodes": true, "maxMarginAtMost8": true, "coverageAbove98": true, "frameComplete": true, "architecturePreserved": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true }, "status": "PASS" },
+    { "finish": "wengue", "file": "wengue.png", "generatorId": "exec-4fbf14ee-4397-4818-91cd-41b677b9fc5e", "width": 796, "height": 1976, "margins": { "left": 2, "top": 2, "right": 3, "bottom": 0 }, "coveragePercent": 99.271, "sha256": "f17c6580f33e53ab4ece02995a3f649c779853b39a12eb59892f70e9721fb7f7", "gates": { "decodes": true, "maxMarginAtMost8": true, "coverageAbove98": true, "frameComplete": true, "architecturePreserved": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true }, "status": "PASS" },
+    { "finish": "gris-oscuro", "file": "gris-oscuro.png", "generatorId": "exec-2c702110-a56c-4c8b-98bc-dd56cfa2fd0d", "width": 798, "height": 1972, "margins": { "left": 2, "top": 2, "right": 3, "bottom": 0 }, "coveragePercent": 99.273, "sha256": "3b345cf41e84e51f7bed70727130809f21c68bfd8024e2af5d38a2cade425c3b", "gates": { "decodes": true, "maxMarginAtMost8": true, "coverageAbove98": true, "frameComplete": true, "architecturePreserved": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true }, "status": "PASS" },
+    { "finish": "antracita", "file": "antracita.png", "generatorId": "exec-4047f3eb-c316-4911-bb0d-200f174c4081", "width": 804, "height": 1956, "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 }, "coveragePercent": 100, "sha256": "3b3b3490d2274c836c2b69f3c27ba8fe31ce04196722989aaf27cfcecc2cc64f", "gates": { "decodes": true, "maxMarginAtMost8": true, "coverageAbove98": true, "frameComplete": true, "architecturePreserved": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true }, "status": "PASS" },
+    { "finish": "nogal", "file": "nogal.png", "generatorId": "exec-0709db7d-c99a-4949-ac71-2b8d311c7a5f", "width": 798, "height": 1971, "margins": { "left": 4, "top": 6, "right": 5, "bottom": 5 }, "coveragePercent": 98.32, "sha256": "168023fb0f952e5fec3f152ff614f1235552d7ffbe66249120f80f57010d5d66", "gates": { "decodes": true, "maxMarginAtMost8": true, "coverageAbove98": true, "frameComplete": true, "architecturePreserved": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true }, "status": "PASS" },
+    { "finish": "roble", "file": "roble.png", "generatorId": "exec-7a34da93-1a2f-4e49-a377-210afb48ff34", "width": 797, "height": 1973, "margins": { "left": 2, "top": 3, "right": 2, "bottom": 0 }, "coveragePercent": 99.347, "sha256": "c97f146ba2c824c826de66443400a0e66c7f58019b192dec149f4b0ba5102246", "gates": { "decodes": true, "maxMarginAtMost8": true, "coverageAbove98": true, "frameComplete": true, "architecturePreserved": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true }, "status": "PASS" },
+    { "finish": "gris-claro", "file": "gris-claro.png", "generatorId": "exec-a4222b11-2701-43bf-98c0-3655da7ac04d", "width": 798, "height": 1971, "margins": { "left": 0, "top": 6, "right": 1, "bottom": 0 }, "coveragePercent": 99.571, "sha256": "b61e7de7c24397f9511c0f128f0b0c6527627dd4dfcb744e1667f78a5c880c18", "gates": { "decodes": true, "maxMarginAtMost8": true, "coverageAbove98": true, "frameComplete": true, "architecturePreserved": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true }, "status": "PASS" },
+    { "finish": "natural", "file": "natural.png", "generatorId": "exec-6d0f37e3-3ac0-4835-85fa-ecebad51863c", "width": 797, "height": 1974, "margins": { "left": 1, "top": 4, "right": 2, "bottom": 0 }, "coveragePercent": 99.422, "sha256": "4f09ace7c9bee3be1925c73559b329896f0aaf82302a1b74f8409610865c8081", "gates": { "decodes": true, "maxMarginAtMost8": true, "coverageAbove98": true, "frameComplete": true, "architecturePreserved": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true }, "status": "PASS" },
+    { "finish": "blanco", "file": "blanco.png", "generatorId": "exec-6cd963bb-3ef5-431b-91c4-4c9edc4e4af5", "width": 798, "height": 1972, "margins": { "left": 3, "top": 4, "right": 4, "bottom": 4 }, "coveragePercent": 98.721, "sha256": "43b36b9438aab080020dd5d929359f28fc1152d7778b35c67dee4bf1a90d062e", "gates": { "decodes": true, "maxMarginAtMost8": true, "coverageAbove98": true, "frameComplete": true, "architecturePreserved": true, "noLogoTextPseudoText": true, "independentMasterOnlyCall": true }, "status": "PASS" }
+  ],
+  "summary": {
+    "requested": 10,
+    "pass": 10,
+    "fail": 0,
+    "uniqueHashes": 10,
+    "largestMeasuredMarginPixels": 6,
+    "lowestMeasuredCoveragePercent": 98.32
+  },
+  "promotion": {
+    "stagingOnly": true,
+    "converted": false,
+    "publicWritten": false
+  }
+}

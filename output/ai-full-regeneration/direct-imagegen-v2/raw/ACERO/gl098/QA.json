@@ -1,0 +1,168 @@
+{
+  "schema": "direct-imagegen-model-qa/v2",
+  "model": "ACERO/gl098",
+  "status": "PASS",
+  "result": "PASS10",
+  "logoPolicy": "KEEP_WONLY",
+  "master": "output/ai-full-regeneration/pilots/ACERO/gl098/master-no-logo-ai-tight.png",
+  "logoReference": "public/images/logo-wonly.webp",
+  "generation": {
+    "tool": "built-in ImageGen",
+    "independentCalls": 10,
+    "acceptedCalls": 10,
+    "rejectedCalls": 0,
+    "maximumAttemptsUsedPerFinish": 1,
+    "onlyCanonicalMasterAndOfficialLogoReferencedPerCall": true,
+    "generatedOutputsReferenced": false,
+    "activeAssetPixelProcessing": "none",
+    "filtersRecolorMasksCropsResizesCompositesUsedOnActiveAssets": false,
+    "conversionPerformed": false,
+    "publicWritten": false
+  },
+  "criteria": {
+    "marginDetection": "First row or column with more than 5% of pixels having any RGB channel below 245, measured independently from each canvas edge",
+    "normalMaximumMarginPixels": 8,
+    "exception": "Margins from 9 through 11 are allowed only when both bounded width and height exceed 98% canvas coverage and the complete frame is visually intact",
+    "architecture": "Complete straight-on ACERO gl098: chamfered outer frame, full upper transom and seam with hinge caps, narrow left panel, medium central brushed-silver strip, broad right panel, full threshold and one black smart lock in the original location",
+    "logo": "Exactly one correctly spelled official WONLY on the upper-right transom, directly on the surface, without a plaque, patch, badge or halo",
+    "text": "Zero other words, letters, numbers, microtext, pseudotext or watermarks"
+  },
+  "assets": [
+    {
+      "finish": "original",
+      "generatorId": "exec-55c848aa-6d59-45d9-bbec-cfd00f8b38f6",
+      "file": "original.png",
+      "bytes": 1400009,
+      "width": 922,
+      "height": 1706,
+      "margins": { "left": 0, "top": 0, "right": 2, "bottom": 0 },
+      "sha256": "2ef8a841b7dbcd169038fd6f558a8aac587b0f1b9605e381fad0e67ac543af7b",
+      "gates": { "decodes": true, "margin": true, "frameComplete": true, "architecturePreserved": true, "singleSmartLock": true, "singleOfficialWonly": true, "noOtherTextOrPseudotext": true, "independentCanonicalSourcesOnlyCall": true },
+      "status": "PASS"
+    },
+    {
+      "finish": "negro",
+      "generatorId": "exec-9145f7e2-9bcc-4077-8935-872f74b7c6f9",
+      "file": "negro.png",
+      "bytes": 1308166,
+      "width": 922,
+      "height": 1706,
+      "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 },
+      "sha256": "378edab30d691bf5d10ec8a6932a41dc0490a87eff13f26043d488cbd9c72bb5",
+      "gates": { "decodes": true, "margin": true, "frameComplete": true, "architecturePreserved": true, "singleSmartLock": true, "singleOfficialWonly": true, "noOtherTextOrPseudotext": true, "independentCanonicalSourcesOnlyCall": true },
+      "status": "PASS"
+    },
+    {
+      "finish": "wengue",
+      "generatorId": "exec-daea0637-8347-4e12-89c0-a7ca217c49ce",
+      "file": "wengue.png",
+      "bytes": 1492008,
+      "width": 921,
+      "height": 1707,
+      "margins": { "left": 9, "top": 7, "right": 9, "bottom": 7 },
+      "boundedCoverage": { "widthPercent": 98.05, "heightPercent": 99.18 },
+      "marginException": "PASS: both axes exceed 98% coverage, maximum margin is 9px and all four frame corners plus threshold are intact",
+      "sha256": "d4b6ad39b1c536121b5de154fce58b6521d97554ad9680cb45eee9567f41e894",
+      "gates": { "decodes": true, "margin": true, "frameComplete": true, "architecturePreserved": true, "singleSmartLock": true, "singleOfficialWonly": true, "noOtherTextOrPseudotext": true, "independentCanonicalSourcesOnlyCall": true },
+      "status": "PASS"
+    },
+    {
+      "finish": "gris-oscuro",
+      "generatorId": "exec-cde532a9-099a-4541-8bc9-985f8cc93645",
+      "file": "gris-oscuro.png",
+      "bytes": 1553694,
+      "width": 922,
+      "height": 1706,
+      "margins": { "left": 2, "top": 2, "right": 3, "bottom": 1 },
+      "sha256": "0172108b5ec3cfe85dfcaa26a30c941ebf5aa568de02091b073afd53eee7fe7a",
+      "gates": { "decodes": true, "margin": true, "frameComplete": true, "architecturePreserved": true, "singleSmartLock": true, "singleOfficialWonly": true, "noOtherTextOrPseudotext": true, "independentCanonicalSourcesOnlyCall": true },
+      "status": "PASS"
+    },
+    {
+      "finish": "antracita",
+      "generatorId": "exec-e7e54bde-caa8-4607-bb50-27b31d52a4b5",
+      "file": "antracita.png",
+      "bytes": 1538426,
+      "width": 922,
+      "height": 1706,
+      "margins": { "left": 0, "top": 0, "right": 0, "bottom": 0 },
+      "sha256": "079cd0aa4579852439ae206cf98625370f0df48ffb7080639f955e0da450e578",
+      "gates": { "decodes": true, "margin": true, "frameComplete": true, "architecturePreserved": true, "singleSmartLock": true, "singleOfficialWonly": true, "noOtherTextOrPseudotext": true, "independentCanonicalSourcesOnlyCall": true },
+      "status": "PASS"
+    },
+    {
+      "finish": "nogal",
+      "generatorId": "exec-16320154-f237-4070-b493-96fcfb3edf84",
+      "file": "nogal.png",
+      "bytes": 1648373,
+      "width": 921,
+      "height": 1707,
+      "margins": { "left": 4, "top": 3, "right": 5, "bottom": 6 },
+      "sha256": "528ad5171690e8d1fa61f09c63fd6b2660faddb94fff725c0b57ba7f8822936a",
+      "gates": { "decodes": true, "margin": true, "frameComplete": true, "architecturePreserved": true, "singleSmartLock": true, "singleOfficialWonly": true, "noOtherTextOrPseudotext": true, "independentCanonicalSourcesOnlyCall": true },
+      "status": "PASS"
+    },
+    {
+      "finish": "roble",
+      "generatorId": "exec-24c34f9d-f314-4f60-81c0-64700d125ee6",
+      "file": "roble.png",
+      "bytes": 2073797,
+      "width": 922,
+      "height": 1706,
+      "margins": { "left": 4, "top": 3, "right": 4, "bottom": 4 },
+      "sha256": "ae560955ae93fee671272ef281158a4bd1687079bb8856326c8b26549e2beb96",
+      "gates": { "decodes": true, "margin": true, "frameComplete": true, "architecturePreserved": true, "singleSmartLock": true, "singleOfficialWonly": true, "noOtherTextOrPseudotext": true, "independentCanonicalSourcesOnlyCall": true },
+      "status": "PASS"
+    },
+    {
+      "finish": "gris-claro",
+      "generatorId": "exec-befdedf6-7432-4a98-8921-bc9cabcc1ecc",
+      "file": "gris-claro.png",
+      "bytes": 1317227,
+      "width": 922,
+      "height": 1706,
+      "margins": { "left": 3, "top": 3, "right": 3, "bottom": 0 },
+      "sha256": "e382f75a53cad47dce8e4c9ce761dc60ace40eecf8d4cf0504d38f8b2e30929c",
+      "gates": { "decodes": true, "margin": true, "frameComplete": true, "architecturePreserved": true, "singleSmartLock": true, "singleOfficialWonly": true, "noOtherTextOrPseudotext": true, "independentCanonicalSourcesOnlyCall": true },
+      "status": "PASS"
+    },
+    {
+      "finish": "natural",
+      "generatorId": "exec-845a6836-ee11-406f-820d-e6398866f57f",
+      "file": "natural.png",
+      "bytes": 1578653,
+      "width": 922,
+      "height": 1706,
+      "margins": { "left": 4, "top": 3, "right": 4, "bottom": 4 },
+      "sha256": "afcd3dad49442c9e56d161033978b734ee6c772bcad72057950427992d415a89",
+      "gates": { "decodes": true, "margin": true, "frameComplete": true, "architecturePreserved": true, "singleSmartLock": true, "singleOfficialWonly": true, "noOtherTextOrPseudotext": true, "independentCanonicalSourcesOnlyCall": true },
+      "status": "PASS"
+    },
+    {
+      "finish": "blanco",
+      "generatorId": "exec-7b2329a7-4498-4de8-a2fa-cff933fe88f9",
+      "file": "blanco.png",
+      "bytes": 1187615,
+      "width": 922,
+      "height": 1706,
+      "margins": { "left": 3, "top": 3, "right": 3, "bottom": 2 },
+      "sha256": "ed0fc8d71615f0a6256ec44af7f087f9eeb888fcd22861b7514bc7cb89eda870",
+      "gates": { "decodes": true, "margin": true, "frameComplete": true, "architecturePreserved": true, "singleSmartLock": true, "singleOfficialWonly": true, "noOtherTextOrPseudotext": true, "independentCanonicalSourcesOnlyCall": true },
+      "status": "PASS"
+    }
+  ],
+  "summary": {
+    "requested": 10,
+    "pass": 10,
+    "fail": 0,
+    "uniqueHashes": 10,
+    "largestMeasuredMarginPixels": 9,
+    "marginExceptionAssets": ["wengue"],
+    "visualInspectionArtifact": "_inspection/contact-sheet.png"
+  },
+  "promotion": {
+    "stagingOnly": true,
+    "converted": false,
+    "publicWritten": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 2,
+  "model": "ACORAZADA/wl006",
+  "logoPolicy": "NO_LOGO",
+  "generationMode": "built-in-imagegen-direct",
+  "generatedOn": "2026-08-13",
+  "sourcePolicy": "Each accepted finish is a fresh independent ImageGen render using only the same WL006 no-logo tight master. No logo reference and no generated output was used as input.",
+  "brandingPolicy": "Canonical WL006 is unbranded: zero WONLY, logo or text.",
+  "pixelProcessing": "none",
+  "sources": { "master": { "path": "output/ai-full-regeneration/masters/ACORAZADA/wl006/master-no-logo-ai-tight.png", "sha256": "4A3A41674DAE786CF7C955C9016AC92C19DDF191F06366431EE4A92C4F17576F" } },
+  "accepted": [
+    {"finish":"original","file":"original.png","width":934,"height":1684,"sha256":"E5D4502406F0F407E379716C17CF47020D387B9017A94844424CAD1D804EAECE"},
+    {"finish":"negro","file":"negro.png","width":934,"height":1683,"sha256":"BD6C84E24D1BB6C98C1BDD54C0B3EE608317B6BD8AE2DDA6C98C7A2EABBCD38A"},
+    {"finish":"wengue","file":"wengue.png","width":934,"height":1684,"sha256":"F4CA78A50194435EDA08EA77F9C974603BDF1DA15A315A00AEE427713D59E3BB"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","width":934,"height":1684,"sha256":"D7985BF466DC1CC7196529E5C473226420B966916EF30FC92FDC8E699AA3D6B1"},
+    {"finish":"antracita","file":"antracita.png","width":934,"height":1685,"sha256":"D14F90E2849FCE4D4672C1576DE40E8888EA9928FBBD29BEF4EFCE64E31375B6"},
+    {"finish":"nogal","file":"nogal.png","width":934,"height":1684,"sha256":"221DFE822B83AE73DE3E0E65C0C0DCFDA4FCB5965E13E4B67632DA310DF17348"},
+    {"finish":"roble","file":"roble.png","width":934,"height":1685,"sha256":"DBFA5CB578653E3F6DAD06BEC18EAB175B6C6B09BF6FA4F1DD67321FD98FCACE"},
+    {"finish":"gris-claro","file":"gris-claro.png","width":934,"height":1684,"sha256":"0F71E6E00B12B8A5DC03D8D50878F16F79E439072F2FBB21C2C029370B001504"},
+    {"finish":"natural","file":"natural.png","width":934,"height":1684,"sha256":"4ACB86FA1D643651693B0296DB0322F97A1D1DE3E1398457EDFA8B76591F86ED"},
+    {"finish":"blanco","file":"blanco.png","width":934,"height":1684,"sha256":"FD0C5F92AEAE608512F33D6C6AFF275917D03BDF49663601EE1B8F626C8FF852"}
+  ],
+  "rejectedDirectory":"_rejected",
+  "qa":"QA.json",
+  "promotion":{"converted":false,"publicWritten":false}
+}

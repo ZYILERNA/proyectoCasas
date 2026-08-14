@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "model": "puerta-cortafuego-aislante2",
+  "category": "MEDICA",
+  "complete": true,
+  "logoPolicy": "NO_LOGO",
+  "referenceCountPerCall": 1,
+  "reference": "output/ai-full-regeneration/large-doors/MEDICA/puerta-cortafuego-aislante2/master-no-logo-ai.png",
+  "pipeline": "direct built-in ImageGen only",
+  "operationsNotUsed": ["filter", "recolor", "mask", "crop", "resize", "composite", "conversion"],
+  "outputs": [
+    {"finish":"original","file":"original.png","source":"exec-ffd40186-9a19-4c13-b0fb-81ff19275ecf.png"},
+    {"finish":"negro","file":"negro.png","source":"exec-fd786e1d-23ab-4acf-946d-91118666c44b.png"},
+    {"finish":"wengue","file":"wengue.png","source":"exec-6164d0f4-f38a-4ca3-862b-e920e7c1e178.png"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","source":"exec-3950017e-0210-4213-8dd4-5c94c10a7bdc.png"},
+    {"finish":"antracita","file":"antracita.png","source":"exec-011617c3-e7d0-457c-9244-73810f643747.png"},
+    {"finish":"nogal","file":"nogal.png","source":"exec-4c5d7c2b-4d1a-4ca4-a43e-1482c0758f08.png"},
+    {"finish":"roble","file":"roble.png","source":"exec-70d505a4-b0e5-49fa-9ede-5d2c07d6e5c4.png"},
+    {"finish":"gris-claro","file":"gris-claro.png","source":"exec-baaf3e0d-e41b-4307-b387-f39991cd080d.png"},
+    {"finish":"natural","file":"natural.png","source":"exec-3e36c2d7-2f35-4b09-8711-83d78896d753.png"},
+    {"finish":"blanco","file":"blanco.png","source":"exec-be8a4032-97ea-4413-893b-751ae810bef6.png"}
+  ],
+  "rejected": [
+    {"finish":"wengue","attempt":1,"file":"_rejected/wengue-attempt1-margin.png","reason":"paired side margins reduced horizontal frame span below 98%"},
+    {"finish":"gris-claro","attempt":1,"file":"_rejected/gris-claro-attempt1-margin.png","reason":"left and right white margins exceeded tolerance"},
+    {"finish":"blanco","attempt":1,"file":"_rejected/blanco-attempt1-margin.png","reason":"left and right white margins exceeded tolerance"}
+  ]
+}

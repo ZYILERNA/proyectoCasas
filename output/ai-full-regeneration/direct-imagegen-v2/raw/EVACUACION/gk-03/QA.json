@@ -1,0 +1,58 @@
+{
+  "schema": "wonly-direct-imagegen-raw-qa/v2",
+  "category": "EVACUACION",
+  "model": "gk-03",
+  "status": "PASS_10_OF_10",
+  "policy": "NO_LOGO",
+  "generation": {
+    "engine": "built-in ImageGen",
+    "independentCallPerAsset": true,
+    "singleReferenceOnly": true,
+    "reference": "output/ai-full-regeneration/new-defects/EVACUACION/gk-03/master-no-logo-ai.png",
+    "referenceSha256": "ac9e14459d838baeefa869096b21c98cd1357157c722c86ab13b2302b0434923",
+    "usedPreviousOutputAsReference": false,
+    "usedLogoReference": false,
+    "filters": false,
+    "localRecolor": false,
+    "masks": false,
+    "crop": false,
+    "resize": false,
+    "composite": false,
+    "converted": false,
+    "publicWritten": false
+  },
+  "visualQa": {
+    "completeDoorAndOuterFrame": true,
+    "frontOrthographic": true,
+    "plainSingleLeaf": true,
+    "rightSideLeverCount": 1,
+    "rightSideKeyCylinderCount": 1,
+    "extraOrMissingHardwareCount": 0,
+    "logoCount": 0,
+    "visibleTextOrPseudotextCount": 0,
+    "reviewedWithViewImage": true,
+    "reviewDetail": "high"
+  },
+  "marginPolicy": {
+    "preferredMaxPx": 8,
+    "allFramesComplete": true,
+    "maximumObservedPx": 8,
+    "minimumSingleAxisCoveragePercent": 98.309,
+    "measurement": "Bounding box of robustly non-white product pixels; coverage evaluated independently on width and height."
+  },
+  "assets": [
+    {"finish":"original","file":"original.png","width":828,"height":1900,"marginsLTRB":[3,2,2,3],"sha256":"a3f5e32c48bc83df87e6b3894d00cc3aee54724a5f47d810bb3d19243bba6c62","pass":true},
+    {"finish":"negro","file":"negro.png","width":828,"height":1900,"marginsLTRB":[0,2,2,0],"sha256":"4b4ba18ae5e767f6fa5bcd8b87bd9b85d6938a0d1be420490725d306f2ef647d","pass":true},
+    {"finish":"wengue","file":"wengue.png","width":828,"height":1900,"marginsLTRB":[0,4,3,0],"sha256":"b8fc0161100c381017e12122fedd49661bcbfa86915087789b7a26216dda229d","pass":true},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","width":828,"height":1899,"marginsLTRB":[6,6,7,5],"sha256":"38b706ceab0ebda58bc8358a278df2afe7051c6e5f80eb284227dd7141faefb0","pass":true},
+    {"finish":"antracita","file":"antracita.png","width":829,"height":1898,"marginsLTRB":[3,3,4,0],"sha256":"d863a6d78418511f74077291daee5569c959fe488800bb7faeadaa82950c7ba3","pass":true},
+    {"finish":"nogal","file":"nogal.png","width":828,"height":1899,"marginsLTRB":[0,5,2,0],"sha256":"9e6ea8ec7cb94302a5779e58c8ffe9de3a3fdbf98e5af2735bbb62013aeb3d2b","pass":true},
+    {"finish":"roble","file":"roble.png","width":828,"height":1899,"marginsLTRB":[3,2,3,1],"sha256":"e8a3e2bef41b9516cb68ea9fc6280df34990537b8ff20a699254b7180afb731c","pass":true},
+    {"finish":"gris-claro","file":"gris-claro.png","width":828,"height":1900,"marginsLTRB":[7,8,7,7],"sha256":"72df10eef827eee5b5ce5eb0be5fd9ace634c0ca682405795f34675ec99de850","pass":true},
+    {"finish":"natural","file":"natural.png","width":828,"height":1899,"marginsLTRB":[4,2,4,2],"sha256":"0ce2622439c4d3a0c470559db9e0eed52bc3d36d9f65aec44b0ace09212012dd","pass":true},
+    {"finish":"blanco","file":"blanco.png","width":829,"height":1898,"marginsLTRB":[2,3,5,3],"sha256":"62aa333f1eca10bcfe940f699e5c9c6d78ac40b7eb5e7f394bd1408a0041ba58","pass":true}
+  ],
+  "rejectedAttempts": 0,
+  "safeToPromote": false,
+  "promotionStatus": "NOT_REQUESTED"
+}

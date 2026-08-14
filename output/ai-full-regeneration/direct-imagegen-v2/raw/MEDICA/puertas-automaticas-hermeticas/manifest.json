@@ -1,0 +1,48 @@
+{
+  "schema": "wonly-direct-imagegen-canonical-manifest/v1",
+  "reconciledOn": "2026-08-14",
+  "model": "MEDICA/puertas-automaticas-hermeticas",
+  "status": "PASS_10_OF_10",
+  "policy": "NO_LOGO",
+  "activeCount": 10,
+  "reference": {
+    "role": "sole canonical master reference",
+    "path": "output/ai-full-regeneration/large-doors/MEDICA/puertas-automaticas-hermeticas/master-no-logo-ai.png",
+    "sha256": "8ec1016a0e80811c74e9f1c4bf5e83cea81502e4ca2dbcb781998504127246a3"
+  },
+  "generation": {
+    "origin": "built-in ImageGen",
+    "mode": "direct independent call per asset from the sole master reference",
+    "independentCallPerAsset": true,
+    "masterOnlyReference": true,
+    "generatedOutputReferenceUsed": false,
+    "logoReferenceUsed": false,
+    "filters": false,
+    "recolor": false,
+    "masks": false,
+    "crop": false,
+    "resize": false,
+    "composite": false
+  },
+  "processing": {
+    "conversionPerformed": false,
+    "publicPromotionPerformed": false
+  },
+  "assets": [
+    { "finish": "original", "file": "original.png", "sha256": "eeb9c4e52c124160c034d74660072f371573186c055793861f323e2f8c056b67" },
+    { "finish": "negro", "file": "negro.png", "sha256": "12d145bc198dcd0ced220ee919da6edf0edd30835132b17a1b083a5d722798da" },
+    { "finish": "wengue", "file": "wengue.png", "sha256": "843744085d55a4569b546c25980dc97aa29b2ff51579c2c76664508f3854798c" },
+    { "finish": "gris-oscuro", "file": "gris-oscuro.png", "sha256": "f3795a939cde61d93cb66cf2c8e40e15b6e7faee56fca58c3239fe462c2fd3b7" },
+    { "finish": "antracita", "file": "antracita.png", "sha256": "4f10310642fece885aa1e3292794c19443cbf8b21c0c81725d5ec4a6af6c8ba2" },
+    { "finish": "nogal", "file": "nogal.png", "sha256": "0674cf26538f195417c2121c8558b4057cc880294c540cbb8e6574f56aea2a53" },
+    { "finish": "roble", "file": "roble.png", "sha256": "519601192e6c034848240e81516add429c36e7072e823d22ca9a2b97a5ed097f" },
+    { "finish": "gris-claro", "file": "gris-claro.png", "sha256": "4005231847bc027b5fc24adf60cbda3f40cad9e58c2a78e4a8054e4c90abc595" },
+    { "finish": "natural", "file": "natural.png", "sha256": "f935a984f07490e4f9d91f54f1a631f88bd5bbe278377bd60f3e1caadd22a3e1" },
+    { "finish": "blanco", "file": "blanco.png", "sha256": "f008dd5fd3bad807962d598092272d8ebcb9fccf940ebd84c685937a2061096b" }
+  ],
+  "evidence": {
+    "documents": ["QA.json", "PROMPTS.md"],
+    "hashBasis": "SHA-256 recomputed from each active root PNG and matched to QA assets",
+    "normalizationNote": "Canonical consolidation only; no active image or public asset was changed."
+  }
+}

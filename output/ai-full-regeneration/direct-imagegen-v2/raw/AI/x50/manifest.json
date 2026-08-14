@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "model": "AI/x50",
+  "policy": "KEEP_WONLY",
+  "generatedAt": "2026-08-14",
+  "generation": {
+    "method": "built-in ImageGen direct independent calls",
+    "onlyArchitecturalReference": "output/ai-full-regeneration/masters/AI/x50/master-no-logo-ai-tight.png",
+    "architecturalReferenceSha256": "bca5c8d0d592e830fe0c2f3a348389e5099131defcf6c81986e838330657c5a0",
+    "onlyLogoReference": "public/images/logo-wonly.webp",
+    "logoReferenceSha256": "f55b5ae0b73967e7395c9e8f16dedb07c7d20e430e03f9c3a289c348e9fb2e1b",
+    "generatedOutputUsedAsInput": false,
+    "calls": 10,
+    "attemptLimitPerFinish": 2,
+    "attemptsUsedPerFinish": 1,
+    "filtersRecolorMasksCompositeCropResize": false,
+    "conversion": false
+  },
+  "promotion": {
+    "publicWritten": false,
+    "applyAuthorized": false,
+    "status": "RAW_STAGING_ONLY"
+  },
+  "accepted": [
+    { "finish": "original", "file": "original.png", "generatorId": "exec-0c0d2548-8e71-45b0-a88d-a5a0c0a8f72b", "width": 843, "height": 1864, "margin": { "left": 2, "top": 2, "right": 3, "bottom": 0, "maximum": 3 }, "sha256": "c01630b21303887511ff055878929294c1dd486fcf41f665dc8d2ea1d554e97f" },
+    { "finish": "negro", "file": "negro.png", "generatorId": "exec-4e659f7d-b911-4a5a-8c63-2d8e21d21804", "width": 843, "height": 1864, "margin": { "left": 9, "top": 9, "right": 7, "bottom": 7, "maximum": 9 }, "sha256": "728a528ac6f0a699220a761084d846f412763c29f325df426965b428eb897afd" },
+    { "finish": "wengue", "file": "wengue.png", "generatorId": "exec-3b878c40-8cdc-4ef2-b8d9-4f20075dff94", "width": 844, "height": 1864, "margin": { "left": 9, "top": 11, "right": 7, "bottom": 0, "maximum": 11 }, "sha256": "6c6b8f133885b25318d2dbc71f3978ac777f04aa5053489a763d430609963320" },
+    { "finish": "gris-oscuro", "file": "gris-oscuro.png", "generatorId": "exec-8dabb95c-e167-425f-b7ce-ac5fb7e16cab", "width": 843, "height": 1866, "margin": { "left": 1, "top": 7, "right": 4, "bottom": 0, "maximum": 7 }, "sha256": "59b50d89549a5eaf9b1983cca9719603c6c7d2996e925878999925c2d78ce926" },
+    { "finish": "antracita", "file": "antracita.png", "generatorId": "exec-9b757cd1-2b04-4f79-b3e4-932f15a5a59b", "width": 844, "height": 1864, "margin": { "left": 6, "top": 10, "right": 6, "bottom": 6, "maximum": 10 }, "sha256": "0f4c7415cff936e8036a3e58b8ad251480c5055424a573f71b6047f5aaeb463b" },
+    { "finish": "nogal", "file": "nogal.png", "generatorId": "exec-0527d767-dbba-45c2-adc2-b6e4d776aff4", "width": 843, "height": 1866, "margin": { "left": 7, "top": 9, "right": 6, "bottom": 5, "maximum": 9 }, "sha256": "317b7ed49cfeef77ebe51ece6598bce530f97a9c0d0f50a04ad8720b59c62df5" },
+    { "finish": "roble", "file": "roble.png", "generatorId": "exec-9f144931-daaf-4597-b979-b1867485efc8", "width": 844, "height": 1863, "margin": { "left": 6, "top": 6, "right": 6, "bottom": 6, "maximum": 6 }, "sha256": "a03519e327342cfcc0d92e378436c4e27e307af89a53adb3b5113ef14747e5e5" },
+    { "finish": "gris-claro", "file": "gris-claro.png", "generatorId": "exec-01b524a7-fbcb-4f37-887e-76f3a0a2cf73", "width": 844, "height": 1864, "margin": { "left": 3, "top": 6, "right": 6, "bottom": 0, "maximum": 6 }, "sha256": "7580135bd2a7fe7764b1bd274e630996da12a1189a9522dfe17d4d800e37c99e" },
+    { "finish": "natural", "file": "natural.png", "generatorId": "exec-ca92e099-0bee-4e88-ab14-f90941d9e38a", "width": 843, "height": 1864, "margin": { "left": 4, "top": 3, "right": 6, "bottom": 0, "maximum": 6 }, "sha256": "d147662d0469924fca0146cbce612812105c64148237ea2ea9564679494ff998" },
+    { "finish": "blanco", "file": "blanco.png", "generatorId": "exec-2ff5d78e-a6ca-48a5-bad4-82ffd48ca117", "width": 843, "height": 1864, "margin": { "left": 4, "top": 8, "right": 4, "bottom": 11, "maximum": 11 }, "sha256": "4fe98514473dbe93c925dc21d0e30f44b5452b8f11e27b8961e5b1599baf8e3f" }
+  ],
+  "rejected": {
+    "directory": "_rejected",
+    "count": 0,
+    "neverPromote": true,
+    "reason": "No rejected candidates: all ten independent first attempts passed the visual and mechanical audit."
+  },
+  "qa": {
+    "derivativesOnly": true,
+    "neverPromote": true,
+    "contactSheet": { "file": "qa/contact-sheet.png", "sha256": "07c0014285d387c0eae8f4bbcb429f8ce01732dfddd9d972700816c44a5c6941" },
+    "hardwareDetailSheet": { "file": "qa/hardware-detail-sheet.png", "sha256": "f6409c8bc2789527c4c8335332d47008482b26b72e05d9718c98382a9978a0cb" },
+    "logoDetailSheet": { "file": "qa/logo-detail-sheet.png", "sha256": "6b38253fde2fd0ec21f03321c23c93545746bea4589dcd2080ffe8dcbf648757" }
+  }
+}

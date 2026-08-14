@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 2,
+  "model": "ACERO/mid-night",
+  "logoPolicy": "KEEP_WONLY",
+  "generationMode": "built-in-imagegen-direct-with-canonical-logo",
+  "sourcePolicy": "Every active PNG is a separate built-in ImageGen call using only the same mid-night no-logo tight master plus the canonical WONLY logo asset. No generated output was referenced.",
+  "pixelProcessing": "none",
+  "sources": [
+    {"role":"architecture-and-hardware-reference","path":"output/ai-full-regeneration/masters/ACERO/mid-night/master-no-logo-ai-tight.png","sha256":"b0462cf895eaefa614a72ce51a32a04b3061b65f2c58c4ca15ad70d8a3a932e1"},
+    {"role":"canonical-logo-reference","path":"public/images/logo-wonly.webp","sha256":"f55b5ae0b73967e7395c9e8f16dedb07c7d20e430e03f9c3a289c348e9fb2e1b"}
+  ],
+  "accepted": [
+    {"finish":"original","file":"original.png","generatorId":"exec-1b79d960-3e8f-4b41-8f12-f941a0ee969a","sha256":"20503628526d842641eebee8ee014da1d1306bd17fa1575a0df5762eb6aa2549"},
+    {"finish":"negro","file":"negro.png","generatorId":"exec-c6b2bcce-72f2-49eb-bfba-bbb138d4a3e1","sha256":"7392a46537eacb5419d17c2b1701672cb2f0e3494f3855ad79da7a03df54433b"},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-f724d293-b0d5-46cc-8948-eea6c90dd948","sha256":"623ae2a67b785706c747abbf1b68cdf61fe9bd9c0d31f46529914792a7e64dcf"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-002be02a-7416-4cec-a87c-277b74307e27","sha256":"092ad78b1757761712063f35b111fcb4e69bf0d21334410802fe897b25671020"},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-0617c275-5036-45f4-bf38-14fe993e1139","sha256":"86b1384486d3697f759d1598645322eb5c94ae5d00fafba362685885406e70ae"},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-6a97a8c5-2f28-420a-bdb4-727202aa1077","sha256":"f0b55c4774f44f6dc66d0ab93788b4f124630dec0864ee97b95a024c1d0cb1c9"},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-395882f9-984b-4801-9a94-a55e8afdac2a","sha256":"5b6358b7bf3ba5f11727c052a5c24f96b9327a6fd789097de07f878ed4e981a7"},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-6245d454-1be6-44dc-a758-9a899cefe85f","sha256":"897e917241c7bd567b4156816fd66b2f4cc283bbef5554d96672aed404d1c786"},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-b78d8ade-b4fd-4771-86b4-0aac205be124","sha256":"2eb692ae9614d111b4445833d1a69b4db2cf8870b48e52e5efdfe9f8a59af0e2"},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-fd579fce-3f5e-4533-bb61-88ddf9b562c7","sha256":"6dc7dfd5f832f4db20e7310beb4fa1b5cce4254c97ba919a60dd2fcc07bf1524"}
+  ],
+  "qa": {"path":"QA.json","status":"PASS","maximumMeasuredMarginPixels":11,"canonicalLogoInstancesPerAsset":1,"otherTextOrPseudoTextInstancesPerAsset":0},
+  "rejections": "REJECTIONS.md",
+  "promotion": {"stagingOnly":true,"converted":false,"publicWritten":false}
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 2,
+  "model": "ACERO/jd073",
+  "generationMode": "built-in-imagegen-direct-unbranded",
+  "generatedOn": "2026-08-13",
+  "sourcePolicy": "Every active PNG is a separate built-in ImageGen call using only the same ACERO jd073 no-logo tight master. No generated output or logo asset was referenced.",
+  "brandingPolicy": "Canonical ACERO/jd073 is NO_LOGO; active assets contain no wordmark, badge, letters, numbers, microtext or pseudotext.",
+  "pixelProcessing": "none",
+  "source": {
+    "path": "output/ai-full-regeneration/masters/ACERO/jd073/master-no-logo-ai-tight.png",
+    "sha256": "45ba48107c7ca769b2aadfb6b417a274aa22b773567efe8ba13e094d859f455d"
+  },
+  "accepted": [
+    { "finish": "original", "file": "original.png", "generatorId": "exec-d031525c-9ced-4c9b-b014-d24a19fe6da4", "width": 800, "height": 1967, "sha256": "2629a9c8aa79d4f85e26ced336e53da6603aa924ad0e2ad2303ca054ce55cecb" },
+    { "finish": "negro", "file": "negro.png", "generatorId": "exec-09ad2824-346c-4e16-aba3-72ea62334c56", "width": 798, "height": 1971, "sha256": "906f05833407713ce8b655dfa9e7c1fc1b6d47652d08c5c865d3490c2be61389" },
+    { "finish": "wengue", "file": "wengue.png", "generatorId": "exec-4fbf14ee-4397-4818-91cd-41b677b9fc5e", "width": 796, "height": 1976, "sha256": "f17c6580f33e53ab4ece02995a3f649c779853b39a12eb59892f70e9721fb7f7" },
+    { "finish": "gris-oscuro", "file": "gris-oscuro.png", "generatorId": "exec-2c702110-a56c-4c8b-98bc-dd56cfa2fd0d", "width": 798, "height": 1972, "sha256": "3b345cf41e84e51f7bed70727130809f21c68bfd8024e2af5d38a2cade425c3b" },
+    { "finish": "antracita", "file": "antracita.png", "generatorId": "exec-4047f3eb-c316-4911-bb0d-200f174c4081", "width": 804, "height": 1956, "sha256": "3b3b3490d2274c836c2b69f3c27ba8fe31ce04196722989aaf27cfcecc2cc64f" },
+    { "finish": "nogal", "file": "nogal.png", "generatorId": "exec-0709db7d-c99a-4949-ac71-2b8d311c7a5f", "width": 798, "height": 1971, "sha256": "168023fb0f952e5fec3f152ff614f1235552d7ffbe66249120f80f57010d5d66" },
+    { "finish": "roble", "file": "roble.png", "generatorId": "exec-7a34da93-1a2f-4e49-a377-210afb48ff34", "width": 797, "height": 1973, "sha256": "c97f146ba2c824c826de66443400a0e66c7f58019b192dec149f4b0ba5102246" },
+    { "finish": "gris-claro", "file": "gris-claro.png", "generatorId": "exec-a4222b11-2701-43bf-98c0-3655da7ac04d", "width": 798, "height": 1971, "sha256": "b61e7de7c24397f9511c0f128f0b0c6527627dd4dfcb744e1667f78a5c880c18" },
+    { "finish": "natural", "file": "natural.png", "generatorId": "exec-6d0f37e3-3ac0-4835-85fa-ecebad51863c", "width": 797, "height": 1974, "sha256": "4f09ace7c9bee3be1925c73559b329896f0aaf82302a1b74f8409610865c8081" },
+    { "finish": "blanco", "file": "blanco.png", "generatorId": "exec-6cd963bb-3ef5-431b-91c4-4c9edc4e4af5", "width": 798, "height": 1972, "sha256": "43b36b9438aab080020dd5d929359f28fc1152d7778b35c67dee4bf1a90d062e" }
+  ],
+  "qa": {
+    "path": "QA.json",
+    "status": "PASS",
+    "requested": 10,
+    "pass": 10,
+    "maximumMarginPixels": 6,
+    "minimumCoveragePercent": 98.32
+  },
+  "rejectedDirectory": "_rejected",
+  "promotion": {
+    "stagingOnly": true,
+    "converted": false,
+    "publicWritten": false
+  }
+}

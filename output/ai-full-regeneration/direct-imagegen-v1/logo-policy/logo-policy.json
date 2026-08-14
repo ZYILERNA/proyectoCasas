@@ -1,0 +1,550 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-13T09:50:50.253Z",
+  "scope": "58 direct-generation models: 40 main/P0+P1 main, 10 large doors, 3 ALUMINIO, 3 PVC, 2 EVACUACION",
+  "mode": "read-only canonical visual audit; no public image writes",
+  "decisionRule": "KEEP_WONLY only when canonical WONLY is unambiguous. Missing, third-party, garbled, or ambiguous marks resolve to NO_LOGO.",
+  "summary": {
+    "total": 58,
+    "effectivePolicy": {
+      "KEEP_WONLY": 11,
+      "NO_LOGO": 47
+    },
+    "observed": {
+      "KEEP_WONLY": 11,
+      "NO_LOGO": 43,
+      "AMBIGUOUS": 4
+    }
+  },
+  "evidenceSheets": [
+    "ai-logo-crops.png",
+    "acorazada-logo-crops.png",
+    "acero-logo-crops.png",
+    "pvc_evac_aluminio-logo-crops.png",
+    "large-logo-crops.png"
+  ],
+  "models": [
+    {
+      "model": "AI/t200",
+      "policy": "KEEP_WONLY",
+      "observedClassification": "KEEP_WONLY",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/AI/door-t200.webp",
+      "canonicalSha256": "e87e9a1d78464565670371e992294af0c20fd0f7278768d87f193bc40b20acf7",
+      "evidence": "WONLY wordmark is visually identifiable in the upper-right header.",
+      "generationInstruction": "Generate exactly one clean WONLY wordmark in the canonical upper-right position."
+    },
+    {
+      "model": "AI/x50-pro",
+      "policy": "KEEP_WONLY",
+      "observedClassification": "KEEP_WONLY",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/AI/door-x50-pro.webp",
+      "canonicalSha256": "a5cbed00fc2644f8085fa241cc0f679b58d55e1fb97cc08e0ea65987d542a9ea",
+      "evidence": "WONLY is legible in the upper-right header.",
+      "generationInstruction": "Generate exactly one clean WONLY wordmark in the canonical upper-right position."
+    },
+    {
+      "model": "AI/k300-pro",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/AI/door-k300-pro.webp",
+      "canonicalSha256": "e4c50c2ba6520a741acb4a502ba920cfb0cdb2383f50bbcd60ae400fc4fdc2cb",
+      "evidence": "Upper-right emblem is an A-like/cursive third-party badge, not WONLY.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "AI/l5857",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/AI/door-l5857.webp",
+      "canonicalSha256": "1f9142a5fc05d0f21ea3672c1292650bc590b08fa2624543cf18e205ecf0f7ee",
+      "evidence": "Upper-right recessed plaque carries an A-like third-party emblem, not WONLY.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "AI/l5859",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/AI/door-l5859.webp",
+      "canonicalSha256": "5f339bd172456a76af5889db69664b8258197c47a098c4d9ee0f17c5dfaf920e",
+      "evidence": "Upper-right badge has an A-like emblem and unrelated micro-wordmark.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "AI/p101",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/AI/door-p101-ia.webp",
+      "canonicalSha256": "077f9030c43944a144c916ec9b9293916c08d6a77309c72b60cffb2d1b8318f9",
+      "evidence": "Upper-right wordmark reads as another brand, not WONLY.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "AI/p105",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/AI/door-p105-ia.webp",
+      "canonicalSha256": "11fd61a6385b85f661d6008b1ddb367a804671248bd1e456be4e8fc0b9313714",
+      "evidence": "Upper-right A-like third-party badge, not WONLY.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "AI/p107",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/AI/door-p107-ia.webp",
+      "canonicalSha256": "a6fb3c6cd56a2181841182378c5bcacf07e88ba6563017b2450995852f4e23a3",
+      "evidence": "Upper-right glyph string is a model/third-party marking, not WONLY.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "AI/x70-shunliu",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/AI/door-x70-shunliu.webp",
+      "canonicalSha256": "b4a45fa5a4301c1c8b0649e27967321b10e86e7aa021883e0c13949044aa3e08",
+      "evidence": "Upper-right A-like third-party badge, not WONLY.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "AI/x50",
+      "policy": "KEEP_WONLY",
+      "observedClassification": "KEEP_WONLY",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/AI/door-x50.webp",
+      "canonicalSha256": "a9cee56ef36c98b30c485d664e919acc2b10920db6370b97e3315f7455063fb6",
+      "evidence": "WONLY wordmark is legible in the upper-right header.",
+      "generationInstruction": "Generate exactly one clean WONLY wordmark in the canonical upper-right position."
+    },
+    {
+      "model": "AI/p102",
+      "policy": "KEEP_WONLY",
+      "observedClassification": "KEEP_WONLY",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/AI/door-p102-ia.webp",
+      "canonicalSha256": "42a94f6eae870265cc5afba301444b3023d6867e77d2cdffe52f18adc72a4c8d",
+      "evidence": "WONLY wordmark is clearly legible in the upper-right header.",
+      "generationInstruction": "Generate exactly one clean WONLY wordmark in the canonical upper-right position."
+    },
+    {
+      "model": "AI/x50-max",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/AI/door-x50-max.webp",
+      "canonicalSha256": "de3125b80dcb63e236a1ce03343c73226067f86df0e66e24615d85e7664eac69",
+      "evidence": "Upper-right badge is A/WUTEC-like and not WONLY.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "AI/x60-pro",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/AI/door-x60-pro.webp",
+      "canonicalSha256": "3e3cadabda8966adb49175a39e4a913c4c0f869618796b8e1a57a2db5e844b53",
+      "evidence": "Upper-right marking identifies X60 PRO/model text, not WONLY branding.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "ACORAZADA/wl006",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/ACORAZADA/door-wl006.webp",
+      "canonicalSha256": "c0cc45922e9e226f4a7b1369c5bc265ea315e2785969c38ee9d1053cd83b9d53",
+      "evidence": "Upper-right icon-plus-microtext is a third-party badge, not WONLY.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "ACORAZADA/wl008",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/ACORAZADA/door-wl008.webp",
+      "canonicalSha256": "6e108d957c90cc1f83343cfde9036850811eaba168c397d0a03e46b8630ca147",
+      "evidence": "Upper-right A/WUTEC-like plaque is not WONLY.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "ACORAZADA/wl015",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/ACORAZADA/door-wl015.webp",
+      "canonicalSha256": "3013cccece2af578a421cf1a191e29e604fe9f35a050c70af20beefa042ac565",
+      "evidence": "Upper-right A/WUTEC-like plaque is not WONLY.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "ACORAZADA/wl016",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/ACORAZADA/door-wl016.webp",
+      "canonicalSha256": "f0a10ea1651865ce399b51149df48df054432b65b7c2e580ec1936414334df82",
+      "evidence": "Upper-right A/WUTEC-like plaque is not WONLY.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "ACORAZADA/wl017",
+      "policy": "NO_LOGO",
+      "observedClassification": "AMBIGUOUS",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/ACORAZADA/door-wl017.webp",
+      "canonicalSha256": "88d0f790e738deca13fb781ab7a28a8b74b8028db3277d02de4184cf82edd14f",
+      "evidence": "Upper-right icon-plus-microtext is illegible and cannot be identified as WONLY.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "ACORAZADA/wl007",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/ACORAZADA/door-wl007.webp",
+      "canonicalSha256": "988032f4ecc10b10a023800a2a797353ac1afae1b984bfc10e96fbf967b83a67",
+      "evidence": "Upper-right A/WUTEC-like plaque is not WONLY.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "ACERO/cl96",
+      "policy": "NO_LOGO",
+      "observedClassification": "AMBIGUOUS",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/ACERO/door-cl96.webp",
+      "canonicalSha256": "8b0273cb7df68d652dbac30874c6f2f39b795e29f0563bd17748d9ad6b405076",
+      "evidence": "Garbled UIEINLY-like wordmark suggests WONLY but is not canonical WONLY unambiguously.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "ACERO/contemporary",
+      "policy": "KEEP_WONLY",
+      "observedClassification": "KEEP_WONLY",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/ACERO/door-contemporary.webp",
+      "canonicalSha256": "5a3eccde9dae52cec40f8bf86b94584eb8dd87384969d83d5bf55b941febff67",
+      "evidence": "WONLY wordmark is legible in the upper-right header.",
+      "generationInstruction": "Generate exactly one clean WONLY wordmark in the canonical upper-right position."
+    },
+    {
+      "model": "ACERO/gl098-pro",
+      "policy": "KEEP_WONLY",
+      "observedClassification": "KEEP_WONLY",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/ACERO/door-gl098-pro.webp",
+      "canonicalSha256": "d34a3cbd74da51b262981e3c9ea93512ceea76f4e6e5e31edf5fd1a0c2c6e966",
+      "evidence": "WONLY is clearly legible in the upper-right header.",
+      "generationInstruction": "Generate exactly one clean WONLY wordmark in the canonical upper-right position."
+    },
+    {
+      "model": "ACERO/gl099",
+      "policy": "NO_LOGO",
+      "observedClassification": "AMBIGUOUS",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/ACERO/door-gl099.webp",
+      "canonicalSha256": "6b1317a21a3bd01406946f60157ad3266d6cec4e0eab36ed2985a164a31ed3a9",
+      "evidence": "Very low-resolution garbled wordmark resembles WONLY but is not unambiguous.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "ACERO/jd073",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/ACERO/door-jd073.webp",
+      "canonicalSha256": "59607962ae8ca88ab2e8c3cdd70001207c394afd932adc24c95aeb57a99cc924",
+      "evidence": "Upper-right HUA-like wordmark is not WONLY.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "ACERO/l5601",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/ACERO/door-l5601.webp",
+      "canonicalSha256": "4ce4acc915142f28329605e0e696eb15d2b695e49f4193e0bd6fa4e71e0683d2",
+      "evidence": "Upper-right A-like third-party emblem is not WONLY.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "ACERO/mid-night",
+      "policy": "KEEP_WONLY",
+      "observedClassification": "KEEP_WONLY",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/ACERO/door-mid-night.webp",
+      "canonicalSha256": "e34f539b83f5807b2b3ef4b5b4a2c0a46d48e154ad57becfb7a01673a4254b12",
+      "evidence": "WONLY wordmark is visually identifiable in the upper-right header.",
+      "generationInstruction": "Generate exactly one clean WONLY wordmark in the canonical upper-right position."
+    },
+    {
+      "model": "ACERO/n9518",
+      "policy": "NO_LOGO",
+      "observedClassification": "AMBIGUOUS",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/ACERO/door-n9518.webp",
+      "canonicalSha256": "3138f87f32eb6e7e943d638012f78415ad54bd100c92d68d543f16e6b1b415de",
+      "evidence": "Garbled multi-glyph upper-right mark cannot be identified unambiguously as WONLY.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "ACERO/p101",
+      "policy": "KEEP_WONLY",
+      "observedClassification": "KEEP_WONLY",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/ACERO/door-p101.webp",
+      "canonicalSha256": "08c68c5d49205f3e099a3eb36d6824e6d92dec99d6ee74ab3eef47dacfaef56f",
+      "evidence": "WONLY wordmark is visually identifiable in the upper-right header.",
+      "generationInstruction": "Generate exactly one clean WONLY wordmark in the canonical upper-right position."
+    },
+    {
+      "model": "ACERO/p103",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/ACERO/door-p103.webp",
+      "canonicalSha256": "8b84e8ae236d48aa4678086f6c69c42418a25fe0ac1566160167e8e4c4c53360",
+      "evidence": "Upper-right mark is clearly A/WUTEC, not WONLY.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "ACERO/p105",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/ACERO/door-p105.webp",
+      "canonicalSha256": "fc4cd5ac48a908f8dd56e05e2541c2022c8d5fb48f2f2d0535712cc4124d7c49",
+      "evidence": "Upper-right A/WUTEC-like plaque is not WONLY.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "ACERO/p106",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/ACERO/door-p106.webp",
+      "canonicalSha256": "14f2da47a02a7fdb62eea170c431bd9100a968e62139244ab71affc9163c6f17",
+      "evidence": "Upper-right A-like third-party badge is not WONLY.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "ACERO/p107",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/ACERO/door-p107.webp",
+      "canonicalSha256": "c4ade12d00254707717e99e6d9515de4d85b04579eb9e053993928748c4ef06d",
+      "evidence": "Upper-right A/WUTEC-like plaque is not WONLY.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "ACERO/s108",
+      "policy": "KEEP_WONLY",
+      "observedClassification": "KEEP_WONLY",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/ACERO/door-s108.webp",
+      "canonicalSha256": "d9b9eff70cd2fec3bb6f8569406413e9b16ea240a10a74fccfa846da95ec3b20",
+      "evidence": "WONLY wordmark is clearly legible in the upper-right header.",
+      "generationInstruction": "Generate exactly one clean WONLY wordmark in the canonical upper-right position."
+    },
+    {
+      "model": "ACERO/s108-pro",
+      "policy": "KEEP_WONLY",
+      "observedClassification": "KEEP_WONLY",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/ACERO/door-s108-pro.webp",
+      "canonicalSha256": "ad25b9190fd00c89b05d48a8478bc11fde5d9a80484bdb65793b590c06fb6831",
+      "evidence": "WONLY wordmark is clearly legible in the upper-right header.",
+      "generationInstruction": "Generate exactly one clean WONLY wordmark in the canonical upper-right position."
+    },
+    {
+      "model": "ACERO/s119",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/ACERO/door-s119.webp",
+      "canonicalSha256": "c03874e46b412f89ff311c9c3a2cd453b8d70ed2473df8eb388f3b83efec4d61",
+      "evidence": "Upper-right A-like third-party badge is not WONLY.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "ACERO/s121",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/ACERO/door-s121.webp",
+      "canonicalSha256": "626b10b2a74640053e4385ca13c95f2c18700ed3a8e11a5122fdda8fa9c7f038",
+      "evidence": "Upper-right A-like third-party badge is not WONLY.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "ACERO/y106",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/ACERO/door-y106.webp",
+      "canonicalSha256": "0df349bd97cdc9f8e39747849227081f0cbf77d922adcf8f70fd2b8c6c5fe588",
+      "evidence": "Upper-right A/WUTEC-like plaque is not WONLY.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "ACERO/y118",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/ACERO/door-y118.webp",
+      "canonicalSha256": "45c140a15285e01f33f8fb67e18b7cd2ee698ccc695a6bc381ea3ff72cbbb3a7",
+      "evidence": "Upper-right A/WUTEC-like plaque is not WONLY.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "ACERO/gl098",
+      "policy": "KEEP_WONLY",
+      "observedClassification": "KEEP_WONLY",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/ACERO/door-gl098.webp",
+      "canonicalSha256": "04f55139ef13fc52cf33e91149e16b8a64b03d1ce7d4a1102cc12147b39649e8",
+      "evidence": "WONLY wordmark is clearly legible in the upper-right header.",
+      "generationInstruction": "Generate exactly one clean WONLY wordmark in the canonical upper-right position."
+    },
+    {
+      "model": "ACERO/y119",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "output/repair-all/pre-promotion-backup/public/images/PUERTAS/ACERO/door-y119.webp",
+      "canonicalSha256": "c6937c288381906cb7e4883242747a90ebc485d01a930fdb3e036d9b1b2ed9fe",
+      "evidence": "Upper-right A-like third-party plaque is not WONLY.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "PVC/wl-p003",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "public/images/PUERTAS/PVC/door-wl-p003.webp",
+      "canonicalSha256": "4eebfc0f41c45a8b2ea2145d625bd87c4bed2a74caa141485baf1e97856d3240",
+      "evidence": "Canonical image has no logo.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "PVC/wl-p005",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "public/images/PUERTAS/PVC/door-wl-p005.webp",
+      "canonicalSha256": "7b47ee75799d79c37a90e020b5b81abf38a76ca699ca32ef3290552a247610e9",
+      "evidence": "Canonical image has no logo.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "PVC/wl-p010",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "public/images/PUERTAS/PVC/door-wl-p010.webp",
+      "canonicalSha256": "05048caf2794b16976439b23fe55e6dc9990ea5d3bbe02e0edaec966e290b240",
+      "evidence": "Canonical image has no logo.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "EVACUACION/gk-03",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "public/images/PUERTAS/EVACUACION/door-gk-03.webp",
+      "canonicalSha256": "2aaafef2fe35850d6e9018c23303086ab1987c48b3f5a6a4983415d280442752",
+      "evidence": "Canonical image has no logo.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "EVACUACION/mk-01",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "public/images/PUERTAS/EVACUACION/door-mk-01.webp",
+      "canonicalSha256": "81f0542964ffd04c25e1a0b5266c7575f89692bc631ad4740fcbfb28ce6e653a",
+      "evidence": "Canonical image has no logo.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "ALUMINIO/chaohe",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "public/images/PUERTAS/ALUMINIO/door-chaohe.webp",
+      "canonicalSha256": "2812f469ce452b25c28703ab4c458c9065ea50fb15b8336a9e51079c10e404be",
+      "evidence": "Upper-right A/WUTEC-like plaque is not WONLY.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "ALUMINIO/chaoling",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "public/images/PUERTAS/ALUMINIO/door-chaoling.webp",
+      "canonicalSha256": "6eb04ad6e3891cbbae2a3f911fe2274566c857aac8f4188e38c94efd9d4b6f9c",
+      "evidence": "Upper-right LA... wordmark is another brand, not WONLY.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "ALUMINIO/lange",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "public/images/PUERTAS/ALUMINIO/door-lange.webp",
+      "canonicalSha256": "fdab2cfcfde512149a0793b46fdbd4a3b964420dff1a317024c93874e3d57694",
+      "evidence": "Upper-right icon-plus-ZUOMAY-like wordmark is another brand.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "CORREDIZA/wl-a23001",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "public/images/PUERTAS/CORREDIZA/door-WL-A23001.webp",
+      "canonicalSha256": "7fa5489400a21ca3ced5c463e5c6eda9b39e4ac470fc8010f9d1f901ce41a58a",
+      "evidence": "Canonical large-door image has no WONLY logo.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "CORREDIZA/wl-a23002",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "public/images/PUERTAS/CORREDIZA/door-WL-A23002.webp",
+      "canonicalSha256": "9d208b5fdc3ab51f426fc577e62d04c5f8ecbd24f7bc8391a4691cdea0724ca0",
+      "evidence": "Canonical large-door image has no WONLY logo.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "CORREDIZA/wl-a23019",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "public/images/PUERTAS/CORREDIZA/door-WL-A23019.webp",
+      "canonicalSha256": "fc91af1b9e3d306b5a35a8cf9bbd1e1081ee2e37acbd49daad93ede65f8de401",
+      "evidence": "Canonical large-door image has no WONLY logo.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "CORREDIZA/wl-a23020",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "public/images/PUERTAS/CORREDIZA/door-WL-A23020.webp",
+      "canonicalSha256": "b9cf9f88f4fb33e6230d04504edb5904b7103605f5f49e681b49183921bedf5f",
+      "evidence": "Canonical large-door image has no WONLY logo.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "COBRE/tdf-2003",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "public/images/PUERTAS/COBRE/door-tdf-2003.webp",
+      "canonicalSha256": "ea7365ebdb7bbbc096797638a8d927edcc707e5e199c74e58c7541d14a290c79",
+      "evidence": "Canonical large-door image has no WONLY logo.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "COBRE/tdf-2009",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "public/images/PUERTAS/COBRE/door-tdf-2009.webp",
+      "canonicalSha256": "4c908f2fa22332c2579abcaf3edfce6c46aaa78868e541a38a1ffab5c07a36e6",
+      "evidence": "Canonical large-door image has no WONLY logo.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "MEDICA/puerta-automatica-plana-hermetica-y-abatible",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "public/images/PUERTAS/MEDICA/door-puerta-automática-plana,-hermética-y-abatible.webp",
+      "canonicalSha256": "453dcbe6e14d251f74f579bea634905f66f6522417a4df92d0b5af116e918de5",
+      "evidence": "Canonical medical-door image has no WONLY logo.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "MEDICA/puertas-automaticas-hermeticas",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "public/images/PUERTAS/MEDICA/door-puertas-automáticas-herméticas.webp",
+      "canonicalSha256": "7bf7ec36d4bc4a8b7d29f98ace3be4e7f1c3a9b2757ac9dcd523411a3f077f25",
+      "evidence": "Canonical medical-door image has no WONLY logo.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "MEDICA/puerta-cortafuego-aislante1",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "public/images/PUERTAS/MEDICA/door-puerta-cortafuego-aislante1.webp",
+      "canonicalSha256": "63363b96b44eab52e4cfbff5edf2f4439475dfa4a2a66a2a378ae7f754e200ea",
+      "evidence": "Canonical medical-door image has no WONLY logo; safety signage is functional scene content.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    },
+    {
+      "model": "MEDICA/puerta-cortafuego-aislante2",
+      "policy": "NO_LOGO",
+      "observedClassification": "NO_LOGO",
+      "canonicalSource": "public/images/PUERTAS/MEDICA/door-puerta-cortafuego-aislante2.webp",
+      "canonicalSha256": "6ed3b133aa82fe408f55aaaea9941e8896f1f3df6c58d0a090a368c7e44a7e3c",
+      "evidence": "Canonical medical-door image has no WONLY logo.",
+      "generationInstruction": "Generate no logo, badge, brand, wordmark, letters, or decorative microtext."
+    }
+  ]
+}

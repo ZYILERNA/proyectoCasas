@@ -1,0 +1,48 @@
+{
+  "schema": "wonly-direct-imagegen-canonical-manifest/v1",
+  "reconciledOn": "2026-08-14",
+  "model": "ACERO/n9518",
+  "status": "PASS_10_OF_10",
+  "policy": "NO_LOGO",
+  "activeCount": 10,
+  "reference": {
+    "role": "sole canonical master reference",
+    "path": "output/ai-full-regeneration/masters/ACERO/n9518/master-no-logo-ai-tight.png",
+    "sha256": "c7733426281884c777dc6b0aa8174a356f9d91e39465e77a460db2f1f9fd815e"
+  },
+  "generation": {
+    "origin": "built-in ImageGen",
+    "mode": "direct independent call per asset from the sole master reference",
+    "independentCallPerAsset": true,
+    "masterOnlyReference": true,
+    "generatedOutputReferenceUsed": false,
+    "logoReferenceUsed": false,
+    "filters": false,
+    "recolor": false,
+    "masks": false,
+    "crop": false,
+    "resize": false,
+    "composite": false
+  },
+  "processing": {
+    "conversionPerformed": false,
+    "publicPromotionPerformed": false
+  },
+  "assets": [
+    { "finish": "original", "file": "original.png", "sha256": "dbc7d0817a56963ce0f8651d030a4ca68fd5ca44a5645cb84ff745f917c7334b" },
+    { "finish": "negro", "file": "negro.png", "sha256": "3bc579b54a60e256953561cf04e6041d5172ce6d656a10ab6dbdd117e63c0bdb" },
+    { "finish": "wengue", "file": "wengue.png", "sha256": "7fd1c26f1b79bb018b71517ed1ddfb160ff0aa451a9f08588c832a8cbb1e67a5" },
+    { "finish": "gris-oscuro", "file": "gris-oscuro.png", "sha256": "e9c16f4382a33000661dfe3b179ff01c3e8d0a08d93b96541b6a323310861904" },
+    { "finish": "antracita", "file": "antracita.png", "sha256": "bf718ab27de033c23ae7190da8d5dba3b49dd175e96866bd9a739867e84137c3" },
+    { "finish": "nogal", "file": "nogal.png", "sha256": "5e84937b388b00f9b01f509ce67006ea1e8df69fa491be2fd4ae17b672e53e81" },
+    { "finish": "roble", "file": "roble.png", "sha256": "85f14b63f5e9820a8931850bb2b59deb7a97faeb1a75eeccfe86a6d4e01da164" },
+    { "finish": "gris-claro", "file": "gris-claro.png", "sha256": "8aa1feb727838fa301b4a5e70816dd92af4bce0ca599e563f0f5fcb2f614bd6b" },
+    { "finish": "natural", "file": "natural.png", "sha256": "ca5c8b51b87f4ef0920375ab49ba6049840c04ab572b0340673def688cb968ad" },
+    { "finish": "blanco", "file": "blanco.png", "sha256": "3a6f7aae4b8afbad21f40def727c5ba0f050aaf897cf465513886f0c15c69bea" }
+  ],
+  "evidence": {
+    "documents": ["QA.json", "PROMPTS.md"],
+    "hashBasis": "SHA-256 recomputed from each active root PNG",
+    "normalizationNote": "QA and PROMPTS document the active finish set and full direct ImageGen provenance; per-asset hashes were newly bound to the current active files."
+  }
+}

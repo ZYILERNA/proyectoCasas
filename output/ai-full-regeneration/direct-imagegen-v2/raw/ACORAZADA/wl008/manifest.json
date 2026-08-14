@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "model": "ACORAZADA/wl008",
+  "logoPolicy": "NO_LOGO",
+  "generationMode": "built-in-imagegen-direct-unbranded",
+  "sourcePolicy": "Every active PNG is an independent built-in ImageGen call using only the same no-logo WL008 tight master. No logo reference or generated output was used.",
+  "pixelProcessing": "none",
+  "source": {
+    "path": "output/ai-full-regeneration/masters/ACORAZADA/wl008/master-no-logo-ai-tight.png"
+  },
+  "accepted": [
+    { "finish": "original", "file": "original.png", "generatorId": "exec-0ae0c863-ddf4-4b83-9aee-187a1dbaf5b0", "width": 912, "height": 1725, "sha256": "27e7b16daed7908ea6660084add9d1530f9def4b378c2bd2c9608b231c4fbc21" },
+    { "finish": "negro", "file": "negro.png", "generatorId": "exec-55584839-3286-40fb-a480-161992cee014", "width": 912, "height": 1725, "sha256": "91af89690b98927dec33b836c4af72bbf477d6fbce4bb3438c234280944858aa" },
+    { "finish": "wengue", "file": "wengue.png", "generatorId": "exec-79c4d1ae-045a-4eeb-a231-d706cbf82e1c", "width": 912, "height": 1725, "sha256": "8d36c9d3b14d3912fef24c708362ba2640ca7dcd24c55d543202ecfa711b16f9" },
+    { "finish": "gris-oscuro", "file": "gris-oscuro.png", "generatorId": "exec-d91ce2c8-0bf9-42a8-a92f-aa927e704053", "width": 912, "height": 1725, "sha256": "e53706f8223d3903a5983accd726fc0326b255a217528d771dfe223daf02529d" },
+    { "finish": "antracita", "file": "antracita.png", "generatorId": "exec-2486b816-0ec7-4c57-849c-0547cf9459cb", "width": 912, "height": 1725, "sha256": "034074c9afaa8b157006d4ec817f1c855b4ffbab8bd28c3c13f916858a55dc07" },
+    { "finish": "nogal", "file": "nogal.png", "generatorId": "exec-7088eda0-3b38-4e99-a8e6-00aa9cbeaa54", "width": 912, "height": 1725, "sha256": "c7ed372a338aefa78a89c50f8ab6885df3ed77d51276775207b1aea35317e744" },
+    { "finish": "roble", "file": "roble.png", "generatorId": "exec-3424d2f5-5e36-4e3a-887b-37829f7ec7a2", "width": 912, "height": 1725, "sha256": "aeb2426d13bfd05beeadbad842985493018050172a65dac0a71b0cdda637ffe8" },
+    { "finish": "gris-claro", "file": "gris-claro.png", "generatorId": "exec-c38eb20f-64c3-4495-bc24-b466dcd124ce", "width": 911, "height": 1726, "sha256": "4abc5c9d3a74ae866a82071fb43107417a4064269add76eb3f74b8a140884ae4" },
+    { "finish": "natural", "file": "natural.png", "generatorId": "exec-c5328bc6-ca8e-4ac8-aef1-eb3c792c4d1f", "width": 912, "height": 1725, "sha256": "e47ae771a5ca8e65eee0d11e56f9132a4fe4ad02c00c2fce48e444de3dc9a846" },
+    { "finish": "blanco", "file": "blanco.png", "generatorId": "exec-2928f93b-f256-4906-af95-637494d1d410", "width": 912, "height": 1725, "sha256": "75c496bc3f4ae512d7c507735da6b7d2fe4a7d690fab8edb319a9e1f1ff453a4" }
+  ],
+  "qa": {
+    "path": "QA.json",
+    "status": "PASS",
+    "maximumMarginPixels": 8
+  },
+  "promotion": {
+    "converted": false,
+    "publicWritten": false
+  }
+}

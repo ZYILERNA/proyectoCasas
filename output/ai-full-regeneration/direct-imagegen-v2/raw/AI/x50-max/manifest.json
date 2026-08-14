@@ -1,0 +1,48 @@
+{
+  "schema": "wonly-direct-imagegen-canonical-manifest/v1",
+  "reconciledOn": "2026-08-14",
+  "model": "AI/x50-max",
+  "status": "PASS_10_OF_10",
+  "policy": "NO_LOGO",
+  "activeCount": 10,
+  "reference": {
+    "role": "sole canonical master reference",
+    "path": "output/ai-full-regeneration/masters/AI/x50-max/master-no-logo-ai-tight.png",
+    "sha256": "c127ef78bb1419b73cfb87494670aede4ae37c7268174b42f8ac7b03e975b8c0"
+  },
+  "generation": {
+    "origin": "ImageGen",
+    "mode": "direct independent call per asset from the sole master reference",
+    "independentCallPerAsset": true,
+    "masterOnlyReference": true,
+    "generatedOutputReferenceUsed": false,
+    "logoReferenceUsed": false,
+    "filters": false,
+    "recolor": false,
+    "masks": false,
+    "crop": false,
+    "resize": false,
+    "composite": false
+  },
+  "processing": {
+    "conversionPerformed": false,
+    "publicPromotionPerformed": false
+  },
+  "assets": [
+    { "finish": "original", "file": "original.png", "sha256": "f488aa97bcd927309788b17dc70ebd1fb2b0201a49a30cc6b74939fcc6def1b8" },
+    { "finish": "negro", "file": "negro.png", "sha256": "6fb17e6c01eaaa6e88caf4d9d42332bfcbc57111fc0eca1e2d67325c7ed37ec7" },
+    { "finish": "wengue", "file": "wengue.png", "sha256": "b729f1092ed20fbffce7def32264c589b6de9e54ab9433853502b7bfdf5965c5" },
+    { "finish": "gris-oscuro", "file": "gris-oscuro.png", "sha256": "934d96766044d0058b118ffb5eeaf5f9b257562ffc228aee366247faeeb8d055" },
+    { "finish": "antracita", "file": "antracita.png", "sha256": "6bc15d8e7265c816952de8efa03c4cdb0a4417a6f960abd352ec719f464581c4" },
+    { "finish": "nogal", "file": "nogal.png", "sha256": "d087b3c9c8974490f9cacaa9a69295aeed73873d90dce4eb2c9bce47ced69677" },
+    { "finish": "roble", "file": "roble.png", "sha256": "aa5e14d42b3a3a15a81078515d9b1de73c8a07e15cacb9ac46efccc06680ce85" },
+    { "finish": "gris-claro", "file": "gris-claro.png", "sha256": "4f1f53ad039a6a182d525cde8eb6be56046eb50ab239d23ee400879d5e9b5f18" },
+    { "finish": "natural", "file": "natural.png", "sha256": "497a1e93724eaa537bf9bd5c6f6069dc9085827050e70aea8422cf0c09a1afc4" },
+    { "finish": "blanco", "file": "blanco.png", "sha256": "4579852a837fe583ea2f0d6f02b96544e19fa8ef195e8468eac627db2528a8dd" }
+  ],
+  "evidence": {
+    "documents": ["QA.json"],
+    "hashBasis": "SHA-256 recomputed from each active root PNG",
+    "normalizationNote": "QA explicitly records independent ImageGen calls from the master only, raw ImageGen PNGs, no processing, no conversion, and no public promotion; the reference SHA-256 was recomputed from disk."
+  }
+}

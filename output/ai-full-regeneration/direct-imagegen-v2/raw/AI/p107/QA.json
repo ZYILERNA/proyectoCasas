@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "model": "AI/p107",
+  "policy": "NO_LOGO",
+  "status": "PASS_10_OF_10",
+  "generationMethod": "built-in ImageGen only",
+  "acceptedAssetCount": 10,
+  "totalImageGenCalls": 11,
+  "independence": {
+    "soleReferenceForEveryCall": "output/ai-full-regeneration/masters/AI/p107/master-no-logo-ai-tight.png",
+    "masterSha256": "c4d22487881bb705d4fee5b6d60684f5e26c2751c87eded40fb9f145ba112f15",
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false
+  },
+  "qaMethod": "Manual full-resolution visual review plus read-only pixel-boundary measurement; no image was modified during QA.",
+  "acceptanceRules": {
+    "fullFrameAndThresholdVisible": true,
+    "architectureAndHardwarePreserved": true,
+    "zeroLogoTextOrPseudotext": true,
+    "functionalUnlabeledCircularLockDotsAllowed": true,
+    "targetMarginPixels": "0-8",
+    "relaxedMaximumMarginPixels": 11,
+    "relaxedRule": "Allowed only when the complete frame is visible and door coverage exceeds 98%."
+  },
+  "assets": [
+    {
+      "finish": "original",
+      "file": "original.png",
+      "sha256": "397966ea6e00433a0a807b61ba024e2637bc3dac585d545e1ae64278dc0ebfbe",
+      "dimensions": "868x1812",
+      "whiteMarginPixels": { "left": 8, "right": 8, "top": 10, "bottom": 3 },
+      "attempt": 1,
+      "sourceGeneratedImage": "C:/Users/zhen/.codex/generated_images/019ffb78-af0d-7ba1-9034-e223b0294f3e/exec-ed57c283-bb4c-48f6-a16a-dd02d8fb4a6a.png",
+      "result": "PASS_RELAXED_MARGIN"
+    },
+    {
+      "finish": "negro",
+      "file": "negro.png",
+      "sha256": "b6ef1191ea46cf780f3301498a4c2e6a6e20f4c66455bf48b1568a215ab9b2c8",
+      "dimensions": "868x1811",
+      "whiteMarginPixels": { "left": 0, "right": 2, "top": 0, "bottom": 0 },
+      "attempt": 1,
+      "sourceGeneratedImage": "C:/Users/zhen/.codex/generated_images/019ffb78-af0d-7ba1-9034-e223b0294f3e/exec-cd2fc8ad-e61f-46b2-b7e1-4ffad93f7b94.png",
+      "result": "PASS"
+    },
+    {
+      "finish": "antracita",
+      "file": "antracita.png",
+      "sha256": "f66419b66a3d0d34b329b6b3e2bba2c2d4d5d6303d835f5e92c6c0fb3d56e7fd",
+      "dimensions": "866x1816",
+      "whiteMarginPixels": { "left": 6, "right": 6, "top": 8, "bottom": 6 },
+      "attempt": 1,
+      "sourceGeneratedImage": "C:/Users/zhen/.codex/generated_images/019ffb78-af0d-7ba1-9034-e223b0294f3e/exec-9aa684a9-b9c4-4bef-97bd-ddc1b86ab5e1.png",
+      "result": "PASS"
+    },
+    {
+      "finish": "gris-oscuro",
+      "file": "gris-oscuro.png",
+      "sha256": "a68b663ddacd298043ed8885db97d5333c584a2a27c0a5391e7d83f4c6703384",
+      "dimensions": "868x1811",
+      "whiteMarginPixels": { "left": 4, "right": 5, "top": 6, "bottom": 0 },
+      "attempt": 1,
+      "sourceGeneratedImage": "C:/Users/zhen/.codex/generated_images/019ffb78-af0d-7ba1-9034-e223b0294f3e/exec-83218734-725a-4dc4-af5c-84819c210fbd.png",
+      "result": "PASS"
+    },
+    {
+      "finish": "gris-claro",
+      "file": "gris-claro.png",
+      "sha256": "f5b515f952f92f7bea1c93073a47bb372af5d8501f32daa3cf67e5a40accd41f",
+      "dimensions": "868x1812",
+      "whiteMarginPixels": { "left": 2, "right": 2, "top": 4, "bottom": 3 },
+      "attempt": 1,
+      "sourceGeneratedImage": "C:/Users/zhen/.codex/generated_images/019ffb78-af0d-7ba1-9034-e223b0294f3e/exec-7ba72fb3-adaf-4df0-ac9d-7d48a0967953.png",
+      "result": "PASS"
+    },
+    {
+      "finish": "blanco",
+      "file": "blanco.png",
+      "sha256": "94eadb79716e28748782aa94ee1398e2fb2d3d4e02d3473c0eaf03e2d6ca28c7",
+      "dimensions": "868x1811",
+      "whiteMarginPixels": { "left": 3, "right": 2, "top": 3, "bottom": 0 },
+      "attempt": 1,
+      "sourceGeneratedImage": "C:/Users/zhen/.codex/generated_images/019ffb78-af0d-7ba1-9034-e223b0294f3e/exec-a2e263b9-0fd4-4fd9-9316-9368e7ecbeb5.png",
+      "result": "PASS"
+    },
+    {
+      "finish": "natural",
+      "file": "natural.png",
+      "sha256": "8c9d8134d4ed505b400e66c654e341ebda15101f41e1cc3990db5df371297924",
+      "dimensions": "868x1812",
+      "whiteMarginPixels": { "left": 2, "right": 3, "top": 3, "bottom": 5 },
+      "attempt": 1,
+      "sourceGeneratedImage": "C:/Users/zhen/.codex/generated_images/019ffb78-af0d-7ba1-9034-e223b0294f3e/exec-734803a3-d447-4f73-bde3-b892cb0fee75.png",
+      "result": "PASS"
+    },
+    {
+      "finish": "roble",
+      "file": "roble.png",
+      "sha256": "49d4bea3cc81852066deae6acfe7ef2dc15751344405d7f46e3d414f030ddde7",
+      "dimensions": "868x1812",
+      "whiteMarginPixels": { "left": 7, "right": 10, "top": 9, "bottom": 4 },
+      "attempt": 2,
+      "sourceGeneratedImage": "C:/Users/zhen/.codex/generated_images/019ffb78-af0d-7ba1-9034-e223b0294f3e/exec-62209cd3-50a7-47e5-8e8b-39b346830ad6.png",
+      "result": "PASS_RELAXED_MARGIN"
+    },
+    {
+      "finish": "nogal",
+      "file": "nogal.png",
+      "sha256": "a994c22457dab458b7092e4421c6a8269279a06e7aaa71592a2dcb604335c23a",
+      "dimensions": "868x1812",
+      "whiteMarginPixels": { "left": 1, "right": 2, "top": 3, "bottom": 4 },
+      "attempt": 1,
+      "sourceGeneratedImage": "C:/Users/zhen/.codex/generated_images/019ffb78-af0d-7ba1-9034-e223b0294f3e/exec-771e17b0-c3d1-4ae2-bb82-debf94e8976e.png",
+      "result": "PASS"
+    },
+    {
+      "finish": "wengue",
+      "file": "wengue.png",
+      "sha256": "b232317cdd1aefc743e03fa033a2205b68edaec7e7677c1b25537051bd30a2e8",
+      "dimensions": "868x1811",
+      "whiteMarginPixels": { "left": 0, "right": 2, "top": 0, "bottom": 0 },
+      "attempt": 1,
+      "sourceGeneratedImage": "C:/Users/zhen/.codex/generated_images/019ffb78-af0d-7ba1-9034-e223b0294f3e/exec-74758fab-4374-4dce-8997-c8d962f88a90.png",
+      "result": "PASS"
+    }
+  ],
+  "rejected": [
+    {
+      "finish": "roble",
+      "attempt": 1,
+      "file": "_rejected/roble-attempt1-lock-pseudomark.png",
+      "reason": "Small letter-like/pseudo-brand mark generated on the upper lock face."
+    }
+  ],
+  "publicFilesModified": false,
+  "converted": false
+}

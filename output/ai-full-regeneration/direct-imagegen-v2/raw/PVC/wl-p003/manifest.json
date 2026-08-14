@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "model": "PVC/wl-p003",
+  "policy": "NO_LOGO",
+  "status": "PASS_10_OF_10",
+  "master": {
+    "path": "output/ai-full-regeneration/new-defects/PVC/wl-p003/master-no-logo-ai.png",
+    "sha256": "aade16260172be4040ec0bdd8bd9d9f2394719b2800b00d5ee8ce836285ac3aa"
+  },
+  "method": "Ten independent built-in ImageGen calls; sole master reference for every finish",
+  "deliverables": [
+    "original.png",
+    "negro.png",
+    "wengue.png",
+    "gris-oscuro.png",
+    "antracita.png",
+    "nogal.png",
+    "roble.png",
+    "gris-claro.png",
+    "natural.png",
+    "blanco.png"
+  ],
+  "sourceGeneratedImages": {
+    "original": "C:/Users/zhen/.codex/generated_images/019ffbdc-11ba-7822-962d-f0612d67eebb/exec-c6c86593-39c3-4d16-96dd-448ca5017e1b.png",
+    "negro": "C:/Users/zhen/.codex/generated_images/019ffbdc-11ba-7822-962d-f0612d67eebb/exec-630da953-38a1-4844-a60b-0781fbf4a6e6.png",
+    "wengue": "C:/Users/zhen/.codex/generated_images/019ffbdc-11ba-7822-962d-f0612d67eebb/exec-65bb8506-b739-4b5f-b452-da90320ff879.png",
+    "gris-oscuro": "C:/Users/zhen/.codex/generated_images/019ffbdc-11ba-7822-962d-f0612d67eebb/exec-a792e99e-5120-4c89-94d9-49d34dcff995.png",
+    "antracita": "C:/Users/zhen/.codex/generated_images/019ffbdc-11ba-7822-962d-f0612d67eebb/exec-aabf2f80-ac86-448d-a58e-836a678375b6.png",
+    "nogal": "C:/Users/zhen/.codex/generated_images/019ffbdc-11ba-7822-962d-f0612d67eebb/exec-9556f470-f824-4033-bbcf-a6509ec18a14.png",
+    "roble": "C:/Users/zhen/.codex/generated_images/019ffbdc-11ba-7822-962d-f0612d67eebb/exec-dab283a6-dda7-4941-b61a-aff44ddbcd74.png",
+    "gris-claro": "C:/Users/zhen/.codex/generated_images/019ffbdc-11ba-7822-962d-f0612d67eebb/exec-5d9a3810-6085-4190-ade9-84c50d994870.png",
+    "natural": "C:/Users/zhen/.codex/generated_images/019ffbdc-11ba-7822-962d-f0612d67eebb/exec-2aec29b1-78e3-4928-9780-7937048937f1.png",
+    "blanco": "C:/Users/zhen/.codex/generated_images/019ffbdc-11ba-7822-962d-f0612d67eebb/exec-24cbe014-b14d-4d79-a6dc-ca07f238a37d.png"
+  },
+  "acceptedAssetsAlteredAfterGeneration": false,
+  "publicFilesModified": false
+}

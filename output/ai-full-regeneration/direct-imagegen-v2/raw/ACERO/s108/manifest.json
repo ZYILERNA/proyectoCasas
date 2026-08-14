@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 2,
+  "model": "ACERO/s108",
+  "logoPolicy": "KEEP_WONLY",
+  "generationMode": "built-in-imagegen-direct-with-canonical-logo",
+  "sourcePolicy": "Every active PNG is a separate built-in ImageGen call using only the same S108 no-logo tight master plus the canonical WONLY logo asset. No generated output was referenced.",
+  "pixelProcessing": "none",
+  "sources": [
+    {
+      "role": "architecture-and-hardware-reference",
+      "path": "output/ai-full-regeneration/masters/ACERO/s108/master-no-logo-ai-tight.png",
+      "sha256": "501c78d9a96f3942089447849e59d46bd30e73ecb8d44fd06c2d0ff7c740b173"
+    },
+    {
+      "role": "canonical-logo-reference",
+      "path": "public/images/logo-wonly.webp",
+      "sha256": "f55b5ae0b73967e7395c9e8f16dedb07c7d20e430e03f9c3a289c348e9fb2e1b"
+    }
+  ],
+  "accepted": [
+    { "finish": "original", "file": "original.png", "generatorId": "exec-b925da21-353a-48bf-9563-9872577fae1f", "width": 824, "height": 1909, "sha256": "d0cbda51ece3c4d15a96b2d8b3eb39869a2c16f7248d69a4fe88475406043167" },
+    { "finish": "negro", "file": "negro.png", "generatorId": "exec-138d277d-b522-44e1-9868-5941ec00f219", "width": 824, "height": 1909, "sha256": "d8d63f3e1cfe0cac196566b94003c3124ff4b290208325ab8612d49f401a1607" },
+    { "finish": "wengue", "file": "wengue.png", "generatorId": "exec-a86146bc-ba46-4baa-b4e5-185d5b4cb6d4", "width": 824, "height": 1909, "sha256": "fc01994ef20b8751d6d4cd3d45c69a5cf65fffcb708e95899987af50e702e1dd" },
+    { "finish": "gris-oscuro", "file": "gris-oscuro.png", "generatorId": "exec-4969ccba-a1f6-4469-8936-38fd7a61b2ad", "width": 824, "height": 1909, "sha256": "5965bbee2e14de714ccfd5a76ed8d489073e1c484a1a5a01a11f94f61d75fd97" },
+    { "finish": "antracita", "file": "antracita.png", "generatorId": "exec-1b901cde-4c2a-4ad5-a91f-670745c1dc0a", "width": 824, "height": 1909, "sha256": "3ccbc48cbb6f9541b6df4fd7edc412b10293057ebb3caf7b22faace1539eb1ec" },
+    { "finish": "nogal", "file": "nogal.png", "generatorId": "exec-cc0d06ec-8a2c-4a82-9546-6cca744555a2", "width": 824, "height": 1909, "sha256": "60f95a56af14a6d720a606abf99e0eabb06fdca34b34ab5a9a47f6804cfabb71" },
+    { "finish": "roble", "file": "roble.png", "generatorId": "exec-f064ada9-c8ed-4599-a21d-1990329a0520", "width": 824, "height": 1909, "sha256": "13bf2d58e9009a8fbed5f1d32cabec1dddde0caeb76b6d65d215bddf81cbaaa3" },
+    { "finish": "gris-claro", "file": "gris-claro.png", "generatorId": "exec-d31ecd66-e0d7-4bf7-bcd7-352a2475788d", "width": 824, "height": 1909, "sha256": "51993018021dd8a9812bb6bbe49daa8c5f542ab4357ed8893389cf52941363ec" },
+    { "finish": "natural", "file": "natural.png", "generatorId": "exec-8ae5a493-d173-49f5-a331-24cc3fda928d", "width": 823, "height": 1910, "sha256": "9d0b8f756a7abbb7e21287f15079da909745d413ffbdab73740c8792f4744bdb" },
+    { "finish": "blanco", "file": "blanco.png", "generatorId": "exec-099fd939-a981-4247-ac9a-478a2c7782e7", "width": 823, "height": 1910, "sha256": "cd500e9edcb84d69408ad2b80766bd2214ab7b4ae33377fdb3a2bde15fbb6618" }
+  ],
+  "qa": {
+    "path": "QA.json",
+    "status": "PASS",
+    "maximumMeasuredMarginPixels": 11,
+    "canonicalLogoInstancesPerAsset": 1,
+    "otherTextOrPseudoTextInstancesPerAsset": 0
+  },
+  "promptRecord": "PROMPTS.md",
+  "rejections": "REJECTIONS.md",
+  "promotion": {
+    "stagingOnly": true,
+    "converted": false,
+    "publicWritten": false
+  }
+}

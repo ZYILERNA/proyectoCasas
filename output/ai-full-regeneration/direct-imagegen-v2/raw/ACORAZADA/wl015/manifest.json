@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "model": "ACORAZADA/wl015",
+  "generationMode": "built-in-imagegen-direct-unbranded",
+  "sourcePolicy": "Every active PNG is an independent built-in ImageGen call using only the same no-logo WL015 tight master. No logo reference or generated output was used.",
+  "pixelProcessing": "none",
+  "source": {
+    "path": "output/ai-full-regeneration/masters/ACORAZADA/wl015/master-no-logo-ai-tight.png",
+    "sha256": "8a8e116a2c5b03e0de2660625dbc38120cb0b1d4a1aa4e23eefbc3225425a479"
+  },
+  "accepted": [
+    { "finish": "original", "file": "original.png", "generatorId": "exec-70ed610b-6e30-4a86-9d10-dc991406794a", "width": 857, "height": 1835, "sha256": "7010c4c88f186d48230457b59c8a6a34781dcd36ae1dd74e98b9041f206dd916" },
+    { "finish": "negro", "file": "negro.png", "generatorId": "exec-a7d04b5f-92d7-4ead-80d5-f97a361bcf21", "width": 857, "height": 1835, "sha256": "0b15f4379aac77887bd2e784e874127e650d603d1bf074d3a1b4e1479ffd5353" },
+    { "finish": "wengue", "file": "wengue.png", "generatorId": "exec-7f5755dd-0585-49e9-a42b-78f552eb3396", "width": 857, "height": 1835, "sha256": "2978cc3795d302012220230d2c1ec30673799dc43a57687c4c2c9024055a5f89" },
+    { "finish": "gris-oscuro", "file": "gris-oscuro.png", "generatorId": "exec-1529fb87-65e8-4027-8d45-00bf46ac21de", "width": 857, "height": 1835, "sha256": "82e4c19cd231833d8e0ff0c9354bafd8e9c2403026695219defc835956c17f2f" },
+    { "finish": "antracita", "file": "antracita.png", "generatorId": "exec-1ab27839-2fd1-448b-bef7-55414ad259d6", "width": 857, "height": 1836, "sha256": "4e615c76f5e500fe364db96fc29109a852638aa40df5b51ebc6d406fed820d36" },
+    { "finish": "nogal", "file": "nogal.png", "generatorId": "exec-8f121027-8392-44af-9c1b-5ea2d43cc4d3", "width": 857, "height": 1835, "sha256": "f6bb56258dd20c79fa5e037194c8074c45e7ce2d4827852d975ea29825a5fe1f" },
+    { "finish": "roble", "file": "roble.png", "generatorId": "exec-03d4b437-2f8f-48f5-aecf-62af09576cd9", "width": 857, "height": 1835, "sha256": "baaf701b00c28f80677977db5e6fc25a76df349142196534b22be6e20ea49b6c" },
+    { "finish": "gris-claro", "file": "gris-claro.png", "generatorId": "exec-853ba06d-6470-4af7-9a23-7fab6adb485f", "width": 857, "height": 1835, "sha256": "b25f39b44d0c902c8960649b2bb2ea25f2976230718753322fd41e7262e657b0" },
+    { "finish": "natural", "file": "natural.png", "generatorId": "exec-698f7e15-78d9-4910-9feb-ffb67d41a041", "width": 857, "height": 1835, "sha256": "bcf82775e18b2d493f94a605bc213c07c476b58442d742b9376670b795258a29" },
+    { "finish": "blanco", "file": "blanco.png", "generatorId": "exec-90f8e158-5c94-4559-81e9-e3a81023b920", "width": 858, "height": 1834, "sha256": "de570a02f7c18df2c66e0b9da3176f5a17c615963a1a09646db906012afed55e" }
+  ],
+  "qa": {
+    "path": "QA.json",
+    "status": "PASS",
+    "maximumMarginPixels": 8
+  },
+  "promotion": {
+    "converted": false,
+    "publicWritten": false
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "model": "AI/p101",
+  "generationMode": "built-in-imagegen-direct",
+  "generatedOn": "2026-08-13",
+  "sourcePolicy": "Each accepted finish is an independent direct built-in ImageGen generation based only on the same no-logo P101 master. No generated finish was used as a reference for another finish.",
+  "logoPolicy": "NO_LOGO",
+  "pixelProcessing": "none",
+  "sources": {
+    "master": {
+      "path": "output/ai-full-regeneration/masters/AI/p101/master-no-logo-ai-tight.png",
+      "sha256": "FB08D7EB725A2141BF0FF72856086B675CCACF0E568B7DA3084F21700AABFF84"
+    }
+  },
+  "accepted": [
+    { "finish": "original", "file": "original.png", "width": 823, "height": 1910, "sha256": "2E4E31CFF74E0282DF175A116727E155C824D19E25D87E226D4CFA442FD4188C" },
+    { "finish": "negro", "file": "negro.png", "width": 823, "height": 1911, "sha256": "F80869D5F73820BC60AF105FDCB239EC39047E30F0AF95DB8239318694B81CA6" },
+    { "finish": "wengue", "file": "wengue.png", "width": 825, "height": 1907, "sha256": "0574A35FCC7C72FB8847FD4036225C1B51E305E9BFCEC4FFD713515286912616" },
+    { "finish": "gris-oscuro", "file": "gris-oscuro.png", "width": 824, "height": 1909, "sha256": "0BAED16F60D42BFFB70C5E14348ABC802343FADB9F65CDC3B2E0F3D96DF3615B" },
+    { "finish": "antracita", "file": "antracita.png", "width": 824, "height": 1908, "sha256": "67414AC56BCF0DC6FD999840096AE256995EE0EC9F9651DEC0094B9DAB41B7DE" },
+    { "finish": "nogal", "file": "nogal.png", "width": 825, "height": 1906, "sha256": "5426FA9669019A6447F1908AFABB5C91053B6B3BD7BB7C08CF9940F7DBE48262" },
+    { "finish": "roble", "file": "roble.png", "width": 822, "height": 1913, "sha256": "04EFE9DE542A24A479712255A10E18D0CF94A576BCD17474122544F11C34FAFE" },
+    { "finish": "gris-claro", "file": "gris-claro.png", "width": 823, "height": 1912, "sha256": "6B40DA519DA3F9F80E941EE6FF0749102D6BE032AA4C6306D5866E1C325F0B2C" },
+    { "finish": "natural", "file": "natural.png", "width": 824, "height": 1909, "sha256": "B98565C07437F1495270973C45B1B604F8F75A23A726496FB8739AD88A9E8718" },
+    { "finish": "blanco", "file": "blanco.png", "width": 827, "height": 1902, "sha256": "DA3E8364418EB5937E07EB0CDC48203E895DBB2278A08B3E2C2C61714E57D0A7" }
+  ],
+  "rejectedDirectory": "_rejected",
+  "qa": "QA.json",
+  "promotion": {
+    "converted": false,
+    "publicWritten": false
+  }
+}

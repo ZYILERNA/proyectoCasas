@@ -1,0 +1,48 @@
+{
+  "schema": "wonly-direct-imagegen-canonical-manifest/v1",
+  "reconciledOn": "2026-08-14",
+  "model": "ACERO/y118",
+  "status": "PASS_10_OF_10",
+  "policy": "NO_LOGO",
+  "activeCount": 10,
+  "reference": {
+    "role": "sole canonical master reference",
+    "path": "output/ai-full-regeneration/masters/ACERO/y118/master-no-logo-ai-tight.png",
+    "sha256": "7beb3790a1f74e7b8208103cda2cc43b53b87bf181f978e4bb1bf57178c23b0b"
+  },
+  "generation": {
+    "origin": "built-in ImageGen",
+    "mode": "direct independent call per asset from the sole master reference",
+    "independentCallPerAsset": true,
+    "masterOnlyReference": true,
+    "generatedOutputReferenceUsed": false,
+    "logoReferenceUsed": false,
+    "filters": false,
+    "recolor": false,
+    "masks": false,
+    "crop": false,
+    "resize": false,
+    "composite": false
+  },
+  "processing": {
+    "conversionPerformed": false,
+    "publicPromotionPerformed": false
+  },
+  "assets": [
+    { "finish": "original", "file": "original.png", "sha256": "9093b307ae6a054569c505f6818e200c7e408263213f407b0bd7ddac85fdd3db" },
+    { "finish": "negro", "file": "negro.png", "sha256": "b7ab2e4cdb2250e2ef51fade69319ccc8918481282ec3084e4b21815e2512b7a" },
+    { "finish": "wengue", "file": "wengue.png", "sha256": "ad7fb23c6226048b020af312456983ada56f71cf6bad1f085bee1508f4870873" },
+    { "finish": "gris-oscuro", "file": "gris-oscuro.png", "sha256": "ebed4205664034f5a566170e3ff2e0de19d5a9ff56a1dcd54fd621aeaa8719f2" },
+    { "finish": "antracita", "file": "antracita.png", "sha256": "254e5588fd52612250672db77c3d27ff6bcda45a54a42a37d0dfb07ea9ccf4eb" },
+    { "finish": "nogal", "file": "nogal.png", "sha256": "1af4cadb37e2b31a6ffb4f1fed1bbf8eaecb0950fdddcaf1406fe67548aa1cba" },
+    { "finish": "roble", "file": "roble.png", "sha256": "16131ca09d097d56ecdec682d8396d538d69638bc3a4bce277aece59928a2654" },
+    { "finish": "gris-claro", "file": "gris-claro.png", "sha256": "5b1b182113ee397a6f0b712ec853f6b57c1f124803c095c818137d7fff2dfa55" },
+    { "finish": "natural", "file": "natural.png", "sha256": "b85682c7b6e27e12dbd17bb9fcd8966736177ce52e1b9ca88df65bdb2ce15db0" },
+    { "finish": "blanco", "file": "blanco.png", "sha256": "4e99d2a69da4ce7eeb4d183159c14f303aa2eb518e0d2a6ef0bb715913b27941" }
+  ],
+  "evidence": {
+    "documents": ["QA.json", "PROMPTS.md"],
+    "hashBasis": "SHA-256 recomputed from each active root PNG and matched to QA assets",
+    "normalizationNote": "The reference SHA-256 was recomputed from the sole master recorded in QA/PROMPTS."
+  }
+}
