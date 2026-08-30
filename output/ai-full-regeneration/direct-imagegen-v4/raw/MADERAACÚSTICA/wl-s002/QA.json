@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-s002",
+  "policy": "NO_LOGO_MINIMAL_WHITE_MARGIN",
+  "status": "PASS_9_OF_9",
+  "generationMethod": "built-in ImageGen only",
+  "requestedFinishCount": 9,
+  "acceptedAssetCount": 9,
+  "totalIndependentImageGenCalls": 16,
+  "acceptedIndependentCalls": 9,
+  "rejectedAttempts": 7,
+  "independence": {
+    "soleReferenceForEveryCall": "public/images/PUERTAS/MADERAACÚSTICA/wl-s002/original.webp",
+    "referenceSha256Before": "baec2ce7d7c23ba77e0c90a17f2298c6eb0f9fc156e9c03a537210d29e2491de",
+    "referenceSha256After": "baec2ce7d7c23ba77e0c90a17f2298c6eb0f9fc156e9c03a537210d29e2491de",
+    "referenceUnchanged": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "conversionUsed": false
+  },
+  "qaMethod": "Native-detail visual inspection of every accepted candidate against the sole canonical original, plus read-only SHA-256, PNG dimensions, RGB<245 edge-margin, subject-fill, aspect-ratio, unique-hash and generator-source byte-equality checks. No PNG was altered during QA.",
+  "acceptanceRules": {
+    "completeOuterFrameAndDoorBottomVisible": true,
+    "straightOnTallNarrowComposition": true,
+    "signatureGeometryPreserved": "exactly one tall inset panel with its complete double moulding and no extra panels, seams, glass or decoration",
+    "hardwarePreserved": "exactly one rectangular horizontal lever on one square rosette, exactly one separate square escutcheon below, and exactly two hinges on the right",
+    "finishAppliedWithoutStructuralRedesign": true,
+    "zeroLogoTextBadgeWatermarkOrPseudotext": true,
+    "noPostGenerationPixelProcessing": true,
+    "aspectRatio": {
+      "canonical": 0.377064,
+      "acceptedMinimum": 0.377081,
+      "acceptedMaximum": 0.377266,
+      "maximumAcceptedAbsoluteRelativeDeltaPercent": 0.053526,
+      "allAcceptedWithinOnePercent": true
+    },
+    "minimalWhiteMargin": {
+      "goal": "make the complete door as large as possible in the canvas with the smallest safe white border",
+      "measurementOrder": ["left", "top", "right", "bottom"],
+      "threshold": "RGB<245",
+      "normalTargetPixels": "2-8 ideal; up to 12 accepted after native inspection",
+      "maximumMeasuredAcceptedPixels": 11,
+      "bottomZeroPixelException": "gris-claro and blanco measure 0 px at the lower edge. Native-detail inspection confirms the complete silhouette and lower moulding, and the canonical original also reaches the bottom edge; this is consistent with the explicit minimum-margin requirement.",
+      "noCropOrResizeUsedToAchieveFraming": true
+    }
+  },
+  "assets": [
+    {"finish":"negro","file":"negro.png","generatorId":"exec-f9fb1b07-b182-4cbb-824b-df8d9c726054","sha256":"183e2ff14798e47bbe4f8dd75f77978b9c7e4ea067a8f88d61b4c85d858e3e63","dimensions":"770x2042","marginsRgb245":[10,9,10,6],"result":"PASS_ATTEMPT_2"},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-b2c7e385-5964-47f5-b57d-dbbea3d7459c","sha256":"920c2019c62e51a7343d1fcb7acaf18e6a61bcb92499765dcfdf13d7c47dcf2a","dimensions":"770x2042","marginsRgb245":[8,7,11,8],"result":"PASS_ATTEMPT_1"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-246abb61-25bf-4f43-a0a5-e6c41315dfbc","sha256":"8ab1320d23791ae9a8387c723542e6b78afbef51518d57009ba76a1c4d62813b","dimensions":"770x2041","marginsRgb245":[9,10,10,8],"result":"PASS_ATTEMPT_2"},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-89cb5b24-9545-435a-bed5-c50338b0b5f9","sha256":"0e6e2d8fb4337321cfb9092f2a8f76eaff301f83105faa27752581c86f1a84b7","dimensions":"770x2042","marginsRgb245":[11,7,11,7],"result":"PASS_ATTEMPT_1"},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-bf5e3482-0941-40a8-a15b-eb0cc5aa8b71","sha256":"2bcbb1cb362415b18c2236efa2f17a325b79f0230e75e48647550c9beaae6727","dimensions":"770x2041","marginsRgb245":[9,7,9,5],"result":"PASS_ATTEMPT_2"},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-1708c2bd-27da-4740-8c62-329e5ad0c20e","sha256":"cee888d2e9544408afbd43ec1dd7be0bc3ec997a267c378e4b246b1e2abff266","dimensions":"770x2041","marginsRgb245":[7,6,8,7],"result":"PASS_ATTEMPT_2"},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-7ff1a9d4-be18-4779-99d3-747cc5cccb3f","sha256":"86b00a6b69b2037843acb6c1694b823a5c9dc679817b388694dd97096264ce36","dimensions":"770x2042","marginsRgb245":[4,6,5,0],"result":"PASS_ATTEMPT_4_NATIVE_COMPLETE_BOTTOM_EDGE_EXCEPTION"},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-990779c3-bb9b-44ae-b77c-8aadfe881f51","sha256":"d8061e5b17fb8a728236b5ef408d3f6878beca5b05591e4d830f609cb596d478","dimensions":"770x2042","marginsRgb245":[11,8,10,8],"result":"PASS_ATTEMPT_1"},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-33be226f-2de9-4961-98e9-8a457e3d2310","sha256":"8a602112118c15281b3beae6136391d80a68aebff66d3ebd8d4ddba6abeb7ed1","dimensions":"770x2042","marginsRgb245":[5,7,7,0],"result":"PASS_ATTEMPT_1_NATIVE_COMPLETE_BOTTOM_EDGE_EXCEPTION"}
+  ],
+  "rejectedAttemptMap": {
+    "negro": [1],
+    "wengue": [],
+    "gris-oscuro": [1],
+    "antracita": [],
+    "nogal": [1],
+    "roble": [1],
+    "gris-claro": [1, 2, 3],
+    "natural": [],
+    "blanco": []
+  },
+  "summary": {
+    "pass": 9,
+    "fail": 0,
+    "uniqueAcceptedHashes": 9,
+    "generatorByteEqualityPass": 16,
+    "logoTextOrPseudotextInstancesPerAcceptedAsset": 0,
+    "visualInspection": "PASS: every accepted finish preserves the complete frame, one tall double-moulded panel, one rectangular lever with square rosette, one separate square escutcheon and exactly two right-side hinges, with no logo or text.",
+    "originalModified": false,
+    "publicFilesModified": false,
+    "converted": false,
+    "promoted": false
+  }
+}

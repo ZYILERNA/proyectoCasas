@@ -1,0 +1,75 @@
+{
+  "model": "MADERAACÚSTICA/wl-s003",
+  "status": "PASS_9_OF_9",
+  "checkedAt": "2026-08-29T17:59:25+02:00",
+  "policy": "NO_LOGO_MINIMAL_WHITE_MARGIN",
+  "reference": {
+    "sha256": "b4a10e6a9ba6b1efd159d7411b609202948600f2f8465b5a3748486212070b73",
+    "unchanged": true,
+    "dimensions": "381x1027",
+    "marginsRgb245": [5, 6, 1, 0]
+  },
+  "generationAudit": {
+    "builtInImageGenOnly": true,
+    "independentCalls": 54,
+    "accepted": 9,
+    "rejectedOrRetiredPreserved": 45,
+    "historicalCalls": 39,
+    "minimumMarginRevisionCalls": 15,
+    "canonicalOriginalWasSoleReferenceForEveryCall": true,
+    "filtersUsed": false,
+    "recolorScriptsUsed": false,
+    "masksUsed": false,
+    "cropUsed": false,
+    "resizeUsed": false,
+    "compositeUsed": false,
+    "formatConversionUsed": false,
+    "byteEqualityGeneratorToWorkspace": "54/54",
+    "uniqueGeneratorIds": "54/54",
+    "uniqueCallHashes": "54/54",
+    "uniqueAcceptedHashes": "9/9",
+    "revisionPromptsRecoveredFromRollout": "15/15"
+  },
+  "signature": {
+    "result": "PASS",
+    "required": [
+      "one complete squared rectangular casing with top rail and two vertical posts",
+      "one plain unpanelled slab",
+      "one narrow dark recessed full-height strip beside the left slab edge",
+      "exactly one dark straight horizontal lever on one round rosette at left",
+      "exactly one separate round key escutcheon below",
+      "no extra panels, grooves, hinges, accessories, text, branding or logo"
+    ],
+    "nativeDetailInspection": "All nine accepted PNGs preserve the complete signature, hardware count and placement, full silhouette, pure-white catalog context and NO_LOGO policy."
+  },
+  "accepted": [
+    {"finish":"negro","generatorId":"exec-897bf1e6-5937-4c96-9538-94048f6863d9","marginsRgb245":[10,7,10,0],"result":"PASS"},
+    {"finish":"wengue","generatorId":"exec-74603965-41d4-4c5d-91e2-fb7814b61c2b","marginsRgb245":[12,9,10,0],"result":"PASS"},
+    {"finish":"gris-oscuro","generatorId":"exec-40456ffb-4373-442c-b4fb-6450eb9258e0","marginsRgb245":[0,0,0,0],"result":"PASS_INTENTIONAL_CONTACT_NATIVE_CONTOUR_COMPLETE"},
+    {"finish":"antracita","generatorId":"exec-2f9c3a2c-5e97-47c9-b355-6c03fe22803c","marginsRgb245":[4,2,6,0],"result":"PASS"},
+    {"finish":"nogal","generatorId":"exec-38675c90-8070-401d-b6d5-6f5b143a6281","marginsRgb245":[12,10,12,0],"result":"PASS"},
+    {"finish":"roble","generatorId":"exec-33b736a6-fc7d-4834-9ff6-6769bfaf58ab","marginsRgb245":[10,12,12,0],"result":"PASS"},
+    {"finish":"gris-claro","generatorId":"exec-6c758465-c0c5-4a3e-9dc9-d67e321a200d","marginsRgb245":[0,0,0,0],"result":"PASS_INTENTIONAL_CONTACT_NATIVE_CONTOUR_COMPLETE"},
+    {"finish":"natural","generatorId":"exec-0dc7a07e-3cea-42ff-8616-e1300797e87f","marginsRgb245":[9,0,0,0],"result":"PASS_INTENTIONAL_TOP_RIGHT_BOTTOM_CONTACT_NATIVE_CONTOUR_COMPLETE"},
+    {"finish":"blanco","generatorId":"exec-ccb67a86-1f64-4715-8ae2-96a766d7befb","marginsRgb245":[2,5,2,0],"result":"PASS"}
+  ],
+  "marginDecision": {
+    "ideal": "0-6 pixels where ImageGen can preserve the exact object",
+    "normalHardCap": 12,
+    "maximumAccepted": 12,
+    "exceptions": [],
+    "contactDecisions": [
+      "gris-claro and gris-oscuro: [0,0,0,0] accepted only after native-detail inspection confirmed complete header corners, jamb contours, reveal and both endpoints",
+      "natural: [9,0,0,0] accepted only after native-detail inspection confirmed complete top/right contours and both bottom endpoints",
+      "bottom=0 remains canonical behavior: the source itself measures [5,6,1,0]"
+    ]
+  },
+  "final": {
+    "result": "PASS",
+    "publicWritten": false,
+    "originalModified": false,
+    "converted": false,
+    "committed": false,
+    "pushed": false
+  }
+}

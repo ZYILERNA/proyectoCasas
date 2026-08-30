@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-s008",
+  "policy": "NO_LOGO_MINIMAL_WHITE_MARGIN",
+  "status": "PASS_9_OF_9",
+  "generationMethod": "built-in ImageGen only",
+  "requestedFinishCount": 9,
+  "acceptedAssetCount": 9,
+  "totalIndependentImageGenCalls": 20,
+  "acceptedIndependentCalls": 9,
+  "rejectedAttempts": 11,
+  "independence": {
+    "soleReferenceForEveryCall": "public/images/PUERTAS/MADERAACÚSTICA/wl-s008/original.webp",
+    "referenceSha256Before": "4500a53119d7815d351dcc14020b6579f5c374f299ff8c7cb203e3f1299a6b6c",
+    "referenceSha256After": "4500a53119d7815d351dcc14020b6579f5c374f299ff8c7cb203e3f1299a6b6c",
+    "referenceUnchanged": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "conversionUsed": false
+  },
+  "qaMethod": "Native-detail visual inspection of every accepted candidate against the sole canonical original, plus read-only SHA-256, PNG dimensions, edge-margin, subject-fill, aspect-ratio, unique-hash and generator-source byte-equality checks. RGB<245 was used for all finishes except white, where RGB<250 detects the nearly white outer edge. No PNG was altered during QA.",
+  "acceptanceRules": {
+    "completeOuterFrameAndDoorBottomVisible": true,
+    "straightOnTallNarrowComposition": true,
+    "signatureGeometryPreserved": "two square outer side posts projecting above the straight top crossbar and extending to the bottom; one inner beveled lintel and dark left reveal; one smooth plain leaf with one single fine tall rectangular perimeter outline; one narrow far-right cluster of close parallel vertical flutes with source count, spacing, height and position; no extra panels, grooves, glass or decoration",
+    "hardwarePreserved": "one slim outlined rectangular module interrupting the left side of the fine perimeter outline, exactly one short dark horizontal lever on one round rosette and exactly one separate dark round key cylinder below, at the source position and scale",
+    "finishAppliedWithoutStructuralRedesign": true,
+    "zeroLogoTextBadgeWatermarkOrPseudotext": true,
+    "noPostGenerationPixelProcessing": true,
+    "aspectRatio": {
+      "canonical": 0.370117,
+      "acceptedMinimum": 0.370029,
+      "acceptedMaximum": 0.371054,
+      "maximumAcceptedAbsoluteRelativeDeltaPercent": 0.253088,
+      "allAcceptedWithinOnePercent": true
+    },
+    "minimalWhiteMargin": {
+      "goal": "make the complete door as large as possible in the canvas with the smallest safe continuous white border",
+      "measurementOrder": ["left", "top", "right", "bottom"],
+      "standardThreshold": "RGB<245",
+      "whiteFinishThreshold": "RGB<250 because the matte-white outer frame is nearly the same value as the pure-white background",
+      "normalTargetPixels": "2-6 ideal; up to 12 accepted after native inspection",
+      "minimumMeasuredAcceptedPixels": 4,
+      "maximumMeasuredAcceptedPixels": 12,
+      "acceptedEdgeContactCount": 0,
+      "acceptedExceptionCount": 0,
+      "noCropOrResizeUsedToAchieveFraming": true
+    }
+  },
+  "assets": [
+    {"finish":"negro","file":"negro.png","generatorId":"exec-dd70b5b8-afc5-4346-8343-d74d83d2beac","sha256":"2e53b8e89b132ba2502a6b07d797370f3360be7f67c9e36771c1091c1aa1ae34","dimensions":"763x2060","marginThreshold":"RGB<245","margins":[11,4,12,5],"result":"PASS_ATTEMPT_1"},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-4c723b32-0157-442a-8bc5-f4d4a0bba3bd","sha256":"954fe4c3804074002e2dc450ca45a531e6056106b711abf9ab422a720742df9b","dimensions":"763x2062","marginThreshold":"RGB<245","margins":[8,8,11,5],"result":"PASS_ATTEMPT_2"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-5da23ce4-e48f-4cf9-ac39-69863c94f09d","sha256":"ea3ce7dad14cc8daf0aa5bad52ad5b98b1be74ea6f52c7a58fce3077f2c42218","dimensions":"763x2061","marginThreshold":"RGB<245","margins":[10,7,10,5],"result":"PASS_ATTEMPT_1"},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-40e3e8c8-6536-4786-a284-95fd1d2be920","sha256":"63d1ece918d33317656ff713a9df264ec337ea9cd5ca49d6275196e654310aa7","dimensions":"763x2061","marginThreshold":"RGB<245","margins":[5,7,12,6],"result":"PASS_ATTEMPT_1"},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-6e24b0f2-efd4-4a9f-b1a8-185e3250ad46","sha256":"bcca88c2b011a1cf6caf5f3fa138f7e3047c33907fecfabee987a7fbb8b66f32","dimensions":"763x2061","marginThreshold":"RGB<245","margins":[6,7,10,6],"result":"PASS_ATTEMPT_2"},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-ced52b91-1226-4191-a0d8-32ae27a0a104","sha256":"4a9a2e36296e4f2defb0529a2603077236d0b442d74bc616ef66811088ae382a","dimensions":"764x2059","marginThreshold":"RGB<245","margins":[10,9,10,5],"result":"PASS_ATTEMPT_5"},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-89cc1049-9ec6-4c25-ae1e-a3e503e237d0","sha256":"38c4920adc676508e26ba8f14997a79a713ac9c3be6c8d4fcd7d5023064ceb7f","dimensions":"763x2060","marginThreshold":"RGB<245","margins":[5,7,11,5],"result":"PASS_ATTEMPT_1"},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-ba1705b3-a9fe-4520-9aef-c3e8a589709e","sha256":"eff22ae36ad876c005e9c2e9e585863dbeddd5388aa8f4095624688604c238eb","dimensions":"763x2060","marginThreshold":"RGB<245","margins":[5,6,12,6],"result":"PASS_ATTEMPT_1"},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-e4285ec3-4e6d-493b-8f2b-b8573466451d","sha256":"6677f4d033f6a6561d9404f6eec1ea708491860a88c1c7fd308a67b693e9f486","dimensions":"763x2060","marginThreshold":"RGB<250","margins":[10,6,11,6],"result":"PASS_ATTEMPT_6_WHITE_EDGE_THRESHOLD"}
+  ],
+  "rejectedAttemptMap": {
+    "negro": [],
+    "wengue": [1],
+    "gris-oscuro": [],
+    "antracita": [],
+    "nogal": [1],
+    "roble": [1, 2, 3, 4],
+    "gris-claro": [],
+    "natural": [],
+    "blanco": [1, 2, 3, 4, 5]
+  },
+  "summary": {
+    "pass": 9,
+    "fail": 0,
+    "uniqueAcceptedHashes": 9,
+    "generatorByteEqualityPass": 20,
+    "logoTextOrPseudotextInstancesPerAcceptedAsset": 0,
+    "visualInspection": "PASS: all nine accepted finishes preserve the complete two-post frame, straight crossbar, beveled lintel, plain outlined leaf, narrow right flute cluster, one round-rosette lever and one separate key cylinder, with no logo or text.",
+    "originalModified": false,
+    "publicFilesModified": false,
+    "converted": false,
+    "promoted": false
+  }
+}

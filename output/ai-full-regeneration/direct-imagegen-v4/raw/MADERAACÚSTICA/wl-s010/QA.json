@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-s010",
+  "policy": "NO_LOGO_MINIMAL_WHITE_MARGIN",
+  "status": "PASS_9_OF_9",
+  "generationMethod": "built-in ImageGen only",
+  "requestedFinishCount": 9,
+  "acceptedAssetCount": 9,
+  "totalIndependentImageGenCalls": 44,
+  "rejectedAttempts": 35,
+  "independence": {
+    "soleReferenceForEveryCall": "public/images/PUERTAS/MADERAACÚSTICA/wl-s010/original.webp",
+    "referenceSha256Before": "9d45873c7db5160c4af2d89325ba7befefc5d190805e2f8740d2331457b82de1",
+    "referenceSha256After": "9d45873c7db5160c4af2d89325ba7befefc5d190805e2f8740d2331457b82de1",
+    "referenceUnchanged": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "conversionUsed": false,
+    "pixelProcessingUsed": false
+  },
+  "qaMethod": "Native-detail visual inspection against original.webp plus read-only SHA-256, PNG dimensions, RGB<245 edge-margin, subject-fill, aspect-ratio, unique-hash and generator-source byte-equality checks.",
+  "acceptanceRules": {
+    "completeOuterGeometryVisible": true,
+    "signatureGeometryPreserved": "straight square frame and top; inset header; deep left reveal; plain flat leaf; one thin vertical routed line with exactly two short kinked diagonal segments at handle height",
+    "hardwarePreserved": "exactly one dark slim right-pointing lever on a round rosette and one separate round cylinder below with the tiny metallic key detail",
+    "zeroLogoTextBadgeWatermarkOrPseudotext": true,
+    "noPostGenerationPixelProcessing": true,
+    "aspectRatio": {
+      "canonical": 0.3694444444,
+      "maximumAcceptedAbsoluteRelativeDeltaPercent": 0.2068,
+      "allAcceptedWithinOnePercent": true
+    },
+    "minimalWhiteMargin": {
+      "targetPixelsPerSide": "0-6",
+      "normalMaximumPixels": 12,
+      "maximumMeasuredNonzeroMarginRgb245Pixels": 12,
+      "minimumAcceptedSubjectFillWidthPercent": 96.8545,
+      "minimumAcceptedSubjectFillHeightPercent": 99.2237,
+      "greaterThanTwelveAccepted": false,
+      "nativeGenerationConstraint": "The 0-6 px target was repeated across retries, but the safest geometry-faithful native outputs retained 8-12 px at some sides. Post-generation cropping and resizing were forbidden.",
+      "edgeContactException": "Negro attempt 1, antracita attempt 2 and nogal attempt 2 measure 0 px only at the bottom. Each finish was evaluated after 3, 3 and 4 independent calls respectively. Native-detail inspection confirmed both complete outer post tips and the same lower termination as the canonical original, whose measured bottom margin is also 0 px.",
+      "fullFourEdgeContactAccepted": false
+    }
+  },
+  "assets": [
+    {"finish":"negro","file":"negro.png","sha256":"87ef4e08d221f534e2831d2bfa5c5e3136544222ae1ca50b278f173454034e1f","dimensions":"763x2061","marginsRgb245":[9,8,10,0],"result":"PASS_NATIVE_BOTTOM_EDGE_CERTIFIED_AFTER_3_CALLS"},
+    {"finish":"wengue","file":"wengue.png","sha256":"ece26daa83e20ac4d030d89cd849e9b0c8da453bb7650eabbb83db5a4a5a6a11","dimensions":"763x2062","marginsRgb245":[12,10,10,4],"result":"PASS_ATTEMPT_2"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","sha256":"7a94869262a832660af272e0c653e63fa014bef67f556c5f1894040c814e5bd0","dimensions":"763x2061","marginsRgb245":[9,9,10,6],"result":"PASS_ATTEMPT_8"},
+    {"finish":"antracita","file":"antracita.png","sha256":"c59e2e19d8487540fcb0ec0f9fed138e68e1695b6099092bbf651bd926b6ded6","dimensions":"763x2062","marginsRgb245":[12,8,12,0],"result":"PASS_NATIVE_BOTTOM_EDGE_CERTIFIED_AFTER_3_CALLS"},
+    {"finish":"nogal","file":"nogal.png","sha256":"21862f06432baf28b6a730c3805578c593c1e46f3cdd44ae6c82b0f94732a137","dimensions":"763x2061","marginsRgb245":[12,8,11,0],"result":"PASS_NATIVE_BOTTOM_EDGE_CERTIFIED_AFTER_4_CALLS"},
+    {"finish":"roble","file":"roble.png","sha256":"bfca36cfba5d5422cff5acd7584752f4ea3ceccf3c564f0d7e7fae89a95bc564","dimensions":"763x2062","marginsRgb245":[12,9,12,5],"result":"PASS_ATTEMPT_2"},
+    {"finish":"gris-claro","file":"gris-claro.png","sha256":"56cf062add8faed7e6e668800bd086f5b3226cad5af55e26e3430ebcd4bff5f3","dimensions":"763x2061","marginsRgb245":[12,11,12,5],"result":"PASS_ATTEMPT_4"},
+    {"finish":"natural","file":"natural.png","sha256":"7134b447a06c6da764b6d86aa810f72d65b319a9ac04eae91d782fb1dbeef700","dimensions":"763x2061","marginsRgb245":[12,9,12,5],"result":"PASS_ATTEMPT_11"},
+    {"finish":"blanco","file":"blanco.png","sha256":"f913f16e68283d0f9f2e10069576a2025437dcbfdbc3ab0186be91b74f27d04e","dimensions":"763x2061","marginsRgb245":[12,8,12,3],"result":"PASS_ATTEMPT_1"}
+  ],
+  "visualInspection": {
+    "detail": "original",
+    "completeSilhouettes": 9,
+    "geometryAndHardwarePass": 9,
+    "noLogoTextOrWatermarkPass": 9,
+    "noExtraHardwarePanelsOrDecorationPass": 9,
+    "bottomEdgeContactsCertified": ["negro", "antracita", "nogal"]
+  },
+  "summary": {
+    "pass": 9,
+    "fail": 0,
+    "uniqueAcceptedHashes": 9,
+    "generatorByteEqualityPass": 44,
+    "allGeneratorCallsAccountedFor": true,
+    "originalModified": false,
+    "publicFilesModified": false,
+    "converted": false,
+    "promoted": false
+  }
+}

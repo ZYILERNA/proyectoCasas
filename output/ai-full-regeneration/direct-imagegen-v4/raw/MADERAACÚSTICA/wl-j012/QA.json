@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-j012",
+  "policy": "NO_LOGO_MINIMAL_WHITE_MARGIN",
+  "status": "PASS_9_OF_9",
+  "generationMethod": "built-in ImageGen only",
+  "requestedFinishCount": 9,
+  "acceptedAssetCount": 9,
+  "totalIndependentImageGenCalls": 25,
+  "rejectedAttempts": 16,
+  "independence": {
+    "soleReferenceForEveryCall": "public/images/PUERTAS/MADERAACÚSTICA/wl-j012/original.webp",
+    "referenceSha256Before": "3c72925ce77170138cb19c5198b2acc4b0b747a4bb03024f8a0b0324e1684323",
+    "referenceSha256After": "3c72925ce77170138cb19c5198b2acc4b0b747a4bb03024f8a0b0324e1684323",
+    "referenceUnchanged": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "conversionUsed": false
+  },
+  "qaMethod": "Native-detail visual inspection against the canonical original plus read-only SHA-256, PNG dimensions, RGB245 edge-margin, subject-fill, aspect-ratio, unique-hash and generator-source byte-equality checks.",
+  "acceptanceRules": {
+    "completeOuterFrameAndDoorBottomVisible": true,
+    "signatureGeometryPreserved": "one dark full-height vertical accent band close to the left, exactly two slim parallel full-height trim lines immediately to its right, and exactly one long slim dark horizontal recessed inlay at handle height across the broad plain leaf",
+    "hardwarePreserved": "exactly one dark slim horizontal lever on one round rosette and one separate dark round key cylinder below on the left",
+    "zeroLogoTextBadgeWatermarkOrPseudotext": true,
+    "noPostGenerationPixelProcessing": true,
+    "aspectRatio": {
+      "canonical": 0.37054,
+      "maximumAcceptedAbsoluteRelativeDeltaPercent": 0.138746,
+      "allAcceptedWithinOnePercent": true
+    },
+    "minimalWhiteMargin": {
+      "maximumMeasuredMarginRgb245Pixels": 12,
+      "minimumAcceptedSubjectFillWidthPercent": 96.855,
+      "minimumAcceptedSubjectFillHeightPercent": 99.369,
+      "edgeContactReview": "Wengue, gris-oscuro, antracita and gris-claro contain RGB245 bounding-box contact on at least one edge. Each was inspected natively; accepted versions retain the complete intended frame geometry and bottom ends. Unsafe or visibly clipped edge-contact attempts remain in _rejected/."
+    }
+  },
+  "assets": [
+    {"finish":"negro","file":"negro.png","sha256":"ee7a11827af1c5d80eda5364b4a09c66f8fef66e14896b9e38347b7b21186e97","dimensions":"764x2059","marginsRgb245":[12,7,10,4],"result":"PASS"},
+    {"finish":"wengue","file":"wengue.png","sha256":"aba481c958d7f971f85e1021f210cecc586475cc5a8afeb5bf5363613737ced5","dimensions":"764x2059","marginsRgb245":[11,0,10,6],"result":"PASS_ATTEMPT_4"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","sha256":"fbbbfbca91fb6962731898ee3f4463f7ccf3b2580ff8d2746cda464be2b5b922","dimensions":"763x2060","marginsRgb245":[5,2,5,0],"result":"PASS_ATTEMPT_2"},
+    {"finish":"antracita","file":"antracita.png","sha256":"76adb18a0ef743b557a8aa093a833336631ccb07b9d2ba8a9a43addab3792d79","dimensions":"764x2059","marginsRgb245":[0,0,0,0],"result":"PASS_ATTEMPT_4_NATIVE_COMPLETE"},
+    {"finish":"nogal","file":"nogal.png","sha256":"e4aba18a67fbbd3b39fd9e7ca66f75823e18f039ec76fb7f09d6aad9b84371ef","dimensions":"763x2060","marginsRgb245":[12,6,12,6],"result":"PASS"},
+    {"finish":"roble","file":"roble.png","sha256":"2842061b91c87c814e97def2ac692558912d4335a8d8f90ec7354aa1011f2d49","dimensions":"763x2060","marginsRgb245":[8,6,10,7],"result":"PASS"},
+    {"finish":"gris-claro","file":"gris-claro.png","sha256":"5b89a0c9a92aa778a8cb648125da125851e92592ff4bbdfce9e495d7edfad99d","dimensions":"764x2059","marginsRgb245":[4,3,3,0],"result":"PASS_ATTEMPT_5_NATIVE_COMPLETE"},
+    {"finish":"natural","file":"natural.png","sha256":"b28d2c4339cf4b7f638bfe9b026cb1161a08f5cd97110610827677c230f9b7cc","dimensions":"764x2059","marginsRgb245":[12,5,12,3],"result":"PASS"},
+    {"finish":"blanco","file":"blanco.png","sha256":"453efa2bf77382a7b2f325bdc6d6e09827bcf6a694d649376e555e3c6e95e2b5","dimensions":"764x2059","marginsRgb245":[4,2,3,5],"result":"PASS"}
+  ],
+  "summary": {
+    "pass": 9,
+    "fail": 0,
+    "uniqueAcceptedHashes": 9,
+    "generatorByteEqualityPass": 9,
+    "originalModified": false,
+    "publicFilesModified": false,
+    "converted": false,
+    "promoted": false
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-j010",
+  "policy": "NO_LOGO_MINIMAL_WHITE_MARGIN",
+  "status": "PASS_9_OF_9",
+  "generationMethod": "built-in ImageGen only",
+  "requestedFinishCount": 9,
+  "acceptedAssetCount": 9,
+  "totalIndependentImageGenCalls": 56,
+  "rejectedAttempts": 47,
+  "independence": {
+    "soleReferenceForEveryCall": "public/images/PUERTAS/MADERAACÚSTICA/wl-j010/original.webp",
+    "referenceSha256Before": "8f48250dbec53f26f56feabc3741d917a263ff547384fcd830afd22cf8b7a498",
+    "referenceSha256After": "8f48250dbec53f26f56feabc3741d917a263ff547384fcd830afd22cf8b7a498",
+    "referenceUnchanged": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "conversionUsed": false
+  },
+  "qaMethod": "Native-detail visual inspection against the canonical original plus read-only SHA-256, PNG dimensions, RGB edge-margin, subject-fill, aspect-ratio, unique-hash and generator-source byte-equality checks.",
+  "acceptanceRules": {
+    "completeOuterGeometryVisible": true,
+    "signatureGeometryPreserved": "very tall narrow square-post outer frame with straight top lintel; plain flat single leaf; deep dark vertical reveal immediately inside the left frame; exactly one thin paired horizontal routed detail at handle height with its short angular step near the left and straight continuation to the right",
+    "hardwarePreserved": "exactly one dark slim lever pointing right on a round rosette and one separate round key cylinder below on the left",
+    "zeroLogoTextBadgeWatermarkOrPseudotext": true,
+    "noPostGenerationPixelProcessing": true,
+    "aspectRatio": {
+      "canonical": 0.3714547118,
+      "maximumAcceptedAbsoluteRelativeDeltaPercent": 0.1201,
+      "allAcceptedWithinOnePercent": true
+    },
+    "minimalWhiteMargin": {
+      "idealPixels": "2-8",
+      "maximumAllowedPixels": 12,
+      "maximumMeasuredNonzeroMarginRgb245Pixels": 12,
+      "minimumAcceptedSubjectFillWidthPercent": 96.99,
+      "minimumAcceptedSubjectFillHeightPercent": 99.125,
+      "edgeContactException": "Only wengue attempt 2 has a zero bottom RGB<245 measurement. It was accepted after three independent wengue calls and native-detail inspection confirmed both complete frame-post tips and the same lower termination as the canonical original, whose posts also end at the image bottom.",
+      "fullFourEdgeContactAccepted": false
+    }
+  },
+  "assets": [
+    {"finish":"negro","file":"negro.png","sha256":"aceb3dd88983f012699eaaf99ef4fdd3e3f5ed7e1d87586ea60139eb4703ce54","dimensions":"764x2057","marginsRgb245":[11,10,10,4],"result":"PASS_ATTEMPT_3"},
+    {"finish":"wengue","file":"wengue.png","sha256":"3abf27c4675fc519c514e8dbaafbb8afdb71d6937f0c7274b3647011d304eb5c","dimensions":"764x2057","marginsRgb245":[11,11,10,0],"result":"PASS_ATTEMPT_2_NATIVE_BOTTOM_EDGE_CERTIFIED_AFTER_3_CALLS"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","sha256":"8ce846116922b3d314974bf7822570b9622afa64602ab904b8c6ac6f38d4f6cd","dimensions":"764x2057","marginsRgb245":[12,12,11,5],"result":"PASS_ATTEMPT_12"},
+    {"finish":"antracita","file":"antracita.png","sha256":"cabf12b0ee7cc5a55248accb503f9a228218fe4b7b60adb9bff51cb180c29cf5","dimensions":"764x2057","marginsRgb245":[12,10,10,5],"result":"PASS_ATTEMPT_4"},
+    {"finish":"nogal","file":"nogal.png","sha256":"d3876a004d90adbb89686868e444cfe68e90f332117608e9b043b488b21433b6","dimensions":"765x2057","marginsRgb245":[10,8,10,7],"result":"PASS_ATTEMPT_10"},
+    {"finish":"roble","file":"roble.png","sha256":"aa896d0aa440b61257a1509b36debfe8325091e56482e8497ec6a24a5243860a","dimensions":"764x2057","marginsRgb245":[11,12,11,6],"result":"PASS_ATTEMPT_1"},
+    {"finish":"gris-claro","file":"gris-claro.png","sha256":"d113930e271f78bd103f3579d01f5915190f2e00f1eca9a815dfbaf625694df0","dimensions":"765x2057","marginsRgb245":[10,10,10,4],"result":"PASS_ATTEMPT_7"},
+    {"finish":"natural","file":"natural.png","sha256":"24c2a59d17d6aa8bf0fdf08de9215c2f9ef98fc12171e91856025f256ee6769c","dimensions":"765x2057","marginsRgb245":[11,12,12,6],"result":"PASS_ATTEMPT_10"},
+    {"finish":"blanco","file":"blanco.png","sha256":"2f132f84a1e9817f845680be6cd8bbd50ce89d829b3daed6c5eb6eb19a30b86c","dimensions":"765x2057","marginsRgb245":[11,7,11,2],"result":"PASS_ATTEMPT_6"}
+  ],
+  "summary": {
+    "pass": 9,
+    "fail": 0,
+    "uniqueAcceptedHashes": 9,
+    "generatorByteEqualityPass": 56,
+    "allGeneratorCallsAccountedFor": true,
+    "originalModified": false,
+    "publicFilesModified": false,
+    "converted": false,
+    "promoted": false
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "model": "MADERAACÚSTICA/wl-s009",
+  "status": "PASS_9_OF_9",
+  "checkedAt": "2026-08-29T12:36:00+02:00",
+  "policy": "NO_LOGO_ORIGINAL_EDGE_TO_EDGE",
+  "generationAudit": {
+    "builtInImageGenOnly": true,
+    "independentCalls": 9,
+    "accepted": 9,
+    "rejected": 0,
+    "canonicalOriginalWasSoleReferenceForEveryCall": true,
+    "filtersUsed": false,
+    "recolorScriptsUsed": false,
+    "masksUsed": false,
+    "cropUsed": false,
+    "resizeUsed": false,
+    "compositeUsed": false,
+    "formatConversionUsed": false,
+    "byteEqualityGeneratorToWorkspace": "9/9",
+    "uniqueAcceptedHashes": "9/9"
+  },
+  "signature": {
+    "result": "PASS",
+    "required": [
+      "one plain unpanelled leaf and complete slim frame",
+      "one deep black full-height channel at far left",
+      "exactly one tall satin-silver plate with the reference's rounded outward right contour",
+      "exactly one dark horizontal lever on the plate",
+      "exactly one separate dark round key escutcheon below",
+      "no extra panels, grooves, hardware, text, badge, brand or logo"
+    ],
+    "nativeDetailInspection": "All nine accepted files preserve the exact distinctive plate outline, hardware count and placement, complete frame and NO_LOGO policy."
+  },
+  "framing": {
+    "result": "PASS",
+    "referenceMarginsRgb245": [0, 0, 0, 0],
+    "acceptedMarginsRgb245": {
+      "negro":[0,0,0,0],"wengue":[0,0,0,0],"gris-oscuro":[0,0,0,0],"antracita":[0,0,0,0],"nogal":[0,0,0,0],"roble":[0,0,0,0],"gris-claro":[0,0,0,0],"natural":[0,0,0,0],"blanco":[0,0,0,0]
+    },
+    "decision": "Zero-margin edge contact is canonical for this model. Native inspection confirms the frame, plate and hardware are complete rather than post-generation cropped."
+  },
+  "final": {"result":"PASS","publicWritten":false,"originalModified":false,"converted":false,"committed":false,"pushed":false}
+}
