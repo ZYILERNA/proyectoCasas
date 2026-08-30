@@ -15,6 +15,11 @@ import {
   VolumeX,
   X,
 } from "lucide-react";
+import {
+  getDoorVariantExtension,
+  getDoorWallpaperExtension,
+  getLogoFreeDoorImagePath,
+} from "../../lib/door-image-assets";
 
 const DOOR_COLORS = [
   { name: "Lacado Negro", hex: "#171717" },
@@ -62,7 +67,7 @@ const getAiVariantPath = (productImagePath, colorHex) => {
     .replace(/-ia$/, "");
 
   return slug
-    ? `${directory}/${slug}/door-${slug}-${suffix}-ai.webp`
+    ? `${directory}/${slug}/door-${slug}-${suffix}-ai.${getDoorVariantExtension(directory, slug)}`
     : null;
 };
 
@@ -112,7 +117,7 @@ const getWallpaper = (name) => {
   const base = name.toLowerCase().replace(/\s+/g, "");
   const slug = WALLPAPER_OVERRIDES[base] || base;
   return WALLPAPER_SLUGS.has(slug)
-    ? `${WALLPAPER_DIR}/${slug}.webp`
+    ? `${WALLPAPER_DIR}/${slug}.${getDoorWallpaperExtension(slug)}`
     : null;
 };
 
@@ -240,7 +245,7 @@ export default function ProductModal({
   const activeVariant = aiVariant && failedVariant !== aiVariant
     ? aiVariant
     : null;
-  const selectedImage = activeVariant || product.img;
+  const selectedImage = activeVariant || getLogoFreeDoorImagePath(product.img);
 
   return (
     <div className="fixed inset-0 z-[100] flex justify-end">
