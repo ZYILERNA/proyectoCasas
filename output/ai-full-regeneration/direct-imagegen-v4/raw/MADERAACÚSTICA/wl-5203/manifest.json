@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-5203",
+  "policy": "NO_LOGO_MINIMAL_WHITE_MARGIN",
+  "status": "PASS_9_OF_9",
+  "closedAt": "2026-08-28T16:36:35+02:00",
+  "reference": {
+    "path": "public/images/PUERTAS/MADERAACÚSTICA/wl-5203/original.webp",
+    "role": "sole canonical reference for every ImageGen call",
+    "sha256Before": "a8767143dabd6507f4f8263d78343dbf5b3926158b2a03e5727664a403b25e9f",
+    "sha256After": "a8767143dabd6507f4f8263d78343dbf5b3926158b2a03e5727664a403b25e9f",
+    "unchanged": true,
+    "dimensions": "393x1071",
+    "aspectRatioWidthOverHeight": 0.366947
+  },
+  "generationMode": "built-in-imagegen-independent-call-per-finish",
+  "sourcePolicy": "Every accepted PNG is an untouched byte-for-byte copy of a separate built-in ImageGen result. Each call used only the canonical original.webp; no generated output or other image was referenced.",
+  "compositionPolicy": "Complete door fills the canvas with only a hairline white safety margin; no crop or resize was used.",
+  "logoPolicy": "NO_LOGO",
+  "pixelProcessing": "none",
+  "filtersOrRecoloringUsed": false,
+  "masksUsed": false,
+  "croppingOrResizingUsed": false,
+  "compositingUsed": false,
+  "formatConversionUsed": false,
+  "acceptedAssetsAlteredAfterGeneration": false,
+  "accepted": [
+    {"finish":"negro","file":"negro.png","generatorId":"exec-810e663a-527c-4f61-9c16-f1f1dbe04400","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-810e663a-527c-4f61-9c16-f1f1dbe04400.png","sha256":"7229c848c4ee284b73b0eff01a690a8f58165f4bc308ef00ca174bcc4ce02bb5","bytes":1579487,"dimensions":"760x2070","aspectRatioAbsoluteRelativeDeltaPercent":0.0553,"marginsRgb245":[9,6,11,4],"subjectFillWidthPercent":97.368,"subjectFillHeightPercent":99.517,"attempt":1},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-5e5ce7e2-6694-45b4-86e7-7f73c41c11c3","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-5e5ce7e2-6694-45b4-86e7-7f73c41c11c3.png","sha256":"f43a392d38bcb45d8344912013a6f397280e2e2d4d31507687585c9675c87d18","bytes":1628914,"dimensions":"760x2069","aspectRatioAbsoluteRelativeDeltaPercent":0.1037,"marginsRgb245":[8,10,10,8],"subjectFillWidthPercent":97.632,"subjectFillHeightPercent":99.13,"attempt":1},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-93d16976-be65-47f0-b476-751e0f542c56","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-93d16976-be65-47f0-b476-751e0f542c56.png","sha256":"ead6344e4e527084de50b580185e4c1484e87c4746e06c89c69989bf37ed6ef7","bytes":1666207,"dimensions":"760x2068","aspectRatioAbsoluteRelativeDeltaPercent":0.1521,"marginsRgb245":[11,11,11,0],"subjectFillWidthPercent":97.105,"subjectFillHeightPercent":99.468,"attempt":1},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-69847908-5168-4c11-b683-c0fd520bc282","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-69847908-5168-4c11-b683-c0fd520bc282.png","sha256":"d44b9fe964aa59855e531cf4476feb1d8518858f1f5779c2f693ed01f4a37f90","bytes":1599684,"dimensions":"760x2069","aspectRatioAbsoluteRelativeDeltaPercent":0.1037,"marginsRgb245":[8,5,10,5],"subjectFillWidthPercent":97.632,"subjectFillHeightPercent":99.517,"attempt":1},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-64bdecce-a84c-45c5-9f87-fb081623bc84","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-64bdecce-a84c-45c5-9f87-fb081623bc84.png","sha256":"f191e6731de45edd2faafcb0d44551bec8beaca63d2e62e797312f0ee395b98b","bytes":1960127,"dimensions":"760x2069","aspectRatioAbsoluteRelativeDeltaPercent":0.1037,"marginsRgb245":[6,9,10,8],"subjectFillWidthPercent":97.895,"subjectFillHeightPercent":99.178,"attempt":1},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-9d695f81-2abf-43bb-ba87-2015a9fe6cf2","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-9d695f81-2abf-43bb-ba87-2015a9fe6cf2.png","sha256":"c454991420d7386d555cbe5d79fb1f5fcda004fba6dfc0c118d3c24eb7584b4a","bytes":1827021,"dimensions":"760x2070","aspectRatioAbsoluteRelativeDeltaPercent":0.0553,"marginsRgb245":[3,0,8,0],"subjectFillWidthPercent":98.553,"subjectFillHeightPercent":100.0,"attempt":2},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-2c3da4dd-c8ab-410a-ab78-d4117a2d5cb3","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-2c3da4dd-c8ab-410a-ab78-d4117a2d5cb3.png","sha256":"5f4faf3144f995c2d6b34e85ae27713acfddfdbb477eca4dc5ac33e84d731e00","bytes":1637420,"dimensions":"760x2070","aspectRatioAbsoluteRelativeDeltaPercent":0.0553,"marginsRgb245":[10,6,11,5],"subjectFillWidthPercent":97.237,"subjectFillHeightPercent":99.469,"attempt":1},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-9d89b6be-1946-453f-ab72-2a37a7878c0d","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-9d89b6be-1946-453f-ab72-2a37a7878c0d.png","sha256":"3e268fbe79c07b1215832a4e2027aad10e690ecbbc793dc52b76a821790283d5","bytes":1565528,"dimensions":"760x2070","aspectRatioAbsoluteRelativeDeltaPercent":0.0553,"marginsRgb245":[3,3,5,0],"subjectFillWidthPercent":98.947,"subjectFillHeightPercent":99.855,"attempt":1},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-05ea0378-420b-4bd3-9410-fbad669accb3","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-05ea0378-420b-4bd3-9410-fbad669accb3.png","sha256":"8927d5c6c21f0736d4ea0e4032e769ed0a6e8de020621bbfaf6e49fca76f6af0","bytes":1248450,"dimensions":"760x2070","aspectRatioAbsoluteRelativeDeltaPercent":0.0553,"marginsRgb245":[8,8,12,8],"subjectFillWidthPercent":97.368,"subjectFillHeightPercent":99.227,"attempt":1}
+  ],
+  "rejected": [
+    {"finish":"roble","file":"_rejected/roble-attempt-1-excess-padding.png","generatorId":"exec-cab415b8-9ecc-4c8f-80b5-2384623c83bf","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-cab415b8-9ecc-4c8f-80b5-2384623c83bf.png","sha256":"6daeb08822858cca5a5b59f3d90fbbbd56b47073c56aa7f3f975cc6461b48c2e","dimensions":"760x2070","marginsRgb245":[14,13,15,11],"reason":"Rejected: architecture was correct, but the side padding exceeded the tightened minimal-margin target; a new direct ImageGen call replaced it."}
+  ],
+  "qa": {"path":"QA.json","status":"PASS_9_OF_9","acceptedAssetCount":9,"uniqueAcceptedHashes":9,"maximumAcceptedAspectRatioAbsoluteRelativeDeltaPercent":0.1521,"maximumMeasuredMarginRgb245Pixels":12},
+  "promotion": {"converted":false,"staged":false,"publicWritten":false,"originalModified":false}
+}

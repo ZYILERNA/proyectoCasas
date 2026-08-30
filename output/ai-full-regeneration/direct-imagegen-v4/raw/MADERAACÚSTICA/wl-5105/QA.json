@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-5105",
+  "status": "PASS_9_OF_9_MINIMUM_MARGIN_REVISION",
+  "visualReviewAtNativeResolution": true,
+  "qaMethod": "Native-detail visual comparison with the canonical original, plus read-only encoded SHA-256, dimensions, aspect-ratio, RGB edge-margin, unique-ID, unique-hash and generator-to-workspace byte-equality checks. No image was transformed during QA.",
+  "acceptanceRules": {
+    "completeOuterFrameAndSilhouette": true,
+    "singleLeafFrontElevationPreserved": true,
+    "signatureGeometry": "exactly two continuous nested rounded-rectangle contours with complete corners and endpoints",
+    "hardware": "exactly one rectangular silver bar handle; no rosette, key cylinder or extra hardware",
+    "zeroLogoTextBadgeWatermarkOrPseudotext": true,
+    "finishSemanticsCorrect": true,
+    "noPostGenerationPixelProcessing": true,
+    "aspectRatio": {
+      "canonical": 0.3769878391,
+      "acceptedMinimum": 0.3768967205,
+      "acceptedMaximum": 0.3772660461,
+      "maximumAcceptedAbsoluteRelativeDeltaPercent": 0.073797,
+      "allAcceptedWithinOnePercent": true
+    },
+    "maximumSubjectFraming": {
+      "goal": "Make the complete door as large as possible: 0-6 pixels per edge preferred and 12 pixels maximum normal; allow 0-pixel contact only when native inspection confirms the intact silhouette, corners and contour endpoints.",
+      "measurementOrder": ["left", "top", "right", "bottom"],
+      "measurementDefinition": "Read-only bounding box containing pixels where at least one RGB channel is below the named threshold.",
+      "standardThreshold": "RGB<245",
+      "lightFinishSecondaryThreshold": "RGB<250 additionally recorded for blanco",
+      "canonicalOriginalMarginsRgb245": [5, 1, 3, 2],
+      "canonicalOriginalMarginsRgb250": [5, 0, 2, 2],
+      "minimumAcceptedMarginPixels": 0,
+      "maximumAcceptedMarginPixels": 12,
+      "acceptedWithinPreferred0To6OnEveryEdge": ["antracita"],
+      "acceptedWithinNormalMaximum12OnEveryEdge": ["negro", "wengue", "gris-oscuro", "antracita", "nogal", "roble", "gris-claro", "natural", "blanco"],
+      "documentedExceptionsAbove12": [],
+      "validEdgeContactFinishes": ["wengue", "antracita", "nogal", "roble", "natural"],
+      "edgeContactRationale": "Native-detail inspection confirms that every 0-pixel reading is intact source-consistent frame contact rather than a missing frame corner, broken contour endpoint or clipped silhouette.",
+      "whiteFinishThresholdNote": "Blanco measures [12,2,6,4] at RGB<245 and [12,2,6,0] at RGB<250. The finish remains complete and at the 12-pixel normal ceiling.",
+      "noCropOrResizeUsedToAchieveFraming": true
+    }
+  },
+  "assets": [
+    {"finish":"negro","file":"negro.png","generatorId":"exec-380ba5e7-05be-4a29-802f-49b997ae06ed","sha256":"3d45cc9eee1e6e553ec4399aa61e7ac8d688768c09ff33ef60eeb5fe6219048f","dimensions":"770x2042","marginsRgb245":[12,3,9,6],"result":"PASS_HISTORICAL_KEPT_NORMAL_MAXIMUM_12"},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-d4810d94-a1ba-466e-8e93-ecbe5cd2d926","sha256":"2df1eaa16d97247e0560d62776d7b2de9c179164531a8845ae296b735ef946c1","dimensions":"770x2042","marginsRgb245":[9,0,10,0],"result":"PASS_REVISION_ATTEMPT_1_NORMAL_MAXIMUM_12_NATIVE_COMPLETE_CONTACT"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-76cd4c38-b2d3-4155-a7c5-7a761e0a7fe2","sha256":"b09441a31756406fd5246c05dbf623a192c39b462a444bbc3f20ad5c8c15bf36","dimensions":"770x2042","marginsRgb245":[10,2,10,6],"result":"PASS_REVISION_ATTEMPT_2_NORMAL_MAXIMUM_12"},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-ea28b06f-6721-41fa-a02c-43decd322832","sha256":"de277d1fba6f9c9f501fdfb4cf3304643b22088dc156cf927e2ac658fec26e46","dimensions":"770x2043","marginsRgb245":[2,0,2,0],"result":"PASS_REVISION_ATTEMPT_1_PREFERRED_NATIVE_COMPLETE_CONTACT"},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-e679cf2a-b191-4489-b10a-c2f503320c1e","sha256":"dac0b90ce87287a1e5814ace38204fa0cb4095be09bd6c9cce67b20c29104456","dimensions":"770x2042","marginsRgb245":[7,0,8,0],"result":"PASS_REVISION_ATTEMPT_1_NORMAL_MAXIMUM_12_NATIVE_COMPLETE_CONTACT"},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-3a391f69-b7a4-4da6-8543-c5dd3931c81a","sha256":"78d7131bfde3d4d5ec062c9d96e3beda85f0f08f69a1205b11caf279a71c79c2","dimensions":"770x2041","marginsRgb245":[9,0,6,0],"result":"PASS_HISTORICAL_KEPT_NORMAL_MAXIMUM_12_NATIVE_COMPLETE_CONTACT"},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-9cb325b2-bfaf-4a5b-8deb-cab1acd0a8f2","sha256":"7af8791b8bf97b612a0af4dc401c106ba53a0364eddb3a3d1d93ce85af8aab73","dimensions":"770x2043","marginsRgb245":[11,1,6,5],"result":"PASS_HISTORICAL_KEPT_NORMAL_MAXIMUM_12"},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-5c0de565-07a7-4e5c-b142-b377e22356f1","sha256":"de0722b3f19daea392872eca4e26c60a031cf374c42fd17d3226124359e4b2d1","dimensions":"770x2042","marginsRgb245":[12,0,11,8],"result":"PASS_HISTORICAL_KEPT_NORMAL_MAXIMUM_12_NATIVE_COMPLETE_CONTACT"},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-7e9435db-9368-4050-9ee3-61921489d54f","sha256":"33ab0ac283b43c9e6f085c749238be010863c177eeb01e196d932ec8afb54554","dimensions":"770x2042","marginsRgb245":[12,2,6,4],"marginsRgb250":[12,2,6,0],"result":"PASS_REVISION_ATTEMPT_2_NORMAL_MAXIMUM_12"}
+  ],
+  "rejectedAudit": {
+    "previousSelectionsDisplacedAndPreserved": 5,
+    "newPaddingRejectsPreserved": 2,
+    "totalRejectedFiles": 7,
+    "files": [
+      {"finish":"wengue","file":"_rejected/wengue-previous-selected-before-minimum-margin-revision.png","generatorId":"exec-4d092857-3913-43da-baa0-db2fee68ff8b","sha256":"2b1c5c14c5971cc1208cc70d09b92d57f723a62f2c68ac8e2ef257bcf930c94e","disposition":"historical selection superseded and preserved"},
+      {"finish":"gris-oscuro","file":"_rejected/gris-oscuro-previous-selected-before-minimum-margin-revision.png","generatorId":"exec-5eac9b18-80b4-4287-9034-468a1645ef57","sha256":"9c7fc22029a8c344b5247bb8d75519c52d5b009282d8bd9d67ff9820f166943e","disposition":"historical selection superseded and preserved"},
+      {"finish":"antracita","file":"_rejected/antracita-previous-selected-before-minimum-margin-revision.png","generatorId":"exec-c089d5b1-a9a4-40b9-b51a-98707859c984","sha256":"a141112eac7b53744dc6514b793924c5b1cb4ba9aec6197fd603105e154aba6f","disposition":"historical selection superseded and preserved"},
+      {"finish":"nogal","file":"_rejected/nogal-previous-selected-before-minimum-margin-revision.png","generatorId":"exec-cb20d5e7-e098-4de3-818a-c3a5b0b8bd5e","sha256":"6e7bf521c69823eead4b8afb9216f20775585e8940219af59e2863dd53be8f41","disposition":"historical selection superseded and preserved"},
+      {"finish":"blanco","file":"_rejected/blanco-previous-selected-before-minimum-margin-revision.png","generatorId":"exec-6e1ec8b5-c0c8-4b73-8cf3-073d5954660a","sha256":"e7b9a2d638a555688e70a7c27bf3e38cc2cd0d5455f3adde4161964914f37a27","disposition":"historical selection superseded and preserved"},
+      {"finish":"gris-oscuro","file":"_rejected/gris-oscuro-minimum-margin-revision-attempt1-padding.png","generatorId":"exec-b8db205a-9558-46e8-a197-92298de119aa","sha256":"77ece529c9c849e0addc3051d6f26140d9e8bbc781432638aa994745a7db6378","marginsRgb245":[17,1,18,0],"disposition":"rejected: lateral padding above 12 pixels"},
+      {"finish":"blanco","file":"_rejected/blanco-minimum-margin-revision-attempt1-padding.png","generatorId":"exec-498053b1-07cd-4e51-8285-d5f312ee0e11","sha256":"4696e6cf8202d423cb57a295db702da3f6d6d5b636eebc41d8c9634941136342","marginsRgb245":[17,3,15,0],"marginsRgb250":[17,3,15,0],"disposition":"rejected: lateral padding above 12 pixels"}
+    ]
+  },
+  "summary": {
+    "pass": 9,
+    "fail": 0,
+    "totalAuditedCalls": 16,
+    "uniqueAcceptedHashes": 9,
+    "uniqueAuditedHashes": 16,
+    "uniqueCallIds": 16,
+    "generatorByteEqualityPass": 16,
+    "visualInspection": "PASS: all nine current selections preserve the complete frame, exactly two continuous nested rounded-rectangle contours, exactly one rectangular silver bar handle, no rosette, no cylinder, no extra hardware and NO_LOGO. All contact cases are complete at native resolution.",
+    "originalModified": false,
+    "publicFilesModified": false,
+    "converted": false,
+    "promoted": false,
+    "committed": false
+  }
+}

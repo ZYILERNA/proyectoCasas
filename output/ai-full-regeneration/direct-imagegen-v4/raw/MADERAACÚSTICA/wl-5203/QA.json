@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-5203",
+  "policy": "NO_LOGO_MINIMAL_WHITE_MARGIN",
+  "status": "PASS_9_OF_9",
+  "generationMethod": "built-in ImageGen only",
+  "requestedFinishCount": 9,
+  "acceptedAssetCount": 9,
+  "totalIndependentImageGenCalls": 10,
+  "rejectedAttempts": 1,
+  "independence": {
+    "soleReferenceForEveryCall": "public/images/PUERTAS/MADERAACÚSTICA/wl-5203/original.webp",
+    "referenceSha256Before": "a8767143dabd6507f4f8263d78343dbf5b3926158b2a03e5727664a403b25e9f",
+    "referenceSha256After": "a8767143dabd6507f4f8263d78343dbf5b3926158b2a03e5727664a403b25e9f",
+    "referenceUnchanged": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "conversionUsed": false
+  },
+  "qaMethod": "Native-detail visual inspection against the canonical original plus read-only SHA-256, PNG dimensions, RGB edge-margin, subject-fill, aspect-ratio, unique-hash and generator-source byte-equality checks.",
+  "acceptanceRules": {
+    "completeOuterFrameAndDoorBottomVisible": true,
+    "signatureGeometryPreserved": "upper-left vertical seam ending at one full-width horizontal wood band, plus lower vertical seam right of center beginning below that band",
+    "hardwarePreserved": "exactly one slim horizontal lever on a round rosette and one separate round key cylinder in the upper-left field",
+    "zeroLogoTextBadgeWatermarkOrPseudotext": true,
+    "noPostGenerationPixelProcessing": true,
+    "aspectRatio": {"canonical":0.366947,"maximumAcceptedAbsoluteRelativeDeltaPercent":0.1521,"allAcceptedWithinOnePercent":true},
+    "minimalWhiteMargin": {"maximumMeasuredMarginRgb245Pixels":12,"note":"Native-detail review confirms complete outer edges. The first roble result with 14–15 px side padding was rejected and regenerated directly."}
+  },
+  "assets": [
+    {"finish":"negro","file":"negro.png","sha256":"7229c848c4ee284b73b0eff01a690a8f58165f4bc308ef00ca174bcc4ce02bb5","dimensions":"760x2070","marginsRgb245":[9,6,11,4],"result":"PASS"},
+    {"finish":"wengue","file":"wengue.png","sha256":"f43a392d38bcb45d8344912013a6f397280e2e2d4d31507687585c9675c87d18","dimensions":"760x2069","marginsRgb245":[8,10,10,8],"result":"PASS"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","sha256":"ead6344e4e527084de50b580185e4c1484e87c4746e06c89c69989bf37ed6ef7","dimensions":"760x2068","marginsRgb245":[11,11,11,0],"result":"PASS"},
+    {"finish":"antracita","file":"antracita.png","sha256":"d44b9fe964aa59855e531cf4476feb1d8518858f1f5779c2f693ed01f4a37f90","dimensions":"760x2069","marginsRgb245":[8,5,10,5],"result":"PASS"},
+    {"finish":"nogal","file":"nogal.png","sha256":"f191e6731de45edd2faafcb0d44551bec8beaca63d2e62e797312f0ee395b98b","dimensions":"760x2069","marginsRgb245":[6,9,10,8],"result":"PASS"},
+    {"finish":"roble","file":"roble.png","sha256":"c454991420d7386d555cbe5d79fb1f5fcda004fba6dfc0c118d3c24eb7584b4a","dimensions":"760x2070","marginsRgb245":[3,0,8,0],"result":"PASS_ATTEMPT_2"},
+    {"finish":"gris-claro","file":"gris-claro.png","sha256":"5f4faf3144f995c2d6b34e85ae27713acfddfdbb477eca4dc5ac33e84d731e00","dimensions":"760x2070","marginsRgb245":[10,6,11,5],"result":"PASS"},
+    {"finish":"natural","file":"natural.png","sha256":"3e268fbe79c07b1215832a4e2027aad10e690ecbbc793dc52b76a821790283d5","dimensions":"760x2070","marginsRgb245":[3,3,5,0],"result":"PASS"},
+    {"finish":"blanco","file":"blanco.png","sha256":"8927d5c6c21f0736d4ea0e4032e769ed0a6e8de020621bbfaf6e49fca76f6af0","dimensions":"760x2070","marginsRgb245":[8,8,12,8],"result":"PASS"}
+  ],
+  "summary": {"pass":9,"fail":0,"uniqueAcceptedHashes":9,"generatorByteEqualityPass":9,"originalModified":false,"publicFilesModified":false,"converted":false,"promoted":false}
+}

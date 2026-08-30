@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/s203",
+  "policy": "NO_LOGO_MINIMAL_WHITE_MARGIN",
+  "status": "PASS_9_OF_9_REGENERATED",
+  "generationMethod": "built-in ImageGen only",
+  "requestedFinishCount": 9,
+  "acceptedAssetCount": 9,
+  "currentRegenerationCalls": 27,
+  "currentRejectedAttempts": 18,
+  "supersededPreviousAccepted": 9,
+  "cumulativeVerifiedCalls": 36,
+  "unverifiedLegacyArtifactsExcluded": 1,
+  "independence": {
+    "soleReferenceForEveryVerifiedCall": "public/images/PUERTAS/MADERAACÚSTICA/s203/original.webp",
+    "referenceSha256Before": "f028e24e32a1942afd35dc26223df296a4bc3cce3cadfdaaaeae48d00524e0e1",
+    "referenceSha256After": "f028e24e32a1942afd35dc26223df296a4bc3cce3cadfdaaaeae48d00524e0e1",
+    "referenceUnchanged": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrScriptedRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "conversionUsed": false
+  },
+  "qaMethod": "Native-detail visual inspection of every final candidate against the canonical original, plus read-only SHA-256, dimensions, RGB<245 margins, subject fill, aspect ratio, unique accepted hash and generator-to-workspace byte equality. No PNG was modified during QA.",
+  "acceptanceRules": {
+    "completeOuterFrameAndLeaf": true,
+    "straightOnComposition": true,
+    "architecture": "one complete thick outer casing with one broad straight top header and two straight full-height side jambs; one thin dark reveal around the leaf; one flat leaf with exactly one large tall centered rectangular inset/raised panel; one continuous multi-step beveled rectangular molding and one thin outer routed rectangle; one unbroken lower leaf field",
+    "hardware": "exactly one short slim dark horizontal lever pointing right from one compact rectangular backplate at the canonical height; exactly one circular lock detail integrated inside that same backplate; no separate escutcheon/cylinder and no extra hardware",
+    "finishOnlyStructuralPolicy": true,
+    "zeroLogoTextBadgeWatermarkOrPseudotext": true,
+    "noPostGenerationPixelProcessing": true,
+    "aspectRatio": {
+      "canonical": 0.4493480441,
+      "acceptedMinimum": 0.4489577766,
+      "acceptedMaximum": 0.4494922501,
+      "maximumAcceptedAbsoluteRelativeDeltaPercent": 0.086852,
+      "allAcceptedWithinOnePercent": true
+    },
+    "minimalWhiteMargin": {
+      "measurementOrder": ["left", "top", "right", "bottom"],
+      "threshold": "RGB<245",
+      "sourceMarginsPixels": [12, 13, 8, 9],
+      "preferredPixels": "0-6",
+      "normalMaximumPixels": 12,
+      "maximumAcceptedPixels": 12,
+      "allAcceptedWithinNormalMaximum": true,
+      "contactRule": "0 px is allowed only when native-detail inspection confirms all four outer corners, both full-height jambs, the complete header, both lower endpoints and the full silhouette.",
+      "contactAssessment": "PASS: seven accepted assets are tangent on all four edges; roble is tangent on left/top/bottom with 2 px right clearance; blanco is tangent at bottom and measures [12,12,10,0] under the conservative pale-finish threshold. No accepted asset is cropped.",
+      "lightFinishMeasurementNote": "RGB<245 can overstate visible clearance for blanco because white-painted wood approaches the #FFFFFF background; its complete frame remains visible natively.",
+      "noCropOrResizeUsedToAchieveFraming": true
+    }
+  },
+  "assets": [
+    {"finish":"negro","file":"negro.png","attempt":4,"generatorId":"exec-2ce1af34-b4dd-4d23-b405-bdc6de76c09e","sha256":"bd5c3d86145774cd16e736d3499eb0897908af2176ecac250553faa86cf4d44c","dimensions":"841x1871","marginsRgb245":[0,0,0,0],"result":"PASS_NATIVE_COMPLETE_TANGENT_ALL_EDGES"},
+    {"finish":"wengue","file":"wengue.png","attempt":4,"generatorId":"exec-18f22403-4885-4883-985c-3be1c3a54e14","sha256":"9794b1dfdf9d9df531fcfaf316b0b21c2b487f7add7646455690b15d840d5798","dimensions":"840x1871","marginsRgb245":[0,0,0,0],"result":"PASS_NATIVE_COMPLETE_TANGENT_ALL_EDGES"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","attempt":4,"generatorId":"exec-4940e375-aaf5-49ec-b28b-1e2d58a22428","sha256":"c7534507a91a20521b4f3a84fa56e512f0bdea30059fe62398bf4cd510a0cc62","dimensions":"841x1871","marginsRgb245":[0,0,0,0],"result":"PASS_NATIVE_COMPLETE_TANGENT_ALL_EDGES"},
+    {"finish":"antracita","file":"antracita.png","attempt":4,"generatorId":"exec-4dc8106c-3243-4137-934a-f6914e00d5d3","sha256":"f196b4dc5e49fb9cf4225bc4efaf354dae359e62110cbfca5327e08197cb0a83","dimensions":"841x1871","marginsRgb245":[0,0,0,0],"result":"PASS_NATIVE_COMPLETE_TANGENT_ALL_EDGES"},
+    {"finish":"nogal","file":"nogal.png","attempt":4,"generatorId":"exec-86f1ac5c-ace8-40d6-9bf2-2d33bf81cad8","sha256":"081657aa15c4d754e6c07e27b1d4df16d5c97af1e454b80fd0d40e8d7424f966","dimensions":"841x1871","marginsRgb245":[0,0,0,0],"result":"PASS_NATIVE_COMPLETE_TANGENT_ALL_EDGES"},
+    {"finish":"roble","file":"roble.png","attempt":4,"generatorId":"exec-6241996e-2aff-400e-bb0f-e1f81ed6fe5c","sha256":"631be0b72f6097536e2b9102cc905f9d990a3dcda21cf9b8524613c13329b214","dimensions":"840x1871","marginsRgb245":[0,0,2,0],"result":"PASS_NATIVE_COMPLETE_0_TO_2PX"},
+    {"finish":"gris-claro","file":"gris-claro.png","attempt":4,"generatorId":"exec-bc1bca1d-a05c-46ea-bb67-be70177b14dc","sha256":"e81b05ef95e5fd9dbdd0bec58ec352e3c866484d8b9d0063b5cfc0f1cc537c64","dimensions":"841x1871","marginsRgb245":[0,0,0,0],"result":"PASS_NATIVE_COMPLETE_TANGENT_ALL_EDGES"},
+    {"finish":"natural","file":"natural.png","attempt":4,"generatorId":"exec-9324d64f-ec34-4f3d-a929-a0189b4bed29","sha256":"fdf7a503c4a4b76189d8a0dc02e9fb30860b9c63a12682b6d76b248021b690f4","dimensions":"840x1871","marginsRgb245":[0,0,0,0],"result":"PASS_NATIVE_COMPLETE_TANGENT_ALL_EDGES"},
+    {"finish":"blanco","file":"blanco.png","attempt":4,"generatorId":"exec-271cb015-7d03-4cd6-894f-ea3e5caab7c8","sha256":"f694d5dd8c873c1f5dfb1eddfd22e8364339a6c3bd4cfb859084e3be79811e62","dimensions":"840x1871","marginsRgb245":[12,12,10,0],"result":"PASS_NATIVE_COMPLETE_WITHIN_12PX_LIGHT_FINISH"}
+  ],
+  "attemptMap": {
+    "negro": {"superseded":[1],"rejected":[2,3],"accepted":4},
+    "wengue": {"superseded":[1],"rejected":[2,3],"accepted":4},
+    "gris-oscuro": {"superseded":[1],"rejected":[2,3],"accepted":4},
+    "antracita": {"superseded":[1],"rejected":[2,3],"accepted":4},
+    "nogal": {"superseded":[1],"rejected":[2,3],"accepted":4},
+    "roble": {"superseded":[1],"rejected":[2,3],"accepted":4},
+    "gris-claro": {"superseded":[1],"rejected":[2,3],"accepted":4},
+    "natural": {"superseded":[1],"rejected":[2,3],"accepted":4},
+    "blanco": {"superseded":[1],"rejected":[2,3],"accepted":4}
+  },
+  "archive": {
+    "supersededPreviousAcceptedDirectory": "_rejected",
+    "newRejectedDirectory": "_rejected",
+    "supersededPreviousAcceptedPreserved": 9,
+    "newRejectedPreserved": 18,
+    "preExistingUnverifiedRejectPreserved": "rejected/negro-attempt-1.png",
+    "verifiedGeneratorToWorkspaceByteEqualityPass": 36
+  },
+  "summary": {
+    "pass": 9,
+    "fail": 0,
+    "uniqueAcceptedHashes": 9,
+    "visualInspection": "PASS: every accepted finish preserves the complete outer casing, one broad header, two jambs, dark reveal, exactly one tall panel with one multi-step molding, one lever/backplate with one integrated circular lock detail, no separate escutcheon and no logo or text.",
+    "originalModified": false,
+    "publicFilesModified": false,
+    "converted": false,
+    "promoted": false
+  }
+}

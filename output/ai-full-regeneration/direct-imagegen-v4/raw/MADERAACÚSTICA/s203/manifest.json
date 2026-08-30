@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/s203",
+  "policy": "NO_LOGO_MINIMAL_WHITE_MARGIN",
+  "status": "PASS_9_OF_9_REGENERATED",
+  "closedAt": "2026-08-29T15:29:01+02:00",
+  "reference": {
+    "path": "public/images/PUERTAS/MADERAACÚSTICA/s203/original.webp",
+    "role": "sole canonical reference for every independent direct ImageGen call",
+    "sha256Before": "f028e24e32a1942afd35dc26223df296a4bc3cce3cadfdaaaeae48d00524e0e1",
+    "sha256After": "f028e24e32a1942afd35dc26223df296a4bc3cce3cadfdaaaeae48d00524e0e1",
+    "unchanged": true,
+    "bytes": 11228,
+    "format": "webp",
+    "dimensions": "448x997",
+    "aspectRatioWidthOverHeight": 0.4493480441,
+    "marginsRgb245": [12, 13, 8, 9]
+  },
+  "generationMode": "built-in-imagegen-independent-call-per-finish-and-retry",
+  "sourcePolicy": "Every verified historical, accepted and rejected call used only the canonical original.webp. No generated result, logo or secondary image was supplied as a reference.",
+  "workspaceTransferPolicy": "Every verified PNG is an untouched byte-for-byte copy or move of its built-in ImageGen artifact. The prior nine root acceptances were moved individually to _rejected before replacement.",
+  "compositionPolicy": "The complete door was regenerated at maximum safe scale. Preferred clearance is 0-6 px and normal maximum is 12 px. Tangent 0 px contact is accepted only after native-detail inspection confirms all outer corners, both jamb endpoints and the complete silhouette.",
+  "logoPolicy": "NO_LOGO",
+  "pixelProcessing": "none",
+  "filtersOrScriptedRecoloringUsed": false,
+  "masksUsed": false,
+  "croppingOrResizingUsed": false,
+  "compositingUsed": false,
+  "formatConversionUsed": false,
+  "acceptedAssetsAlteredAfterGeneration": false,
+  "generatedImageRoots": {
+    "previousVerifiedRun": "C:/Users/zhen/.codex/generated_images/01a048aa-f626-77e1-b70b-645644e26d83",
+    "minimalMarginRegeneration": "C:/Users/zhen/.codex/generated_images/01a04ce9-270d-7281-9cf2-1f169d658ba0"
+  },
+  "auditCounts": {
+    "currentMinimalMarginRegenerationCalls": 27,
+    "currentAccepted": 9,
+    "currentRejected": 18,
+    "supersededPreviousAccepted": 9,
+    "cumulativeVerifiedImageGenCalls": 36,
+    "verifiedGeneratorToWorkspaceByteEqualityPass": 36,
+    "unverifiedLegacyArtifactsExcluded": 1
+  },
+  "accepted": [
+    {"finish":"negro","file":"negro.png","attempt":4,"generatorId":"exec-2ce1af34-b4dd-4d23-b405-bdc6de76c09e","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/01a04ce9-270d-7281-9cf2-1f169d658ba0/exec-2ce1af34-b4dd-4d23-b405-bdc6de76c09e.png","sha256":"bd5c3d86145774cd16e736d3499eb0897908af2176ecac250553faa86cf4d44c","bytes":1564489,"dimensions":"841x1871","mode":"RGB","aspectRatioAbsoluteRelativeDeltaPercent":0.032092,"marginsRgb245":[0,0,0,0],"subjectFillWidthPercent":100.0,"subjectFillHeightPercent":100.0,"edgeContactNote":"Tangent on all four edges; native-detail inspection confirms the full top header, both side jambs, four outer corners and complete lower endpoints."},
+    {"finish":"wengue","file":"wengue.png","attempt":4,"generatorId":"exec-18f22403-4885-4883-985c-3be1c3a54e14","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/01a04ce9-270d-7281-9cf2-1f169d658ba0/exec-18f22403-4885-4883-985c-3be1c3a54e14.png","sha256":"9794b1dfdf9d9df531fcfaf316b0b21c2b487f7add7646455690b15d840d5798","bytes":1697937,"dimensions":"840x1871","mode":"RGB","aspectRatioAbsoluteRelativeDeltaPercent":0.086852,"marginsRgb245":[0,0,0,0],"subjectFillWidthPercent":100.0,"subjectFillHeightPercent":100.0,"edgeContactNote":"Tangent on all four edges; native-detail inspection confirms a complete uncropped silhouette."},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","attempt":4,"generatorId":"exec-4940e375-aaf5-49ec-b28b-1e2d58a22428","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/01a04ce9-270d-7281-9cf2-1f169d658ba0/exec-4940e375-aaf5-49ec-b28b-1e2d58a22428.png","sha256":"c7534507a91a20521b4f3a84fa56e512f0bdea30059fe62398bf4cd510a0cc62","bytes":1803374,"dimensions":"841x1871","mode":"RGB","aspectRatioAbsoluteRelativeDeltaPercent":0.032092,"marginsRgb245":[0,0,0,0],"subjectFillWidthPercent":100.0,"subjectFillHeightPercent":100.0,"edgeContactNote":"Tangent on all four edges; all casing endpoints and panel moldings are natively visible."},
+    {"finish":"antracita","file":"antracita.png","attempt":4,"generatorId":"exec-4dc8106c-3243-4137-934a-f6914e00d5d3","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/01a04ce9-270d-7281-9cf2-1f169d658ba0/exec-4dc8106c-3243-4137-934a-f6914e00d5d3.png","sha256":"f196b4dc5e49fb9cf4225bc4efaf354dae359e62110cbfca5327e08197cb0a83","bytes":1694203,"dimensions":"841x1871","mode":"RGB","aspectRatioAbsoluteRelativeDeltaPercent":0.032092,"marginsRgb245":[0,0,0,0],"subjectFillWidthPercent":100.0,"subjectFillHeightPercent":100.0,"edgeContactNote":"Tangent on all four edges; native-detail inspection confirms complete corners and endpoints."},
+    {"finish":"nogal","file":"nogal.png","attempt":4,"generatorId":"exec-86f1ac5c-ace8-40d6-9bf2-2d33bf81cad8","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/01a04ce9-270d-7281-9cf2-1f169d658ba0/exec-86f1ac5c-ace8-40d6-9bf2-2d33bf81cad8.png","sha256":"081657aa15c4d754e6c07e27b1d4df16d5c97af1e454b80fd0d40e8d7424f966","bytes":1964762,"dimensions":"841x1871","mode":"RGB","aspectRatioAbsoluteRelativeDeltaPercent":0.032092,"marginsRgb245":[0,0,0,0],"subjectFillWidthPercent":100.0,"subjectFillHeightPercent":100.0,"edgeContactNote":"Tangent on all four edges; native-detail inspection confirms the complete casing and lower field."},
+    {"finish":"roble","file":"roble.png","attempt":4,"generatorId":"exec-6241996e-2aff-400e-bb0f-e1f81ed6fe5c","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/01a04ce9-270d-7281-9cf2-1f169d658ba0/exec-6241996e-2aff-400e-bb0f-e1f81ed6fe5c.png","sha256":"631be0b72f6097536e2b9102cc905f9d990a3dcda21cf9b8524613c13329b214","bytes":2000884,"dimensions":"840x1871","mode":"RGB","aspectRatioAbsoluteRelativeDeltaPercent":0.086852,"marginsRgb245":[0,0,2,0],"subjectFillWidthPercent":99.761905,"subjectFillHeightPercent":100.0,"edgeContactNote":"Left, top and bottom are tangent and right clearance is 2 px; the complete silhouette is visible."},
+    {"finish":"gris-claro","file":"gris-claro.png","attempt":4,"generatorId":"exec-bc1bca1d-a05c-46ea-bb67-be70177b14dc","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/01a04ce9-270d-7281-9cf2-1f169d658ba0/exec-bc1bca1d-a05c-46ea-bb67-be70177b14dc.png","sha256":"e81b05ef95e5fd9dbdd0bec58ec352e3c866484d8b9d0063b5cfc0f1cc537c64","bytes":1583800,"dimensions":"841x1871","mode":"RGB","aspectRatioAbsoluteRelativeDeltaPercent":0.032092,"marginsRgb245":[0,0,0,0],"subjectFillWidthPercent":100.0,"subjectFillHeightPercent":100.0,"edgeContactNote":"Tangent on all four edges; pale outer contours remain complete in native inspection."},
+    {"finish":"natural","file":"natural.png","attempt":4,"generatorId":"exec-9324d64f-ec34-4f3d-a929-a0189b4bed29","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/01a04ce9-270d-7281-9cf2-1f169d658ba0/exec-9324d64f-ec34-4f3d-a929-a0189b4bed29.png","sha256":"fdf7a503c4a4b76189d8a0dc02e9fb30860b9c63a12682b6d76b248021b690f4","bytes":1435314,"dimensions":"840x1871","mode":"RGB","aspectRatioAbsoluteRelativeDeltaPercent":0.086852,"marginsRgb245":[0,0,0,0],"subjectFillWidthPercent":100.0,"subjectFillHeightPercent":100.0,"edgeContactNote":"Tangent on all four edges; the complete casing and all four corners remain visible."},
+    {"finish":"blanco","file":"blanco.png","attempt":4,"generatorId":"exec-271cb015-7d03-4cd6-894f-ea3e5caab7c8","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/01a04ce9-270d-7281-9cf2-1f169d658ba0/exec-271cb015-7d03-4cd6-894f-ea3e5caab7c8.png","sha256":"f694d5dd8c873c1f5dfb1eddfd22e8364339a6c3bd4cfb859084e3be79811e62","bytes":977757,"dimensions":"840x1871","mode":"RGB","aspectRatioAbsoluteRelativeDeltaPercent":0.086852,"marginsRgb245":[12,12,10,0],"subjectFillWidthPercent":97.380952,"subjectFillHeightPercent":99.358632,"edgeContactNote":"RGB<245 is conservative for white painted wood. Bottom contact and minimal visual clearance are confirmed natively; every measured edge is within 12 px and the pale outer frame is complete."}
+  ],
+  "currentRejected": [
+    {"finish":"negro","attempt":2,"file":"_rejected/negro-attempt-2-exec-16995c62-8639-4a92-a20f-a9e1b2fbb4b1.png","generatorId":"exec-16995c62-8639-4a92-a20f-a9e1b2fbb4b1","sha256":"f5f8c29fea4ab32eb0660dcbf5b5869bb9b01b221ed0fd48962b6513b0c5f568","bytes":1467507,"dimensions":"841x1871","marginsRgb245":[16,14,16,10],"reason":"left, top and right exceeded 12 px"},
+    {"finish":"wengue","attempt":2,"file":"_rejected/wengue-attempt-2-exec-b2788c9a-3278-477f-af44-9d4a285bc49b.png","generatorId":"exec-b2788c9a-3278-477f-af44-9d4a285bc49b","sha256":"4ccef824c9686e185900b10d91def3d2044a89ad0e9dd535161ff0784e1e158d","bytes":1797118,"dimensions":"840x1871","marginsRgb245":[21,21,18,11],"reason":"left, top and right exceeded 12 px"},
+    {"finish":"gris-oscuro","attempt":2,"file":"_rejected/gris-oscuro-attempt-2-exec-6b659590-4c8e-4083-9777-ed8997282395.png","generatorId":"exec-6b659590-4c8e-4083-9777-ed8997282395","sha256":"7dcbe2cc5ef948e8224ee1d56ec5339d9e8d6a9672147b8ba3433863de743fc5","bytes":1478388,"dimensions":"841x1871","marginsRgb245":[19,20,17,11],"reason":"left, top and right exceeded 12 px"},
+    {"finish":"antracita","attempt":2,"file":"_rejected/antracita-attempt-2-exec-32fcfe04-b259-45b8-8cab-3d22e41dc0e4.png","generatorId":"exec-32fcfe04-b259-45b8-8cab-3d22e41dc0e4","sha256":"7c036b1026d9c0d089e85811e4714ded3f460758bc056e880498aa384db9462f","bytes":1580501,"dimensions":"841x1871","marginsRgb245":[17,17,18,14],"reason":"every edge exceeded 12 px"},
+    {"finish":"nogal","attempt":2,"file":"_rejected/nogal-attempt-2-exec-a253711d-c0d9-43a8-9aa3-4ef3ee6707d1.png","generatorId":"exec-a253711d-c0d9-43a8-9aa3-4ef3ee6707d1","sha256":"1fcfd757aaa851a55d1b639f315092a6fe4603b1bf0b0298339231556a7b62e1","bytes":1781208,"dimensions":"840x1871","marginsRgb245":[19,21,22,11],"reason":"left, top and right exceeded 12 px"},
+    {"finish":"roble","attempt":2,"file":"_rejected/roble-attempt-2-exec-d633dfe7-4e6a-4bef-a0e0-36d0bc237a37.png","generatorId":"exec-d633dfe7-4e6a-4bef-a0e0-36d0bc237a37","sha256":"b541d5f5ea2d7f189f2f27a204432bbd2f5191889117ecbe51b1f492c3cf8bd9","bytes":1922262,"dimensions":"841x1871","marginsRgb245":[23,25,22,16],"reason":"every edge exceeded 12 px"},
+    {"finish":"gris-claro","attempt":2,"file":"_rejected/gris-claro-attempt-2-exec-b4cab019-eda0-4ddb-80f4-96e0e03fd07f.png","generatorId":"exec-b4cab019-eda0-4ddb-80f4-96e0e03fd07f","sha256":"7dd614138b543a35b79653dfc9c96fb085baa5756fc6b54ed74c9231c780ad85","bytes":1694357,"dimensions":"840x1871","marginsRgb245":[17,17,18,11],"reason":"left, top and right exceeded 12 px"},
+    {"finish":"natural","attempt":2,"file":"_rejected/natural-attempt-2-exec-a514dbfe-4bb0-4a5a-a209-ffeb7a0a65c3.png","generatorId":"exec-a514dbfe-4bb0-4a5a-a209-ffeb7a0a65c3","sha256":"01be728f508e431b5e45b6773a8c02eaade157e4abdb29b4e869fe2912435a79","bytes":1483707,"dimensions":"841x1871","marginsRgb245":[20,26,22,17],"reason":"every edge exceeded 12 px"},
+    {"finish":"blanco","attempt":2,"file":"_rejected/blanco-attempt-2-exec-9ee35d13-da81-429d-b2a3-c551cd574092.png","generatorId":"exec-9ee35d13-da81-429d-b2a3-c551cd574092","sha256":"923cf2bb0b9fd0709139327eacc6941f0d5c1745e764694e6aa13db5b82de744","bytes":1145064,"dimensions":"841x1871","marginsRgb245":[24,26,26,17],"reason":"every RGB<245 edge exceeded 12 px"},
+    {"finish":"negro","attempt":3,"file":"_rejected/negro-attempt-3-exec-a5c58fd8-6ba7-4e17-bde7-f7c28b7edb61.png","generatorId":"exec-a5c58fd8-6ba7-4e17-bde7-f7c28b7edb61","sha256":"ce6d8bc3fa10b2d92e142df1d0515697b95f2bd791125ab111ea2f53e9852061","bytes":1717326,"dimensions":"841x1870","marginsRgb245":[15,11,17,10],"reason":"left and right exceeded 12 px"},
+    {"finish":"wengue","attempt":3,"file":"_rejected/wengue-attempt-3-exec-db236252-34c1-4e52-b574-e38d33dc8f1d.png","generatorId":"exec-db236252-34c1-4e52-b574-e38d33dc8f1d","sha256":"2cec4fea2187dfe4306c921eb19d13f97e8bb44c542d5f185179a6b8fe631390","bytes":1583251,"dimensions":"841x1871","marginsRgb245":[16,11,17,10],"reason":"left and right exceeded 12 px"},
+    {"finish":"gris-oscuro","attempt":3,"file":"_rejected/gris-oscuro-attempt-3-exec-76ad4d0f-dbd2-443c-809e-39514e00ea6b.png","generatorId":"exec-76ad4d0f-dbd2-443c-809e-39514e00ea6b","sha256":"2cc14f44d472d0852914a5193da3fa4ed4713e94e4340a41c0b100954e19f2ed","bytes":1797550,"dimensions":"841x1871","marginsRgb245":[12,16,11,0],"reason":"top margin exceeded 12 px"},
+    {"finish":"antracita","attempt":3,"file":"_rejected/antracita-attempt-3-exec-d0e9354d-5ad5-4b8c-ab2d-c921efc25130.png","generatorId":"exec-d0e9354d-5ad5-4b8c-ab2d-c921efc25130","sha256":"946d1eb39c9bf3aff17a6344867aa450107db957cc35f9fa2a3915dd5cd14159","bytes":1496950,"dimensions":"841x1871","marginsRgb245":[20,17,17,14],"reason":"every edge exceeded 12 px"},
+    {"finish":"nogal","attempt":3,"file":"_rejected/nogal-attempt-3-exec-74718b7c-7b00-481e-a83e-9465b8b2801a.png","generatorId":"exec-74718b7c-7b00-481e-a83e-9465b8b2801a","sha256":"b38fc397d2d6b38fde63efa8b4daa2e0a23b53dffd32f1c754455332243eb15b","bytes":1695823,"dimensions":"841x1871","marginsRgb245":[18,13,15,10],"reason":"left, top and right exceeded 12 px"},
+    {"finish":"roble","attempt":3,"file":"_rejected/roble-attempt-3-exec-86823e8d-fa12-493d-adef-063f28928d20.png","generatorId":"exec-86823e8d-fa12-493d-adef-063f28928d20","sha256":"045b6a478310e1768e6b68291dcc7c60789cce714924043a22c9b09462ea9755","bytes":1752913,"dimensions":"840x1871","marginsRgb245":[18,19,24,14],"reason":"every edge exceeded 12 px"},
+    {"finish":"gris-claro","attempt":3,"file":"_rejected/gris-claro-attempt-3-exec-f2ece62d-33fe-4353-8e6e-829750cb1cef.png","generatorId":"exec-f2ece62d-33fe-4353-8e6e-829750cb1cef","sha256":"b34afdfa1eea4a7195a574adb493c80102bac8d2a589487f3241f140a4820712","bytes":1603725,"dimensions":"840x1871","marginsRgb245":[22,20,22,16],"reason":"every edge exceeded 12 px"},
+    {"finish":"natural","attempt":3,"file":"_rejected/natural-attempt-3-exec-d3ed52a5-0029-4dcd-9550-2fa5326a942b.png","generatorId":"exec-d3ed52a5-0029-4dcd-9550-2fa5326a942b","sha256":"dae5f5c1751aa491299c22fb414b0eea5eab28077f29407ed0578ca5db142c97","bytes":1637060,"dimensions":"841x1870","marginsRgb245":[20,24,19,14],"reason":"every edge exceeded 12 px"},
+    {"finish":"blanco","attempt":3,"file":"_rejected/blanco-attempt-3-exec-2b320b76-1d5a-4ebe-b6de-ae73844fcc1a.png","generatorId":"exec-2b320b76-1d5a-4ebe-b6de-ae73844fcc1a","sha256":"e7496182cc569d4113e862a619157c62a39f214505fafd114dafb92a4c3ade49","bytes":1091424,"dimensions":"841x1871","marginsRgb245":[20,12,15,3],"reason":"left and right RGB<245 margins exceeded 12 px"}
+  ],
+  "supersededPreviousAccepted": [
+    {"finish":"negro","attempt":1,"file":"_rejected/legacy-accepted-negro-attempt-1-exec-c8aca54a-fa63-46f8-a0f1-3ad356f39666.png","generatorId":"exec-c8aca54a-fa63-46f8-a0f1-3ad356f39666","sha256":"6febb52c73f1274c888d02db23ec7bd8e62b065ca9ee81e1498e14c9d6c37c4d","bytes":1314863,"dimensions":"840x1871","marginsRgb245":[23,26,16,17],"reason":"superseded by the new minimal-margin requirement"},
+    {"finish":"wengue","attempt":1,"file":"_rejected/legacy-accepted-wengue-attempt-1-exec-f22661bd-c19d-4a34-b99f-f5b4b6ca079a.png","generatorId":"exec-f22661bd-c19d-4a34-b99f-f5b4b6ca079a","sha256":"86fd233bfed4180f82f38331fc2a190425f23f6d375182cdfa6d5af9b44ebc1e","bytes":1478703,"dimensions":"841x1871","marginsRgb245":[20,24,18,15],"reason":"superseded by the new minimal-margin requirement"},
+    {"finish":"gris-oscuro","attempt":1,"file":"_rejected/legacy-accepted-gris-oscuro-attempt-1-exec-83b850ac-e296-449f-8e95-c95f76c4738d.png","generatorId":"exec-83b850ac-e296-449f-8e95-c95f76c4738d","sha256":"1cab5ad483175b205c9e79cc28e01d437a40a09981102f3a78d748e7cc4d19eb","bytes":1548476,"dimensions":"841x1871","marginsRgb245":[22,24,21,18],"reason":"superseded by the new minimal-margin requirement"},
+    {"finish":"antracita","attempt":1,"file":"_rejected/legacy-accepted-antracita-attempt-1-exec-34975a9e-89e2-4e3e-9811-1edc09a8f8e4.png","generatorId":"exec-34975a9e-89e2-4e3e-9811-1edc09a8f8e4","sha256":"edb72e02eed005e205ff77fc2d14bbd2e5a867e049f22ce1a9561cf422d8a0d7","bytes":1604960,"dimensions":"841x1871","marginsRgb245":[23,24,21,17],"reason":"superseded by the new minimal-margin requirement"},
+    {"finish":"nogal","attempt":1,"file":"_rejected/legacy-accepted-nogal-attempt-1-exec-b5a90655-724d-440d-a59f-b68be961baca.png","generatorId":"exec-b5a90655-724d-440d-a59f-b68be961baca","sha256":"1e8a16c569cb8421be977ee837973eb98cc393d49a669fc879f30e0c67a64ad9","bytes":1580042,"dimensions":"841x1870","marginsRgb245":[23,24,18,13],"reason":"superseded by the new minimal-margin requirement"},
+    {"finish":"roble","attempt":1,"file":"_rejected/legacy-accepted-roble-attempt-1-exec-ac49dc99-0816-4ebd-aafa-fdad00c92920.png","generatorId":"exec-ac49dc99-0816-4ebd-aafa-fdad00c92920","sha256":"0939937d1681143c9e4accb7d944fee3d3bd9d9958a7ab55ec5edbe35dbee3b0","bytes":1866052,"dimensions":"841x1870","marginsRgb245":[23,27,22,17],"reason":"superseded by the new minimal-margin requirement"},
+    {"finish":"gris-claro","attempt":1,"file":"_rejected/legacy-accepted-gris-claro-attempt-1-exec-ae6ae3b3-af6e-45e6-aaa3-ff1252b51282.png","generatorId":"exec-ae6ae3b3-af6e-45e6-aaa3-ff1252b51282","sha256":"fdfe584f4345d986cf4a1799baa54f8f9ae20236167167db134e29046130d9c8","bytes":1449334,"dimensions":"841x1870","marginsRgb245":[23,25,19,17],"reason":"superseded by the new minimal-margin requirement"},
+    {"finish":"natural","attempt":1,"file":"_rejected/legacy-accepted-natural-attempt-1-exec-f787a45d-2b40-48f0-a89e-5488a85e9a00.png","generatorId":"exec-f787a45d-2b40-48f0-a89e-5488a85e9a00","sha256":"c3afce43dfe657bba1c3fac3bed55ef806e58c0fa98bd3f712967346f5c130a5","bytes":1535002,"dimensions":"841x1870","marginsRgb245":[23,27,21,17],"reason":"superseded by the new minimal-margin requirement"},
+    {"finish":"blanco","attempt":1,"file":"_rejected/legacy-accepted-blanco-attempt-1-exec-8af401b7-2915-4969-95e7-20a745408639.png","generatorId":"exec-8af401b7-2915-4969-95e7-20a745408639","sha256":"42179aa63aff9a5ea8b2ee78c07159526393566152ebbabbdff11262cd1e19c4","bytes":1078254,"dimensions":"841x1870","marginsRgb245":[24,26,23,16],"reason":"superseded by the new minimal-margin requirement"}
+  ],
+  "unverifiedLegacyArtifacts": [
+    {"file":"rejected/negro-attempt-1.png","sha256":"82153cac6c3dfadc8dc21878262fe75e9944ef1106b893eb5e76c3d56612053c","bytes":1389764,"dimensions":"841x1871","status":"PRESERVED_UNVERIFIED_EXCLUDED_FROM_CALL_AND_BYTE_EQUALITY_COUNTS","reason":"Pre-existing reject whose generator artifact and ID were not recoverable; retained untouched and never used as a reference."}
+  ],
+  "qa": {
+    "path": "QA.json",
+    "status": "PASS_9_OF_9_REGENERATED",
+    "nativeVisualInspection": "PASS",
+    "uniqueAcceptedHashes": 9,
+    "maximumAcceptedAspectRatioAbsoluteRelativeDeltaPercent": 0.086852,
+    "maximumMeasuredAcceptedMarginRgb245Pixels": 12,
+    "allFourEdgesTangentAssetCount": 7,
+    "generatorByteEqualityPass": 36
+  },
+  "promotion": {
+    "converted": false,
+    "staged": false,
+    "publicWritten": false,
+    "originalModified": false
+  }
+}

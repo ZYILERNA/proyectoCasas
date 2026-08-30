@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/5203",
+  "policy": "NO_LOGO_MINIMUM_MARGIN_CANONICAL_CONTACT_MAXIMUM_SUBJECT",
+  "status": "PASS_9_OF_9_MINIMUM_MARGIN_REVISION",
+  "generationMethod": "built-in ImageGen only",
+  "requestedFinishCount": 9,
+  "acceptedAssetCount": 9,
+  "totalIndependentImageGenCalls": 30,
+  "rejectedAttempts": 21,
+  "previousRoundCalls": 11,
+  "minimumMarginRevisionCalls": 19,
+  "independence": {
+    "soleReferenceForEveryCall": "public/images/PUERTAS/MADERAACÚSTICA/5203/original.webp",
+    "referenceSha256Before": "bf7b6be04efeca7805862fe0daf9b5f81df843d6506097025101d7826a6aaefc",
+    "referenceSha256After": "bf7b6be04efeca7805862fe0daf9b5f81df843d6506097025101d7826a6aaefc",
+    "referenceUnchanged": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "conversionUsed": false
+  },
+  "qaMethod": "Native-detail visual inspection against the canonical original and all nine revised selections, plus read-only SHA-256, PNG dimensions, RGB, aspect-ratio, edge-margin, unique-hash and generator-source byte-equality checks. The previous nine selections were copied byte-for-byte to _rejected before replacement. No PNG was altered during QA.",
+  "acceptanceRules": {
+    "completeOuterFrameAndThresholdVisible": true,
+    "signatureGeometryPreserved": "straight top rail with projecting side posts; upper-left vertical groove; lower-right vertical groove; one wide lower-middle horizontal wood band",
+    "hardwarePreserved": "exactly one slim horizontal lever and one separate round key cylinder on the left above the band",
+    "zeroLogoTextBadgeWatermarkOrPseudotext": true,
+    "noPostGenerationPixelProcessing": true,
+    "aspectRatio": {"canonical":0.371482,"acceptedMinimum":0.371415,"acceptedMaximum":0.372082,"maximumAcceptedAbsoluteRelativeDeltaPercent":0.161390,"allAcceptedWithinOnePercent":true},
+    "maximumSubjectFraming": {
+      "goal": "User-requested minimum-margin revision: 0-6 pixels per side preferred, 12 maximum normal, make the door as large as possible; 0-pixel contact is allowed only when native inspection confirms a complete uncropped silhouette",
+      "measurementOrder": ["left", "top", "right", "bottom"],
+      "standardThreshold": "RGB<245",
+      "lightFinishSecondaryThreshold": "RGB<250 additionally recorded for gris-claro, natural and blanco",
+      "canonicalOriginalMarginsAtRgbBelow245": [4, 1, 4, 2],
+      "canonicalOriginalMarginsAtRgbBelow250": [4, 0, 4, 2],
+      "minimumAcceptedMarginPixels": 0,
+      "maximumAcceptedMarginPixels": 6,
+      "acceptedWithinPreferred0To6": ["negro", "wengue", "gris-oscuro", "antracita", "nogal", "roble", "gris-claro", "natural", "blanco"],
+      "acceptedWithinNormalMaximum12": ["negro", "wengue", "gris-oscuro", "antracita", "nogal", "roble", "gris-claro", "natural", "blanco"],
+      "documentedExceptionsAbove12": [],
+      "acceptedEdgeContactCount": 9,
+      "edgeContactRationale": "The user's revised priority is the smallest possible white margin. Native-detail inspection confirms that every contact is the intact outer-frame surface or threshold reaching the canvas edge, not cropped square posts, top rail, lower ends, joinery, band or hardware.",
+      "noCropOrResizeUsedToAchieveFraming": true
+    }
+  },
+  "assets": [
+    {"finish":"negro","file":"negro.png","generatorId":"exec-58764bc9-017a-40de-b584-37aefc691211","sha256":"131514222d69db8e6717784074e8ff7ed11b4efccfed55355da05a44de316279","dimensions":"765x2056","marginsRgb245":[0,0,0,0],"result":"PASS_REVISION_ATTEMPT_2_PREFERRED_NATIVE_COMPLETE_CONTACT"},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-2771e43d-c514-4ced-8b77-5fe3b228a9ec","sha256":"5d57403d8101300c8b461babd1a7eed7ae70b3ddb4ebadd7645316b4ea54328f","dimensions":"764x2057","marginsRgb245":[0,0,0,0],"result":"PASS_REVISION_ATTEMPT_2_PREFERRED_NATIVE_COMPLETE_CONTACT"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-a9aabdbf-5d8e-40df-8615-dec3ab9f2d0f","sha256":"3acf1bddb3381537156e110408ec0d6fb081f775e89493930789523b85577d11","dimensions":"765x2057","marginsRgb245":[0,0,0,0],"result":"PASS_REVISION_ATTEMPT_2_PREFERRED_NATIVE_COMPLETE_CONTACT"},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-e7e9e392-2c3c-49bf-b318-b711780ba3ae","sha256":"281c1ac823866badbc9850860bbc3ef05ebc0ddbc48d2d7ae51daa06381612eb","dimensions":"765x2057","marginsRgb245":[0,1,2,0],"result":"PASS_REVISION_ATTEMPT_2_PREFERRED_NATIVE_COMPLETE_CONTACT"},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-f77f00dd-3d08-4986-b749-d5fbba782476","sha256":"63cced394f25b4b382b28416f617e86b2abfc4404ac9c5f6efa97539433a5608","dimensions":"765x2056","marginsRgb245":[0,0,0,0],"result":"PASS_REVISION_ATTEMPT_2_PREFERRED_NATIVE_COMPLETE_CONTACT"},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-5b2ae1a2-adde-4278-bec3-f46c8baba245","sha256":"c310dc5611dedb9f06b3a0c17cb118aa9755e4c5521e8489bb7163a8716d686e","dimensions":"765x2057","marginsRgb245":[0,0,0,0],"result":"PASS_REVISION_ATTEMPT_2_PREFERRED_NATIVE_COMPLETE_CONTACT"},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-fb754121-93be-4fc0-a2a8-79776ba6b942","sha256":"255e33e2f15819a9839f4c87eda3adbe0b7434613b29053217be82705ffee390","dimensions":"764x2057","marginsRgb245":[3,0,3,0],"marginsRgb250":[3,0,3,0],"result":"PASS_REVISION_ATTEMPT_2_PREFERRED_NATIVE_COMPLETE_CONTACT"},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-c4cd8bf1-f1ca-468d-be82-fab68548112c","sha256":"845d119c1ebc7cdebc8e72b5132d713d9c0351e1d3736d565730c1a1a912c048","dimensions":"765x2057","marginsRgb245":[5,0,6,0],"marginsRgb250":[3,0,6,0],"result":"PASS_REVISION_ATTEMPT_3_PREFERRED_NATIVE_COMPLETE_CONTACT"},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-b5ba2cf2-8cde-4f10-91ae-f05318833597","sha256":"7fecabdb6a3930e28d2d244973f05b12ec2fb722f61e562a919364d5acf15c22","dimensions":"765x2057","marginsRgb245":[0,0,0,0],"marginsRgb250":[0,0,0,0],"result":"PASS_REVISION_ATTEMPT_2_PREFERRED_NATIVE_COMPLETE_CONTACT"}
+  ],
+  "previousSelectedBeforeMinimumMarginRevision": [
+    {"finish":"negro","file":"_rejected/negro-previous-selected-before-minimum-margin-revision.png","generatorId":"exec-3c6fe0ad-70fd-473c-866e-a150daca1fb5","sha256":"2c3b54679bf3d562f297a0aa6cda6e447fc58fadd724b1880e261e7400ea9984","dimensions":"765x2057","historicalResult":"PASS"},
+    {"finish":"wengue","file":"_rejected/wengue-previous-selected-before-minimum-margin-revision.png","generatorId":"exec-8bfec0f8-e4ac-4c23-9e1f-5574f3e8e9ca","sha256":"d649c9f79fc0e37ad18d56be59abb7ee1640517039b965c31b5d1887595b02a3","dimensions":"765x2057","historicalResult":"PASS"},
+    {"finish":"gris-oscuro","file":"_rejected/gris-oscuro-previous-selected-before-minimum-margin-revision.png","generatorId":"exec-de2210eb-16dc-461d-b92d-a6819fcccdbb","sha256":"0ef57f48f7fc47c2d0ed8081c925fef78fc85b86e44bb660445c2a233f2a343e","dimensions":"765x2056","historicalResult":"PASS"},
+    {"finish":"antracita","file":"_rejected/antracita-previous-selected-before-minimum-margin-revision.png","generatorId":"exec-a52aaaf7-a125-4576-aef6-6af2f1e04c97","sha256":"9ff7633548206cd51e10dcb8ae8ce1f1b461c8493f7b2e60a8c340e049d6323a","dimensions":"764x2057","historicalResult":"PASS"},
+    {"finish":"nogal","file":"_rejected/nogal-previous-selected-before-minimum-margin-revision.png","generatorId":"exec-e9f36545-a13e-4d13-b194-b82acaf3d7a0","sha256":"cb5027c4b80e42d67b2bc689096354acd72df9357a920b693568cbe82b81b69e","dimensions":"765x2056","historicalResult":"PASS"},
+    {"finish":"roble","file":"_rejected/roble-previous-selected-before-minimum-margin-revision.png","generatorId":"exec-b4a9fca9-c788-470c-b64a-3f31a3881c59","sha256":"1562f4cf706b9160e99a4e0247414de6f2c244a997bae5cecacb40995a907698","dimensions":"765x2056","historicalResult":"PASS"},
+    {"finish":"gris-claro","file":"_rejected/gris-claro-previous-selected-before-minimum-margin-revision.png","generatorId":"exec-d38cf82f-0f5b-471b-a511-d1eca4e7ee30","sha256":"cbe2ec52efb4f4815dbbee7aedcbc75ee193626e1665c56b8bba10b3939eb5d4","dimensions":"765x2055","historicalResult":"PASS_WITH_DOCUMENTED_FRAMING_EXCEPTION"},
+    {"finish":"natural","file":"_rejected/natural-previous-selected-before-minimum-margin-revision.png","generatorId":"exec-4a5c3585-f1d8-42df-a354-e18eae2f4289","sha256":"05e2c57d7ea4630797c624e1f93023af5de5a2df27606f13c040f537c691b326","dimensions":"764x2057","historicalResult":"PASS"},
+    {"finish":"blanco","file":"_rejected/blanco-previous-selected-before-minimum-margin-revision.png","generatorId":"exec-3d9e6759-1a68-4d00-9985-c8b7d719dc6d","sha256":"6273390548a0b3350fed3aa2bea0d5eb7c74fea07e370d6528f1b1ed245d0519","dimensions":"765x2056","historicalResult":"PASS"}
+  ],
+  "rejectedAudit": {
+    "previousRoundRejected": [
+      {"finish":"gris-claro","file":"_rejected/gris-claro-attempt2-frame-drift.png","generatorId":"exec-c198b06f-d2ac-4551-83d1-38faa56254ea","sha256":"f85f4ab0ade4e803e06e0833415eb78828c69e5373ae26872c7784d423c9172a"},
+      {"finish":"gris-claro","file":"_rejected/gris-claro-attempt3-padding.png","generatorId":"exec-b13eb4f5-f236-48f9-a0d4-d681deec8a97","sha256":"de6813237dc84cb01fd587ff1d8395a0f2d6efcd2eea5b65d096dc4a32847b34"}
+    ],
+    "minimumMarginRevisionRejected": [
+      {"finish":"negro","file":"_rejected/negro-minimum-margin-revision-attempt1-padding.png","generatorId":"exec-0be65c1f-fdea-4ca7-9c7d-cacd61cd3ed8","sha256":"6dcafbff4ef609fc39f172f4370844cf2ce37d007d5013e4054bedf7cb38badc","marginsRgb245":[14,5,15,4]},
+      {"finish":"wengue","file":"_rejected/wengue-minimum-margin-revision-attempt1-padding.png","generatorId":"exec-eb9cf5ed-1110-490c-b7ca-3db7c5bffd27","sha256":"906f476f071653a7e567f813c8fcc957d8266cd9c47d6ab4f969bf4060f2c58d","marginsRgb245":[12,5,13,4]},
+      {"finish":"gris-oscuro","file":"_rejected/gris-oscuro-minimum-margin-revision-attempt1-padding.png","generatorId":"exec-c7a4e59d-996f-446c-b470-f77b67482cfe","sha256":"5367943e7aa6253bd8a4f13fd64378cb3875b267b6574963189d135879c28338","marginsRgb245":[13,8,15,5]},
+      {"finish":"antracita","file":"_rejected/antracita-minimum-margin-revision-attempt1-padding.png","generatorId":"exec-03dbf362-9d75-4c9f-9167-4ac12fe5e579","sha256":"579c53e11c7032e8cc7de34faaded3bfaf735f1e802f5bf1635691093f188e88","marginsRgb245":[9,3,11,5]},
+      {"finish":"nogal","file":"_rejected/nogal-minimum-margin-revision-attempt1-padding.png","generatorId":"exec-77cfb7f6-ca9b-4cea-8c6a-931bc086e10c","sha256":"d7d2c1d65e30c1d800ee1a0aa41f9a68e4b3b52d1acea84e99879afd76ed1e34","marginsRgb245":[18,7,16,6]},
+      {"finish":"roble","file":"_rejected/roble-minimum-margin-revision-attempt1-padding.png","generatorId":"exec-284e28b0-cde3-470a-baf0-f79841b2e0d0","sha256":"a0f1f271aef52009ce8b0a8fe1b23b3d683ea143bced016126c5ed6de2cc73aa","marginsRgb245":[9,6,10,4]},
+      {"finish":"gris-claro","file":"_rejected/gris-claro-minimum-margin-revision-attempt1-padding.png","generatorId":"exec-d1b47b2f-7e8b-4c41-bd20-25d86f6e2738","sha256":"b239793b93d70fc65a966745f6360898aa784d03548ecdc518b701794684a847","marginsRgb245":[13,4,11,0]},
+      {"finish":"natural","file":"_rejected/natural-minimum-margin-revision-attempt1-padding.png","generatorId":"exec-ecc3812c-3994-4dde-9bb8-3deba4b2534f","sha256":"488ceca4af75d6818e14499301de61370b3421b9028b536d973b25f4810f2a7f","marginsRgb245":[11,3,11,4]},
+      {"finish":"natural","file":"_rejected/natural-minimum-margin-revision-attempt2-padding.png","generatorId":"exec-1045446b-37ab-4bee-93a8-089c1a49f02d","sha256":"f163ed5e0a3515b40865fb282b85df433c564305539e23038a0a0e98111cb720","marginsRgb245":[7,0,10,0]},
+      {"finish":"blanco","file":"_rejected/blanco-minimum-margin-revision-attempt1-padding.png","generatorId":"exec-0a342f1a-5b12-4c6d-98db-15ad82b41002","sha256":"f613297c37ca39c9cf6e8276b7dd7a7c6376af517988a003040e6089d4236ec2","marginsRgb245":[14,5,17,2]}
+    ],
+    "previousSelectionsDisplacedAndPreserved": 9,
+    "totalRejectedFiles": 21
+  },
+  "summary": {
+    "pass": 9,
+    "fail": 0,
+    "uniqueAcceptedHashes": 9,
+    "uniqueCallIds": 30,
+    "generatorByteEqualityPass": 30,
+    "minimumMarginRevisionGeneratorByteEqualityPass": 19,
+    "previousSelectedPreservedByteEqualityPass": 9,
+    "logoTextOrPseudotextInstancesPerAcceptedAsset": 0,
+    "visualInspection": "PASS: all nine revised selections preserve the complete square post-and-rail frame, straight top rail and projecting posts, upper-left joint, lower-right joint, wide dark horizontal band, exactly one slim lever and one separate round key cylinder. Contact is intentional; complete uncropped silhouettes and NO_LOGO were confirmed natively.",
+    "originalModified": false,
+    "publicFilesModified": false,
+    "converted": false,
+    "promoted": false
+  }
+}
