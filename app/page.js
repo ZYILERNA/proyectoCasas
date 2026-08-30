@@ -19,6 +19,7 @@ import {
   Wind,
 } from "lucide-react";
 import CertificateShowcase from "../components/home/CertificateShowcase";
+import PartnerMarquee from "../components/home/PartnerMarquee";
 import PatentCarousel from "../components/home/PatentCarousel";
 
 export const metadata = {
@@ -196,12 +197,12 @@ export default function Home() {
       >
         <div className="hero-background-enter absolute inset-0 z-0">
           <Image
-            src="/images/hero-robot.webp"
+            src="/images/hero-robot-home.webp"
             alt="Tecnología de seguridad WONLY"
             fill
             priority
             quality={82}
-            className="object-cover object-top"
+            className="object-cover object-[70%_top] md:object-top"
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/65 to-transparent" />
@@ -466,6 +467,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <PartnerMarquee />
 
       <section
         aria-labelledby="contact-title"
