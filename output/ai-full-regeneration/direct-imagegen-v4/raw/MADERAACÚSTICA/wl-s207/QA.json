@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-s207",
+  "policy": "NO_LOGO_EXACT_CLASSICAL_TWO_PANEL_CANONICAL_NEAR_EDGE_CONTACT_MAXIMUM_SUBJECT",
+  "status": "PASS_9_OF_9",
+  "generationMethod": "built-in ImageGen only",
+  "requestedFinishCount": 9,
+  "acceptedAssetCount": 9,
+  "totalIndependentImageGenCalls": 11,
+  "acceptedIndependentCalls": 9,
+  "rejectedAttempts": 2,
+  "independence": {
+    "soleReferenceForEveryCall": "public/images/PUERTAS/MADERAACÚSTICA/wl-s207/original.webp",
+    "referenceSha256Before": "0e109470488d04bc3fe94291a0156b791a621480fac50adf21004b4293a0c4ad",
+    "referenceSha256After": "0e109470488d04bc3fe94291a0156b791a621480fac50adf21004b4293a0c4ad",
+    "referenceUnchanged": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "conversionUsed": false,
+    "pixelProcessingUsed": false
+  },
+  "qaMethod": "Native-detail visual inspection of the original and every accepted candidate, plus read-only SHA-256, PNG dimensions, RGB<245 edge-margin, subject-fill, aspect-ratio, unique-hash and generator-source byte-equality checks. RGB<250 was additionally recorded for blanco. No PNG was altered during QA.",
+  "acceptanceRules": {
+    "completeOuterCasingTopLintelAndDoorBottomVisible": true,
+    "straightOnTallNarrowComposition": true,
+    "signatureGeometryPreserved": "slim complete outer posts and top lintel, dark narrow recessed reveal inside the left casing, one very large upper recessed rectangular panel with stepped beveled moulding, one middle rail with exactly one long narrow recessed rectangular inset, one lower recessed rectangular panel with stepped beveled moulding and one flat lower rail",
+    "hardwarePreserved": "exactly one short slim horizontal dark lever pointing right on one round rosette and exactly one separate small dark round key escutcheon directly below, at the source-side location, scale and spacing",
+    "finishAppliedWithoutStructuralRedesign": true,
+    "zeroLogoTextBadgeWatermarkOrPseudotext": true,
+    "noPostGenerationPixelProcessing": true,
+    "aspectRatio": {
+      "canonical": 0.370056497,
+      "acceptedMinimum": 0.370029098,
+      "acceptedMaximum": 0.37038835,
+      "maximumAcceptedAbsoluteRelativeDeltaPercent": 0.089676,
+      "allAcceptedWithinOnePercent": true
+    },
+    "maximumSubjectFraming": {
+      "goal": "make the complete intact door occupy essentially the entire canvas and reproduce canonical or near-canonical contacts where the full silhouette remains visible",
+      "measurementOrder": ["left", "top", "right", "bottom"],
+      "standardThreshold": "RGB<245",
+      "supplementalWhiteFinishThreshold": "RGB<250",
+      "canonicalOriginalMarginsAtRgbBelow245": [5, 6, 1, 0],
+      "canonicalOriginalMarginsAtRgbBelow250": [2, 4, 1, 0],
+      "preferredAcceptedRangePixels": "0-6; zero contact allowed on canonical or near-canonical edges only when native inspection confirms the complete silhouette",
+      "normalMaximumPixels": 12,
+      "minimumMeasuredAcceptedPixels": 0,
+      "maximumMeasuredAcceptedPixels": 12,
+      "acceptedWithinPreferredRangeOnEverySideCount": 3,
+      "acceptedWithinNormalMaximumOnEverySideCount": 9,
+      "nativeCompleteAtZeroContact": true,
+      "zeroContactAssessment": "Nogal and gris-claro contact all four edges and natural contacts right and bottom. In each case native inspection confirms both outer posts, the full top lintel and the full bottom rail. These contacts are within the 0-6 preferred band and close to the original 5/6/1/0 margins.",
+      "noCropOrResizeUsedToAchieveFraming": true,
+      "exceptionsAboveNormalMaximum": []
+    }
+  },
+  "assets": [
+    {"finish":"negro","file":"negro.png","generatorId":"exec-7783f1f8-6a9e-44b8-b6b5-758e3683d203","sha256":"b478e729b62e4b1d51958ef059ff1d4217dde3901e47bc9a355cc5c903ebcc51","dimensions":"763x2060","marginThreshold":"RGB<245","margins":[11,9,11,8],"aspectRatioAbsoluteRelativeDeltaPercent":0.089676,"result":"PASS_ATTEMPT_1_NORMAL_MAXIMUM"},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-c60465c7-4d0d-4161-ac13-5549ff6eabaa","sha256":"be19800cb2638a805ce7b76b48d639fdf40f7a8dd5f4a40b1f4340ebaf4ae0bc","dimensions":"763x2062","marginThreshold":"RGB<245","margins":[9,8,9,0],"aspectRatioAbsoluteRelativeDeltaPercent":0.007404,"result":"PASS_ATTEMPT_1_NORMAL_MAXIMUM_CANONICAL_BOTTOM_CONTACT"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-5193128a-781e-40cd-9433-27cbe6cf1982","sha256":"24d4583b202c2fdd3ba73215d79a213001bca4185b38f05d3990b4aa92cb7bf4","dimensions":"763x2062","marginThreshold":"RGB<245","margins":[0,8,4,0],"aspectRatioAbsoluteRelativeDeltaPercent":0.007404,"result":"PASS_ATTEMPT_1_NATIVE_COMPLETE_NEAR_CANONICAL_LEFT_AND_BOTTOM_CONTACT"},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-38ba821b-ec78-4cbd-aab9-6119ad015872","sha256":"c9798c93aa8ba14609d3e2616feab509660f8607fe5d15c54672ed8155375f0f","dimensions":"763x2060","marginThreshold":"RGB<245","margins":[5,12,8,0],"aspectRatioAbsoluteRelativeDeltaPercent":0.089676,"result":"PASS_ATTEMPT_1_NORMAL_MAXIMUM_CANONICAL_BOTTOM_CONTACT"},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-b1ad724d-03a8-4b20-a49a-1a71fd4a56ff","sha256":"2ba1df71160f71c7e30eb478146dec8ea329b78e93d9a63e765a08f0d8a49fd4","dimensions":"763x2061","marginThreshold":"RGB<245","margins":[0,0,0,0],"aspectRatioAbsoluteRelativeDeltaPercent":0.041112,"result":"PASS_ATTEMPT_1_PREFERRED_NATIVE_COMPLETE_ALL_EDGE_CONTACT"},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-2a333fcb-69b3-443e-aefe-0a97838f0f9d","sha256":"87a6d2837eeaf3c251274b01aa011d9629a529c421f81de123f037acea0aa2ef","dimensions":"763x2061","marginThreshold":"RGB<245","margins":[8,9,10,0],"aspectRatioAbsoluteRelativeDeltaPercent":0.041112,"result":"PASS_ATTEMPT_1_NORMAL_MAXIMUM_CANONICAL_BOTTOM_CONTACT"},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-758fca63-5045-4c14-97d2-220bd7f7a8cc","sha256":"0802330ccd396c42820c5ac231cf9864c8dd376efd741489fb59ee5e649ba74d","dimensions":"763x2062","marginThreshold":"RGB<245","margins":[0,0,0,0],"aspectRatioAbsoluteRelativeDeltaPercent":0.007404,"result":"PASS_ATTEMPT_1_PREFERRED_NATIVE_COMPLETE_ALL_EDGE_CONTACT"},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-99718f73-7185-484e-864b-b97e7d5286e9","sha256":"fd87c8ff7842628ce18151c509b9ee68414d531f29f30d63b7b8ef0bbcc4d651","dimensions":"763x2061","marginThreshold":"RGB<245","margins":[3,1,0,0],"aspectRatioAbsoluteRelativeDeltaPercent":0.041112,"result":"PASS_ATTEMPT_2_PREFERRED_AFTER_TOP_MARGIN_RETRY"},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-890ce933-58c2-4ba5-919d-e06bc5b89393","sha256":"997c27188102d7fc05d76fbffbbdae7d611d0a52059aada7ab23e6d0e0d4850c","dimensions":"763x2061","marginThreshold":"RGB<245","margins":[11,6,11,0],"marginsAtRgbBelow250":[9,0,11,0],"aspectRatioAbsoluteRelativeDeltaPercent":0.041112,"result":"PASS_ATTEMPT_2_NORMAL_MAXIMUM_AFTER_TOP_MARGIN_RETRY"}
+  ],
+  "rejectedAttemptMap": {
+    "negro": [],
+    "wengue": [],
+    "gris-oscuro": [],
+    "antracita": [],
+    "nogal": [],
+    "roble": [],
+    "gris-claro": [],
+    "natural": [
+      {"attempt":1,"file":"_rejected/natural-attempt-1-top-margin.png","generatorId":"exec-67e76843-d43a-4271-91e5-91c7a623c9c3","sha256":"71dc95473523135e4cb58f802043ae00c40cbdd9fca61550603e190aaa911611","dimensions":"763x2062","margins":[11,16,11,0],"reason":"top margin 16 pixels exceeded the normal maximum of 12"}
+    ],
+    "blanco": [
+      {"attempt":1,"file":"_rejected/blanco-attempt-1-top-margin.png","generatorId":"exec-b3bf9421-2074-4a73-a3a9-ce0b33d88586","sha256":"8cdce95ed2792ea148309dbf1a633a7ea2397c375f02de8fe0d54b4d57cf88a4","dimensions":"763x2062","margins":[13,18,11,0],"marginsAtRgbBelow250":[11,18,11,0],"reason":"top margin 18 pixels exceeded 12; standard-threshold left margin was also 13"}
+    ]
+  },
+  "summary": {
+    "pass": 9,
+    "fail": 0,
+    "uniqueAcceptedHashes": 9,
+    "generatorByteEqualityPassAccepted": 9,
+    "generatorByteEqualityPassRejected": 2,
+    "logoTextOrPseudotextInstancesPerAcceptedAsset": 0,
+    "visualInspection": "PASS: all nine accepted finishes preserve the complete narrow casing, dark left reveal, exact upper panel, exact middle rectangular inset, exact lower panel, one lever/rosette and one separate key escutcheon. Every zero contact retains the complete native silhouette.",
+    "originalModified": false,
+    "publicFilesModified": false,
+    "converted": false,
+    "promoted": false,
+    "committed": false,
+    "pushed": false
+  }
+}

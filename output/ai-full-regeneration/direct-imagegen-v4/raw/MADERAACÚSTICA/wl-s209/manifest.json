@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-s209",
+  "policy": "NO_LOGO",
+  "status": "PASS_9_OF_9_MINIMUM_MARGIN_REVISION",
+  "closedAt": "2026-08-29T17:18:23+02:00",
+  "revision": "AI-only white minimum-margin selection from 3 additional direct ImageGen calls",
+  "reference": {
+    "path": "public/images/PUERTAS/MADERAACÚSTICA/wl-s209/original.webp",
+    "role": "sole canonical reference for every ImageGen call",
+    "sha256Before": "bc3ddfcf0bb1f1e617511eb0b0feacf04916fa949eb5b175a7ac8fdb55beafb4",
+    "sha256After": "bc3ddfcf0bb1f1e617511eb0b0feacf04916fa949eb5b175a7ac8fdb55beafb4",
+    "unchanged": true,
+    "bytes": 7014,
+    "dimensions": "406x1069",
+    "aspectRatioWidthOverHeight": 0.379794,
+    "marginsRgb245": [4, 5, 4, 0],
+    "logoState": "NO_LOGO"
+  },
+  "generation": {
+    "mode": "built-in-imagegen-independent-call-per-finish-or-retry",
+    "totalIndependentCalls": 26,
+    "acceptedCount": 9,
+    "rejectedCount": 17,
+    "sourceGeneratedImageRoots": [
+      "C:/Users/zhen/.codex/generated_images/01a04ce9-ed50-7a61-9d1d-ebadb75765a6",
+      "C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0"
+    ],
+    "soleReferenceUsedForEveryCall": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "formatConversionUsed": false,
+    "acceptedAssetsAlteredAfterGeneration": false,
+    "rejectedAssetsAlteredAfterGeneration": false
+  },
+  "accepted": [
+    {"finish":"negro","file":"negro.png","generatorId":"exec-429a802f-aef6-4570-a579-2705dd33ff02","attempt":3,"sha256":"f6e3bf3bab4749627f088a9dd92e84b1df4f695fed255202222665d171344aef","bytes":1214476,"dimensions":"771x2038","aspectRatioRelativeDeltaPercent":-0.390,"marginsRgb245":[0,0,0,0],"result":"PASS_CANONICAL_NEAR_FULL_BLEED_CONTACT"},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-8b5804be-2f0e-4bfc-9631-f12dbe0d0660","attempt":1,"sha256":"5245194884241120f1c1c4450ad828a0c1caa728fd0097ba8714d059f42b587c","bytes":1679366,"dimensions":"773x2035","aspectRatioRelativeDeltaPercent":0.015,"marginsRgb245":[10,7,9,0],"result":"PASS"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-c9cdb3e0-5428-479b-ad6b-9816ec33da8b","attempt":3,"sha256":"364e26a2946ef2560ec22ba17bef40644d5240878e73854a9c024d4968db9507","bytes":1038060,"dimensions":"773x2035","aspectRatioRelativeDeltaPercent":0.015,"marginsRgb245":[0,0,0,0],"result":"PASS_CANONICAL_NEAR_FULL_BLEED_CONTACT"},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-6ef97183-9c47-4cbb-a7db-9b534bd2679d","attempt":3,"sha256":"dcdfbc819a35bb346b1520cfc7813f91815110718d65bd78526f16138db2c27e","bytes":1007725,"dimensions":"772x2037","aspectRatioRelativeDeltaPercent":-0.212,"marginsRgb245":[0,0,0,0],"result":"PASS_CANONICAL_NEAR_FULL_BLEED_CONTACT"},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-1301f502-82fa-407a-b5bf-6e83727d676f","attempt":1,"sha256":"79b98ac1b241cc32d2795cf14d66457521d538f930127f167ee58db7193431f2","bytes":1858993,"dimensions":"773x2035","aspectRatioRelativeDeltaPercent":0.015,"marginsRgb245":[0,0,0,0],"result":"PASS_CANONICAL_NEAR_FULL_BLEED_CONTACT"},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-6ad149ac-c34e-4040-98ea-d25c6df28a7f","attempt":3,"sha256":"ad101eed7f3a41c30298c697e148723bb6b4f1482ddaa6f839c97c4ee24856c7","bytes":1505921,"dimensions":"771x2038","aspectRatioRelativeDeltaPercent":-0.390,"marginsRgb245":[0,0,0,0],"result":"PASS_CANONICAL_NEAR_FULL_BLEED_CONTACT"},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-40c72845-67f2-4338-903e-3ecdeccc4348","attempt":1,"sha256":"a9c6dc1b368304f8e91dadf198ce6ad020ba2c561abc3f35a9927bf02ab98bcf","bytes":1205735,"dimensions":"773x2035","aspectRatioRelativeDeltaPercent":0.015,"marginsRgb245":[11,9,12,0],"result":"PASS"},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-70511e36-7e61-4c0b-b695-f8c387fffa0d","attempt":1,"sha256":"4ad4037d561fcf25820bfbf342c0bef192cdb45d73262ba609f15d0246656fd1","bytes":1599799,"dimensions":"773x2034","aspectRatioRelativeDeltaPercent":0.065,"marginsRgb245":[10,9,12,0],"result":"PASS"},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-43eaeb78-80af-4c60-96b5-dc5cf5abfea4","attempt":9,"sha256":"5302c72d3109babdab4bc6c1b31ed3119c653188136ff6463dcd181c7ce0263e","bytes":881486,"dimensions":"772x2038","aspectRatioRelativeDeltaPercent":-0.261,"marginsRgb245":[10,6,10,0],"result":"PASS"}
+  ],
+  "framingNotes": [
+    {"finishes":["negro","gris-oscuro","antracita","nogal","roble"],"detail":"RGB<245 bounds reach [0,0,0,0]. Native-detail inspection confirms both complete exterior posts, the full top lintel, all four outer corners and the full lower termination. Contact is accepted because the canonical original is itself nearly full bleed at [4,5,4,0], including bottom-row contact, and no crop or resize was applied."}
+  ],
+  "framingExceptions": [],
+  "marginRevisionNotes": [
+    {"finish":"blanco","detail":"Three additional independent direct ImageGen calls were made from the sole canonical original. Attempt 9 measures [10,6,10,0], preserves the complete silhouette and replaces the former attempt-6 framing exception without any crop, resize, filter or other pixel edit. The displaced attempt 6 and unsuccessful attempts 8 and 10 remain byte-for-byte in _rejected/."}
+  ],
+  "rejected": [
+    {"finish":"negro","attempt":1,"file":"_rejected/negro-attempt-01.png","generatorId":"exec-572da2e5-7be1-441d-85ad-8fb5101e84d3","sha256":"ddbc5ac91a891625c2fb8ac1e18b4522b5e4f96564537beac79120cb6aab22ed","bytes":862992,"dimensions":"773x2035","marginsRgb245":[16,8,19,7],"reason":"left and right margins above normal maximum"},
+    {"finish":"negro","attempt":2,"file":"_rejected/negro-attempt-02.png","generatorId":"exec-9d84c1ae-5c59-49fe-a127-aec1b0cdbbd4","sha256":"312cee05e6fe354a7bb341c3cc76f765bc9825942f1e4f3664570118956caf32","bytes":1186934,"dimensions":"772x2038","marginsRgb245":[15,13,14,5],"reason":"left, top and right margins above normal maximum"},
+    {"finish":"gris-oscuro","attempt":1,"file":"_rejected/gris-oscuro-attempt-01.png","generatorId":"exec-e707cfae-9749-4702-b091-c462a263149f","sha256":"8b83c53a33f996489dc0ff0576a4a48f870551daf1e8268a3f9746f3d218ef9e","bytes":1332228,"dimensions":"1092x1441","marginsRgb245":[145,3,145,0],"reason":"wrong aspect ratio and very broad side margins"},
+    {"finish":"gris-oscuro","attempt":2,"file":"_rejected/gris-oscuro-attempt-02.png","generatorId":"exec-f922c775-cc68-4b3b-a677-ecdba57cb620","sha256":"807afec8e1494d666fd4f2b56f409aa9f47054bf00833fab4ecde2ebbe735d09","bytes":1274019,"dimensions":"772x2037","marginsRgb245":[15,9,16,5],"reason":"left and right margins above normal maximum"},
+    {"finish":"antracita","attempt":1,"file":"_rejected/antracita-attempt-01.png","generatorId":"exec-17c39007-10dd-407b-9603-0b4fa49d2199","sha256":"55b4088a0ba322a1d39411172541ba02c796e21f238975f855716e4808fe785b","bytes":1343923,"dimensions":"1091x1442","marginsRgb245":[148,0,151,0],"reason":"wrong aspect ratio and very broad side margins"},
+    {"finish":"antracita","attempt":2,"file":"_rejected/antracita-attempt-02.png","generatorId":"exec-dcceab78-df58-42d8-89ee-d5a144e03ad9","sha256":"d48e5e0be13e0f0e4f84aa5d6b0e47c46a4c53b0fc101d7c4fb62e2607bc3499","bytes":1272702,"dimensions":"772x2038","marginsRgb245":[16,8,12,0],"reason":"left margin above normal maximum"},
+    {"finish":"roble","attempt":1,"file":"_rejected/roble-attempt-01.png","generatorId":"exec-0437186b-a62e-4d01-bdd8-7b0d867ab27d","sha256":"986741314e02884d17619cab42ba58bc1df1bb40caccb1d81e776f2773eb7a32","bytes":1576474,"dimensions":"1095x1437","marginsRgb245":[150,0,152,0],"reason":"wrong aspect ratio and very broad side margins"},
+    {"finish":"roble","attempt":2,"file":"_rejected/roble-attempt-02.png","generatorId":"exec-178efa18-6545-4c19-9572-90dd979e21ae","sha256":"d02b718a09a016c3c72a32f86f67a09fb0aac3282c1b1555bd55b509ac3790de","bytes":1640811,"dimensions":"771x2038","marginsRgb245":[16,10,15,0],"reason":"left and right margins above normal maximum"},
+    {"finish":"blanco","attempt":1,"file":"_rejected/blanco-attempt-01.png","generatorId":"exec-9eb80099-6248-4991-bcdb-3504a5038ced","sha256":"91341ff899892aa0faa857a34f9b17bb197844878d0b7b96a9b8b957c732499f","bytes":823594,"dimensions":"773x2035","marginsRgb245":[16,8,14,0],"reason":"left and right margins above normal maximum"},
+    {"finish":"blanco","attempt":2,"file":"_rejected/blanco-attempt-02.png","generatorId":"exec-890108d2-2070-4501-a180-6b1faa67437e","sha256":"d9513d78a5f83d75bdfc87a41d3d15f7e34785804b570a1f67fa34dec8d9cc5d","bytes":830297,"dimensions":"771x2038","marginsRgb245":[14,12,14,1],"reason":"left and right margins above normal maximum"},
+    {"finish":"blanco","attempt":3,"file":"_rejected/blanco-attempt-03.png","generatorId":"exec-51425efa-2742-4bfc-88c6-1a5377f673fa","sha256":"4e75168d63304a0cb43afcee888441468d98fe393277305e18c3e3d66517f652","bytes":1089263,"dimensions":"772x2038","marginsRgb245":[12,12,14,7],"reason":"right margin above normal maximum and greater aggregate padding than selected attempt 6"},
+    {"finish":"blanco","attempt":4,"file":"_rejected/blanco-attempt-04.png","generatorId":"exec-18c915ab-ffac-4f39-b59d-2d61f6bfbad4","sha256":"874bd25be521c756654ef490a50efd53e071db6afee70f1c69c5d26131850267","bytes":1084062,"dimensions":"771x2038","marginsRgb245":[16,12,16,3],"reason":"left and right margins above normal maximum"},
+    {"finish":"blanco","attempt":5,"file":"_rejected/blanco-attempt-05.png","generatorId":"exec-32bd9b6c-9f1c-4fe1-bf2d-0a4bf633f3c1","sha256":"eac43d744497d3a5d68071e999853129cbbbdd66398b225590ccda81225de84f","bytes":809619,"dimensions":"771x2039","marginsRgb245":[20,18,20,4],"reason":"broad left, top and right padding"},
+    {"finish":"blanco","attempt":7,"file":"_rejected/blanco-attempt-07.png","generatorId":"exec-31dfa721-eef9-4d4c-b917-c1235b74da0b","sha256":"d9f5da3f28f3363e7d96de68071b5fcce4ff2630e328092f10fc8b42d178ada2","bytes":799521,"dimensions":"771x2041","marginsRgb245":[16,9,16,0],"reason":"left and right margins above normal maximum"},
+    {"finish":"blanco","attempt":6,"file":"_rejected/blanco-attempt-06.png","generatorId":"exec-0dce020a-b9f3-4f79-b668-d59ada8d4fea","sha256":"0fe53f7b5b9bd7f4e954c486afa543e9f8e7f7787e858e948cf987ef46662c92","bytes":803634,"dimensions":"772x2036","marginsRgb245":[16,1,12,0],"reason":"displaced former selection; left margin exceeded the mandatory maximum and attempt 9 reduced all margins to <=10"},
+    {"finish":"blanco","attempt":8,"file":"_rejected/blanco-attempt-08.png","generatorId":"exec-cef9e55e-f158-4506-9cf1-88bdc4c37178","sha256":"33a23fa49b42c280e5c5fc17ecad66596e5fcbd27973f3b69670eef065c47932","bytes":806485,"dimensions":"772x2038","marginsRgb245":[19,7,17,4],"reason":"left and right margins exceed the mandatory 12 px maximum"},
+    {"finish":"blanco","attempt":10,"file":"_rejected/blanco-attempt-10.png","generatorId":"exec-dec4f11a-ec95-46cf-95e7-e839276d4edd","sha256":"3ecbc876bc1070d3ccf9c2b551bdaea3021941d15be3c6f91bbb2cb10b61846c","bytes":841679,"dimensions":"772x2038","marginsRgb245":[13,2,13,0],"reason":"left and right margins exceed the mandatory 12 px maximum; superseded by attempt 9"}
+  ],
+  "qa": {
+    "path": "QA.json",
+    "status": "PASS_9_OF_9_MINIMUM_MARGIN_REVISION",
+    "acceptedAssetCount": 9,
+    "uniqueAcceptedHashes": 9,
+    "maximumAcceptedAspectRatioAbsoluteRelativeDeltaPercent": 0.390
+  },
+  "promotion": {
+    "converted": false,
+    "staged": false,
+    "publicWritten": false,
+    "originalModified": false,
+    "committed": false,
+    "pushed": false
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-s208",
+  "policy": "NO_LOGO_ZERO_MARGIN_CANONICAL_CONTACT",
+  "status": "PASS_9_OF_9",
+  "generationMethod": "built-in ImageGen only",
+  "requestedFinishCount": 9,
+  "acceptedAssetCount": 9,
+  "totalIndependentImageGenCalls": 12,
+  "acceptedIndependentCalls": 9,
+  "rejectedAttempts": 3,
+  "independence": {
+    "soleReferenceForEveryCall": "public/images/PUERTAS/MADERAACÚSTICA/wl-s208/original.webp",
+    "referenceSha256Before": "4088acf1b9f7df81edc029db766039b60720547c5ace1270f22d4e1bc89569ce",
+    "referenceSha256After": "4088acf1b9f7df81edc029db766039b60720547c5ace1270f22d4e1bc89569ce",
+    "referenceUnchanged": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "conversionUsed": false,
+    "pixelProcessingUsed": false
+  },
+  "qaMethod": "Native-detail visual inspection of the original and every accepted candidate, plus read-only SHA-256, PNG dimensions, RGB<245 margins, subject-fill, aspect-ratio, unique-hash and generator-source byte-equality checks. No PNG was altered during QA.",
+  "acceptanceRules": {
+    "completeOuterCasingAndDoorBottomVisible": true,
+    "straightOnTallNarrowComposition": true,
+    "signatureGeometryPreserved": "complete slim casing with two full-height posts and one top lintel; dark full-height left reveal; leaf with exact rails and exactly one middle rail; exactly two recessed molded panels: one very tall upper panel with one shallow segmental arched top and one much shorter strictly rectangular lower panel; canonical narrow white opening below the leaf between continuing casing posts",
+    "hardwarePreserved": "exactly one dark round rosette with one slim metallic lever pointing right and exactly one separate dark round key escutcheon below",
+    "finishAppliedWithoutStructuralRedesign": true,
+    "zeroLogoTextBadgeWatermarkOrPseudotext": true,
+    "noPostGenerationPixelProcessing": true,
+    "aspectRatio": {
+      "canonical": 0.372881356,
+      "acceptedMinimum": 0.372930867,
+      "acceptedMaximum": 0.373294347,
+      "maximumAcceptedAbsoluteRelativeDeltaPercent": 0.110757,
+      "allAcceptedWithinOnePercent": true
+    },
+    "maximumSubjectFraming": {
+      "goal": "reproduce the canonical all-edge contact with the complete silhouette",
+      "measurementOrder": [
+        "left",
+        "top",
+        "right",
+        "bottom"
+      ],
+      "standardThreshold": "RGB<245",
+      "canonicalOriginalMarginsAtRgbBelow245": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "canonicalOriginalMarginsAtRgbBelow250": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "preferredAcceptedRangePixels": "0-6; zero contact is canonical",
+      "normalMaximumPixels": 12,
+      "minimumMeasuredAcceptedPixels": 0,
+      "maximumMeasuredAcceptedPixels": 12,
+      "acceptedWithinPreferredRangeOnEverySideCount": 8,
+      "acceptedWithinNormalMaximumOnEverySideCount": 9,
+      "nativeCompleteAtZeroContact": true,
+      "noCropOrResizeUsedToAchieveFraming": true,
+      "exceptionsAboveNormalMaximum": []
+    }
+  },
+  "assets": [
+    {
+      "finish": "negro",
+      "file": "negro.png",
+      "generatorId": "exec-3cc689cd-51ee-4ee3-8714-8ca6a03c0cfe",
+      "sha256": "9fc2ee00571e809340427c5fc26fdb7d2ed9a5370091e1cef3fcc74b4cb7ed8c",
+      "dimensions": "766x2053",
+      "marginThreshold": "RGB<245",
+      "margins": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "result": "PASS_PREFERRED_CANONICAL_ALL_EDGE_CONTACT_NATIVE_COMPLETE"
+    },
+    {
+      "finish": "wengue",
+      "file": "wengue.png",
+      "generatorId": "exec-25e99d07-5bbb-493e-9843-cbe01910002e",
+      "sha256": "fd1a3e3fc7e9cbfb7b6516ad51c04a60abb1182046ebc58e36043b7776b420f5",
+      "dimensions": "766x2053",
+      "marginThreshold": "RGB<245",
+      "margins": [
+        0,
+        6,
+        4,
+        0
+      ],
+      "result": "PASS_PREFERRED_CANONICAL_LEFT_AND_BOTTOM_CONTACT"
+    },
+    {
+      "finish": "gris-oscuro",
+      "file": "gris-oscuro.png",
+      "generatorId": "exec-c241f717-7d4b-493d-aa8b-d6c8ecfc573c",
+      "sha256": "9e2908a383ed73c70967b70ce614325e92e4279e71f9224665a910d123d51209",
+      "dimensions": "766x2053",
+      "marginThreshold": "RGB<245",
+      "margins": [
+        0,
+        4,
+        0,
+        0
+      ],
+      "result": "PASS_PREFERRED_CANONICAL_SIDE_AND_BOTTOM_CONTACT"
+    },
+    {
+      "finish": "antracita",
+      "file": "antracita.png",
+      "generatorId": "exec-f3493c54-825d-482b-9fb0-26190ac171a7",
+      "sha256": "11c0d5589eb5f49b9e24d479da09ade44d24d5375e42b86d897d354cc78a985b",
+      "dimensions": "766x2052",
+      "marginThreshold": "RGB<245",
+      "margins": [
+        6,
+        0,
+        5,
+        0
+      ],
+      "result": "PASS_PREFERRED_CANONICAL_VERTICAL_CONTACT"
+    },
+    {
+      "finish": "nogal",
+      "file": "nogal.png",
+      "generatorId": "exec-11642265-87ba-4647-9084-5dcdedc72a41",
+      "sha256": "3a01aac92adb7f3b9d1f4a9c2d6efbb21810146257512db9da4e983cf67e5da8",
+      "dimensions": "766x2053",
+      "marginThreshold": "RGB<245",
+      "margins": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "result": "PASS_PREFERRED_CANONICAL_ALL_EDGE_CONTACT_NATIVE_COMPLETE"
+    },
+    {
+      "finish": "roble",
+      "file": "roble.png",
+      "generatorId": "exec-314a1750-ca0f-4913-b22c-1cc0e2f47fdc",
+      "sha256": "a77310a340539d8ae44d4e75f86d569c6c09e5bb97326db6d51ac6c6e4f4c9d9",
+      "dimensions": "766x2053",
+      "marginThreshold": "RGB<245",
+      "margins": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "result": "PASS_PREFERRED_CANONICAL_ALL_EDGE_CONTACT_NATIVE_COMPLETE"
+    },
+    {
+      "finish": "gris-claro",
+      "file": "gris-claro.png",
+      "generatorId": "exec-e8df6a27-5dd1-456e-8e6c-86b0264b0fef",
+      "sha256": "5970873babffacbe16617345f8d8140a67a8af58234eb7ca2b2bd7143ca651fc",
+      "dimensions": "766x2054",
+      "marginThreshold": "RGB<245",
+      "margins": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "result": "PASS_PREFERRED_CANONICAL_ALL_EDGE_CONTACT_NATIVE_COMPLETE"
+    },
+    {
+      "finish": "natural",
+      "file": "natural.png",
+      "generatorId": "exec-198d3501-6da0-4e0f-ad1a-3c21c2b6447c",
+      "sha256": "6a6219ade1f21c6389a1174f198837364245789ff9256b6022564ded94097157",
+      "dimensions": "766x2052",
+      "marginThreshold": "RGB<245",
+      "margins": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "result": "PASS_PREFERRED_CANONICAL_ALL_EDGE_CONTACT_NATIVE_COMPLETE"
+    },
+    {
+      "finish": "blanco",
+      "file": "blanco.png",
+      "generatorId": "exec-c7f306bf-5f73-428f-a11c-3b2e36908e84",
+      "sha256": "4385654d7f91b3f00656445d2d01901dab168342d35b5485c8c2eb6412bb11dc",
+      "dimensions": "766x2053",
+      "marginThreshold": "RGB<245",
+      "margins": [
+        12,
+        8,
+        10,
+        0
+      ],
+      "result": "PASS_NORMAL_MAXIMUM_12_CANONICAL_BOTTOM_CONTACT"
+    }
+  ],
+  "rejectedAttemptMap": {
+    "negro": [],
+    "wengue": [],
+    "gris-oscuro": [],
+    "antracita": [],
+    "nogal": [],
+    "roble": [],
+    "gris-claro": [],
+    "natural": [],
+    "blanco": [
+      {
+        "attempt": 1,
+        "file": "_rejected/blanco-attempt-1-margin-13.png",
+        "generatorId": "exec-0653e9b6-ca21-484f-b987-1bab19f9d38b",
+        "sha256": "597ac242182b752f0264cf436cae467fdb7c8e1e062e0bee36c7521f262de72b",
+        "margins": [
+          13,
+          8,
+          12,
+          0
+        ],
+        "reason": "REJECT_LEFT_MARGIN_13_EXCEEDS_NORMAL_MAXIMUM_12"
+      },
+      {
+        "attempt": 2,
+        "file": "_rejected/blanco-attempt-2-wrong-aspect.png",
+        "generatorId": "exec-9fcc4097-c9ba-42e3-b126-62469e1a2a61",
+        "sha256": "e052210e7c7a681b46c9b4b34780f4ea6eec4d91655e325bd4a76cc5e23cd0b1",
+        "margins": [
+          2,
+          3,
+          0,
+          0
+        ],
+        "reason": "REJECT_ASPECT_RATIO_DELTA_25.815501_PERCENT_AND_BOTTOM_GEOMETRY_LOSS"
+      },
+      {
+        "attempt": 3,
+        "file": "_rejected/blanco-attempt-3-margin-13.png",
+        "generatorId": "exec-f4504dc1-f167-468c-aa66-d449aeeae869",
+        "sha256": "370e8274b069618c333908ac0f6f433aa9638def47995ec10cd9f813853869bc",
+        "margins": [
+          13,
+          2,
+          11,
+          0
+        ],
+        "reason": "REJECT_LEFT_MARGIN_13_EXCEEDS_NORMAL_MAXIMUM_12"
+      }
+    ]
+  },
+  "summary": {
+    "pass": 9,
+    "fail": 0,
+    "uniqueAcceptedHashes": 9,
+    "generatorByteEqualityPassAccepted": 9,
+    "generatorByteEqualityPassRejected": 3,
+    "logoTextOrPseudotextInstancesPerAcceptedAsset": 0,
+    "visualInspection": "PASS: complete casing, dark reveal, exact arched-upper/rectangular-lower two-panel design, canonical lower opening and original hardware preserved; no logos.",
+    "originalModified": false,
+    "publicFilesModified": false,
+    "converted": false,
+    "promoted": false,
+    "committed": false,
+    "pushed": false
+  }
+}

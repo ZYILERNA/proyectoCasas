@@ -1,0 +1,338 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-s208",
+  "policy": "NO_LOGO_ZERO_MARGIN_CANONICAL_CONTACT",
+  "status": "PASS_9_OF_9",
+  "closedAt": "2026-08-29T14:45:00+02:00",
+  "reference": {
+    "path": "public/images/PUERTAS/MADERAACÚSTICA/wl-s208/original.webp",
+    "role": "sole canonical reference for every direct built-in ImageGen call",
+    "sha256Before": "4088acf1b9f7df81edc029db766039b60720547c5ace1270f22d4e1bc89569ce",
+    "sha256After": "4088acf1b9f7df81edc029db766039b60720547c5ace1270f22d4e1bc89569ce",
+    "unchanged": true,
+    "bytes": 27226,
+    "dimensions": "396x1062",
+    "aspectRatioWidthOverHeight": 0.372881356,
+    "marginsAtRgbBelow245": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "marginsAtRgbBelow250": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "canonicalEdgeContact": "all four edges; complete casing and the narrow interior white opening beneath the leaf remain visible"
+  },
+  "generationMode": "built-in-imagegen-independent-call-per-finish-or-retry",
+  "sourcePolicy": "Every accepted and rejected PNG is an untouched byte-for-byte workspace copy of a distinct built-in ImageGen result. Every call used only the canonical original.webp; no generated output, logo image or other reference was used.",
+  "compositionPolicy": "The canonical source contacts all four edges. Eight accepted finishes reproduce 0-6-pixel framing on every side. Blanco was regenerated three times; attempt 4 is within the normal 12-pixel maximum while retaining the source aspect ratio and complete native geometry.",
+  "logoPolicy": "NO_LOGO",
+  "pixelProcessing": "none",
+  "filtersOrRecoloringUsed": false,
+  "masksUsed": false,
+  "croppingOrResizingUsed": false,
+  "compositingUsed": false,
+  "formatConversionUsed": false,
+  "acceptedAssetsAlteredAfterGeneration": false,
+  "workspaceCopiesMatchGeneratorBytes": true,
+  "generatedImageRoot": "C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0",
+  "auditCounts": {
+    "totalIndependentImageGenCalls": 12,
+    "accepted": 9,
+    "rejected": 3,
+    "acceptedWithinPreferred0To6OnEverySide": 8,
+    "acceptedWithinNormalMaximum12OnEverySide": 9,
+    "acceptedMaximumMeasuredMarginPixels": 12
+  },
+  "accepted": [
+    {
+      "finish": "negro",
+      "file": "negro.png",
+      "generatorId": "exec-3cc689cd-51ee-4ee3-8714-8ca6a03c0cfe",
+      "sourceGeneratedImage": "C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-3cc689cd-51ee-4ee3-8714-8ca6a03c0cfe.png",
+      "sha256": "9fc2ee00571e809340427c5fc26fdb7d2ed9a5370091e1cef3fcc74b4cb7ed8c",
+      "bytes": 1443194,
+      "dimensions": "766x2053",
+      "mode": "RGB",
+      "aspectRatioWidthOverHeight": 0.373112518,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.061994,
+      "marginThreshold": "RGB<245",
+      "margins": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "subjectFillWidthPercent": 100,
+      "subjectFillHeightPercent": 100,
+      "attempt": 1,
+      "framingResult": "PASS_PREFERRED_CANONICAL_ALL_EDGE_CONTACT_NATIVE_COMPLETE"
+    },
+    {
+      "finish": "wengue",
+      "file": "wengue.png",
+      "generatorId": "exec-25e99d07-5bbb-493e-9843-cbe01910002e",
+      "sourceGeneratedImage": "C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-25e99d07-5bbb-493e-9843-cbe01910002e.png",
+      "sha256": "fd1a3e3fc7e9cbfb7b6516ad51c04a60abb1182046ebc58e36043b7776b420f5",
+      "bytes": 1667344,
+      "dimensions": "766x2053",
+      "mode": "RGB",
+      "aspectRatioWidthOverHeight": 0.373112518,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.061994,
+      "marginThreshold": "RGB<245",
+      "margins": [
+        0,
+        6,
+        4,
+        0
+      ],
+      "subjectFillWidthPercent": 99.478,
+      "subjectFillHeightPercent": 99.708,
+      "attempt": 1,
+      "framingResult": "PASS_PREFERRED_CANONICAL_LEFT_AND_BOTTOM_CONTACT"
+    },
+    {
+      "finish": "gris-oscuro",
+      "file": "gris-oscuro.png",
+      "generatorId": "exec-c241f717-7d4b-493d-aa8b-d6c8ecfc573c",
+      "sourceGeneratedImage": "C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-c241f717-7d4b-493d-aa8b-d6c8ecfc573c.png",
+      "sha256": "9e2908a383ed73c70967b70ce614325e92e4279e71f9224665a910d123d51209",
+      "bytes": 1812829,
+      "dimensions": "766x2053",
+      "mode": "RGB",
+      "aspectRatioWidthOverHeight": 0.373112518,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.061994,
+      "marginThreshold": "RGB<245",
+      "margins": [
+        0,
+        4,
+        0,
+        0
+      ],
+      "subjectFillWidthPercent": 100,
+      "subjectFillHeightPercent": 99.805,
+      "attempt": 1,
+      "framingResult": "PASS_PREFERRED_CANONICAL_SIDE_AND_BOTTOM_CONTACT"
+    },
+    {
+      "finish": "antracita",
+      "file": "antracita.png",
+      "generatorId": "exec-f3493c54-825d-482b-9fb0-26190ac171a7",
+      "sourceGeneratedImage": "C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-f3493c54-825d-482b-9fb0-26190ac171a7.png",
+      "sha256": "11c0d5589eb5f49b9e24d479da09ade44d24d5375e42b86d897d354cc78a985b",
+      "bytes": 1275306,
+      "dimensions": "766x2052",
+      "mode": "RGB",
+      "aspectRatioWidthOverHeight": 0.373294347,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.110757,
+      "marginThreshold": "RGB<245",
+      "margins": [
+        6,
+        0,
+        5,
+        0
+      ],
+      "subjectFillWidthPercent": 98.564,
+      "subjectFillHeightPercent": 100,
+      "attempt": 1,
+      "framingResult": "PASS_PREFERRED_CANONICAL_VERTICAL_CONTACT"
+    },
+    {
+      "finish": "nogal",
+      "file": "nogal.png",
+      "generatorId": "exec-11642265-87ba-4647-9084-5dcdedc72a41",
+      "sourceGeneratedImage": "C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-11642265-87ba-4647-9084-5dcdedc72a41.png",
+      "sha256": "3a01aac92adb7f3b9d1f4a9c2d6efbb21810146257512db9da4e983cf67e5da8",
+      "bytes": 1615270,
+      "dimensions": "766x2053",
+      "mode": "RGB",
+      "aspectRatioWidthOverHeight": 0.373112518,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.061994,
+      "marginThreshold": "RGB<245",
+      "margins": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "subjectFillWidthPercent": 100,
+      "subjectFillHeightPercent": 100,
+      "attempt": 1,
+      "framingResult": "PASS_PREFERRED_CANONICAL_ALL_EDGE_CONTACT_NATIVE_COMPLETE"
+    },
+    {
+      "finish": "roble",
+      "file": "roble.png",
+      "generatorId": "exec-314a1750-ca0f-4913-b22c-1cc0e2f47fdc",
+      "sourceGeneratedImage": "C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-314a1750-ca0f-4913-b22c-1cc0e2f47fdc.png",
+      "sha256": "a77310a340539d8ae44d4e75f86d569c6c09e5bb97326db6d51ac6c6e4f4c9d9",
+      "bytes": 1778958,
+      "dimensions": "766x2053",
+      "mode": "RGB",
+      "aspectRatioWidthOverHeight": 0.373112518,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.061994,
+      "marginThreshold": "RGB<245",
+      "margins": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "subjectFillWidthPercent": 100,
+      "subjectFillHeightPercent": 100,
+      "attempt": 1,
+      "framingResult": "PASS_PREFERRED_CANONICAL_ALL_EDGE_CONTACT_NATIVE_COMPLETE"
+    },
+    {
+      "finish": "gris-claro",
+      "file": "gris-claro.png",
+      "generatorId": "exec-e8df6a27-5dd1-456e-8e6c-86b0264b0fef",
+      "sourceGeneratedImage": "C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-e8df6a27-5dd1-456e-8e6c-86b0264b0fef.png",
+      "sha256": "5970873babffacbe16617345f8d8140a67a8af58234eb7ca2b2bd7143ca651fc",
+      "bytes": 1533369,
+      "dimensions": "766x2054",
+      "mode": "RGB",
+      "aspectRatioWidthOverHeight": 0.372930867,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.013278,
+      "marginThreshold": "RGB<245",
+      "margins": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "subjectFillWidthPercent": 100,
+      "subjectFillHeightPercent": 100,
+      "attempt": 1,
+      "framingResult": "PASS_PREFERRED_CANONICAL_ALL_EDGE_CONTACT_NATIVE_COMPLETE"
+    },
+    {
+      "finish": "natural",
+      "file": "natural.png",
+      "generatorId": "exec-198d3501-6da0-4e0f-ad1a-3c21c2b6447c",
+      "sourceGeneratedImage": "C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-198d3501-6da0-4e0f-ad1a-3c21c2b6447c.png",
+      "sha256": "6a6219ade1f21c6389a1174f198837364245789ff9256b6022564ded94097157",
+      "bytes": 1466321,
+      "dimensions": "766x2052",
+      "mode": "RGB",
+      "aspectRatioWidthOverHeight": 0.373294347,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.110757,
+      "marginThreshold": "RGB<245",
+      "margins": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "subjectFillWidthPercent": 100,
+      "subjectFillHeightPercent": 100,
+      "attempt": 1,
+      "framingResult": "PASS_PREFERRED_CANONICAL_ALL_EDGE_CONTACT_NATIVE_COMPLETE"
+    },
+    {
+      "finish": "blanco",
+      "file": "blanco.png",
+      "generatorId": "exec-c7f306bf-5f73-428f-a11c-3b2e36908e84",
+      "sourceGeneratedImage": "C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-c7f306bf-5f73-428f-a11c-3b2e36908e84.png",
+      "sha256": "4385654d7f91b3f00656445d2d01901dab168342d35b5485c8c2eb6412bb11dc",
+      "bytes": 1088894,
+      "dimensions": "766x2053",
+      "mode": "RGB",
+      "aspectRatioWidthOverHeight": 0.373112518,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.061994,
+      "marginThreshold": "RGB<245",
+      "margins": [
+        12,
+        8,
+        10,
+        0
+      ],
+      "subjectFillWidthPercent": 97.128,
+      "subjectFillHeightPercent": 99.61,
+      "attempt": 4,
+      "framingResult": "PASS_NORMAL_MAXIMUM_12_CANONICAL_BOTTOM_CONTACT"
+    }
+  ],
+  "rejected": [
+    {
+      "finish": "blanco",
+      "attempt": 1,
+      "file": "_rejected/blanco-attempt-1-margin-13.png",
+      "generatorId": "exec-0653e9b6-ca21-484f-b987-1bab19f9d38b",
+      "sha256": "597ac242182b752f0264cf436cae467fdb7c8e1e062e0bee36c7521f262de72b",
+      "bytes": 1195789,
+      "dimensions": "766x2052",
+      "margins": [
+        13,
+        8,
+        12,
+        0
+      ],
+      "reason": "REJECT_LEFT_MARGIN_13_EXCEEDS_NORMAL_MAXIMUM_12",
+      "sourceGeneratedImage": "C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-0653e9b6-ca21-484f-b987-1bab19f9d38b.png",
+      "marginThreshold": "RGB<245"
+    },
+    {
+      "finish": "blanco",
+      "attempt": 2,
+      "file": "_rejected/blanco-attempt-2-wrong-aspect.png",
+      "generatorId": "exec-9fcc4097-c9ba-42e3-b126-62469e1a2a61",
+      "sha256": "e052210e7c7a681b46c9b4b34780f4ea6eec4d91655e325bd4a76cc5e23cd0b1",
+      "bytes": 1133880,
+      "dimensions": "859x1831",
+      "margins": [
+        2,
+        3,
+        0,
+        0
+      ],
+      "reason": "REJECT_ASPECT_RATIO_DELTA_25.815501_PERCENT_AND_BOTTOM_GEOMETRY_LOSS",
+      "sourceGeneratedImage": "C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-9fcc4097-c9ba-42e3-b126-62469e1a2a61.png",
+      "marginThreshold": "RGB<245"
+    },
+    {
+      "finish": "blanco",
+      "attempt": 3,
+      "file": "_rejected/blanco-attempt-3-margin-13.png",
+      "generatorId": "exec-f4504dc1-f167-468c-aa66-d449aeeae869",
+      "sha256": "370e8274b069618c333908ac0f6f433aa9638def47995ec10cd9f813853869bc",
+      "bytes": 1324061,
+      "dimensions": "766x2053",
+      "margins": [
+        13,
+        2,
+        11,
+        0
+      ],
+      "reason": "REJECT_LEFT_MARGIN_13_EXCEEDS_NORMAL_MAXIMUM_12",
+      "sourceGeneratedImage": "C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-f4504dc1-f167-468c-aa66-d449aeeae869.png",
+      "marginThreshold": "RGB<245"
+    }
+  ],
+  "qa": {
+    "path": "QA.json",
+    "status": "PASS_9_OF_9",
+    "acceptedAssetCount": 9,
+    "totalIndependentImageGenCalls": 12,
+    "rejectedAttempts": 3,
+    "uniqueAcceptedHashes": 9,
+    "generatorByteEqualityPassAccepted": 9,
+    "generatorByteEqualityPassRejected": 3,
+    "maximumAcceptedAspectRatioAbsoluteRelativeDeltaPercent": 0.110757,
+    "minimumMeasuredAcceptedMarginPixels": 0,
+    "maximumMeasuredAcceptedMarginPixels": 12,
+    "nativeVisualInspection": "PASS"
+  },
+  "promotion": {
+    "converted": false,
+    "staged": false,
+    "publicWritten": false,
+    "originalModified": false,
+    "committed": false,
+    "pushed": false
+  }
+}
