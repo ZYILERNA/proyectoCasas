@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-j006",
+  "policy": "NO_LOGO_MINIMAL_WHITE_MARGIN",
+  "status": "PASS_9_OF_9",
+  "generationMethod": "built-in ImageGen only",
+  "requestedFinishCount": 9,
+  "acceptedAssetCount": 9,
+  "totalIndependentImageGenCalls": 24,
+  "rejectedAttempts": 15,
+  "independence": {
+    "soleReferenceForEveryCall": "public/images/PUERTAS/MADERAACÚSTICA/wl-j006/original.webp",
+    "referenceSha256Before": "4169c2520c8a86e4bd7afd028889e00a1c7a6c3c846f980732e227405c8ad3e9",
+    "referenceSha256After": "4169c2520c8a86e4bd7afd028889e00a1c7a6c3c846f980732e227405c8ad3e9",
+    "referenceUnchanged": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "conversionUsed": false
+  },
+  "qaMethod": "Native-detail visual inspection against the canonical original plus read-only SHA-256, PNG dimensions, RGB edge-margin, subject-fill, aspect-ratio, unique-hash and generator-source byte-equality checks.",
+  "acceptanceRules": {
+    "completeOuterFrameAndDoorBottomVisible": true,
+    "signatureGeometryPreserved": "complete straight-top rectangular frame; plain vertical-grain leaf; exactly two close slim full-height routed vertical lines forming a narrow left strip; paired subtle diagonal routed motif around handle height",
+    "hardwarePreserved": "exactly one dark slim horizontal lever on a round rosette and one separate dark round key cylinder below on the left",
+    "zeroLogoTextBadgeWatermarkOrPseudotext": true,
+    "noPostGenerationPixelProcessing": true,
+    "aspectRatio": {"canonical":0.350459,"maximumAcceptedAbsoluteRelativeDeltaPercent":0.14542,"allAcceptedWithinOnePercent":true},
+    "minimalWhiteMargin": {"maximumMeasuredMarginRgb245Pixels":12,"note":"Every accepted candidate is at or below the absolute 12 px limit. Negro and gris-oscuro measure 0 px at the threshold because their full outside frame reaches the antialiased canvas boundary; native-detail inspection confirmed intact posts, top rail and corner miters, so no clipped geometry was accepted."}
+  },
+  "assets": [
+    {"finish":"negro","file":"negro.png","sha256":"c95ce065919800a084ecfc0dfb78dbdec3eb5fbffa2a079ddfc332f2959ea2ea","dimensions":"743x2117","marginsRgb245":[0,0,0,0],"result":"PASS_ATTEMPT_3"},
+    {"finish":"wengue","file":"wengue.png","sha256":"8b47c9db57c87f23d08afa6b2054313387c261663fa0059c7f6e10e80ed25beb","dimensions":"743x2117","marginsRgb245":[9,10,10,0],"result":"PASS_ATTEMPT_3"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","sha256":"c8383c525fecee964f45e46ab4209b84afe4ed982fc0a9f2274c849def711cb2","dimensions":"743x2117","marginsRgb245":[0,0,0,0],"result":"PASS_ATTEMPT_4"},
+    {"finish":"antracita","file":"antracita.png","sha256":"2f4bfc133dfc3c7c5bb209b9dbf4ca8d0fdf2626350a89216521c1a74aa4a61a","dimensions":"742x2118","marginsRgb245":[0,3,2,0],"result":"PASS_ATTEMPT_2"},
+    {"finish":"nogal","file":"nogal.png","sha256":"983c760d9c6b3709018c3b1994cf5a62af90dfc2d77ec16c513dc1dacbf4581c","dimensions":"742x2119","marginsRgb245":[11,12,10,0],"result":"PASS_ATTEMPT_2"},
+    {"finish":"roble","file":"roble.png","sha256":"094d268650c9ace1d0c5baf55f88eb5cb26799bfd79bbb9fde2d676fe3d81f51","dimensions":"742x2118","marginsRgb245":[4,3,6,0],"result":"PASS_ATTEMPT_2"},
+    {"finish":"gris-claro","file":"gris-claro.png","sha256":"c57afcf0efb364cba64e6f63bce62747c61b53e79d569be1f4dfebe5e8e28e3e","dimensions":"742x2118","marginsRgb245":[4,1,4,0],"result":"PASS_ATTEMPT_3"},
+    {"finish":"natural","file":"natural.png","sha256":"44f8f646f05a3acc1c7839b83071c49ae9729d27a36b666ef0e319a3cd5632a7","dimensions":"742x2119","marginsRgb245":[6,7,7,0],"result":"PASS_ATTEMPT_3"},
+    {"finish":"blanco","file":"blanco.png","sha256":"05a18fa450a0d236577561ebcb93019285b803319c21e84d17b95e51fd752f6c","dimensions":"743x2117","marginsRgb245":[4,3,3,0],"result":"PASS_ATTEMPT_2"}
+  ],
+  "summary": {"pass":9,"fail":0,"uniqueAcceptedHashes":9,"generatorByteEqualityPass":9,"originalModified":false,"publicFilesModified":false,"converted":false,"promoted":false}
+}

@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "category": "MADERAACÚSTICA",
+  "model": "wl-d038",
+  "reviewedAt": "2026-08-18T12:09:56.9809421+02:00",
+  "status": "PASS",
+  "summary": "PASS 9/9",
+  "acceptedCount": 9,
+  "expectedCount": 9,
+  "rejectedAttemptCount": 1,
+  "maxAttemptsPerFinish": 2,
+  "method": {
+    "visual": "The canonical original and every accepted workspace PNG were inspected directly with view_image at native dimensions. Frame, leaf, groove band, diagonal start, hardware, crop, finish separation and forbidden visible content were checked.",
+    "grooveCount": "A read-only luminance scan across the source decorative band identified five distinct groove minima. Every accepted PNG was then visually checked for the same five-groove band.",
+    "aspectRatio": "The original WebP dimensions and every PNG IHDR were read from their byte streams. Accepted outputs were required to stay within 1.0 percent of the source width/height ratio.",
+    "technical": "PNG signature/IHDR, SHA-256, byte size and caBX C2PA/JUMBF presence were read without modifying pixels. Every workspace copy was compared byte-for-byte with its ImageGen artifact.",
+    "sourceIntegrity": "The SHA-256 of original.webp was recorded before and after all calls, and git reported no diff or status entry for that path."
+  },
+  "sourceIntegrity": {
+    "path": "public/images/PUERTAS/MADERAACÚSTICA/wl-d038/original.webp",
+    "width": 405,
+    "height": 1093,
+    "aspectRatio": 0.3705397987191217,
+    "sha256Before": "ed28e9ab7be355f81a860fe4971776d0d93b87ac39ec1b9d70f49f935f49442d",
+    "sha256After": "ed28e9ab7be355f81a860fe4971776d0d93b87ac39ec1b9d70f49f935f49442d",
+    "unchanged": true,
+    "gitDiff": false
+  },
+  "provenanceChecks": {
+    "builtInImageGenOnly": "PASS",
+    "oneIndependentCallPerFinishOrRetry": "PASS",
+    "soleReferenceWasCanonicalOriginal": "PASS",
+    "generatedOutputReusedAsReference": false,
+    "acceptedPngsWithC2paJumbf": "9/9",
+    "rejectedPngsWithC2paJumbf": "1/1",
+    "workspaceCopiesByteIdenticalToGeneratorArtifacts": "10/10",
+    "postprocessing": "none",
+    "conversion": "none",
+    "publicPromotion": "none"
+  },
+  "globalChecks": {
+    "allExpectedFinishesPresent": "PASS",
+    "allAcceptedFilesDecodeAsPng": "PASS",
+    "allAcceptedFilesEightBitRgbWithoutAlpha": "PASS",
+    "allAcceptedHashesUnique": "PASS",
+    "allAcceptedAspectRatiosWithinOnePercent": "PASS",
+    "completeMultiStepFrame": "PASS",
+    "singleFlatLeaf": "PASS",
+    "exactlyFiveParallelGrooves": "PASS",
+    "diagonalBandStartPreserved": "PASS",
+    "singleHandleAndSingleEscutcheon": "PASS",
+    "straightOnNearEdgeToEdgeFraming": "PASS",
+    "finishSeparation": "PASS",
+    "noLogoTextPseudoTextOrWatermark": "PASS",
+    "noExtraObjectsOrDuplicateHardware": "PASS",
+    "noFilterRecolorMaskCropResizeOrComposite": "PASS"
+  },
+  "promptAuditNote": "The negro attempt-1 prompt mistakenly stated four grooves. The generated raw output independently reproduced the canonical source's five grooves and passed native visual QA. All subsequent prompts correctly specified five.",
+  "aspectRatioReview": {
+    "source": 0.3705397987191217,
+    "acceptanceThresholdPercent": 1.0,
+    "acceptedMaximumDeviationPercent": 0.1387,
+    "accepted": [
+      {
+        "finish": "negro",
+        "dimensions": "763x2062",
+        "aspectRatio": 0.370029098,
+        "deviationPercent": 0.1378,
+        "result": "PASS"
+      },
+      {
+        "finish": "wengue",
+        "dimensions": "764x2059",
+        "aspectRatio": 0.37105391,
+        "deviationPercent": 0.1387,
+        "result": "PASS"
+      },
+      {
+        "finish": "gris-oscuro",
+        "dimensions": "763x2062",
+        "aspectRatio": 0.370029098,
+        "deviationPercent": 0.1378,
+        "result": "PASS"
+      },
+      {
+        "finish": "antracita",
+        "dimensions": "763x2062",
+        "aspectRatio": 0.370029098,
+        "deviationPercent": 0.1378,
+        "result": "PASS"
+      },
+      {
+        "finish": "nogal",
+        "dimensions": "763x2062",
+        "aspectRatio": 0.370029098,
+        "deviationPercent": 0.1378,
+        "result": "PASS"
+      },
+      {
+        "finish": "roble",
+        "dimensions": "763x2062",
+        "aspectRatio": 0.370029098,
+        "deviationPercent": 0.1378,
+        "result": "PASS"
+      },
+      {
+        "finish": "gris-claro",
+        "dimensions": "764x2059",
+        "aspectRatio": 0.37105391,
+        "deviationPercent": 0.1387,
+        "result": "PASS"
+      },
+      {
+        "finish": "natural",
+        "dimensions": "763x2062",
+        "aspectRatio": 0.370029098,
+        "deviationPercent": 0.1378,
+        "result": "PASS"
+      },
+      {
+        "finish": "blanco",
+        "dimensions": "764x2059",
+        "aspectRatio": 0.37105391,
+        "deviationPercent": 0.1387,
+        "result": "PASS"
+      }
+    ]
+  },
+  "visualReview": [
+    {
+      "finish": "negro",
+      "file": "negro.png",
+      "result": "PASS",
+      "notes": "Near-black wood remains legible; the output visibly contains the canonical five-groove band, beveled start, complete frame and one hardware set."
+    },
+    {
+      "finish": "wengue",
+      "file": "wengue.png",
+      "result": "PASS",
+      "notes": "Deep espresso-brown remains distinct from black; five grooves, diagonal start and all hardware are intact."
+    },
+    {
+      "finish": "gris-oscuro",
+      "file": "gris-oscuro.png",
+      "result": "PASS",
+      "notes": "Dark neutral gray is distinct from black and anthracite; full architecture and tall-narrow crop pass."
+    },
+    {
+      "finish": "antracita",
+      "file": "antracita.png",
+      "result": "PASS",
+      "notes": "Cool graphite-charcoal finish preserves grain, five grooves, beveled band start and undistorted hardware."
+    },
+    {
+      "finish": "nogal",
+      "file": "nogal.png",
+      "result": "PASS",
+      "notes": "Warm medium walnut is separated from wenge and oak; frame, leaf and decorative band are complete."
+    },
+    {
+      "finish": "roble",
+      "file": "roble.png",
+      "result": "PASS",
+      "notes": "Golden oak is clearly distinct from walnut and natural; all five grooves and one hardware set are preserved."
+    },
+    {
+      "finish": "gris-claro",
+      "file": "gris-claro.png",
+      "result": "PASS",
+      "notes": "Second attempt: light neutral gray remains visible against white and matches the canonical aspect and architecture."
+    },
+    {
+      "finish": "natural",
+      "file": "natural.png",
+      "result": "PASS",
+      "notes": "Pale neutral natural wood is less golden than oak; tall-narrow framing, five grooves and hardware pass."
+    },
+    {
+      "finish": "blanco",
+      "file": "blanco.png",
+      "result": "PASS",
+      "notes": "Neutral white remains legible through restrained shading; full frame, five grooves and hardware are intact."
+    }
+  ],
+  "rejections": [
+    {
+      "finish": "gris-claro",
+      "attempt": 1,
+      "file": "rejected/gris-claro-attempt-1.png",
+      "dimensions": "833x1888",
+      "aspectRatio": 0.441207627,
+      "deviationPercent": 19.0716,
+      "reason": "Canvas materially wider than the canonical source."
+    }
+  ]
+}

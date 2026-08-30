@@ -1,0 +1,11 @@
+# MADERAACÚSTICA/wl-j006 — direct ImageGen prompts
+
+Use case: `product-mockup`. Image 1 was always the sole reference: `public/images/PUERTAS/MADERAACÚSTICA/wl-j006/original.webp`.
+
+Shared invariant contract: preserve the complete very tall rectangular square-post frame with straight top rail, the plain flat vertical-grain leaf, exactly two close slim full-height routed vertical lines that define the narrow strip near the left, the paired subtle diagonal routed motif within that strip around handle height, exactly one dark slim horizontal lever on a round rosette and one separate dark round key cylinder below. Front-facing and complete. NO_LOGO: no logo, brand, badge, text, symbols, watermark, microtext or pseudotext. No extra grooves, panels, moldings, hinges, hardware, decoration, objects or scene.
+
+Finish requests were independent direct built-in ImageGen calls: deep matte black (`negro`), very dark warm wenge (`wengue`), dark charcoal gray (`gris-oscuro`), cool near-black anthracite (`antracita`), warm rich walnut (`nogal`), warm medium oak (`roble`), light neutral gray (`gris-claro`), pale natural unfinished wood (`natural`) and matte white painted wood (`blanco`). Each request changed only leaf/frame finish and kept hardware dark.
+
+Composition contract: preserve the source 382:1090 proportion, strict centered front elevation, uniform pure-white backdrop, and scale the complete product to nearly the full canvas. The final calls targeted edge-to-edge scale with no more than 12 measured RGB<245 margin pixels; close framing had to be produced directly by ImageGen. No crop, resize, mask, filter, recolor, compositing, format conversion or other pixel processing was used.
+
+Twenty-four independent ImageGen calls were made. Fifteen direct attempts remain in `_rejected/`: they exceeded the 12 px margin ceiling or materially changed the source aspect ratio. The final attempt numbers are `negro` 3, `wengue` 3, `gris-oscuro` 4, `antracita` 2, `nogal` 2, `roble` 2, `gris-claro` 3, `natural` 3 and `blanco` 2. Native-detail review confirmed that accepted zero-edge measurements still retain the complete frame contour and corner miters. No generated output was ever used as an input.

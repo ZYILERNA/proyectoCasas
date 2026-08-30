@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-j008",
+  "policy": "NO_LOGO_MINIMAL_WHITE_MARGIN",
+  "status": "PASS_9_OF_9",
+  "generationMethod": "built-in ImageGen only",
+  "requestedFinishCount": 9,
+  "acceptedAssetCount": 9,
+  "totalIndependentImageGenCalls": 30,
+  "rejectedAttempts": 21,
+  "independence": {
+    "soleReferenceForEveryCall": "public/images/PUERTAS/MADERAACÚSTICA/wl-j008/original.webp",
+    "referenceSha256Before": "dfdac48609706d9b9b640074bc1e2793d4a01f1888ec0d1d4b7556f29355310d",
+    "referenceSha256After": "dfdac48609706d9b9b640074bc1e2793d4a01f1888ec0d1d4b7556f29355310d",
+    "referenceUnchanged": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "conversionUsed": false
+  },
+  "qaMethod": "Native-detail visual inspection against the sole canonical original plus read-only SHA-256, PNG dimensions, RGB<245 edge-margin, subject-fill, aspect-ratio, unique-hash, and generator-source byte-equality checks.",
+  "acceptanceRules": {
+    "completeOuterFrameAndDoorBottomVisible": true,
+    "signatureGeometryPreserved": "reference-identical left-side cluster of slim parallel full-height grooves with the same number, spacing, widths, paths, and distinctive diagonal jog around handle height",
+    "hardwarePreserved": "exactly one dark slim horizontal lever on one round rosette and one separate dark round key cylinder below, on the left",
+    "zeroLogoTextBadgeWatermarkOrPseudotext": true,
+    "noPostGenerationPixelProcessing": true,
+    "aspectRatio": {"canonical":0.347706,"maximumAcceptedAbsoluteRelativeDeltaPercent":0.124239,"allAcceptedWithinOnePercent":true},
+    "minimalWhiteMargin": {
+      "maximumMeasuredMarginRgb245Pixels": 12,
+      "minimumMeasuredMarginRgb245Pixels": 0,
+      "note": "Seven accepted finishes measure 1–12 px on every side. Negro and gris-oscuro retain 0 only on the bottom threshold while all other sides are 6–10 px; native inspection confirms the complete silhouette. Their 14 alternative direct attempts are retained because they either touched additional edges or exceeded 12 px. No crop or resize was used."
+    }
+  },
+  "assets": [
+    {"finish":"negro","file":"negro.png","sha256":"cb79d9ea798285637c04c9c7be8e0bda84c22247b3d143cf2c53884d427c92f2","dimensions":"740x2126","marginsRgb245":[9,7,9,0],"result":"PASS_ATTEMPT_4_NATIVE_COMPLETENESS"},
+    {"finish":"wengue","file":"wengue.png","sha256":"2f02138f31a26d9af16dfe1632975314dc6810e31cdc78b74d8a29f75add93cf","dimensions":"739x2128","marginsRgb245":[10,8,12,9],"result":"PASS_ATTEMPT_2"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","sha256":"6ec5950023ba8eed88bb6ce133e2cbfbc26e1f1f4587384f8ccf58034562f77f","dimensions":"739x2128","marginsRgb245":[9,6,10,0],"result":"PASS_ATTEMPT_4_NATIVE_COMPLETENESS"},
+    {"finish":"antracita","file":"antracita.png","sha256":"9fc1d7497cc2da49bcf3c1bb805438d8c9a422c5e87d02f57013010e1cb809f7","dimensions":"740x2126","marginsRgb245":[10,6,9,6],"result":"PASS"},
+    {"finish":"nogal","file":"nogal.png","sha256":"6af87f7ccb57bfde7a3c487a79fb4c52cb555770aa8d65a163179a58b8c01c5e","dimensions":"740x2126","marginsRgb245":[9,9,10,9],"result":"PASS_ATTEMPT_2"},
+    {"finish":"roble","file":"roble.png","sha256":"c7a9ab444dacf7c55ed3e5259bd1537ab7e930f143a97f7ff1900752eb6c36f1","dimensions":"740x2126","marginsRgb245":[10,6,11,4],"result":"PASS_ATTEMPT_2"},
+    {"finish":"gris-claro","file":"gris-claro.png","sha256":"f5650f227946230adb3f8ffe72536676c1612c56a29f57083895d30c8d6536a6","dimensions":"740x2126","marginsRgb245":[9,9,10,9],"result":"PASS_ATTEMPT_4"},
+    {"finish":"natural","file":"natural.png","sha256":"ab9fa502e0a0cf601178a31fc1b960504be0445c166ae358b7075c94ba7ee1b1","dimensions":"740x2126","marginsRgb245":[9,6,10,3],"result":"PASS_ATTEMPT_2"},
+    {"finish":"blanco","file":"blanco.png","sha256":"8406ee5f8aa0f2addb168ae641d6e43c20e0348f36d14b60011f3ef2335c0c8c","dimensions":"740x2126","marginsRgb245":[9,6,6,1],"result":"PASS"}
+  ],
+  "summary": {"pass":9,"fail":0,"uniqueAcceptedHashes":9,"generatorByteEqualityPass":9,"originalModified":false,"publicFilesModified":false,"converted":false,"promoted":false}
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-j003",
+  "policy": "NO_LOGO_MINIMAL_WHITE_MARGIN",
+  "status": "PASS_9_OF_9",
+  "generationMethod": "built-in ImageGen only",
+  "requestedFinishCount": 9,
+  "acceptedAssetCount": 9,
+  "totalIndependentImageGenCalls": 11,
+  "rejectedAttempts": 2,
+  "independence": {
+    "soleReferenceForEveryCall": "public/images/PUERTAS/MADERAACÚSTICA/wl-j003/original.webp",
+    "referenceSha256Before": "869537eb6dfbcf6ed3f1f8b479bac54e1d8466d876645fc6262d7cb964e10275",
+    "referenceSha256After": "869537eb6dfbcf6ed3f1f8b479bac54e1d8466d876645fc6262d7cb964e10275",
+    "referenceUnchanged": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "conversionUsed": false
+  },
+  "qaMethod": "Native-detail visual inspection against the canonical original plus read-only SHA-256, PNG dimensions, RGB edge-margin, subject-fill, aspect-ratio, unique-hash and generator-source byte-equality checks.",
+  "acceptanceRules": {
+    "completeOuterFrameAndDoorBottomVisible": true,
+    "signatureGeometryPreserved": "exactly three slim parallel full-height inlay strips clustered near the right side of a plain vertical-grain leaf",
+    "hardwarePreserved": "exactly one dark slim horizontal lever on a round rosette and one separate dark round key cylinder below on the left",
+    "zeroLogoTextBadgeWatermarkOrPseudotext": true,
+    "noPostGenerationPixelProcessing": true,
+    "aspectRatio": {"canonical":0.410468,"maximumAcceptedAbsoluteRelativeDeltaPercent":0.14,"allAcceptedWithinOnePercent":true},
+    "minimalWhiteMargin": {"maximumMeasuredMarginRgb245Pixels":11,"note":"Negro and wengue first attempts measured 15–17 px and were replaced by fresh direct ImageGen calls measuring no more than 8 px."}
+  },
+  "assets": [
+    {"finish":"negro","file":"negro.png","sha256":"f3000395035d7622413fee1601c474d58e7efce3054d8c552966bc7b29439a10","dimensions":"804x1956","marginsRgb245":[8,8,8,6],"result":"PASS_ATTEMPT_2"},
+    {"finish":"wengue","file":"wengue.png","sha256":"2fc85ba557947126aa2ccb1b6e9a76a0c10a86f7e0f1e46aecf15ff2f0cddad7","dimensions":"804x1956","marginsRgb245":[6,6,8,5],"result":"PASS_ATTEMPT_2"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","sha256":"c21ef4aaf66c0978e7179383426c7e7b584a99e40184c8587885eed5d2141934","dimensions":"804x1957","marginsRgb245":[9,7,11,8],"result":"PASS"},
+    {"finish":"antracita","file":"antracita.png","sha256":"1d3c5b07e77993f4374a71f97b504a658095cd7760468c6f833609bbaa0fb2b7","dimensions":"804x1956","marginsRgb245":[8,9,8,9],"result":"PASS"},
+    {"finish":"nogal","file":"nogal.png","sha256":"ef91d409f39322eeefb747eb07b826978474ef63ec34837ac539390675b66f70","dimensions":"804x1956","marginsRgb245":[9,8,9,7],"result":"PASS"},
+    {"finish":"roble","file":"roble.png","sha256":"32e264b39f540f9c0546bcf5e421482863fb738fea7af0a4b1bdd69104853510","dimensions":"804x1957","marginsRgb245":[10,2,10,6],"result":"PASS"},
+    {"finish":"gris-claro","file":"gris-claro.png","sha256":"5fdc11ceb040f6b1105930a4cfa1f3283166963bb89617ecb15293035a990e92","dimensions":"804x1956","marginsRgb245":[9,5,11,7],"result":"PASS"},
+    {"finish":"natural","file":"natural.png","sha256":"d778e248d5f60345895227660310b3a9f1938e8c232dfd95d0c6c8298e8f37a8","dimensions":"804x1956","marginsRgb245":[0,0,3,0],"result":"PASS"},
+    {"finish":"blanco","file":"blanco.png","sha256":"d62be98ac33b9db4ebe08b5e3c07963e5429a1dee39d691a4935ca74db714b03","dimensions":"804x1956","marginsRgb245":[2,1,3,2],"result":"PASS"}
+  ],
+  "summary": {"pass":9,"fail":0,"uniqueAcceptedHashes":9,"generatorByteEqualityPass":9,"originalModified":false,"publicFilesModified":false,"converted":false,"promoted":false}
+}

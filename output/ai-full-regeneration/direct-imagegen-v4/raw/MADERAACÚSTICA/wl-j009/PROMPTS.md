@@ -1,0 +1,11 @@
+# MADERAACÚSTICA/wl-j009 — direct ImageGen prompts
+
+Use case: `product-mockup`. Image 1 was always the sole reference: `public/images/PUERTAS/MADERAACÚSTICA/wl-j009/original.webp`.
+
+Shared invariant contract: preserve the complete ultra-tall narrow square-post outer frame, straight top rail, plain single leaf, characteristic deep dark vertical reveal immediately inside the left frame, and exactly one subtle thin horizontal decorative band at handle height running from the handle-side reveal across the leaf to the right edge. Preserve exactly one dark slim horizontal lever on one round rosette and exactly one separate dark round key cylinder directly below on the left. Front-facing and complete on pure white. NO_LOGO: no logo, brand, badge, label, text, symbols, watermark, microtext or pseudotext. No extra bands, strips, panels, seams, grooves, glass, decoration, hardware or scene.
+
+Final composition contract: exact 378:1093 canvas proportion and the complete door scaled as large as possible, with an ideal 2–8 px-equivalent pure-white safety hairline per side and a strict 12 px absolute maximum. Broad padding and clipped outer edges are forbidden. Close framing must be created directly by ImageGen; no crop, resize or bitmap processing is allowed.
+
+Independent finish requests: deep matte black (`negro`), very dark espresso wenge (`wengue`), dark charcoal (`gris-oscuro`), graphite anthracite (`antracita`), rich walnut (`nogal`), warm golden oak (`roble`), light gray wood (`gris-claro`), pale natural unfinished wood (`natural`) and clean matte white wood (`blanco`). Only the material finish changes; geometry and hardware remain invariant.
+
+The first three independent `wengue` renders preserved the correct model but measured 13–17 px side padding. They remain under `_rejected/`. The accepted fourth render used a targeted extreme-close framing request and measures 0–4 px while retaining the complete outer silhouette and bottom corner tips on native visual inspection. Threshold readings of zero on isolated edges of `wengue`, `nogal` and `roble` reflect near-edge colored/antialiased pixels; visual inspection confirmed no clipped model geometry. No generated image was used as an input, and no accepted PNG was altered after ImageGen.

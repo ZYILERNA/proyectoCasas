@@ -1,0 +1,40 @@
+{
+  "schema": "wonly-direct-imagegen-qa/v4",
+  "status": "PASS_9_OF_9",
+  "model": "MADERAACÚSTICA/wl-d037",
+  "auditedAtOriginalDetail": true,
+  "checks": {
+    "nineCanonicalFinishesPresent": true,
+    "nineUniqueEncodedHashes": true,
+    "pngRgbThreeChannels": true,
+    "completeDoorFrameAndThreshold": true,
+    "leftVerticalFlutedStripPreserved": true,
+    "largePlainRightPanelPreserved": true,
+    "singleLeverAndTwoRoundEscutcheonsPreserved": true,
+    "finishSemanticsCorrect": true,
+    "zeroLogoBadgeTextOrPseudotext": true,
+    "noHaloPatchSceneOrExtraHardware": true,
+    "originalUnmodified": true,
+    "builtInImageGenOnly": true,
+    "oneIndependentCallPerActiveAsset": true,
+    "onlyCanonicalOriginalReferenced": true,
+    "noFiltersMasksCropResizeRecolorOrComposite": true,
+    "conversionNotPerformed": true,
+    "publicWriteNotPerformed": true
+  },
+  "framing": {
+    "threshold": "RGB<245 bounding box",
+    "maximumObservedMarginPx": 11,
+    "preferredMaximumPx": 8,
+    "toleranceUsed": true,
+    "note": "Outer frame is fully visible and remains nearly edge-to-edge. No crop or resize was used to alter any generated asset."
+  },
+  "rejections": [
+    {"finish":"wengue","generatorId":"exec-bf579f0d-6276-46d4-93f1-114a0e542af8","reason":"first attempt replaced by tighter direct ImageGen framing"},
+    {"finish":"roble","generatorId":"exec-67df1929-fa86-407c-9dfa-f676e06ee238","reason":"first attempt replaced by tighter direct ImageGen framing"},
+    {"finish":"natural","generatorId":"exec-f5341add-561c-43f3-819a-714958bd6ebc","reason":"first attempt replaced by tighter direct ImageGen framing"},
+    {"finish":"blanco","generatorId":"exec-1f884d45-daad-4929-b9bb-9bfed0339032","reason":"first attempt replaced by tighter direct ImageGen framing"}
+  ],
+  "safeToConvert": true,
+  "safeToPromote": false
+}

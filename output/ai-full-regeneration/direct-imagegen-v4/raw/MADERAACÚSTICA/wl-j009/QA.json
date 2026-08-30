@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-j009",
+  "policy": "NO_LOGO_MINIMAL_WHITE_MARGIN",
+  "status": "PASS_9_OF_9",
+  "generationMethod": "built-in ImageGen only",
+  "requestedFinishCount": 9,
+  "acceptedAssetCount": 9,
+  "totalIndependentImageGenCalls": 12,
+  "rejectedAttempts": 3,
+  "independence": {
+    "soleReferenceForEveryCall": "public/images/PUERTAS/MADERAACÚSTICA/wl-j009/original.webp",
+    "referenceSha256Before": "55b074790c987b6499da0c0f4e05b3bde84bcbc785211dd4ed0567d4150978cc",
+    "referenceSha256After": "55b074790c987b6499da0c0f4e05b3bde84bcbc785211dd4ed0567d4150978cc",
+    "referenceUnchanged": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "conversionUsed": false
+  },
+  "qaMethod": "Native-detail visual inspection against the canonical original plus read-only SHA-256, PNG dimensions, RGB edge-margin, subject-fill, aspect-ratio, unique-hash and generator-source byte-equality checks.",
+  "acceptanceRules": {
+    "completeOuterFrameAndDoorBottomVisible": true,
+    "signatureGeometryPreserved": "complete ultra-tall narrow square-post outer frame, straight top rail, plain single leaf, characteristic deep left-side reveal and exactly one subtle thin horizontal decorative band at handle height",
+    "hardwarePreserved": "exactly one dark slim horizontal lever on a round rosette and one separate dark round key cylinder below on the left",
+    "zeroLogoTextBadgeWatermarkOrPseudotext": true,
+    "noPostGenerationPixelProcessing": true,
+    "aspectRatio": {"canonical":0.345837,"maximumAcceptedAbsoluteRelativeDeltaPercent":0.13773,"allAcceptedWithinOnePercent":true},
+    "minimalWhiteMargin": {
+      "idealPixelsPerSide": "2–8",
+      "absoluteMaximumPixels": 12,
+      "maximumMeasuredMarginRgb245Pixels": 11,
+      "note": "Three wengue attempts measured 13–17 px side padding and were replaced by a fourth fresh direct ImageGen call. Zero-pixel threshold readings on isolated outer edges of wengue, nogal and roble were accepted only after native visual inspection confirmed the full silhouette and bottom corner tips remain visible. No crop or resize was used."
+    }
+  },
+  "assets": [
+    {"finish":"negro","file":"negro.png","sha256":"8397bc1986881db733af8151d83c634c82fea9cbe919b1229a61ea445846a203","dimensions":"738x2132","marginsRgb245":[8,9,8,6],"result":"PASS"},
+    {"finish":"wengue","file":"wengue.png","sha256":"99d466d9142d05cd82a125040344c25fe3ecefd5fbdfead409b37f9f65091d29","dimensions":"737x2132","marginsRgb245":[1,4,3,0],"result":"PASS_ATTEMPT_4"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","sha256":"b48239e30edf905cbdae044360a165bda3af989b4981ce4939162820afe5f642","dimensions":"737x2134","marginsRgb245":[8,8,7,7],"result":"PASS"},
+    {"finish":"antracita","file":"antracita.png","sha256":"daa4107dd918d4be620e6dff0a526b35fe331b9feadf70ac6d5407d83cc5abe5","dimensions":"738x2132","marginsRgb245":[11,9,7,6],"result":"PASS"},
+    {"finish":"nogal","file":"nogal.png","sha256":"6cfcf8bafd44d4af602badb1b1425346f5f29024d3ea993399a1787446c1fce8","dimensions":"738x2132","marginsRgb245":[9,9,8,0],"result":"PASS"},
+    {"finish":"roble","file":"roble.png","sha256":"a83994198253c823ff2851b185354264f8381f4a69d63ad72c2b407c7efacbfa","dimensions":"738x2132","marginsRgb245":[8,5,0,6],"result":"PASS"},
+    {"finish":"gris-claro","file":"gris-claro.png","sha256":"55435d037924750206fe7500258ba2ba2492616c7b3076813b8c4229c1e04f17","dimensions":"737x2132","marginsRgb245":[9,9,8,7],"result":"PASS"},
+    {"finish":"natural","file":"natural.png","sha256":"9ed9be2abe1a5c1776f5fe5279db4c85b351a4ecfa221ed075de483f8633d4e8","dimensions":"738x2132","marginsRgb245":[6,8,7,6],"result":"PASS"},
+    {"finish":"blanco","file":"blanco.png","sha256":"69bfb455203953f3672496735a5e46a58d42e9dd2befe8554f15bff426fb981a","dimensions":"738x2132","marginsRgb245":[9,8,7,6],"result":"PASS"}
+  ],
+  "summary": {"pass":9,"fail":0,"uniqueAcceptedHashes":9,"generatorByteEqualityPass":9,"originalModified":false,"publicFilesModified":false,"converted":false,"promoted":false}
+}

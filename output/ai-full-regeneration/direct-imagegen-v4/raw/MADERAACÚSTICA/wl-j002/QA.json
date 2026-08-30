@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-j002",
+  "policy": "NO_LOGO_MINIMAL_WHITE_MARGIN",
+  "status": "PASS_9_OF_9",
+  "generationMethod": "built-in ImageGen only",
+  "requestedFinishCount": 9,
+  "acceptedAssetCount": 9,
+  "totalIndependentImageGenCalls": 32,
+  "rejectedAttempts": 23,
+  "independence": {
+    "soleReferenceForEveryCall": "public/images/PUERTAS/MADERAACÚSTICA/wl-j002/original.webp",
+    "referenceSha256Before": "687a321e9d9d193acdadaf5e20fc0704cc5a1c48a5054f9ab1390ab7ce07e683",
+    "referenceSha256After": "687a321e9d9d193acdadaf5e20fc0704cc5a1c48a5054f9ab1390ab7ce07e683",
+    "referenceUnchanged": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "conversionUsed": false
+  },
+  "qaMethod": "Native-detail visual inspection against the canonical original plus read-only SHA-256, PNG dimensions, RGB edge-margin, subject-fill, aspect-ratio, unique-hash and generator-source byte-equality checks.",
+  "acceptanceRules": {
+    "completeOuterFrameAndDoorBottomVisible": true,
+    "signatureGeometryPreserved": "exactly one slim full-height vertical groove near the left side plus exactly three parallel horizontal grooves running from that vertical groove to the right edge of the leaf",
+    "hardwarePreserved": "exactly one dark slim lever on a round rosette and one separate dark round key cylinder below",
+    "zeroLogoTextBadgeWatermarkOrPseudotext": true,
+    "noPostGenerationPixelProcessing": true,
+    "aspectRatio": {"canonical":0.428177,"maximumAcceptedAbsoluteRelativeDeltaPercent":0.3013,"allAcceptedWithinOnePercent":true},
+    "minimalWhiteMargin": {"maximumMeasuredMarginRgb245Pixels":11,"minimumAcceptedSubjectFillWidthPercent":97.317,"minimumAcceptedSubjectFillHeightPercent":99.114,"note":"All accepted images measure no more than 11 px of RGB<245 edge margin. Padding-heavy calls and the one edge-contact call remain preserved in _rejected/."}
+  },
+  "assets": [
+    {"finish":"negro","file":"negro.png","sha256":"4ac461716ada1c35b5244f41bc71022d4fac2e60913632844e2fc6354d2352a4","dimensions":"820x1918","marginsRgb245":[11,8,11,9],"result":"PASS_ATTEMPT_5"},
+    {"finish":"wengue","file":"wengue.png","sha256":"1c055aeda1076831f9e111f307c4f6bb437b61da6d9b991c2fc2a8d416dd23dd","dimensions":"821x1916","marginsRgb245":[9,7,11,7],"result":"PASS_ATTEMPT_2"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","sha256":"6c11c8d0e2b90b49b2cd3b9ba29771d7b95acee40a976edadcd32eb139e7ed36","dimensions":"821x1915","marginsRgb245":[9,6,10,7],"result":"PASS_ATTEMPT_5"},
+    {"finish":"antracita","file":"antracita.png","sha256":"4e19c88336147bd95853381bea7ebca9a7a948e889ac053f657248d1ec832526","dimensions":"822x1914","marginsRgb245":[9,7,10,7],"result":"PASS_ATTEMPT_4"},
+    {"finish":"nogal","file":"nogal.png","sha256":"d338007d3169b55253ef66ddba458b0c6e2688c527daf2bf91a25d819071a3f0","dimensions":"821x1916","marginsRgb245":[7,9,8,7],"result":"PASS_ATTEMPT_2"},
+    {"finish":"roble","file":"roble.png","sha256":"544bf6406d27deb34f84735adf2ce8a09eac12199ee8ebbbebbf21974dc9fe71","dimensions":"821x1916","marginsRgb245":[8,3,9,5],"result":"PASS_ATTEMPT_2"},
+    {"finish":"gris-claro","file":"gris-claro.png","sha256":"034f4458628d94873dd0903ec40e5df8b6a533889b6aa1f8c81aea6e29e64686","dimensions":"821x1915","marginsRgb245":[6,4,6,3],"result":"PASS_ATTEMPT_6"},
+    {"finish":"natural","file":"natural.png","sha256":"1598b24b470a258ce843ad38015940447672695d40cd4b143089cf8cab0ebca5","dimensions":"821x1916","marginsRgb245":[9,4,11,4],"result":"PASS_ATTEMPT_4"},
+    {"finish":"blanco","file":"blanco.png","sha256":"a3aeddf4149d7278a84a6256fe009800695fb74b415126ee0773928be64279aa","dimensions":"820x1918","marginsRgb245":[9,7,11,8],"result":"PASS_ATTEMPT_2"}
+  ],
+  "summary": {"pass":9,"fail":0,"uniqueAcceptedHashes":9,"generatorByteEqualityPass":32,"originalModified":false,"publicFilesModified":false,"converted":false,"promoted":false}
+}

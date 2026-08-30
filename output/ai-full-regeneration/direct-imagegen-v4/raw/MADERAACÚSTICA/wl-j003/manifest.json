@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-j003",
+  "policy": "NO_LOGO_MINIMAL_WHITE_MARGIN",
+  "status": "PASS_9_OF_9",
+  "closedAt": "2026-08-28T16:48:42+02:00",
+  "reference": {
+    "path": "public/images/PUERTAS/MADERAACÚSTICA/wl-j003/original.webp",
+    "role": "sole canonical reference for every ImageGen call",
+    "sha256Before": "869537eb6dfbcf6ed3f1f8b479bac54e1d8466d876645fc6262d7cb964e10275",
+    "sha256After": "869537eb6dfbcf6ed3f1f8b479bac54e1d8466d876645fc6262d7cb964e10275",
+    "unchanged": true,
+    "dimensions": "447x1089",
+    "aspectRatioWidthOverHeight": 0.410468
+  },
+  "generationMode": "built-in-imagegen-independent-call-per-finish",
+  "sourcePolicy": "Every accepted PNG is an untouched byte-for-byte copy of a separate built-in ImageGen result. Each call used only the canonical original.webp; no generated output or other image was referenced.",
+  "compositionPolicy": "Complete door fills the canvas with only a hairline white safety margin; no crop or resize was used.",
+  "logoPolicy": "NO_LOGO",
+  "pixelProcessing": "none",
+  "filtersOrRecoloringUsed": false,
+  "masksUsed": false,
+  "croppingOrResizingUsed": false,
+  "compositingUsed": false,
+  "formatConversionUsed": false,
+  "acceptedAssetsAlteredAfterGeneration": false,
+  "accepted": [
+    {"finish":"negro","file":"negro.png","generatorId":"exec-c41b4b38-8db7-48f2-ad51-691ab6b778c2","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-c41b4b38-8db7-48f2-ad51-691ab6b778c2.png","sha256":"f3000395035d7622413fee1601c474d58e7efce3054d8c552966bc7b29439a10","bytes":1324242,"dimensions":"804x1956","aspectRatioAbsoluteRelativeDeltaPercent":0.14,"marginsRgb245":[8,8,8,6],"subjectFillWidthPercent":98.01,"subjectFillHeightPercent":99.284,"attempt":2},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-dbcfb243-e5ae-410b-af23-ff3b0d9f63ba","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-dbcfb243-e5ae-410b-af23-ff3b0d9f63ba.png","sha256":"2fc85ba557947126aa2ccb1b6e9a76a0c10a86f7e0f1e46aecf15ff2f0cddad7","bytes":1519051,"dimensions":"804x1956","aspectRatioAbsoluteRelativeDeltaPercent":0.14,"marginsRgb245":[6,6,8,5],"subjectFillWidthPercent":98.259,"subjectFillHeightPercent":99.438,"attempt":2},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-869b507b-56dd-4dbf-b733-a3b32343377d","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-869b507b-56dd-4dbf-b733-a3b32343377d.png","sha256":"c21ef4aaf66c0978e7179383426c7e7b584a99e40184c8587885eed5d2141934","bytes":1573404,"dimensions":"804x1957","aspectRatioAbsoluteRelativeDeltaPercent":0.0888,"marginsRgb245":[9,7,11,8],"subjectFillWidthPercent":97.512,"subjectFillHeightPercent":99.234,"attempt":1},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-d3293861-7f7e-45f9-87f0-db7463ad7a08","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-d3293861-7f7e-45f9-87f0-db7463ad7a08.png","sha256":"1d3c5b07e77993f4374a71f97b504a658095cd7760468c6f833609bbaa0fb2b7","bytes":1470081,"dimensions":"804x1956","aspectRatioAbsoluteRelativeDeltaPercent":0.14,"marginsRgb245":[8,9,8,9],"subjectFillWidthPercent":98.01,"subjectFillHeightPercent":99.08,"attempt":1},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-ead46b92-1668-4be8-98b2-317aec63fe01","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-ead46b92-1668-4be8-98b2-317aec63fe01.png","sha256":"ef91d409f39322eeefb747eb07b826978474ef63ec34837ac539390675b66f70","bytes":1725440,"dimensions":"804x1956","aspectRatioAbsoluteRelativeDeltaPercent":0.14,"marginsRgb245":[9,8,9,7],"subjectFillWidthPercent":97.761,"subjectFillHeightPercent":99.233,"attempt":1},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-199c8572-ec3b-418d-b2f5-72f8d92570b2","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-199c8572-ec3b-418d-b2f5-72f8d92570b2.png","sha256":"32e264b39f540f9c0546bcf5e421482863fb738fea7af0a4b1bdd69104853510","bytes":1727875,"dimensions":"804x1957","aspectRatioAbsoluteRelativeDeltaPercent":0.0888,"marginsRgb245":[10,2,10,6],"subjectFillWidthPercent":97.512,"subjectFillHeightPercent":99.591,"attempt":1},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-f0cf9af0-bf40-4be1-b702-c53921ea54e3","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-f0cf9af0-bf40-4be1-b702-c53921ea54e3.png","sha256":"5fdc11ceb040f6b1105930a4cfa1f3283166963bb89617ecb15293035a990e92","bytes":1577928,"dimensions":"804x1956","aspectRatioAbsoluteRelativeDeltaPercent":0.14,"marginsRgb245":[9,5,11,7],"subjectFillWidthPercent":97.512,"subjectFillHeightPercent":99.387,"attempt":1},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-0fa0b326-ad75-4df4-8245-1d5f408f8335","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-0fa0b326-ad75-4df4-8245-1d5f408f8335.png","sha256":"d778e248d5f60345895227660310b3a9f1938e8c232dfd95d0c6c8298e8f37a8","bytes":1711607,"dimensions":"804x1956","aspectRatioAbsoluteRelativeDeltaPercent":0.14,"marginsRgb245":[0,0,3,0],"subjectFillWidthPercent":99.627,"subjectFillHeightPercent":100.0,"attempt":1},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-9d5c5be3-71e5-4b6d-bca8-bd3df30b73e6","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-9d5c5be3-71e5-4b6d-bca8-bd3df30b73e6.png","sha256":"d62be98ac33b9db4ebe08b5e3c07963e5429a1dee39d691a4935ca74db714b03","bytes":1175817,"dimensions":"804x1956","aspectRatioAbsoluteRelativeDeltaPercent":0.14,"marginsRgb245":[2,1,3,2],"subjectFillWidthPercent":99.378,"subjectFillHeightPercent":99.847,"attempt":1}
+  ],
+  "rejected": [
+    {"finish":"negro","file":"_rejected/negro-attempt-1-excess-padding.png","generatorId":"exec-5dc5f596-4982-4769-93f0-05b832b176de","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-5dc5f596-4982-4769-93f0-05b832b176de.png","sha256":"1da3c274ca3e4aa10f79926ed5e8b0c26625a4879a7b84f0936653a3ad0a2218","dimensions":"804x1957","marginsRgb245":[15,14,16,16],"reason":"Rejected: correct model, but padding exceeded the tightened minimal-margin target."},
+    {"finish":"wengue","file":"_rejected/wengue-attempt-1-excess-padding.png","generatorId":"exec-e308bbd7-960e-4dd7-a514-9a37c70a0fd9","sourceGeneratedImage":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-e308bbd7-960e-4dd7-a514-9a37c70a0fd9.png","sha256":"858d8268c31d3a9429d368b9b8b2c18254799cedccb34ab2fe09b9893ff6d8e0","dimensions":"804x1957","marginsRgb245":[15,11,17,9],"reason":"Rejected: correct model, but padding exceeded the tightened minimal-margin target."}
+  ],
+  "qa": {"path":"QA.json","status":"PASS_9_OF_9","acceptedAssetCount":9,"uniqueAcceptedHashes":9,"maximumAcceptedAspectRatioAbsoluteRelativeDeltaPercent":0.14,"maximumMeasuredMarginRgb245Pixels":11},
+  "promotion": {"converted":false,"staged":false,"publicWritten":false,"originalModified":false}
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "wonly-direct-imagegen-raw/v4",
+  "status": "PASS_9_OF_9",
+  "category": "MADERAACÚSTICA",
+  "model": "wl-d037",
+  "logoPolicy": "NO_LOGO",
+  "toolMode": "built-in-imagegen",
+  "referencePolicy": "ONE_CANONICAL_ORIGINAL_ONLY_PER_CALL",
+  "canonicalReference": {
+    "path": "public/images/PUERTAS/MADERAACÚSTICA/wl-d037/original.webp",
+    "sha256Before": "9b2e3052132e1a06863748d6a6b529e011fd3a63840c2ac83fa536b93089599d",
+    "sha256After": "9b2e3052132e1a06863748d6a6b529e011fd3a63840c2ac83fa536b93089599d",
+    "width": 414,
+    "height": 1090,
+    "modified": false
+  },
+  "requirements": {
+    "independentCallPerFinish": true,
+    "generatedOutputUsedAsReference": false,
+    "logoReferenceUsed": false,
+    "filters": false,
+    "programmaticRecolor": false,
+    "masks": false,
+    "crop": false,
+    "resize": false,
+    "composite": false,
+    "conversion": false,
+    "publicWritten": false
+  },
+  "qaPolicy": {
+    "preferredMarginPx": 8,
+    "documentedTolerancePx": 11,
+    "fullFrameRequired": true,
+    "zeroLogoOrTextRequired": true,
+    "exactArchitectureAndHardwareRequired": true
+  },
+  "assets": [
+    {"finish":"negro","file":"negro.png","generatorId":"exec-b4d0f4df-b329-405a-9850-d338790e9688","attempt":1,"width":772,"height":2036,"channels":3,"bytes":1410437,"sha256":"307a871ba5e36f53d9bea9a0d4ea652fb352272961cc6dec28ceb0e6860f359f","marginsRgb245":{"left":9,"top":3,"right":11,"bottom":0},"visualQa":"PASS"},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-9b70713a-89ac-4e0b-bbf1-faf09c0fafb3","attempt":2,"width":773,"height":2035,"channels":3,"bytes":1549505,"sha256":"7664ab03958931941c41f36e4b59a9dd6a8ba5b34c8d087429de2a08c7d140ad","marginsRgb245":{"left":9,"top":2,"right":6,"bottom":0},"visualQa":"PASS"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-5edc0229-0f44-4b93-adf9-29edf7e4532e","attempt":1,"width":773,"height":2035,"channels":3,"bytes":1360548,"sha256":"e0e09d32b436f01c1fe97f2bf69ab52100fb44b8c1618ed4880e13cd0a17ed8a","marginsRgb245":{"left":10,"top":7,"right":10,"bottom":0},"visualQa":"PASS"},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-558adebe-1daf-47d6-810d-b39369619dc5","attempt":1,"width":772,"height":2037,"channels":3,"bytes":1327964,"sha256":"98d156d7803ae5428a59870c4457509fbb888b98c8cce0aa05a1c2974b2952e3","marginsRgb245":{"left":9,"top":3,"right":9,"bottom":0},"visualQa":"PASS"},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-445c6a50-a2ac-49a4-8094-961b2ac9b399","attempt":1,"width":772,"height":2037,"channels":3,"bytes":1625036,"sha256":"02495885d073ebbc824f1ec5d14b7aab71dbc1c4f35d9ae70f601d7c5b895a02","marginsRgb245":{"left":10,"top":3,"right":11,"bottom":0},"visualQa":"PASS"},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-40e08108-3687-4e30-866c-00ca47ea0e9d","attempt":2,"width":773,"height":2035,"channels":3,"bytes":1739029,"sha256":"3cb02cb4cc112fb324dffc5967867a38fb940739f0d826c1fb3580e69ba32e6b","marginsRgb245":{"left":7,"top":2,"right":8,"bottom":0},"visualQa":"PASS"},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-35a08c41-e058-425f-9727-5ba30e304af7","attempt":1,"width":773,"height":2035,"channels":3,"bytes":1352376,"sha256":"e8ce634cd0d6841ad1f58a8a8abf61b10401dc42021dc4dccfb6c922f45148e4","marginsRgb245":{"left":9,"top":3,"right":9,"bottom":0},"visualQa":"PASS"},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-209da1da-079f-4c71-ae9e-50723ed3b5b9","attempt":2,"width":772,"height":2037,"channels":3,"bytes":1519474,"sha256":"71afbe2b5bd72fe59399d30c63eaeef63f41ad6489b6df649a9212ffeca94672","marginsRgb245":{"left":7,"top":3,"right":7,"bottom":0},"visualQa":"PASS"},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-6fa2be1e-dc99-4dc9-b20e-5e0e1674c925","attempt":2,"width":773,"height":2035,"channels":3,"bytes":1102998,"sha256":"66d34a7acea014a80fe4291d4f3cf99ceda1d4ad4babfe98b8b747369e87d055","marginsRgb245":{"left":11,"top":4,"right":9,"bottom":0},"visualQa":"PASS"}
+  ],
+  "rejectedCount": 4,
+  "activePngCount": 9,
+  "converted": false,
+  "publicWritten": false
+}
