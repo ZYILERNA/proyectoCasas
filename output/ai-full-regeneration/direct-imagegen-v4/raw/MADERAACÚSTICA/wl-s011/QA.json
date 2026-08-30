@@ -1,0 +1,54 @@
+{
+  "model": "MADERAACÚSTICA/wl-s011",
+  "status": "PASS_9_OF_9",
+  "checkedAt": "2026-08-29T12:49:49+02:00",
+  "policy": "NO_LOGO_MINIMAL_MARGIN",
+  "generationAudit": {
+    "builtInImageGenOnly": true,
+    "independentCalls": 11,
+    "accepted": 9,
+    "rejected": 2,
+    "canonicalOriginalWasSoleReferenceForEveryCall": true,
+    "filtersUsed": false,
+    "recolorScriptsUsed": false,
+    "masksUsed": false,
+    "cropUsed": false,
+    "resizeUsed": false,
+    "compositeUsed": false,
+    "formatConversionUsed": false,
+    "byteEqualityGeneratorToWorkspace": "11/11",
+    "uniqueAcceptedHashes": "9/9"
+  },
+  "signature": {
+    "result": "PASS",
+    "required": [
+      "one plain unpanelled vertically grained leaf",
+      "complete slim squared casing with left post, straight top rail and right post",
+      "one deep black recessed full-height channel between left post and leaf",
+      "one narrow dark inner vertical edge beside the channel",
+      "exactly one small dark straight horizontal lever on one round rosette inside the channel",
+      "exactly one separate small dark round key escutcheon below",
+      "no extra panel, groove, channel, hardware, text, badge, brand or logo"
+    ],
+    "nativeDetailInspection": "All nine accepted files retain the full wl-s011 silhouette, exact channel count and placement, hardware count and placement, orthographic presentation and NO_LOGO policy."
+  },
+  "framing": {
+    "result": "PASS",
+    "referenceMarginsRgb245": [3, 0, 2, 0],
+    "preferredTargetPixels": "0-6",
+    "normalMaximumPixels": 12,
+    "acceptedMarginsRgb245": {
+      "negro":[9,5,10,0],
+      "wengue":[7,0,8,0],
+      "gris-oscuro":[9,7,9,5],
+      "antracita":[8,4,10,0],
+      "nogal":[9,0,10,0],
+      "roble":[10,7,9,5],
+      "gris-claro":[4,0,4,0],
+      "natural":[9,0,0,0],
+      "blanco":[10,5,11,1]
+    },
+    "decision": "The door fills at least 97.24% of the usable width in every accepted image. All measured margins are at or below 11 pixels. Native inspection confirms that zero-edge contact in natural and several top/bottom edges preserves complete casing geometry and follows the canonical edge contact."
+  },
+  "final": {"result":"PASS","publicWritten":false,"originalModified":false,"converted":false,"committed":false,"pushed":false}
+}

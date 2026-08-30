@@ -1,0 +1,53 @@
+{
+  "model": "MADERAACÚSTICA/wl-s020",
+  "status": "PASS_9_OF_9",
+  "checkedAt": "2026-08-29T13:16:54+02:00",
+  "policy": "NO_LOGO_MINIMAL_MARGIN",
+  "generationAudit": {
+    "builtInImageGenOnly": true,
+    "independentCalls": 16,
+    "accepted": 9,
+    "rejected": 7,
+    "canonicalOriginalWasSoleReferenceForEveryCall": true,
+    "filtersUsed": false,
+    "recolorScriptsUsed": false,
+    "masksUsed": false,
+    "cropUsed": false,
+    "resizeUsed": false,
+    "compositeUsed": false,
+    "formatConversionUsed": false,
+    "byteEqualityGeneratorToWorkspace": "16/16",
+    "uniqueAcceptedHashes": "9/9"
+  },
+  "signature": {
+    "result": "PASS",
+    "required": [
+      "one otherwise plain unpanelled leaf and complete slim squared casing",
+      "exactly one deep near-black full-height recessed channel at far left",
+      "exactly one narrow warm natural-wood accent band below the hardware",
+      "exactly two thin dark borders around that one band",
+      "exactly one round handle rosette, one straight horizontal lever and one separate round key escutcheon",
+      "no extra panel, seam, groove, line, band, channel, hardware, text, badge, brand or logo"
+    ],
+    "nativeDetailInspection": "All nine accepted files preserve the one-band signature, band placement and borders, full-height channel, hardware count and placement, full casing and NO_LOGO policy."
+  },
+  "framing": {
+    "result": "PASS",
+    "referenceMarginsRgb245": [3, 4, 3, 2],
+    "preferredTargetPixels": "0-6",
+    "normalMaximumPixels": 12,
+    "acceptedMarginsRgb245": {
+      "negro":[9,7,8,0],
+      "wengue":[9,10,9,6],
+      "gris-oscuro":[8,7,8,0],
+      "antracita":[8,6,7,0],
+      "nogal":[0,0,5,0],
+      "roble":[3,4,9,0],
+      "gris-claro":[4,4,6,0],
+      "natural":[10,8,10,5],
+      "blanco":[10,7,9,1]
+    },
+    "decision": "Every accepted door fills at least 97.40% of the usable width and no measured margin exceeds 10 pixels. Native inspection confirms every zero-edge contact preserves complete flat posts, lintel and bottom endpoints rather than cropping them."
+  },
+  "final": {"result":"PASS","publicWritten":false,"originalModified":false,"converted":false,"committed":false,"pushed":false}
+}

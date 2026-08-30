@@ -1,0 +1,53 @@
+{
+  "model": "MADERAACÚSTICA/wl-s017",
+  "status": "PASS_9_OF_9",
+  "checkedAt": "2026-08-29T13:04:23+02:00",
+  "policy": "NO_LOGO_MINIMAL_MARGIN",
+  "generationAudit": {
+    "builtInImageGenOnly": true,
+    "independentCalls": 9,
+    "accepted": 9,
+    "rejected": 0,
+    "canonicalOriginalWasSoleReferenceForEveryCall": true,
+    "filtersUsed": false,
+    "recolorScriptsUsed": false,
+    "masksUsed": false,
+    "cropUsed": false,
+    "resizeUsed": false,
+    "compositeUsed": false,
+    "formatConversionUsed": false,
+    "byteEqualityGeneratorToWorkspace": "9/9",
+    "uniqueAcceptedHashes": "9/9"
+  },
+  "signature": {
+    "result": "PASS",
+    "required": [
+      "one otherwise plain unpanelled leaf and complete slim squared casing",
+      "exactly one deep near-black full-height recessed channel at far left",
+      "one slim light-gray inner vertical boundary beside that channel",
+      "exactly one extremely thin horizontal hairline across the leaf on the handle axis",
+      "exactly one round handle rosette, one straight horizontal lever and one separate round key escutcheon",
+      "no extra panel, seam, groove, line, channel, hardware, text, badge, brand or logo"
+    ],
+    "nativeDetailInspection": "All nine accepted files preserve the exact one-horizontal-line design, full-height left channel, hardware count and placement, full casing and NO_LOGO policy."
+  },
+  "framing": {
+    "result": "PASS",
+    "referenceMarginsRgb245": [3, 4, 3, 0],
+    "preferredTargetPixels": "0-6",
+    "normalMaximumPixels": 12,
+    "acceptedMarginsRgb245": {
+      "negro":[4,0,5,0],
+      "wengue":[0,0,6,0],
+      "gris-oscuro":[8,7,9,0],
+      "antracita":[6,0,6,0],
+      "nogal":[0,0,6,0],
+      "roble":[9,6,0,0],
+      "gris-claro":[0,0,3,0],
+      "natural":[9,8,9,0],
+      "blanco":[8,6,7,0]
+    },
+    "decision": "Every accepted door fills at least 97.66% of the usable width and no measured margin exceeds 9 pixels. Native inspection confirms that zero-edge contacts retain complete flat posts, lintel and bottom endpoints rather than cropping them."
+  },
+  "final": {"result":"PASS","publicWritten":false,"originalModified":false,"converted":false,"committed":false,"pushed":false}
+}

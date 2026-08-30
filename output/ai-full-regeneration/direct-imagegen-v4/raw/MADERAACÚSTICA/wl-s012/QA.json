@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-s012",
+  "policy": "NO_LOGO_CANONICAL_EDGE_CONTACT_MAXIMUM_SUBJECT",
+  "status": "PASS_9_OF_9",
+  "generationMethod": "built-in ImageGen only",
+  "requestedFinishCount": 9,
+  "acceptedAssetCount": 9,
+  "totalIndependentImageGenCalls": 18,
+  "acceptedIndependentCalls": 9,
+  "rejectedAttempts": 9,
+  "independence": {
+    "soleReferenceForEveryCall": "public/images/PUERTAS/MADERAACÚSTICA/wl-s012/original.webp",
+    "referenceSha256Before": "c7ba732b33a5bac4c43972a794ab82f72cc61177e22ed9e7e70137aebc03d387",
+    "referenceSha256After": "c7ba732b33a5bac4c43972a794ab82f72cc61177e22ed9e7e70137aebc03d387",
+    "referenceUnchanged": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "conversionUsed": false
+  },
+  "qaMethod": "Native-detail visual inspection of every accepted candidate against the sole canonical original, plus read-only SHA-256, PNG dimensions, edge-margin, subject-fill, aspect-ratio, unique-hash and generator-source byte-equality checks. RGB<245 was used for all finishes except white, where RGB<250 detects the nearly white outer edge. No PNG was altered during QA.",
+  "acceptanceRules": {
+    "completeOuterFrameAndDoorBottomVisible": true,
+    "straightOnTallNarrowComposition": true,
+    "signatureGeometryPreserved": "exactly two square outer side posts projecting above one straight crossbar and extending to the bottom; one inner beveled lintel; one smooth plain leaf with a fine right inset line; one narrow far-left cluster of close parallel flutes whose upper and lower runs form the source angular chevron/diamond interruption around the hardware; no extra panels, grooves, glass or decoration",
+    "hardwarePreserved": "exactly one short horizontal dark-silver lever on one dark circular rosette and exactly one separate dark round key cylinder below, at the source position and scale",
+    "finishAppliedWithoutStructuralRedesign": true,
+    "zeroLogoTextBadgeWatermarkOrPseudotext": true,
+    "noPostGenerationPixelProcessing": true,
+    "aspectRatio": {
+      "canonical": 0.36788,
+      "acceptedMinimum": 0.367505,
+      "acceptedMaximum": 0.368166,
+      "maximumAcceptedAbsoluteRelativeDeltaPercent": 0.102112,
+      "allAcceptedWithinOnePercent": true
+    },
+    "maximumSubjectFraming": {
+      "goal": "make the intact complete door occupy essentially the entire canvas and reproduce the canonical edge contacts",
+      "measurementOrder": ["left", "top", "right", "bottom"],
+      "standardThreshold": "RGB<245",
+      "whiteFinishThreshold": "RGB<250 because the matte-white frame is nearly the same value as the pure-white background",
+      "canonicalOriginalMargins": [0, 0, 2, 0],
+      "canonicalOriginalContactSides": ["left", "top", "bottom"],
+      "preferredAcceptedRangePixels": "0-6; zero contact allowed because the canonical original contacts the canvas and native inspection confirms the silhouette is complete",
+      "minimumMeasuredAcceptedPixels": 0,
+      "maximumMeasuredAcceptedPixels": 4,
+      "allAcceptedWithinPreferredRange": true,
+      "nativeCompleteAtZeroContact": true,
+      "noCropOrResizeUsedToAchieveFraming": true
+    }
+  },
+  "assets": [
+    {"finish":"negro","file":"negro.png","generatorId":"exec-5250b947-280b-43d1-8edc-2d2580cdab10","sha256":"68c9f4aaa07c3a09ffd366cc8072e1354ef2642ba2efa8e2ee5b18a87dc57bdf","dimensions":"761x2067","marginThreshold":"RGB<245","margins":[0,1,0,0],"result":"PASS_ATTEMPT_2_CANONICAL_CONTACT_NATIVE_COMPLETE"},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-379c6985-c825-4508-9097-82990eb9aa6d","sha256":"ba2b4bcce668fe48811f8eba9c84039f57c3e543c94db3bb1e834fa36c60da30","dimensions":"761x2067","marginThreshold":"RGB<245","margins":[0,0,4,0],"result":"PASS_ATTEMPT_1_CANONICAL_CONTACT_NATIVE_COMPLETE"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-e33d908e-32d7-41ea-89ce-6f02e5f3ee24","sha256":"67b20a08fb6a3d06c0dc7bb102c268c185280e93fcfc73a7e99ac0b9b2998cb0","dimensions":"761x2067","marginThreshold":"RGB<245","margins":[0,0,0,0],"result":"PASS_ATTEMPT_3_CANONICAL_CONTACT_NATIVE_COMPLETE"},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-b261d945-c4e8-45b9-9acc-14d300a1ff12","sha256":"6a57fa8d4d284b45d6317e6ea3f3645e01305a03217cd5379c4363239dbbc240","dimensions":"760x2068","marginThreshold":"RGB<245","margins":[0,0,0,0],"result":"PASS_ATTEMPT_3_CANONICAL_CONTACT_NATIVE_COMPLETE"},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-bda4ab69-f706-40ef-9aee-75fb2cc5ddc2","sha256":"55267901b8100a20858e474e15ecce098dc02a2f0865d7c6eab2546d6788fef3","dimensions":"760x2068","marginThreshold":"RGB<245","margins":[0,0,0,0],"result":"PASS_ATTEMPT_1_CANONICAL_CONTACT_NATIVE_COMPLETE"},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-c54bf164-f17e-456c-bbe9-0f2542a3bd10","sha256":"43240a2bfbe08650aeaf4954359c1e3ff79259327f4484e0f70ea5823ffbe04d","dimensions":"761x2067","marginThreshold":"RGB<245","margins":[0,0,0,0],"result":"PASS_ATTEMPT_2_CANONICAL_CONTACT_NATIVE_COMPLETE"},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-58060c42-32da-4cca-8dff-7d665de727bb","sha256":"80e8af2d2dd6b61bce466f0de290cf8d20704d20471796d50395b3a9b834bdf3","dimensions":"760x2068","marginThreshold":"RGB<245","margins":[0,0,2,0],"result":"PASS_ATTEMPT_3_CANONICAL_CONTACT_NATIVE_COMPLETE"},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-2f8e4374-ee42-418c-9c17-4580a24a1a99","sha256":"79f03d35dd98f9399371c9374d5ee56ecec92bed98cb4d71a979e7364388b352","dimensions":"761x2067","marginThreshold":"RGB<245","margins":[0,0,2,0],"result":"PASS_ATTEMPT_2_CANONICAL_CONTACT_NATIVE_COMPLETE"},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-5e339ebc-fa35-44d4-9f63-2d2778074375","sha256":"21c867995b3f4cd6467cbcf03e44286a571dd689850154d3b4d7e2ab7eb25863","dimensions":"761x2067","marginThreshold":"RGB<250","margins":[3,2,3,0],"result":"PASS_ATTEMPT_1_WHITE_THRESHOLD_AND_CANONICAL_BOTTOM_CONTACT_NATIVE_COMPLETE"}
+  ],
+  "rejectedAttemptMap": {
+    "negro": [1],
+    "wengue": [],
+    "gris-oscuro": [1, 2],
+    "antracita": [1, 2],
+    "nogal": [],
+    "roble": [1],
+    "gris-claro": [1, 2],
+    "natural": [1],
+    "blanco": []
+  },
+  "summary": {
+    "pass": 9,
+    "fail": 0,
+    "uniqueAcceptedHashes": 9,
+    "generatorByteEqualityPass": 18,
+    "logoTextOrPseudotextInstancesPerAcceptedAsset": 0,
+    "visualInspection": "PASS: all nine accepted finishes preserve the complete two-post frame, crossbar, beveled lintel, plain leaf, fine right line, split left flute cluster with angular hardware interruption, one lever and one separate key cylinder. Canonical contacts do not remove any geometry.",
+    "originalModified": false,
+    "publicFilesModified": false,
+    "converted": false,
+    "promoted": false
+  }
+}

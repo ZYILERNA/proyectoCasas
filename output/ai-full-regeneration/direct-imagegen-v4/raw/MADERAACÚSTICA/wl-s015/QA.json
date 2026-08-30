@@ -1,0 +1,54 @@
+{
+  "model": "MADERAACÚSTICA/wl-s015",
+  "status": "PASS_9_OF_9",
+  "checkedAt": "2026-08-29T12:57:01+02:00",
+  "policy": "NO_LOGO_MINIMAL_MARGIN",
+  "generationAudit": {
+    "builtInImageGenOnly": true,
+    "independentCalls": 9,
+    "accepted": 9,
+    "rejected": 0,
+    "canonicalOriginalWasSoleReferenceForEveryCall": true,
+    "filtersUsed": false,
+    "recolorScriptsUsed": false,
+    "masksUsed": false,
+    "cropUsed": false,
+    "resizeUsed": false,
+    "compositeUsed": false,
+    "formatConversionUsed": false,
+    "byteEqualityGeneratorToWorkspace": "9/9",
+    "uniqueAcceptedHashes": "9/9"
+  },
+  "signature": {
+    "result": "PASS",
+    "required": [
+      "one plain completely unpanelled leaf and complete slim rectangular casing",
+      "exactly two separate collinear black vertical capsule inlays with the central hardware gap",
+      "upper inlay ending in one rounded lower tip above the handle",
+      "lower inlay beginning in one rounded upper tip below the lock and extending to the bottom",
+      "one subtle recessed gray strip immediately left of the inlays",
+      "exactly one round handle rosette, one straight silver lever and one separate round key escutcheon",
+      "no extra panel, groove, strip, hardware, text, badge, brand or logo"
+    ],
+    "nativeDetailInspection": "All nine accepted files preserve the exact two-inlay signature, intentional central gap, hardware count and placement, full casing and NO_LOGO policy."
+  },
+  "framing": {
+    "result": "PASS",
+    "referenceMarginsRgb245": [0, 4, 2, 0],
+    "preferredTargetPixels": "0-6",
+    "normalMaximumPixels": 12,
+    "acceptedMarginsRgb245": {
+      "negro":[8,3,8,0],
+      "wengue":[8,6,7,0],
+      "gris-oscuro":[0,0,0,0],
+      "antracita":[10,5,10,0],
+      "nogal":[6,7,7,0],
+      "roble":[3,2,0,0],
+      "gris-claro":[4,4,6,0],
+      "natural":[6,5,7,0],
+      "blanco":[4,6,4,1]
+    },
+    "decision": "Every accepted door fills at least 97.39% of the usable width and no measured margin exceeds 10 pixels. Native inspection at original detail confirms that all zero-edge contacts retain complete flat post, lintel and bottom endpoints rather than cropping them."
+  },
+  "final": {"result":"PASS","publicWritten":false,"originalModified":false,"converted":false,"committed":false,"pushed":false}
+}

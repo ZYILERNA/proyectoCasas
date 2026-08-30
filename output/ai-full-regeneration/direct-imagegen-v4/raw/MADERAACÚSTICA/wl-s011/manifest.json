@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-s011",
+  "policy": "NO_LOGO_MINIMAL_MARGIN",
+  "status": "PASS_9_OF_9",
+  "closedAt": "2026-08-29T12:49:49+02:00",
+  "reference": {
+    "path": "public/images/PUERTAS/MADERAACÚSTICA/wl-s011/original.webp",
+    "role": "sole canonical reference for every direct ImageGen call",
+    "sha256Before": "a54ae017077da0942fd3ef4ea6b192a25270a9815571749f91a425e5dad4bb2c",
+    "sha256After": "a54ae017077da0942fd3ef4ea6b192a25270a9815571749f91a425e5dad4bb2c",
+    "unchanged": true,
+    "bytes": 76124,
+    "dimensions": "394x1069",
+    "aspectRatioWidthOverHeight": 0.368569,
+    "marginsRgb245": [3, 0, 2, 0]
+  },
+  "generationMode": "built-in-imagegen-independent-call-per-finish",
+  "sourcePolicy": "Each PNG is an untouched byte-for-byte copy of one independent built-in ImageGen result. Each call used only the canonical original.webp.",
+  "compositionPolicy": "The complete door assembly is rendered as large as possible on pure white, normally within 12 pixels of every edge. Zero-edge contact is accepted only where native inspection confirms the complete silhouette and the canonical original also contacts that edge.",
+  "logoPolicy": "NO_LOGO",
+  "pixelProcessing": "none",
+  "filtersOrRecoloringUsed": false,
+  "masksUsed": false,
+  "croppingOrResizingUsed": false,
+  "compositingUsed": false,
+  "formatConversionUsed": false,
+  "acceptedAssetsAlteredAfterGeneration": false,
+  "workspaceCopiesMatchGeneratorBytes": true,
+  "generatedImageRoot": "C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0",
+  "auditCounts": {"totalIndependentImageGenCalls": 11, "accepted": 9, "rejected": 2},
+  "accepted": [
+    {"finish":"negro","file":"negro.png","generatorId":"exec-9e5cabac-c336-4dce-84f6-05daa591a6d0","sha256":"92f5f109a34bc8b7aae9f134e38e7522e08d0c8b4054846889318abf0daa7466","bytes":1557815,"dimensions":"762x2065","mode":"RGB","aspectRatioAbsoluteRelativeDeltaPercent":0.118976,"marginsRgb245":[9,5,10,0],"attempt":1},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-0c91822f-301a-4d4b-8bba-d6a5130a23ad","sha256":"d3b45b4081825fc88f2e92ebc151934ced408aa8acacbf1cc6da7756dde0d59f","bytes":1707845,"dimensions":"761x2065","mode":"RGB","aspectRatioAbsoluteRelativeDeltaPercent":0.012414,"marginsRgb245":[7,0,8,0],"attempt":1},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-699a8bdb-4144-4340-b984-84af9d794ab5","sha256":"b4325e2c3eb420264998ab55471ef806340216c9606d796f4de76c8709d08f8d","bytes":1825067,"dimensions":"762x2065","mode":"RGB","aspectRatioAbsoluteRelativeDeltaPercent":0.118976,"marginsRgb245":[9,7,9,5],"attempt":1},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-0f398b41-e7a4-44e8-8ab8-4f4f2c7f6eec","sha256":"0af780d579287b8d15373f438fed9cebf53d69b545f682e83d71660cd384ec52","bytes":1717917,"dimensions":"761x2065","mode":"RGB","aspectRatioAbsoluteRelativeDeltaPercent":0.012414,"marginsRgb245":[8,4,10,0],"attempt":2},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-97868f3a-f164-4eca-bfef-3ccb367949b1","sha256":"bfdf5e84be42418ddcd06e5cf212f45cf4d63426cb6265d7dcf952939ac45349","bytes":2016644,"dimensions":"762x2065","mode":"RGB","aspectRatioAbsoluteRelativeDeltaPercent":0.118976,"marginsRgb245":[9,0,10,0],"attempt":1},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-aa091b5d-acc9-4ef0-843a-b76a67ac35be","sha256":"759e00a5897c08dc7b90827e3812a5b9590781c587c025f1a1832452aa8d259a","bytes":1909683,"dimensions":"761x2065","mode":"RGB","aspectRatioAbsoluteRelativeDeltaPercent":0.012414,"marginsRgb245":[10,7,9,5],"attempt":1},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-6fbb735e-0802-4879-b3d3-f833ce4d5058","sha256":"7588a691ef9a51a65ebbc7d99cda5a3b758103932fdd281d346ca0afe430c476","bytes":1700932,"dimensions":"761x2065","mode":"RGB","aspectRatioAbsoluteRelativeDeltaPercent":0.012414,"marginsRgb245":[4,0,4,0],"attempt":1},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-0c81f703-54fd-472c-be7b-2e64134cf208","sha256":"c6ee389383f633100d0dad7aec3159d6b48da3432e38972982f8c217c9b61cc8","bytes":1747769,"dimensions":"761x2066","mode":"RGB","aspectRatioAbsoluteRelativeDeltaPercent":0.060811,"marginsRgb245":[9,0,0,0],"attempt":2},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-9e7ea844-810a-49de-90b4-a9e3a7d0ab39","sha256":"caa9f9607a11da5fec48d02cfb092d9c1f25ccea62de58b8fcfe8cbc4e99bd29","bytes":1193339,"dimensions":"761x2065","mode":"RGB","aspectRatioAbsoluteRelativeDeltaPercent":0.012414,"marginsRgb245":[10,5,11,1],"attempt":1}
+  ],
+  "rejected": [
+    {"finish":"antracita","file":"rejected/antracita-attempt-01-margin-13px.png","generatorId":"exec-c3c49e3d-73b5-4662-91ca-2874a68c925d","sha256":"60cd9f6ece3f01f7ad71b9875c67ffa43fd790509bed793aa297d862f0aae664","bytes":2027132,"dimensions":"761x2065","marginsRgb245":[13,6,11,0],"attempt":1,"reason":"left white margin exceeded the 12-pixel normal maximum"},
+    {"finish":"natural","file":"rejected/natural-attempt-01-margin-13px.png","generatorId":"exec-c6309714-4ceb-4bbf-be79-92049f3246f6","sha256":"b35d5bedae9b6cc72f2175e2dbfcd3fddb5c56ceebf0237bafeecf2d769a6592","bytes":1780700,"dimensions":"762x2065","marginsRgb245":[13,6,12,0],"attempt":1,"reason":"left white margin exceeded the 12-pixel normal maximum"}
+  ],
+  "qa": {"path":"QA.json","status":"PASS_9_OF_9","acceptedAssetCount":9,"totalIndependentImageGenCalls":11,"rejectedAttempts":2,"uniqueAcceptedHashes":9,"generatorByteEqualityPass":11,"maximumAcceptedAspectRatioAbsoluteRelativeDeltaPercent":0.118976,"maximumMeasuredMarginRgb245Pixels":11,"nativeVisualInspection":"PASS"},
+  "promotion": {"converted":false,"staged":false,"publicWritten":false,"originalModified":false}
+}

@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 2,
+  "model": "MADERAACÚSTICA/wl-s021",
+  "policy": "NO_LOGO",
+  "status": "PASS_9_OF_9",
+  "generationMethod": "built-in ImageGen only",
+  "requestedFinishCount": 9,
+  "acceptedAssetCount": 9,
+  "totalIndependentImageGenCalls": 55,
+  "rejectedAttempts": 46,
+  "independence": {
+    "soleReferenceForEveryCall": "public/images/PUERTAS/MADERAACÚSTICA/wl-s021/original.webp",
+    "referenceSha256Before": "54905dde39feb87b6a609661bbc49f1f5862fb42cb845918a1c7a66073ef1db0",
+    "referenceSha256After": "54905dde39feb87b6a609661bbc49f1f5862fb42cb845918a1c7a66073ef1db0",
+    "referenceUnchanged": true,
+    "canonicalMirrorSha256": "54905dde39feb87b6a609661bbc49f1f5862fb42cb845918a1c7a66073ef1db0",
+    "canonicalMirrorMatchesOriginal": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "conversionUsed": false,
+    "postGenerationPixelProcessingUsed": false
+  },
+  "qaMethod": "Native-detail visual inspection against the sole canonical original plus read-only SHA-256, PNG dimensions, RGB<245 edge-margin, aspect-ratio, unique-hash, JSON and generator-source byte-equality checks.",
+  "acceptanceRules": {
+    "completeOuterFrameAndAllFourCornersVisible": true,
+    "signatureGeometryPreserved": "front-facing tall narrow single leaf; straight top lintel and two square side posts; thin dark leaf reveal; one huge centered tall rectangular panel with four-sided stepped beveled molding and clean 45-degree miters; plain uninterrupted central field",
+    "hardwarePreserved": "exactly one black horizontal lever on the left, exactly one separate small black rectangular lock escutcheon below, and two restrained right-edge hinge/reveal marks",
+    "zeroLogoTextBadgeWatermarkOrPseudotext": true,
+    "pureWhiteCatalogBackground": true,
+    "noSceneFloorWallOrCastShadow": true,
+    "noPostGenerationPixelProcessing": true,
+    "aspectRatio": {
+      "canonical": 0.379655,
+      "acceptedDimensions": ["772x2036", "773x2035"],
+      "maximumAcceptedAbsoluteRelativeDeltaPercent": 0.126469,
+      "allAcceptedWithinOnePercent": true
+    },
+    "framingTarget": "0-6 px ideal per side; normal maximum 12 px; geometry and complete silhouette take precedence; no crop or resize permitted",
+    "documentedExceptions": [
+      "Negro and wengue reach RGB<245 at the bottom row, but their complete lower rails and both lower corners are visible natively. The original itself has only 1 px bottom clearance. Three additional direct attempts per finish did not improve the full-frame result.",
+      "Natural attempt 13 measures [0,0,0,0]. Native-detail inspection confirms the complete lintel, both side posts, all four corners, both bottom endpoints, exactly one panel and continuous stepped molding, one lever plus one lock escutcheon, and exactly two right-edge hinge marks."
+    ]
+  },
+  "assets": [
+    {"finish":"negro","file":"negro.png","generatorId":"exec-b503ec80-31b1-40d5-91b7-0c406d363509","sha256":"eb64ce0c59fb888e58562753ef885488ec03ab3098ba0f98f4371256dad8ff49","dimensions":"773x2035","marginsRgb245":[12,7,7,0],"nativeVisualGeometry":"PASS","logo":"ABSENT","result":"PASS_WITH_CANONICAL_EDGE_CONTACT_EXCEPTION"},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-5f5eaa2f-53ab-478e-b8b0-9413b4bce226","sha256":"b8014a4f96399060d3beac13f77c8f3037e09c7b048d1b2ebae5817b23741f94","dimensions":"773x2035","marginsRgb245":[11,6,8,0],"nativeVisualGeometry":"PASS","logo":"ABSENT","result":"PASS_WITH_CANONICAL_EDGE_CONTACT_EXCEPTION"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-02b09b8f-bbdc-4106-8b40-960e8d27cf6c","sha256":"024eef2a1b341da31aaacb3cdaf085e69202d3bdaf7c9f51e7a13631af16a7a6","dimensions":"773x2035","marginsRgb245":[11,6,7,5],"nativeVisualGeometry":"PASS","logo":"ABSENT","result":"PASS"},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-8a83631a-467a-4572-a44a-116971928fbf","sha256":"7d17cc3662051b9c698b0c7ce5aa265f0792e3c10948b216296bc16f5cf3c7cf","dimensions":"773x2035","marginsRgb245":[10,6,7,5],"nativeVisualGeometry":"PASS","logo":"ABSENT","result":"PASS"},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-d23f2e80-f7ed-45d8-9c23-9274cd82e89d","sha256":"a755fb9fba3cf5f2665cc763d3c578cb1364fe0f5134e8692e14bb9ffebfd848","dimensions":"773x2035","marginsRgb245":[11,8,11,8],"nativeVisualGeometry":"PASS","logo":"ABSENT","result":"PASS"},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-f884d3e9-456b-4130-bd9c-ed195dbd0914","sha256":"518614945f38bc98cc044986144461643c09450dd447224647c70ac2fe8644d2","dimensions":"773x2035","marginsRgb245":[12,8,11,7],"nativeVisualGeometry":"PASS","logo":"ABSENT","result":"PASS"},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-74a4330e-f02f-46bb-9f1e-014eac33a6af","sha256":"c5e296ed635d7963ab67866ababb1293b945cdef9e6b7cc11a78e0ff273ae7b8","dimensions":"773x2035","marginsRgb245":[11,7,8,8],"nativeVisualGeometry":"PASS","logo":"ABSENT","result":"PASS"},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-c924d76f-bd0f-4e47-8b59-f2b801e01895","sha256":"cb8a5b1993610ff5c46ead6540ba3b7e0ff925b2c329594b159ed6f7a831fb30","dimensions":"772x2036","marginsRgb245":[0,0,0,0],"nativeVisualGeometry":"PASS_PANEL_MOLDING_LEVER_ESCUTCHEON_TWO_HINGES_AND_OUTER_CONTOUR_COMPLETE","logo":"ABSENT","result":"PASS_INTENTIONAL_FOUR_EDGE_CONTACT"},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-6e003262-66d0-4657-a098-14dea7aa08f5","sha256":"9a4e2f93fc4b68a1184eea699596971bf72f4621faf7a7e033022284589df39e","dimensions":"773x2035","marginsRgb245":[12,11,11,5],"nativeVisualGeometry":"PASS","logo":"ABSENT","result":"PASS"}
+  ],
+  "artifactChecks": {
+    "acceptedPngCount": 9,
+    "rejectedPngCount": 46,
+    "pngWithC2paMetadataCount": 55,
+    "uniqueAcceptedHashes": 9,
+    "acceptedGeneratorSourceByteEquality": true,
+    "rejectedGeneratorSourceByteEquality": true,
+    "allJsonValid": true,
+    "originalModified": false,
+    "publicFilesModifiedByThisWork": false,
+    "converted": false,
+    "promoted": false,
+    "committed": false,
+    "pushed": false
+  },
+  "summary": {
+    "pass": 9,
+    "fail": 0,
+    "documentedFramingExceptions": 3,
+    "originalModified": false,
+    "publicFilesModified": false
+  }
+}
