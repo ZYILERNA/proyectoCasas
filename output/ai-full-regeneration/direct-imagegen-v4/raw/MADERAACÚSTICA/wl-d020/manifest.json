@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-d020",
+  "policy": "NO_LOGO_MINIMUM_MARGIN_WHITE_REVISION",
+  "status": "PASS_9_OF_9_WHITE_MINIMUM_MARGIN_REVISION_WITH_DOCUMENTED_NUMERIC_EXCEPTION",
+  "closedAt": "2026-08-29T15:36:32+02:00",
+  "reference": {
+    "path": "public/images/PUERTAS/MADERAACÚSTICA/wl-d020/original.webp",
+    "role": "sole canonical reference for every call",
+    "sha256Before": "c662510911bdd2c7b752409c8a932e8db5068b20da2129f99d05e009e3976296",
+    "sha256After": "c662510911bdd2c7b752409c8a932e8db5068b20da2129f99d05e009e3976296",
+    "unchanged": true,
+    "bytes": 56212,
+    "dimensions": "406x1092",
+    "mode": "RGB",
+    "aspectRatioWidthOverHeight": 0.371795,
+    "marginsAtRgbBelow245": [4, 4, 1, 0],
+    "marginsAtRgbBelow250": [4, 4, 0, 0]
+  },
+  "generationMode": "built-in-imagegen-independent-call-per-finish-and-retry",
+  "sourcePolicy": "Every active PNG and the preserved displaced blanco PNG are untouched byte-for-byte workspace copies of separate built-in ImageGen results. Every call used only public/images/PUERTAS/MADERAACÚSTICA/wl-d020/original.webp. No generated output, logo image or other image was referenced. The historical first blanco attempt remains generator-accessible but was never copied to this workspace.",
+  "compositionPolicy": "The active nine preserve the complete layered casing and sit within the normal 12-pixel maximum at RGB<245. The new blanco call explicitly requested 0-3 pixels on all sides and allowed contact when intact; its measured [7,0,4,0] result exceeds that literal target on left and right but is materially tighter than the displaced [17,7,19,7] blanco and remains complete under native inspection. This numeric exception is documented; no crop, resize, filter, recolor, mask, composite, conversion or pixel processing was used.",
+  "logoPolicy": "The canonical reference has no WONLY logo, so every accepted finish has no logo, text, watermark, badge, label, or pseudotext.",
+  "pixelProcessing": "none",
+  "filtersOrRecoloringUsed": false,
+  "masksUsed": false,
+  "croppingOrResizingUsed": false,
+  "compositingUsed": false,
+  "formatConversionUsed": false,
+  "acceptedAssetsAlteredAfterGeneration": false,
+  "workspaceCopiesMatchGeneratorBytes": true,
+  "generatedImageRoots": [
+    "C:/Users/zhen/.codex/generated_images/01a00f56-4f8f-7913-b719-3ae13516d35c",
+    "C:/Users/zhen/.codex/generated_images/01a0141b-34f9-7973-89ee-9e3a7b2748f7",
+    "C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0"
+  ],
+  "auditCounts": {
+    "totalIndependentImageGenCalls": 11,
+    "activeAccepted": 9,
+    "nonActive": 2,
+    "previousRoundCalls": 10,
+    "minimumMarginRevisionCalls": 1,
+    "retainedDisplacedSelections": 1,
+    "unretainedHistoricalAttempts": 1,
+    "activeWithinNormalMaximum12": 9,
+    "activeWithinPreferred0To6": 2,
+    "maximumActiveMarginPixels": 11,
+    "newBlancoMaximumMarginPixels": 7
+  },
+  "sourceGeneratedImages": {
+    "negro": "C:/Users/zhen/.codex/generated_images/01a00f56-4f8f-7913-b719-3ae13516d35c/exec-778b9508-0809-4591-86ef-06ef40c33b5b.png",
+    "wengue": "C:/Users/zhen/.codex/generated_images/01a00f56-4f8f-7913-b719-3ae13516d35c/exec-02034695-4207-46fe-bd51-e38e89219a5f.png",
+    "gris-oscuro": "C:/Users/zhen/.codex/generated_images/01a00f56-4f8f-7913-b719-3ae13516d35c/exec-a66a52a7-c431-4678-b40d-ffb93f3be5f6.png",
+    "antracita": "C:/Users/zhen/.codex/generated_images/01a00f56-4f8f-7913-b719-3ae13516d35c/exec-e1d7ac0c-1d4a-416a-88f2-f8ed80a4e2dc.png",
+    "nogal": "C:/Users/zhen/.codex/generated_images/01a00f56-4f8f-7913-b719-3ae13516d35c/exec-0cc5b305-032b-4f88-a152-6f0560132b4d.png",
+    "roble": "C:/Users/zhen/.codex/generated_images/01a00f56-4f8f-7913-b719-3ae13516d35c/exec-5c9233da-532c-49fb-aba0-bf815ca917d1.png",
+    "gris-claro": "C:/Users/zhen/.codex/generated_images/01a00f56-4f8f-7913-b719-3ae13516d35c/exec-1ccb6475-7514-47d2-8148-4113d1c255d6.png",
+    "natural": "C:/Users/zhen/.codex/generated_images/01a00f56-4f8f-7913-b719-3ae13516d35c/exec-5911f30c-9fa0-4f9b-8247-d83d7e563b91.png",
+    "blanco": "C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-da338f2a-9a6f-47f0-a099-b2a1a7f699d3.png"
+  },
+  "accepted": [
+    {
+      "finish": "negro",
+      "file": "negro.png",
+      "generatorId": "exec-778b9508-0809-4591-86ef-06ef40c33b5b",
+      "sha256": "afb5c75c16769e23e8e803fb07d7a14e802958e858376505fbd77f673a891917",
+      "bytes": 1618243,
+      "dimensions": "765x2057",
+      "mode": "RGB",
+      "attempt": 1
+    },
+    {
+      "finish": "wengue",
+      "file": "wengue.png",
+      "generatorId": "exec-02034695-4207-46fe-bd51-e38e89219a5f",
+      "sha256": "743bb39b0f838bbb48f67fe213c927ad83404da2d0a94b03202b109ee29f4cd3",
+      "bytes": 2017641,
+      "dimensions": "764x2058",
+      "mode": "RGB",
+      "attempt": 1
+    },
+    {
+      "finish": "gris-oscuro",
+      "file": "gris-oscuro.png",
+      "generatorId": "exec-a66a52a7-c431-4678-b40d-ffb93f3be5f6",
+      "sha256": "984b30fe59222f1511e120539f3a0938d8430d594a1f589b30f52ceab5a299f2",
+      "bytes": 1933233,
+      "dimensions": "764x2057",
+      "mode": "RGB",
+      "attempt": 1
+    },
+    {
+      "finish": "antracita",
+      "file": "antracita.png",
+      "generatorId": "exec-e1d7ac0c-1d4a-416a-88f2-f8ed80a4e2dc",
+      "sha256": "38a98e8374ddf14ed5e0deb75ff67d51b2b9682a5c0203398a82cfffbe886d12",
+      "bytes": 1843996,
+      "dimensions": "764x2058",
+      "mode": "RGB",
+      "attempt": 1
+    },
+    {
+      "finish": "nogal",
+      "file": "nogal.png",
+      "generatorId": "exec-0cc5b305-032b-4f88-a152-6f0560132b4d",
+      "sha256": "4f368be0e456cf314652fbdf680dda867d44322898c8c6c4ea6cbb6b27b5d27a",
+      "bytes": 1886346,
+      "dimensions": "764x2057",
+      "mode": "RGB",
+      "attempt": 1
+    },
+    {
+      "finish": "roble",
+      "file": "roble.png",
+      "generatorId": "exec-5c9233da-532c-49fb-aba0-bf815ca917d1",
+      "sha256": "d7e53259f741c64743829fdd2890ea436d54909435f49ea6945eed5b0a1e3cd6",
+      "bytes": 1957279,
+      "dimensions": "764x2058",
+      "mode": "RGB",
+      "attempt": 1
+    },
+    {
+      "finish": "gris-claro",
+      "file": "gris-claro.png",
+      "generatorId": "exec-1ccb6475-7514-47d2-8148-4113d1c255d6",
+      "sha256": "e93f7d296a6d65d1fc76fec4170a8a4f213ef3439ef9a4537c64a4752e82adf2",
+      "bytes": 1801519,
+      "dimensions": "764x2057",
+      "mode": "RGB",
+      "attempt": 1
+    },
+    {
+      "finish": "natural",
+      "file": "natural.png",
+      "generatorId": "exec-5911f30c-9fa0-4f9b-8247-d83d7e563b91",
+      "sha256": "238c51aa59d0a3a3ef3f6982064a5bc0cfbed9cc0573f71df69d6c1c27b5ee6e",
+      "bytes": 1752897,
+      "dimensions": "764x2057",
+      "mode": "RGB",
+      "attempt": 1
+    },
+    {
+      "finish": "blanco",
+      "file": "blanco.png",
+      "generatorId": "exec-da338f2a-9a6f-47f0-a099-b2a1a7f699d3",
+      "sourceGeneratedImage": "C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-da338f2a-9a6f-47f0-a099-b2a1a7f699d3.png",
+      "sha256": "6e879b126167e54ec4f56da0ba20f4f05231b45f1bd956ff5cd0a3c71d3723d4",
+      "bytes": 1684016,
+      "dimensions": "765x2055",
+      "mode": "RGB",
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.125849,
+      "marginsRgb245": [7, 0, 4, 0],
+      "marginsRgb250": [7, 0, 2, 0],
+      "revisionAttempt": 1,
+      "framingResult": "PASS_NORMAL_MAXIMUM_12_WITH_DOCUMENTED_0_TO_3_PROMPT_EXCEPTION"
+    }
+  ],
+  "acceptedEdgeMetrics": {
+    "negro": {"aspectRatioAbsoluteRelativeDeltaPercent":0.028498,"marginsRgb245":[5,4,2,0],"marginsRgb250":[2,0,0,0],"framingResult":"PASS_PREFERRED_0_TO_6"},
+    "wengue": {"aspectRatioAbsoluteRelativeDeltaPercent":0.150799,"marginsRgb245":[10,8,4,0],"marginsRgb250":[9,7,1,0],"framingResult":"PASS_NORMAL_MAXIMUM_12"},
+    "gris-oscuro": {"aspectRatioAbsoluteRelativeDeltaPercent":0.102258,"marginsRgb245":[11,8,9,0],"marginsRgb250":[10,8,9,0],"framingResult":"PASS_NORMAL_MAXIMUM_12"},
+    "antracita": {"aspectRatioAbsoluteRelativeDeltaPercent":0.150799,"marginsRgb245":[10,8,3,0],"marginsRgb250":[9,8,0,0],"framingResult":"PASS_NORMAL_MAXIMUM_12"},
+    "nogal": {"aspectRatioAbsoluteRelativeDeltaPercent":0.102258,"marginsRgb245":[9,8,5,0],"marginsRgb250":[9,8,1,0],"framingResult":"PASS_NORMAL_MAXIMUM_12"},
+    "roble": {"aspectRatioAbsoluteRelativeDeltaPercent":0.150799,"marginsRgb245":[10,7,6,0],"marginsRgb250":[10,1,4,0],"framingResult":"PASS_NORMAL_MAXIMUM_12"},
+    "gris-claro": {"aspectRatioAbsoluteRelativeDeltaPercent":0.102258,"marginsRgb245":[3,1,0,0],"marginsRgb250":[1,0,0,0],"framingResult":"PASS_PREFERRED_0_TO_6"},
+    "natural": {"aspectRatioAbsoluteRelativeDeltaPercent":0.102258,"marginsRgb245":[11,7,6,0],"marginsRgb250":[11,0,1,0],"framingResult":"PASS_NORMAL_MAXIMUM_12"},
+    "blanco": {"aspectRatioAbsoluteRelativeDeltaPercent":0.125849,"marginsRgb245":[7,0,4,0],"marginsRgb250":[7,0,2,0],"framingResult":"PASS_NORMAL_MAXIMUM_12_WITH_DOCUMENTED_0_TO_3_PROMPT_EXCEPTION"}
+  },
+  "previousSelectedBeforeMinimumMarginRevision": {
+    "finish": "blanco",
+    "file": "_rejected/blanco-previous-selected-before-minimum-margin-revision.png",
+    "generatorId": "exec-7794dbdb-03a3-4ba8-9908-ed640df3b65f",
+    "sourceGeneratedImage": "C:/Users/zhen/.codex/generated_images/01a0141b-34f9-7973-89ee-9e3a7b2748f7/exec-7794dbdb-03a3-4ba8-9908-ed640df3b65f.png",
+    "sha256": "c6ebe4f96e8e00bd47abc26b3cffa96235969ffa82cedbb8a5c03ca3b5d2d1c0",
+    "bytes": 1464733,
+    "dimensions": "765x2057",
+    "mode": "RGB",
+    "aspectRatioAbsoluteRelativeDeltaPercent": 0.028498,
+    "marginsRgb245": [17, 7, 19, 7],
+    "marginsRgb250": [17, 7, 19, 5],
+    "historicalAttempt": 2,
+    "reason": "Displaced by the direct minimum-margin blanco revision and preserved byte-for-byte before root replacement."
+  },
+  "unretainedAttempts": [
+    {
+      "finish": "blanco",
+      "attempt": 1,
+      "source": "C:/Users/zhen/.codex/generated_images/01a00f56-4f8f-7913-b719-3ae13516d35c/exec-911b1714-9553-4262-8d8a-54259610a376.png",
+      "generatorId": "exec-911b1714-9553-4262-8d8a-54259610a376",
+      "sha256": "889d06fe42f20b3f601357d0ec477a591089391d96b701a34a2fce4f4bce208d",
+      "reason": "The preceding agent turn was interrupted before this result was copied into the workspace or visually accepted. It was not used as a reference and remains unretained. The completion call is the second and final allowed attempt."
+    }
+  ],
+  "qa": {
+    "path": "QA.json",
+    "status": "PASS_9_OF_9_WHITE_MINIMUM_MARGIN_REVISION_WITH_DOCUMENTED_NUMERIC_EXCEPTION",
+    "acceptedAssetCount": 9,
+    "totalIndependentImageGenCalls": 11,
+    "nonActiveAttempts": 2,
+    "uniqueAcceptedHashes": 9,
+    "uniqueGeneratorIds": 11,
+    "workspaceGeneratorByteEqualityPass": 10,
+    "generatorAccessibleUnretainedHashPass": 1,
+    "maximumAcceptedAspectRatioAbsoluteRelativeDeltaPercent": 0.150799,
+    "minimumMeasuredAcceptedMarginPixels": 0,
+    "maximumMeasuredAcceptedMarginPixels": 11,
+    "logoTextOrPseudotextInstancesPerAsset": 0,
+    "nativeVisualInspection": "PASS_COMPLETE_SILHOUETTE"
+  },
+  "promotion": {
+    "converted": false,
+    "staged": false,
+    "publicWritten": false,
+    "originalModified": false
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "schema": "wonly-direct-imagegen-raw/v4",
+  "status": "PASS_9_OF_9",
+  "category": "MADERAACÚSTICA",
+  "model": "wl-d022",
+  "logoPolicy": "NO_LOGO",
+  "toolMode": "built-in-imagegen",
+  "referencePolicy": "ONE_CANONICAL_ORIGINAL_ONLY_PER_CALL",
+  "canonicalReference": {
+    "path": "public/images/PUERTAS/MADERAACÚSTICA/wl-d022/original.webp",
+    "sha256Before": "28cb5b906249f954856f8b7207abdab924001e67a6513580ee52bc0058c77cdf",
+    "sha256After": "28cb5b906249f954856f8b7207abdab924001e67a6513580ee52bc0058c77cdf",
+    "width": 402,
+    "height": 1069,
+    "modified": false
+  },
+  "requirements": {
+    "independentCallPerFinish": true,
+    "generatedOutputUsedAsReference": false,
+    "logoReferenceUsed": false,
+    "filters": false,
+    "programmaticRecolor": false,
+    "masks": false,
+    "crop": false,
+    "resize": false,
+    "composite": false,
+    "conversion": false,
+    "publicWritten": false
+  },
+  "assets": [
+    {"finish":"negro","file":"negro.png","generatorId":"exec-9d95c303-db06-4931-a321-b5a7adbbdf1d","attempt":1,"width":768,"height":2046,"channels":3,"bytes":1569564,"sha256":"9e8d8e4360755fbb6b1c61b6ed386fca01c8cab3256169c355f9fa3cb79da122","marginsRgb245":{"left":8,"top":10,"right":8,"bottom":0},"visualQa":"PASS"},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-0dc75236-7752-4f7a-9ad8-b980740ffb6b","attempt":2,"width":768,"height":2046,"channels":3,"bytes":1756153,"sha256":"97c0e425e82894c10aeae96e2e5874f647d8f71fb47fe89657b2593e2ac19bc0","marginsRgb245":{"left":0,"top":8,"right":6,"bottom":0},"visualQa":"PASS"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-60d91299-5870-40b6-b3d0-d4582b55ff26","attempt":1,"width":768,"height":2048,"channels":3,"bytes":2060791,"sha256":"2c7ddfab52dc001b7291748eab3d9cdb0ba39341b43a1c545ddb5db534aac481","marginsRgb245":{"left":4,"top":9,"right":5,"bottom":0},"visualQa":"PASS"},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-bbeae073-9ac4-4871-8b7d-8b79bbcdc45e","attempt":1,"width":769,"height":2046,"channels":3,"bytes":1659228,"sha256":"73e977608c0f4ffbd117d9b61b6f43486de201c009fd67dd73c693084c8831d0","marginsRgb245":{"left":8,"top":9,"right":9,"bottom":0},"visualQa":"PASS"},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-ec051c76-25fe-46cb-8356-a1413c061cf7","attempt":1,"width":769,"height":2045,"channels":3,"bytes":1880707,"sha256":"ce0675141cd99375e57f15e409aae736efe22ce88ab42eb3ec775824c88f2f1b","marginsRgb245":{"left":6,"top":10,"right":11,"bottom":0},"visualQa":"PASS"},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-6ce32c46-f179-40e7-9e84-dfc25a2d15b7","attempt":1,"width":769,"height":2046,"channels":3,"bytes":2064278,"sha256":"92e8f4408ef524b2f498136b8c9abc8868d5996b443c3039c13ef65cc497b99c","marginsRgb245":{"left":3,"top":9,"right":5,"bottom":0},"visualQa":"PASS"},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-8b732c63-bba8-45ef-a083-fe69411e37b2","attempt":1,"width":769,"height":2046,"channels":3,"bytes":1755692,"sha256":"3be8afa4bb4006b0933f460e041f83bc3b3bfcc8600c8b285c3c9a6adc43c907","marginsRgb245":{"left":7,"top":10,"right":8,"bottom":3},"visualQa":"PASS"},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-a2dfce87-ad5a-434c-a661-a8803fd11102","attempt":1,"width":770,"height":2042,"channels":3,"bytes":1676606,"sha256":"78c2b9b3636f1066f1c75f1639cac791e19c09050de22d561267b8e5b6212de4","marginsRgb245":{"left":5,"top":9,"right":5,"bottom":0},"visualQa":"PASS"},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-17a42987-70f9-4fe7-9096-f5b77f28e3ae","attempt":1,"width":769,"height":2045,"channels":3,"bytes":1278408,"sha256":"edd71a377e015f2a67005fba53abf5a48562924d07434531d5613beedc7a735e","marginsRgb245":{"left":8,"top":11,"right":10,"bottom":0},"visualQa":"PASS"}
+  ],
+  "rejectedCount": 1,
+  "activePngCount": 9,
+  "converted": false,
+  "publicWritten": false
+}

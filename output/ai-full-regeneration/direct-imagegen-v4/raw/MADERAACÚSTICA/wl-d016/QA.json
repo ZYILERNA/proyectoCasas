@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 2,
+  "model": "MADERAACÚSTICA/wl-d016",
+  "policy": "NO_LOGO",
+  "status": "PASS_9_OF_9",
+  "generationMethod": "built-in ImageGen only",
+  "requestedFinishCount": 9,
+  "acceptedAssetCount": 9,
+  "totalIndependentImageGenCalls": 9,
+  "acceptedIndependentCalls": 9,
+  "rejectedAttempts": 0,
+  "maximumAttemptsPerFinish": 2,
+  "independence": {
+    "soleReferenceForEveryCall": "public/images/PUERTAS/MADERAACÚSTICA/wl-d016/original.webp",
+    "referenceSha256Before": "a8c9d673a1f77ccc855e1a505b6b08fc5cde1be485377884f67dad7a72f2c5d4",
+    "referenceSha256After": "a8c9d673a1f77ccc855e1a505b6b08fc5cde1be485377884f67dad7a72f2c5d4",
+    "referenceUnchanged": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "conversionUsed": false
+  },
+  "qaMethod": "Manual individual inspection of every built-in ImageGen result at native resolution with the canonical reference visible, plus read-only SHA-256, PNG dimensions, RGB color type, unique-hash, aspect-ratio, and generator-source byte-equality checks. No accepted PNG was altered during QA.",
+  "acceptanceRules": {
+    "completeOuterFrameVisible": true,
+    "straightOnExtremelyTallNarrowComposition": true,
+    "nearFlushCatalogFraming": true,
+    "signatureGeometryPreserved": "one extremely narrow full-height decorative insert between the narrow left leaf stile and broad right leaf field, with thin dark edges and irregular warm beige, tan, copper-brown, and dark-brown translucent mosaic fragments",
+    "hardwarePreserved": "exactly one dark horizontal lever on one round rosette mounted on the narrow left leaf stile and exactly one separate circular key escutcheon directly below",
+    "leftRevealAndLayeredFramePreserved": true,
+    "finishAppliedToBothLeafWoodFields": true,
+    "finishClearlyMatchesRequestedName": true,
+    "verticalWoodGrainPreserved": true,
+    "zeroLogoTextWatermarkOrPseudotext": true,
+    "noExtraObjectsPanelsOrInlays": true,
+    "noPostGenerationPixelProcessing": true,
+    "aspectRatioValidation": {
+      "canonicalWidthOverHeight": 0.369606,
+      "acceptedToleranceAbsoluteRelativePercent": 1.0,
+      "acceptedMinimumWidthOverHeight": 0.370029,
+      "acceptedMaximumWidthOverHeight": 0.370029,
+      "maximumAcceptedAbsoluteRelativeDeltaPercent": 0.115,
+      "allAcceptedWithinTolerance": true
+    }
+  },
+  "assets": [
+    {
+      "finish": "negro",
+      "file": "negro.png",
+      "generatorId": "exec-b2b24a8a-84b8-4c7b-a500-8bf95eff88e6",
+      "sha256": "6dd3f8909f03ba0a889fb35969ad2204f1fc9a695d2df209193945c6c95feab0",
+      "dimensions": "763x2062",
+      "mode": "RGB",
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.115,
+      "attempt": 1,
+      "result": "PASS"
+    },
+    {
+      "finish": "wengue",
+      "file": "wengue.png",
+      "generatorId": "exec-fae36523-8c40-4f21-9b7d-5ebb7f8dad06",
+      "sha256": "bf53e460cba62fe9acd510c4e7a1dd7f697477e17f0ae0d1913d30213cddccfc",
+      "dimensions": "763x2062",
+      "mode": "RGB",
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.115,
+      "attempt": 1,
+      "result": "PASS"
+    },
+    {
+      "finish": "gris-oscuro",
+      "file": "gris-oscuro.png",
+      "generatorId": "exec-379e8d65-666d-4f85-9830-05a18f257778",
+      "sha256": "59bd35b46416c75bc602ade1f8ccfd63cae9b513e458d4a51a64873d93a1876b",
+      "dimensions": "763x2062",
+      "mode": "RGB",
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.115,
+      "attempt": 1,
+      "result": "PASS"
+    },
+    {
+      "finish": "antracita",
+      "file": "antracita.png",
+      "generatorId": "exec-c06d4c45-0ab5-4734-909b-e5ec4b78511d",
+      "sha256": "bde19206e20ed792b4c9434158a4f78eecea2b7be39c5163977ccf54f16aebcb",
+      "dimensions": "763x2062",
+      "mode": "RGB",
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.115,
+      "attempt": 1,
+      "result": "PASS"
+    },
+    {
+      "finish": "nogal",
+      "file": "nogal.png",
+      "generatorId": "exec-ea6c750e-1283-4272-b489-77974ccb81ec",
+      "sha256": "7443891a1edbcc8ce458e2023fbae7fefca5c234b6c129213b03993bb4329796",
+      "dimensions": "763x2062",
+      "mode": "RGB",
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.115,
+      "attempt": 1,
+      "result": "PASS"
+    },
+    {
+      "finish": "roble",
+      "file": "roble.png",
+      "generatorId": "exec-e4d5e1db-1686-480f-8d6f-93c348b0b3c1",
+      "sha256": "992db01813dae78696fcb13e20c7e1d0eeb557f8833d41ea78a565159b3a5d50",
+      "dimensions": "763x2062",
+      "mode": "RGB",
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.115,
+      "attempt": 1,
+      "result": "PASS"
+    },
+    {
+      "finish": "gris-claro",
+      "file": "gris-claro.png",
+      "generatorId": "exec-93b4cf9e-bcdc-4831-8329-368d9f019816",
+      "sha256": "b3a53b6e0baae937a1a64142a769e82bf5bd9ce12995a8eaaa00477b71e1402c",
+      "dimensions": "763x2062",
+      "mode": "RGB",
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.115,
+      "attempt": 1,
+      "result": "PASS"
+    },
+    {
+      "finish": "natural",
+      "file": "natural.png",
+      "generatorId": "exec-7249ccc3-dca5-4458-92dc-b2d24a2e92e3",
+      "sha256": "0ba1245518cc9b354939f422aab279f94217860c97654c6844a2fd8cbe2ec7a8",
+      "dimensions": "763x2062",
+      "mode": "RGB",
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.115,
+      "attempt": 1,
+      "result": "PASS"
+    },
+    {
+      "finish": "blanco",
+      "file": "blanco.png",
+      "generatorId": "exec-16f2211d-b01f-4f41-9a54-770ba94994e9",
+      "sha256": "95afa58f5fb7701bcd8aae68a19fee897a0a2c5ec54f8bc11b13b076e8ffafe3",
+      "dimensions": "763x2062",
+      "mode": "RGB",
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.115,
+      "attempt": 1,
+      "result": "PASS"
+    }
+  ],
+  "rejected": [],
+  "summary": {
+    "requested": 9,
+    "pass": 9,
+    "fail": 0,
+    "uniqueAcceptedHashes": 9,
+    "visualInspection": "PASS: all nine accepted finishes retain the complete layered neutral-gray frame, dark far-left reveal, near-flush extremely tall narrow silhouette, single full-height warm mosaic insert, exactly one lever and one key escutcheon; all are logo-free and text-free.",
+    "aspectRatioInspection": "PASS: every accepted width-to-height ratio is 0.370029 versus canonical 0.369606, with maximum absolute relative deviation 0.115%.",
+    "publicFilesModified": false,
+    "originalModified": false,
+    "converted": false,
+    "promoted": false
+  }
+}

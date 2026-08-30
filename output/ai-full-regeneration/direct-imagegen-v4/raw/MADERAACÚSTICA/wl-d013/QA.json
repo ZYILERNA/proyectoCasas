@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "category": "MADERAACÚSTICA",
+  "model": "wl-d013",
+  "reviewedAt": "2026-08-18T12:43:28.7147766+02:00",
+  "status": "PASS",
+  "summary": "PASS 9/9",
+  "acceptedCount": 9,
+  "expectedCount": 9,
+  "rejectedAttemptCount": 0,
+  "maxAttemptsPerFinish": 2,
+  "method": {
+    "visual": "The canonical original and every accepted workspace PNG were inspected directly with view_image. Complete frame, flush leaf, two-level rose-copper line, single faceted folded-ribbon insert, hardware count and placement, crop, finish separation and forbidden visible content were checked.",
+    "aspectRatio": "The original WebP dimensions and every PNG IHDR were read directly from their byte streams. Accepted outputs were required to stay within 1.0 percent of the source width/height ratio.",
+    "technical": "PNG signature/IHDR, SHA-256, byte size and caBX C2PA/JUMBF presence were read without modifying pixels. Every workspace copy was compared byte-for-byte with its ImageGen artifact.",
+    "sourceIntegrity": "The SHA-256 of original.webp was recorded before and after all calls, matched the category root catalog copy, and git reported no diff or status entry for either path."
+  },
+  "sourceIntegrity": {
+    "path": "public/images/PUERTAS/MADERAACÚSTICA/wl-d013/original.webp",
+    "width": 417,
+    "height": 1069,
+    "aspectRatio": 0.3900841908325538,
+    "sha256Before": "8eaeb3f62bd10d1ad9ce6dc4f78f5245074300cca20b6303957b0eeff164b59d",
+    "sha256After": "8eaeb3f62bd10d1ad9ce6dc4f78f5245074300cca20b6303957b0eeff164b59d",
+    "rootCatalogSha256": "8eaeb3f62bd10d1ad9ce6dc4f78f5245074300cca20b6303957b0eeff164b59d",
+    "unchanged": true,
+    "gitDiff": false
+  },
+  "provenanceChecks": {
+    "builtInImageGenOnly": "PASS",
+    "oneIndependentCallPerFinishOrRetry": "PASS",
+    "soleReferenceWasCanonicalOriginal": "PASS",
+    "generatedOutputReusedAsReference": false,
+    "acceptedPngsWithC2paJumbf": "9/9",
+    "workspaceCopiesByteIdenticalToGeneratorArtifacts": "9/9",
+    "postprocessing": "none",
+    "conversion": "none",
+    "publicPromotion": "none"
+  },
+  "globalChecks": {
+    "allExpectedFinishesPresent": "PASS",
+    "allAcceptedFilesDecodeAsPng": "PASS",
+    "allAcceptedFilesEightBitRgbWithoutAlpha": "PASS",
+    "allAcceptedHashesUnique": "PASS",
+    "allAcceptedAspectRatiosWithinOnePercent": "PASS",
+    "completeMultiStepFrame": "PASS",
+    "singlePlainFlushLeaf": "PASS",
+    "singleTwoLevelRoseCopperLine": "PASS",
+    "singleFacetedFoldedRibbonInsert": "PASS",
+    "insertFacetGeometryAndPlacementPreserved": "PASS",
+    "singleHandleAndSingleKeyEscutcheon": "PASS",
+    "hardwarePlacementPreserved": "PASS",
+    "straightOnNearEdgeToEdgeFraming": "PASS",
+    "finishSeparation": "PASS",
+    "noLogoTextPseudoTextOrWatermark": "PASS",
+    "noExtraObjectsOrDuplicateHardware": "PASS",
+    "noFilterRecolorMaskCropResizeOrComposite": "PASS"
+  },
+  "aspectRatioReview": {
+    "source": 0.3900841908325538,
+    "acceptanceThresholdPercent": 1.0,
+    "acceptedMaximumDeviationPercent": 0.1406,
+    "accepted": [
+      {
+        "finish": "negro",
+        "dimensions": "783x2007",
+        "aspectRatio": 0.390134529,
+        "deviationPercent": 0.0129,
+        "result": "PASS"
+      },
+      {
+        "finish": "wengue",
+        "dimensions": "783x2007",
+        "aspectRatio": 0.390134529,
+        "deviationPercent": 0.0129,
+        "result": "PASS"
+      },
+      {
+        "finish": "gris-oscuro",
+        "dimensions": "783x2007",
+        "aspectRatio": 0.390134529,
+        "deviationPercent": 0.0129,
+        "result": "PASS"
+      },
+      {
+        "finish": "antracita",
+        "dimensions": "783x2008",
+        "aspectRatio": 0.389940239,
+        "deviationPercent": 0.0369,
+        "result": "PASS"
+      },
+      {
+        "finish": "nogal",
+        "dimensions": "783x2007",
+        "aspectRatio": 0.390134529,
+        "deviationPercent": 0.0129,
+        "result": "PASS"
+      },
+      {
+        "finish": "roble",
+        "dimensions": "783x2007",
+        "aspectRatio": 0.390134529,
+        "deviationPercent": 0.0129,
+        "result": "PASS"
+      },
+      {
+        "finish": "gris-claro",
+        "dimensions": "783x2007",
+        "aspectRatio": 0.390134529,
+        "deviationPercent": 0.0129,
+        "result": "PASS"
+      },
+      {
+        "finish": "natural",
+        "dimensions": "783x2007",
+        "aspectRatio": 0.390134529,
+        "deviationPercent": 0.0129,
+        "result": "PASS"
+      },
+      {
+        "finish": "blanco",
+        "dimensions": "784x2007",
+        "aspectRatio": 0.390632785,
+        "deviationPercent": 0.1406,
+        "result": "PASS"
+      }
+    ]
+  },
+  "visualReview": [
+    {
+      "finish": "negro",
+      "file": "negro.png",
+      "result": "PASS",
+      "notes": "Near-black wood remains legible; the full frame, two-level copper line, one folded-ribbon insert and one hardware set are intact."
+    },
+    {
+      "finish": "wengue",
+      "file": "wengue.png",
+      "result": "PASS",
+      "notes": "Deep espresso-brown is visibly distinct from black and preserves the complete faceted copper geometry and hardware layout."
+    },
+    {
+      "finish": "gris-oscuro",
+      "file": "gris-oscuro.png",
+      "result": "PASS",
+      "notes": "Dark neutral-gray wood remains separate from black; the stepped line, insert facets, frame and hardware pass."
+    },
+    {
+      "finish": "antracita",
+      "file": "antracita.png",
+      "result": "PASS",
+      "notes": "Cool graphite anthracite has restrained fine grain and preserves the complete canonical architecture and copper motif."
+    },
+    {
+      "finish": "nogal",
+      "file": "nogal.png",
+      "result": "PASS",
+      "notes": "Warm chestnut walnut is distinct from wenge and oak; the one folded-ribbon insert and all hardware remain complete."
+    },
+    {
+      "finish": "roble",
+      "file": "roble.png",
+      "result": "PASS",
+      "notes": "Golden honey oak remains clearly separated from walnut and natural; line heights, facets and frame geometry pass."
+    },
+    {
+      "finish": "gris-claro",
+      "file": "gris-claro.png",
+      "result": "PASS",
+      "notes": "Light neutral-gray wood remains distinguishable from white; dark hardware and rose-copper decoration stay crisp and complete."
+    },
+    {
+      "finish": "natural",
+      "file": "natural.png",
+      "result": "PASS",
+      "notes": "Pale blond natural wood is lighter and less golden than oak; the full frame, faceted insert and hardware pass."
+    },
+    {
+      "finish": "blanco",
+      "file": "blanco.png",
+      "result": "PASS",
+      "notes": "Warm-white painted wood retains subtle grain and restrained shading; the frame, dark hardware and copper stepped motif remain legible."
+    }
+  ],
+  "rejections": []
+}

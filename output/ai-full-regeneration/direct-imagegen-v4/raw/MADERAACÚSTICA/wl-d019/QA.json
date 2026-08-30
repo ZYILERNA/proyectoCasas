@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 2,
+  "model": "MADERAACÚSTICA/wl-d019",
+  "policy": "NO_LOGO",
+  "status": "PASS_9_OF_9",
+  "auditedAt": "2026-08-29T15:17:40+02:00",
+  "generationMethod": "built-in ImageGen only",
+  "requestedFinishCount": 9,
+  "acceptedAssetCount": 9,
+  "totalIndependentImageGenCalls": 16,
+  "rejectedAttemptsPreserved": 7,
+  "independence": {
+    "soleReferenceForEveryCall": "public/images/PUERTAS/MADERAACÚSTICA/wl-d019/original.webp",
+    "referenceSha256Before": "ead582cb847de0be3afafc7cee896e5e0990da4bf6e0a10ece9165a746568192",
+    "referenceSha256After": "ead582cb847de0be3afafc7cee896e5e0990da4bf6e0a10ece9165a746568192",
+    "referenceUnchanged": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "conversionUsed": false,
+    "postGenerationPixelProcessingUsed": false
+  },
+  "qaMethod": "Native-detail visual inspection against the sole canonical original plus read-only SHA-256, decoded RGB SHA-256, PNG dimensions, RGB<245 edge-margin, aspect-ratio, unique-hash, JSON and generator-source byte-equality checks.",
+  "acceptanceRules": {
+    "completeOuterFrameAndSilhouetteVisible": true,
+    "signatureGeometryPreserved": "extremely tall narrow straight front-facing acoustic door; complete layered rectangular casing; narrow deep recessed dark reveal at left; exactly three large angular wood panels with the canonical diagonal seams converging beside the hardware; original bevels, gaps and frame profiles",
+    "hardwarePreserved": "exactly one matte-black horizontal lever on its round rosette and exactly one separate round key escutcheon below at the canonical left position; no other hardware",
+    "zeroLogoTextBadgeWatermarkOrPseudotext": true,
+    "pureWhiteCatalogBackground": true,
+    "noSceneFloorWallOrProps": true,
+    "noPostGenerationPixelProcessing": true,
+    "aspectRatio": {
+      "canonical": 0.371455,
+      "maximumAcceptedAbsoluteRelativeDeltaPercent": 0.12,
+      "allAcceptedWithinOnePercent": true
+    },
+    "framingTarget": "0-6 px ideal per side; normal maximum 12 px; canonical near-full-bleed contact allowed only with complete silhouette confirmed natively; no crop or resize permitted",
+    "canonicalContactAssessment": "Antracita, nogal and the revised natural measure [0,0,0,0] at RGB<245. Native inspection confirms the complete layered frame and silhouette. This is accepted as a close full-bleed reproduction of the canonical [0,4,3,0] original.",
+    "documentedFramingExceptions": []
+  },
+  "assets": [
+    {"finish":"negro","file":"negro.png","generatorId":"exec-70473217-1dc2-4a96-b390-5af19b75c802","sha256":"f14b4a65ad61c5113a22420f050276cf4a1a64b5382d05cf08f126971b31ec88","decodedRgbSha256":"eb58f8252c8b568554e779c0869b7ed30f15ccef22b2426ffb353839ecc48499","dimensions":"765x2057","marginsRgb245":[7,9,10,0],"nativeVisualGeometry":"PASS_COMPLETE_SILHOUETTE","hardware":"PASS","logo":"ABSENT","result":"PASS"},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-248e33d8-3547-4e5e-a987-3733519ff8d4","sha256":"cc8e60547e3a9562451d5e0214702e53d4096c7acd30e973bb017db667761415","decodedRgbSha256":"d66c823d374108356ba7e24210dd987bf724ed1c5455d722525a906118490b6f","dimensions":"764x2059","marginsRgb245":[10,9,10,4],"nativeVisualGeometry":"PASS_COMPLETE_SILHOUETTE","hardware":"PASS","logo":"ABSENT","result":"PASS"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-5f9fd86f-79ae-447d-8e9e-64dfb8c99e67","sha256":"7272fb7899dc458835873b89dc9f9b4c9c6029976234097b46066700b0adbd94","decodedRgbSha256":"4c3612495d6b798d8d621134eb67c44405c13f927c218c4e445736f5e4f548a2","dimensions":"764x2058","marginsRgb245":[12,9,12,0],"nativeVisualGeometry":"PASS_COMPLETE_SILHOUETTE","hardware":"PASS","logo":"ABSENT","result":"PASS"},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-26029dba-8ada-4b87-bdc0-db89eae25419","sha256":"dd8ad69dff1f19cf794f8e1e99c7953bff89f2ae5162417da13657b9fd3f25ad","decodedRgbSha256":"26d542c2f77567cd07b8aa2f75ff78d52bf1d37f97589bad9ebbd124a6480d80","dimensions":"764x2059","marginsRgb245":[0,0,0,0],"nativeVisualGeometry":"PASS_COMPLETE_SILHOUETTE_CANONICAL_CONTACT","hardware":"PASS","logo":"ABSENT","result":"PASS_CANONICAL_NEAR_FULL_BLEED_CONTACT"},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-fbd332fd-6935-4471-9c92-fdb0eeb31b68","sha256":"82f5dee6ad92353e3f580a8140a2bab0329af67b94a0e6ed917954bfe7b3a42d","decodedRgbSha256":"d321adc2d9f6a8bcb6e8aac1cc46fd12a284c4499c988f3d1ced3a22d72cbb1f","dimensions":"765x2057","marginsRgb245":[0,0,0,0],"nativeVisualGeometry":"PASS_COMPLETE_SILHOUETTE_CANONICAL_CONTACT","hardware":"PASS","logo":"ABSENT","result":"PASS_CANONICAL_NEAR_FULL_BLEED_CONTACT"},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-46bf873b-2de0-4d42-848d-d94c712109de","sha256":"b87c9326413069b820a98aa3aff13a892a30a9bef020152e08e70a600b1e8f9e","decodedRgbSha256":"9d2553f5ffc4f05645e427eeac535cf6f98ef657af82bca06d5a3cc56e338fc4","dimensions":"764x2058","marginsRgb245":[6,8,10,4],"nativeVisualGeometry":"PASS_COMPLETE_SILHOUETTE","hardware":"PASS","logo":"ABSENT","result":"PASS"},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-0af87bd6-5c29-4981-91d3-e89d8f03e532","sha256":"27f99028269f3f41c30322e6def97a6af0f85691912ae8fb41aa232c8be80eea","decodedRgbSha256":"470cdf162817c573f82f1a2fd71214231597692e933146555c20bb7520bd2075","dimensions":"764x2057","marginsRgb245":[5,7,6,7],"nativeVisualGeometry":"PASS_COMPLETE_SILHOUETTE","hardware":"PASS","logo":"ABSENT","result":"PASS"},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-a9322c35-2812-4367-87a3-62d16de881d8","sha256":"7ec7d44de29ab2934a3545d756af56392cf25f15bb2adf41d5abd068ac6ac435","decodedRgbSha256":"e4900d7befdb1766e86b0c868f74849f8254b6f248a99f3ee0681b9cbedef07f","dimensions":"765x2057","marginsRgb245":[0,0,0,0],"nativeVisualGeometry":"PASS_COMPLETE_SILHOUETTE_CANONICAL_CONTACT","hardware":"PASS","logo":"ABSENT","result":"PASS_CANONICAL_NEAR_FULL_BLEED_CONTACT"},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-f3454471-be14-4a80-a08b-ee7601a5fcfe","sha256":"ef7decc3938d6c134f0b272a7e07c1b4ef7d6b5d16834156063efa65d9dbca19","decodedRgbSha256":"4132f91b9f6c7c26ddbfc90ea5128300255ab8e405508d40fdac6192846dbb4e","dimensions":"764x2057","marginsRgb245":[4,6,4,0],"nativeVisualGeometry":"PASS_COMPLETE_SILHOUETTE","hardware":"PASS","logo":"ABSENT","result":"PASS_IDEAL_MARGIN"}
+  ],
+  "revisionOutcome": {
+    "naturalBeforeMarginsRgb245": [19, 17, 26, 22],
+    "naturalAfterMarginsRgb245": [0, 0, 0, 0],
+    "naturalDirectRevisionAttempts": 3,
+    "naturalSelectedAttempt": 5,
+    "blancoBeforeMarginsRgb245": [13, 12, 12, 10],
+    "blancoAfterMarginsRgb245": [4, 6, 4, 0],
+    "blancoDirectRevisionAttempts": 1,
+    "blancoSelectedAttempt": 2
+  },
+  "artifactChecks": {
+    "acceptedPngCount": 9,
+    "rejectedPngCount": 7,
+    "uniqueAcceptedHashes": 9,
+    "uniqueAcceptedDecodedRgbHashes": 9,
+    "uniqueAttemptGeneratorIds": 16,
+    "uniqueAttemptHashes": 16,
+    "acceptedGeneratorSourceByteEquality": true,
+    "rejectedGeneratorSourceByteEquality": true,
+    "allJsonValid": true,
+    "originalModified": false,
+    "publicFilesModifiedByThisWork": false,
+    "converted": false,
+    "promoted": false,
+    "committed": false,
+    "pushed": false
+  },
+  "summary": {
+    "pass": 9,
+    "fail": 0,
+    "normalMaximumMarginViolations": 0,
+    "documentedFramingExceptions": 0,
+    "canonicalNearFullBleedContacts": 3,
+    "originalModified": false,
+    "publicFilesModified": false
+  }
+}

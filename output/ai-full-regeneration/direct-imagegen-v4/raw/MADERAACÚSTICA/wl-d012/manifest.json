@@ -1,0 +1,1070 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-d012",
+  "policy": "NO_LOGO",
+  "status": "PASS_9_OF_9_MINIMUM_MARGIN_REVISION",
+  "closedAt": "2026-08-29T16:08:48+02:00",
+  "revision": "AI-only minimum-margin review and regeneration",
+  "reference": {
+    "path": "public/images/PUERTAS/MADERAACÚSTICA/wl-d012/original.webp",
+    "role": "sole canonical reference for every ImageGen call",
+    "sha256Before": "7bed1073d49bbff2055a07c17ad29252880768c58a6d76ba701fd24bb4b84cd1",
+    "sha256After": "7bed1073d49bbff2055a07c17ad29252880768c58a6d76ba701fd24bb4b84cd1",
+    "unchanged": true,
+    "dimensions": "412x1066",
+    "mode": "RGB",
+    "aspectRatioWidthOverHeight": 0.386492,
+    "marginsRgbLt245LeftTopRightBottom": [
+      1,
+      5,
+      6,
+      2
+    ],
+    "marginsRgbLt250LeftTopRightBottom": [
+      0,
+      5,
+      4,
+      0
+    ]
+  },
+  "generationMode": "built-in-imagegen-independent-call-per-finish-or-retry",
+  "sourcePolicy": "Every call used only public/images/PUERTAS/MADERAACÚSTICA/wl-d012/original.webp. No generated output, finish variant, logo asset, or other image was referenced.",
+  "copyPolicy": "Every selected and retained rejected PNG is an untouched byte-for-byte copy of its built-in ImageGen result. Displaced prior selections were copied byte-for-byte before replacement.",
+  "pixelProcessing": "none",
+  "filtersOrRecoloringUsed": false,
+  "masksUsed": false,
+  "croppingOrResizingUsed": false,
+  "compositingUsed": false,
+  "formatConversionUsed": false,
+  "acceptedAssetsAlteredAfterGeneration": false,
+  "workspaceCopiesMatchGeneratorBytes": true,
+  "callCounts": {
+    "historicalCalls": 9,
+    "minimumMarginRevisionCalls": 27,
+    "totalIndependentImageGenCalls": 36,
+    "activeAccepted": 9,
+    "retainedRejected": 27,
+    "displacedPreviousSelections": 9,
+    "newRejectedAttempts": 18
+  },
+  "marginPolicy": {
+    "measurement": "first pixel with any RGB channel < threshold; order [left, top, right, bottom]",
+    "targetRgbLt245PixelsPerSide": "0-4",
+    "priorityThresholdPixels": 6,
+    "mandatoryMaximumPixels": 12,
+    "contactAtZeroAllowed": true,
+    "contactCondition": "all outer casing layers, corners, rails, and both bottom endpoints remain visibly complete",
+    "acceptedAbovePriorityThreshold": 6,
+    "acceptedAboveMandatoryMaximum": 0,
+    "maximumAcceptedRgbLt245Margin": 12,
+    "documentedExceptions": [
+      "negro: best of four revision attempts, [0,3,7,0]",
+      "wengue: best of two revision attempts, [5,6,9,0]",
+      "gris-oscuro: best of three revision attempts, [8,7,10,0]",
+      "nogal: best of three revision attempts, [9,9,12,0]",
+      "roble: best of three revision attempts, [9,9,10,0]",
+      "natural: best of four revision attempts, [0,7,4,0]"
+    ]
+  },
+  "generatorRoots": {
+    "historical": "C:/Users/zhen/.codex/generated_images/01a0141b-34f9-7973-89ee-9e3a7b2748f7",
+    "revisionPrimary": "C:/Users/zhen/.codex/generated_images/01a04cea-a16c-7181-a499-464318cc0535",
+    "revisionParallel": "C:/Users/zhen/.codex/generated_images/01a04dc9-99d6-7d61-8d0c-4ea979a41e3b"
+  },
+  "accepted": [
+    {
+      "finish": "negro",
+      "file": "negro.png",
+      "generatorId": "exec-3e0b568c-bca6-429d-a4a9-031c648c1de9",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a04cea-a16c-7181-a499-464318cc0535/exec-3e0b568c-bca6-429d-a4a9-031c648c1de9.png",
+      "sha256": "790b940bb49bab11df7f4e963087ce206c22a7965df74ce923d771ca95fefd32",
+      "bytes": 1514922,
+      "dimensions": "779x2020",
+      "mode": "RGB",
+      "aspectRatioWidthOverHeight": 0.385643564,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.219408,
+      "marginsRgbLt245": [
+        0,
+        3,
+        7,
+        0
+      ],
+      "marginsRgbLt250": [
+        0,
+        0,
+        7,
+        0
+      ],
+      "revisionAttempt": 3,
+      "promptId": "negro-r3",
+      "marginClass": "documented-priority-exception<=12",
+      "result": "PASS"
+    },
+    {
+      "finish": "wengue",
+      "file": "wengue.png",
+      "generatorId": "exec-f53e88e1-1c3b-4d51-ac35-f01cd59c673e",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a04dc9-99d6-7d61-8d0c-4ea979a41e3b/exec-f53e88e1-1c3b-4d51-ac35-f01cd59c673e.png",
+      "sha256": "d85f718a84f1d9941bfb0e483155fe5b54ad35680e51a8fb689a221d1dcab2be",
+      "bytes": 1405987,
+      "dimensions": "779x2018",
+      "mode": "RGB",
+      "aspectRatioWidthOverHeight": 0.386025768,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.120517,
+      "marginsRgbLt245": [
+        5,
+        6,
+        9,
+        0
+      ],
+      "marginsRgbLt250": [
+        3,
+        6,
+        9,
+        0
+      ],
+      "revisionAttempt": 2,
+      "promptId": "shared-r2-enlarge",
+      "marginClass": "documented-priority-exception<=12",
+      "result": "PASS"
+    },
+    {
+      "finish": "gris-oscuro",
+      "file": "gris-oscuro.png",
+      "generatorId": "exec-4b4298c8-a5a7-4983-aaaf-54e135548fd2",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a04dc9-99d6-7d61-8d0c-4ea979a41e3b/exec-4b4298c8-a5a7-4983-aaaf-54e135548fd2.png",
+      "sha256": "f07ce708e47928a91a6d7ccbe5f00d046721509639f1dac5008acb2eba263423",
+      "bytes": 1525898,
+      "dimensions": "780x2017",
+      "mode": "RGB",
+      "aspectRatioWidthOverHeight": 0.38671294,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.05728,
+      "marginsRgbLt245": [
+        8,
+        7,
+        10,
+        0
+      ],
+      "marginsRgbLt250": [
+        8,
+        5,
+        10,
+        0
+      ],
+      "revisionAttempt": 3,
+      "promptId": "shared-r3-rgb245-edge",
+      "marginClass": "documented-priority-exception<=12",
+      "result": "PASS"
+    },
+    {
+      "finish": "antracita",
+      "file": "antracita.png",
+      "generatorId": "exec-28ff17bd-8eb5-4033-a29e-366cde97d590",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a04dc9-99d6-7d61-8d0c-4ea979a41e3b/exec-28ff17bd-8eb5-4033-a29e-366cde97d590.png",
+      "sha256": "012fb825b7bab89c22c70316766d284e9ee9c5428dec62f21a48cfed093bfe88",
+      "bytes": 1384596,
+      "dimensions": "779x2018",
+      "mode": "RGB",
+      "aspectRatioWidthOverHeight": 0.386025768,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.120517,
+      "marginsRgbLt245": [
+        3,
+        5,
+        6,
+        0
+      ],
+      "marginsRgbLt250": [
+        0,
+        0,
+        6,
+        0
+      ],
+      "revisionAttempt": 2,
+      "promptId": "shared-r2-enlarge",
+      "marginClass": "preferred<=6",
+      "result": "PASS"
+    },
+    {
+      "finish": "nogal",
+      "file": "nogal.png",
+      "generatorId": "exec-b5c9c0f6-a58c-4c0a-9ced-92cbac299e6c",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a04dc9-99d6-7d61-8d0c-4ea979a41e3b/exec-b5c9c0f6-a58c-4c0a-9ced-92cbac299e6c.png",
+      "sha256": "b568f6ad03ef674e3d821d75136719f0855b814bc09b5c2cc08e7159b403070a",
+      "bytes": 1593957,
+      "dimensions": "779x2018",
+      "mode": "RGB",
+      "aspectRatioWidthOverHeight": 0.386025768,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.120517,
+      "marginsRgbLt245": [
+        9,
+        9,
+        12,
+        0
+      ],
+      "marginsRgbLt250": [
+        9,
+        9,
+        12,
+        0
+      ],
+      "revisionAttempt": 2,
+      "promptId": "shared-r3-rgb245-edge",
+      "marginClass": "documented-priority-exception<=12",
+      "result": "PASS"
+    },
+    {
+      "finish": "roble",
+      "file": "roble.png",
+      "generatorId": "exec-3ef5505b-77c7-4c17-95e9-9721ce651d4e",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a04cea-a16c-7181-a499-464318cc0535/exec-3ef5505b-77c7-4c17-95e9-9721ce651d4e.png",
+      "sha256": "5677e6f4e58d2d9f53251e2bf2a4f1638178c31ceb316133c06091a65e7ea2db",
+      "bytes": 1617761,
+      "dimensions": "779x2019",
+      "mode": "RGB",
+      "aspectRatioWidthOverHeight": 0.385834572,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.169987,
+      "marginsRgbLt245": [
+        9,
+        9,
+        10,
+        0
+      ],
+      "marginsRgbLt250": [
+        9,
+        9,
+        9,
+        0
+      ],
+      "revisionAttempt": 3,
+      "promptId": "roble-r3",
+      "marginClass": "documented-priority-exception<=12",
+      "result": "PASS"
+    },
+    {
+      "finish": "gris-claro",
+      "file": "gris-claro.png",
+      "generatorId": "exec-1c798ff7-d565-48d5-8c55-5ae599c7a061",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a04cea-a16c-7181-a499-464318cc0535/exec-1c798ff7-d565-48d5-8c55-5ae599c7a061.png",
+      "sha256": "5852894ab6ac4cb00977fbe7cb77e4a0fdceeb79494a859ec5cad072f4bb8eae",
+      "bytes": 1408641,
+      "dimensions": "779x2020",
+      "mode": "RGB",
+      "aspectRatioWidthOverHeight": 0.385643564,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.219408,
+      "marginsRgbLt245": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "marginsRgbLt250": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "revisionAttempt": 2,
+      "promptId": "gris-claro-r2",
+      "marginClass": "target0-4",
+      "result": "PASS"
+    },
+    {
+      "finish": "natural",
+      "file": "natural.png",
+      "generatorId": "exec-85701b59-a51c-45db-b3e8-09a508c7c425",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a04cea-a16c-7181-a499-464318cc0535/exec-85701b59-a51c-45db-b3e8-09a508c7c425.png",
+      "sha256": "2ac2d4e7f3b843ebdfb048524c0a55a1de1bc1bc6784855893f1744d6e122540",
+      "bytes": 1590703,
+      "dimensions": "780x2017",
+      "mode": "RGB",
+      "aspectRatioWidthOverHeight": 0.38671294,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.05728,
+      "marginsRgbLt245": [
+        0,
+        7,
+        4,
+        0
+      ],
+      "marginsRgbLt250": [
+        0,
+        7,
+        3,
+        0
+      ],
+      "revisionAttempt": 3,
+      "promptId": "natural-r3",
+      "marginClass": "documented-priority-exception<=12",
+      "result": "PASS"
+    },
+    {
+      "finish": "blanco",
+      "file": "blanco.png",
+      "generatorId": "exec-a6e220bc-c734-492e-b006-5fd49c9e9cfb",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a04cea-a16c-7181-a499-464318cc0535/exec-a6e220bc-c734-492e-b006-5fd49c9e9cfb.png",
+      "sha256": "d702b3f3d45c0eab41891afeea9ef1a0414c934d8578c146ac55505188e55ecb",
+      "bytes": 1149936,
+      "dimensions": "779x2018",
+      "mode": "RGB",
+      "aspectRatioWidthOverHeight": 0.386025768,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.120517,
+      "marginsRgbLt245": [
+        0,
+        4,
+        4,
+        0
+      ],
+      "marginsRgbLt250": [
+        0,
+        0,
+        3,
+        0
+      ],
+      "revisionAttempt": 4,
+      "promptId": "blanco-r4",
+      "marginClass": "target0-4",
+      "result": "PASS"
+    }
+  ],
+  "rejected": [
+    {
+      "finish": "negro",
+      "file": "_rejected/negro-previous-selected-before-minimum-margin-revision.png",
+      "generatorId": "exec-70533f07-66e9-46b2-bcf6-1a8fc39f654d",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a0141b-34f9-7973-89ee-9e3a7b2748f7/exec-70533f07-66e9-46b2-bcf6-1a8fc39f654d.png",
+      "sha256": "96edb529169c92847eba6f45771ef66c364b5a70ebaad53b0a0fbd4db87e5c0b",
+      "bytes": 1424223,
+      "dimensions": "779x2018",
+      "mode": "RGB",
+      "marginsRgbLt245": [
+        9,
+        10,
+        15,
+        6
+      ],
+      "marginsRgbLt250": [
+        8,
+        10,
+        13,
+        0
+      ],
+      "promptId": "legacy-initial",
+      "reason": "displaced: margin >6 and >12",
+      "aspectRatioWidthOverHeight": 0.386025768,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.120517
+    },
+    {
+      "finish": "wengue",
+      "file": "_rejected/wengue-previous-selected-before-minimum-margin-revision.png",
+      "generatorId": "exec-bd5d1ad1-745c-470d-96e9-813e3e55ccd2",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a0141b-34f9-7973-89ee-9e3a7b2748f7/exec-bd5d1ad1-745c-470d-96e9-813e3e55ccd2.png",
+      "sha256": "1a7b40eaa1226b9d28d4b759007107043a846fbfcef5cba176707b175ef781e0",
+      "bytes": 1343628,
+      "dimensions": "779x2018",
+      "mode": "RGB",
+      "marginsRgbLt245": [
+        9,
+        9,
+        13,
+        4
+      ],
+      "marginsRgbLt250": [
+        9,
+        7,
+        13,
+        0
+      ],
+      "promptId": "legacy-initial",
+      "reason": "displaced: margin >6 and >12",
+      "aspectRatioWidthOverHeight": 0.386025768,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.120517
+    },
+    {
+      "finish": "gris-oscuro",
+      "file": "_rejected/gris-oscuro-previous-selected-before-minimum-margin-revision.png",
+      "generatorId": "exec-79147e95-d0ca-413e-be0a-9cf7d1150e81",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a0141b-34f9-7973-89ee-9e3a7b2748f7/exec-79147e95-d0ca-413e-be0a-9cf7d1150e81.png",
+      "sha256": "b68abf4c445788199b29865c836625a0dab7f0e2ba2ff7cf7fe469baaf8357b7",
+      "bytes": 1493344,
+      "dimensions": "780x2017",
+      "mode": "RGB",
+      "marginsRgbLt245": [
+        9,
+        9,
+        14,
+        0
+      ],
+      "marginsRgbLt250": [
+        9,
+        9,
+        12,
+        0
+      ],
+      "promptId": "legacy-initial",
+      "reason": "displaced: margin >6 and >12",
+      "aspectRatioWidthOverHeight": 0.38671294,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.05728
+    },
+    {
+      "finish": "antracita",
+      "file": "_rejected/antracita-previous-selected-before-minimum-margin-revision.png",
+      "generatorId": "exec-a0b3a047-025b-4b64-93bc-0af32c2b78ab",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a0141b-34f9-7973-89ee-9e3a7b2748f7/exec-a0b3a047-025b-4b64-93bc-0af32c2b78ab.png",
+      "sha256": "a5c0e1d441343bc448cb0b6cc8af24ea0ef6dfb104eb8c43158952e5f688f5bf",
+      "bytes": 1354368,
+      "dimensions": "779x2018",
+      "mode": "RGB",
+      "marginsRgbLt245": [
+        4,
+        6,
+        8,
+        0
+      ],
+      "marginsRgbLt250": [
+        4,
+        6,
+        8,
+        0
+      ],
+      "promptId": "legacy-initial",
+      "reason": "displaced: priority margin >6",
+      "aspectRatioWidthOverHeight": 0.386025768,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.120517
+    },
+    {
+      "finish": "nogal",
+      "file": "_rejected/nogal-previous-selected-before-minimum-margin-revision.png",
+      "generatorId": "exec-44ee4404-c842-4e99-90be-23b9dd608e3c",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a0141b-34f9-7973-89ee-9e3a7b2748f7/exec-44ee4404-c842-4e99-90be-23b9dd608e3c.png",
+      "sha256": "a71c7bb4037a8ea5da18335a2e7b17ff835f3e7381ba465ac822f97131c215ee",
+      "bytes": 1698086,
+      "dimensions": "779x2019",
+      "mode": "RGB",
+      "marginsRgbLt245": [
+        10,
+        10,
+        13,
+        4
+      ],
+      "marginsRgbLt250": [
+        9,
+        10,
+        11,
+        0
+      ],
+      "promptId": "legacy-initial",
+      "reason": "displaced: margin >6 and >12",
+      "aspectRatioWidthOverHeight": 0.385834572,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.169987
+    },
+    {
+      "finish": "roble",
+      "file": "_rejected/roble-previous-selected-before-minimum-margin-revision.png",
+      "generatorId": "exec-3475bdf8-d23a-4e8a-ba28-d9752f397927",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a0141b-34f9-7973-89ee-9e3a7b2748f7/exec-3475bdf8-d23a-4e8a-ba28-d9752f397927.png",
+      "sha256": "b13305b4ddd89f1017af324a0c10cffa44d3eb5c21ef671ab85fac1a864b0e40",
+      "bytes": 1585296,
+      "dimensions": "779x2018",
+      "mode": "RGB",
+      "marginsRgbLt245": [
+        10,
+        14,
+        11,
+        0
+      ],
+      "marginsRgbLt250": [
+        10,
+        14,
+        9,
+        0
+      ],
+      "promptId": "legacy-initial",
+      "reason": "displaced: margin >6 and >12",
+      "aspectRatioWidthOverHeight": 0.386025768,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.120517
+    },
+    {
+      "finish": "gris-claro",
+      "file": "_rejected/gris-claro-previous-selected-before-minimum-margin-revision.png",
+      "generatorId": "exec-12d3ef79-f5ad-4306-8807-e780dc579864",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a0141b-34f9-7973-89ee-9e3a7b2748f7/exec-12d3ef79-f5ad-4306-8807-e780dc579864.png",
+      "sha256": "689a443788b64d25c33c432403aea82cd1f2775f7900da94fdab337623b26c0d",
+      "bytes": 1375978,
+      "dimensions": "779x2019",
+      "mode": "RGB",
+      "marginsRgbLt245": [
+        9,
+        9,
+        14,
+        0
+      ],
+      "marginsRgbLt250": [
+        8,
+        9,
+        13,
+        0
+      ],
+      "promptId": "legacy-initial",
+      "reason": "displaced: margin >6 and >12",
+      "aspectRatioWidthOverHeight": 0.385834572,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.169987
+    },
+    {
+      "finish": "natural",
+      "file": "_rejected/natural-previous-selected-before-minimum-margin-revision.png",
+      "generatorId": "exec-0c315427-2b78-4854-8c54-49228da34cfe",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a0141b-34f9-7973-89ee-9e3a7b2748f7/exec-0c315427-2b78-4854-8c54-49228da34cfe.png",
+      "sha256": "1a0d0bff52a193bc58d88712a89c5ad588ab968197d5ce175f2a31d6cc1bb8f0",
+      "bytes": 1413615,
+      "dimensions": "779x2020",
+      "mode": "RGB",
+      "marginsRgbLt245": [
+        9,
+        12,
+        15,
+        0
+      ],
+      "marginsRgbLt250": [
+        9,
+        11,
+        15,
+        0
+      ],
+      "promptId": "legacy-initial",
+      "reason": "displaced: margin >6 and >12",
+      "aspectRatioWidthOverHeight": 0.385643564,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.219408
+    },
+    {
+      "finish": "blanco",
+      "file": "_rejected/blanco-previous-selected-before-minimum-margin-revision.png",
+      "generatorId": "exec-fd0f1dd2-3349-4768-a010-c82bb4a41516",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a0141b-34f9-7973-89ee-9e3a7b2748f7/exec-fd0f1dd2-3349-4768-a010-c82bb4a41516.png",
+      "sha256": "9b755b59ca3b54716e06b4e3d4c5289bc17d636768432ad6a3c1005bdd6212ba",
+      "bytes": 1140614,
+      "dimensions": "780x2017",
+      "mode": "RGB",
+      "marginsRgbLt245": [
+        9,
+        10,
+        12,
+        5
+      ],
+      "marginsRgbLt250": [
+        9,
+        10,
+        12,
+        0
+      ],
+      "promptId": "legacy-initial",
+      "reason": "displaced: priority margin >6",
+      "aspectRatioWidthOverHeight": 0.38671294,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.05728
+    },
+    {
+      "finish": "negro",
+      "file": "_rejected/negro-minimum-margin-revision-attempt1-padding.png",
+      "generatorId": "exec-ccffe821-9bfe-48a6-8ed3-0c67b158dc38",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a04cea-a16c-7181-a499-464318cc0535/exec-ccffe821-9bfe-48a6-8ed3-0c67b158dc38.png",
+      "sha256": "443b8e11f82163415e0cc3f8769d9e75700c593e1d385f33350efb6b60ca7183",
+      "bytes": 1506110,
+      "dimensions": "779x2019",
+      "mode": "RGB",
+      "marginsRgbLt245": [
+        9,
+        8,
+        11,
+        0
+      ],
+      "marginsRgbLt250": [
+        9,
+        8,
+        11,
+        0
+      ],
+      "revisionAttempt": 1,
+      "promptId": "shared-r1",
+      "reason": "priority margin >6; later attempt improved",
+      "aspectRatioWidthOverHeight": 0.385834572,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.169987
+    },
+    {
+      "finish": "negro",
+      "file": "_rejected/negro-minimum-margin-revision-attempt2-padding.png",
+      "generatorId": "exec-839ff2e2-b93c-4ece-9380-531a1cecd1e9",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a04cea-a16c-7181-a499-464318cc0535/exec-839ff2e2-b93c-4ece-9380-531a1cecd1e9.png",
+      "sha256": "3935fca31c4b35c216ebab1ff07e13357dc7dc9e18d05619e416be71ce45a436",
+      "bytes": 1481953,
+      "dimensions": "780x2017",
+      "mode": "RGB",
+      "marginsRgbLt245": [
+        2,
+        3,
+        8,
+        0
+      ],
+      "marginsRgbLt250": [
+        0,
+        0,
+        8,
+        0
+      ],
+      "revisionAttempt": 2,
+      "promptId": "negro-r2",
+      "reason": "priority margin >6; later attempt improved",
+      "aspectRatioWidthOverHeight": 0.38671294,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.05728
+    },
+    {
+      "finish": "negro",
+      "file": "_rejected/negro-minimum-margin-revision-attempt4-padding.png",
+      "generatorId": "exec-24b79ec4-fa2c-4b0b-a340-111c4835936f",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a04cea-a16c-7181-a499-464318cc0535/exec-24b79ec4-fa2c-4b0b-a340-111c4835936f.png",
+      "sha256": "30dd68e8795ed483d6c94b71ea164c7789a0e70f1df2fa48ea526684dcaa3d58",
+      "bytes": 1294484,
+      "dimensions": "779x2018",
+      "mode": "RGB",
+      "marginsRgbLt245": [
+        9,
+        8,
+        11,
+        0
+      ],
+      "marginsRgbLt250": [
+        9,
+        8,
+        10,
+        0
+      ],
+      "revisionAttempt": 4,
+      "promptId": "negro-r4",
+      "reason": "worse margin than selected attempt 3",
+      "aspectRatioWidthOverHeight": 0.386025768,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.120517
+    },
+    {
+      "finish": "wengue",
+      "file": "_rejected/wengue-minimum-margin-revision-attempt1-padding.png",
+      "generatorId": "exec-36cad39a-ce81-4ca4-912c-3ccadc7c019c",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a04dc9-99d6-7d61-8d0c-4ea979a41e3b/exec-36cad39a-ce81-4ca4-912c-3ccadc7c019c.png",
+      "sha256": "ba69c17bf62a316cd11b3a40dd0b7b58715d193c975eddad7fb54384a0f76bb3",
+      "bytes": 1377055,
+      "dimensions": "779x2019",
+      "mode": "RGB",
+      "marginsRgbLt245": [
+        9,
+        9,
+        12,
+        0
+      ],
+      "marginsRgbLt250": [
+        9,
+        7,
+        12,
+        0
+      ],
+      "revisionAttempt": 1,
+      "promptId": "shared-r1",
+      "reason": "later attempt improved",
+      "aspectRatioWidthOverHeight": 0.385834572,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.169987
+    },
+    {
+      "finish": "gris-oscuro",
+      "file": "_rejected/gris-oscuro-minimum-margin-revision-attempt1-padding.png",
+      "generatorId": "exec-f8ce8f60-4c96-4a23-88f0-2dc4bdfc7d16",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a04dc9-99d6-7d61-8d0c-4ea979a41e3b/exec-f8ce8f60-4c96-4a23-88f0-2dc4bdfc7d16.png",
+      "sha256": "63210711cdbe6052155c55ed7d9ff620a083b6959f177dc9063ca67af8d3eb4c",
+      "bytes": 1403788,
+      "dimensions": "779x2019",
+      "mode": "RGB",
+      "marginsRgbLt245": [
+        9,
+        8,
+        14,
+        5
+      ],
+      "marginsRgbLt250": [
+        9,
+        8,
+        12,
+        1
+      ],
+      "revisionAttempt": 1,
+      "promptId": "shared-r1",
+      "reason": "mandatory margin >12",
+      "aspectRatioWidthOverHeight": 0.385834572,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.169987
+    },
+    {
+      "finish": "gris-oscuro",
+      "file": "_rejected/gris-oscuro-minimum-margin-revision-attempt2-padding.png",
+      "generatorId": "exec-a65b4fe3-144b-4e81-9ccb-bbf74f7e9058",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a04dc9-99d6-7d61-8d0c-4ea979a41e3b/exec-a65b4fe3-144b-4e81-9ccb-bbf74f7e9058.png",
+      "sha256": "1736f3357e3b4105127e8e5a2caa94b604103e2a52496dbe55e19255362d4094",
+      "bytes": 1588739,
+      "dimensions": "779x2018",
+      "mode": "RGB",
+      "marginsRgbLt245": [
+        9,
+        10,
+        13,
+        6
+      ],
+      "marginsRgbLt250": [
+        9,
+        9,
+        11,
+        0
+      ],
+      "revisionAttempt": 2,
+      "promptId": "shared-r2-enlarge",
+      "reason": "mandatory margin >12",
+      "aspectRatioWidthOverHeight": 0.386025768,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.120517
+    },
+    {
+      "finish": "antracita",
+      "file": "_rejected/antracita-minimum-margin-revision-attempt1-padding.png",
+      "generatorId": "exec-453d4e9a-363d-4e9f-baa7-9092149b48c9",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a04dc9-99d6-7d61-8d0c-4ea979a41e3b/exec-453d4e9a-363d-4e9f-baa7-9092149b48c9.png",
+      "sha256": "b879414ee74f2b2cc488b5f377b342dfb3d049776ee41e7cc33b4c1a7d19f26e",
+      "bytes": 1570226,
+      "dimensions": "779x2018",
+      "mode": "RGB",
+      "marginsRgbLt245": [
+        8,
+        8,
+        12,
+        0
+      ],
+      "marginsRgbLt250": [
+        8,
+        8,
+        12,
+        0
+      ],
+      "revisionAttempt": 1,
+      "promptId": "shared-r1",
+      "reason": "later attempt achieved <=6",
+      "aspectRatioWidthOverHeight": 0.386025768,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.120517
+    },
+    {
+      "finish": "nogal",
+      "file": "_rejected/nogal-minimum-margin-revision-attempt1-padding.png",
+      "generatorId": "exec-110a0264-aa57-455f-a292-22be6559110d",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a04dc9-99d6-7d61-8d0c-4ea979a41e3b/exec-110a0264-aa57-455f-a292-22be6559110d.png",
+      "sha256": "55775b771d095fa2e183dbdb702f349f76a23635d0a7e290c642d829fb177b4a",
+      "bytes": 1755686,
+      "dimensions": "780x2017",
+      "mode": "RGB",
+      "marginsRgbLt245": [
+        10,
+        11,
+        15,
+        4
+      ],
+      "marginsRgbLt250": [
+        10,
+        11,
+        14,
+        0
+      ],
+      "revisionAttempt": 1,
+      "promptId": "shared-r1",
+      "reason": "mandatory margin >12",
+      "aspectRatioWidthOverHeight": 0.38671294,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.05728
+    },
+    {
+      "finish": "nogal",
+      "file": "_rejected/nogal-minimum-margin-revision-attempt3-padding.png",
+      "generatorId": "exec-680f7ed4-9c14-4128-9b54-1ca158b44e6d",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a04dc9-99d6-7d61-8d0c-4ea979a41e3b/exec-680f7ed4-9c14-4128-9b54-1ca158b44e6d.png",
+      "sha256": "1fe40754b4c711c4b6734f14100959f59bdafcb9e8cbb6e18186d95c920ad92d",
+      "bytes": 1633961,
+      "dimensions": "779x2018",
+      "mode": "RGB",
+      "marginsRgbLt245": [
+        10,
+        11,
+        13,
+        4
+      ],
+      "marginsRgbLt250": [
+        10,
+        11,
+        13,
+        0
+      ],
+      "revisionAttempt": 3,
+      "promptId": "shared-r4-touch",
+      "reason": "mandatory margin >12; worse than selected",
+      "aspectRatioWidthOverHeight": 0.386025768,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.120517
+    },
+    {
+      "finish": "roble",
+      "file": "_rejected/roble-minimum-margin-revision-attempt1-padding.png",
+      "generatorId": "exec-03d3dafc-2209-4897-8d10-d036ba3af5d7",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a04cea-a16c-7181-a499-464318cc0535/exec-03d3dafc-2209-4897-8d10-d036ba3af5d7.png",
+      "sha256": "b648c68902057844c23c0db5de9cbab1e06f978a698bcef5932bef3a93451b13",
+      "bytes": 1696034,
+      "dimensions": "779x2019",
+      "mode": "RGB",
+      "marginsRgbLt245": [
+        9,
+        9,
+        14,
+        0
+      ],
+      "marginsRgbLt250": [
+        9,
+        9,
+        12,
+        0
+      ],
+      "revisionAttempt": 1,
+      "promptId": "shared-r1",
+      "reason": "mandatory margin >12",
+      "aspectRatioWidthOverHeight": 0.385834572,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.169987
+    },
+    {
+      "finish": "roble",
+      "file": "_rejected/roble-minimum-margin-revision-attempt2-padding.png",
+      "generatorId": "exec-7b714df5-b1c6-4076-92d2-97011e43aa26",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a04cea-a16c-7181-a499-464318cc0535/exec-7b714df5-b1c6-4076-92d2-97011e43aa26.png",
+      "sha256": "d3c0ee9263b7d7164ca8aa680870ffe32fa7b96885fed7ccac77a7291631b3e3",
+      "bytes": 1607273,
+      "dimensions": "779x2019",
+      "mode": "RGB",
+      "marginsRgbLt245": [
+        9,
+        10,
+        10,
+        0
+      ],
+      "marginsRgbLt250": [
+        9,
+        10,
+        10,
+        0
+      ],
+      "revisionAttempt": 2,
+      "promptId": "roble-r2",
+      "reason": "later attempt improved top margin",
+      "aspectRatioWidthOverHeight": 0.385834572,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.169987
+    },
+    {
+      "finish": "gris-claro",
+      "file": "_rejected/gris-claro-minimum-margin-revision-attempt1-padding.png",
+      "generatorId": "exec-f0e9e0a8-b67b-41e7-800c-a7fb98065139",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a04cea-a16c-7181-a499-464318cc0535/exec-f0e9e0a8-b67b-41e7-800c-a7fb98065139.png",
+      "sha256": "b48babd5fd0a81df3ad2d64ba1ead0c1d7ca22feef403e548c218ca67701a37b",
+      "bytes": 1467946,
+      "dimensions": "780x2017",
+      "mode": "RGB",
+      "marginsRgbLt245": [
+        2,
+        7,
+        7,
+        0
+      ],
+      "marginsRgbLt250": [
+        0,
+        7,
+        6,
+        0
+      ],
+      "revisionAttempt": 1,
+      "promptId": "shared-r1",
+      "reason": "later attempt achieved contact",
+      "aspectRatioWidthOverHeight": 0.38671294,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.05728
+    },
+    {
+      "finish": "natural",
+      "file": "_rejected/natural-minimum-margin-revision-attempt1-padding.png",
+      "generatorId": "exec-e1601749-3aa9-43e1-a3bc-b2ac4989b66a",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a04cea-a16c-7181-a499-464318cc0535/exec-e1601749-3aa9-43e1-a3bc-b2ac4989b66a.png",
+      "sha256": "8b16159962bac593422899f006c0a53f70086a976eefb3562ae2bd8a89df17b5",
+      "bytes": 1503643,
+      "dimensions": "779x2018",
+      "mode": "RGB",
+      "marginsRgbLt245": [
+        9,
+        11,
+        14,
+        0
+      ],
+      "marginsRgbLt250": [
+        9,
+        10,
+        12,
+        0
+      ],
+      "revisionAttempt": 1,
+      "promptId": "shared-r1",
+      "reason": "mandatory margin >12",
+      "aspectRatioWidthOverHeight": 0.386025768,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.120517
+    },
+    {
+      "finish": "natural",
+      "file": "_rejected/natural-minimum-margin-revision-attempt2-padding.png",
+      "generatorId": "exec-f48c7a7f-299c-4ca0-8f5b-6375a96aeb43",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a04cea-a16c-7181-a499-464318cc0535/exec-f48c7a7f-299c-4ca0-8f5b-6375a96aeb43.png",
+      "sha256": "05981dfbe9b6ad3a2c65b33c5201ec598efb951da58c3717c48a2d491ef40609",
+      "bytes": 1386417,
+      "dimensions": "779x2019",
+      "mode": "RGB",
+      "marginsRgbLt245": [
+        10,
+        10,
+        15,
+        0
+      ],
+      "marginsRgbLt250": [
+        10,
+        10,
+        13,
+        0
+      ],
+      "revisionAttempt": 2,
+      "promptId": "natural-r2",
+      "reason": "mandatory margin >12",
+      "aspectRatioWidthOverHeight": 0.385834572,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.169987
+    },
+    {
+      "finish": "natural",
+      "file": "_rejected/natural-minimum-margin-revision-attempt4-padding.png",
+      "generatorId": "exec-085a4662-939f-4599-8ae6-654ea82431b2",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a04cea-a16c-7181-a499-464318cc0535/exec-085a4662-939f-4599-8ae6-654ea82431b2.png",
+      "sha256": "ac10250945aca53f231bd1de35e3d4c58c1a9ef6bee1aefc426f8e6fbdaf085b",
+      "bytes": 1315915,
+      "dimensions": "779x2019",
+      "mode": "RGB",
+      "marginsRgbLt245": [
+        9,
+        10,
+        12,
+        4
+      ],
+      "marginsRgbLt250": [
+        9,
+        8,
+        10,
+        0
+      ],
+      "revisionAttempt": 4,
+      "promptId": "natural-r4",
+      "reason": "worse margin than selected attempt 3",
+      "aspectRatioWidthOverHeight": 0.385834572,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.169987
+    },
+    {
+      "finish": "blanco",
+      "file": "_rejected/blanco-minimum-margin-revision-attempt1-padding.png",
+      "generatorId": "exec-cc640e17-5975-4051-a67d-7eccbf765024",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a04cea-a16c-7181-a499-464318cc0535/exec-cc640e17-5975-4051-a67d-7eccbf765024.png",
+      "sha256": "ccb7f5fb5b44c54a54ffdd6bc41ce2ddc98f73c3e879f700cd1dadd9cb957aa5",
+      "bytes": 958128,
+      "dimensions": "780x2017",
+      "mode": "RGB",
+      "marginsRgbLt245": [
+        9,
+        11,
+        12,
+        4
+      ],
+      "marginsRgbLt250": [
+        9,
+        11,
+        10,
+        0
+      ],
+      "revisionAttempt": 1,
+      "promptId": "shared-r1",
+      "reason": "priority margin >6",
+      "aspectRatioWidthOverHeight": 0.38671294,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.05728
+    },
+    {
+      "finish": "blanco",
+      "file": "_rejected/blanco-minimum-margin-revision-attempt2-padding.png",
+      "generatorId": "exec-4164cf45-c594-44f4-b6c8-b13661bf90ad",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a04cea-a16c-7181-a499-464318cc0535/exec-4164cf45-c594-44f4-b6c8-b13661bf90ad.png",
+      "sha256": "742f734d34d237954c99b14df1a7558cb1471464f6259c6001705a75d5342433",
+      "bytes": 1188241,
+      "dimensions": "779x2018",
+      "mode": "RGB",
+      "marginsRgbLt245": [
+        0,
+        4,
+        8,
+        0
+      ],
+      "marginsRgbLt250": [
+        0,
+        0,
+        7,
+        0
+      ],
+      "revisionAttempt": 2,
+      "promptId": "blanco-r2",
+      "reason": "later attempt achieved target",
+      "aspectRatioWidthOverHeight": 0.386025768,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.120517
+    },
+    {
+      "finish": "blanco",
+      "file": "_rejected/blanco-minimum-margin-revision-attempt3-padding.png",
+      "generatorId": "exec-ac551ec1-9b98-4806-a83e-116e6cfcae6d",
+      "generatorPath": "C:/Users/zhen/.codex/generated_images/01a04cea-a16c-7181-a499-464318cc0535/exec-ac551ec1-9b98-4806-a83e-116e6cfcae6d.png",
+      "sha256": "ce5bcdcb2179aa1f19724d834b112092859b2925a2c46d958a2a7b62148e7934",
+      "bytes": 1007623,
+      "dimensions": "779x2018",
+      "mode": "RGB",
+      "marginsRgbLt245": [
+        9,
+        15,
+        13,
+        6
+      ],
+      "marginsRgbLt250": [
+        9,
+        15,
+        13,
+        0
+      ],
+      "revisionAttempt": 3,
+      "promptId": "blanco-r3",
+      "reason": "mandatory margin >12; worse than attempt 2",
+      "aspectRatioWidthOverHeight": 0.386025768,
+      "aspectRatioAbsoluteRelativeDeltaPercent": 0.120517
+    }
+  ],
+  "qa": {
+    "path": "QA.json",
+    "status": "PASS_9_OF_9_MINIMUM_MARGIN_REVISION",
+    "acceptedAssetCount": 9,
+    "retainedRejectedCount": 27,
+    "uniqueAcceptedHashes": 9,
+    "uniqueCallIds": 36,
+    "uniqueCallHashes": 36,
+    "logoTextOrPseudotextInstancesPerAsset": 0,
+    "maximumAcceptedAspectRatioAbsoluteRelativeDeltaPercent": 0.219408,
+    "maximumAcceptedMarginRgbLt245": 12
+  },
+  "promotion": {
+    "converted": false,
+    "staged": false,
+    "publicWritten": false,
+    "originalModified": false,
+    "committed": false,
+    "pushed": false
+  }
+}

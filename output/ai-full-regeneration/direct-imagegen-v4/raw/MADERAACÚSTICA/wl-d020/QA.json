@@ -1,0 +1,203 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-d020",
+  "policy": "NO_LOGO_MINIMUM_MARGIN_WHITE_REVISION",
+  "status": "PASS_9_OF_9_WHITE_MINIMUM_MARGIN_REVISION_WITH_DOCUMENTED_NUMERIC_EXCEPTION",
+  "generationMethod": "built-in ImageGen only",
+  "requestedFinishCount": 9,
+  "acceptedAssetCount": 9,
+  "totalIndependentImageGenCalls": 11,
+  "acceptedIndependentCalls": 9,
+  "nonActiveAttempts": 2,
+  "retainedDisplacedSelections": 1,
+  "unretainedAttempts": 1,
+  "maximumAttemptsPerFinish": 2,
+  "independence": {
+    "soleReferenceForEveryCall": "public/images/PUERTAS/MADERAACÚSTICA/wl-d020/original.webp",
+    "referenceSha256Before": "c662510911bdd2c7b752409c8a932e8db5068b20da2129f99d05e009e3976296",
+    "referenceSha256After": "c662510911bdd2c7b752409c8a932e8db5068b20da2129f99d05e009e3976296",
+    "referenceUnchanged": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "conversionUsed": false
+  },
+  "qaMethod": "Native-detail inspection of the canonical original and all nine active PNGs, plus read-only SHA-256, dimensions, RGB mode, aspect-ratio, RGB<245/RGB<250 edge margins, unique-ID/hash and generator-source byte-equality checks. The displaced blanco was preserved byte-for-byte before replacement. No PNG was altered during QA.",
+  "acceptanceRules": {
+    "completeOuterFrameVisible": true,
+    "frontFacingPortraitComposition": true,
+    "signatureGeometryPreserved": "complete layered gray-metal outer casing and stepped perimeter moldings, full top lintel, narrow side rails and both lower endpoints; one pale main leaf; one full-height darker cool-gray left accent strip; exactly one rightward rectangular step/tab at hardware height; exactly one thin horizontal joint beginning at the tab's right edge and continuing to the right leaf edge; no other panel, insert, molding or groove",
+    "hardwarePreserved": "exactly one short slim dark horizontal lever pointing right on one round dark rosette and exactly one separate small round dark key cylinder below, centered on the left step area",
+    "finishClearlyMatchesRequestedName": true,
+    "zeroLogoTextWatermarkOrPseudotext": true,
+    "noExtraObjectsOrScene": true,
+    "noPostGenerationPixelProcessing": true,
+    "aspectRatio": {
+      "canonical": 0.371795,
+      "acceptedMinimum": 0.371234,
+      "acceptedMaximum": 0.372263,
+      "maximumAcceptedAbsoluteRelativeDeltaPercent": 0.150799,
+      "allAcceptedWithinOnePercent": true
+    },
+    "maximumSubjectFraming": {
+      "measurementOrder": ["left", "top", "right", "bottom"],
+      "standardThreshold": "RGB<245",
+      "whiteFinishSecondaryThreshold": "RGB<250",
+      "canonicalOriginalMarginsAtRgbBelow245": [4, 4, 1, 0],
+      "canonicalOriginalMarginsAtRgbBelow250": [4, 4, 0, 0],
+      "normalMaximumPixels": 12,
+      "activeWithinNormalMaximum12": ["negro", "wengue", "gris-oscuro", "antracita", "nogal", "roble", "gris-claro", "natural", "blanco"],
+      "activeWithinPreferred0To6": ["negro", "gris-claro"],
+      "minimumAcceptedMarginPixels": 0,
+      "maximumAcceptedMarginPixels": 11,
+      "newBlancoPromptTargetPixels": "0-3 on every side",
+      "newBlancoMeasuredRgb245": [7, 0, 4, 0],
+      "newBlancoMeasuredRgb250": [7, 0, 2, 0],
+      "newBlancoNumericException": "The left margin is 7 pixels and the right RGB<245 margin is 4, so the output does not literally meet the prompt's 0-3 target. It is retained because it is materially tighter than the displaced [17,7,19,7] selection, remains within the normal 12-pixel ceiling, and native inspection confirms a complete uncropped casing and endpoints.",
+      "contactAllowedWhenComplete": true,
+      "noCropOrResizeUsedToAchieveFraming": true
+    }
+  },
+  "assets": [
+    {
+      "finish": "negro",
+      "file": "negro.png",
+      "generatorId": "exec-778b9508-0809-4591-86ef-06ef40c33b5b",
+      "sha256": "afb5c75c16769e23e8e803fb07d7a14e802958e858376505fbd77f673a891917",
+      "dimensions": "765x2057",
+      "mode": "RGB",
+      "attempt": 1,
+      "result": "PASS"
+    },
+    {
+      "finish": "wengue",
+      "file": "wengue.png",
+      "generatorId": "exec-02034695-4207-46fe-bd51-e38e89219a5f",
+      "sha256": "743bb39b0f838bbb48f67fe213c927ad83404da2d0a94b03202b109ee29f4cd3",
+      "dimensions": "764x2058",
+      "mode": "RGB",
+      "attempt": 1,
+      "result": "PASS"
+    },
+    {
+      "finish": "gris-oscuro",
+      "file": "gris-oscuro.png",
+      "generatorId": "exec-a66a52a7-c431-4678-b40d-ffb93f3be5f6",
+      "sha256": "984b30fe59222f1511e120539f3a0938d8430d594a1f589b30f52ceab5a299f2",
+      "dimensions": "764x2057",
+      "mode": "RGB",
+      "attempt": 1,
+      "result": "PASS"
+    },
+    {
+      "finish": "antracita",
+      "file": "antracita.png",
+      "generatorId": "exec-e1d7ac0c-1d4a-416a-88f2-f8ed80a4e2dc",
+      "sha256": "38a98e8374ddf14ed5e0deb75ff67d51b2b9682a5c0203398a82cfffbe886d12",
+      "dimensions": "764x2058",
+      "mode": "RGB",
+      "attempt": 1,
+      "result": "PASS"
+    },
+    {
+      "finish": "nogal",
+      "file": "nogal.png",
+      "generatorId": "exec-0cc5b305-032b-4f88-a152-6f0560132b4d",
+      "sha256": "4f368be0e456cf314652fbdf680dda867d44322898c8c6c4ea6cbb6b27b5d27a",
+      "dimensions": "764x2057",
+      "mode": "RGB",
+      "attempt": 1,
+      "result": "PASS"
+    },
+    {
+      "finish": "roble",
+      "file": "roble.png",
+      "generatorId": "exec-5c9233da-532c-49fb-aba0-bf815ca917d1",
+      "sha256": "d7e53259f741c64743829fdd2890ea436d54909435f49ea6945eed5b0a1e3cd6",
+      "dimensions": "764x2058",
+      "mode": "RGB",
+      "attempt": 1,
+      "result": "PASS"
+    },
+    {
+      "finish": "gris-claro",
+      "file": "gris-claro.png",
+      "generatorId": "exec-1ccb6475-7514-47d2-8148-4113d1c255d6",
+      "sha256": "e93f7d296a6d65d1fc76fec4170a8a4f213ef3439ef9a4537c64a4752e82adf2",
+      "dimensions": "764x2057",
+      "mode": "RGB",
+      "attempt": 1,
+      "result": "PASS"
+    },
+    {
+      "finish": "natural",
+      "file": "natural.png",
+      "generatorId": "exec-5911f30c-9fa0-4f9b-8247-d83d7e563b91",
+      "sha256": "238c51aa59d0a3a3ef3f6982064a5bc0cfbed9cc0573f71df69d6c1c27b5ee6e",
+      "dimensions": "764x2057",
+      "mode": "RGB",
+      "attempt": 1,
+      "result": "PASS"
+    },
+    {
+      "finish": "blanco",
+      "file": "blanco.png",
+      "generatorId": "exec-da338f2a-9a6f-47f0-a099-b2a1a7f699d3",
+      "sha256": "6e879b126167e54ec4f56da0ba20f4f05231b45f1bd956ff5cd0a3c71d3723d4",
+      "dimensions": "765x2055",
+      "mode": "RGB",
+      "revisionAttempt": 1,
+      "marginsRgb245": [7, 0, 4, 0],
+      "marginsRgb250": [7, 0, 2, 0],
+      "result": "PASS_NORMAL_MAXIMUM_12_WITH_DOCUMENTED_0_TO_3_PROMPT_EXCEPTION"
+    }
+  ],
+  "acceptedEdgeMetrics": {
+    "negro": {"marginsRgb245":[5,4,2,0],"marginsRgb250":[2,0,0,0]},
+    "wengue": {"marginsRgb245":[10,8,4,0],"marginsRgb250":[9,7,1,0]},
+    "gris-oscuro": {"marginsRgb245":[11,8,9,0],"marginsRgb250":[10,8,9,0]},
+    "antracita": {"marginsRgb245":[10,8,3,0],"marginsRgb250":[9,8,0,0]},
+    "nogal": {"marginsRgb245":[9,8,5,0],"marginsRgb250":[9,8,1,0]},
+    "roble": {"marginsRgb245":[10,7,6,0],"marginsRgb250":[10,1,4,0]},
+    "gris-claro": {"marginsRgb245":[3,1,0,0],"marginsRgb250":[1,0,0,0]},
+    "natural": {"marginsRgb245":[11,7,6,0],"marginsRgb250":[11,0,1,0]},
+    "blanco": {"marginsRgb245":[7,0,4,0],"marginsRgb250":[7,0,2,0]}
+  },
+  "previousSelectedBeforeMinimumMarginRevision": {
+    "finish": "blanco",
+    "file": "_rejected/blanco-previous-selected-before-minimum-margin-revision.png",
+    "generatorId": "exec-7794dbdb-03a3-4ba8-9908-ed640df3b65f",
+    "sha256": "c6ebe4f96e8e00bd47abc26b3cffa96235969ffa82cedbb8a5c03ca3b5d2d1c0",
+    "dimensions": "765x2057",
+    "marginsRgb245": [17, 7, 19, 7],
+    "marginsRgb250": [17, 7, 19, 5],
+    "result": "DISPLACED_AND_PRESERVED_BYTE_FOR_BYTE"
+  },
+  "unretained": [
+    {
+      "finish": "blanco",
+      "attempt": 1,
+      "generatorId": "exec-911b1714-9553-4262-8d8a-54259610a376",
+      "sha256": "889d06fe42f20b3f601357d0ec477a591089391d96b701a34a2fce4f4bce208d",
+      "result": "UNRETAINED",
+      "reason": "The preceding agent execution was interrupted before workspace copy and acceptance. This result was not used as a reference or promoted."
+    }
+  ],
+  "summary": {
+    "requested": 9,
+    "pass": 9,
+    "fail": 0,
+    "uniqueAcceptedHashes": 9,
+    "uniqueGeneratorIds": 11,
+    "workspaceGeneratorByteEqualityPass": 10,
+    "generatorAccessibleUnretainedHashPass": 1,
+    "visualInspection": "PASS: all nine active finishes retain the complete layered silver-gray casing, lintel, narrow rails and bottom endpoints; the full-height left strip and its single rectangular step; exactly one horizontal joint from the tab to the right edge; one lever and one separate cylinder; all are logo-free and text-free.",
+    "publicFilesModified": false,
+    "originalModified": false,
+    "converted": false,
+    "promoted": false
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-d017",
+  "policy": "NO_LOGO_MINIMAL_WHITE_MARGIN",
+  "status": "PASS_9_OF_9",
+  "generationMethod": "built-in ImageGen only",
+  "requestedFinishCount": 9,
+  "acceptedAssetCount": 9,
+  "totalIndependentImageGenCalls": 34,
+  "acceptedIndependentCalls": 9,
+  "rejectedAttempts": 25,
+  "legacyPostprocessedFilesPreservedAndExcluded": 11,
+  "independence": {
+    "soleReferenceForEveryCall": "public/images/PUERTAS/MADERAACÚSTICA/wl-d017/original.webp",
+    "referenceSha256Before": "b20730b02c46a6541375f99a942e02104eca4707c7476697804c3436d438b98d",
+    "referenceSha256After": "b20730b02c46a6541375f99a942e02104eca4707c7476697804c3436d438b98d",
+    "referenceUnchanged": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "conversionUsed": false
+  },
+  "qaMethod": "Native-detail visual inspection of all accepted candidates against the sole canonical original, plus read-only SHA-256, PNG dimensions, RGB<245 edge-margin, subject-fill, aspect-ratio, unique-hash and generator-source byte-equality checks. No PNG was altered during QA.",
+  "acceptanceRules": {
+    "completeOuterFrameAndDoorBottomVisible": true,
+    "straightOnTallNarrowComposition": true,
+    "signatureGeometryPreserved": "complete frame, dark narrow strip on the left, exactly one blue-gray line with an angular deviation, exactly one horizontal joint, and no added panels, glass or decoration",
+    "hardwarePreserved": "exactly one horizontal lever and exactly one separate key cylinder in the original count and placement",
+    "finishAppliedWithoutStructuralRedesign": true,
+    "zeroLogoTextBadgeWatermarkOrPseudotext": true,
+    "noPostGenerationPixelProcessing": true,
+    "aspectRatio": {
+      "canonical": 0.373516,
+      "acceptedMinimum": 0.373113,
+      "acceptedMaximum": 0.373964,
+      "maximumAcceptedAbsoluteRelativeDeltaPercent": 0.119925,
+      "allAcceptedWithinOnePercent": true
+    },
+    "minimalWhiteMargin": {
+      "goal": "make the complete door as large as possible in the canvas with the smallest safe white border",
+      "measurementOrder": ["left", "top", "right", "bottom"],
+      "threshold": "RGB<245",
+      "normalTargetPixels": "2-8 ideal; up to 12 normally accepted after native inspection",
+      "maximumMeasuredAcceptedPixels": 12,
+      "zeroPixelException": "After multiple direct ImageGen alternatives, native-detail inspection confirms that every accepted zero-pixel reading still contains the complete silhouette and all outer mouldings and matches the original's edge termination. These unprocessed results directly satisfy the user's request for minimum white margins.",
+      "whiteFinishAbsoluteCeiling": "Blanco was regenerated until all four RGB<245 margins met the same absolute 12 px ceiling without a light-finish exception.",
+      "noCropOrResizeUsedToAchieveFraming": true
+    }
+  },
+  "assets": [
+    {"finish":"negro","file":"negro.png","generatorId":"exec-0e1a524a-74d3-475f-a643-5ff30fc7cc1e","sha256":"282227532be822337fec89e0f1164c61b25e97c051e5f247c40c2019d3d0eeea","dimensions":"766x2052","marginsRgb245":[9,9,10,0],"result":"PASS_ATTEMPT_2_NATIVE_COMPLETE"},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-01cf3b96-4dd8-456b-b353-71661c1a4ebd","sha256":"1fb29da4c05b9add6b349216a2f1bada72bc4c9608e193796cf3551ae5ac2a3a","dimensions":"767x2051","marginsRgb245":[5,0,4,0],"result":"PASS_ATTEMPT_2_NATIVE_COMPLETE"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-f4e4a3f0-f412-4b87-a998-3d117fb574fc","sha256":"6583c293e4ac30ebf19150d5eeb757c4dc5722adb0eb3fcc09b88c264b7c79c1","dimensions":"767x2051","marginsRgb245":[11,11,11,5],"result":"PASS_ATTEMPT_1"},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-d575cb29-c936-4c6a-97ac-9367630eac3e","sha256":"c8f88319aaa52d2ef7f7903374a6b02d18b92db761f67728bb983997fb4dea40","dimensions":"766x2052","marginsRgb245":[12,10,10,0],"result":"PASS_ATTEMPT_2_NATIVE_COMPLETE"},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-2ea938cb-5178-499f-af2c-1d6300139f59","sha256":"a4851ce29e40c8fa8ae83d0aa8c78635758660ba302dbf1b0a76aa8f57aab0e6","dimensions":"766x2052","marginsRgb245":[12,12,9,5],"result":"PASS_ATTEMPT_2"},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-20394351-21d8-4d73-9667-e672a4eb6516","sha256":"88c8f6066189c916fec963a262f5139954524c9f5c3249255186b1dd9d18d756","dimensions":"766x2052","marginsRgb245":[0,0,1,0],"result":"PASS_ATTEMPT_4_NATIVE_COMPLETE_EDGE_EXCEPTION"},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-064e3294-af87-4ab9-b252-6303bb9f6420","sha256":"d9f6866237a580381e802feb9a2e8d2d50ba13ace45fde7bfbcad2d45846b545","dimensions":"766x2052","marginsRgb245":[0,0,0,0],"result":"PASS_ATTEMPT_4_NATIVE_COMPLETE_EDGE_AND_LIGHT_THRESHOLD_EXCEPTION"},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-ea0afcba-7ebc-4535-b233-cf026e1f79d2","sha256":"46af9eb2c19befc0e32480a063c2f72182cbe267ad4b343ba9d238a1efbede52","dimensions":"766x2053","marginsRgb245":[0,4,0,0],"result":"PASS_ATTEMPT_4_NATIVE_COMPLETE_EDGE_EXCEPTION"},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-186e6ee6-0ebd-4d01-8ec1-2b2d4ecf5317","sha256":"b4d66673728add2434b896861c8685862cca2c640fed65dec84500ee622de5f0","dimensions":"767x2051","marginsRgb245":[12,12,12,3],"result":"PASS_ATTEMPT_8_NATIVE_COMPLETE_ABSOLUTE_MARGIN_CEILING"}
+  ],
+  "rejectedAttemptMap": {
+    "negro": [1],
+    "wengue": [1, 3, 4],
+    "gris-oscuro": [],
+    "antracita": [1],
+    "nogal": [1],
+    "roble": [1, 2, 3, 5],
+    "gris-claro": [1, 2, 3, 5],
+    "natural": [1, 2, 3, 5],
+    "blanco": [1, 2, 3, 4, 5, 6, 7]
+  },
+  "summary": {
+    "pass": 9,
+    "fail": 0,
+    "uniqueAcceptedHashes": 9,
+    "generatorByteEqualityPass": 34,
+    "logoTextOrPseudotextInstancesPerAcceptedAsset": 0,
+    "visualInspection": "PASS: all nine accepted finishes preserve the complete native-reviewed frame, left dark strip, single blue-gray angular line, one horizontal joint, one lever and one cylinder, with no logo or text.",
+    "originalModified": false,
+    "publicFilesModified": false,
+    "converted": false,
+    "promoted": false
+  }
+}

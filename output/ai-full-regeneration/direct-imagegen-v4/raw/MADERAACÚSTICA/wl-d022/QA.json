@@ -1,0 +1,38 @@
+{
+  "schema": "wonly-direct-imagegen-qa/v4",
+  "status": "PASS_9_OF_9",
+  "model": "MADERAACÚSTICA/wl-d022",
+  "auditedAtOriginalDetail": true,
+  "checks": {
+    "nineCanonicalFinishesPresent": true,
+    "nineUniqueEncodedHashes": true,
+    "pngRgbThreeChannels": true,
+    "completeDoorFrameAndThreshold": true,
+    "narrowLeftStilePreserved": true,
+    "largeUpperAndLowerPanelsPreserved": true,
+    "contrastingHorizontalInsertPreserved": true,
+    "straightPanelSeamsPreserved": true,
+    "singleLeverAndRoundKeyEscutcheonPreserved": true,
+    "finishSemanticsCorrect": true,
+    "zeroLogoBadgeTextOrPseudotext": true,
+    "noHaloPatchSceneOrExtraHardware": true,
+    "originalUnmodified": true,
+    "builtInImageGenOnly": true,
+    "oneIndependentCallPerActiveAsset": true,
+    "onlyCanonicalOriginalReferenced": true,
+    "noFiltersMasksCropResizeRecolorOrComposite": true,
+    "conversionNotPerformed": true,
+    "publicWriteNotPerformed": true
+  },
+  "framing": {
+    "threshold": "RGB<245 bounding box",
+    "maximumObservedMarginPx": 11,
+    "fullFrameVisible": true,
+    "noGeometryPostprocessing": true
+  },
+  "rejections": [
+    {"finish":"wengue","generatorId":"exec-de131686-8533-4b13-b4fc-b98f94ebf714","reason":"first attempt replaced by tighter direct ImageGen framing"}
+  ],
+  "safeToConvert": true,
+  "safeToPromote": false
+}
