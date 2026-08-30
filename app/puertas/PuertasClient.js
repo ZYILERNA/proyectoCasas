@@ -25,6 +25,7 @@ import {
 } from "../../components/doors/InteriorShowcase";
 import WLJ001FeatureCard from "../../components/doors/WLJ001FeatureCard";
 import useAccessibleDialog from "../../components/useAccessibleDialog";
+import { getLogoFreeDoorImagePath } from "../../lib/door-image-assets";
 import { getDedicatedDoorProductPath } from "../../lib/door-product-routes";
 import {
   CATALOGUE_CACHE_TTL_MS,
@@ -179,7 +180,7 @@ const ProductCard = memo(forwardRef(function ProductCard({
       <div className="relative mb-4 aspect-[3/5] overflow-hidden rounded-sm border border-transparent bg-[#FCFCFC] transition-all group-hover:border-gray-100">
         <div className="absolute inset-x-[7%] bottom-[6%] top-[7%]">
           <Image
-            src={product.img}
+            src={getLogoFreeDoorImagePath(product.img)}
             alt={product.name}
             fill
             priority={priority}

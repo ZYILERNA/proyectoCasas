@@ -5,7 +5,7 @@ export const metadata = createPageMetadata({
   description:
     "Catálogo WONLY de puertas inteligentes, acorazadas, cortafuego y soluciones especiales.",
   path: "/puertas",
-  image: "/images/PUERTAS/AI/door-x60-pro.webp",
+  image: "/images/PUERTAS/AI/door-x60-pro.png",
 });
 
 export default function Layout({ children }) {
