@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-s103b",
+  "policy": "NO_LOGO_MINIMUM_MARGIN_CANONICAL_EDGE_CONTACT",
+  "status": "PASS_9_OF_9",
+  "generationMethod": "built-in ImageGen only",
+  "requestedFinishCount": 9,
+  "acceptedAssetCount": 9,
+  "totalIndependentImageGenCalls": 15,
+  "acceptedIndependentCalls": 9,
+  "rejectedAttempts": 6,
+  "independence": {
+    "soleReferenceForEveryCall": "public/images/PUERTAS/MADERAACÚSTICA/wl-s103b/original.webp",
+    "referenceSha256Before": "220721ace9090612bcd1ab9da0f2f4aefa728d116e2a1a4ee04a8020373a29a4",
+    "referenceSha256After": "220721ace9090612bcd1ab9da0f2f4aefa728d116e2a1a4ee04a8020373a29a4",
+    "referenceUnchanged": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "conversionUsed": false,
+    "pixelProcessingUsed": false
+  },
+  "qaMethod": "Native-detail visual inspection of the original and every accepted candidate, plus read-only SHA-256, PNG dimensions, edge-margin, subject-fill, aspect-ratio, unique-hash and generator-source byte-equality checks. RGB<245 was used for all accepted and rejected PNGs. No PNG was altered during QA.",
+  "acceptanceRules": {
+    "completeOuterCasingAndDoorBottomVisible": true,
+    "straightOnTallNarrowComposition": true,
+    "signatureGeometryPreserved": "complete slim squared outer casing with two posts, one top lintel and both bottom endpoints; deep dark full-height reveal immediately inside the left casing; narrow left and right leaf stiles; solid wood top rail and bottom rail; exactly one continuous slim central vertical wooden mullion and exactly four slim horizontal wooden muntins; exactly ten textured frosted silver-gray glass panes in two columns by five rows",
+    "glassPreserved": "all ten panes retain rough pebbled translucent texture, silver-gray tone, narrow bevel and exact 2x5 order; no pane adopted the wood finish",
+    "hardwarePreserved": "exactly one small dark circular handle rosette with one slim straight metallic lever pointing right and exactly one separate dark round key escutcheon below, at the source position crossing the muntin between rows three and four",
+    "finishAppliedWithoutStructuralRedesign": true,
+    "zeroLogoTextBadgeWatermarkOrPseudotext": true,
+    "noPostGenerationPixelProcessing": true,
+    "aspectRatio": {
+      "canonical": 0.384760113,
+      "acceptedMinimum": 0.384083045,
+      "acceptedMaximum": 0.385148515,
+      "maximumAcceptedAbsoluteRelativeDeltaPercent": 0.175971,
+      "allAcceptedWithinOnePercent": true
+    },
+    "maximumSubjectFraming": {
+      "goal": "make the complete intact door occupy essentially the entire canvas with the smallest possible white margins",
+      "measurementOrder": ["left", "top", "right", "bottom"],
+      "standardThreshold": "RGB<245",
+      "canonicalOriginalMarginsAtRgbBelow245": [4, 1, 5, 0],
+      "canonicalOriginalMarginsAtRgbBelow250": [0, 0, 1, 0],
+      "preferredAcceptedRangePixels": "0-6; zero contact allowed because the canonical original is already at or near every edge and native inspection confirms the complete silhouette",
+      "normalMaximumPixels": 12,
+      "minimumMeasuredAcceptedPixels": 0,
+      "maximumMeasuredAcceptedPixels": 12,
+      "acceptedWithinPreferredRangeOnEverySideCount": 2,
+      "acceptedWithinNormalMaximumOnEverySideCount": 9,
+      "nativeCompleteAtZeroContact": true,
+      "noCropOrResizeUsedToAchieveFraming": true,
+      "exceptionsAboveNormalMaximum": []
+    }
+  },
+  "assets": [
+    {"finish":"negro","file":"negro.png","generatorId":"exec-fdff6b70-e142-41b4-94e5-266e3f5bf57d","sha256":"0b76a86e6b3a220a4cf057b79a16b3484e41a896ce9787b5b0c07bfc3860cb16","dimensions":"778x2022","margins":[9,5,9,0],"result":"PASS_ATTEMPT_1_NORMAL_MAXIMUM_CANONICAL_BOTTOM_CONTACT"},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-5b96d9e9-07ae-43db-879e-9112fde26d3d","sha256":"af2eab13e9af942be9b0a786063b2a13278b90a10f41beeeff529b56aff43d4d","dimensions":"777x2023","margins":[9,3,10,0],"result":"PASS_ATTEMPT_1_NORMAL_MAXIMUM_CANONICAL_BOTTOM_CONTACT"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-61b6a8a5-5590-4cc3-866e-fcb2bae9cd22","sha256":"12e9f0c761f20db71115ecdf4ede65343ac260446f16f016dbda23f74160a5ff","dimensions":"778x2021","margins":[0,0,0,0],"result":"PASS_ATTEMPT_3_PREFERRED_CANONICAL_ALL_EDGE_CONTACT_NATIVE_COMPLETE"},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-e0e93ec4-1bf2-4ed0-8d33-ac8b6f30aeef","sha256":"71ed869d69a78e799edcf555ba3ddb3328350bb17501f09c687e3c69b4982740","dimensions":"778x2022","margins":[10,4,11,0],"result":"PASS_ATTEMPT_1_NORMAL_MAXIMUM_CANONICAL_BOTTOM_CONTACT"},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-8797bfec-ab00-4e71-996f-543311675dde","sha256":"619d7f24aea51e286d7d11341ded34b6f1e5246cc25c0eeb273d2167f0b4f2d8","dimensions":"778x2022","margins":[6,4,6,0],"result":"PASS_ATTEMPT_3_PREFERRED_CANONICAL_BOTTOM_CONTACT"},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-1ba124a5-2cd2-4327-a2e5-0c68f1fbbd61","sha256":"303165eb68cb93823f845096cbe315777d1cc08ba357e3715d549cf41f08dd27","dimensions":"778x2020","margins":[10,4,11,0],"result":"PASS_ATTEMPT_1_NORMAL_MAXIMUM_CANONICAL_BOTTOM_CONTACT"},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-5149a9bf-1362-4b7d-8ca8-136dd4b6d088","sha256":"71dfd81ef70d3bf2f3a296597930c6b72d35b11cde03a4cb69ba7cc5c69f1ed3","dimensions":"778x2022","margins":[10,6,10,1],"result":"PASS_ATTEMPT_1_NORMAL_MAXIMUM"},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-dc45b967-b6c5-4f22-9534-40fa14724dda","sha256":"9da41c710d7e6321e55e991084169376b965dc0b2ba3dc82d9c57bfbd9154cdd","dimensions":"778x2022","margins":[11,5,12,0],"result":"PASS_ATTEMPT_1_NORMAL_MAXIMUM_CANONICAL_BOTTOM_CONTACT"},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-cbb426d1-eb04-46c3-bfd2-3e51be4da713","sha256":"d17504bc107753a185e10aaabb948961862bf29c648b8e24a4d145b18ac298d5","dimensions":"777x2023","margins":[8,3,0,0],"result":"PASS_ATTEMPT_3_NORMAL_MAXIMUM_CANONICAL_RIGHT_AND_BOTTOM_CONTACT"}
+  ],
+  "rejectedAttemptMap": {
+    "negro": [],
+    "wengue": [],
+    "gris-oscuro": [
+      {"attempt":1,"file":"_rejected/gris-oscuro-attempt-1-margin-15.png","generatorId":"exec-26c18237-b835-4fc5-90a5-ee9d7af81a40","sha256":"c9fa96e456e22b657fdae7c5112c0567f429315fe0aba2ffb4df87c30561a644","margins":[11,5,15,0],"reason":"right margin 15 exceeded normal maximum 12"},
+      {"attempt":2,"file":"_rejected/gris-oscuro-attempt-2-margin-17.png","generatorId":"exec-e1d27821-04e1-45f7-87b3-7bfbe5a9ada3","sha256":"3a9448075b882129c46a32287da3882c1492d90d1526ab0ac9591b04eb205081","margins":[16,7,17,5],"reason":"retry increased the maximum margin to 17"}
+    ],
+    "antracita": [],
+    "nogal": [
+      {"attempt":1,"file":"_rejected/nogal-attempt-1-margin-13.png","generatorId":"exec-ea367ec4-e243-4f6d-8a6f-857af457c0d7","sha256":"b4f73fe7ed754763c99fc988452164654887fcfc5657b20acba3d4423fe97bc0","margins":[10,6,13,0],"reason":"right margin 13 exceeded normal maximum 12"},
+      {"attempt":2,"file":"_rejected/nogal-attempt-2-margin-17.png","generatorId":"exec-203f4467-2ce5-4639-8363-69bec9ed2e74","sha256":"79dfef24ac3e3b081ddcf20388a0901a526c4686aa50a242b5515c98c2f3e12f","margins":[17,7,16,17],"reason":"retry increased the maximum margin to 17"}
+    ],
+    "roble": [],
+    "gris-claro": [],
+    "natural": [],
+    "blanco": [
+      {"attempt":1,"file":"_rejected/blanco-attempt-1-margin-15.png","generatorId":"exec-7f580a0c-ee5f-4311-aab9-01cedaff77cd","sha256":"f1b84e84e1cc282770deb5e0c6016c9b1cce920df88d3ec54c69d5d44ae5c2a3","margins":[11,4,15,5],"reason":"right margin 15 exceeded normal maximum 12"},
+      {"attempt":2,"file":"_rejected/blanco-attempt-2-margin-18.png","generatorId":"exec-08c1e29f-c8d0-4383-b25d-c5c981fb2160","sha256":"63f4c1d62ac42cfb52b2945a291b5f4004a87d837ad01af9df3a715c3f300469","margins":[18,7,16,6],"reason":"retry increased the maximum margin to 18"}
+    ]
+  },
+  "summary": {
+    "pass": 9,
+    "fail": 0,
+    "uniqueAcceptedHashes": 9,
+    "generatorByteEqualityPassAccepted": 9,
+    "generatorByteEqualityPassRejected": 6,
+    "logoTextOrPseudotextInstancesPerAcceptedAsset": 0,
+    "visualInspection": "PASS: all nine accepted finishes preserve the complete casing, dark left reveal, exact 2x5 grid of ten textured panes, one lever/rosette and one separate key escutcheon. Canonical contacts do not remove any geometry.",
+    "originalModified": false,
+    "publicFilesModified": false,
+    "converted": false,
+    "promoted": false,
+    "committed": false,
+    "pushed": false
+  }
+}

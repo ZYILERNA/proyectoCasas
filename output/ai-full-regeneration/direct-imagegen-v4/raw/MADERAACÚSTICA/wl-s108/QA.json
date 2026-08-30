@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-s108",
+  "policy": "NO_LOGO_MINIMAL_WHITE_MARGIN",
+  "status": "PASS_9_OF_9",
+  "generationMethod": "built-in ImageGen only",
+  "requestedFinishCount": 9,
+  "acceptedAssetCount": 9,
+  "totalIndependentImageGenCalls": 29,
+  "acceptedIndependentCalls": 9,
+  "rejectedAttempts": 20,
+  "independence": {
+    "soleReferenceForEveryCall": "public/images/PUERTAS/MADERAACÚSTICA/wl-s108/original.webp",
+    "referenceSha256Before": "8d03ff7180d3e652fc6faa8700b9893d0e307385ae12cbc28a3baf18ad6f10ad",
+    "referenceSha256After": "8d03ff7180d3e652fc6faa8700b9893d0e307385ae12cbc28a3baf18ad6f10ad",
+    "referenceUnchanged": true,
+    "canonicalMirrorSha256": "8d03ff7180d3e652fc6faa8700b9893d0e307385ae12cbc28a3baf18ad6f10ad",
+    "canonicalMirrorMatchesOriginal": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "conversionUsed": false
+  },
+  "qaMethod": "Native-detail visual inspection of every accepted candidate against the sole canonical original, plus read-only SHA-256, PNG dimensions, RGB<245 edge-margin, subject-fill, aspect-ratio, unique-hash, routed-line-height and generator-source byte-equality checks. No image was altered during QA.",
+  "acceptanceRules": {
+    "completeOuterFrameAndDoorBottomVisible": true,
+    "straightOnTallNarrowComposition": true,
+    "signatureGeometryPreserved": "complete two slim square-profile outer posts; straight layered top header and inner lintel; one very dark full-height recessed reveal immediately inside the left post; one smooth flat slab with fine horizontal grain; exact thin asymmetric orthogonal routed-line motif consisting of the main handle-height horizontal run, upper-left vertical step, narrow lock-zone rectangle and larger lower step with its second vertical drop near the first third and lower horizontal continuation to the right jamb; no extra panel, seam, glass or decoration",
+    "hardwarePreserved": "exactly one short slim dark horizontal lever extending right from one circular rosette at the far left around 58% height, exactly one separate small circular dark key cylinder below, no visible hinges and no additional hardware",
+    "finishAppliedWithoutStructuralRedesign": true,
+    "zeroLogoTextBadgeWatermarkOrPseudotext": true,
+    "noPostGenerationPixelProcessing": true,
+    "aspectRatio": {
+      "canonical": 0.372093,
+      "acceptedMinimum": 0.371901,
+      "acceptedMaximum": 0.372263,
+      "maximumAcceptedAbsoluteRelativeDeltaPercent": 0.051653,
+      "allAcceptedWithinOnePercent": true
+    },
+    "minimalWhiteMargin": {
+      "goal": "make the complete door occupy the canvas as fully as possible",
+      "measurementOrder": ["left", "top", "right", "bottom"],
+      "threshold": "RGB<245",
+      "canonicalMarginsPixels": [4, 4, 3, 0],
+      "normalTargetPixels": "0-6 preferred; 12 maximum",
+      "maximumMeasuredAcceptedPixels": 12,
+      "sourceEdgeContactException": "Wengue, antracita, gris-oscuro and blanco measure 0 px at the bottom. The canonical source also contacts the bottom. Native-detail inspection confirms every complete lower endpoint, molding, routed-line endpoint and full silhouette in all four accepted images.",
+      "lightFinishMeasurementNote": "Gris-claro and blanco retain complete visible contours; RGB<245 can overstate their apparent white margin because pale wood pixels near the outer edge may be at or above the threshold.",
+      "noCropOrResizeUsedToAchieveFraming": true
+    }
+  },
+  "assets": [
+    {"finish":"negro","file":"negro.png","generatorId":"exec-7ef94ee8-bf96-436e-b452-96328267d8c6","sha256":"0b7f864f463b2274d0182390c43a7c3fd7a14dd19e3aa7d7cf9233c0e39084d6","dimensions":"765x2055","marginsRgb245":[12,11,10,5],"result":"PASS_ATTEMPT_1_NATIVE_COMPLETE_WITHIN_12PX"},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-b83cc72c-cd8e-4dea-9e86-2903cfe0924c","sha256":"afcebecc5031044baa63294b57301a9d3bf361e4b802dbfb89ef13f7e8c7684a","dimensions":"765x2056","marginsRgb245":[12,7,10,0],"result":"PASS_ATTEMPT_1_NATIVE_COMPLETE_BOTTOM_CONTACT"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-a5f3570b-bf72-4f9c-a1fb-fd65bebc1d79","sha256":"b216c6c3d265a8e0c03ec0bc38910e8bc05baf0d851a9c98037fe32b8e56ec1f","dimensions":"765x2055","marginsRgb245":[10,7,11,0],"result":"PASS_ATTEMPT_7_NATIVE_COMPLETE_BOTTOM_CONTACT_WITHIN_12PX"},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-f0478983-a7e4-4e2a-9b4b-cf85bd003fb8","sha256":"ccc24a149384eaaa94b70ebaa519c4a5011f7e3260d7d0ce9d0fac94c9481a58","dimensions":"765x2057","marginsRgb245":[12,11,9,0],"result":"PASS_ATTEMPT_4_NATIVE_COMPLETE_BOTTOM_CONTACT"},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-e10e5188-6799-4f07-9259-0da36cce1f53","sha256":"cb470398592c28f7be775d147e43bf1983aaa651e2a2f3b03b2ad0e24addc683","dimensions":"765x2057","marginsRgb245":[10,11,10,8],"result":"PASS_ATTEMPT_1_NATIVE_COMPLETE_WITHIN_12PX"},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-a3a6df98-42b5-4fdb-808e-f5f188727cbe","sha256":"0660730b4d7e8d1b84331bc7b621c54428f735df8a725172b4eadaa3175b81e6","dimensions":"765x2056","marginsRgb245":[12,12,12,6],"result":"PASS_ATTEMPT_2_NATIVE_COMPLETE_WITHIN_12PX"},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-b64ca0be-519e-40c4-930a-cb03e8bedf5a","sha256":"422c95be69f9af31ed686706d8580b5529b46cfa8413cd7ca5ba9a723c3e58e0","dimensions":"765x2056","marginsRgb245":[12,10,12,4],"result":"PASS_ATTEMPT_4_NATIVE_COMPLETE_LIGHT_FINISH"},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-25b8b834-12f6-4651-90d6-753c3823ebc2","sha256":"20f018565df2467efa47a20a6a492c1bd5adab7be75fb1c83196ff2b9f9f0fc7","dimensions":"765x2055","marginsRgb245":[11,11,12,3],"result":"PASS_ATTEMPT_1_NATIVE_COMPLETE_WITHIN_12PX"},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-8377ddfd-13bd-4470-8aef-afd0791df1ca","sha256":"09a48ab08a8f0b21829170c6c3242e0f160856b2ed2399f7fd07cc38cc4ec5db","dimensions":"765x2055","marginsRgb245":[9,8,10,0],"result":"PASS_ATTEMPT_8_NATIVE_COMPLETE_BOTTOM_CONTACT_WITHIN_12PX"}
+  ],
+  "rejectedAttemptMap": {
+    "negro": [],
+    "wengue": [],
+    "gris-oscuro": [1, 2, 3, 4, 5, 6],
+    "antracita": [1, 2, 3],
+    "nogal": [],
+    "roble": [1],
+    "gris-claro": [1, 2, 3],
+    "natural": [],
+    "blanco": [1, 2, 3, 4, 5, 6, 7]
+  },
+  "summary": {
+    "pass": 9,
+    "fail": 0,
+    "uniqueAcceptedHashes": 9,
+    "generatorByteEqualityPass": 29,
+    "pngWithC2paMetadataCount": 29,
+    "uniqueGeneratorIds": 29,
+    "uniqueWorkspacePaths": 29,
+    "logoTextOrPseudotextInstancesPerAcceptedAsset": 0,
+    "visualInspection": "PASS: all accepted finishes preserve the complete frame, dark full-height left reveal, exact orthogonal routed-line motif, one lever on one circular rosette, one separate cylinder, no visible hinges and no logo or text.",
+    "originalModified": false,
+    "publicFilesModified": false,
+    "converted": false,
+    "promoted": false
+  }
+}

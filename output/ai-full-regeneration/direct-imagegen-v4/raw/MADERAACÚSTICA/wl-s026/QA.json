@@ -1,0 +1,110 @@
+{
+  "model": "MADERAACÚSTICA/wl-s026",
+  "status": "PASS_9_OF_9",
+  "checkedAt": "2026-08-29T17:58:46+02:00",
+  "policy": "NO_LOGO_MINIMAL_MARGIN",
+  "generationAudit": {
+    "builtInImageGenOnly": true,
+    "independentCalls": 45,
+    "accepted": 9,
+    "rejected": 36,
+    "canonicalOriginalWasSoleReferenceForEveryCall": true,
+    "filtersUsed": false,
+    "recolorScriptsUsed": false,
+    "masksUsed": false,
+    "cropUsed": false,
+    "resizeUsed": false,
+    "compositeUsed": false,
+    "formatConversionUsed": false,
+    "byteEqualityGeneratorToWorkspace": "45/45",
+    "uniqueAcceptedHashes": "9/9"
+  },
+  "signature": {
+    "result": "PASS",
+    "required": [
+      "complete slim squared casing, lintel and full-height dark left inner reveal",
+      "narrow vertical stiles plus top rail, one and only one broad middle rail and one bottom rail",
+      "exactly two rectangular molded panels: one tall upper panel and one shorter lower panel",
+      "each panel retains stepped inward bevels, 45-degree mitered corners, narrow raised inner lip and flat center",
+      "exactly one circular handle rosette, one straight right-pointing lever and one separate circular key escutcheon below",
+      "no extra panel, rail, seam, groove, molding, hardware, text, badge, brand or logo"
+    ],
+    "nativeDetailInspection": "All nine accepted files preserve the exact two-panel hierarchy, molded profiles, rail/stile construction, left reveal, hardware count and placement, full casing and NO_LOGO policy."
+  },
+  "framing": {
+    "result": "PASS",
+    "referenceMarginsRgb245": [
+      2,
+      5,
+      3,
+      3
+    ],
+    "preferredTargetPixels": "0-6",
+    "normalMaximumPixels": 12,
+    "acceptedMarginsRgb245": {
+      "negro": [
+        8,
+        9,
+        9,
+        2
+      ],
+      "wengue": [
+        8,
+        10,
+        9,
+        0
+      ],
+      "gris-oscuro": [
+        8,
+        9,
+        10,
+        8
+      ],
+      "antracita": [
+        12,
+        11,
+        10,
+        5
+      ],
+      "nogal": [
+        9,
+        10,
+        10,
+        6
+      ],
+      "roble": [
+        3,
+        0,
+        3,
+        0
+      ],
+      "gris-claro": [
+        6,
+        9,
+        9,
+        7
+      ],
+      "natural": [
+        7,
+        11,
+        10,
+        0
+      ],
+      "blanco": [
+        5,
+        10,
+        11,
+        0
+      ]
+    },
+    "decision": "All nine accepted finishes are at or below the 12-pixel hard ceiling. The selected walnut retry reduces its maximum margin to 10 pixels. The selected oak retry measures [3,0,3,0]; native inspection at original detail confirms that its top contact and bottom contact are harmless because both outer corners, the full header, both jambs, the left reveal and both bottom endpoints remain complete and uncropped. No crop or resize was used."
+  },
+  "final": {
+    "result": "PASS",
+    "publicWritten": false,
+    "originalModified": false,
+    "converted": false,
+    "committed": false,
+    "pushed": false
+  }
+}

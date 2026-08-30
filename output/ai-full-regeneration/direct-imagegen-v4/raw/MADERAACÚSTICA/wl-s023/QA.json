@@ -1,0 +1,72 @@
+{
+  "model": "MADERAACÚSTICA/wl-s023",
+  "status": "PASS_9_OF_9",
+  "checkedAt": "2026-08-30T10:37:51+02:00",
+  "policy": "NO_LOGO_MINIMAL_MARGIN",
+  "generationAudit": {
+    "builtInImageGenOnly": true,
+    "independentCalls": 38,
+    "accepted": 9,
+    "rejected": 29,
+    "canonicalOriginalWasSoleReferenceForEveryCall": true,
+    "filtersUsed": false,
+    "recolorScriptsUsed": false,
+    "masksUsed": false,
+    "cropUsed": false,
+    "resizeUsed": false,
+    "compositeUsed": false,
+    "formatConversionUsed": false,
+    "byteEqualityGeneratorToWorkspace": "38/38",
+    "uniqueAcceptedHashes": "9/9"
+  },
+  "signature": {
+    "result": "PASS",
+    "required": [
+      "one plain vertically grained leaf and complete slim squared casing",
+      "exactly one near-black full-height recessed channel at far left",
+      "exactly one continuous very thin warm-gold inset perimeter outline",
+      "the gold outline has exactly one rightward rectangular detour around the hardware",
+      "exactly one circular handle rosette, one straight right-pointing lever and one separate circular key escutcheon",
+      "no extra panel, seam, groove, line, channel, hardware, text, badge, brand or logo"
+    ],
+    "nativeDetailInspection": "All nine accepted files preserve the complete casing, single dark channel, one continuous gold outline and its exact hardware detour, hardware count and placement, and NO_LOGO policy. Native inspection specifically confirmed the full header, both upper corners, jambs, reveal and bottom endpoints remain intact in the new edge-tangent nogal and gris-claro results and the near-full-bleed natural result."
+  },
+  "framing": {
+    "result": "PASS",
+    "referenceMarginsRgb245": [3, 4, 3, 0],
+    "preferredTargetPixels": "0-6",
+    "normalMaximumPixels": 12,
+    "acceptedMarginsRgb245": {
+      "negro":[9,9,11,5],
+      "wengue":[9,10,11,5],
+      "gris-oscuro":[10,8,12,5],
+      "antracita":[10,11,11,5],
+      "nogal":[0,0,3,0],
+      "roble":[10,10,12,0],
+      "gris-claro":[2,0,3,0],
+      "natural":[7,3,8,0],
+      "blanco":[9,10,11,4]
+    },
+    "decision": "All nine finishes meet the absolute 12-pixel maximum. Seven additional direct ImageGen calls reduced the former margin exceptions and replaced the former gris-claro ratio exception without crop, resize or any pixel processing. Nogal measures [0,0,3,0], gris-claro [2,0,3,0] and natural [7,3,8,0]; native inspection confirms the complete uncropped silhouettes despite valid edge tangency."
+  },
+  "aspectRatio": {
+    "result": "PASS",
+    "referenceDimensions": "391x1024",
+    "referenceWidthOverHeight": 0.381836,
+    "absoluteRelativeDeltaMaximumPercent": 1.0,
+    "maximumAcceptedAbsoluteRelativeDeltaPercent": 0.260801,
+    "accepted": {
+      "negro":{"dimensions":"774x2032","absoluteRelativeDeltaPercent":0.243672},
+      "wengue":{"dimensions":"775x2029","absoluteRelativeDeltaPercent":0.032899},
+      "gris-oscuro":{"dimensions":"775x2030","absoluteRelativeDeltaPercent":0.016378},
+      "antracita":{"dimensions":"775x2029","absoluteRelativeDeltaPercent":0.032899},
+      "nogal":{"dimensions":"776x2027","absoluteRelativeDeltaPercent":0.260801},
+      "roble":{"dimensions":"775x2029","absoluteRelativeDeltaPercent":0.032899},
+      "gris-claro":{"dimensions":"775x2030","absoluteRelativeDeltaPercent":0.016378},
+      "natural":{"dimensions":"776x2027","absoluteRelativeDeltaPercent":0.260801},
+      "blanco":{"dimensions":"775x2030","absoluteRelativeDeltaPercent":0.016378}
+    },
+    "decision": "All nine active files are at or below the explicit 1% absolute relative aspect-ratio delta ceiling. The former 779x2019 gris-claro at 1.047213% was preserved as a rejected displaced active and replaced by a direct 775x2030 result at 0.016378%."
+  },
+  "final": {"result":"PASS","publicWritten":false,"originalModified":false,"converted":false,"committed":false,"pushed":false}
+}

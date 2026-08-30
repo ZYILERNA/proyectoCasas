@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-s101b",
+  "policy": "NO_LOGO",
+  "status": "PASS_9_OF_9",
+  "closedAt": "2026-08-30T10:30:11+02:00",
+  "reference": {
+    "path": "public/images/PUERTAS/MADERAACÚSTICA/wl-s101b/original.webp",
+    "role": "sole canonical reference for every ImageGen call",
+    "sha256Before": "6eaf3b306f22e6e36ec1092c22c3047ae1a84ade82d255d0fa344a446e49043c",
+    "sha256After": "6eaf3b306f22e6e36ec1092c22c3047ae1a84ade82d255d0fa344a446e49043c",
+    "unchanged": true,
+    "mirrorPath": "public/images/PUERTAS/MADERAACÚSTICA/door-wl-s101b.webp",
+    "mirrorSha256": "6eaf3b306f22e6e36ec1092c22c3047ae1a84ade82d255d0fa344a446e49043c",
+    "mirrorMatchesOriginal": true,
+    "bytes": 16340,
+    "dimensions": "412x1069",
+    "aspectRatioWidthOverHeight": 0.385407,
+    "marginsRgb245": [5, 4, 2, 5],
+    "logoState": "NO_LOGO"
+  },
+  "generation": {
+    "mode": "built-in-imagegen-independent-call-per-finish-or-retry",
+    "totalIndependentCalls": 15,
+    "acceptedCount": 9,
+    "rejectedCount": 6,
+    "sourceGeneratedImageRoots": [
+      "C:/Users/zhen/.codex/generated_images/01a04ce9-ed50-7a61-9d1d-ebadb75765a6",
+      "C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0"
+    ],
+    "soleReferenceUsedForEveryCall": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "formatConversionUsed": false,
+    "acceptedAssetsAlteredAfterGeneration": false,
+    "rejectedAssetsAlteredAfterGeneration": false
+  },
+  "accepted": [
+    {"finish":"negro","file":"negro.png","generatorId":"exec-209b7392-1c41-497d-a68b-0f44be3b041e","attempt":1,"sha256":"9d4724c6856d0a6aa54b7a8283b4d390c170aa3cb0638ab759e4a2d8a87d1084","bytes":1810421,"dimensions":"778x2020","aspectRatioRelativeDeltaPercent":-0.067,"marginsRgb245":[11,8,7,6],"result":"PASS"},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-500160c5-27c8-4ebe-92b3-68e4028971f2","attempt":1,"sha256":"72834b8a1907b879acaf345d2e5f1b269cfd8f77f687d657b4028f3ab97950e2","bytes":1476676,"dimensions":"779x2020","aspectRatioRelativeDeltaPercent":0.061,"marginsRgb245":[12,7,7,5],"result":"PASS"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-85a0df37-0608-4bd7-846a-a83309ae8b85","attempt":1,"sha256":"70ff422dd435df0ffc7c00394c536f326e83ff52ba534042e43729437799c2e3","bytes":1884563,"dimensions":"778x2020","aspectRatioRelativeDeltaPercent":-0.067,"marginsRgb245":[9,7,7,4],"result":"PASS"},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-82fb0287-bc0d-45b0-8341-9cbae7707c17","attempt":2,"sha256":"a7724c78fd0401667ae8aa75d7e1f5452f0348c35637b84d5a15b4cd34208cd3","bytes":1233591,"dimensions":"779x2020","aspectRatioRelativeDeltaPercent":0.061,"marginsRgb245":[10,10,8,8],"result":"PASS"},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-aad098ed-7cff-4f96-a3bc-cf882ed787eb","attempt":1,"sha256":"b2ebe3a8ca0a60da783f9848be4c072a325441c1afd4cbe81053be0ee03b176c","bytes":1845005,"dimensions":"778x2021","aspectRatioRelativeDeltaPercent":-0.116,"marginsRgb245":[10,7,8,8],"result":"PASS"},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-d0f97b8b-8d0d-426b-a650-1163f2e97215","attempt":2,"sha256":"f29b4a93c5df8d5594e700085ba9e44a4f13fb248fa737f1f7f8676837898649","bytes":1827737,"dimensions":"778x2020","aspectRatioRelativeDeltaPercent":-0.067,"marginsRgb245":[9,7,6,6],"result":"PASS"},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-825cda65-7a9c-425c-9247-1be676363909","attempt":1,"sha256":"d03fdd77dd2ee0e879ebf259efb3583592adab40dd312e7920716860fc94c803","bytes":1410235,"dimensions":"778x2021","aspectRatioRelativeDeltaPercent":-0.116,"marginsRgb245":[10,8,10,8],"result":"PASS"},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-6a05d926-b510-4f15-b819-29f756006335","attempt":5,"sha256":"3d2f68648adcf950b0087df1c089434bf0ae50b9009ce982ae070b643386e957","bytes":1732339,"dimensions":"778x2020","aspectRatioRelativeDeltaPercent":-0.067,"marginsRgb245":[0,0,0,0],"result":"PASS_NATIVE_COMPLETE_FULL_BLEED"},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-4aa0c14d-e9e8-4e02-8fec-519f96ce36d4","attempt":1,"sha256":"2d68e4e0a5b47db03e03564c7a2105b07518ef81e9d15b7bf533f430c7ae5e6f","bytes":1505009,"dimensions":"778x2020","aspectRatioRelativeDeltaPercent":-0.067,"marginsRgb245":[9,8,7,10],"result":"PASS"}
+  ],
+  "rejected": [
+    {"finish":"antracita","attempt":1,"file":"_rejected/antracita-attempt-01.png","generatorId":"exec-f61eb49d-c1b6-444d-b7a8-107df0ef7860","sha256":"f0e21e28200acb010cbe0c090413f446b72ffb949ba7ed6468bc6d8cc6aa8280","bytes":1414976,"dimensions":"778x2020","marginsRgb245":[17,8,18,11],"reason":"broad left and right margins; superseded by tighter complete attempt 2"},
+    {"finish":"roble","attempt":1,"file":"_rejected/roble-attempt-01.png","generatorId":"exec-24afcca4-6670-44c6-9784-33f1d1cb5c36","sha256":"4fce16fe82874b08e8874052b4d110ca1897ddced7408f87c3e62d0ad40e447f","bytes":1964956,"dimensions":"779x2020","marginsRgb245":[13,11,10,6],"reason":"left margin above normal maximum; superseded by attempt 2"},
+    {"finish":"natural","attempt":1,"file":"_rejected/natural-attempt-01.png","generatorId":"exec-63126be0-26c4-4d5f-acd8-a67626c33795","sha256":"2e03952b367b295a02e69db59fb223cab031b61894caa1b41ac2ce1bb1aebbe1","bytes":1585655,"dimensions":"778x2020","marginsRgb245":[14,12,11,9],"reason":"left margin above normal maximum"},
+    {"finish":"natural","attempt":2,"file":"_rejected/natural-attempt-02.png","generatorId":"exec-3499e4fb-3baf-40b2-81ce-17e8b754eca0","sha256":"051fa9f567317c6691e3f7056222638062b6b0b1a53a2b291068cf1fe23921d8","bytes":1532875,"dimensions":"779x2018","marginsRgb245":[11,6,10,0],"reason":"superseded during direct framing retries by the native-complete full-bleed attempt 5"},
+    {"finish":"natural","attempt":3,"file":"_rejected/natural-attempt-03.png","generatorId":"exec-6e2bfce4-a653-4220-9770-75521a768ac4","sha256":"e60fb0bde25b2545a63abe124dfef756767c49250ae5094fa79d3246e0f13988","bytes":1531787,"dimensions":"778x2020","marginsRgb245":[13,8,9,4],"reason":"previous selected result retired byte-for-byte after attempt 5 achieved native-complete [0,0,0,0] framing"},
+    {"finish":"natural","attempt":4,"file":"_rejected/natural-attempt-04.png","generatorId":"exec-b51c43fe-7aa6-45e8-a372-24a214ca5d95","sha256":"49b204fa2c8dc192fe7553eea4144a2c38814a8d774c5b1fa5a53cde789b0f5a","bytes":1472741,"dimensions":"778x2020","marginsRgb245":[15,12,10,0],"reason":"wider left/top margins; superseded by native-complete attempt 5"}
+  ],
+  "qa": {
+    "path": "QA.json",
+    "status": "PASS_9_OF_9",
+    "acceptedAssetCount": 9,
+    "totalIndependentImageGenCalls": 15,
+    "rejectedAttempts": 6,
+    "uniqueAcceptedHashes": 9,
+    "uniqueGeneratorIds": 15,
+    "uniqueWorkspacePaths": 15,
+    "generatorByteEqualityPass": 15,
+    "pngWithC2paMetadataCount": 15,
+    "maximumAcceptedAspectRatioAbsoluteRelativeDeltaPercent": 0.116495,
+    "maximumMeasuredAcceptedMarginRgb245Pixels": 12,
+    "nativeVisualInspection": "PASS"
+  },
+  "promotion": {
+    "converted": false,
+    "staged": false,
+    "publicWritten": false,
+    "originalModified": false,
+    "committed": false,
+    "pushed": false
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 2,
+  "model": "MADERAACÚSTICA/wl-s201",
+  "policy": "NO_LOGO",
+  "status": "PASS_9_OF_9",
+  "closedAt": "2026-08-29T14:35:35+02:00",
+  "reference": {
+    "path": "public/images/PUERTAS/MADERAACÚSTICA/wl-s201/original.webp",
+    "role": "sole canonical reference for every ImageGen call",
+    "sha256Before": "c70db40cd54a7bfc7194fec51e82e498708a6fe160bfe438a4df98e94f8ce5f3",
+    "sha256After": "c70db40cd54a7bfc7194fec51e82e498708a6fe160bfe438a4df98e94f8ce5f3",
+    "unchanged": true,
+    "bytes": 8346,
+    "dimensions": "415x1102",
+    "aspectRatioWidthOverHeight": 0.376588,
+    "marginsRgb245": [4, 1, 3, 2],
+    "logoState": "NO_LOGO"
+  },
+  "generation": {
+    "mode": "built-in-imagegen-independent-call-per-finish-or-retry",
+    "totalIndependentCalls": 25,
+    "acceptedCount": 9,
+    "rejectedCount": 16,
+    "sourceGeneratedImageRoot": "C:/Users/zhen/.codex/generated_images/01a04ce9-ed50-7a61-9d1d-ebadb75765a6",
+    "soleReferenceUsedForEveryCall": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "formatConversionUsed": false,
+    "acceptedAssetsAlteredAfterGeneration": false,
+    "rejectedAssetsAlteredAfterGeneration": false
+  },
+  "accepted": [
+    {"finish":"negro","file":"negro.png","generatorId":"exec-862b2545-8e20-429e-8d00-979ce1f8f4c5","attempt":4,"sha256":"2173466338caf2c853d56958a2e4f752881652e7e6f1753138ca0fd7e122ba24","bytes":1421241,"dimensions":"769x2045","aspectRatioRelativeDeltaPercent":-0.146,"marginsRgb245":[8,6,6,5],"result":"PASS"},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-a046f282-7f10-4ab1-88a1-9fc3cbb4a911","attempt":4,"sha256":"5549495c77860594d4f6a1ce847f5a23ba6f7c8b367f6612605f35cd6b188759","bytes":1788762,"dimensions":"770x2043","aspectRatioRelativeDeltaPercent":0.082,"marginsRgb245":[8,4,6,6],"result":"PASS"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-46879176-461c-4e03-9dfd-8157d58b1951","attempt":2,"sha256":"b813922f2dd97a75c2138f3354d4acf48d7f5e39f7ea0d5dcda823e0ade4a2e3","bytes":1104481,"dimensions":"770x2042","aspectRatioRelativeDeltaPercent":0.131,"marginsRgb245":[10,6,12,7],"result":"PASS"},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-0c6c2d21-361a-4920-b54f-72eab3092a12","attempt":1,"sha256":"418f610803172e41ed6d66c6007a7f32b78e864e411c9e63c495927c37238fa2","bytes":1071371,"dimensions":"770x2042","aspectRatioRelativeDeltaPercent":0.131,"marginsRgb245":[10,6,10,5],"result":"PASS"},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-1e32817d-2530-431a-affa-a2bef0188e89","attempt":1,"sha256":"e5151565b0fa440737a84dcb8f10f5a7bf2b075528c578076bc957c9f1c8a63a","bytes":1488982,"dimensions":"770x2043","aspectRatioRelativeDeltaPercent":0.082,"marginsRgb245":[10,8,11,9],"result":"PASS"},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-bb7011ad-44c5-4e41-acb0-91d3d41b9389","attempt":4,"sha256":"272735ebaaec7f2c1f8fcdfa9461ec53d341a82b4520afe77e661d74129708d0","bytes":1840605,"dimensions":"770x2043","aspectRatioRelativeDeltaPercent":0.082,"marginsRgb245":[12,5,9,5],"result":"PASS"},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-90bac77a-01f4-4677-a26c-69226e4cfea6","attempt":1,"sha256":"e0211797682e5f86106af8119d016d7a7c4930efe7d65d9429ae1ab687b392af","bytes":1376822,"dimensions":"770x2043","aspectRatioRelativeDeltaPercent":0.082,"marginsRgb245":[10,7,9,5],"result":"PASS"},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-7cad578c-10e2-4da4-921d-df6e90772d17","attempt":2,"sha256":"67c67592129abd29af474c5f24ddf23ca50e9ae465b704eaef449802c3d25474","bytes":1476158,"dimensions":"770x2042","aspectRatioRelativeDeltaPercent":0.131,"marginsRgb245":[12,4,11,10],"result":"PASS"},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-806e347e-6645-4748-9eb3-84397054898f","attempt":6,"sha256":"f0b2d1dc0b0520a5350ed73a505e493bc2dab61647392ee433f2051c0eaeacee","bytes":924531,"dimensions":"769x2045","aspectRatioRelativeDeltaPercent":-0.146,"marginsRgb245":[12,0,12,1],"result":"PASS_WITH_DOCUMENTED_FRAMING_EXCEPTION"}
+  ],
+  "framingExceptions": [
+    {"finish":"blanco","detail":"Six independent direct ImageGen calls were inspected. Attempts 1-5 retained 14-50 px on at least one side. Attempt 6 is the only complete faithful result within the 12 px normal ceiling laterally, measuring [12,0,12,1]. Native-detail inspection confirms the whole top lintel, both top corners and the complete silhouette; the RGB<245 top contact is a one-pixel threshold difference from the canonical original's already extreme [4,1,3,2] termination, not a crop or resize."}
+  ],
+  "rejected": [
+    {"finish":"negro","attempt":1,"file":"_rejected/negro-attempt-01.png","generatorId":"exec-2289be46-5a71-42f1-b813-fc22969e766f","sha256":"62e2ed307759803d13798f36569754743e8dc40302cad6b99ed69c01a791ab40","bytes":1542311,"dimensions":"770x2043","marginsRgb245":[15,7,13,8],"reason":"left and right margins above normal maximum; superseded by tighter complete attempt 4"},
+    {"finish":"negro","attempt":2,"file":"_rejected/negro-attempt-02.png","generatorId":"exec-10d573c8-9787-4361-be27-3ad0dc266c2f","sha256":"70210d60eef84b04f6bc0f4e17a8f445cb894c27e0da494521ceeca03651885e","bytes":1156145,"dimensions":"770x2042","marginsRgb245":[17,9,15,8],"reason":"left and right margins above normal maximum"},
+    {"finish":"negro","attempt":3,"file":"_rejected/negro-attempt-03.png","generatorId":"exec-d9ae39de-36e4-45e4-b5b8-c5b89e2edb3e","sha256":"6715641abea2592f734f90540dfdbd60960eec732cd5a6665c120065132b2634","bytes":1058605,"dimensions":"770x2043","marginsRgb245":[59,39,66,39],"reason":"broad padding on every side"},
+    {"finish":"wengue","attempt":1,"file":"_rejected/wengue-attempt-01.png","generatorId":"exec-f1adcbe2-99fb-436d-a8b1-2d2d5427a677","sha256":"ccd6e575ac2ea30e3b725e311b0f221c28408fbc284db6d19036143672e29c01","bytes":1555638,"dimensions":"770x2043","marginsRgb245":[18,9,18,9],"reason":"left and right margins above normal maximum"},
+    {"finish":"wengue","attempt":2,"file":"_rejected/wengue-attempt-02.png","generatorId":"exec-2f806a38-ed96-4eff-bfdd-530ad889af9e","sha256":"b65204b2d9d5a290a8b8fff9236e22c6229d02d5fa62db6947b3092e4e086a5f","bytes":1525476,"dimensions":"770x2041","marginsRgb245":[52,31,49,32],"reason":"broad padding on every side"},
+    {"finish":"wengue","attempt":3,"file":"_rejected/wengue-attempt-03.png","generatorId":"exec-456ad1c0-b783-481b-8bff-aa8a398f3c53","sha256":"76d25658122fa197e5cfd9b97d7bc93e586a8518f889cd37e8f99e3647283242","bytes":1289396,"dimensions":"887x1774","marginsRgb245":[138,12,138,10],"reason":"wrong aspect ratio and very broad side margins"},
+    {"finish":"gris-oscuro","attempt":1,"file":"_rejected/gris-oscuro-attempt-01.png","generatorId":"exec-d5a5ba52-6947-4205-b5b4-fc3680d1cd67","sha256":"e3940b1902a524b6a9cf2eedbf843e4d068c9b2890402f561032648ac812ac20","bytes":1168495,"dimensions":"864x1820","marginsRgb245":[69,8,72,7],"reason":"wrong aspect ratio, broad side margins and panel proportion drift"},
+    {"finish":"roble","attempt":1,"file":"_rejected/roble-attempt-01.png","generatorId":"exec-d2b2f85d-5d7a-40d8-a9ea-2730290de203","sha256":"5016b90796b8c70a070546ab6773fd6e6924ce8a2ee0813e446908eaad96964a","bytes":1691464,"dimensions":"941x1672","marginsRgb245":[68,12,79,9],"reason":"wrong aspect ratio and very broad side margins"},
+    {"finish":"roble","attempt":2,"file":"_rejected/roble-attempt-02.png","generatorId":"exec-6d18e4d9-db0b-48c9-8447-2cfe694e1e76","sha256":"a5d0c0bc5ce30c4a333bd35c3d728f0618d56f640cbc7632ba234be66c2f8517","bytes":1508618,"dimensions":"770x2042","marginsRgb245":[18,8,21,17],"reason":"left, right and bottom margins above normal maximum"},
+    {"finish":"roble","attempt":3,"file":"_rejected/roble-attempt-03.png","generatorId":"exec-3b5b2db5-8af7-4e3b-af8a-3cd87b7dc294","sha256":"0899291555e2e24ecf6a0e416bc8b61dc807b65d557062ba06acebecab0c3c73","bytes":1424572,"dimensions":"890x1768","marginsRgb245":[129,21,123,11],"reason":"wrong aspect ratio and very broad padding"},
+    {"finish":"natural","attempt":1,"file":"_rejected/natural-attempt-01.png","generatorId":"exec-7c986d9a-ff8e-41d9-825d-472ec4618470","sha256":"0e955a5b6c43a291025b8ff731846fd85507ef98e0b9dc8c1903f0fb7056aa40","bytes":1399095,"dimensions":"845x1862","marginsRgb245":[14,6,17,5],"reason":"wrong aspect ratio and side margins above normal maximum"},
+    {"finish":"blanco","attempt":1,"file":"_rejected/blanco-attempt-01.png","generatorId":"exec-565dd905-9bb9-49a8-ba06-136aab1feb54","sha256":"37428762c387f409cf2603cd1f1002d89faa08337fdf36e952b8e0dfa2d5a047","bytes":1110241,"dimensions":"770x2043","marginsRgb245":[15,6,15,6],"reason":"left and right margins above normal maximum"},
+    {"finish":"blanco","attempt":2,"file":"_rejected/blanco-attempt-02.png","generatorId":"exec-715a0960-94f9-4ef7-a2a3-7eaef678f0f4","sha256":"e91479dca7db76f9f9781a50f614a5c48f544be3bd18a3b7598ed90fbabb8ba4","bytes":1011121,"dimensions":"770x2042","marginsRgb245":[14,12,15,15],"reason":"left, right and bottom margins above normal maximum"},
+    {"finish":"blanco","attempt":3,"file":"_rejected/blanco-attempt-03.png","generatorId":"exec-3e1567d9-6a23-4238-a422-06da49d146d6","sha256":"4673d22b005a979dd3053d3860312144e81be03b71e32d7ca472a3e090b1e2b4","bytes":744774,"dimensions":"770x2043","marginsRgb245":[50,40,50,40],"reason":"broad padding on every side"},
+    {"finish":"blanco","attempt":4,"file":"_rejected/blanco-attempt-04.png","generatorId":"exec-3fd019fb-1ae2-497a-a940-1b27bab8622e","sha256":"35219c47ef7804c0da60e38b29be5a0f7ee514bce1e3481f31b9ba879f4e3f1f","bytes":905532,"dimensions":"770x2043","marginsRgb245":[20,10,21,8],"reason":"left and right margins above normal maximum"},
+    {"finish":"blanco","attempt":5,"file":"_rejected/blanco-attempt-05.png","generatorId":"exec-b3754632-8569-4715-8428-130d4ce2f523","sha256":"a17334a424ed00098228b6c1066ed35b03a153a65bff22f6b3c9180eedbbaed0","bytes":957821,"dimensions":"768x2046","marginsRgb245":[18,9,17,20],"reason":"left, right and bottom margins above normal maximum"}
+  ],
+  "qa": {
+    "path": "QA.json",
+    "status": "PASS_9_OF_9",
+    "acceptedAssetCount": 9,
+    "uniqueAcceptedHashes": 9,
+    "maximumAcceptedAspectRatioAbsoluteRelativeDeltaPercent": 0.146
+  },
+  "promotion": {
+    "converted": false,
+    "staged": false,
+    "publicWritten": false,
+    "originalModified": false,
+    "committed": false,
+    "pushed": false
+  }
+}

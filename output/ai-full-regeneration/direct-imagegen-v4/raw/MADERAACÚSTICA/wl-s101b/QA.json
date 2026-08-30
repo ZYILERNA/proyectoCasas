@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-s101b",
+  "policy": "NO_LOGO",
+  "status": "PASS_9_OF_9",
+  "generationMethod": "built-in ImageGen only",
+  "requestedFinishCount": 9,
+  "acceptedAssetCount": 9,
+  "totalIndependentImageGenCalls": 15,
+  "rejectedAttempts": 6,
+  "independence": {
+    "soleReferenceForEveryCall": "public/images/PUERTAS/MADERAACÚSTICA/wl-s101b/original.webp",
+    "referenceSha256Before": "6eaf3b306f22e6e36ec1092c22c3047ae1a84ade82d255d0fa344a446e49043c",
+    "referenceSha256After": "6eaf3b306f22e6e36ec1092c22c3047ae1a84ade82d255d0fa344a446e49043c",
+    "referenceUnchanged": true,
+    "canonicalMirrorSha256": "6eaf3b306f22e6e36ec1092c22c3047ae1a84ade82d255d0fa344a446e49043c",
+    "canonicalMirrorMatchesOriginal": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "conversionUsed": false,
+    "postGenerationPixelProcessingUsed": false
+  },
+  "qaMethod": "Native-detail visual inspection against the sole canonical original plus read-only SHA-256, PNG dimensions, RGB<245 edge-margin, aspect-ratio, unique-hash, JSON and generator-source byte-equality checks.",
+  "acceptanceRules": {
+    "completeOuterFrameAndAllFourCornersVisible": true,
+    "signatureGeometryPreserved": "very tall narrow front-facing flat single leaf; complete square top lintel and two slim side casing posts; deep narrow inner-left reveal; exactly one tall extremely narrow textured-glass rectangle left of center; otherwise completely plain uninterrupted leaf",
+    "hardwarePreserved": "exactly one slim silver right-pointing lever on a round rosette and exactly one separate small round silver key escutcheon below, with canonical placement",
+    "zeroLogoTextBadgeWatermarkOrPseudotext": true,
+    "pureWhiteCatalogBackground": true,
+    "noSceneFloorWallOrCastShadow": true,
+    "noPostGenerationPixelProcessing": true,
+    "aspectRatio": {
+      "canonical": 0.385407,
+      "maximumAcceptedAbsoluteRelativeDeltaPercent": 0.116495,
+      "allAcceptedWithinOnePercent": true
+    },
+    "framingTarget": "0-6 px ideal per side; normal maximum 12 px; complete uncropped geometry required; no crop or resize permitted",
+    "fullBleedNativeInspection": "Natural attempt 5 measures [0,0,0,0]. Native-detail inspection confirms the complete top lintel, full widths of both side posts, all four outer corners, deep left reveal and both lower endpoints; no geometry is cropped."
+  },
+  "assets": [
+    {"finish":"negro","file":"negro.png","generatorId":"exec-209b7392-1c41-497d-a68b-0f44be3b041e","sha256":"9d4724c6856d0a6aa54b7a8283b4d390c170aa3cb0638ab759e4a2d8a87d1084","dimensions":"778x2020","marginsRgb245":[11,8,7,6],"nativeVisualGeometry":"PASS","logo":"ABSENT","result":"PASS"},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-500160c5-27c8-4ebe-92b3-68e4028971f2","sha256":"72834b8a1907b879acaf345d2e5f1b269cfd8f77f687d657b4028f3ab97950e2","dimensions":"779x2020","marginsRgb245":[12,7,7,5],"nativeVisualGeometry":"PASS","logo":"ABSENT","result":"PASS"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-85a0df37-0608-4bd7-846a-a83309ae8b85","sha256":"70ff422dd435df0ffc7c00394c536f326e83ff52ba534042e43729437799c2e3","dimensions":"778x2020","marginsRgb245":[9,7,7,4],"nativeVisualGeometry":"PASS","logo":"ABSENT","result":"PASS"},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-82fb0287-bc0d-45b0-8341-9cbae7707c17","sha256":"a7724c78fd0401667ae8aa75d7e1f5452f0348c35637b84d5a15b4cd34208cd3","dimensions":"779x2020","marginsRgb245":[10,10,8,8],"nativeVisualGeometry":"PASS","logo":"ABSENT","result":"PASS"},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-aad098ed-7cff-4f96-a3bc-cf882ed787eb","sha256":"b2ebe3a8ca0a60da783f9848be4c072a325441c1afd4cbe81053be0ee03b176c","dimensions":"778x2021","marginsRgb245":[10,7,8,8],"nativeVisualGeometry":"PASS","logo":"ABSENT","result":"PASS"},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-d0f97b8b-8d0d-426b-a650-1163f2e97215","sha256":"f29b4a93c5df8d5594e700085ba9e44a4f13fb248fa737f1f7f8676837898649","dimensions":"778x2020","marginsRgb245":[9,7,6,6],"nativeVisualGeometry":"PASS","logo":"ABSENT","result":"PASS"},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-825cda65-7a9c-425c-9247-1be676363909","sha256":"d03fdd77dd2ee0e879ebf259efb3583592adab40dd312e7920716860fc94c803","dimensions":"778x2021","marginsRgb245":[10,8,10,8],"nativeVisualGeometry":"PASS","logo":"ABSENT","result":"PASS"},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-6a05d926-b510-4f15-b819-29f756006335","sha256":"3d2f68648adcf950b0087df1c089434bf0ae50b9009ce982ae070b643386e957","dimensions":"778x2020","marginsRgb245":[0,0,0,0],"nativeVisualGeometry":"PASS_COMPLETE_FULL_BLEED","logo":"ABSENT","result":"PASS"},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-4aa0c14d-e9e8-4e02-8fec-519f96ce36d4","sha256":"2d68e4e0a5b47db03e03564c7a2105b07518ef81e9d15b7bf533f430c7ae5e6f","dimensions":"778x2020","marginsRgb245":[9,8,7,10],"nativeVisualGeometry":"PASS","logo":"ABSENT","result":"PASS"}
+  ],
+  "artifactChecks": {
+    "acceptedPngCount": 9,
+    "rejectedPngCount": 6,
+    "uniqueAcceptedHashes": 9,
+    "uniqueGeneratorIds": 15,
+    "uniqueWorkspacePaths": 15,
+    "generatorSourceByteEqualityPass": 15,
+    "pngWithC2paMetadataCount": 15,
+    "acceptedGeneratorSourceByteEquality": true,
+    "rejectedGeneratorSourceByteEquality": true,
+    "allJsonValid": true,
+    "originalModified": false,
+    "publicFilesModifiedByThisWork": false,
+    "converted": false,
+    "promoted": false,
+    "committed": false,
+    "pushed": false
+  },
+  "summary": {
+    "pass": 9,
+    "fail": 0,
+    "documentedFramingExceptions": 0,
+    "originalModified": false,
+    "publicFilesModified": false
+  }
+}

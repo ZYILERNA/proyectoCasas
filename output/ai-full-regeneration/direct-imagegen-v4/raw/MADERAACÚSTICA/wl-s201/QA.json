@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 2,
+  "model": "MADERAACÚSTICA/wl-s201",
+  "policy": "NO_LOGO",
+  "status": "PASS_9_OF_9",
+  "generationMethod": "built-in ImageGen only",
+  "requestedFinishCount": 9,
+  "acceptedAssetCount": 9,
+  "totalIndependentImageGenCalls": 25,
+  "rejectedAttempts": 16,
+  "independence": {
+    "soleReferenceForEveryCall": "public/images/PUERTAS/MADERAACÚSTICA/wl-s201/original.webp",
+    "referenceSha256Before": "c70db40cd54a7bfc7194fec51e82e498708a6fe160bfe438a4df98e94f8ce5f3",
+    "referenceSha256After": "c70db40cd54a7bfc7194fec51e82e498708a6fe160bfe438a4df98e94f8ce5f3",
+    "referenceUnchanged": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "conversionUsed": false,
+    "postGenerationPixelProcessingUsed": false
+  },
+  "qaMethod": "Native-detail visual inspection against the sole canonical original plus read-only SHA-256, PNG dimensions, RGB<245 edge-margin, aspect-ratio, unique-hash, JSON and generator-source byte-equality checks.",
+  "acceptanceRules": {
+    "completeOuterFrameAndAllFourCornersVisible": true,
+    "signatureGeometryPreserved": "very tall narrow front-facing single door; complete straight square outer casing with two slim side posts and one top lintel; thin dark perimeter reveal; exactly one huge centered tall rectangular recessed/raised panel with a four-sided layered stepped/beveled molding and clean 45-degree miters; plain uninterrupted center field",
+    "hardwarePreserved": "exactly one short black horizontal rectangular lever on a square black backplate at left, pointing right; exactly one separate small black square key escutcheon below; exactly two subtle short dark hinge/reveal marks at the right edge",
+    "zeroLogoTextBadgeWatermarkOrPseudotext": true,
+    "pureWhiteCatalogBackground": true,
+    "noSceneFloorWallOrCastShadow": true,
+    "noPostGenerationPixelProcessing": true,
+    "aspectRatio": {
+      "canonical": 0.376588,
+      "maximumAcceptedAbsoluteRelativeDeltaPercent": 0.146,
+      "allAcceptedWithinOnePercent": true
+    },
+    "framingTarget": "0-6 px ideal per side; normal maximum 12 px; complete uncropped geometry required; no crop or resize permitted",
+    "documentedException": "White attempt 6 measures [12,0,12,1]. After six independent calls it is the only complete faithful white candidate within the 12 px lateral ceiling. Native-detail inspection confirms the full lintel and all four corners. The single RGB<245 top-row contact is accepted as a documented one-pixel threshold variance from the canonical original's already extreme [4,1,3,2] termination, with no crop, resize or pixel processing."
+  },
+  "assets": [
+    {"finish":"negro","file":"negro.png","generatorId":"exec-862b2545-8e20-429e-8d00-979ce1f8f4c5","sha256":"2173466338caf2c853d56958a2e4f752881652e7e6f1753138ca0fd7e122ba24","dimensions":"769x2045","marginsRgb245":[8,6,6,5],"nativeVisualGeometry":"PASS","logo":"ABSENT","result":"PASS"},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-a046f282-7f10-4ab1-88a1-9fc3cbb4a911","sha256":"5549495c77860594d4f6a1ce847f5a23ba6f7c8b367f6612605f35cd6b188759","dimensions":"770x2043","marginsRgb245":[8,4,6,6],"nativeVisualGeometry":"PASS","logo":"ABSENT","result":"PASS"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-46879176-461c-4e03-9dfd-8157d58b1951","sha256":"b813922f2dd97a75c2138f3354d4acf48d7f5e39f7ea0d5dcda823e0ade4a2e3","dimensions":"770x2042","marginsRgb245":[10,6,12,7],"nativeVisualGeometry":"PASS","logo":"ABSENT","result":"PASS"},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-0c6c2d21-361a-4920-b54f-72eab3092a12","sha256":"418f610803172e41ed6d66c6007a7f32b78e864e411c9e63c495927c37238fa2","dimensions":"770x2042","marginsRgb245":[10,6,10,5],"nativeVisualGeometry":"PASS","logo":"ABSENT","result":"PASS"},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-1e32817d-2530-431a-affa-a2bef0188e89","sha256":"e5151565b0fa440737a84dcb8f10f5a7bf2b075528c578076bc957c9f1c8a63a","dimensions":"770x2043","marginsRgb245":[10,8,11,9],"nativeVisualGeometry":"PASS","logo":"ABSENT","result":"PASS"},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-bb7011ad-44c5-4e41-acb0-91d3d41b9389","sha256":"272735ebaaec7f2c1f8fcdfa9461ec53d341a82b4520afe77e661d74129708d0","dimensions":"770x2043","marginsRgb245":[12,5,9,5],"nativeVisualGeometry":"PASS","logo":"ABSENT","result":"PASS"},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-90bac77a-01f4-4677-a26c-69226e4cfea6","sha256":"e0211797682e5f86106af8119d016d7a7c4930efe7d65d9429ae1ab687b392af","dimensions":"770x2043","marginsRgb245":[10,7,9,5],"nativeVisualGeometry":"PASS","logo":"ABSENT","result":"PASS"},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-7cad578c-10e2-4da4-921d-df6e90772d17","sha256":"67c67592129abd29af474c5f24ddf23ca50e9ae465b704eaef449802c3d25474","dimensions":"770x2042","marginsRgb245":[12,4,11,10],"nativeVisualGeometry":"PASS","logo":"ABSENT","result":"PASS"},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-806e347e-6645-4748-9eb3-84397054898f","sha256":"f0b2d1dc0b0520a5350ed73a505e493bc2dab61647392ee433f2051c0eaeacee","dimensions":"769x2045","marginsRgb245":[12,0,12,1],"nativeVisualGeometry":"PASS_COMPLETE_SILHOUETTE","logo":"ABSENT","result":"PASS_WITH_DOCUMENTED_FRAMING_EXCEPTION"}
+  ],
+  "artifactChecks": {
+    "acceptedPngCount": 9,
+    "rejectedPngCount": 16,
+    "uniqueAcceptedHashes": 9,
+    "acceptedGeneratorSourceByteEquality": true,
+    "rejectedGeneratorSourceByteEquality": true,
+    "allJsonValid": true,
+    "originalModified": false,
+    "publicFilesModifiedByThisWork": false,
+    "converted": false,
+    "promoted": false,
+    "committed": false,
+    "pushed": false
+  },
+  "summary": {
+    "pass": 9,
+    "fail": 0,
+    "documentedFramingExceptions": 1,
+    "originalModified": false,
+    "publicFilesModified": false
+  }
+}
