@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-d009",
+  "status": "PASS_9_OF_9",
+  "checkedAt": "2026-08-30T10:31:05+02:00",
+  "policy": "NO_LOGO_MINIMAL_MARGIN_ASPECT_LOCK",
+  "generationAudit": {
+    "builtInImageGenOnly": true,
+    "independentCalls": 38,
+    "accepted": 9,
+    "rejected": 29,
+    "historicalCalls": 9,
+    "revisionCalls": 29,
+    "canonicalOriginalWasSoleReferenceForEveryCall": true,
+    "generatedImagesUsedAsReferences": false,
+    "logoAssetsUsedAsReferences": false,
+    "filtersUsed": false,
+    "recolorScriptsUsed": false,
+    "masksUsed": false,
+    "cropUsed": false,
+    "resizeUsed": false,
+    "compositeUsed": false,
+    "formatConversionUsed": false,
+    "postGenerationPixelEdits": false,
+    "byteEqualityGeneratorToWorkspace": "38/38",
+    "pngSignature": "38/38",
+    "c2paPresence": "38/38",
+    "uniqueGeneratorIds": "38/38",
+    "uniqueWorkspacePaths": "38/38",
+    "uniquePngSha256": "38/38",
+    "revisionPromptRecoveryFromCompleteRollout": "29/29",
+    "revisionPromptRepresentation": "lossless exact templates plus exact substitutions",
+    "revisionPromptSha256Verified": "29/29"
+  },
+  "sourceIntegrity": {
+    "canonicalPath": "public/images/PUERTAS/MADERAACÚSTICA/wl-d009/original.webp",
+    "mirrorPath": "public/images/PUERTAS/MADERAACÚSTICA/door-wl-d009.webp",
+    "canonicalSha256Before": "d79c459f9fa7425befa35be18ae82236db30025617d1a07cf58a38965f51939c",
+    "canonicalSha256After": "d79c459f9fa7425befa35be18ae82236db30025617d1a07cf58a38965f51939c",
+    "mirrorSha256": "d79c459f9fa7425befa35be18ae82236db30025617d1a07cf58a38965f51939c",
+    "canonicalAndMirrorUnchanged": true,
+    "publicWritten": false
+  },
+  "signature": {
+    "result": "PASS",
+    "required": [
+      "straight-on extremely tall narrow single-door assembly with complete layered square casing and top molding",
+      "deep narrow dark recessed reveal immediately inside the far-left frame",
+      "exactly one thin closed symmetrical stepped dark outline on the leaf",
+      "outline has one shorter centered top, two upper vertical drops, two outward upper shoulders, two long vertical sides, two inward lower shoulders, two short lower drops and one shorter centered bottom: exactly 12 crisp right-angle corners",
+      "plain uninterrupted central field with no second outline, panel, groove, seam, glass or ornament",
+      "exactly one dark horizontal lever on one round rosette and exactly one separate round key escutcheon below",
+      "vertical wood grain, complete header, both jambs and both bottom endpoints",
+      "no Wonly mark, logo, brand, badge, text, letters, digits, watermark or pseudotext"
+    ],
+    "nativeDetailInspection": "All nine active PNGs were inspected individually at native resolution. Every finish preserves the closed 12-corner stepped outline, complete casing and left reveal, one lever plus one key escutcheon, plain center and NO_LOGO policy.",
+    "edgeContactDecision": "Natural measures [0,0,0,0]. Native inspection confirms that all outer corners, layered header, far-left reveal, jamb contours and both bottom endpoints remain recognizable and intact; contact is accepted without crop or resize."
+  },
+  "framing": {
+    "result": "PASS",
+    "measurement": "first pixel with any RGB channel below 245; order [left, top, right, bottom]",
+    "referenceMarginsRgbLt245": [4, 5, 3, 1],
+    "preferredTargetPixels": "0-6",
+    "mandatoryMaximumPixels": 12,
+    "maximumAcceptedPixels": 12,
+    "acceptedAboveMaximum": 0,
+    "acceptedMarginsRgbLt245": {
+      "negro": [11, 11, 11, 0],
+      "wengue": [12, 10, 11, 4],
+      "gris-oscuro": [12, 9, 11, 0],
+      "antracita": [11, 11, 11, 0],
+      "nogal": [12, 10, 11, 8],
+      "roble": [12, 7, 11, 0],
+      "gris-claro": [12, 9, 12, 4],
+      "natural": [0, 0, 0, 0],
+      "blanco": [10, 10, 10, 0]
+    },
+    "decision": "All nine active results are at or below the 12-pixel hard ceiling. Canonical geometry and aspect ratio take precedence over a smaller margin."
+  },
+  "aspectRatio": {
+    "result": "PASS",
+    "canonicalDimensions": "399x1069",
+    "canonicalWidthOverHeight": 0.373246024,
+    "maximumAllowedAbsoluteRelativeDeltaPercent": 1.0,
+    "maximumAcceptedAbsoluteRelativeDeltaPercent": 0.192338,
+    "acceptedAboveMaximum": 0,
+    "acceptedDimensions": {
+      "negro": "767x2051",
+      "wengue": "767x2051",
+      "gris-oscuro": "767x2051",
+      "antracita": "766x2052",
+      "nogal": "766x2052",
+      "roble": "767x2051",
+      "gris-claro": "766x2052",
+      "natural": "766x2052",
+      "blanco": "767x2051"
+    },
+    "explicitCorrections": [
+      {
+        "finish": "nogal",
+        "rejectedGeneratorId": "exec-91f4749c-06b5-4423-a073-71607178c7b5",
+        "rejectedDimensions": "847x1857",
+        "rejectedAbsoluteRelativeDeltaPercent": 22.201438,
+        "activeGeneratorId": "exec-b3a6414e-53ce-4a32-8581-022d7a5bfea7",
+        "reason": "The tighter revision canvas was materially too wide; the correct-ratio historical result was restored."
+      },
+      {
+        "finish": "gris-claro",
+        "rejectedGeneratorId": "exec-efdc023c-d4fd-4546-8014-e9f1b289ab83",
+        "rejectedDimensions": "887x1774",
+        "rejectedAbsoluteRelativeDeltaPercent": 33.9599,
+        "activeGeneratorId": "exec-c3f87deb-57d3-4439-a9f3-b0c0883c752f",
+        "reason": "The tighter revision canvas was materially too wide; the correct-ratio historical result was restored."
+      }
+    ]
+  },
+  "activeIntegrity": {
+    "uniqueAcceptedHashes": "9/9",
+    "allModeRgb": true,
+    "allPngWithC2pa": true,
+    "allMatchGeneratorBytes": true,
+    "files": [
+      {"finish":"negro","generatorId":"exec-932bcb42-16b0-4513-b01b-bf99a79ea016","sha256":"37f54c0012878caf25566aa876017aedc5229a5e6e05379050b0a24d3d26b762"},
+      {"finish":"wengue","generatorId":"exec-087a9071-55d6-4614-b738-5ca9e5fa9748","sha256":"c6873d63808b99ee4cf6c81b0e24db78d31d1c51168077ef0c765f3fcdc748c3"},
+      {"finish":"gris-oscuro","generatorId":"exec-cc535f9a-b776-420d-804c-28f57b5a0693","sha256":"c225d577496227bae0f5b9919e26e9626bd1fccbdef146c9d9a53b1471ae5843"},
+      {"finish":"antracita","generatorId":"exec-12322f87-6412-444a-844d-910c2856fd27","sha256":"a1e5b381c6b08355ebf184586379fa378083d9d422a7b5150b93b36e99d8659c"},
+      {"finish":"nogal","generatorId":"exec-b3a6414e-53ce-4a32-8581-022d7a5bfea7","sha256":"03a1c4749eff2766fc55f9908b590a2fbce4427ea817555e5f1d653da7dbe3b0"},
+      {"finish":"roble","generatorId":"exec-8db234dd-dab3-49c9-a92b-532a830d0c66","sha256":"b8832b7d79b74100d8c76153906a75e4b1766021d3950dbcd81ddc8c71f44616"},
+      {"finish":"gris-claro","generatorId":"exec-c3f87deb-57d3-4439-a9f3-b0c0883c752f","sha256":"af0dd151bbf91f7aa99a058c40741bb97536afd0b0801ee5c06c77b5e556fc78"},
+      {"finish":"natural","generatorId":"exec-eb55e577-9bd1-4b01-aeaf-de204134c552","sha256":"3e5696fda262a7036ace09fce40bd1d9584ce9582fb00189914361551f60e15f"},
+      {"finish":"blanco","generatorId":"exec-2d929d22-30f9-4239-bf17-a662c03eba89","sha256":"195082456ab49982ec8df367f1314f12c73c8b8e8ac13e0881e498eb55092bae"}
+    ]
+  },
+  "final": {
+    "result": "PASS",
+    "manifestJsonValid": true,
+    "qaJsonValid": true,
+    "gitDiffCheck": "PASS",
+    "publicWritten": false,
+    "originalModified": false,
+    "converted": false,
+    "promoted": false,
+    "committed": false,
+    "pushed": false
+  }
+}

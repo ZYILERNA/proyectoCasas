@@ -1,0 +1,6 @@
+{
+  "status":"PASS_9_OF_9","model":"MADERAACÚSTICA/wl-d007","activePngCount":9,"uniqueEncodedHashes":9,"visualReviewAtNativeResolution":true,
+  "checks":{"completeLayeredFrame":true,"singleContinuousGoldRectangle":true,"noSteppedInlay":true,"exactlyOneLeverAndCylinder":true,"aspectRatioMatchesReference":true,"finishSemanticsCorrect":true,"zeroLogoTextOrPseudotext":true,"noFilterMaskCropResizeComposite":true,"originalUnchanged":true,"publicUnchanged":true},
+  "referenceAspectRatio":0.373483,"acceptedAspectRatioRange":[0.373964,0.373964],"maximumRelativeAspectDeviationPercent":0.129,
+  "notes":"Two direct attempts were rejected for framing/aspect and preserved under _rejected. The nine active files are byte-for-byte copies of independent built-in ImageGen outputs."
+}

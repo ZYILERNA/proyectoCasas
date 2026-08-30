@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "category": "MADERAACÚSTICA",
+  "model": "wl-d006",
+  "reviewedAt": "2026-08-18T12:26:56.5133718+02:00",
+  "status": "PASS",
+  "summary": "PASS 9/9",
+  "acceptedCount": 9,
+  "expectedCount": 9,
+  "rejectedAttemptCount": 0,
+  "maxAttemptsPerFinish": 2,
+  "method": {
+    "visual": "The canonical original and every accepted workspace PNG were inspected directly with view_image. Frame, flush leaf, single metallic inlay, hardware count and placement, crop, finish separation and forbidden visible content were checked.",
+    "aspectRatio": "The original WebP dimensions and every PNG IHDR were read directly from their byte streams. Accepted outputs were required to stay within 1.0 percent of the source width/height ratio.",
+    "technical": "PNG signature/IHDR, SHA-256, byte size and caBX C2PA/JUMBF presence were read without modifying pixels. Every workspace copy was compared byte-for-byte with its ImageGen artifact.",
+    "sourceIntegrity": "The SHA-256 of original.webp was recorded before and after all calls, matched the category root catalog copy, and git reported no diff or status entry for either path."
+  },
+  "sourceIntegrity": {
+    "path": "public/images/PUERTAS/MADERAACÚSTICA/wl-d006/original.webp",
+    "width": 406,
+    "height": 1093,
+    "aspectRatio": 0.37145471180237877,
+    "sha256Before": "c2571e6b241d623669570cfde14206a6d87be833497a036b5f9c0468ce711f1c",
+    "sha256After": "c2571e6b241d623669570cfde14206a6d87be833497a036b5f9c0468ce711f1c",
+    "rootCatalogSha256": "c2571e6b241d623669570cfde14206a6d87be833497a036b5f9c0468ce711f1c",
+    "unchanged": true,
+    "gitDiff": false
+  },
+  "provenanceChecks": {
+    "builtInImageGenOnly": "PASS",
+    "oneIndependentCallPerFinishOrRetry": "PASS",
+    "soleReferenceWasCanonicalOriginal": "PASS",
+    "generatedOutputReusedAsReference": false,
+    "acceptedPngsWithC2paJumbf": "9/9",
+    "workspaceCopiesByteIdenticalToGeneratorArtifacts": "9/9",
+    "postprocessing": "none",
+    "conversion": "none",
+    "publicPromotion": "none"
+  },
+  "globalChecks": {
+    "allExpectedFinishesPresent": "PASS",
+    "allAcceptedFilesDecodeAsPng": "PASS",
+    "allAcceptedFilesEightBitRgbWithoutAlpha": "PASS",
+    "allAcceptedHashesUnique": "PASS",
+    "allAcceptedAspectRatiosWithinOnePercent": "PASS",
+    "completeDeepBlackFrame": "PASS",
+    "singlePlainFlushLeaf": "PASS",
+    "exactlyOneHorizontalMetallicInlay": "PASS",
+    "singleHandleAndSingleKeyEscutcheon": "PASS",
+    "hardwarePlacementPreserved": "PASS",
+    "straightOnNearEdgeToEdgeFraming": "PASS",
+    "finishSeparation": "PASS",
+    "noLogoTextPseudoTextOrWatermark": "PASS",
+    "noExtraObjectsOrDuplicateHardware": "PASS",
+    "noFilterRecolorMaskCropResizeOrComposite": "PASS"
+  },
+  "aspectRatioReview": {
+    "source": 0.37145471180237877,
+    "acceptanceThresholdPercent": 1.0,
+    "acceptedMaximumDeviationPercent": 0.1201,
+    "accepted": [
+      {
+        "finish": "negro",
+        "dimensions": "764x2057",
+        "aspectRatio": 0.371414682,
+        "deviationPercent": 0.0108,
+        "result": "PASS"
+      },
+      {
+        "finish": "wengue",
+        "dimensions": "764x2058",
+        "aspectRatio": 0.371234208,
+        "deviationPercent": 0.0594,
+        "result": "PASS"
+      },
+      {
+        "finish": "gris-oscuro",
+        "dimensions": "764x2057",
+        "aspectRatio": 0.371414682,
+        "deviationPercent": 0.0108,
+        "result": "PASS"
+      },
+      {
+        "finish": "antracita",
+        "dimensions": "764x2057",
+        "aspectRatio": 0.371414682,
+        "deviationPercent": 0.0108,
+        "result": "PASS"
+      },
+      {
+        "finish": "nogal",
+        "dimensions": "765x2057",
+        "aspectRatio": 0.371900826,
+        "deviationPercent": 0.1201,
+        "result": "PASS"
+      },
+      {
+        "finish": "roble",
+        "dimensions": "764x2057",
+        "aspectRatio": 0.371414682,
+        "deviationPercent": 0.0108,
+        "result": "PASS"
+      },
+      {
+        "finish": "gris-claro",
+        "dimensions": "764x2057",
+        "aspectRatio": 0.371414682,
+        "deviationPercent": 0.0108,
+        "result": "PASS"
+      },
+      {
+        "finish": "natural",
+        "dimensions": "764x2057",
+        "aspectRatio": 0.371414682,
+        "deviationPercent": 0.0108,
+        "result": "PASS"
+      },
+      {
+        "finish": "blanco",
+        "dimensions": "764x2057",
+        "aspectRatio": 0.371414682,
+        "deviationPercent": 0.0108,
+        "result": "PASS"
+      }
+    ]
+  },
+  "visualReview": [
+    {
+      "finish": "negro",
+      "file": "negro.png",
+      "result": "PASS",
+      "notes": "Near-black stained wood remains legible through restrained vertical grain; the complete frame, one inlay and one left-side hardware set are visible."
+    },
+    {
+      "finish": "wengue",
+      "file": "wengue.png",
+      "result": "PASS",
+      "notes": "Deep espresso-brown is visibly distinct from black; the single inlay and original hardware layout remain intact."
+    },
+    {
+      "finish": "gris-oscuro",
+      "file": "gris-oscuro.png",
+      "result": "PASS",
+      "notes": "Dark neutral charcoal-gray grain is clearly separate from black and preserves the full tall-narrow door architecture."
+    },
+    {
+      "finish": "antracita",
+      "file": "antracita.png",
+      "result": "PASS",
+      "notes": "Cool graphite anthracite has a refined fine grain; complete frame, inlay and hardware count and placement pass."
+    },
+    {
+      "finish": "nogal",
+      "file": "nogal.png",
+      "result": "PASS",
+      "notes": "Warm chestnut walnut is distinct from wenge and oak; the plain leaf and all canonical elements remain complete."
+    },
+    {
+      "finish": "roble",
+      "file": "roble.png",
+      "result": "PASS",
+      "notes": "Golden honey oak shows authentic light grain and keeps the same one-inlay design, frame and hardware layout."
+    },
+    {
+      "finish": "gris-claro",
+      "file": "gris-claro.png",
+      "result": "PASS",
+      "notes": "Light cool-neutral gray wood stays distinguishable from white; frame contrast, inlay and hardware remain clear."
+    },
+    {
+      "finish": "natural",
+      "file": "natural.png",
+      "result": "PASS",
+      "notes": "Pale blond natural wood is lighter and less golden than oak; full frame and canonical hardware and inlay pass."
+    },
+    {
+      "finish": "blanco",
+      "file": "blanco.png",
+      "result": "PASS",
+      "notes": "Opaque warm-white wood retains very subtle surface grain and enough tonal separation for the leaf, frame, inlay and hardware to remain legible."
+    }
+  ],
+  "rejections": []
+}

@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 3,
+  "model": "MADERAACÚSTICA/wl-d009",
+  "policy": "NO_LOGO_MINIMAL_MARGIN_ASPECT_LOCK",
+  "status": "PASS_9_OF_9",
+  "closedAt": "2026-08-30T10:31:05+02:00",
+  "revision": "AI-only minimum-margin review with canonical 399:1069 aspect-ratio lock",
+  "reference": {
+    "path": "public/images/PUERTAS/MADERAACÚSTICA/wl-d009/original.webp",
+    "mirrorPath": "public/images/PUERTAS/MADERAACÚSTICA/door-wl-d009.webp",
+    "role": "sole canonical visual reference for every ImageGen call",
+    "sha256Before": "d79c459f9fa7425befa35be18ae82236db30025617d1a07cf58a38965f51939c",
+    "sha256After": "d79c459f9fa7425befa35be18ae82236db30025617d1a07cf58a38965f51939c",
+    "mirrorSha256": "d79c459f9fa7425befa35be18ae82236db30025617d1a07cf58a38965f51939c",
+    "unchanged": true,
+    "mirrorUnchanged": true,
+    "dimensions": "399x1069",
+    "mode": "RGB",
+    "aspectRatioWidthOverHeight": 0.373246024,
+    "marginsRgbLt245": [4, 5, 3, 1],
+    "marginsRgbLt250": [0, 4, 2, 1]
+  },
+  "generationMode": "built-in-imagegen-independent-call-per-finish-or-retry",
+  "sourcePolicy": "All 38 calls used only public/images/PUERTAS/MADERAACÚSTICA/wl-d009/original.webp. No generated result, logo asset, mask, or auxiliary image was referenced.",
+  "copyPolicy": "Every active and retained rejected PNG is one untouched byte-for-byte copy of its built-in ImageGen artifact. Five displaced historical selections and every rejected revision call are retained exactly once.",
+  "pixelProcessing": "none",
+  "filtersOrRecoloringUsed": false,
+  "masksUsed": false,
+  "croppingOrResizingUsed": false,
+  "compositingUsed": false,
+  "formatConversionUsed": false,
+  "acceptedAssetsAlteredAfterGeneration": false,
+  "workspaceCopiesMatchGeneratorBytes": "38/38",
+  "pngSignaturePass": "38/38",
+  "c2paPresencePass": "38/38",
+  "callCounts": {
+    "historicalCalls": 9,
+    "minimumMarginRevisionCalls": 29,
+    "totalIndependentImageGenCalls": 38,
+    "activeAccepted": 9,
+    "retainedRejected": 29,
+    "activeFromHistoricalSet": 4,
+    "activeFromRevisionSet": 5,
+    "displacedHistoricalSelections": 5,
+    "rejectedRevisionCalls": 24
+  },
+  "marginPolicy": {
+    "measurement": "first pixel with any RGB channel below threshold; order [left, top, right, bottom]",
+    "preferredTargetPixels": "0-6",
+    "mandatoryMaximumPixels": 12,
+    "contactAtZeroAllowed": true,
+    "contactCondition": "all outer corners, header molding, left reveal, both jambs and both bottom endpoints remain recognizable and intact at native resolution",
+    "maximumAcceptedRgbLt245Margin": 12,
+    "acceptedAboveMandatoryMaximum": 0
+  },
+  "aspectRatioPolicy": {
+    "canonicalWidthOverHeight": 0.373246024,
+    "maximumAbsoluteRelativeDeltaPercent": 1.0,
+    "maximumAcceptedAbsoluteRelativeDeltaPercent": 0.192338,
+    "acceptedAboveMaximum": 0,
+    "selectionPrecedence": "canonical aspect and intact model geometry override a smaller measured white margin",
+    "explicitWideRejections": [
+      {
+        "generatorId": "exec-91f4749c-06b5-4423-a073-71607178c7b5",
+        "finish": "nogal",
+        "dimensions": "847x1857",
+        "absoluteRelativeDeltaPercent": 22.201438
+      },
+      {
+        "generatorId": "exec-efdc023c-d4fd-4546-8014-e9f1b289ab83",
+        "finish": "gris-claro",
+        "dimensions": "887x1774",
+        "absoluteRelativeDeltaPercent": 33.9599
+      }
+    ]
+  },
+  "generatorRoots": {
+    "historical": "C:/Users/zhen/.codex/generated_images/01a0141b-34f9-7973-89ee-9e3a7b2748f7",
+    "revision": "C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0"
+  },
+  "promptAudit": {
+    "path": "PROMPTS.md",
+    "historicalCallsDocumented": "9/9",
+    "revisionEventsRecoveredFromCompleteRollout": "29/29",
+    "revisionPromptsLossless": true,
+    "representation": "exact templates plus exact per-call substitutions and SHA-256 hashes"
+  },
+  "accepted": [
+    {"finish":"negro","file":"negro.png","generatorId":"exec-932bcb42-16b0-4513-b01b-bf99a79ea016","generatorRoot":"historical","sha256":"37f54c0012878caf25566aa876017aedc5229a5e6e05379050b0a24d3d26b762","bytes":1456342,"dimensions":"767x2051","mode":"RGB","aspectRatioAbsoluteRelativeDeltaPercent":0.192338,"marginsRgbLt245":[11,11,11,0],"marginsRgbLt250":[9,10,9,0],"promptFamily":"historical-H","result":"PASS"},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-087a9071-55d6-4614-b738-5ca9e5fa9748","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:26:05.883Z","promptFamily":"revision-B","promptSha256":"fd415eefc0768a6c72e2a91f3addae951e2100057954021cd7fefba39d005acb","sha256":"c6873d63808b99ee4cf6c81b0e24db78d31d1c51168077ef0c765f3fcdc748c3","bytes":1834948,"dimensions":"767x2051","mode":"RGB","aspectRatioAbsoluteRelativeDeltaPercent":0.192338,"marginsRgbLt245":[12,10,11,4],"marginsRgbLt250":[12,8,9,0],"result":"PASS"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-cc535f9a-b776-420d-804c-28f57b5a0693","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:26:22.536Z","promptFamily":"revision-B","promptSha256":"f66aca032e894351a7cc019502de776a632608d4140c58bd1c18e908bee990d4","sha256":"c225d577496227bae0f5b9919e26e9626bd1fccbdef146c9d9a53b1471ae5843","bytes":1737643,"dimensions":"767x2051","mode":"RGB","aspectRatioAbsoluteRelativeDeltaPercent":0.192338,"marginsRgbLt245":[12,9,11,0],"marginsRgbLt250":[12,9,11,0],"result":"PASS"},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-12322f87-6412-444a-844d-910c2856fd27","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:26:40.246Z","promptFamily":"revision-B","promptSha256":"11b601f7d971c96feb40116e597ea0875c04ca63f45ffe90fde7851d8ef58ce9","sha256":"a1e5b381c6b08355ebf184586379fa378083d9d422a7b5150b93b36e99d8659c","bytes":1715148,"dimensions":"766x2052","mode":"RGB","aspectRatioAbsoluteRelativeDeltaPercent":0.012947,"marginsRgbLt245":[11,11,11,0],"marginsRgbLt250":[11,11,9,0],"result":"PASS"},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-b3a6414e-53ce-4a32-8581-022d7a5bfea7","generatorRoot":"historical","sha256":"03a1c4749eff2766fc55f9908b590a2fbce4427ea817555e5f1d653da7dbe3b0","bytes":1839807,"dimensions":"766x2052","mode":"RGB","aspectRatioAbsoluteRelativeDeltaPercent":0.012947,"marginsRgbLt245":[12,10,11,8],"marginsRgbLt250":[11,8,9,5],"promptFamily":"historical-H","selectionNote":"retained because the revision candidate was 22.201438% wider than the canonical aspect ratio","result":"PASS"},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-8db234dd-dab3-49c9-a92b-532a830d0c66","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:36:08.093Z","promptFamily":"revision-F","promptSha256":"82ef507a4462c58d2f295c4d85cf5758aa6d304996d2534785fe43844ff07c78","sha256":"b8832b7d79b74100d8c76153906a75e4b1766021d3950dbcd81ddc8c71f44616","bytes":1784439,"dimensions":"767x2051","mode":"RGB","aspectRatioAbsoluteRelativeDeltaPercent":0.192338,"marginsRgbLt245":[12,7,11,0],"marginsRgbLt250":[12,7,9,0],"result":"PASS"},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-c3f87deb-57d3-4439-a9f3-b0c0883c752f","generatorRoot":"historical","sha256":"af0dd151bbf91f7aa99a058c40741bb97536afd0b0801ee5c06c77b5e556fc78","bytes":1646453,"dimensions":"766x2052","mode":"RGB","aspectRatioAbsoluteRelativeDeltaPercent":0.012947,"marginsRgbLt245":[12,9,12,4],"marginsRgbLt250":[12,7,10,0],"promptFamily":"historical-H","selectionNote":"retained because the revision candidate was 33.9599% wider than the canonical aspect ratio","result":"PASS"},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-eb55e577-9bd1-4b01-aeaf-de204134c552","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:36:47.223Z","promptFamily":"revision-F","promptSha256":"f95bf90111e6c9c856b8aac8695fcd1037c89ee360066fc61526a7071f240604","sha256":"3e5696fda262a7036ace09fce40bd1d9584ce9582fb00189914361551f60e15f","bytes":1791488,"dimensions":"766x2052","mode":"RGB","aspectRatioAbsoluteRelativeDeltaPercent":0.012947,"marginsRgbLt245":[0,0,0,0],"marginsRgbLt250":[0,0,0,0],"edgeContactNote":"native inspection confirms complete header corners, layered casing, left reveal, both jambs and both bottom endpoints","result":"PASS"},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-2d929d22-30f9-4239-bf17-a662c03eba89","generatorRoot":"historical","sha256":"195082456ab49982ec8df367f1314f12c73c8b8e8ac13e0881e498eb55092bae","bytes":1061474,"dimensions":"767x2051","mode":"RGB","aspectRatioAbsoluteRelativeDeltaPercent":0.192338,"marginsRgbLt245":[10,10,10,0],"marginsRgbLt250":[10,8,9,0],"promptFamily":"historical-H","result":"PASS"}
+  ],
+  "rejected": [
+    {"finish":"antracita","file":"_rejected/antracita-previous-selected.png","generatorId":"exec-afbeaf3c-0c3b-441c-89dd-e397b986231f","generatorRoot":"historical","sha256":"e709452353e421dd6c83c686af6fad55f5f8ed854ea99e2bb12a3e4debf9752f","bytes":1732134,"dimensions":"766x2052","aspectRatioAbsoluteRelativeDeltaPercent":0.012947,"marginsRgbLt245":[12,11,12,6],"promptFamily":"historical-H","reason":"displaced by a valid revision result with a smaller maximum margin"},
+    {"finish":"antracita","file":"_rejected/antracita-r1-exec-89ede49c-33db-4389-9c3a-d93251ef7b86.png","generatorId":"exec-89ede49c-33db-4389-9c3a-d93251ef7b86","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:20:14.205Z","promptFamily":"revision-A","promptSha256":"d778a71f04553e677fca32e03747c9655f42396582091803e8f10b096a2db94f","sha256":"a1a6f0001060ba54dc607fe77b1bfc7150a08ab95d21c34eee531f13e0763571","bytes":1495789,"dimensions":"767x2051","aspectRatioAbsoluteRelativeDeltaPercent":0.192338,"marginsRgbLt245":[12,11,12,8],"reason":"superseded by a later native-visual selection with tighter framing"},
+    {"finish":"blanco","file":"_rejected/blanco-r1-exec-8dc30b66-4e4c-4f2c-99f0-d8550424dd9a.png","generatorId":"exec-8dc30b66-4e4c-4f2c-99f0-d8550424dd9a","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:21:45.373Z","promptFamily":"revision-A","promptSha256":"438dc6d9fa773b159949721ea44c752d9533afd9ca0c12987d86d9ef1da6b813","sha256":"8f610e27b1ec1874bcfaeba831eb0f056695b18bc66f3555faade186898fb330","bytes":991321,"dimensions":"767x2051","aspectRatioAbsoluteRelativeDeltaPercent":0.192338,"marginsRgbLt245":[15,10,14,7],"reason":"mandatory 12-pixel margin ceiling exceeded"},
+    {"finish":"blanco","file":"_rejected/blanco-r2-exec-4872c96c-d6c2-4933-8347-80803cf312a8.png","generatorId":"exec-4872c96c-d6c2-4933-8347-80803cf312a8","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:28:38.709Z","promptFamily":"revision-B","promptSha256":"f6e8b7b057023b7223bd9fe171ced581d9bf4c37d646c0dcbc1fa62143730118","sha256":"a7f1e7de1532f173809e31e6ab9ab7d3147f82b2a88c438aab77c536e288b9e6","bytes":1187295,"dimensions":"766x2053","aspectRatioAbsoluteRelativeDeltaPercent":0.035769,"marginsRgbLt245":[11,10,11,0],"reason":"the retained historical result is tighter while preserving the same model identity"},
+    {"finish":"gris-claro","file":"_rejected/gris-claro-r1-exec-d21b49d7-c4b8-4004-8686-8ccd277a1031.png","generatorId":"exec-d21b49d7-c4b8-4004-8686-8ccd277a1031","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:21:08.105Z","promptFamily":"revision-A","promptSha256":"f0283ac4a57de6a347b2c93d8918f97217a58f1c0c210ac3277ad89edb1fa40b","sha256":"49037104c8ad6188cddbbca55fc33b5e6426791a20ef9ca0cc7259fedfafdcc5","bytes":1517577,"dimensions":"766x2052","aspectRatioAbsoluteRelativeDeltaPercent":0.012947,"marginsRgbLt245":[15,11,16,5],"reason":"mandatory 12-pixel margin ceiling exceeded"},
+    {"finish":"gris-claro","file":"_rejected/gris-claro-r2-exec-efdc023c-d4fd-4546-8014-e9f1b289ab83.png","generatorId":"exec-efdc023c-d4fd-4546-8014-e9f1b289ab83","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:27:48.037Z","promptFamily":"revision-B","promptSha256":"e19a85090000e164e56828ab17474d4af7137c382319ae803ecf26734f569252","sha256":"246e35340b0a4bc760cc9fb8f54ba5f4c213ae1a5b4d35f3bdee1d858c3cfd34","bytes":1536504,"dimensions":"887x1774","aspectRatioAbsoluteRelativeDeltaPercent":33.9599,"marginsRgbLt245":[10,8,10,0],"reason":"canonical aspect-ratio delta exceeded 1%; margin cannot override distorted canvas geometry"},
+    {"finish":"gris-oscuro","file":"_rejected/gris-oscuro-previous-selected.png","generatorId":"exec-9656920c-d112-40e3-9644-25f6037c10a2","generatorRoot":"historical","sha256":"ff2a59095832e560fdcaed5836bf7f4d0f15c5a120ca9f892db2732bb50e85dd","bytes":1778277,"dimensions":"767x2051","aspectRatioAbsoluteRelativeDeltaPercent":0.192338,"marginsRgbLt245":[14,9,14,7],"promptFamily":"historical-H","reason":"displaced by a valid revision result within the 12-pixel ceiling"},
+    {"finish":"gris-oscuro","file":"_rejected/gris-oscuro-r1-exec-5a48a38c-0276-4790-adfc-a46aca42ef17.png","generatorId":"exec-5a48a38c-0276-4790-adfc-a46aca42ef17","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:19:56.663Z","promptFamily":"revision-A","promptSha256":"7f4477dd0ed76a256737d9a3573049414fad97ccd28cf8f1623810322c8e2a8e","sha256":"6bcd53210789ff70543ca30ced7fec8586918331c8503531f574ba36fdd374af","bytes":1465395,"dimensions":"767x2051","aspectRatioAbsoluteRelativeDeltaPercent":0.192338,"marginsRgbLt245":[14,11,13,0],"reason":"mandatory 12-pixel margin ceiling exceeded"},
+    {"finish":"natural","file":"_rejected/natural-previous-selected.png","generatorId":"exec-83945222-e0e4-43c7-9dd1-5ea18b083aae","generatorRoot":"historical","sha256":"f712d025344b62610917f1c71e14376c37f21bdfa02355fbfc55983b96c887ac","bytes":1709997,"dimensions":"767x2051","aspectRatioAbsoluteRelativeDeltaPercent":0.192338,"marginsRgbLt245":[15,11,13,7],"promptFamily":"historical-H","reason":"displaced by a valid zero-margin revision result"},
+    {"finish":"natural","file":"_rejected/natural-r1-exec-af4f72da-315c-4c33-b418-e51294bae7cd.png","generatorId":"exec-af4f72da-315c-4c33-b418-e51294bae7cd","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:21:27.319Z","promptFamily":"revision-A","promptSha256":"348d70d878c87dd4ed9cb945815d9da7b35f1c54131b43f39442d0c76defff5b","sha256":"2a2a60a1242bd4a12b0718d9e6c83bb981220eaa15dd44046e99e1290ba8c421","bytes":1731140,"dimensions":"766x2052","aspectRatioAbsoluteRelativeDeltaPercent":0.012947,"marginsRgbLt245":[14,11,13,0],"reason":"mandatory 12-pixel margin ceiling exceeded"},
+    {"finish":"natural","file":"_rejected/natural-r2-exec-3ca4959a-bda3-4e9a-9b89-acfc8f1fb900.png","generatorId":"exec-3ca4959a-bda3-4e9a-9b89-acfc8f1fb900","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:28:19.793Z","promptFamily":"revision-B","promptSha256":"12f0dc645a2277644e4e79701455ef1a1059cba940b1b02e047607ff80eaaa54","sha256":"1b7c3bc0365d5a719f7687ff36813b23cf68e458e144928e4976a9e772415daf","bytes":1649729,"dimensions":"882x1784","aspectRatioAbsoluteRelativeDeltaPercent":32.458107,"marginsRgbLt245":[18,14,18,5],"reason":"canonical aspect-ratio delta exceeded 1% and margin ceiling exceeded"},
+    {"finish":"natural","file":"_rejected/natural-r3-exec-6c725995-018d-410d-91c7-4216b0147cd6.png","generatorId":"exec-6c725995-018d-410d-91c7-4216b0147cd6","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:31:12.336Z","promptFamily":"revision-C","promptSha256":"4f123214c1eef4ccbc7aa02d4c78a22481e67442bf74a15a3805357ed58bbf0d","sha256":"d671b70558cd60e8c1e49bd5bd65713d8d0d6773edea908e43d32a4ae67bf2df","bytes":1668829,"dimensions":"941x1672","aspectRatioAbsoluteRelativeDeltaPercent":50.785007,"marginsRgbLt245":[0,0,0,0],"reason":"canonical aspect-ratio delta exceeded 1%; edge contact cannot override distorted canvas geometry"},
+    {"finish":"natural","file":"_rejected/natural-r4-exec-f4b1ea4d-aced-418f-bd31-e61079a6ac12.png","generatorId":"exec-f4b1ea4d-aced-418f-bd31-e61079a6ac12","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:33:21.716Z","promptFamily":"revision-D","promptSha256":"366ac77925087c8c12e38eb139e1c7a26d1f244ef996c77e82c5562b0e7022d3","sha256":"4d9e88e7caf2f731ac6e06b3024aafe056cd11cd394e487706de92523cdde40b","bytes":1651715,"dimensions":"886x1775","aspectRatioAbsoluteRelativeDeltaPercent":33.733489,"marginsRgbLt245":[0,0,0,0],"reason":"canonical aspect-ratio delta exceeded 1%"},
+    {"finish":"natural","file":"_rejected/natural-r5-exec-9d13429b-0329-48aa-9954-ee4c5a2bd8a0.png","generatorId":"exec-9d13429b-0329-48aa-9954-ee4c5a2bd8a0","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:34:45.218Z","promptFamily":"revision-E","promptSha256":"29b771f5194b094153fe943e994b0c426bdc46f7b0c118adb14bbc55eb3236c1","sha256":"43f00287ab95b8b2738c9acfdc406327f76fdee52454b523c2a5ebb87b0eaf65","bytes":1787416,"dimensions":"766x2052","aspectRatioAbsoluteRelativeDeltaPercent":0.012947,"marginsRgbLt245":[14,11,13,4],"reason":"mandatory 12-pixel margin ceiling exceeded"},
+    {"finish":"natural","file":"_rejected/natural-r6-exec-a9aaadde-dc9f-4249-b6c1-ad05fc844c17.png","generatorId":"exec-a9aaadde-dc9f-4249-b6c1-ad05fc844c17","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:36:29.222Z","promptFamily":"revision-F","promptSha256":"f95bf90111e6c9c856b8aac8695fcd1037c89ee360066fc61526a7071f240604","sha256":"ad8ab662baf7c392169b9f86c13b43b2c51d17c43d6d22f89ece81558c226d37","bytes":1700079,"dimensions":"766x2052","aspectRatioAbsoluteRelativeDeltaPercent":0.012947,"marginsRgbLt245":[12,11,12,7],"reason":"superseded by a valid zero-margin native-visual selection"},
+    {"finish":"negro","file":"_rejected/negro-r1-exec-b17d5262-1bb5-4743-bcae-a381a38ace09.png","generatorId":"exec-b17d5262-1bb5-4743-bcae-a381a38ace09","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:19:17.676Z","promptFamily":"revision-A","promptSha256":"a7ff296b71a46c4a7da4bb7a862ca2bd12a75bb0d9007c0dccc17b01e22e7a97","sha256":"4d0be187a7b936f0ec8b3befb12dfcdd7e1dc63a17c121e858dafef05275a407","bytes":1536923,"dimensions":"766x2052","aspectRatioAbsoluteRelativeDeltaPercent":0.012947,"marginsRgbLt245":[13,10,13,6],"reason":"mandatory 12-pixel margin ceiling exceeded"},
+    {"finish":"negro","file":"_rejected/negro-r2-exec-c745c4a3-bd2d-435c-a288-9230b611077e.png","generatorId":"exec-c745c4a3-bd2d-435c-a288-9230b611077e","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:25:26.296Z","promptFamily":"revision-B","promptSha256":"858ee05d56f3b16acce218849dd67b1ac9379290c84ad3f10f261c5c446b85e7","sha256":"26bc237f04f76e422bf1074665a0ea444d9bccc0902f7eaae191bd7d937cb21b","bytes":1705419,"dimensions":"766x2052","aspectRatioAbsoluteRelativeDeltaPercent":0.012947,"marginsRgbLt245":[13,7,14,0],"reason":"mandatory 12-pixel margin ceiling exceeded"},
+    {"finish":"negro","file":"_rejected/negro-r3-exec-8bc5faa8-f44a-442f-8545-bf3ccd7e5a42.png","generatorId":"exec-8bc5faa8-f44a-442f-8545-bf3ccd7e5a42","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:30:35.173Z","promptFamily":"revision-C","promptSha256":"bfac0c9679b823976ba6c2936b1d07673b62ceace111b3173b384c3bb4b53f3e","sha256":"1f77b32f9a912c79fcccfa56172ee588daba795b88713118b3205af72636bcc0","bytes":1534127,"dimensions":"766x2052","aspectRatioAbsoluteRelativeDeltaPercent":0.012947,"marginsRgbLt245":[12,7,12,0],"reason":"the retained historical result has a smaller maximum margin and stronger native geometry"},
+    {"finish":"nogal","file":"_rejected/nogal-r1-exec-9fd80e09-d995-4a1d-9db2-e5558c6d586e.png","generatorId":"exec-9fd80e09-d995-4a1d-9db2-e5558c6d586e","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:20:32.207Z","promptFamily":"revision-A","promptSha256":"1a107b300db06fe2d33d7ca6a991adfa3cf29e263c39b4e775c2482d31795c37","sha256":"4650e12fe7c17f95e58ba363d73453b30914b1b539c6279c12311e1d974bf0b8","bytes":1827112,"dimensions":"766x2052","aspectRatioAbsoluteRelativeDeltaPercent":0.012947,"marginsRgbLt245":[14,11,12,0],"reason":"mandatory 12-pixel margin ceiling exceeded"},
+    {"finish":"nogal","file":"_rejected/nogal-r2-exec-91f4749c-06b5-4423-a073-71607178c7b5.png","generatorId":"exec-91f4749c-06b5-4423-a073-71607178c7b5","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:27:13.740Z","promptFamily":"revision-B","promptSha256":"cd8375e18e71942ada72d4fee4f413b63a2cef62be90714a21c5d44ae2e56c61","sha256":"dee95fd00dc685c7786db77f1a39f9ba6f1dc19c0c3b6fcf7c0e282b3ea36803","bytes":1859018,"dimensions":"847x1857","aspectRatioAbsoluteRelativeDeltaPercent":22.201438,"marginsRgbLt245":[11,10,10,0],"reason":"canonical aspect-ratio delta exceeded 1%; margin cannot override distorted canvas geometry"},
+    {"finish":"roble","file":"_rejected/roble-previous-selected.png","generatorId":"exec-e0ffbdb5-6ceb-4fdc-9a08-0029353e39b2","generatorRoot":"historical","sha256":"3aec96d1c3bf55381194b40eb3148ee9b17729c68ccda887dcbc782056918203","bytes":1820390,"dimensions":"766x2052","aspectRatioAbsoluteRelativeDeltaPercent":0.012947,"marginsRgbLt245":[14,11,13,7],"promptFamily":"historical-H","reason":"displaced by a valid revision result within the 12-pixel ceiling"},
+    {"finish":"roble","file":"_rejected/roble-r1-exec-48fb6b0b-dd2d-44c2-a547-d594487ba0e4.png","generatorId":"exec-48fb6b0b-dd2d-44c2-a547-d594487ba0e4","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:20:49.081Z","promptFamily":"revision-A","promptSha256":"d6cbbcff2df6a35bf4645030b089f078f5626790411df413417c5d84071d4449","sha256":"b723fa54424ee1b5c1a5fd2c90a88411c73ee20372053123591fcff71ea79375","bytes":1886309,"dimensions":"766x2052","aspectRatioAbsoluteRelativeDeltaPercent":0.012947,"marginsRgbLt245":[16,11,16,6],"reason":"mandatory 12-pixel margin ceiling exceeded"},
+    {"finish":"roble","file":"_rejected/roble-r2-exec-ffd9ed29-9498-491c-858d-29488d6f7027.png","generatorId":"exec-ffd9ed29-9498-491c-858d-29488d6f7027","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:27:32.566Z","promptFamily":"revision-B","promptSha256":"721ca3c097237dc06d305ba1851e7a0742a27fe1d3cf12c8dd0d101bcff278c6","sha256":"8472f83535589790d270004c496a3a86a35c3d333fd74bdfd77da6712e5c2161","bytes":1881187,"dimensions":"767x2051","aspectRatioAbsoluteRelativeDeltaPercent":0.192338,"marginsRgbLt245":[13,9,12,0],"reason":"mandatory 12-pixel margin ceiling exceeded"},
+    {"finish":"roble","file":"_rejected/roble-r3-exec-44801362-28f8-4ae6-b47a-8e515166bc09.png","generatorId":"exec-44801362-28f8-4ae6-b47a-8e515166bc09","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:30:54.952Z","promptFamily":"revision-C","promptSha256":"bc8397f099e52d2463c19e93cd8b5d79c2735a437ff0b79b15c96ba6a25918a6","sha256":"905063d47d88508f0665218a1cdf0b56b214a2202350859caa4688900510ab9f","bytes":1890790,"dimensions":"836x1880","aspectRatioAbsoluteRelativeDeltaPercent":19.138804,"marginsRgbLt245":[0,0,0,0],"reason":"canonical aspect-ratio delta exceeded 1%"},
+    {"finish":"roble","file":"_rejected/roble-r4-exec-391e100e-4c84-4583-a22d-4f59d95e1993.png","generatorId":"exec-391e100e-4c84-4583-a22d-4f59d95e1993","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:33:00.989Z","promptFamily":"revision-D","promptSha256":"7f0a7b2e7c5100b7d4d660093d5868336de5ac8cca9172292e090beefbf8fb37","sha256":"89e756cd2b2a01406645243501f364aef4ea42e5abb136b4fd5d13de4b750bcd","bytes":1800599,"dimensions":"886x1775","aspectRatioAbsoluteRelativeDeltaPercent":33.733489,"marginsRgbLt245":[0,0,0,0],"reason":"canonical aspect-ratio delta exceeded 1%"},
+    {"finish":"roble","file":"_rejected/roble-r5-exec-1a357ce2-96d8-4a4d-8450-0a6a3148361b.png","generatorId":"exec-1a357ce2-96d8-4a4d-8450-0a6a3148361b","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:34:24.835Z","promptFamily":"revision-E","promptSha256":"049861759b91b1c64964425e7ec5be6c1b046909ad9fd554afd0ef8db15c987c","sha256":"cf8ba5ac59879542c40d9b6b66de3ef90d0f6a2f892d4d5fd5ad17e79f324a05","bytes":1852754,"dimensions":"767x2051","aspectRatioAbsoluteRelativeDeltaPercent":0.192338,"marginsRgbLt245":[14,12,12,0],"reason":"mandatory 12-pixel margin ceiling exceeded"},
+    {"finish":"roble","file":"_rejected/roble-r6-exec-3b3724dd-364b-4020-ae69-e685ed4fdee4.png","generatorId":"exec-3b3724dd-364b-4020-ae69-e685ed4fdee4","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:35:50.567Z","promptFamily":"revision-F","promptSha256":"82ef507a4462c58d2f295c4d85cf5758aa6d304996d2534785fe43844ff07c78","sha256":"15529ab32a15c45a86c65c269726a76896a2f3e943ed5c75b04bf5ea2228cc60","bytes":1858268,"dimensions":"766x2052","aspectRatioAbsoluteRelativeDeltaPercent":0.012947,"marginsRgbLt245":[12,11,11,0],"reason":"superseded by a valid direct result with a smaller top margin"},
+    {"finish":"wengue","file":"_rejected/wengue-previous-selected.png","generatorId":"exec-70d4d7e2-8ff3-4fe9-8ece-83967d61e26a","generatorRoot":"historical","sha256":"e1445c60fdd52ba87669c0672ef51c2437eb3498c66ffae73fc6145a1c92cfb5","bytes":1706709,"dimensions":"767x2051","aspectRatioAbsoluteRelativeDeltaPercent":0.192338,"marginsRgbLt245":[16,11,16,8],"promptFamily":"historical-H","reason":"displaced by a valid revision result within the 12-pixel ceiling"},
+    {"finish":"wengue","file":"_rejected/wengue-r1-exec-98cd2987-915b-466c-a557-790d28450d37.png","generatorId":"exec-98cd2987-915b-466c-a557-790d28450d37","generatorRoot":"revision","eventTimestampUtc":"2026-08-29T14:19:38.249Z","promptFamily":"revision-A","promptSha256":"9762f722ac735461b25f3bd4765cc17c0d88cd2a7118a29e5e5a85bb8e5606e0","sha256":"a00cdc2541291dc3d1d31798333dfdd150c6c8b448eff16f19c60162926bde03","bytes":1515258,"dimensions":"766x2052","aspectRatioAbsoluteRelativeDeltaPercent":0.012947,"marginsRgbLt245":[12,10,11,4],"reason":"superseded after native visual comparison by the selected revision result"}
+  ],
+  "qa": {
+    "path": "QA.json",
+    "status": "PASS_9_OF_9",
+    "acceptedAssetCount": 9,
+    "totalIndependentImageGenCalls": 38,
+    "rejectedAttempts": 29,
+    "uniqueCallIds": "38/38",
+    "uniqueWorkspacePaths": "38/38",
+    "uniquePngSha256": "38/38",
+    "generatorByteEqualityPass": "38/38",
+    "maximumAcceptedAspectRatioAbsoluteRelativeDeltaPercent": 0.192338,
+    "maximumMeasuredMarginRgbLt245Pixels": 12,
+    "nativeVisualInspection": "PASS"
+  },
+  "promotion": {
+    "converted": false,
+    "staged": false,
+    "publicWritten": false,
+    "originalModified": false,
+    "committed": false,
+    "pushed": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "status":"PASS_9_OF_9",
+  "model":"MADERAACÚSTICA/wl-d001",
+  "activePngCount":9,
+  "uniqueEncodedHashes":9,
+  "visualReviewAtNativeResolution":true,
+  "checks":{"completeBeveledFrame":true,"flatLeafNoInventedPanels":true,"verticalGrainPreserved":true,"bottomWhiteRematePreserved":true,"exactlyOneLeverAndCylinder":true,"aspectRatioMatchesReference":true,"finishSemanticsCorrect":true,"zeroLogoTextOrPseudotext":true,"noFilterMaskCropResizeComposite":true,"originalUnchanged":true,"publicUnchanged":true},
+  "referenceAspectRatio":0.370540,
+  "acceptedAspectRatioRange":[0.369365,0.371054],
+  "maximumRelativeAspectDeviationPercent":0.317,
+  "notes":"Four superseded direct attempts are retained under _rejected and excluded from the active set. The nine active files are byte-for-byte copies of their independent built-in ImageGen PNG outputs."
+}

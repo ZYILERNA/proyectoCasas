@@ -1,0 +1,12 @@
+{
+  "status":"PASS_9_OF_9",
+  "model":"MADERAACÚSTICA/wl-d005",
+  "activePngCount":9,
+  "uniqueEncodedHashes":9,
+  "visualReviewAtNativeResolution":true,
+  "checks":{"completeLayeredFrame":true,"flatLeafAndVerticalGrainPreserved":true,"singleSteppedGoldInlayPreserved":true,"exactlyOneLeverAndCylinder":true,"aspectRatioMatchesReference":true,"finishSemanticsCorrect":true,"zeroLogoTextOrPseudotext":true,"noFilterMaskCropResizeComposite":true,"originalUnchanged":true,"publicUnchanged":true},
+  "referenceAspectRatio":0.373505,
+  "acceptedAspectRatioRange":[0.372931,0.373964],
+  "maximumRelativeAspectDeviationPercent":0.154,
+  "notes":"All nine active PNGs passed on the first independent ImageGen attempt and are byte-for-byte copies of the generator outputs."
+}
