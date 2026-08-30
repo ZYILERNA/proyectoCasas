@@ -1,0 +1,460 @@
+{
+  "schema": "wonly-direct-imagegen-full-resolution-qa/v4",
+  "model": "MADERAACÚSTICA/wl-d023",
+  "auditedAt": "2026-08-29T15:05:01.739Z",
+  "auditMode": "Native-resolution visual inspection plus read-only RGB<245/RGB<250 bounds, hashes and byte comparisons; no pixel mutation.",
+  "reference": {
+    "path": "public/images/PUERTAS/MADERAACÚSTICA/wl-d023/original.webp",
+    "width": 396,
+    "height": 1066,
+    "aspectRatio": 0.371482,
+    "bytes": 83090,
+    "sha256Before": "7b4a61ab4f38dde6f428dd0e609afea1f326d16875439433ce9c7e9aecdefd60",
+    "sha256After": "7b4a61ab4f38dde6f428dd0e609afea1f326d16875439433ce9c7e9aecdefd60",
+    "rootCatalogSha256": "7b4a61ab4f38dde6f428dd0e609afea1f326d16875439433ce9c7e9aecdefd60",
+    "marginsRgb245": [
+      3,
+      2,
+      0,
+      1
+    ],
+    "marginsRgb250": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "unchanged": true
+  },
+  "criteria": {
+    "nativeVisualInspectionRequired": true,
+    "targetMarginsRgb245": "0-6 px per side",
+    "normalMaximumMarginPx": 12,
+    "zeroContactAllowedOnlyWhenCompleteSilhouetteConfirmed": true,
+    "canonicalAspectApproximately": 0.3715,
+    "completeLayeredFrameVisible": true,
+    "exactFullHeightLeftHourglassWedge": true,
+    "oneHorizontalSeamOnlyFromApexToRight": true,
+    "oneLeverAndOneSeparateEscutcheon": true,
+    "finishCoherentAcrossFrameLeafAndInsert": true,
+    "noLogoTextOrPseudotext": true,
+    "marginDiagnostic": "Exterior subject bounds measured read-only at RGB<245 and RGB<250; no crop or resize performed."
+  },
+  "variants": [
+    {
+      "finish": "negro",
+      "file": "negro.png",
+      "generatorId": "exec-f89c9cac-632b-49ec-9832-74f0c1f72f99",
+      "selectionPhase": "minimum-margin-revision",
+      "width": 764,
+      "height": 2057,
+      "bytes": 1817915,
+      "aspectRatio": 0.371415,
+      "aspectDeviationPct": 0.02,
+      "marginsRgb245": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "marginsRgb250": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "9ef4182402b0fbcebe2f792a8cfe33bf9123db343a57b92337c02220fcb63c5c",
+      "decodedRgbSha256": "4dd68de727369490346e151732a21c179356dc168cdabb9ccb8c7a7f26727508",
+      "nativeVisualInspection": true,
+      "completeLayeredFrame": "PASS",
+      "leftHourglassWedge": "PASS",
+      "singleSeamFromApex": "PASS",
+      "leverAndSeparateEscutcheon": "PASS",
+      "finishCoherenceAcrossFrameLeafAndInsert": "PASS",
+      "logoPolicy": "PASS",
+      "proportion": "PASS",
+      "framing": "PASS",
+      "status": "PASS",
+      "note": "Intentional four-edge contact; native inspection confirms complete outer frame, all layered moldings, corners and bottom endpoints."
+    },
+    {
+      "finish": "wengue",
+      "file": "wengue.png",
+      "generatorId": "exec-558d5d80-89d0-4c7a-b893-39c8d801438f",
+      "selectionPhase": "previous-package-retained",
+      "width": 765,
+      "height": 2055,
+      "bytes": 2280106,
+      "aspectRatio": 0.372263,
+      "aspectDeviationPct": 0.21,
+      "marginsRgb245": [
+        12,
+        8,
+        12,
+        5
+      ],
+      "marginsRgb250": [
+        10,
+        4,
+        11,
+        0
+      ],
+      "sha256": "49b58f8375554c7a148239621ec1f30d3aa55fdb97854099eac0eb96e1f48231",
+      "decodedRgbSha256": "39501761ece38fb23566cd8de7b05ab0cee622520ec1a904c3d4dc910db39154",
+      "nativeVisualInspection": true,
+      "completeLayeredFrame": "PASS",
+      "leftHourglassWedge": "PASS",
+      "singleSeamFromApex": "PASS",
+      "leverAndSeparateEscutcheon": "PASS",
+      "finishCoherenceAcrossFrameLeafAndInsert": "PASS",
+      "logoPolicy": "PASS",
+      "proportion": "PASS",
+      "framing": "PASS",
+      "status": "PASS",
+      "note": "Retained previous selection; maximum RGB<245 margin is the allowed 12 px."
+    },
+    {
+      "finish": "gris-oscuro",
+      "file": "gris-oscuro.png",
+      "generatorId": "exec-882520cf-fe00-457a-b85f-a9f729673ec2",
+      "selectionPhase": "previous-package-retained",
+      "width": 765,
+      "height": 2056,
+      "bytes": 1968542,
+      "aspectRatio": 0.372082,
+      "aspectDeviationPct": 0.16,
+      "marginsRgb245": [
+        11,
+        7,
+        10,
+        0
+      ],
+      "marginsRgb250": [
+        10,
+        0,
+        8,
+        0
+      ],
+      "sha256": "88e5d181ef9848ce94a27ec1dee678e381393eeb41a55f2cd4a368816ae8fdb2",
+      "decodedRgbSha256": "7f7451dd5103e6c1c1db07a8a704cb4a4b7d4075f9961176394b93126c614e08",
+      "nativeVisualInspection": true,
+      "completeLayeredFrame": "PASS",
+      "leftHourglassWedge": "PASS",
+      "singleSeamFromApex": "PASS",
+      "leverAndSeparateEscutcheon": "PASS",
+      "finishCoherenceAcrossFrameLeafAndInsert": "PASS",
+      "logoPolicy": "PASS",
+      "proportion": "PASS",
+      "framing": "PASS",
+      "status": "PASS",
+      "note": "Retained previous selection; maximum RGB<245 margin is 11 px."
+    },
+    {
+      "finish": "antracita",
+      "file": "antracita.png",
+      "generatorId": "exec-6b989005-c506-4fc0-9183-bf70c3356749",
+      "selectionPhase": "minimum-margin-revision",
+      "width": 765,
+      "height": 2055,
+      "bytes": 2078056,
+      "aspectRatio": 0.372263,
+      "aspectDeviationPct": 0.21,
+      "marginsRgb245": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "marginsRgb250": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sha256": "ab4dabfeaacbc9253607b343fffb7f92f33d00fe693ca1016ff4c379874667e8",
+      "decodedRgbSha256": "2f94ca2470ad6724f996fb20c3742cb61db6b9b19b6b26ea570a0239fafd130c",
+      "nativeVisualInspection": true,
+      "completeLayeredFrame": "PASS",
+      "leftHourglassWedge": "PASS",
+      "singleSeamFromApex": "PASS",
+      "leverAndSeparateEscutcheon": "PASS",
+      "finishCoherenceAcrossFrameLeafAndInsert": "PASS",
+      "logoPolicy": "PASS",
+      "proportion": "PASS",
+      "framing": "PASS",
+      "status": "PASS",
+      "note": "Intentional four-edge contact; native inspection confirms complete outer frame, all layered moldings, corners and bottom endpoints."
+    },
+    {
+      "finish": "nogal",
+      "file": "nogal.png",
+      "generatorId": "exec-d2f35789-8bfe-479e-b1b1-b8acca204136",
+      "selectionPhase": "minimum-margin-revision",
+      "width": 764,
+      "height": 2057,
+      "bytes": 2077699,
+      "aspectRatio": 0.371415,
+      "aspectDeviationPct": 0.02,
+      "marginsRgb245": [
+        12,
+        7,
+        11,
+        0
+      ],
+      "marginsRgb250": [
+        10,
+        5,
+        9,
+        0
+      ],
+      "sha256": "d9364f0b25a77910932bcc5a2218ef86b1c88f752083e155bb393a537ecf59e9",
+      "decodedRgbSha256": "5b5589ae5115848b619ee55542c0325e1cb406b5f2c958450f3ab6af7b091a34",
+      "nativeVisualInspection": true,
+      "completeLayeredFrame": "PASS",
+      "leftHourglassWedge": "PASS",
+      "singleSeamFromApex": "PASS",
+      "leverAndSeparateEscutcheon": "PASS",
+      "finishCoherenceAcrossFrameLeafAndInsert": "PASS",
+      "logoPolicy": "PASS",
+      "proportion": "PASS",
+      "framing": "PASS",
+      "status": "PASS",
+      "note": "Maximum RGB<245 margin is the allowed 12 px; complete silhouette and endpoints visible."
+    },
+    {
+      "finish": "roble",
+      "file": "roble.png",
+      "generatorId": "exec-6cc531ec-d438-46a6-9d41-4185dbc3362e",
+      "selectionPhase": "previous-package-retained",
+      "width": 765,
+      "height": 2056,
+      "bytes": 2393530,
+      "aspectRatio": 0.372082,
+      "aspectDeviationPct": 0.16,
+      "marginsRgb245": [
+        9,
+        4,
+        10,
+        0
+      ],
+      "marginsRgb250": [
+        8,
+        0,
+        8,
+        0
+      ],
+      "sha256": "ecd751951e9ea0eb23ba6f373208566ecac4c1afc307b9a081acd2f4560ccd8c",
+      "decodedRgbSha256": "aa3185f6020c494cf234153946040383525e2d6b8a44499d26c397983246f854",
+      "nativeVisualInspection": true,
+      "completeLayeredFrame": "PASS",
+      "leftHourglassWedge": "PASS",
+      "singleSeamFromApex": "PASS",
+      "leverAndSeparateEscutcheon": "PASS",
+      "finishCoherenceAcrossFrameLeafAndInsert": "PASS",
+      "logoPolicy": "PASS",
+      "proportion": "PASS",
+      "framing": "PASS",
+      "status": "PASS",
+      "note": "Retained previous selection; maximum RGB<245 margin is 10 px."
+    },
+    {
+      "finish": "gris-claro",
+      "file": "gris-claro.png",
+      "generatorId": "exec-8f3b9113-613e-49e5-9fcc-81ff58f2985f",
+      "selectionPhase": "minimum-margin-revision",
+      "width": 764,
+      "height": 2058,
+      "bytes": 2047473,
+      "aspectRatio": 0.371234,
+      "aspectDeviationPct": 0.07,
+      "marginsRgb245": [
+        5,
+        2,
+        3,
+        0
+      ],
+      "marginsRgb250": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "sha256": "d667db1bf9b95483a3a0d96cf51b40c5dabf521b5fa8def6a544515d9593ce4e",
+      "decodedRgbSha256": "1d2bdb877f856251e8b9482db99a56a46362d6ca3bccfcfa264379d95165e68a",
+      "nativeVisualInspection": true,
+      "completeLayeredFrame": "PASS",
+      "leftHourglassWedge": "PASS",
+      "singleSeamFromApex": "PASS",
+      "leverAndSeparateEscutcheon": "PASS",
+      "finishCoherenceAcrossFrameLeafAndInsert": "PASS",
+      "logoPolicy": "PASS",
+      "proportion": "PASS",
+      "framing": "PASS",
+      "status": "PASS",
+      "note": "Near-target placement on every side; maximum RGB<245 margin is 5 px."
+    },
+    {
+      "finish": "natural",
+      "file": "natural.png",
+      "generatorId": "exec-624d32c8-5fc9-4fd8-a407-a46caa86b297",
+      "selectionPhase": "previous-package-retained",
+      "width": 765,
+      "height": 2055,
+      "bytes": 1916602,
+      "aspectRatio": 0.372263,
+      "aspectDeviationPct": 0.21,
+      "marginsRgb245": [
+        11,
+        5,
+        10,
+        5
+      ],
+      "marginsRgb250": [
+        11,
+        5,
+        8,
+        0
+      ],
+      "sha256": "3f00ececb488574b72a122f734a2cb0061d7296777800f0ed85b2e2cf64eda1f",
+      "decodedRgbSha256": "93e6a353367a6c65126d6e4552e670594ab37c6de6d561b5edcb7ee12d1b3f08",
+      "nativeVisualInspection": true,
+      "completeLayeredFrame": "PASS",
+      "leftHourglassWedge": "PASS",
+      "singleSeamFromApex": "PASS",
+      "leverAndSeparateEscutcheon": "PASS",
+      "finishCoherenceAcrossFrameLeafAndInsert": "PASS",
+      "logoPolicy": "PASS",
+      "proportion": "PASS",
+      "framing": "PASS",
+      "status": "PASS",
+      "note": "Retained previous selection; maximum RGB<245 margin is 11 px."
+    },
+    {
+      "finish": "blanco",
+      "file": "blanco.png",
+      "generatorId": "exec-903dc473-5af4-4443-bc41-741c674187fc",
+      "selectionPhase": "previous-package-retained",
+      "width": 765,
+      "height": 2055,
+      "bytes": 1294905,
+      "aspectRatio": 0.372263,
+      "aspectDeviationPct": 0.21,
+      "marginsRgb245": [
+        10,
+        4,
+        11,
+        5
+      ],
+      "marginsRgb250": [
+        10,
+        4,
+        11,
+        5
+      ],
+      "sha256": "1b64cf06dca2a04e8ad902de7f1f95ecbdf7fd77c73174c5113e11ec7b0f35c4",
+      "decodedRgbSha256": "05af8d66c07896a383c1668914a9b128dac474156068c0911f5dcce35cd81a3f",
+      "nativeVisualInspection": true,
+      "completeLayeredFrame": "PASS",
+      "leftHourglassWedge": "PASS",
+      "singleSeamFromApex": "PASS",
+      "leverAndSeparateEscutcheon": "PASS",
+      "finishCoherenceAcrossFrameLeafAndInsert": "PASS",
+      "logoPolicy": "PASS",
+      "proportion": "PASS",
+      "framing": "PASS",
+      "status": "PASS",
+      "note": "Retained previous selection; pale geometry remains legible and maximum RGB<245 margin is 11 px."
+    }
+  ],
+  "retiredReview": [
+    {
+      "finish": "negro",
+      "generatorId": "exec-bf28f88c-e12c-4499-9dd9-e408de8d1b1b",
+      "file": "_rejected/negro-previous-selected-before-minimum-margin-revision.png",
+      "marginsRgb245": [
+        13,
+        7,
+        10,
+        5
+      ],
+      "sha256": "813c953b64b52d091ff7627a77e32a4a0af79c688532b86f1696e3157a4fcf46",
+      "status": "RETIRED",
+      "reason": "Displaced by selected four-edge-contact source-only revision."
+    },
+    {
+      "finish": "antracita",
+      "generatorId": "exec-1535e916-64e7-46ec-9b12-1037c221ce35",
+      "file": "_rejected/antracita-previous-selected-before-minimum-margin-revision.png",
+      "marginsRgb245": [
+        15,
+        12,
+        10,
+        0
+      ],
+      "sha256": "66f5020fbd9e8db81cd8c7630c058ffc337ba929364d639932128429cd94ea36",
+      "status": "RETIRED",
+      "reason": "Displaced by selected four-edge-contact source-only revision."
+    },
+    {
+      "finish": "nogal",
+      "generatorId": "exec-25d9ecf2-7282-4669-896c-5a4ee04e8ddb",
+      "file": "_rejected/nogal-previous-selected-before-minimum-margin-revision.png",
+      "marginsRgb245": [
+        14,
+        6,
+        11,
+        0
+      ],
+      "sha256": "4e2749cf1b3a7c5e3910de86c382a7a7ab0deabc38b96fd9973022dc7fcf5cd0",
+      "status": "RETIRED",
+      "reason": "Displaced by selected source-only revision with all sides at or below 12 px."
+    },
+    {
+      "finish": "gris-claro",
+      "generatorId": "exec-10d6241a-6e75-49c7-9686-09eff2993d6d",
+      "file": "_rejected/gris-claro-previous-selected-before-minimum-margin-revision.png",
+      "marginsRgb245": [
+        13,
+        4,
+        11,
+        4
+      ],
+      "sha256": "998b95145a1dfe0a547b3774e0cc517c562e873d0845712879b60c92d5e7d7a4",
+      "status": "RETIRED",
+      "reason": "Displaced by selected near-target source-only revision."
+    }
+  ],
+  "provenance": {
+    "totalBuiltInImageGenCalls": 13,
+    "previousPackageCalls": 9,
+    "minimumMarginRevisionCalls": 4,
+    "activeSelected": 9,
+    "retainedPreviousSelections": 5,
+    "retiredPreviousSelections": 4,
+    "historicalRejectedAttempts": 0,
+    "newRejectedAttempts": 0,
+    "generatorToWorkspaceByteEquality": "13/13",
+    "uniqueGeneratorIds": "13/13",
+    "uniqueEncodedHashesAcrossAllCalls": "13/13",
+    "uniqueActiveEncodedHashes": "9/9",
+    "canonicalOriginalOnlyReferenceForEveryCall": true,
+    "generatedOutputUsedAsReference": false,
+    "filtersMasksCropResizeConversionCompositePixelProcessing": false,
+    "publicWrite": false
+  },
+  "summary": {
+    "result": "PASS 9/9",
+    "nativeVisualPass": 9,
+    "nativeVisualFail": 0,
+    "maximumActiveRgb245MarginPx": 12,
+    "maximumAbsoluteActiveAspectDeviationPct": 0.21,
+    "deliberateFourEdgeContact": [
+      "negro",
+      "antracita"
+    ],
+    "noMarginExceptionAbove12": true,
+    "packageComplete": true,
+    "promotionPerformed": false,
+    "requiredFollowUp": null
+  }
+}

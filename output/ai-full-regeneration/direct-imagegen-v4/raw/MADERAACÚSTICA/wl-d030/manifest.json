@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 2,
+  "model": "MADERAACÚSTICA/wl-d030",
+  "policy": "NO_LOGO",
+  "status": "PASS_9_OF_9",
+  "originalPackageCompletedAt": "2026-08-18T11:11:45.6938591+02:00",
+  "minimumMarginRevisionClosedAt": "2026-08-29T15:33:49+02:00",
+  "aspectRatioRevisionClosedAt": "2026-08-30T10:42:18+02:00",
+  "reference": {
+    "path": "public/images/PUERTAS/MADERAACÚSTICA/wl-d030/original.webp",
+    "role": "sole canonical reference for every independent ImageGen call",
+    "sha256Before": "243c6ae994d2b2ed8e5b8125c2eff296d1cec1ba5ff1c0ae8470e6d6d487c126",
+    "sha256After": "243c6ae994d2b2ed8e5b8125c2eff296d1cec1ba5ff1c0ae8470e6d6d487c126",
+    "unchanged": true,
+    "bytes": 35882,
+    "dimensions": "405x1092",
+    "aspectRatioWidthOverHeight": 0.370879,
+    "marginsRgb245": [2, 4, 2, 0],
+    "marginsRgb250": [0, 0, 1, 0],
+    "logoState": "NO_LOGO",
+    "protectedMotif": "three connected thin cool-silver line segments and one solid cool-gray/silver pointed curved insert at the lower-middle junction",
+    "catalogMirrorPath": "public/images/PUERTAS/MADERAACÚSTICA/door-wl-d030.webp",
+    "catalogMirrorSha256": "243c6ae994d2b2ed8e5b8125c2eff296d1cec1ba5ff1c0ae8470e6d6d487c126",
+    "catalogMirrorUnchanged": true
+  },
+  "generation": {
+    "mode": "built-in-imagegen-independent-call-per-finish-or-retry",
+    "totalIndependentCalls": 19,
+    "originalPackageCalls": 12,
+    "minimumMarginRevisionCalls": 4,
+    "aspectRatioRevisionCalls": 3,
+    "acceptedCount": 9,
+    "rejectedUniqueAttemptCount": 10,
+    "sourceGeneratedImageRoots": [
+      "C:/Users/zhen/.codex/generated_images/01a00f56-71ad-7482-836c-98b9f7848fca",
+      "C:/Users/zhen/.codex/generated_images/01a0141b-7e8b-7910-a15c-76e022f46e3c",
+      "C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0"
+    ],
+    "soleReferenceUsedForEveryCall": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrScriptedRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "formatConversionUsed": false,
+    "postGenerationPixelProcessingUsed": false,
+    "acceptedAssetsAlteredAfterGeneration": false,
+    "rejectedAssetsAlteredAfterGeneration": false,
+    "workspaceTransfer": "byte-identical file copy only"
+  },
+  "framingPolicy": {
+    "idealMarginsRgb245PerSide": "0-6 px",
+    "normalMaximumMarginsRgb245PerSide": 12,
+    "zeroPixelContactAllowed": "only when the complete native silhouette, corners, stepped moldings and lower endpoints remain visible; canonical original already reaches the bottom row",
+    "minimumMarginRevisionScope": ["antracita", "blanco"],
+    "aspectRatioRevisionScope": ["wengue", "gris-oscuro", "gris-claro"],
+    "retainedUnchangedAfterAllRevisions": ["negro", "antracita", "nogal", "roble", "natural", "blanco"],
+    "normalMaximumViolationsAfterRevision": 0,
+    "framingExceptions": []
+  },
+  "aspectRatioPolicy": {
+    "canonicalWidthOverHeight": 0.370879,
+    "maximumAcceptedRelativeDeltaPercent": 1,
+    "acceptedViolationsAfterRevision": 0,
+    "legacyAspectAcceptanceAllowed": false
+  },
+  "accepted": [
+    {"finish":"negro","file":"negro.png","generatorId":"exec-0193235b-f7d0-431b-a7af-ec892264bfbb","generatorOutput":"C:/Users/zhen/.codex/generated_images/01a00f56-71ad-7482-836c-98b9f7848fca/exec-0193235b-f7d0-431b-a7af-ec892264bfbb.png","attempt":1,"sha256":"86f60001781ea2b9f99dfce9697b53aa5ba0cd01a77d55f34af655d578bac713","bytes":1666944,"dimensions":"763x2060","aspectRatioRelativeDeltaPercent":-0.13,"marginsRgb245":[8,8,10,0],"marginsRgb250":[8,3,8,0],"byteIdenticalToGeneratorOutput":true,"result":"PASS"},
+    {"finish":"wengue","file":"wengue.png","generatorId":"exec-8613c02b-3c5a-4dbc-a1c9-5012d4bd0914","generatorOutput":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-8613c02b-3c5a-4dbc-a1c9-5012d4bd0914.png","attempt":2,"sha256":"b4edd5a77f5439da5fa115e9e106c39b91627388751392b2347350d522dfd8af","bytes":1700855,"dimensions":"764x2059","aspectRatioRelativeDeltaPercent":0.05,"marginsRgb245":[5,6,6,0],"byteIdenticalToGeneratorOutput":true,"result":"PASS"},
+    {"finish":"gris-oscuro","file":"gris-oscuro.png","generatorId":"exec-26159f3a-0781-4311-bdce-2a5c7a42793c","generatorOutput":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-26159f3a-0781-4311-bdce-2a5c7a42793c.png","attempt":2,"sha256":"36ef0f94a933550885404a58e017603d9e8b99df0916c3b0a84837c882b5232e","bytes":1474193,"dimensions":"764x2059","aspectRatioRelativeDeltaPercent":0.05,"marginsRgb245":[11,10,10,0],"byteIdenticalToGeneratorOutput":true,"result":"PASS_WITHIN_NORMAL_MAXIMUM"},
+    {"finish":"antracita","file":"antracita.png","generatorId":"exec-cb1c9d35-7cb1-47e8-847e-684e875eaa29","generatorOutput":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-cb1c9d35-7cb1-47e8-847e-684e875eaa29.png","attempt":2,"sha256":"7b5d0929be7ca7b1269ae55e50f15f665f40a6af9c287b81f4507af1719a0924","bytes":1440219,"dimensions":"764x2059","aspectRatioRelativeDeltaPercent":0.05,"marginsRgb245":[0,0,0,0],"marginsRgb250":[0,0,0,0],"byteIdenticalToGeneratorOutput":true,"result":"PASS_CANONICAL_NEAR_FULL_BLEED_CONTACT"},
+    {"finish":"nogal","file":"nogal.png","generatorId":"exec-1e65c891-26d1-4367-bc44-e1ed171e36a1","generatorOutput":"C:/Users/zhen/.codex/generated_images/01a00f56-71ad-7482-836c-98b9f7848fca/exec-1e65c891-26d1-4367-bc44-e1ed171e36a1.png","attempt":2,"sha256":"118f39c2839dae0910e3001258a81672b1bb1df794d10facd924ec49073ae1bd","bytes":1862098,"dimensions":"764x2059","aspectRatioRelativeDeltaPercent":0.05,"marginsRgb245":[8,9,5,0],"marginsRgb250":[6,4,3,0],"byteIdenticalToGeneratorOutput":true,"result":"PASS"},
+    {"finish":"roble","file":"roble.png","generatorId":"exec-fec1c889-01da-4b46-9217-631fb2c436ca","generatorOutput":"C:/Users/zhen/.codex/generated_images/01a00f56-71ad-7482-836c-98b9f7848fca/exec-fec1c889-01da-4b46-9217-631fb2c436ca.png","attempt":1,"sha256":"4a3bc2fa93827b0fdd5beb6cc282d2883f1bfa5f67afe679cef35a4e7350baee","bytes":1807450,"dimensions":"763x2060","aspectRatioRelativeDeltaPercent":-0.13,"marginsRgb245":[0,0,0,0],"marginsRgb250":[0,0,0,0],"byteIdenticalToGeneratorOutput":true,"result":"PASS_CANONICAL_NEAR_FULL_BLEED_CONTACT"},
+    {"finish":"gris-claro","file":"gris-claro.png","generatorId":"exec-b44220be-dcdf-40e4-bda6-ff4b15a470f4","generatorOutput":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-b44220be-dcdf-40e4-bda6-ff4b15a470f4.png","attempt":2,"sha256":"597f5fe7b57624e7053a8458e4131e58bbe1cb7398c69b72ead5cf52ed73083b","bytes":1493422,"dimensions":"764x2059","aspectRatioRelativeDeltaPercent":0.05,"marginsRgb245":[12,9,11,0],"byteIdenticalToGeneratorOutput":true,"result":"PASS_WITHIN_NORMAL_MAXIMUM"},
+    {"finish":"natural","file":"natural.png","generatorId":"exec-54ade042-db8c-42f8-9797-e65932f39b13","generatorOutput":"C:/Users/zhen/.codex/generated_images/01a0141b-7e8b-7910-a15c-76e022f46e3c/exec-54ade042-db8c-42f8-9797-e65932f39b13.png","attempt":2,"sha256":"46b8a6451230270d9364933f80f228f93193bec899a8a3a31c437216ce902b40","bytes":1710967,"dimensions":"763x2061","aspectRatioRelativeDeltaPercent":-0.18,"marginsRgb245":[8,9,10,0],"marginsRgb250":[8,9,8,0],"byteIdenticalToGeneratorOutput":true,"result":"PASS"},
+    {"finish":"blanco","file":"blanco.png","generatorId":"exec-bd77942d-0fc1-4094-9596-bcc9a306166c","generatorOutput":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-bd77942d-0fc1-4094-9596-bcc9a306166c.png","attempt":4,"sha256":"579b096687a9c5996c94798e53d49dcb0f4a3779a47a284ab5fac5fb2acc7a44","bytes":1406176,"dimensions":"765x2057","aspectRatioRelativeDeltaPercent":0.28,"marginsRgb245":[11,11,12,0],"marginsRgb250":[11,10,10,0],"byteIdenticalToGeneratorOutput":true,"result":"PASS_WITHIN_NORMAL_MAXIMUM"}
+  ],
+  "framingNotes": [
+    {"finishes":["antracita","roble"],"detail":"RGB<245 bounds reach [0,0,0,0]. Native inspection confirms the complete stepped casing, top corners and bottom endpoints. Contact is accepted because the canonical original is [2,4,2,0] and no crop, resize or pixel processing was applied."},
+    {"finish":"blanco","detail":"Three independent white revision calls measured [12,12,11,0], [11,11,12,0] and [14,7,11,0]. Attempt 4 was selected because it stays at or below 12 px on every side and has the least total padding among the two ceiling-compliant results. Attempt 5 has less aggregate padding but exceeds the normal left-side maximum at 14 px."}
+  ],
+  "aspectRatioRevisionNotes": [
+    {"finishes":["wengue","gris-oscuro","gris-claro"],"detail":"The three wide legacy selections were displaced into _rejected and replaced by independent canonical-source ImageGen outputs at 764x2059. Every active canvas now differs from the canonical ratio by no more than 1%. Native inspection confirms complete frame and reveal, intact lower endpoints, one plain leaf, exactly one connected silver-line motif with its solid curved insert, one lever plus one round key cylinder and NO_LOGO."}
+  ],
+  "framingExceptions": [],
+  "rejected": [
+    {"finish":"antracita","attempt":1,"file":"_rejected/antracita-previous-selected-before-minimum-margin-revision.png","generatorId":"exec-ff4e8566-eb22-443c-88a9-d7a6d78172aa","generatorOutput":"C:/Users/zhen/.codex/generated_images/01a00f56-71ad-7482-836c-98b9f7848fca/exec-ff4e8566-eb22-443c-88a9-d7a6d78172aa.png","sha256":"8c601817605683b3e8cab30f7f3013d2f3a877371cb88b6f5dbc8da0e81df063","bytes":1468661,"dimensions":"764x2059","marginsRgb245":[13,13,14,0],"marginsRgb250":[11,8,12,0],"byteIdenticalToGeneratorOutput":true,"reason":"prior selected asset retired because RGB<245 left, top and right margins exceeded the 12 px normal maximum"},
+    {"finish":"nogal","attempt":1,"file":"_rejected/nogal-attempt1-insert-recolored.png","generatorId":"exec-235a0716-4839-4b1a-9aaa-e7e119636cf0","generatorOutput":"C:/Users/zhen/.codex/generated_images/01a00f56-71ad-7482-836c-98b9f7848fca/exec-235a0716-4839-4b1a-9aaa-e7e119636cf0.png","sha256":"d1805cb9049de6f6eea0ab063a5ba961daf904f98601f939b327b2a84f50f0dd","bytes":1851818,"dimensions":"857x1835","marginsRgb245":[7,6,7,0],"marginsRgb250":[5,4,5,0],"byteIdenticalToGeneratorOutput":true,"reason":"protected cool-gray/silver insert was rendered as walnut wood"},
+    {"finish":"natural","attempt":1,"file":"_rejected/natural-attempt1-missing-silver-insert.png","generatorId":"exec-08a643f4-8701-49c8-8737-20e343be735f","generatorOutput":"C:/Users/zhen/.codex/generated_images/01a0141b-7e8b-7910-a15c-76e022f46e3c/exec-08a643f4-8701-49c8-8737-20e343be735f.png","sha256":"26fdd9b3cf1698287d3d7c073e87bb2c24e8414307f1012ef29c76678077eaf7","bytes":1737032,"dimensions":"763x2061","marginsRgb245":[11,11,11,9],"marginsRgb250":[10,9,0,0],"byteIdenticalToGeneratorOutput":true,"reason":"protected insert was rendered as natural wood rather than solid cool-gray/silver"},
+    {"finish":"blanco","attempt":1,"file":"_rejected/blanco-attempt1-missing-silver-insert.png","generatorId":"exec-47c877a0-bb59-4f26-9f3d-f28c8c1ed29f","generatorOutput":"C:/Users/zhen/.codex/generated_images/01a0141b-7e8b-7910-a15c-76e022f46e3c/exec-47c877a0-bb59-4f26-9f3d-f28c8c1ed29f.png","sha256":"6f28cbbf7e71c18cfa69febd5c38df0fff20e08170338f4e11a0f34e2328dbcd","bytes":1068899,"dimensions":"856x1836","marginsRgb245":[21,10,29,1],"marginsRgb250":[20,10,29,0],"byteIdenticalToGeneratorOutput":true,"reason":"protected insert was rendered white rather than solid cool-gray/silver"},
+    {"finish":"blanco","attempt":2,"file":"_rejected/blanco-previous-selected-before-minimum-margin-revision.png","generatorId":"exec-78e6fea4-7118-4dc4-a687-cdf6c51f9b89","generatorOutput":"C:/Users/zhen/.codex/generated_images/01a0141b-7e8b-7910-a15c-76e022f46e3c/exec-78e6fea4-7118-4dc4-a687-cdf6c51f9b89.png","sha256":"543aaa28da856cafe4ddd66342c74e203e8632d03bff08a6400857bc3615457e","bytes":1318020,"dimensions":"833x1889","marginsRgb245":[9,12,22,4],"marginsRgb250":[8,12,22,4],"byteIdenticalToGeneratorOutput":true,"reason":"prior selected asset retired because the 22 px right margin exceeded the normal maximum"},
+    {"finish":"blanco","attempt":3,"file":"_rejected/blanco-minimum-margin-revision-attempt1-padding.png","generatorId":"exec-88ece07d-b23a-4890-b64a-56679b647715","generatorOutput":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-88ece07d-b23a-4890-b64a-56679b647715.png","sha256":"1439545b54abcdbdce23a79b0e15c60c9aa2d35a1ded06c836ca3e1eead9c4e1","bytes":1382948,"dimensions":"764x2059","marginsRgb245":[12,12,11,0],"marginsRgb250":[12,12,11,0],"byteIdenticalToGeneratorOutput":true,"reason":"valid ceiling-compliant candidate, but selected attempt 4 has one pixel less aggregate RGB<245 padding"},
+    {"finish":"blanco","attempt":5,"file":"_rejected/blanco-minimum-margin-revision-attempt3-padding.png","generatorId":"exec-14b7f499-510c-48ce-b403-6b57ab01edf7","generatorOutput":"C:/Users/zhen/.codex/generated_images/019fefd4-996a-77f0-a377-59d6191e00c0/exec-14b7f499-510c-48ce-b403-6b57ab01edf7.png","sha256":"6fee09d8b98fbb2aca38e399f961cf36cabfd1eaf4c1ea21c3c5a0efabf5ce72","bytes":1567640,"dimensions":"764x2059","marginsRgb245":[14,7,11,0],"marginsRgb250":[13,6,9,0],"byteIdenticalToGeneratorOutput":true,"reason":"14 px RGB<245 left margin exceeds the normal 12 px maximum"},
+    {"finish":"wengue","attempt":1,"file":"_rejected/wengue-previous-selected-before-aspect-ratio-revision.png","generatorId":"exec-50a7395a-91f1-45da-8192-efe6b3e37d06","generatorOutput":"C:/Users/zhen/.codex/generated_images/01a00f56-71ad-7482-836c-98b9f7848fca/exec-50a7395a-91f1-45da-8192-efe6b3e37d06.png","sha256":"0c727fa7ab8ff445eea2b888ea4168bf535787810b3f9abf6270cf710cab1e7d","bytes":1727646,"dimensions":"928x1695","aspectRatioRelativeDeltaPercent":47.62,"marginsRgb245":[9,8,8,0],"marginsRgb250":[9,3,6,0],"byteIdenticalToGeneratorOutput":true,"reason":"retired because the canvas aspect ratio differs from the canonical source by 47.62%, above the 1% maximum"},
+    {"finish":"gris-oscuro","attempt":1,"file":"_rejected/gris-oscuro-previous-selected-before-aspect-ratio-revision.png","generatorId":"exec-1a9e7b02-794f-4b2e-8a88-a08274cedfa1","generatorOutput":"C:/Users/zhen/.codex/generated_images/01a00f56-71ad-7482-836c-98b9f7848fca/exec-1a9e7b02-794f-4b2e-8a88-a08274cedfa1.png","sha256":"7374e4494965b6b14d0e41e72077dd62d00cc81f35ebcb0433d2d6a5f1bf1eda","bytes":1789325,"dimensions":"857x1836","aspectRatioRelativeDeltaPercent":25.86,"marginsRgb245":[10,11,11,0],"marginsRgb250":[9,8,9,0],"byteIdenticalToGeneratorOutput":true,"reason":"retired because the canvas aspect ratio differs from the canonical source by 25.86%, above the 1% maximum"},
+    {"finish":"gris-claro","attempt":1,"file":"_rejected/gris-claro-previous-selected-before-aspect-ratio-revision.png","generatorId":"exec-c650deaf-52b8-4a36-b08f-8b5e112e68f7","generatorOutput":"C:/Users/zhen/.codex/generated_images/01a00f56-71ad-7482-836c-98b9f7848fca/exec-c650deaf-52b8-4a36-b08f-8b5e112e68f7.png","sha256":"8ec0c022f40b57052e22f50c483fa305b133bd1238db8abaee690aba875da5e8","bytes":1669992,"dimensions":"856x1836","aspectRatioRelativeDeltaPercent":25.71,"marginsRgb245":[6,0,0,0],"marginsRgb250":[6,0,0,0],"byteIdenticalToGeneratorOutput":true,"reason":"retired because the canvas aspect ratio differs from the canonical source by 25.71%, above the 1% maximum"}
+  ],
+  "legacyDuplicateFiles": [
+    {"file":"rejected/nogal-attempt1.png","canonicalAttemptFile":"_rejected/nogal-attempt1-insert-recolored.png","sha256":"d1805cb9049de6f6eea0ab063a5ba961daf904f98601f939b327b2a84f50f0dd","byteIdentical":true,"countsAsAdditionalAttempt":false}
+  ],
+  "qa": {
+    "path": "QA.json",
+    "status": "PASS_9_OF_9",
+    "acceptedAssetCount": 9,
+    "uniqueAcceptedHashes": 9,
+    "uniqueAttemptGeneratorIds": 19,
+    "uniqueAttemptHashes": 19,
+    "physicalPngCountIncludingLegacyDuplicate": 20,
+    "maximumAcceptedMarginRgb245": 12,
+    "maximumAcceptedAspectRatioRelativeDeltaPercent": 0.28
+  },
+  "promotion": {
+    "converted": false,
+    "staged": false,
+    "publicWritten": false,
+    "originalModified": false,
+    "committed": false,
+    "pushed": false
+  }
+}

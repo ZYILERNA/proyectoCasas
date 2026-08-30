@@ -1,0 +1,39 @@
+{
+  "schema": "wonly-direct-imagegen-qa/v4",
+  "status": "PASS_9_OF_9",
+  "model": "MADERAACÚSTICA/wl-d027",
+  "auditedAtOriginalDetail": true,
+  "checks": {
+    "nineCanonicalFinishesPresent": true,
+    "nineUniqueEncodedHashes": true,
+    "pngRgbThreeChannels": true,
+    "maximumAspectRatioDeviationPercent": 0.1848,
+    "completeFrameAndThreshold": true,
+    "broadStraightFlutedLeftPanelPreserved": true,
+    "narrowDividerAndLargePlainRightPanelPreserved": true,
+    "singleLeverAndRoundKeyEscutcheonPreserved": true,
+    "straightFluteRhythmPreserved": true,
+    "finishSemanticsCorrect": true,
+    "zeroLogoBadgeTextOrPseudotext": true,
+    "noHaloPatchSceneOrExtraHardware": true,
+    "originalUnmodified": true,
+    "builtInImageGenOnly": true,
+    "onlyCanonicalOriginalReferenced": true,
+    "noFiltersMasksCropResizeRecolorOrComposite": true,
+    "conversionNotPerformed": true,
+    "publicWriteNotPerformed": true
+  },
+  "framing": {
+    "threshold": "RGB<245 bounding box",
+    "maximumObservedMarginPx": 10,
+    "fullFrameVisible": true,
+    "noGeometryPostprocessing": true
+  },
+  "rejectedSummary": {
+    "count": 8,
+    "reasons": {"aspectRatio": 6, "excessiveMargin": 2},
+    "note": "Rejected attempts remain byte-for-byte under _rejected. Active assets were never cropped or resized."
+  },
+  "safeToConvert": true,
+  "safeToPromote": false
+}

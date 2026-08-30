@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 2,
+  "model": "MADERAACÚSTICA/wl-d026",
+  "policy": "NO_LOGO",
+  "status": "PASS_9_OF_9",
+  "generationMethod": "built-in ImageGen only",
+  "requestedFinishCount": 9,
+  "acceptedAssetCount": 9,
+  "totalIndependentImageGenCalls": 9,
+  "acceptedIndependentCalls": 9,
+  "rejectedAttempts": 0,
+  "maximumAttemptsPerFinish": 2,
+  "independence": {
+    "soleReferenceForEveryCall": "public/images/PUERTAS/MADERAACÚSTICA/wl-d026/original.webp",
+    "referenceSha256Before": "122d48eb3dba2c087a4c0439ef2fb5277489af1a45353f503b6c0aec82f03d69",
+    "referenceSha256After": "122d48eb3dba2c087a4c0439ef2fb5277489af1a45353f503b6c0aec82f03d69",
+    "referenceUnchanged": true,
+    "generatedOutputsUsedAsReferences": false,
+    "logoReferencesUsed": false,
+    "filtersOrRecoloringUsed": false,
+    "masksUsed": false,
+    "croppingOrResizingUsed": false,
+    "compositingUsed": false,
+    "conversionUsed": false
+  },
+  "qaMethod": "Manual individual inspection of every built-in ImageGen result at native resolution with the canonical reference visible, plus read-only SHA-256, dimensions, RGB mode, unique-hash, and generator-source byte-equality checks. No accepted PNG was altered during QA.",
+  "acceptanceRules": {
+    "completeOuterFrameVisible": true,
+    "frontFacingTallPortraitComposition": true,
+    "nearFlushCatalogFraming": true,
+    "signatureGeometryPreserved": "plain large right panel, recessed far-left reveal, narrow left stile and two fine vertical grooves",
+    "hardwarePreserved": "one left lever handle and one circular key escutcheon",
+    "finishClearlyMatchesRequestedName": true,
+    "verticalWoodGrainPreserved": true,
+    "zeroLogoTextWatermarkOrPseudotext": true,
+    "noExtraObjectsPanelsOrSeams": true,
+    "noPostGenerationPixelProcessing": true
+  },
+  "assets": [
+    {
+      "finish": "negro",
+      "file": "negro.png",
+      "generatorId": "exec-e30e3958-929c-409f-8368-65ca911e6c0f",
+      "sha256": "387abe69bc58220a25fc1fc8c7eefb487c28b2981280ae860a90940427ebf8cf",
+      "dimensions": "778x2021",
+      "mode": "RGB",
+      "attempt": 1,
+      "result": "PASS"
+    },
+    {
+      "finish": "wengue",
+      "file": "wengue.png",
+      "generatorId": "exec-ee26bc11-2e7a-4446-b473-4ebb188bc310",
+      "sha256": "fd3d3f01f3a545877e0a5521cfb92e1ba383f60928285d719413af2470fc701e",
+      "dimensions": "778x2022",
+      "mode": "RGB",
+      "attempt": 1,
+      "result": "PASS"
+    },
+    {
+      "finish": "gris-oscuro",
+      "file": "gris-oscuro.png",
+      "generatorId": "exec-53624bcb-be2d-41aa-afdd-b6ce9fb26a68",
+      "sha256": "c0225b32f24461404863981d89c4d1036fbaa727ec4367f9fbe357e5c3e2a5cc",
+      "dimensions": "777x2023",
+      "mode": "RGB",
+      "attempt": 1,
+      "result": "PASS"
+    },
+    {
+      "finish": "antracita",
+      "file": "antracita.png",
+      "generatorId": "exec-dcbcac2a-2bf7-4017-87de-59198e1aee44",
+      "sha256": "8d27d71058e9138b329c036b4bff37761f8ae946ab8a742c1da2bf61b1f60600",
+      "dimensions": "777x2023",
+      "mode": "RGB",
+      "attempt": 1,
+      "result": "PASS"
+    },
+    {
+      "finish": "nogal",
+      "file": "nogal.png",
+      "generatorId": "exec-052b8318-5412-4e67-851d-fe7857d11df3",
+      "sha256": "9118627bbb6a66b056ae9c8a26bece8a151a839ba3562fa6ce44165c1f4466b0",
+      "dimensions": "777x2023",
+      "mode": "RGB",
+      "attempt": 1,
+      "result": "PASS"
+    },
+    {
+      "finish": "roble",
+      "file": "roble.png",
+      "generatorId": "exec-2ef8dfdc-50a2-49db-997c-e2dd57f71d66",
+      "sha256": "6eec533971644551d501bee21ac55301617a083d07597ce0afacb5b3111ce5fd",
+      "dimensions": "777x2023",
+      "mode": "RGB",
+      "attempt": 1,
+      "result": "PASS"
+    },
+    {
+      "finish": "gris-claro",
+      "file": "gris-claro.png",
+      "generatorId": "exec-bcff5573-6a28-4ce0-9c37-6b32827465dc",
+      "sha256": "93ae178b8ee00a42f17e01e3a617cc4594be7ae5585b2348ae8d9547d57509b2",
+      "dimensions": "778x2021",
+      "mode": "RGB",
+      "attempt": 1,
+      "result": "PASS"
+    },
+    {
+      "finish": "natural",
+      "file": "natural.png",
+      "generatorId": "exec-8e30417e-15e8-4a22-883a-a0ba1549a501",
+      "sha256": "b1eb42c741b1caf84787140239b7dde05c9637b7308ba80d2685e077698b50bd",
+      "dimensions": "777x2023",
+      "mode": "RGB",
+      "attempt": 1,
+      "result": "PASS"
+    },
+    {
+      "finish": "blanco",
+      "file": "blanco.png",
+      "generatorId": "exec-8425b747-6369-4d6f-94da-2ed75390749a",
+      "sha256": "c198558818600fa641b2e3008ee4474449e771454f04077cfdaee5ac81082560",
+      "dimensions": "778x2022",
+      "mode": "RGB",
+      "attempt": 1,
+      "result": "PASS"
+    }
+  ],
+  "rejected": [],
+  "summary": {
+    "requested": 9,
+    "pass": 9,
+    "fail": 0,
+    "uniqueAcceptedHashes": 9,
+    "visualInspection": "PASS: all nine finishes retain the complete silver-gray frame, near-flush tall portrait layout, plain large leaf, recessed left reveal, two narrow vertical groove boundaries, one lever, and one key escutcheon; all are logo-free and text-free.",
+    "publicFilesModified": false,
+    "originalModified": false,
+    "converted": false,
+    "promoted": false
+  }
+}

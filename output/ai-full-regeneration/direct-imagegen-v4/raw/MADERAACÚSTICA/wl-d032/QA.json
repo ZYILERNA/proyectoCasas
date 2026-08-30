@@ -1,0 +1,25 @@
+{
+  "status": "PASS_9_OF_9",
+  "model": "MADERAACÚSTICA/wl-d032",
+  "activePngCount": 9,
+  "uniqueEncodedHashes": 9,
+  "visualReviewAtNativeResolution": true,
+  "checks": {
+    "completeFrameAndThreshold": true,
+    "aspectRatioMatchesReference": true,
+    "narrowLeftPanelPreserved": true,
+    "broadRightPanelPreserved": true,
+    "singleLowHorizontalSeamPreserved": true,
+    "bottomLeftStraightFlutesPreserved": true,
+    "exactlyOneLeverAndOneCylinder": true,
+    "finishSemanticsCorrect": true,
+    "zeroLogoTextOrPseudotext": true,
+    "noFilterMaskCropResizeComposite": true,
+    "originalUnchanged": true,
+    "publicUnchanged": true
+  },
+  "referenceAspectRatio": 0.353211,
+  "acceptedAspectRatioRange": [0.352106, 0.353081],
+  "maximumRelativeAspectDeviationPercent": 0.313,
+  "notes": "Seven superseded attempts are retained under _rejected. No rejected file belongs to the active set. All active files are untouched PNG outputs copied byte-for-byte from their independent built-in ImageGen calls."
+}
