@@ -165,7 +165,7 @@ const organizationSchema = {
   name: "WONLY España",
   legalName: "Zhongyuankeji S.L.",
   url: "https://www.wonlyspain.com",
-  logo: "https://www.wonlyspain.com/images/logo-wonly.webp",
+  logo: "https://www.wonlyspain.com/images/logo-wonly-global-schema.webp",
   email: "info@wonlyspain.com",
   telephone: "+34689858129",
   address: {
@@ -185,7 +185,7 @@ const organizationSchema = {
 
 export default function Home() {
   return (
-    <main className="overflow-hidden bg-[#050505] pt-28 text-white selection:bg-cyan-300 selection:text-black">
+    <main className="overflow-hidden bg-[#050505] text-white selection:bg-cyan-300 selection:text-black">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -193,7 +193,7 @@ export default function Home() {
 
       <section
         aria-labelledby="hero-title"
-        className="relative isolate min-h-[calc(100svh-7rem)] overflow-hidden border-b border-white/10"
+        className="relative isolate min-h-[calc(100svh-112px)] overflow-hidden border-b border-white/10 sm:min-h-[calc(100svh-108px)]"
       >
         <div className="hero-background-enter absolute inset-0 z-0">
           <Image
@@ -209,7 +209,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/20 md:hidden" />
         </div>
 
-        <div className="container relative z-10 mx-auto flex min-h-[calc(100svh-7rem)] items-center px-6 py-16 md:py-20">
+        <div className="container relative z-10 mx-auto flex min-h-[calc(100svh-112px)] items-center px-6 py-20 sm:min-h-[calc(100svh-108px)] md:py-16">
           <div className="hero-enter max-w-4xl">
             <p className="text-sm font-bold uppercase tracking-[0.3em] text-cyan-300 md:text-base">
               Tecnología &amp; Seguridad S.L.

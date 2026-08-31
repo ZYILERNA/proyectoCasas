@@ -159,9 +159,15 @@ export default function LanguageSwitcher({ variant = "desktop" }) {
       if (event.key === "Home") items[0].focus();
       else if (event.key === "End") items[items.length - 1].focus();
       else if (event.key === "ArrowDown") {
-        items[(focusedIndex + 1 + items.length) % items.length].focus();
+        const nextIndex =
+          focusedIndex < 0 ? 0 : (focusedIndex + 1) % items.length;
+        items[nextIndex].focus();
       } else {
-        items[(focusedIndex - 1 + items.length) % items.length].focus();
+        const previousIndex =
+          focusedIndex < 0
+            ? items.length - 1
+            : (focusedIndex - 1 + items.length) % items.length;
+        items[previousIndex].focus();
       }
     };
 
@@ -231,8 +237,8 @@ export default function LanguageSwitcher({ variant = "desktop" }) {
         aria-expanded={open}
         className={
           isMobile
-            ? "flex min-h-11 w-full items-center justify-between rounded-full px-3 text-sm font-bold uppercase tracking-widest text-zinc-200 transition hover:text-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300"
-            : "flex min-h-11 items-center gap-1.5 rounded-full px-2 text-xs font-bold uppercase tracking-widest text-zinc-300 transition hover:text-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300"
+            ? "flex min-h-11 w-full items-center justify-between rounded-full px-3 text-sm font-bold uppercase tracking-widest text-zinc-200 transition hover:text-[#e0c98f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#e0c98f] motion-reduce:transition-none"
+            : "flex min-h-10 items-center gap-1.5 rounded-full px-2 text-xs font-semibold uppercase tracking-[0.12em] text-white transition hover:text-[#e0c98f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#e0c98f] motion-reduce:transition-none"
         }
       >
         <span className="flex items-center gap-2">
@@ -242,7 +248,7 @@ export default function LanguageSwitcher({ variant = "desktop" }) {
         <ChevronDown
           size={14}
           aria-hidden="true"
-          className={`transition-transform ${open ? "rotate-180" : ""}`}
+          className={`transition-transform motion-reduce:transition-none ${open ? "rotate-180" : ""}`}
         />
       </button>
 
@@ -253,8 +259,8 @@ export default function LanguageSwitcher({ variant = "desktop" }) {
           aria-label="Idiomas disponibles"
           className={
             isMobile
-              ? "mt-3 max-h-64 w-full overflow-y-auto rounded-2xl border border-white/10 bg-black/60 py-2"
-              : "absolute right-0 top-full z-[70] mt-2 max-h-80 w-56 overflow-y-auto rounded-2xl border border-white/10 bg-[#0a0a0a]/95 py-2 shadow-2xl backdrop-blur-xl"
+              ? "mt-3 max-h-64 w-full overflow-y-auto rounded-2xl border border-white/[0.14] bg-[rgba(13,12,10,.64)] py-2 backdrop-blur-xl backdrop-saturate-[1.15]"
+              : "absolute right-0 top-full z-[70] mt-4 max-h-80 w-56 overflow-y-auto rounded-2xl border border-white/[0.14] bg-[rgba(13,12,10,.80)] py-2 shadow-[0_24px_70px_rgba(0,0,0,.44)] backdrop-blur-2xl backdrop-saturate-[1.15]"
           }
         >
           {LANGS.map((lang) => {
@@ -266,10 +272,10 @@ export default function LanguageSwitcher({ variant = "desktop" }) {
                 role="menuitemradio"
                 aria-checked={active}
                 onClick={() => applyLanguage(lang.code)}
-                className={`flex w-full items-center justify-between px-4 py-2.5 text-left text-sm transition focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-cyan-300 ${
+                className={`flex w-full items-center justify-between px-4 py-2.5 text-left text-sm transition focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#e0c98f] ${
                   active
-                    ? "bg-white/5 text-cyan-300"
-                    : "text-zinc-300 hover:bg-white/5 hover:text-white"
+                    ? "bg-white/[0.08] text-[#e0c98f]"
+                    : "text-zinc-300 hover:bg-white/[0.07] hover:text-white"
                 }`}
               >
                 <span>{lang.label}</span>

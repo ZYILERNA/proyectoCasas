@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import {
   Activity,
   ChevronDown,
@@ -14,10 +14,9 @@ import {
   ShieldCheck,
   X,
 } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import LanguageSwitcher from "./LanguageSwitcher";
-import StockTicker from "./StockTicker";
 
 const SearchOverlay = dynamic(() => import("./SearchOverlay"), {
   ssr: false,
@@ -51,15 +50,10 @@ const interiorLinks = [
 export default function Header() {
   const pathname = usePathname();
   const isHome = pathname === "/";
-  const headerRef = useRef(null);
   const productsRef = useRef(null);
   const mobileMenuRef = useRef(null);
   const previousFocusRef = useRef(null);
-  const lastScrollYRef = useRef(0);
-  const tickingRef = useRef(false);
 
-  const [isVisible, setIsVisible] = useState(true);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -67,6 +61,18 @@ export default function Header() {
 
   useEffect(() => {
     setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    const desktopMedia = window.matchMedia("(min-width: 1280px)");
+    const closeMobileMenuAtDesktop = (event) => {
+      if (event.matches) setIsMobileMenuOpen(false);
+    };
+
+    closeMobileMenuAtDesktop(desktopMedia);
+    desktopMedia.addEventListener("change", closeMobileMenuAtDesktop);
+    return () =>
+      desktopMedia.removeEventListener("change", closeMobileMenuAtDesktop);
   }, []);
 
   useEffect(() => {
@@ -92,47 +98,6 @@ export default function Header() {
     setIsProductsOpen(false);
     setIsSearchOpen(false);
   }, [pathname]);
-
-  useEffect(() => {
-    const reduceMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
-
-    const updateHeader = () => {
-      tickingRef.current = false;
-      const currentY = Math.max(window.scrollY, 0);
-      const delta = currentY - lastScrollYRef.current;
-      const headerHasFocus = headerRef.current?.contains(
-        document.activeElement,
-      );
-      const shouldStayVisible =
-        reduceMotion ||
-        isMobileMenuOpen ||
-        isProductsOpen ||
-        isSearchOpen ||
-        headerHasFocus;
-
-      setIsScrolled(currentY > 16);
-
-      if (shouldStayVisible || currentY < 120 || delta < -8) {
-        setIsVisible(true);
-      } else if (delta > 10 && currentY > 180) {
-        setIsVisible(false);
-      }
-
-      lastScrollYRef.current = currentY;
-    };
-
-    const handleScroll = () => {
-      if (tickingRef.current) return;
-      tickingRef.current = true;
-      window.requestAnimationFrame(updateHeader);
-    };
-
-    lastScrollYRef.current = window.scrollY;
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [isMobileMenuOpen, isProductsOpen, isSearchOpen]);
 
   useEffect(() => {
     if (!isProductsOpen) return;
@@ -172,12 +137,7 @@ export default function Header() {
     const focusableSelector =
       'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
     const getFocusable = () =>
-      [
-        headerRef.current?.querySelector(
-          'button[aria-controls="mobile-navigation"]',
-        ),
-        ...(mobileMenuRef.current?.querySelectorAll(focusableSelector) || []),
-      ]
+      [...(mobileMenuRef.current?.querySelectorAll(focusableSelector) || [])]
         .filter(Boolean)
         .filter((element) => !element.hasAttribute("hidden"))
         .filter((element) => element.getClientRects().length > 0);
@@ -216,47 +176,42 @@ export default function Header() {
   }, [isMobileMenuOpen]);
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
+  const headerControlClass =
+    "text-white hover:bg-white/10 hover:text-[#e0c98f]";
 
   return (
     <>
       <header
-        ref={headerRef}
-        className={`fixed inset-x-0 top-0 z-50 border-b transition duration-300 ${
-          isVisible ? "translate-y-0" : "-translate-y-full"
-        } ${
-          isScrolled || isMobileMenuOpen
-            ? "border-white/10 bg-black/90 shadow-[0_10px_35px_rgba(0,0,0,.25)] backdrop-blur-xl"
-            : "border-white/5 bg-black"
-        }`}
+        className={`${
+          isHome ? "relative" : "absolute inset-x-0 top-0"
+        } z-50 border-b border-transparent bg-gradient-to-b from-black/80 via-black/70 to-black/45 text-white`}
       >
-        {isHome && !isMobileMenuOpen && (
-          <div className="flex h-8 items-center justify-center overflow-hidden bg-cyan-300 px-4 text-black">
-            <p className="truncate text-center text-[10px] font-bold uppercase tracking-[0.15em] sm:text-xs">
-              Soluciones integrales para sistemas de puertas inteligentes
-            </p>
+        {isHome && (
+          <div className="flex min-h-10 items-center justify-center bg-[#bfa06a] px-4 py-1.5 text-center text-[10px] font-bold uppercase leading-tight tracking-[0.1em] text-[#221f20] sm:min-h-9 sm:px-6 sm:text-xs sm:tracking-[0.14em]">
+            Soluciones integrales para sistemas de puertas inteligentes
           </div>
         )}
 
-        <div className="container relative z-50 mx-auto flex h-20 items-center justify-between px-6">
+        <div className="relative z-50 mx-auto flex h-[72px] w-full max-w-[1600px] items-center justify-between px-5 sm:px-6 lg:px-8 xl:px-10">
           <Link
             href="/"
             onClick={closeMobileMenu}
             aria-label="WONLY España, ir a inicio"
-            className="rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+            className="shrink-0 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e0c98f]"
           >
             <Image
-              src="/images/logo-wonly.webp"
+              src="/images/logo-wonly-global-light.webp"
               alt="WONLY"
-              width={160}
-              height={40}
+              width={689}
+              height={110}
               priority
-              className="h-8 w-auto object-contain md:h-9"
+              className="h-5 w-auto object-contain sm:h-[22px] md:h-6"
             />
           </Link>
 
           <nav
             aria-label="Navegación principal"
-            className="hidden h-full items-center gap-7 lg:flex xl:gap-9"
+            className="hidden h-full items-center gap-1 xl:flex 2xl:gap-2"
           >
             <div
               ref={productsRef}
@@ -274,13 +229,13 @@ export default function Header() {
                 aria-expanded={isProductsOpen}
                 aria-controls="products-menu"
                 onClick={() => setIsProductsOpen((open) => !open)}
-                className="flex h-full items-center gap-1.5 text-sm font-semibold uppercase tracking-[0.12em] text-zinc-200 transition hover:text-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+                className="flex h-full items-center gap-1.5 px-3 text-sm font-medium tracking-[0.01em] text-white transition hover:text-[#e0c98f] focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-[#e0c98f]"
               >
                 Productos
                 <ChevronDown
                   size={14}
                   aria-hidden="true"
-                  className={`transition-transform ${
+                  className={`transition-transform motion-reduce:transition-none ${
                     isProductsOpen ? "rotate-180" : ""
                   }`}
                 />
@@ -288,7 +243,7 @@ export default function Header() {
 
               <div
                 id="products-menu"
-                className={`absolute left-1/2 top-full w-[680px] -translate-x-1/2 overflow-hidden rounded-b-3xl border border-white/10 bg-[#080808]/95 text-white shadow-2xl backdrop-blur-xl transition duration-200 ${
+                className={`absolute left-1/2 top-full w-[680px] -translate-x-1/2 overflow-hidden rounded-b-3xl border border-white/[0.14] bg-[rgba(13,12,10,.80)] text-white shadow-[0_28px_80px_rgba(0,0,0,.44)] backdrop-blur-2xl backdrop-saturate-[1.15] transition duration-200 motion-reduce:transition-none ${
                   isProductsOpen
                     ? "visible translate-y-0 opacity-100"
                     : "invisible -translate-y-2 opacity-0"
@@ -312,10 +267,10 @@ export default function Header() {
                 <Link
                   href="/contacto"
                   onClick={() => setIsProductsOpen(false)}
-                  className="flex items-center justify-between border-t border-white/10 bg-white/[0.035] px-7 py-4 text-sm text-zinc-300 transition hover:bg-white/[0.07] hover:text-white"
+                  className="flex items-center justify-between border-t border-white/10 bg-black/20 px-7 py-4 text-sm text-zinc-300 transition hover:bg-white/[0.07] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#e0c98f]"
                 >
                   ¿Necesitas ayuda para elegir?
-                  <span className="font-semibold text-cyan-300">
+                  <span className="font-semibold text-[#e0c98f]">
                     Solicitar asesoramiento
                   </span>
                 </Link>
@@ -332,9 +287,7 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-2 sm:gap-3">
-            <div className="hidden 2xl:block">
-              <StockTicker />
-            </div>
+            <MarketTicker />
 
             <button
               type="button"
@@ -343,20 +296,21 @@ export default function Header() {
                 setIsSearchOpen(true);
               }}
               aria-label="Buscar en WONLY"
-              className="grid h-11 w-11 place-items-center rounded-full text-zinc-300 transition hover:bg-white/5 hover:text-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300"
+              className={`grid h-10 w-10 place-items-center rounded-full transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#e0c98f] ${headerControlClass}`}
             >
               <Search size={19} aria-hidden="true" />
             </button>
 
-            <div className="hidden lg:block">
+            <div className="hidden xl:block">
               <LanguageSwitcher variant="desktop" />
             </div>
 
             <Link
               href="/contacto"
-              className="hidden min-h-11 items-center justify-center rounded-full bg-white px-5 text-xs font-bold uppercase tracking-[0.12em] text-black transition hover:bg-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300 xl:flex"
+              className="hidden min-h-10 items-center justify-center rounded-full bg-[#bfa06a] px-5 text-xs font-semibold tracking-[0.04em] text-[#221f20] transition hover:bg-[#d2b87a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none sm:flex"
             >
-              Contacto
+              <span className="xl:hidden">Contacto</span>
+              <span className="hidden xl:inline">Solicitar asesoramiento</span>
             </Link>
 
             <button
@@ -365,7 +319,7 @@ export default function Header() {
               aria-label={isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
               aria-expanded={isMobileMenuOpen}
               aria-controls="mobile-navigation"
-              className="grid h-11 w-11 place-items-center rounded-full text-zinc-200 transition hover:bg-white/5 hover:text-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300 lg:hidden"
+              className={`grid h-10 w-10 place-items-center rounded-full transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#e0c98f] xl:hidden ${headerControlClass}`}
             >
               {isMobileMenuOpen ? (
                 <X size={24} aria-hidden="true" />
@@ -386,28 +340,60 @@ export default function Header() {
               role="dialog"
               aria-modal="true"
               aria-label="Menú de navegación"
-              className={`fixed inset-x-0 bottom-0 top-20 z-[45] overflow-y-auto bg-black/95 px-6 pb-10 pt-6 backdrop-blur-xl transition duration-300 lg:hidden ${
+              className={`fixed inset-0 z-[60] overflow-y-auto bg-[rgba(9,9,8,.84)] px-5 pb-10 backdrop-blur-2xl backdrop-saturate-[1.15] transition duration-300 motion-reduce:transition-none xl:hidden ${
                 isMobileMenuOpen
                   ? "visible translate-y-0 opacity-100"
                   : "invisible -translate-y-3 opacity-0"
               }`}
             >
-              <div className="mx-auto flex max-w-xl flex-col">
-            <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-cyan-300">
+              <div className="mx-auto flex h-[72px] max-w-xl items-center justify-between border-b border-white/10">
+                <button
+                  type="button"
+                  onClick={closeMobileMenu}
+                  aria-label="Cerrar menú"
+                  className="order-2 grid h-10 w-10 place-items-center rounded-full border border-white/[0.14] bg-white/[0.06] text-white transition hover:bg-white/[0.12] hover:text-[#e0c98f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#e0c98f] motion-reduce:transition-none"
+                >
+                  <X size={22} aria-hidden="true" />
+                </button>
+                <Link
+                  href="/"
+                  onClick={closeMobileMenu}
+                  aria-label="WONLY España, ir a inicio"
+                  className="order-1 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e0c98f]"
+                >
+                  <Image
+                    src="/images/logo-wonly-global-light.webp"
+                    alt="WONLY"
+                    width={689}
+                    height={110}
+                    className="h-5 w-auto object-contain"
+                  />
+                </Link>
+              </div>
+
+              <div className="mx-auto flex max-w-xl flex-col pt-6">
+            <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-[#d2b87a]">
               Seguridad y exterior
             </p>
             <div className="flex flex-col border-y border-white/10">
-              {securityLinks.map((link) => (
-                <MobileLink
-                  key={link.href}
-                  {...link}
+              <Suspense
+                fallback={securityLinks.map((link) => (
+                  <MobileLink
+                    key={link.href}
+                    {...link}
+                    close={closeMobileMenu}
+                    active={false}
+                  />
+                ))}
+              >
+                <MobileSecurityLinks
+                  pathname={pathname}
                   close={closeMobileMenu}
-                  active={pathname === link.href.split("?")[0]}
                 />
-              ))}
+              </Suspense>
             </div>
 
-            <p className="mb-5 mt-9 text-xs font-bold uppercase tracking-[0.2em] text-cyan-300">
+            <p className="mb-5 mt-9 text-xs font-bold uppercase tracking-[0.2em] text-[#d2b87a]">
               Interior
             </p>
             <div className="grid grid-cols-2 gap-2">
@@ -416,7 +402,7 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={closeMobileMenu}
-                  className="rounded-2xl border border-white/10 bg-white/[0.035] px-4 py-4 text-sm font-medium text-zinc-300 transition hover:border-cyan-300/50 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300"
+                  className="rounded-2xl border border-white/10 bg-white/[0.035] px-4 py-4 text-sm font-medium text-zinc-300 transition hover:border-[#bfa06a]/60 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#e0c98f]"
                 >
                   {link.label}
                 </Link>
@@ -435,17 +421,9 @@ export default function Header() {
             </div>
 
             <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.035] p-5">
-              <div className="mb-4 flex items-center justify-between gap-3">
-                <span className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.18em] text-zinc-500">
-                  <Activity size={13} className="text-cyan-300" aria-hidden="true" />
-                  Grupo Wangli · SSE
-                </span>
-                <span className="font-mono text-xs font-semibold text-white">
-                  605268
-                </span>
-              </div>
+              <MarketTicker mobile />
               <div className="flex items-center gap-2 border-t border-white/10 pt-4">
-                <Globe size={16} className="text-cyan-300" aria-hidden="true" />
+                <Globe size={16} className="text-[#d2b87a]" aria-hidden="true" />
                 <LanguageSwitcher variant="mobile" />
               </div>
             </div>
@@ -453,7 +431,7 @@ export default function Header() {
             <Link
               href="/contacto"
               onClick={closeMobileMenu}
-              className="mt-6 flex min-h-14 items-center justify-center rounded-full bg-cyan-300 px-7 text-sm font-bold uppercase tracking-[0.14em] text-black transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
+              className="mt-6 flex min-h-14 items-center justify-center rounded-full bg-[#bfa06a] px-7 text-sm font-semibold tracking-[0.06em] text-[#221f20] transition hover:bg-[#d2b87a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Solicitar asesoramiento
             </Link>
@@ -470,18 +448,83 @@ export default function Header() {
   );
 }
 
+function MarketTicker({ mobile = false }) {
+  const accessibilityLabel =
+    "Cotización de Wangli en la Bolsa de Shanghái: código 605268, 9,74 yuanes, subida del 2,10 por ciento";
+
+  if (mobile) {
+    return (
+      <div
+        role="group"
+        aria-label={accessibilityLabel}
+        className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2 pb-4 text-xs"
+      >
+        <span className="flex items-center gap-2 font-bold uppercase tracking-[0.14em] text-zinc-300">
+          <Activity size={13} className="text-[#d2b87a]" aria-hidden="true" />
+          SSE: 605268
+        </span>
+        <span className="font-mono font-semibold tabular-nums text-white">
+          ¥9,74
+        </span>
+        <span className="font-mono font-semibold tabular-nums text-emerald-400">
+          <span aria-hidden="true">↗ </span>+2,10%
+        </span>
+      </div>
+    );
+  }
+
+  return (
+    <div
+      role="group"
+      aria-label={accessibilityLabel}
+      className="hidden h-10 shrink-0 items-center gap-2.5 rounded-full border border-white/[0.14] bg-black/25 px-3 text-[10px] font-semibold tracking-[0.03em] text-zinc-200 backdrop-blur-md xl:flex 2xl:gap-3 2xl:px-4 2xl:text-[11px]"
+    >
+      <Activity size={14} className="text-[#d2b87a]" aria-hidden="true" />
+      <span className="whitespace-nowrap">SSE: 605268</span>
+      <span className="h-4 w-px bg-white/15" aria-hidden="true" />
+      <span className="font-mono tabular-nums text-white">¥9,74</span>
+      <span className="whitespace-nowrap font-mono tabular-nums text-emerald-400">
+        <span aria-hidden="true">↗ </span>+2,10%
+      </span>
+    </div>
+  );
+}
+
 function HeaderLink({ href, label, active }) {
   return (
     <Link
       href={href}
       aria-current={active ? "page" : undefined}
-      className={`relative py-2 text-sm font-semibold uppercase tracking-[0.12em] transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300 ${
-        active ? "text-cyan-300" : "text-zinc-200 hover:text-cyan-300"
+      className={`relative px-3 py-2 text-sm font-medium tracking-[0.01em] transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e0c98f] ${
+        active
+          ? "text-[#e0c98f] after:absolute after:inset-x-3 after:-bottom-0.5 after:h-px after:bg-[#e0c98f]"
+          : "text-white hover:text-[#e0c98f]"
       }`}
     >
       {label}
     </Link>
   );
+}
+
+function MobileSecurityLinks({ pathname, close }) {
+  const searchParams = useSearchParams();
+  const currentSearch = searchParams.toString();
+
+  return securityLinks.map((link) => {
+    const [linkPath, linkQuery = ""] = link.href.split("?");
+    const normalizedLinkQuery = new URLSearchParams(linkQuery).toString();
+
+    return (
+      <MobileLink
+        key={link.href}
+        {...link}
+        close={close}
+        active={
+          pathname === linkPath && currentSearch === normalizedLinkQuery
+        }
+      />
+    );
+  });
 }
 
 function ProductMenuColumn({
@@ -492,8 +535,12 @@ function ProductMenuColumn({
   onNavigate,
 }) {
   return (
-    <div className={`p-7 ${bordered ? "border-r border-white/10 bg-white/[0.02]" : ""}`}>
-      <div className="mb-6 flex items-center gap-2 text-cyan-300">
+    <div
+      className={`p-7 ${
+        bordered ? "border-r border-white/10 bg-white/[0.035]" : ""
+      }`}
+    >
+      <div className="mb-6 flex items-center gap-2 text-[#e0c98f]">
         <Icon size={18} aria-hidden="true" />
         <p className="text-xs font-bold uppercase tracking-[0.18em]">{title}</p>
       </div>
@@ -503,7 +550,7 @@ function ProductMenuColumn({
             <Link
               href={link.href}
               onClick={onNavigate}
-              className="block rounded-lg px-3 py-2.5 text-sm text-zinc-400 transition hover:bg-white/5 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300"
+              className="block rounded-lg px-3 py-2.5 text-sm text-zinc-300 transition hover:bg-white/[0.08] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#e0c98f]"
             >
               {link.label}
             </Link>
@@ -520,8 +567,8 @@ function MobileLink({ href, label, close, active }) {
       href={href}
       onClick={close}
       aria-current={active ? "page" : undefined}
-      className={`flex min-h-14 items-center justify-between border-b border-white/10 py-3 text-xl font-semibold last:border-b-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300 ${
-        active ? "text-cyan-300" : "text-white"
+      className={`flex min-h-14 items-center justify-between border-b border-white/10 py-3 text-xl font-semibold last:border-b-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#e0c98f] ${
+        active ? "text-[#d2b87a]" : "text-white"
       }`}
     >
       {label}

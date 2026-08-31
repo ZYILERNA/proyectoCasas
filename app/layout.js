@@ -67,7 +67,8 @@ export const metadata = {
     },
   },
   icons: {
-    icon: "/images/wonlylogo.webp",
+    icon: [{ url: "/images/favicon-wonly.png", type: "image/png" }],
+    shortcut: "/images/favicon-wonly.png",
   },
 };
 

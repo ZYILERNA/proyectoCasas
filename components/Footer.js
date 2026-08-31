@@ -88,11 +88,11 @@ export default function Footer() {
               className="mb-6 inline-block rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
             >
               <Image
-                src="/images/logo-wonly.webp"
+                src="/images/logo-wonly-global-light.webp"
                 alt="WONLY"
-                width={160}
-                height={40}
-                className="h-10 w-auto object-contain transition-opacity hover:opacity-80"
+                width={689}
+                height={110}
+                className="h-8 w-auto object-contain transition-opacity hover:opacity-80"
               />
             </Link>
 
