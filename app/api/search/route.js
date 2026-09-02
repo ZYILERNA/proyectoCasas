@@ -4,6 +4,7 @@ import {
   checkRateLimit,
   getClientIdentifier,
 } from "../../../lib/server-rate-limit";
+import { getLogoFreeDoorImagePath } from "../../../lib/door-image-assets";
 
 export const dynamic = "force-dynamic";
 
@@ -141,15 +142,22 @@ export async function GET(request) {
     response.value.data.forEach((item) => {
       if (!item?.name) return;
       const category = item.category || catalog.label;
+      const sourceImage = item[catalog.imgField] || null;
+      const displayImage = catalog.table === "products" && sourceImage
+        ? getLogoFreeDoorImagePath(sourceImage)
+        : sourceImage;
       const params = new URLSearchParams({ producto: item.name });
       if (catalog.withCategory && item.category) {
         params.set("category", item.category);
+      }
+      if (catalog.table === "products" && item.img) {
+        params.set("productoImagen", item.img);
       }
 
       results.push({
         title: String(item.name).slice(0, 140),
         subtitle: String(category).slice(0, 100),
-        img: item[catalog.imgField] || null,
+        img: displayImage,
         href: `${catalog.route}?${params.toString()}`,
       });
     });

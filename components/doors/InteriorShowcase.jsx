@@ -7,7 +7,7 @@ const INTERIOR_COLLECTIONS = [
     category: "PUERTA ACÚSTICA DE MADERA",
     title: "Madera acústica",
     description: "Calidez natural y confort sonoro.",
-    image: "/images/madera.webp",
+    image: "/images/madera.png",
     imageAlt: "Puerta de madera integrada en un ambiente contemporáneo",
     imagePosition: "object-center",
   },
@@ -23,7 +23,7 @@ const INTERIOR_COLLECTIONS = [
     category: "PUERTA DE BAJO CARBONO",
     title: "Bajo carbono",
     description: "Diseño eficiente con menor impacto.",
-    image: "/images/carbono.webp",
+    image: "/images/carbono.png",
     imageAlt: "Puerta de bajo carbono en una vivienda contemporánea",
     imagePosition: "object-[34%_center]",
   },
@@ -31,7 +31,7 @@ const INTERIOR_COLLECTIONS = [
     category: "PUERTA DE PVC",
     title: "PVC",
     description: "Resistencia y mantenimiento sencillo.",
-    image: "/images/pvc.webp",
+    image: "/images/pvc.png",
     imageAlt: "Puerta de PVC integrada en un espacio interior",
     imagePosition: "object-[28%_center]",
   },
@@ -39,7 +39,7 @@ const INTERIOR_COLLECTIONS = [
 
 const ATMOSPHERES = [
   {
-    image: "/images/PUERTAS/WALLPAPER/wl-d003.webp",
+    image: "/images/PUERTAS/WALLPAPER/wl-d003.png",
     imageAlt: "Inspiración de puerta de madera en un ambiente gris grafito",
     eyebrow: "Paleta mineral",
     title: "Madera y grafito",
@@ -51,7 +51,7 @@ const ATMOSPHERES = [
     title: "WL-J001 al atardecer",
   },
   {
-    image: "/images/PUERTAS/WALLPAPER/wl-s009.webp",
+    image: "/images/PUERTAS/WALLPAPER/wl-s009.png",
     imageAlt: "Inspiración de puerta integrada con el revestimiento de pared",
     eyebrow: "Continuidad visual",
     title: "Puerta y revestimiento",

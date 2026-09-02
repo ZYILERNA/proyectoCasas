@@ -57,7 +57,7 @@ const securityCollections = [
     description:
       "Estructuras reforzadas, cierres multipunto y acabados contemporáneos para proyectos exigentes.",
     href: "/puertas?category=PUERTA%20DE%20SEGURIDAD%20ACORAZADA",
-    image: "/images/PUERTAS/ACORAZADA/door-wl001.webp",
+    image: "/images/PUERTAS/ACORAZADA/door-wl001.png",
     imageAlt: "Puerta acorazada WONLY",
     icon: ShieldCheck,
     tone: "white",
@@ -69,7 +69,7 @@ const securityCollections = [
     description:
       "Construcción robusta, acabados duraderos y soluciones versátiles para viviendas y proyectos profesionales.",
     href: "/puertas?category=PUERTA%20DE%20ACERO%20REFORZADO",
-    image: "/images/PUERTAS/ACERO/contemporary/original.png",
+    image: "/images/PUERTAS/ACERO/door-contemporary.png",
     imageAlt: "Puerta de acero reforzado WONLY",
     icon: LockKeyhole,
     tone: "white",
@@ -81,7 +81,7 @@ const securityCollections = [
     description:
       "Colecciones lacadas, de madera, vidriadas y correderas para dar continuidad a cada estancia.",
     href: "/puertas?category=PUERTA%20AC%C3%9ASTICA%20DE%20MADERA",
-    image: "/images/madera.webp",
+    image: "/images/madera.png",
     imageAlt: "Puerta de interior WONLY instalada en una vivienda",
     icon: Sparkles,
     tone: "white",

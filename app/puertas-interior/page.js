@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronRight, DoorOpen, Palette, Filter, Search, Loader2 } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
+import { getLogoFreeDoorImagePath } from '../../lib/door-image-assets';
 import useAccessibleDialog from '../../components/useAccessibleDialog';
 
 // --- CONFIGURACIÓN SUPABASE ---
@@ -129,7 +130,7 @@ const ProductModal = ({ product, onClose }) => {
             className="relative w-full h-full max-h-[500px]"
           >
             <Image
-              src={product.img}
+              src={getLogoFreeDoorImagePath(product.img)}
               alt={product.name}
               fill
               priority
@@ -233,7 +234,7 @@ const ProductCard = ({ product, onClick, priority = false }) => {
     >
       <div className="relative aspect-[3/5] bg-[#FCFCFC] mb-4 overflow-hidden border border-transparent group-hover:border-gray-100 transition-all rounded-sm">
         <Image
-          src={product.img}
+          src={getLogoFreeDoorImagePath(product.img)}
           alt={product.name}
           fill
           priority={priority}

@@ -23,6 +23,7 @@ import WLJ001TechnicalConfigurator from "./WLJ001TechnicalConfigurator";
 import WLJ001MobileSummaryBar from "./WLJ001MobileSummaryBar";
 
 const ASSET_ROOT = "/images/PUERTAS/MADERAACÚSTICA/wl-j001";
+const PRODUCT_BASE = "/images/PUERTAS/MADERAACÚSTICA/door-wl-j001.webp";
 const MEDIA_COUNT = 4;
 
 const BASE_GALLERY = [
@@ -45,51 +46,51 @@ const BASE_GALLERY = [
     surfaceClass: "bg-[#211D1A]",
   },
   {
-    src: `${ASSET_ROOT}/original.webp`,
+    src: PRODUCT_BASE,
     alt: "Vista frontal de la puerta WL-J001 en su acabado original",
     eyebrow: "Producto",
     label: "Vista frontal",
     detail: "Acabado original",
-    imageClass: "object-contain px-[29%] py-[8%]",
+    imageClass: "object-contain p-[2%]",
     surfaceClass: "bg-[#E8E4DE]",
   },
 ];
 
 const FINISH_VISUALS = {
   negro: {
-    image: `${ASSET_ROOT}/door-wl-j001-negro-ai.webp`,
+    image: `${ASSET_ROOT}/door-wl-j001-negro-ai.png`,
     surface: "#242424",
   },
   wengue: {
-    image: `${ASSET_ROOT}/door-wl-j001-wengue-ai.webp`,
+    image: `${ASSET_ROOT}/door-wl-j001-wengue-ai.png`,
     surface: "#4A382E",
   },
   "gris-oscuro": {
-    image: `${ASSET_ROOT}/door-wl-j001-gris-oscuro-ai.webp`,
+    image: `${ASSET_ROOT}/door-wl-j001-gris-oscuro-ai.png`,
     surface: "#494947",
   },
   antracita: {
-    image: `${ASSET_ROOT}/door-wl-j001-antracita-ai.webp`,
+    image: `${ASSET_ROOT}/door-wl-j001-antracita-ai.png`,
     surface: "#5A5A57",
   },
   nogal: {
-    image: `${ASSET_ROOT}/door-wl-j001-nogal-ai.webp`,
+    image: `${ASSET_ROOT}/door-wl-j001-nogal-ai.png`,
     surface: "#7A5A42",
   },
   roble: {
-    image: `${ASSET_ROOT}/door-wl-j001-roble-ai.webp`,
+    image: `${ASSET_ROOT}/door-wl-j001-roble-ai.png`,
     surface: "#C3A17D",
   },
   "gris-claro": {
-    image: `${ASSET_ROOT}/door-wl-j001-gris-claro-ai.webp`,
+    image: `${ASSET_ROOT}/door-wl-j001-gris-claro-ai.png`,
     surface: "#AAA7A1",
   },
   natural: {
-    image: `${ASSET_ROOT}/door-wl-j001-natural-ai.webp`,
+    image: `${ASSET_ROOT}/door-wl-j001-natural-ai.png`,
     surface: "#D7C5AF",
   },
   blanco: {
-    image: `${ASSET_ROOT}/door-wl-j001-blanco-ai.webp`,
+    image: `${ASSET_ROOT}/door-wl-j001-blanco-ai.png`,
     surface: "#ECE9E2",
   },
 };

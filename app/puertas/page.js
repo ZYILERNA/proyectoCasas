@@ -65,6 +65,22 @@ const getProductByName = unstable_cache(
   { revalidate: 300 },
 );
 
+const getProductByImage = unstable_cache(
+  async (productImage) => {
+    const supabase = createServerSupabaseClient();
+    const { data, error } = await supabase
+      .from("products")
+      .select("*")
+      .eq("img", productImage)
+      .limit(1);
+
+    if (error) throw error;
+    return data?.[0] || null;
+  },
+  ["puertas-product-detail-by-image"],
+  { revalidate: 300 },
+);
+
 const getFirstSearchParam = (value) => (
   Array.isArray(value) ? value[0] : value
 );
@@ -76,6 +92,9 @@ export default async function PuertasPage({ searchParams = {} }) {
     ? requestedCategory
     : "TODAS";
   const requestedProduct = getFirstSearchParam(resolvedSearchParams.producto);
+  const requestedProductImage = getFirstSearchParam(
+    resolvedSearchParams.productoImagen,
+  );
 
   const dedicatedProductPath = getDedicatedDoorProductPath(requestedProduct);
   if (dedicatedProductPath) redirect(dedicatedProductPath);
@@ -91,9 +110,11 @@ export default async function PuertasPage({ searchParams = {} }) {
     console.error("Error cargando el catálogo inicial de puertas:", error);
   }
 
-  if (requestedProduct) {
+  if (requestedProduct || requestedProductImage) {
     try {
-      initialProduct = await getProductByName(requestedProduct);
+      initialProduct = requestedProductImage
+        ? await getProductByImage(requestedProductImage)
+        : await getProductByName(requestedProduct);
     } catch (error) {
       console.error("Error cargando la ficha inicial de puerta:", error);
     }

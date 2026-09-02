@@ -52,17 +52,17 @@ const ProductModal = dynamic(() => import("./ProductModal"), {
 const IMAGENES_HERO = {
   TODAS: "/images/todas.webp",
   "PUERTA DE SEGURIDAD IA": "/images/family.webp",
-  "PUERTA DE ACERO REFORZADO": "/images/specs.webp",
-  "PUERTA DE SEGURIDAD ACORAZADA": "/images/acorazada.webp",
-  "PUERTA DE ALUMINIO FUNDIDO": "/images/fundido.webp",
-  "PUERTA ACÚSTICA DE MADERA": "/images/madera.webp",
-  "PUERTA DE PVC": "/images/pvc.webp",
-  "PUERTAS CORREDIZAS Y ABATIBLES": "/images/corredizas.webp",
-  "PUERTA COMERCIAL CORTAFUEGO": "/images/cortafuego.webp",
-  "PUERTA DE EVACUACIÓN": "/images/evacuacion.webp",
+  "PUERTA DE ACERO REFORZADO": "/images/specs.png",
+  "PUERTA DE SEGURIDAD ACORAZADA": "/images/acorazada.png",
+  "PUERTA DE ALUMINIO FUNDIDO": "/images/fundido.png",
+  "PUERTA ACÚSTICA DE MADERA": "/images/madera.png",
+  "PUERTA DE PVC": "/images/pvc.png",
+  "PUERTAS CORREDIZAS Y ABATIBLES": "/images/corredizas.png",
+  "PUERTA COMERCIAL CORTAFUEGO": "/images/cortafuego.png",
+  "PUERTA DE EVACUACIÓN": "/images/evacuacion.png",
   "PUERTA MINIMALISTA": "/images/minimalista.webp",
-  "PUERTA DE BAJO CARBONO": "/images/carbono.webp",
-  "PUERTA MÉDICA": "/images/medica.webp",
+  "PUERTA DE BAJO CARBONO": "/images/carbono.png",
+  "PUERTA MÉDICA": "/images/medica.png",
   "PUERTA DE COBRE COMPUESTA": "/images/cobrewallaper.webp",
 };
 
@@ -85,6 +85,7 @@ const cacheProductDetail = (product) => {
   if (!product) return;
   productDetailCache.set(`id:${product.id}`, product);
   productDetailCache.set(`name:${product.name}`, product);
+  if (product.img) productDetailCache.set(`img:${product.img}`, product);
 };
 
 const isAbortError = (error) => (
@@ -347,9 +348,18 @@ export default function PuertasClient({
 
   useEffect(() => {
     const productName = searchParams.get("producto");
-    if (!productName || selectedProduct?.name === productName) return;
+    const productImage = searchParams.get("productoImagen");
+    if (!productName && !productImage) return;
 
-    const cachedProduct = productDetailCache.get(`name:${productName}`);
+    const isSelectedProduct = productImage
+      ? selectedProduct?.img === productImage
+      : selectedProduct?.name === productName;
+    if (isSelectedProduct) return;
+
+    const cacheKey = productImage
+      ? `img:${productImage}`
+      : `name:${productName}`;
+    const cachedProduct = productDetailCache.get(cacheKey);
     if (cachedProduct) {
       selectedProductIdRef.current = cachedProduct.id;
       setSelectedProduct(cachedProduct);
@@ -362,10 +372,15 @@ export default function PuertasClient({
     setLoadingProductDetails(true);
 
     (async () => {
-      const { data, error } = await supabase
+      let query = supabase
         .from("products")
-        .select("*")
-        .eq("name", productName)
+        .select("*");
+
+      query = productImage
+        ? query.eq("img", productImage)
+        : query.eq("name", productName);
+
+      const { data, error } = await query
         .limit(1)
         .abortSignal(controller.signal);
 
@@ -381,7 +396,7 @@ export default function PuertasClient({
     })();
 
     return () => controller.abort();
-  }, [searchParams, selectedProduct?.name]);
+  }, [searchParams, selectedProduct?.img, selectedProduct?.name]);
 
   useEffect(() => {
     const requestId = ++catalogueRequestRef.current;

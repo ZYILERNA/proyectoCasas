@@ -10,6 +10,7 @@ import {
 
 const CATEGORY_NAME = "PUERTA ACÚSTICA DE MADERA";
 const ASSET_ROOT = "/images/PUERTAS/MADERAACÚSTICA/wl-j001";
+const PRODUCT_BASE = "/images/PUERTAS/MADERAACÚSTICA/door-wl-j001.webp";
 
 export const metadata = createPageMetadata({
   title: WL_J001_PRODUCT.name,
@@ -32,7 +33,7 @@ const productJsonLd = {
     name: "WONLY",
   },
   image: [
-    `https://www.wonlyspain.com${ASSET_ROOT}/original.webp`,
+    `https://www.wonlyspain.com${PRODUCT_BASE}`,
     `https://www.wonlyspain.com${ASSET_ROOT}/scene-warm-ai.webp`,
     `https://www.wonlyspain.com${ASSET_ROOT}/scene-dark-ai.webp`,
   ],
