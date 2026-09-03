@@ -28,6 +28,50 @@ export const TIPOS = {
 
 export const blogPosts = [
   {
+    slug: "cerradura-inteligente-premia-de-dalt",
+    title: "Instalación de Cerraduras Inteligentes en Premià de Dalt",
+    location: "Premià de Dalt, Barcelona",
+    tipo: TIPOS.CERRADURA,
+    cover: `${BASE}/PREMIADE DALT/instalacion1.jpg`,
+    excerpt:
+      "Instalación de cerraduras inteligentes WONLY en los accesos exteriores e interiores de una vivienda de Premià de Dalt.",
+    description:
+      "Proyecto de instalación de cerraduras inteligentes WONLY en una vivienda de Premià de Dalt. La galería muestra los accesos exteriores con cerraduras integradas, los detalles del teclado y lector biométrico, y una cerradura inteligente instalada en una puerta interior. Incluimos también dos vídeos del resultado y su funcionamiento.",
+    media: [
+      { type: "image", src: `${BASE}/PREMIADE DALT/instalacion1.jpg`, alt: "Acceso exterior con cerradura inteligente instalado en Premià de Dalt" },
+      { type: "image", src: `${BASE}/PREMIADE DALT/instalacion2.jpg`, alt: "Puerta de entrada con cerradura inteligente WONLY" },
+      { type: "image", src: `${BASE}/PREMIADE DALT/instalacion3.jpg`, alt: "Segundo acceso exterior con cerradura inteligente" },
+      { type: "image", src: `${BASE}/PREMIADE DALT/instalacion4.jpg`, alt: "Vista frontal de la puerta con teclado y lector biométrico" },
+      { type: "image", src: `${BASE}/PREMIADE DALT/instalacion5.jpg`, alt: "Conjunto de cerraduras inteligentes instaladas en Premià de Dalt" },
+      { type: "image", src: `${BASE}/PREMIADE DALT/instalacion6.jpg`, alt: "Detalle de la cerradura inteligente del acceso exterior" },
+      { type: "image", src: `${BASE}/PREMIADE DALT/instalacion7.jpg`, alt: "Detalle del teclado y lector biométrico de la cerradura" },
+      { type: "image", before: true, src: `${BASE}/PREMIADE DALT/instalacion8.jpg`, alt: "Mecanismo interior antes de completar la instalación" },
+      { type: "image", src: `${BASE}/PREMIADE DALT/instalacion9.jpg`, alt: "Cerradura inteligente instalada en una puerta interior" },
+      { type: "image", src: `${BASE}/PREMIADE DALT/instalacion10.jpg`, alt: "Vista general de la cerradura inteligente interior" },
+      { type: "video", src: `${BASE}/PREMIADE DALT/demostracion1.mp4`, alt: "Demostración de la cerradura inteligente en Premià de Dalt" },
+      { type: "video", src: `${BASE}/PREMIADE DALT/demostracion2.mp4`, alt: "Funcionamiento de la cerradura inteligente WONLY instalada" },
+    ],
+  },
+  {
+    slug: "cerradura-inteligente-lhospitalet",
+    title: "Instalación de Cerradura Inteligente en L’Hospitalet",
+    location: "L’Hospitalet de Llobregat, Barcelona",
+    tipo: TIPOS.CERRADURA,
+    cover: `${BASE}/LHOSPITALET/instalacion1.jpg`,
+    excerpt:
+      "Instalación de una cerradura inteligente WONLY en una vivienda de L’Hospitalet de Llobregat.",
+    description:
+      "Instalación de una cerradura inteligente WONLY en la puerta de entrada de una vivienda de L’Hospitalet de Llobregat. Las fotografías muestran el resultado final y los vídeos permiten ver la cerradura instalada y su funcionamiento.",
+    media: [
+      { type: "image", src: `${BASE}/LHOSPITALET/instalacion1.jpg`, alt: "Puerta de entrada con cerradura inteligente WONLY instalada en L’Hospitalet" },
+      { type: "image", src: `${BASE}/LHOSPITALET/instalacion2.jpg`, alt: "Vista frontal de la cerradura inteligente instalada en L’Hospitalet" },
+      { type: "image", src: `${BASE}/LHOSPITALET/instalacion3.jpg`, alt: "Detalle de la cerradura inteligente WONLY instalada" },
+      { type: "video", src: `${BASE}/LHOSPITALET/demostracion.mp4`, alt: "Demostración de la cerradura inteligente instalada en L’Hospitalet" },
+      { type: "video", src: `${BASE}/LHOSPITALET/demostracion2.mp4`, alt: "Funcionamiento de la cerradura inteligente WONLY" },
+      { type: "video", src: `${BASE}/LHOSPITALET/demostracion3.mp4`, alt: "Vídeo del resultado final de la instalación en L’Hospitalet" },
+    ],
+  },
+  {
     slug: "l2-encants",
     title: "Cerradura Inteligente en L2 Encants",
     location: "Encants, Barcelona",
