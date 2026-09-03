@@ -47,6 +47,9 @@ const interiorLinks = [
   { href: "/gabinetes", label: "Gabinetes" },
 ];
 
+// Conservamos las rutas para poder reactivar esta línea de producto más adelante.
+const SHOW_INTERIOR_PRODUCTS = false;
+
 export default function Header() {
   const pathname = usePathname();
   const isHome = pathname === "/";
@@ -177,7 +180,7 @@ export default function Header() {
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
   const headerControlClass =
-    "text-white hover:bg-white/10 hover:text-[#e0c98f]";
+    "text-white hover:bg-white/10 hover:text-[#D4A868]";
 
   return (
     <>
@@ -187,7 +190,7 @@ export default function Header() {
         } z-50 border-b border-transparent bg-gradient-to-b from-black/80 via-black/70 to-black/45 text-white`}
       >
         {isHome && (
-          <div className="flex min-h-10 items-center justify-center bg-[#bfa06a] px-4 py-1.5 text-center text-[10px] font-bold uppercase leading-tight tracking-[0.1em] text-[#221f20] sm:min-h-9 sm:px-6 sm:text-xs sm:tracking-[0.14em]">
+          <div className="flex min-h-10 items-center justify-center bg-[#D4A868] px-4 py-1.5 text-center text-[10px] font-bold uppercase leading-tight tracking-[0.1em] text-[#221f20] sm:min-h-9 sm:px-6 sm:text-xs sm:tracking-[0.14em]">
             Soluciones integrales para sistemas de puertas inteligentes
           </div>
         )}
@@ -197,7 +200,7 @@ export default function Header() {
             href="/"
             onClick={closeMobileMenu}
             aria-label="WONLY España, ir a inicio"
-            className="shrink-0 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e0c98f]"
+            className="shrink-0 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A868]"
           >
             <Image
               src="/images/logo-wonly-global-light.webp"
@@ -229,7 +232,7 @@ export default function Header() {
                 aria-expanded={isProductsOpen}
                 aria-controls="products-menu"
                 onClick={() => setIsProductsOpen((open) => !open)}
-                className="flex h-full items-center gap-1.5 px-3 text-sm font-medium tracking-[0.01em] text-white transition hover:text-[#e0c98f] focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-[#e0c98f]"
+                className="flex h-full items-center gap-1.5 px-3 text-sm font-medium tracking-[0.01em] text-white transition hover:text-[#D4A868] focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-[#D4A868]"
               >
                 Productos
                 <ChevronDown
@@ -243,34 +246,42 @@ export default function Header() {
 
               <div
                 id="products-menu"
-                className={`absolute left-1/2 top-full w-[680px] -translate-x-1/2 overflow-hidden rounded-b-3xl border border-white/[0.14] bg-[rgba(13,12,10,.80)] text-white shadow-[0_28px_80px_rgba(0,0,0,.44)] backdrop-blur-2xl backdrop-saturate-[1.15] transition duration-200 motion-reduce:transition-none ${
+                className={`absolute left-1/2 top-full ${
+                  SHOW_INTERIOR_PRODUCTS ? "w-[680px]" : "w-[360px]"
+                } -translate-x-1/2 overflow-hidden rounded-b-3xl border border-white/[0.14] bg-[rgba(13,12,10,.80)] text-white shadow-[0_28px_80px_rgba(0,0,0,.44)] backdrop-blur-2xl backdrop-saturate-[1.15] transition duration-200 motion-reduce:transition-none ${
                   isProductsOpen
                     ? "visible translate-y-0 opacity-100"
                     : "invisible -translate-y-2 opacity-0"
                 }`}
               >
-                <div className="grid grid-cols-2">
+                <div
+                  className={`grid ${
+                    SHOW_INTERIOR_PRODUCTS ? "grid-cols-2" : "grid-cols-1"
+                  }`}
+                >
                   <ProductMenuColumn
                     icon={ShieldCheck}
                     title="Seguridad y exterior"
                     links={securityLinks}
-                    bordered
+                    bordered={SHOW_INTERIOR_PRODUCTS}
                     onNavigate={() => setIsProductsOpen(false)}
                   />
-                  <ProductMenuColumn
-                    icon={HomeIcon}
-                    title="Interior y mobiliario"
-                    links={interiorLinks}
-                    onNavigate={() => setIsProductsOpen(false)}
-                  />
+                  {SHOW_INTERIOR_PRODUCTS && (
+                    <ProductMenuColumn
+                      icon={HomeIcon}
+                      title="Interior y mobiliario"
+                      links={interiorLinks}
+                      onNavigate={() => setIsProductsOpen(false)}
+                    />
+                  )}
                 </div>
                 <Link
                   href="/contacto"
                   onClick={() => setIsProductsOpen(false)}
-                  className="flex items-center justify-between border-t border-white/10 bg-black/20 px-7 py-4 text-sm text-zinc-300 transition hover:bg-white/[0.07] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#e0c98f]"
+                  className="flex items-center justify-between border-t border-white/10 bg-black/20 px-7 py-4 text-sm text-zinc-300 transition hover:bg-white/[0.07] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#D4A868]"
                 >
                   ¿Necesitas ayuda para elegir?
-                  <span className="font-semibold text-[#e0c98f]">
+                  <span className="font-semibold text-[#D4A868]">
                     Solicitar asesoramiento
                   </span>
                 </Link>
@@ -296,7 +307,7 @@ export default function Header() {
                 setIsSearchOpen(true);
               }}
               aria-label="Buscar en WONLY"
-              className={`grid h-10 w-10 place-items-center rounded-full transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#e0c98f] ${headerControlClass}`}
+              className={`grid h-10 w-10 place-items-center rounded-full transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#D4A868] ${headerControlClass}`}
             >
               <Search size={19} aria-hidden="true" />
             </button>
@@ -307,7 +318,7 @@ export default function Header() {
 
             <Link
               href="/contacto"
-              className="hidden min-h-10 items-center justify-center rounded-full bg-[#bfa06a] px-5 text-xs font-semibold tracking-[0.04em] text-[#221f20] transition hover:bg-[#d2b87a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none sm:flex"
+              className="hidden min-h-10 items-center justify-center rounded-full bg-[#D4A868] px-5 text-xs font-semibold tracking-[0.04em] text-[#221f20] transition hover:bg-[#D4A868] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none sm:flex"
             >
               <span className="xl:hidden">Contacto</span>
               <span className="hidden xl:inline">Solicitar asesoramiento</span>
@@ -319,7 +330,7 @@ export default function Header() {
               aria-label={isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
               aria-expanded={isMobileMenuOpen}
               aria-controls="mobile-navigation"
-              className={`grid h-10 w-10 place-items-center rounded-full transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#e0c98f] xl:hidden ${headerControlClass}`}
+              className={`grid h-10 w-10 place-items-center rounded-full transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#D4A868] xl:hidden ${headerControlClass}`}
             >
               {isMobileMenuOpen ? (
                 <X size={24} aria-hidden="true" />
@@ -351,7 +362,7 @@ export default function Header() {
                   type="button"
                   onClick={closeMobileMenu}
                   aria-label="Cerrar menú"
-                  className="order-2 grid h-10 w-10 place-items-center rounded-full border border-white/[0.14] bg-white/[0.06] text-white transition hover:bg-white/[0.12] hover:text-[#e0c98f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#e0c98f] motion-reduce:transition-none"
+                  className="order-2 grid h-10 w-10 place-items-center rounded-full border border-white/[0.14] bg-white/[0.06] text-white transition hover:bg-white/[0.12] hover:text-[#D4A868] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#D4A868] motion-reduce:transition-none"
                 >
                   <X size={22} aria-hidden="true" />
                 </button>
@@ -359,7 +370,7 @@ export default function Header() {
                   href="/"
                   onClick={closeMobileMenu}
                   aria-label="WONLY España, ir a inicio"
-                  className="order-1 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e0c98f]"
+                  className="order-1 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A868]"
                 >
                   <Image
                     src="/images/logo-wonly-global-light.webp"
@@ -372,7 +383,7 @@ export default function Header() {
               </div>
 
               <div className="mx-auto flex max-w-xl flex-col pt-6">
-            <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-[#d2b87a]">
+            <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-[#D4A868]">
               Seguridad y exterior
             </p>
             <div className="flex flex-col border-y border-white/10">
@@ -393,21 +404,25 @@ export default function Header() {
               </Suspense>
             </div>
 
-            <p className="mb-5 mt-9 text-xs font-bold uppercase tracking-[0.2em] text-[#d2b87a]">
-              Interior
-            </p>
-            <div className="grid grid-cols-2 gap-2">
-              {interiorLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={closeMobileMenu}
-                  className="rounded-2xl border border-white/10 bg-white/[0.035] px-4 py-4 text-sm font-medium text-zinc-300 transition hover:border-[#bfa06a]/60 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#e0c98f]"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
+            {SHOW_INTERIOR_PRODUCTS && (
+              <>
+                <p className="mb-5 mt-9 text-xs font-bold uppercase tracking-[0.2em] text-[#D4A868]">
+                  Interior
+                </p>
+                <div className="grid grid-cols-2 gap-2">
+                  {interiorLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={closeMobileMenu}
+                      className="rounded-2xl border border-white/10 bg-white/[0.035] px-4 py-4 text-sm font-medium text-zinc-300 transition hover:border-[#D4A868]/60 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#D4A868]"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </>
+            )}
 
             <div className="mt-9 flex flex-col border-y border-white/10">
               {primaryLinks.map((link) => (
@@ -423,7 +438,7 @@ export default function Header() {
             <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.035] p-5">
               <MarketTicker mobile />
               <div className="flex items-center gap-2 border-t border-white/10 pt-4">
-                <Globe size={16} className="text-[#d2b87a]" aria-hidden="true" />
+                <Globe size={16} className="text-[#D4A868]" aria-hidden="true" />
                 <LanguageSwitcher variant="mobile" />
               </div>
             </div>
@@ -431,7 +446,7 @@ export default function Header() {
             <Link
               href="/contacto"
               onClick={closeMobileMenu}
-              className="mt-6 flex min-h-14 items-center justify-center rounded-full bg-[#bfa06a] px-7 text-sm font-semibold tracking-[0.06em] text-[#221f20] transition hover:bg-[#d2b87a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="mt-6 flex min-h-14 items-center justify-center rounded-full bg-[#D4A868] px-7 text-sm font-semibold tracking-[0.06em] text-[#221f20] transition hover:bg-[#D4A868] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Solicitar asesoramiento
             </Link>
@@ -460,7 +475,7 @@ function MarketTicker({ mobile = false }) {
         className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2 pb-4 text-xs"
       >
         <span className="flex items-center gap-2 font-bold uppercase tracking-[0.14em] text-zinc-300">
-          <Activity size={13} className="text-[#d2b87a]" aria-hidden="true" />
+          <Activity size={13} className="text-[#D4A868]" aria-hidden="true" />
           SSE: 605268
         </span>
         <span className="font-mono font-semibold tabular-nums text-white">
@@ -479,7 +494,7 @@ function MarketTicker({ mobile = false }) {
       aria-label={accessibilityLabel}
       className="hidden h-10 shrink-0 items-center gap-2.5 rounded-full border border-white/[0.14] bg-black/25 px-3 text-[10px] font-semibold tracking-[0.03em] text-zinc-200 backdrop-blur-md xl:flex 2xl:gap-3 2xl:px-4 2xl:text-[11px]"
     >
-      <Activity size={14} className="text-[#d2b87a]" aria-hidden="true" />
+      <Activity size={14} className="text-[#D4A868]" aria-hidden="true" />
       <span className="whitespace-nowrap">SSE: 605268</span>
       <span className="h-4 w-px bg-white/15" aria-hidden="true" />
       <span className="font-mono tabular-nums text-white">¥9,74</span>
@@ -495,10 +510,10 @@ function HeaderLink({ href, label, active }) {
     <Link
       href={href}
       aria-current={active ? "page" : undefined}
-      className={`relative px-3 py-2 text-sm font-medium tracking-[0.01em] transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e0c98f] ${
+      className={`relative px-3 py-2 text-sm font-medium tracking-[0.01em] transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A868] ${
         active
-          ? "text-[#e0c98f] after:absolute after:inset-x-3 after:-bottom-0.5 after:h-px after:bg-[#e0c98f]"
-          : "text-white hover:text-[#e0c98f]"
+          ? "text-[#D4A868] after:absolute after:inset-x-3 after:-bottom-0.5 after:h-px after:bg-[#D4A868]"
+          : "text-white hover:text-[#D4A868]"
       }`}
     >
       {label}
@@ -540,7 +555,7 @@ function ProductMenuColumn({
         bordered ? "border-r border-white/10 bg-white/[0.035]" : ""
       }`}
     >
-      <div className="mb-6 flex items-center gap-2 text-[#e0c98f]">
+      <div className="mb-6 flex items-center gap-2 text-[#D4A868]">
         <Icon size={18} aria-hidden="true" />
         <p className="text-xs font-bold uppercase tracking-[0.18em]">{title}</p>
       </div>
@@ -550,7 +565,7 @@ function ProductMenuColumn({
             <Link
               href={link.href}
               onClick={onNavigate}
-              className="block rounded-lg px-3 py-2.5 text-sm text-zinc-300 transition hover:bg-white/[0.08] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#e0c98f]"
+              className="block rounded-lg px-3 py-2.5 text-sm text-zinc-300 transition hover:bg-white/[0.08] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#D4A868]"
             >
               {link.label}
             </Link>
@@ -567,8 +582,8 @@ function MobileLink({ href, label, close, active }) {
       href={href}
       onClick={close}
       aria-current={active ? "page" : undefined}
-      className={`flex min-h-14 items-center justify-between border-b border-white/10 py-3 text-xl font-semibold last:border-b-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#e0c98f] ${
-        active ? "text-[#d2b87a]" : "text-white"
+      className={`flex min-h-14 items-center justify-between border-b border-white/10 py-3 text-xl font-semibold last:border-b-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#D4A868] ${
+        active ? "text-[#D4A868]" : "text-white"
       }`}
     >
       {label}

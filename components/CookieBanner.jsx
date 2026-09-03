@@ -122,13 +122,13 @@ export default function CookieBanner() {
       >
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute right-0 top-0 h-36 w-36 rounded-full bg-cyan-300/5 blur-[60px]"
+          className="pointer-events-none absolute right-0 top-0 h-36 w-36 rounded-full bg-[#D4A868]/5 blur-[60px]"
         />
 
         {!showConfig ? (
           <div className="relative flex flex-col gap-6 lg:flex-row lg:items-center">
             <div className="hidden h-12 w-12 shrink-0 place-items-center rounded-2xl border border-white/10 bg-white/5 md:grid">
-              <Cookie size={24} className="text-cyan-300" aria-hidden="true" />
+              <Cookie size={24} className="text-[#D4A868]" aria-hidden="true" />
             </div>
             <div className="flex-1">
               <h2
@@ -137,7 +137,7 @@ export default function CookieBanner() {
               >
                 <ShieldCheck
                   size={18}
-                  className="text-cyan-300 md:hidden"
+                  className="text-[#D4A868] md:hidden"
                   aria-hidden="true"
                 />
                 Tu privacidad, bajo tu control
@@ -148,7 +148,7 @@ export default function CookieBanner() {
                 autorices. Consulta la{" "}
                 <Link
                   href="/cookies"
-                  className="text-cyan-300 underline-offset-4 hover:underline"
+                  className="text-[#D4A868] underline-offset-4 hover:underline"
                 >
                   política de cookies
                 </Link>
@@ -159,21 +159,21 @@ export default function CookieBanner() {
               <button
                 type="button"
                 onClick={() => setShowConfig(true)}
-                className="min-h-11 rounded-full border border-white/15 px-5 text-sm font-medium transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300"
+                className="min-h-11 rounded-full border border-white/15 px-5 text-sm font-medium transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#D4A868]"
               >
                 Configurar
               </button>
               <button
                 type="button"
                 onClick={rejectAll}
-                className="min-h-11 rounded-full px-5 text-sm font-medium text-zinc-300 transition hover:bg-white/5 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300"
+                className="min-h-11 rounded-full px-5 text-sm font-medium text-zinc-300 transition hover:bg-white/5 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#D4A868]"
               >
                 Solo necesarias
               </button>
               <button
                 type="button"
                 onClick={acceptAll}
-                className="min-h-11 rounded-full bg-cyan-300 px-6 text-sm font-bold text-black transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
+                className="min-h-11 rounded-full bg-[#D4A868] px-6 text-sm font-bold text-black transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D4A868]"
               >
                 Aceptar todas
               </button>
@@ -186,14 +186,14 @@ export default function CookieBanner() {
                 id={titleId}
                 className="flex items-center gap-2 text-xl font-semibold"
               >
-                <Settings size={20} className="text-cyan-300" aria-hidden="true" />
+                <Settings size={20} className="text-[#D4A868]" aria-hidden="true" />
                 Configuración de cookies
               </h2>
               <button
                 type="button"
                 onClick={() => setShowConfig(false)}
                 aria-label="Volver al aviso de cookies"
-                className="grid h-10 w-10 place-items-center rounded-full text-zinc-400 transition hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300"
+                className="grid h-10 w-10 place-items-center rounded-full text-zinc-400 transition hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#D4A868]"
               >
                 <X size={21} aria-hidden="true" />
               </button>
@@ -223,14 +223,14 @@ export default function CookieBanner() {
               <button
                 type="button"
                 onClick={rejectAll}
-                className="min-h-11 rounded-full px-5 text-sm font-medium text-zinc-300 transition hover:bg-white/5 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300"
+                className="min-h-11 rounded-full px-5 text-sm font-medium text-zinc-300 transition hover:bg-white/5 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#D4A868]"
               >
                 Rechazar opcionales
               </button>
               <button
                 type="button"
                 onClick={saveCurrentPreferences}
-                className="min-h-11 rounded-full bg-white px-6 text-sm font-bold text-black transition hover:bg-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                className="min-h-11 rounded-full bg-white px-6 text-sm font-bold text-black transition hover:bg-[#D4A868] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 Guardar preferencias
               </button>
@@ -274,7 +274,7 @@ function PreferenceRow({
             aria-labelledby={`${id}-title`}
             aria-describedby={`${id}-description`}
           />
-          <span className="relative h-6 w-11 rounded-full bg-zinc-700 transition peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-cyan-300 peer-checked:bg-cyan-300 after:absolute after:left-0.5 after:top-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition after:content-[''] peer-checked:after:translate-x-5" />
+          <span className="relative h-6 w-11 rounded-full bg-zinc-700 transition peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#D4A868] peer-checked:bg-[#D4A868] after:absolute after:left-0.5 after:top-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition after:content-[''] peer-checked:after:translate-x-5" />
         </label>
       )}
     </div>

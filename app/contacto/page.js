@@ -105,14 +105,14 @@ export default function ContactoPage() {
   };
 
   return (
-    <main className="bg-black min-h-screen text-white selection:bg-[#00C2FF] selection:text-black flex flex-col">
+    <main className="bg-black min-h-screen text-white selection:bg-[#D4A868] selection:text-black flex flex-col">
       {/* 1. HERO & INTRO */}
       <section className="pt-40 pb-10 px-6 relative overflow-hidden">
          <div className="container mx-auto text-center relative z-10">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="inline-flex items-center gap-2 text-[#00C2FF] mb-4 border border-[#00C2FF]/20 px-4 py-1.5 rounded-full bg-[#00C2FF]/5"
+                className="inline-flex items-center gap-2 text-[#D4A868] mb-4 border border-[#D4A868]/20 px-4 py-1.5 rounded-full bg-[#D4A868]/5"
             >
                 <MessageSquare size={16} />
                 <span className="text-sm font-bold uppercase tracking-widest">Atención al Cliente</span>
@@ -124,7 +124,7 @@ export default function ContactoPage() {
               transition={{ delay: 0.1 }}
               className="text-5xl md:text-7xl font-bold mb-6 tracking-tight"
             >
-              Hablemos de <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00C2FF] to-blue-600">Seguridad</span>
+              Hablemos de <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4A868] to-[#866142]">Seguridad</span>
             </motion.h1>
             
             <motion.p 
@@ -137,8 +137,8 @@ export default function ContactoPage() {
             </motion.p>
          </div>
          {/* Fondo decorativo */}
-         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-900/20 blur-[120px] rounded-full -z-10" />
-         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#00C2FF]/10 blur-[120px] rounded-full -z-10" />
+         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#D4A868]/10 blur-[120px] rounded-full -z-10" />
+         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#D4A868]/10 blur-[120px] rounded-full -z-10" />
       </section>
 
       {/* 2. CONTENIDO PRINCIPAL (GRID) */}
@@ -157,7 +157,7 @@ export default function ContactoPage() {
                     <div className="space-y-8">
                         {/* Dirección */}
                         <div className="flex items-start gap-6 group">
-                            <div className="w-14 h-14 shrink-0 bg-[#111] rounded-full flex items-center justify-center border border-white/10 group-hover:border-[#00C2FF] group-hover:text-[#00C2FF] transition-all duration-300">
+                            <div className="w-14 h-14 shrink-0 bg-[#111] rounded-full flex items-center justify-center border border-white/10 group-hover:border-[#D4A868] group-hover:text-[#D4A868] transition-all duration-300">
                                 <MapPin size={24} />
                             </div>
                             <div>
@@ -172,32 +172,32 @@ export default function ContactoPage() {
 
                         {/* Correo */}
                         <div className="flex items-start gap-6 group">
-                            <div className="w-14 h-14 shrink-0 bg-[#111] rounded-full flex items-center justify-center border border-white/10 group-hover:border-[#00C2FF] group-hover:text-[#00C2FF] transition-all duration-300">
+                            <div className="w-14 h-14 shrink-0 bg-[#111] rounded-full flex items-center justify-center border border-white/10 group-hover:border-[#D4A868] group-hover:text-[#D4A868] transition-all duration-300">
                                 <Mail size={24} />
                             </div>
                             <div>
                                 <h3 className="text-lg font-bold text-white mb-1">Correos Electrónicos</h3>
                                 <div className="flex flex-col gap-2">
                                     <div>
-                                        <a href="mailto:info@wonlyspain.com" className="text-gray-400 hover:text-[#00C2FF] transition-colors">
+                                        <a href="mailto:info@wonlyspain.com" className="text-gray-400 hover:text-[#D4A868] transition-colors">
                                             info@wonlyspain.com
                                         </a>
                                         <span className="text-gray-600 text-sm ml-2">— Consultas y contacto</span>
                                     </div>
                                     <div>
-                                        <a href="mailto:jack@wonlyspain.com" className="text-gray-400 hover:text-[#00C2FF] transition-colors">
+                                        <a href="mailto:jack@wonlyspain.com" className="text-gray-400 hover:text-[#D4A868] transition-colors">
                                             jack@wonlyspain.com
                                         </a>
                                         <span className="text-gray-600 text-sm ml-2">— Corporativo</span>
                                     </div>
                                     <div>
-                                        <a href="mailto:jennyqiu@wonlyspain.com" className="text-gray-400 hover:text-[#00C2FF] transition-colors">
+                                        <a href="mailto:jennyqiu@wonlyspain.com" className="text-gray-400 hover:text-[#D4A868] transition-colors">
                                             jennyqiu@wonlyspain.com
                                         </a>
                                         <span className="text-gray-600 text-sm ml-2">— Marketing</span>
                                     </div>
                                     <div>
-                                        <a href="mailto:mpeiret@wonlyspain.com" className="text-gray-400 hover:text-[#00C2FF] transition-colors">
+                                        <a href="mailto:mpeiret@wonlyspain.com" className="text-gray-400 hover:text-[#D4A868] transition-colors">
                                             mpeiret@wonlyspain.com
                                         </a>
                                         <span className="text-gray-600 text-sm ml-2">— Growth Partner</span>
@@ -208,16 +208,16 @@ export default function ContactoPage() {
 
                         {/* Teléfonos */}
                         <div className="flex items-start gap-6 group">
-                            <div className="w-14 h-14 shrink-0 bg-[#111] rounded-full flex items-center justify-center border border-white/10 group-hover:border-[#00C2FF] group-hover:text-[#00C2FF] transition-all duration-300">
+                            <div className="w-14 h-14 shrink-0 bg-[#111] rounded-full flex items-center justify-center border border-white/10 group-hover:border-[#D4A868] group-hover:text-[#D4A868] transition-all duration-300">
                                 <Phone size={24} />
                             </div>
                             <div>
                                 <h3 className="text-lg font-bold text-white mb-1">Teléfonos de Contacto</h3>
                                 <div className="flex flex-col gap-1">
-                                    <a href="tel:+34689858129" className="text-gray-400 hover:text-[#00C2FF] transition-colors">
+                                    <a href="tel:+34689858129" className="text-gray-400 hover:text-[#D4A868] transition-colors">
                                         +34 689 858 129
                                     </a>
-                                    <a href="tel:+34615772136" className="text-gray-400 hover:text-[#00C2FF] transition-colors">
+                                    <a href="tel:+34615772136" className="text-gray-400 hover:text-[#D4A868] transition-colors">
                                         +34 615 772 136
                                     </a>
                                 </div>
@@ -226,7 +226,7 @@ export default function ContactoPage() {
 
                          {/* Horario */}
                          <div className="flex items-start gap-6 group">
-                            <div className="w-14 h-14 shrink-0 bg-[#111] rounded-full flex items-center justify-center border border-white/10 group-hover:border-[#00C2FF] group-hover:text-[#00C2FF] transition-all duration-300">
+                            <div className="w-14 h-14 shrink-0 bg-[#111] rounded-full flex items-center justify-center border border-white/10 group-hover:border-[#D4A868] group-hover:text-[#D4A868] transition-all duration-300">
                                 <Clock size={24} />
                             </div>
                             <div>
@@ -241,9 +241,9 @@ export default function ContactoPage() {
                         href="https://www.google.com/maps/search/?api=1&query=Carrer+Noi+del+Sucre+13+08840+Viladecans"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group mt-12 flex min-h-56 flex-col items-center justify-center rounded-2xl border border-white/10 bg-[radial-gradient(circle_at_center,_rgba(0,194,255,.12),_transparent_65%)] p-8 text-center shadow-2xl transition hover:border-[#00C2FF]/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#00C2FF]"
+                        className="group mt-12 flex min-h-56 flex-col items-center justify-center rounded-2xl border border-white/10 bg-[radial-gradient(circle_at_center,_rgba(212,168,104,.12),_transparent_65%)] p-8 text-center shadow-2xl transition hover:border-[#D4A868]/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A868]"
                     >
-                        <span className="mb-5 grid h-16 w-16 place-items-center rounded-full border border-[#00C2FF]/30 bg-[#00C2FF]/10 text-[#00C2FF] transition group-hover:scale-105">
+                        <span className="mb-5 grid h-16 w-16 place-items-center rounded-full border border-[#D4A868]/30 bg-[#D4A868]/10 text-[#D4A868] transition group-hover:scale-105">
                             <MapPin size={28} aria-hidden="true" />
                         </span>
                         <span className="text-lg font-bold text-white">Abrir ubicación en Google Maps</span>
@@ -269,7 +269,7 @@ export default function ContactoPage() {
                             <p className="text-gray-400">Gracias por contactar con Zhongyuankeji. Hemos recibido tu correo correctamente.</p>
                             <button 
                                 onClick={() => setFormStatus('idle')}
-                                className="mt-8 text-[#00C2FF] hover:text-white font-bold text-sm uppercase tracking-widest"
+                                className="mt-8 text-[#D4A868] hover:text-white font-bold text-sm uppercase tracking-widest"
                             >
                                 Enviar otro mensaje
                             </button>
@@ -296,8 +296,8 @@ export default function ContactoPage() {
                     <h3 className="text-2xl font-bold mb-6">Envíanos un mensaje</h3>
 
                     {hasProductConfiguration && (
-                        <div className="mb-6 border border-[#00C2FF]/30 bg-[#00C2FF]/10 p-4" role="status">
-                            <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#00C2FF]">
+                        <div className="mb-6 border border-[#D4A868]/30 bg-[#D4A868]/10 p-4" role="status">
+                            <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#D4A868]">
                                 Configuración de producto cargada
                             </p>
                             <p className="mt-2 text-sm leading-6 text-gray-300">
@@ -310,22 +310,22 @@ export default function ContactoPage() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-2">
                                 <label htmlFor="contact-name" className="text-sm text-gray-400 ml-1">Nombre</label>
-                                <input id="contact-name" name="nombre" autoComplete="name" required type="text" placeholder="Su nombre" className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#00C2FF] transition-colors text-white placeholder-gray-600" />
+                                <input id="contact-name" name="nombre" autoComplete="name" required type="text" placeholder="Su nombre" className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#D4A868] transition-colors text-white placeholder-gray-600" />
                             </div>
                             <div className="space-y-2">
                                 <label htmlFor="contact-company" className="text-sm text-gray-400 ml-1">Empresa</label>
-                                <input id="contact-company" name="empresa" autoComplete="organization" type="text" placeholder="Su empresa" className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#00C2FF] transition-colors text-white placeholder-gray-600" />
+                                <input id="contact-company" name="empresa" autoComplete="organization" type="text" placeholder="Su empresa" className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#D4A868] transition-colors text-white placeholder-gray-600" />
                             </div>
                         </div>
 
                         <div className="space-y-2">
                             <label htmlFor="contact-email" className="text-sm text-gray-400 ml-1">Correo Electrónico</label>
-                            <input id="contact-email" name="email" autoComplete="email" required type="email" placeholder="ejemplo@correo.com" className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#00C2FF] transition-colors text-white placeholder-gray-600" />
+                            <input id="contact-email" name="email" autoComplete="email" required type="email" placeholder="ejemplo@correo.com" className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#D4A868] transition-colors text-white placeholder-gray-600" />
                         </div>
 
                         <div className="space-y-2">
                             <label htmlFor="contact-subject" className="text-sm text-gray-400 ml-1">Asunto</label>
-                            <select id="contact-subject" name="asunto" value={subject} onChange={(event) => setSubject(event.target.value)} className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#00C2FF] transition-colors text-gray-400 appearance-none cursor-pointer">
+                            <select id="contact-subject" name="asunto" value={subject} onChange={(event) => setSubject(event.target.value)} className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#D4A868] transition-colors text-gray-400 appearance-none cursor-pointer">
                                 <option value="Presupuesto">Presupuesto</option>
                                 <option value="Producto">Información de Producto</option>
                                 <option value="Soporte">Soporte Técnico</option>
@@ -335,7 +335,7 @@ export default function ContactoPage() {
 
                         <div className="space-y-2">
                             <label htmlFor="contact-message" className="text-sm text-gray-400 ml-1">Mensaje</label>
-                            <textarea id="contact-message" name="mensaje" required rows={7} value={message} onChange={(event) => setMessage(event.target.value)} placeholder="¿En qué podemos ayudarte?" className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#00C2FF] transition-colors text-white placeholder-gray-600 resize-y"></textarea>
+                            <textarea id="contact-message" name="mensaje" required rows={7} value={message} onChange={(event) => setMessage(event.target.value)} placeholder="¿En qué podemos ayudarte?" className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#D4A868] transition-colors text-white placeholder-gray-600 resize-y"></textarea>
                         </div>
 
                         <div className="flex items-start gap-3 rounded-xl border border-white/10 bg-black/30 p-4">
@@ -345,11 +345,11 @@ export default function ContactoPage() {
                                 type="checkbox"
                                 value="sí"
                                 required
-                                className="mt-1 h-4 w-4 shrink-0 accent-[#00C2FF]"
+                                className="mt-1 h-4 w-4 shrink-0 accent-[#D4A868]"
                             />
                             <label htmlFor="contact-privacy" className="text-xs leading-relaxed text-gray-400">
                                 He leído la{" "}
-                                <Link href="/privacidad" className="font-semibold text-[#00C2FF] underline underline-offset-4 hover:text-white">
+                                <Link href="/privacidad" className="font-semibold text-[#D4A868] underline underline-offset-4 hover:text-white">
                                     política de privacidad
                                 </Link>
                                 . Entiendo que este formulario utiliza Formspree como proveedor técnico para entregar mi consulta a WONLY.
@@ -359,7 +359,7 @@ export default function ContactoPage() {
                         <button 
                             type="submit"
                             disabled={formStatus === 'submitting'}
-                            className="w-full bg-white text-black font-bold py-4 rounded-xl hover:bg-[#00C2FF] hover:text-white transition-all duration-300 shadow-lg shadow-white/5 hover:shadow-[#00C2FF]/20 flex items-center justify-center gap-2"
+                            className="w-full bg-white text-black font-bold py-4 rounded-xl hover:bg-[#D4A868] hover:text-black transition-all duration-300 shadow-lg shadow-white/5 hover:shadow-[#D4A868]/20 flex items-center justify-center gap-2"
                         >
                             {formStatus === 'submitting' ? (
                                 <span>Enviando...</span>
@@ -412,9 +412,9 @@ export default function ContactoPage() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.1 }}
-                        className="bg-[#111] border border-white/5 p-6 md:p-8 rounded-2xl hover:border-[#00C2FF]/30 transition-colors cursor-default group"
+                        className="bg-[#111] border border-white/5 p-6 md:p-8 rounded-2xl hover:border-[#D4A868]/30 transition-colors cursor-default group"
                     >
-                        <h4 className="font-bold text-white mb-3 text-lg group-hover:text-[#00C2FF] transition-colors">{item.q}</h4>
+                        <h4 className="font-bold text-white mb-3 text-lg group-hover:text-[#D4A868] transition-colors">{item.q}</h4>
                         <p className="text-gray-400 text-sm md:text-base leading-relaxed">{item.a}</p>
                     </motion.div>
                 ))}

@@ -84,7 +84,7 @@ export default function CertificateShowcase() {
           type="button"
           onClick={() => scroll(-1)}
           aria-label="Ver certificados anteriores"
-          className="absolute -left-4 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/15 bg-black/85 text-white transition hover:border-cyan-300 hover:bg-cyan-300 hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300 md:grid"
+          className="absolute -left-4 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/15 bg-black/85 text-white transition hover:border-[#D4A868] hover:bg-[#D4A868] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D4A868] md:grid"
         >
           <ChevronLeft size={20} aria-hidden="true" />
         </button>
@@ -100,7 +100,7 @@ export default function CertificateShowcase() {
                 href={certificate.pdf}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex min-h-60 w-[78vw] max-w-[330px] shrink-0 snap-start flex-col justify-between rounded-3xl border border-white/10 bg-white/[0.035] p-6 transition hover:-translate-y-1 hover:border-cyan-300/50 hover:bg-white/[0.06] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+                className="group flex min-h-60 w-[78vw] max-w-[330px] shrink-0 snap-start flex-col justify-between rounded-3xl border border-white/10 bg-white/[0.035] p-6 transition hover:-translate-y-1 hover:border-[#D4A868]/50 hover:bg-white/[0.06] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A868]"
               >
                 <CertificateLogo certificate={certificate} />
                 <CertificateText certificate={certificate} external />
@@ -110,7 +110,7 @@ export default function CertificateShowcase() {
                 key={certificate.id}
                 type="button"
                 onClick={() => setSelected(certificate)}
-                className="group flex min-h-60 w-[78vw] max-w-[330px] shrink-0 snap-start flex-col justify-between rounded-3xl border border-white/10 bg-white/[0.035] p-6 text-left transition hover:-translate-y-1 hover:border-cyan-300/50 hover:bg-white/[0.06] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+                className="group flex min-h-60 w-[78vw] max-w-[330px] shrink-0 snap-start flex-col justify-between rounded-3xl border border-white/10 bg-white/[0.035] p-6 text-left transition hover:-translate-y-1 hover:border-[#D4A868]/50 hover:bg-white/[0.06] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A868]"
               >
                 <CertificateLogo certificate={certificate} />
                 <CertificateText certificate={certificate} />
@@ -123,7 +123,7 @@ export default function CertificateShowcase() {
           type="button"
           onClick={() => scroll(1)}
           aria-label="Ver certificados siguientes"
-          className="absolute -right-4 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/15 bg-black/85 text-white transition hover:border-cyan-300 hover:bg-cyan-300 hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300 md:grid"
+          className="absolute -right-4 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/15 bg-black/85 text-white transition hover:border-[#D4A868] hover:bg-[#D4A868] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D4A868] md:grid"
         >
           <ChevronRight size={20} aria-hidden="true" />
         </button>
@@ -158,7 +158,7 @@ export default function CertificateShowcase() {
                 type="button"
                 onClick={() => setSelected(null)}
                 aria-label="Cerrar certificado"
-                className="grid h-10 w-10 place-items-center rounded-full text-zinc-400 transition hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300"
+                className="grid h-10 w-10 place-items-center rounded-full text-zinc-400 transition hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#D4A868]"
               >
                 <X size={20} aria-hidden="true" />
               </button>
@@ -199,7 +199,7 @@ function CertificateLogo({ certificate }) {
 function CertificateText({ certificate, external = false }) {
   return (
     <div className="mt-8">
-      <p className="text-lg font-semibold text-white transition group-hover:text-cyan-300">
+      <p className="text-lg font-semibold text-white transition group-hover:text-[#D4A868]">
         {certificate.title}
       </p>
       <div className="mt-2 flex items-center justify-between gap-3">
@@ -207,7 +207,7 @@ function CertificateText({ certificate, external = false }) {
         {external ? (
           <ExternalLink size={16} className="text-zinc-500" aria-hidden="true" />
         ) : (
-          <span className="text-xs font-bold uppercase tracking-[0.14em] text-cyan-300">
+          <span className="text-xs font-bold uppercase tracking-[0.14em] text-[#D4A868]">
             Consultar
           </span>
         )}

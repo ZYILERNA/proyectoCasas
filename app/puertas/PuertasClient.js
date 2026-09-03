@@ -160,10 +160,10 @@ const ProductCard = memo(forwardRef(function ProductCard({
     .replace("SEGURIDAD ", "");
 
   let highlightClass = "text-gray-400";
-  if (product.category.includes("IA")) highlightClass = "text-[#00C2FF]";
+  if (product.category.includes("IA")) highlightClass = "text-[#866142]";
   else if (product.category.includes("MADERA")) highlightClass = "text-[#8D6E63]";
-  else if (product.category.includes("PVC")) highlightClass = "text-teal-600";
-  else if (product.category.includes("CORREDIZAS")) highlightClass = "text-indigo-600";
+  else if (product.category.includes("PVC")) highlightClass = "text-[#866142]";
+  else if (product.category.includes("CORREDIZAS")) highlightClass = "text-[#866142]";
   else if (product.category.includes("CORTAFUEGO")) highlightClass = "text-orange-600";
   else if (product.category.includes("EVACUACIÓN")) highlightClass = "text-red-600";
   else if (product.category.includes("MINIMALISTA")) highlightClass = "text-stone-500";
@@ -203,15 +203,15 @@ const ProductCard = memo(forwardRef(function ProductCard({
           product.category.includes("MADERA")
             ? "group-hover:text-[#8D6E63]"
             : product.category.includes("PVC")
-              ? "group-hover:text-teal-600"
+              ? "group-hover:text-[#866142]"
               : product.category.includes("CORREDIZAS")
-                ? "group-hover:text-indigo-600"
-                : "group-hover:text-[#00C2FF]"
+                ? "group-hover:text-[#866142]"
+                : "group-hover:text-[#866142]"
         }`}>
           {product.name}
         </h2>
         <div className="mt-1 flex items-center justify-center gap-2 group-hover:justify-start">
-          <p className={`text-[9px] uppercase tracking-widest ${product.category.includes("IA") ? "font-semibold text-[#00C2FF]" : highlightClass}`}>
+          <p className={`text-[9px] uppercase tracking-widest ${product.category.includes("IA") ? "font-semibold text-[#866142]" : highlightClass}`}>
             {shortCategory}
           </p>
           <div className="flex -space-x-1" aria-hidden="true">

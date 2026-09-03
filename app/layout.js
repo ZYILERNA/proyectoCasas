@@ -86,7 +86,7 @@ export default function RootLayout({ children }) {
       <body className="bg-[#050505] text-white antialiased">
         <a
           href="#main-content"
-          className="fixed left-4 top-4 z-[120] -translate-y-24 rounded-full bg-cyan-300 px-5 py-3 text-sm font-bold text-black transition focus:translate-y-0"
+          className="fixed left-4 top-4 z-[120] -translate-y-24 rounded-full bg-[#D4A868] px-5 py-3 text-sm font-bold text-black transition focus:translate-y-0"
         >
           Saltar al contenido
         </a>

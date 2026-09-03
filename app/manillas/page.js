@@ -41,7 +41,7 @@ const ProductCard = memo(({ product, onClick, index }) => (
     transition={{ duration: 0.3, delay: index * 0.04 }}
     whileHover={{ y: -4 }}
     onClick={onClick}
-    className="group relative bg-[#0d0d0d] rounded-2xl overflow-hidden border border-white/8 cursor-pointer hover:border-[#00C2FF]/40 transition-all duration-300 flex flex-col text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#00C2FF]"
+    className="group relative bg-[#0d0d0d] rounded-2xl overflow-hidden border border-white/8 cursor-pointer hover:border-[#D4A868]/40 transition-all duration-300 flex flex-col text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#D4A868]"
   >
     {/* Imagen — fondo blanco para encajar las fotos */}
     <div className="relative aspect-[4/3] bg-white overflow-hidden flex items-center justify-center p-6">
@@ -51,7 +51,7 @@ const ProductCard = memo(({ product, onClick, index }) => (
         className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
         loading="lazy"
       />
-      <div className="absolute top-3 left-3 bg-[#00C2FF]/10 border border-[#00C2FF]/30 text-[#00C2FF] text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide backdrop-blur-sm">
+      <div className="absolute top-3 left-3 bg-[#D4A868]/10 border border-[#D4A868]/30 text-[#D4A868] text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide backdrop-blur-sm">
         {product.category}
       </div>
       {product.has_kit && (
@@ -64,7 +64,7 @@ const ProductCard = memo(({ product, onClick, index }) => (
     {/* Info */}
     <div className="p-5 flex-1 flex flex-col gap-2.5">
       <div>
-        <p className="text-[#00C2FF] text-[10px] font-bold uppercase tracking-widest mb-0.5 font-mono">{product.code}</p>
+        <p className="text-[#D4A868] text-[10px] font-bold uppercase tracking-widest mb-0.5 font-mono">{product.code}</p>
         <h3 className="text-white text-lg font-bold leading-tight">{product.name}</h3>
       </div>
       <p className="text-gray-500 text-sm line-clamp-2 flex-1">{product.description}</p>
@@ -86,7 +86,7 @@ const ProductCard = memo(({ product, onClick, index }) => (
         </div>
       )}
 
-      <div className="flex items-center gap-1.5 text-[#00C2FF] text-xs font-semibold mt-1 group-hover:gap-2.5 transition-all">
+      <div className="flex items-center gap-1.5 text-[#D4A868] text-xs font-semibold mt-1 group-hover:gap-2.5 transition-all">
         Ver detalles <ChevronRight size={14} />
       </div>
     </div>
@@ -182,7 +182,7 @@ const ProductDrawer = memo(({ product, onClose }) => {
                   <button
                     key={idx}
                     onClick={(e) => { e.stopPropagation(); setGalleryIndex(idx); }}
-                    className={`h-1.5 rounded-full transition-all duration-300 ${idx === galleryIndex ? 'w-5 bg-[#00C2FF]' : 'w-1.5 bg-white/60 hover:bg-white'}`}
+                    className={`h-1.5 rounded-full transition-all duration-300 ${idx === galleryIndex ? 'w-5 bg-[#D4A868]' : 'w-1.5 bg-white/60 hover:bg-white'}`}
                   />
                 ))}
               </div>
@@ -239,11 +239,11 @@ const ProductDrawer = memo(({ product, onClose }) => {
           <div className="p-6 md:p-8 pb-0 shrink-0">
             <div className="flex justify-between items-start">
               <div>
-                <div className="inline-block bg-[#00C2FF] text-black text-[10px] font-mono font-bold px-2 py-1 mb-2 rounded">
+                <div className="inline-block bg-[#D4A868] text-black text-[10px] font-mono font-bold px-2 py-1 mb-2 rounded">
                   {product.code}
                 </div>
                 <h2 className="text-2xl md:text-3xl font-bold text-white leading-tight">{product.name}</h2>
-                <p className="text-[10px] text-[#00C2FF] uppercase tracking-widest mt-1 font-bold">{product.category}</p>
+                <p className="text-[10px] text-[#D4A868] uppercase tracking-widest mt-1 font-bold">{product.category}</p>
               </div>
               <button type="button" aria-label="Cerrar detalles" onClick={onClose} className="hidden md:block text-gray-400 hover:text-white hover:bg-white/10 p-2 rounded-full transition-colors"><X size={24} /></button>
             </div>
@@ -257,7 +257,7 @@ const ProductDrawer = memo(({ product, onClose }) => {
               {product.colors?.length > 0 && (
                 <div>
                   <h3 className="text-xs font-bold uppercase tracking-wider text-white border-b border-white/10 pb-2 mb-3 flex items-center gap-2">
-                    <Layers size={14} className="text-[#00C2FF]" /> Acabados disponibles
+                    <Layers size={14} className="text-[#D4A868]" /> Acabados disponibles
                   </h3>
                   <div className="flex flex-wrap gap-4 p-4 bg-white/5 rounded-xl">
                     {product.colors.map((color, i) => (
@@ -278,7 +278,7 @@ const ProductDrawer = memo(({ product, onClose }) => {
               {product.specs && (
                 <div>
                   <h3 className="text-xs font-bold uppercase tracking-wider text-white border-b border-white/10 pb-2 mb-3 flex items-center gap-2">
-                    <Tag size={14} className="text-[#00C2FF]" /> Ficha técnica
+                    <Tag size={14} className="text-[#D4A868]" /> Ficha técnica
                   </h3>
                   <div className="rounded-xl overflow-hidden border border-white/10 divide-y divide-white/10">
                     {Object.entries(product.specs).map(([key, value]) => (
@@ -292,8 +292,8 @@ const ProductDrawer = memo(({ product, onClose }) => {
               )}
 
               {product.has_kit && (
-                <div className="flex items-start gap-3 bg-[#00C2FF]/10 border border-[#00C2FF]/20 rounded-xl p-4">
-                  <Package size={18} className="text-[#00C2FF] shrink-0 mt-0.5" />
+                <div className="flex items-start gap-3 bg-[#D4A868]/10 border border-[#D4A868]/20 rounded-xl p-4">
+                  <Package size={18} className="text-[#D4A868] shrink-0 mt-0.5" />
                   <div>
                     <p className="text-sm font-bold text-white">Incluye kit de instalación</p>
                     <p className="text-xs text-gray-400">Cuerpo de cerradura, cilindro con llaves, bisagras, tope y tornillería. Ver última imagen de la galería.</p>
@@ -304,7 +304,7 @@ const ProductDrawer = memo(({ product, onClose }) => {
           </div>
 
           <div className="absolute bottom-0 left-0 w-full bg-[#080808] border-t border-white/10 p-4 md:p-6 z-20">
-            <Link href="/contacto" className="flex items-center justify-center gap-2 w-full bg-[#00C2FF] text-black text-center px-6 py-4 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-white hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-lg shadow-[#00C2FF]/20">
+            <Link href="/contacto" className="flex items-center justify-center gap-2 w-full bg-[#D4A868] text-black text-center px-6 py-4 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-white hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-lg shadow-[#D4A868]/20">
               Solicitar Cotización <ChevronRight size={16} />
             </Link>
           </div>
@@ -389,7 +389,7 @@ function ManillasContent() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#060606]/70 via-[#060606]/50 to-[#060606]" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#060606]/80 via-transparent to-[#060606]/80" />
         </div>
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#00C2FF]/8 rounded-full blur-[120px] z-0 pointer-events-none" />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#D4A868]/8 rounded-full blur-[120px] z-0 pointer-events-none" />
 
         <div className="container mx-auto px-6 relative z-10 pt-16 pb-24">
           <motion.div
@@ -398,7 +398,7 @@ function ManillasContent() {
             transition={{ duration: 0.5 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <div className="inline-flex items-center gap-2 bg-[#00C2FF]/10 border border-[#00C2FF]/25 text-[#00C2FF] text-xs font-bold px-4 py-2 rounded-full mb-8 uppercase tracking-widest">
+            <div className="inline-flex items-center gap-2 bg-[#D4A868]/10 border border-[#D4A868]/25 text-[#D4A868] text-xs font-bold px-4 py-2 rounded-full mb-8 uppercase tracking-widest">
               <DoorOpen size={12} /> Manijas WONLY
             </div>
 
@@ -410,7 +410,7 @@ function ManillasContent() {
             >
               Manillas
               <br />
-              <span className="text-[#00C2FF]">de Diseño</span>
+              <span className="text-[#D4A868]">de Diseño</span>
             </motion.h1>
 
             <motion.p
@@ -443,7 +443,7 @@ function ManillasContent() {
                 transition={{ delay: i * 0.08 }}
                 className="bg-[#080808] p-6 flex flex-col items-center text-center gap-3 hover:bg-[#0f0f0f] transition-colors group"
               >
-                <div className="text-[#00C2FF]/60 group-hover:text-[#00C2FF] transition-colors">{pillar.icon}</div>
+                <div className="text-[#D4A868]/60 group-hover:text-[#D4A868] transition-colors">{pillar.icon}</div>
                 <div>
                   <p className="text-white text-sm font-bold">{pillar.label}</p>
                   <p className="text-gray-600 text-[11px] mt-0.5">{pillar.desc}</p>
@@ -459,7 +459,7 @@ function ManillasContent() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
             <div>
-              <p className="text-[#00C2FF] text-xs font-bold uppercase tracking-widest mb-2">Catálogo</p>
+              <p className="text-[#D4A868] text-xs font-bold uppercase tracking-widest mb-2">Catálogo</p>
               <h2 className="text-3xl font-black uppercase">Colección Manillas</h2>
             </div>
             {!isLoading && manillas.length > 0 && (
@@ -476,7 +476,7 @@ function ManillasContent() {
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}
                 placeholder="Buscar manilla o código..."
-                className="w-full bg-[#0d0d0d] border border-white/10 rounded-full pl-10 pr-10 py-2.5 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#00C2FF]/50 transition-colors"
+                className="w-full bg-[#0d0d0d] border border-white/10 rounded-full pl-10 pr-10 py-2.5 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#D4A868]/50 transition-colors"
               />
               {searchQuery && (
                 <button onClick={() => setSearchQuery("")} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white transition-colors">
@@ -495,7 +495,7 @@ function ManillasContent() {
                   onClick={() => setActiveFilter(cat)}
                   className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border transition-all duration-200 ${
                     activeFilter === cat
-                      ? 'bg-[#00C2FF] border-[#00C2FF] text-black'
+                      ? 'bg-[#D4A868] border-[#D4A868] text-black'
                       : 'bg-transparent border-white/15 text-gray-500 hover:border-white/30 hover:text-white'
                   }`}
                 >
@@ -507,7 +507,7 @@ function ManillasContent() {
 
           {isLoading ? (
             <div className="flex flex-col items-center justify-center py-32 text-gray-600">
-              <Loader2 className="animate-spin mb-4 text-[#00C2FF]" size={36} />
+              <Loader2 className="animate-spin mb-4 text-[#D4A868]" size={36} />
               <p className="text-sm">Cargando catálogo...</p>
             </div>
           ) : (
@@ -524,7 +524,7 @@ function ManillasContent() {
                   <div className="col-span-full flex flex-col items-center py-24 text-gray-600">
                     <Search size={36} className="mb-4 opacity-30" />
                     <p className="text-sm">Sin resultados{searchQuery && <> para <span className="text-white/50">"{searchQuery}"</span></>}</p>
-                    <button onClick={() => { setSearchQuery(""); setActiveFilter("Todos"); }} className="mt-3 text-[#00C2FF] text-xs hover:underline">Limpiar filtros</button>
+                    <button onClick={() => { setSearchQuery(""); setActiveFilter("Todos"); }} className="mt-3 text-[#D4A868] text-xs hover:underline">Limpiar filtros</button>
                   </div>
                 ) : filtered.map((product, i) => (
                   <ProductCard
@@ -550,16 +550,16 @@ function ManillasContent() {
       {/* ===== CTA FINAL ===== */}
       <section className="relative py-32 overflow-hidden border-t border-white/5">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute left-1/2 top-0 -translate-x-1/2 w-[600px] h-[300px] bg-[#00C2FF]/6 rounded-full blur-[100px]" />
+          <div className="absolute left-1/2 top-0 -translate-x-1/2 w-[600px] h-[300px] bg-[#D4A868]/6 rounded-full blur-[100px]" />
         </div>
         <div className="container mx-auto px-6 text-center relative z-10">
-          <p className="text-[#00C2FF] text-xs font-bold uppercase tracking-widest mb-4">¿Necesitas asesoramiento?</p>
+          <p className="text-[#D4A868] text-xs font-bold uppercase tracking-widest mb-4">¿Necesitas asesoramiento?</p>
           <h2 className="text-4xl md:text-6xl font-black uppercase mb-8 leading-tight">
             El Detalle<br />que Marca la Diferencia
           </h2>
           <Link
             href="/contacto"
-            className="inline-flex items-center gap-3 bg-[#00C2FF] hover:bg-white text-black px-10 py-4 rounded-full font-bold uppercase tracking-widest text-sm transition-all duration-300 hover:shadow-[0_0_40px_rgba(0,194,255,0.3)]"
+            className="inline-flex items-center gap-3 bg-[#D4A868] hover:bg-white text-black px-10 py-4 rounded-full font-bold uppercase tracking-widest text-sm transition-all duration-300 hover:shadow-[0_0_40px_rgba(212,168,104,0.3)]"
           >
             Contactar con ventas <ChevronRight size={16} />
           </Link>

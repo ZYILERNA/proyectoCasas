@@ -317,8 +317,8 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
                             <div className="space-y-8">
                                 {/* Dimensiones */}
                                 <div className="grid grid-cols-2 gap-4">
-                                    <div className="bg-blue-50/50 p-4 rounded-xl border border-blue-100">
-                                        <div className="flex items-center gap-2 text-blue-600 mb-1"><Ruler size={16} /> <span className="text-[10px] font-bold uppercase">Medidas</span></div>
+                                    <div className="bg-[#D4A868]/10 p-4 rounded-xl border border-[#D4A868]/20">
+                                        <div className="flex items-center gap-2 text-[#866142] mb-1"><Ruler size={16} /> <span className="text-[10px] font-bold uppercase">Medidas</span></div>
                                         <div className="text-sm font-bold text-gray-900">{selectedProduct.specs?.dimensions || "N/A"}</div>
                                     </div>
                                     <div className="bg-gray-50 p-4 rounded-xl border border-gray-100">
@@ -376,7 +376,7 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
                                         <div className="grid grid-cols-1 gap-3">
                                             {selectedProduct.materials.map((mat, idx) => (
                                                 <div key={idx} className="flex items-center gap-3 p-3 rounded-lg border border-gray-100 bg-white hover:border-gray-300 transition-colors">
-                                                    <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 ${mat.detail === 'Interchangeable' ? 'bg-blue-50 text-blue-600 border border-blue-100' : 'bg-gray-100 text-gray-400'}`}>
+                                                    <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 ${mat.detail === 'Interchangeable' ? 'bg-[#D4A868]/10 text-[#866142] border border-[#D4A868]/20' : 'bg-gray-100 text-gray-400'}`}>
                                                         {mat.detail === 'Interchangeable' ? <RefreshCw size={14} /> : <Lock size={14} />}
                                                     </div>
                                                     <div className="flex-1 min-w-0">
@@ -398,7 +398,7 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
                                         </h3>
                                         <button
                                             onClick={() => setShowPriceModal(true)}
-                                            className="text-[10px] flex items-center gap-1.5 text-blue-600 hover:text-blue-800 hover:bg-blue-50 px-2 py-1 rounded transition-all cursor-pointer font-medium"
+                                            className="text-[10px] flex items-center gap-1.5 text-[#866142] hover:text-[#513A29] hover:bg-[#D4A868]/10 px-2 py-1 rounded transition-all cursor-pointer font-medium"
                                         >
                                             <Maximize2 size={12} /> Ver Tabla Precios
                                         </button>

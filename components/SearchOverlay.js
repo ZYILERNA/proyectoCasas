@@ -237,7 +237,7 @@ export default function SearchOverlay({ open, onClose }) {
               type="button"
               onClick={onClose}
               aria-label="Cerrar búsqueda"
-              className="grid h-10 w-10 place-items-center rounded-full text-zinc-400 transition hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300"
+              className="grid h-10 w-10 place-items-center rounded-full text-zinc-400 transition hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#D4A868]"
             >
               <X size={19} aria-hidden="true" />
             </button>
@@ -247,7 +247,7 @@ export default function SearchOverlay({ open, onClose }) {
             onSubmit={handleSubmit}
             className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] px-4"
           >
-            <Search size={19} className="shrink-0 text-cyan-300" aria-hidden="true" />
+            <Search size={19} className="shrink-0 text-[#D4A868]" aria-hidden="true" />
             <label htmlFor="site-search" className="sr-only">
               Buscar productos, categorías o páginas
             </label>
@@ -298,12 +298,12 @@ export default function SearchOverlay({ open, onClose }) {
                   key={section.href}
                   type="button"
                   onClick={() => go(section.href)}
-                  className="group flex min-h-14 w-full items-center gap-4 px-5 py-2.5 text-left transition hover:bg-white/5 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-cyan-300"
+                  className="group flex min-h-14 w-full items-center gap-4 px-5 py-2.5 text-left transition hover:bg-white/5 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#D4A868]"
                 >
                   <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-white/10 bg-white/5">
                     <CornerDownLeft
                       size={15}
-                      className="text-zinc-500 transition group-hover:text-cyan-300"
+                      className="text-zinc-500 transition group-hover:text-[#D4A868]"
                       aria-hidden="true"
                     />
                   </span>
@@ -312,7 +312,7 @@ export default function SearchOverlay({ open, onClose }) {
                   </span>
                   <ArrowRight
                     size={16}
-                    className="text-zinc-600 transition group-hover:text-cyan-300"
+                    className="text-zinc-600 transition group-hover:text-[#D4A868]"
                     aria-hidden="true"
                   />
                 </button>
@@ -359,7 +359,7 @@ function ResultButton({ result, onClick }) {
     <button
       type="button"
       onClick={onClick}
-      className="group flex min-h-16 w-full items-center gap-4 px-5 py-2.5 text-left transition hover:bg-white/5 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-cyan-300"
+      className="group flex min-h-16 w-full items-center gap-4 px-5 py-2.5 text-left transition hover:bg-white/5 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#D4A868]"
     >
       <span className="h-11 w-11 shrink-0 overflow-hidden rounded-xl bg-white">
         {result.img ? (
@@ -388,7 +388,7 @@ function ResultButton({ result, onClick }) {
       </span>
       <ArrowRight
         size={16}
-        className="shrink-0 text-zinc-600 transition group-hover:text-cyan-300"
+        className="shrink-0 text-zinc-600 transition group-hover:text-[#D4A868]"
         aria-hidden="true"
       />
     </button>

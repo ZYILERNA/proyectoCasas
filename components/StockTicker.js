@@ -65,7 +65,7 @@ export default function StockTicker() {
       <span className="flex items-center gap-2">
         <Activity
           size={12}
-          className="text-cyan-300 motion-safe:animate-pulse"
+          className="text-[#D4A868] motion-safe:animate-pulse"
           aria-hidden="true"
         />
         <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-zinc-400">

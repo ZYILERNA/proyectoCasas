@@ -72,11 +72,11 @@ export default function Footer() {
     <footer data-site-footer className="relative overflow-hidden border-t border-white/10 bg-[#030303] pb-8 pt-20 text-white md:pt-24">
       <div
         aria-hidden="true"
-        className="absolute left-1/2 top-0 h-px w-full max-w-4xl -translate-x-1/2 bg-gradient-to-r from-transparent via-cyan-300/50 to-transparent"
+        className="absolute left-1/2 top-0 h-px w-full max-w-4xl -translate-x-1/2 bg-gradient-to-r from-transparent via-[#D4A868]/50 to-transparent"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-0 h-32 w-full max-w-xl -translate-x-1/2 bg-cyan-300/5 blur-[100px]"
+        className="pointer-events-none absolute left-1/2 top-0 h-32 w-full max-w-xl -translate-x-1/2 bg-[#D4A868]/5 blur-[100px]"
       />
 
       <div className="container relative z-10 mx-auto px-6">
@@ -85,7 +85,7 @@ export default function Footer() {
             <Link
               href="/"
               aria-label="WONLY España, ir a inicio"
-              className="mb-6 inline-block rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+              className="mb-6 inline-block rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A868]"
             >
               <Image
                 src="/images/logo-wonly-global-light.webp"
@@ -229,7 +229,7 @@ export default function Footer() {
 function FooterTitle({ children }) {
   return (
     <h2 className="mb-8 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-white">
-      <span className="h-px w-4 bg-cyan-300" aria-hidden="true" />
+      <span className="h-px w-4 bg-[#D4A868]" aria-hidden="true" />
       {children}
     </h2>
   );
@@ -264,7 +264,7 @@ function FooterLink({ href, label }) {
         <ChevronRight
           size={14}
           aria-hidden="true"
-          className="-ml-4 mr-0 text-cyan-300 opacity-0 transition-all duration-300 group-hover:ml-0 group-hover:mr-2 group-hover:opacity-100"
+          className="-ml-4 mr-0 text-[#D4A868] opacity-0 transition-all duration-300 group-hover:ml-0 group-hover:mr-2 group-hover:opacity-100"
         />
         <span className="transition-transform duration-300 group-hover:translate-x-1">
           {label}
@@ -277,7 +277,7 @@ function FooterLink({ href, label }) {
 function ContactItem({ icon: Icon, label, children }) {
   return (
     <div className="group flex items-start gap-4">
-      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-white/10 bg-white/5 text-zinc-400 transition-colors group-hover:border-cyan-300 group-hover:bg-cyan-300/10 group-hover:text-cyan-300">
+      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-white/10 bg-white/5 text-zinc-400 transition-colors group-hover:border-[#D4A868] group-hover:bg-[#D4A868]/10 group-hover:text-[#D4A868]">
         <Icon size={16} aria-hidden="true" />
       </span>
       <span>
@@ -297,7 +297,7 @@ function SocialIcon({ icon: Icon, href, label }) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      className="grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-white/5 text-zinc-400 transition duration-300 hover:scale-110 hover:border-white hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300"
+      className="grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-white/5 text-zinc-400 transition duration-300 hover:scale-110 hover:border-white hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#D4A868]"
     >
       <Icon size={18} aria-hidden="true" />
     </a>

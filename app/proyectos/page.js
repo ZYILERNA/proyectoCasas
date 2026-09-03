@@ -132,7 +132,7 @@ const stats = [
 
 export default function ProyectosPage() {
   return (
-    <main className="bg-black min-h-screen text-white selection:bg-[#00C2FF] selection:text-black">
+    <main className="bg-black min-h-screen text-white selection:bg-[#D4A868] selection:text-black">
       {/* 1. HERO SECTION */}
       <section className="pt-40 pb-20 px-6 relative overflow-hidden">
         <div className="container mx-auto text-center relative z-10">
@@ -141,7 +141,7 @@ export default function ProyectosPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-bold mb-6 tracking-tight"
           >
-            Ingeniería que <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00C2FF] to-blue-600">Protege el Mundo</span>
+            Ingeniería que <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4A868] to-[#866142]">Protege el Mundo</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -153,7 +153,7 @@ export default function ProyectosPage() {
             las infraestructuras más críticas confían en la tecnología WONLY.
           </motion.p>
         </div>
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-black to-black -z-10 blur-3xl" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#D4A868]/10 via-black to-black -z-10 blur-3xl" />
       </section>
 
       {/* 2. PROYECTOS CHINA (REDISEÑADO CON ESTILO INTERNACIONAL) */}
@@ -161,7 +161,7 @@ export default function ProyectosPage() {
         <div className="container mx-auto">
             <div className="flex items-center gap-4 mb-12">
                 <div className="h-px bg-white/20 flex-1"></div>
-                <h2 className="text-2xl font-bold uppercase tracking-widest text-[#00C2FF]">Proyectos Destacados en China</h2>
+                <h2 className="text-2xl font-bold uppercase tracking-widest text-[#D4A868]">Proyectos Destacados en China</h2>
                 <div className="h-px bg-white/20 flex-1"></div>
             </div>
 
@@ -174,7 +174,7 @@ export default function ProyectosPage() {
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
                     // --- NUEVO ESTILO DE TARJETA (Igual que International) ---
-                    className="bg-[#111] rounded-xl overflow-hidden border border-white/10 hover:border-[#00C2FF] transition-colors group"
+                    className="bg-[#111] rounded-xl overflow-hidden border border-white/10 hover:border-[#D4A868] transition-colors group"
                 >
                     {/* Contenedor Imagen + Overlay Título */}
                     <div className="h-52 overflow-hidden relative">
@@ -185,7 +185,7 @@ export default function ProyectosPage() {
                          
                          {/* Gradiente inferior con Título y Ubicación */}
                          <div className="absolute bottom-0 left-0 w-full p-4 z-20 bg-gradient-to-t from-black to-transparent">
-                            <div className="flex items-center gap-2 text-[#00C2FF] text-xs font-bold uppercase mb-1">
+                            <div className="flex items-center gap-2 text-[#D4A868] text-xs font-bold uppercase mb-1">
                                 <MapPin size={12} />
                                 CHINA
                             </div>
@@ -216,7 +216,7 @@ export default function ProyectosPage() {
           <div className="container mx-auto px-6 relative z-10">
               {/* Encabezado descriptivo */}
               <div className="text-center max-w-4xl mx-auto mb-16">
-                  <div className="inline-flex items-center gap-2 text-[#00C2FF] mb-4">
+                  <div className="inline-flex items-center gap-2 text-[#D4A868] mb-4">
                     <Globe size={20} />
                     <span className="uppercase tracking-widest text-sm font-bold">Presencia Global</span>
                   </div>
@@ -224,7 +224,7 @@ export default function ProyectosPage() {
                   <p className="text-gray-300 text-lg leading-relaxed">
                     WONLY ha participado ampliamente en la construcción de diversos proyectos internacionales 
                     de ayuda y comerciales, tales como <span className="text-white font-semibold">escuelas, hospitales, hoteles, apartamentos, estadios y edificios de oficinas</span>, 
-                    distribuidos por <span className="text-[#00C2FF]">Asia, África y América</span>.
+                    distribuidos por <span className="text-[#D4A868]">Asia, África y América</span>.
                   </p>
               </div>
 
@@ -237,7 +237,7 @@ export default function ProyectosPage() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.2 }}
-                        className="bg-[#111] rounded-xl overflow-hidden border border-white/10 hover:border-[#00C2FF] transition-colors group"
+                        className="bg-[#111] rounded-xl overflow-hidden border border-white/10 hover:border-[#D4A868] transition-colors group"
                     >
                         <div className="h-52 overflow-hidden relative">
                              {/* Overlay oscuro */}
@@ -245,7 +245,7 @@ export default function ProyectosPage() {
                              <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
                              
                              <div className="absolute bottom-0 left-0 w-full p-4 z-20 bg-gradient-to-t from-black to-transparent">
-                                <div className="flex items-center gap-2 text-[#00C2FF] text-xs font-bold uppercase mb-1">
+                                <div className="flex items-center gap-2 text-[#D4A868] text-xs font-bold uppercase mb-1">
                                     <MapPin size={12} />
                                     {project.location}
                                 </div>
@@ -272,7 +272,7 @@ export default function ProyectosPage() {
                 {/* Texto */}
                 <div>
                     <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                        Potencia Global de <span className="text-[#00C2FF]">I+D</span>
+                        Potencia Global de <span className="text-[#D4A868]">I+D</span>
                     </h2>
                     <p className="text-gray-400 text-lg mb-8 leading-relaxed">
                         Con 5 bases estratégicas en <strong>Múnich (Alemania), Shanghái, Hangzhou, Shenzhen y Yongkang</strong>. 
@@ -283,7 +283,7 @@ export default function ProyectosPage() {
                         {stats.map((stat) => (
                             <div key={stat.id} className="bg-[#151515] p-6 rounded-xl border border-white/5">
                                 <h4 className="text-4xl font-bold text-white mb-1">{stat.number}</h4>
-                                <p className="text-[#00C2FF] font-bold text-sm uppercase mb-2">{stat.label}</p>
+                                <p className="text-[#D4A868] font-bold text-sm uppercase mb-2">{stat.label}</p>
                                 <p className="text-xs text-gray-500">{stat.sub}</p>
                             </div>
                         ))}
@@ -292,7 +292,7 @@ export default function ProyectosPage() {
 
                 {/* Imagen decorativa / Mapa */}
                 <div className="relative h-[500px] bg-[#111] rounded-2xl border border-white/10 overflow-hidden p-8 flex flex-col justify-center items-center text-center">
-                     <MapPin className="w-16 h-16 text-[#00C2FF] mb-4" />
+                     <MapPin className="w-16 h-16 text-[#D4A868] mb-4" />
                      <h3 className="text-2xl font-bold mb-2">Base de I+D Alemania</h3>
                      <p className="text-gray-500 max-w-md">
                          Nuestros centros colaboran globalmente para integrar diseño alemán y tecnología de fabricación inteligente.
@@ -316,18 +316,18 @@ export default function ProyectosPage() {
         </div>
         
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-[#111] p-8 rounded-2xl border border-white/10 hover:border-[#00C2FF] transition duration-300">
-                <Cpu className="w-10 h-10 text-[#00C2FF] mb-6" />
+            <div className="bg-[#111] p-8 rounded-2xl border border-white/10 hover:border-[#D4A868] transition duration-300">
+                <Cpu className="w-10 h-10 text-[#D4A868] mb-6" />
                 <h3 className="text-xl font-bold mb-3">Robots KUKA & SMT</h3>
                 <p className="text-gray-400 text-sm">Líneas de producción digitales capaces de cambiar entre cientos de referencias automáticamente.</p>
             </div>
-            <div className="bg-[#111] p-8 rounded-2xl border border-white/10 hover:border-[#00C2FF] transition duration-300">
-                <Award className="w-10 h-10 text-[#00C2FF] mb-6" />
+            <div className="bg-[#111] p-8 rounded-2xl border border-white/10 hover:border-[#D4A868] transition duration-300">
+                <Award className="w-10 h-10 text-[#D4A868] mb-6" />
                 <h3 className="text-xl font-bold mb-3">Calidad Certificada</h3>
                 <p className="text-gray-400 text-sm">Sistemas de visión CCD y escaneo láser para inspeccionar cada milímetro del producto terminado.</p>
             </div>
-            <div className="bg-[#111] p-8 rounded-2xl border border-white/10 hover:border-[#00C2FF] transition duration-300">
-                <Globe className="w-10 h-10 text-[#00C2FF] mb-6" />
+            <div className="bg-[#111] p-8 rounded-2xl border border-white/10 hover:border-[#D4A868] transition duration-300">
+                <Globe className="w-10 h-10 text-[#D4A868] mb-6" />
                 <h3 className="text-xl font-bold mb-3">Logística AS/RS</h3>
                 <p className="text-gray-400 text-sm">Sistema inteligente de almacenamiento y recuperación automática que optimiza el espacio.</p>
             </div>
@@ -337,7 +337,7 @@ export default function ProyectosPage() {
       {/* 6. FOOTER VISUAL */}
       <section className="relative py-24 border-t border-white/10 overflow-hidden">
          <div className="absolute inset-0 opacity-20">
-            <div className="absolute right-0 top-0 w-[500px] h-[500px] bg-[#00C2FF] blur-[150px] rounded-full mix-blend-screen"/>
+            <div className="absolute right-0 top-0 w-[500px] h-[500px] bg-[#D4A868] blur-[150px] rounded-full mix-blend-screen"/>
          </div>
          
          <div className="container mx-auto px-6 text-center relative z-10">
@@ -347,7 +347,7 @@ export default function ProyectosPage() {
             </p>
             <Link 
             href="/contacto" 
-            className="inline-block bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-[#00C2FF] hover:text-white transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-[#00C2FF]/50">
+            className="inline-block bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-[#D4A868] hover:text-black transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-[#D4A868]/50">
                CONTACTAR CON VENTAS
             </Link>
          </div>

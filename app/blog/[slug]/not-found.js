@@ -9,7 +9,7 @@ export default function NotFound() {
         <p className="text-gray-400 mb-8">La página que buscas no existe.</p>
         <Link
           href="/"
-          className="inline-block bg-[#00C2FF] text-black px-6 py-3 rounded-full font-bold hover:bg-white transition-colors"
+          className="inline-block bg-[#D4A868] text-black px-6 py-3 rounded-full font-bold hover:bg-white transition-colors"
         >
           Volver al inicio
         </Link>

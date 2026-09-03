@@ -122,12 +122,12 @@ const getWallpaper = (name) => {
 };
 
 const getCategoryAppearance = (category = "") => {
-  if (category.includes("IA")) return { accent: "text-[#00C2FF]", Icon: ScanFace };
-  if (category.includes("ACORAZADA")) return { accent: "text-[#D4AF37]", Icon: ShieldCheck };
+  if (category.includes("IA")) return { accent: "text-[#866142]", Icon: ScanFace };
+  if (category.includes("ACORAZADA")) return { accent: "text-[#866142]", Icon: ShieldCheck };
   if (category.includes("ALUMINIO")) return { accent: "text-[#718096]", Icon: ShieldCheck };
   if (category.includes("MADERA")) return { accent: "text-[#8D6E63]", Icon: VolumeX };
-  if (category.includes("PVC")) return { accent: "text-teal-600", Icon: Sparkles };
-  if (category.includes("CORREDIZAS")) return { accent: "text-indigo-600", Icon: MoveHorizontal };
+  if (category.includes("PVC")) return { accent: "text-[#866142]", Icon: Sparkles };
+  if (category.includes("CORREDIZAS")) return { accent: "text-[#866142]", Icon: MoveHorizontal };
   if (category.includes("CORTAFUEGO")) return { accent: "text-orange-600", Icon: Flame };
   if (category.includes("EVACUACIÓN")) return { accent: "text-red-600", Icon: Flame };
   if (category.includes("MINIMALISTA")) return { accent: "text-stone-500", Icon: Sparkles };
@@ -144,7 +144,7 @@ const ProductDetailLoading = () => (
 
 const AssetGrid = ({ title, items, objectFit = "object-contain p-2" }) => (
   <div className="mt-6 border-t border-gray-100 pt-6">
-    <h3 className="mb-4 flex items-center gap-2 text-xs font-bold uppercase text-indigo-600">
+    <h3 className="mb-4 flex items-center gap-2 text-xs font-bold uppercase text-[#866142]">
       <Settings size={14} aria-hidden="true" /> {title}
     </h3>
     <div className="grid grid-cols-2 gap-3">

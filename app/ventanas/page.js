@@ -191,7 +191,7 @@ const ProductCard = ({ product, onClick, variants }) => (
     type="button"
     variants={variants}
     onClick={onClick} 
-    className="group cursor-pointer flex flex-col gap-4 bg-[#111] pb-6 border border-transparent hover:border-[#00C2FF]/30 transition-all duration-500 rounded-lg overflow-hidden text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#00C2FF]"
+    className="group cursor-pointer flex flex-col gap-4 bg-[#111] pb-6 border border-transparent hover:border-[#D4A868]/30 transition-all duration-500 rounded-lg overflow-hidden text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#D4A868]"
   >
     <div className="relative aspect-[4/3] overflow-hidden w-full bg-gray-900">
       <Image 
@@ -201,14 +201,14 @@ const ProductCard = ({ product, onClick, variants }) => (
         className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100" 
       />
       <div className="absolute top-4 left-4 flex flex-col items-start gap-1">
-        <span className="bg-[#00C2FF] text-black text-[10px] font-bold uppercase px-2 py-1 tracking-widest">{product.category}</span>
+        <span className="bg-[#D4A868] text-black text-[10px] font-bold uppercase px-2 py-1 tracking-widest">{product.category}</span>
         {/* Eliminado el backdrop-blur de esta etiqueta también para maximizar rendimiento */}
         <span className="bg-black/90 text-white border border-white/20 text-[9px] font-bold uppercase px-2 py-1 tracking-widest">{product.type}</span>
       </div>
     </div>
     <div className="px-6">
       <div className="flex justify-between items-start mb-1">
-          <h3 className="text-xl font-bold text-white group-hover:text-[#00C2FF] transition-colors">{product.name}</h3>
+          <h3 className="text-xl font-bold text-white group-hover:text-[#D4A868] transition-colors">{product.name}</h3>
       </div>
       <div className="flex flex-wrap gap-2 mt-2">
          {product.specs.slice(0,2).map((s,i) => (
@@ -248,10 +248,10 @@ const ProductModal = ({ product, onClose }) => {
             {/* Header Fijo (Fondo sólido sin backdrop-blur) */}
             <div className="sticky top-0 bg-[#0a0a0a] z-30 p-8 border-b border-white/5 flex justify-between items-start">
                 <div>
-                    <span className="text-[#00C2FF] text-xs font-bold uppercase tracking-widest">{product.category} / {product.type}</span>
+                    <span className="text-[#D4A868] text-xs font-bold uppercase tracking-widest">{product.category} / {product.type}</span>
                     <h2 className="text-4xl font-bold text-white mt-2">{product.name}</h2>
                 </div>
-                <button type="button" aria-label="Cerrar detalles" onClick={onClose} className="text-white hover:text-[#00C2FF] transition-colors bg-white/5 p-2 rounded-full hover:bg-white/10">
+                <button type="button" aria-label="Cerrar detalles" onClick={onClose} className="text-white hover:text-[#D4A868] transition-colors bg-white/5 p-2 rounded-full hover:bg-white/10">
                     <X size={24} />
                 </button>
             </div>
@@ -276,7 +276,7 @@ const ProductModal = ({ product, onClose }) => {
                 
                 {/* Especificaciones Técnicas (Grid) */}
                 <div>
-                    <h3 className="text-white font-bold uppercase mb-4 border-l-4 border-[#00C2FF] pl-3">Detalles Técnicos</h3>
+                    <h3 className="text-white font-bold uppercase mb-4 border-l-4 border-[#D4A868] pl-3">Detalles Técnicos</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
                         {Object.entries(product.details).map(([key, value]) => (
                             <div key={key} className="flex justify-between border-b border-white/10 py-3 text-sm hover:bg-white/5 px-2 rounded transition-colors">
@@ -296,11 +296,11 @@ const ProductModal = ({ product, onClose }) => {
                 {/* Sección Rendimiento */}
                 {product.performance && (
                     <div>
-                        <h3 className="text-white font-bold uppercase mb-4 border-l-4 border-[#00C2FF] pl-3">Rendimiento Certificado</h3>
+                        <h3 className="text-white font-bold uppercase mb-4 border-l-4 border-[#D4A868] pl-3">Rendimiento Certificado</h3>
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                             {product.performance.map((perf, i) => (
                                 <div key={i} className="bg-white/5 p-4 rounded border border-white/5 flex flex-col gap-2 hover:bg-white/10 transition-colors">
-                                    <div className="text-[#00C2FF] mb-1">{perf.icon}</div>
+                                    <div className="text-[#D4A868] mb-1">{perf.icon}</div>
                                     <span className="text-gray-400 text-[10px] uppercase font-bold tracking-wider">{perf.label}</span>
                                     <div className="flex flex-col">
                                         <span className="text-white font-bold text-sm">{perf.value}</span>
@@ -315,7 +315,7 @@ const ProductModal = ({ product, onClose }) => {
                 {/* Sección Colores */}
                 {product.colors && (
                     <div className="bg-[#1a1a1a] p-6 rounded-xl border border-white/5">
-                        <h3 className="text-white font-bold uppercase mb-6 border-l-4 border-[#00C2FF] pl-3">Carta de Colores</h3>
+                        <h3 className="text-white font-bold uppercase mb-6 border-l-4 border-[#D4A868] pl-3">Carta de Colores</h3>
                         
                         <div className="mb-6">
                             <span className="text-xs text-gray-400 uppercase font-bold tracking-wider block mb-4">Acabados Disponibles</span>
@@ -333,7 +333,7 @@ const ProductModal = ({ product, onClose }) => {
 
                 <div className="h-4"></div>
                 
-                <Link href="/contacto" className="block w-full text-center bg-[#00C2FF] hover:bg-[#009bcC] transition-colors text-black py-4 font-bold uppercase rounded text-sm tracking-widest sticky bottom-8 shadow-xl shadow-black/50">
+                <Link href="/contacto" className="block w-full text-center bg-[#D4A868] hover:bg-[#009bcC] transition-colors text-black py-4 font-bold uppercase rounded text-sm tracking-widest sticky bottom-8 shadow-xl shadow-black/50">
                     Solicitar Cotización
                 </Link>
             </div>
@@ -366,7 +366,7 @@ function CatalogoContent() {
   }, [searchParams]);
 
   return (
-    <main className="bg-black min-h-screen text-white pt-24 pb-20 selection:bg-[#00C2FF] selection:text-black overflow-hidden">
+    <main className="bg-black min-h-screen text-white pt-24 pb-20 selection:bg-[#D4A868] selection:text-black overflow-hidden">
       
       {/* HEADER SECTION */}
       <motion.section 
@@ -375,7 +375,7 @@ function CatalogoContent() {
         variants={staggerContainer}
         className="container mx-auto px-6 mb-24 text-center"
       >
-         <motion.span variants={fadeInUp} className="text-[#00C2FF] font-bold tracking-[0.2em] text-xs uppercase">Wonly Architectural Systems</motion.span>
+         <motion.span variants={fadeInUp} className="text-[#D4A868] font-bold tracking-[0.2em] text-xs uppercase">Wonly Architectural Systems</motion.span>
          <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-bold uppercase text-white mt-4 mb-6">Catálogo <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-600">Fashion & Glory</span></motion.h1>
          <motion.p variants={fadeInUp} className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base font-light">
            Sistemas arquitectónicos de alto rendimiento. Ventanas de ingeniería alemana y máxima eficiencia energética.
@@ -389,7 +389,7 @@ function CatalogoContent() {
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
           variants={fadeInUp}
-          className="mb-12 border-l-4 border-[#00C2FF] pl-6"
+          className="mb-12 border-l-4 border-[#D4A868] pl-6"
         >
           <h2 className="text-3xl font-bold uppercase text-white mb-2">Ingeniería Wonly</h2>
           <p className="text-gray-400 text-sm max-w-xl">
@@ -407,12 +407,12 @@ function CatalogoContent() {
         >
 
           {/* 1. TÉRMICO */}
-          <motion.div variants={fadeInUp} className="md:col-span-7 bg-[#0f0f0f] border border-white/10 rounded-xl relative overflow-hidden group hover:border-[#00C2FF]/30 transition-colors h-[450px]">
+          <motion.div variants={fadeInUp} className="md:col-span-7 bg-[#0f0f0f] border border-white/10 rounded-xl relative overflow-hidden group hover:border-[#D4A868]/30 transition-colors h-[450px]">
              <Image src="/images/VENTANAS/termico.webp" alt="Diseño Térmico" fill className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"/>
              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
              <div className="absolute bottom-0 left-0 p-8 z-10 w-full">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="bg-[#00C2FF] text-black p-2 rounded"><Thermometer size={20}/></div>
+                  <div className="bg-[#D4A868] text-black p-2 rounded"><Thermometer size={20}/></div>
                   <h3 className="text-xl font-bold text-white uppercase">Aislamiento Térmico</h3>
                 </div>
                 <p className="text-gray-200 text-xs leading-relaxed mb-4 max-w-lg font-light">
@@ -437,12 +437,12 @@ function CatalogoContent() {
           </motion.div>
 
           {/* 3. TRIPLE SELLADO */}
-          <motion.div variants={fadeInUp} className="md:col-span-6 bg-[#0f0f0f] border border-white/10 rounded-xl relative overflow-hidden group hover:border-[#00C2FF]/30 transition-colors h-[400px]">
+          <motion.div variants={fadeInUp} className="md:col-span-6 bg-[#0f0f0f] border border-white/10 rounded-xl relative overflow-hidden group hover:border-[#D4A868]/30 transition-colors h-[400px]">
               <Image src="/images/VENTANAS/sellado.webp" alt="Sellado" fill className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"/>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-8 z-10">
                  <div className="flex items-center gap-3 mb-3">
-                    <div className="bg-[#00C2FF] text-black p-2 rounded"><Wind size={20}/></div>
+                    <div className="bg-[#D4A868] text-black p-2 rounded"><Wind size={20}/></div>
                     <h3 className="text-xl font-bold text-white uppercase">Triple Sellado</h3>
                  </div>
                  <p className="text-gray-300 text-xs leading-relaxed max-w-md">

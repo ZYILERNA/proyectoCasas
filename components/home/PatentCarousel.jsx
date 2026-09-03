@@ -75,7 +75,7 @@ export default function PatentCarousel() {
           id="patent-select"
           value={current}
           onChange={(event) => setCurrent(Number(event.target.value))}
-          className="rounded-full border border-white/15 bg-[#111] px-4 py-2 text-sm text-white outline-none focus:border-cyan-300"
+          className="rounded-full border border-white/15 bg-[#111] px-4 py-2 text-sm text-white outline-none focus:border-[#D4A868]"
         >
           {Array.from({ length: TOTAL_PATENTS }, (_, index) => index + 1).map(
             (number) => (
@@ -106,7 +106,7 @@ function PatentDocument({ src, alt, label, language, width, height }) {
         target="_blank"
         rel="noopener noreferrer"
         aria-label={`Abrir ${label.toLocaleLowerCase("es")} en tamaño completo`}
-        className="group relative block aspect-[.71] overflow-hidden bg-white focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-cyan-300"
+        className="group relative block aspect-[.71] overflow-hidden bg-white focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#D4A868]"
       >
         <Image
           key={src}
@@ -132,7 +132,7 @@ function CarouselButton({ label, onClick, children }) {
       type="button"
       onClick={onClick}
       aria-label={label}
-      className="grid h-11 w-11 place-items-center rounded-full border border-white/15 text-white transition hover:border-cyan-300 hover:bg-cyan-300 hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
+      className="grid h-11 w-11 place-items-center rounded-full border border-white/15 text-white transition hover:border-[#D4A868] hover:bg-[#D4A868] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D4A868]"
     >
       {children}
     </button>

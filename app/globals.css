@@ -5,7 +5,7 @@
 :root {
   --background: #050505;
   --foreground: #f4f4f5;
-  --accent: #67e8f9;
+  --accent: #D4A868;
 }
 
 html {
@@ -41,34 +41,147 @@ textarea {
   color: #000;
 }
 
-@keyframes hero-enter {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
+.door-hero,
+.door-hero__frame {
+  background: #050505;
+}
+
+.door-hero {
+  height: 155vh;
+  height: 155svh;
+}
+
+.door-hero__frame {
+  --door-progress: 0;
+  --door-portal-inset: 49.88%;
+  --door-model-scale: 1;
+  --door-model-opacity: 1;
+  --door-scene-scale: 1.085;
+  --door-copy-offset: 0px;
+  --door-hint-opacity: 1;
+  --door-detail-opacity: 0;
+  --door-detail-y: 12px;
+  --door-glow-opacity: 0.82;
+  --door-shadow-opacity: 0.34;
+  height: 100vh;
+  height: 100svh;
+}
+
+.door-hero__ambient {
+  background:
+    radial-gradient(circle at 75% 48%, rgba(212, 168, 104, 0.14), transparent 26%),
+    linear-gradient(115deg, #050505 0%, #070706 50%, #12100d 100%);
+}
+
+.door-hero__visual {
+  position: absolute;
+  inset: 0 -28% 0 12%;
+  overflow: hidden;
+}
+
+.door-hero__model {
+  opacity: var(--door-model-opacity);
+  transform: scale(var(--door-model-scale));
+  transform-origin: center;
+}
+
+.door-hero__scene {
+  clip-path: inset(
+    0 var(--door-portal-inset) 0 var(--door-portal-inset)
+  );
+  transform: scale(var(--door-scene-scale));
+  transform-origin: center;
+}
+
+.door-hero__portal-rim {
+  left: var(--door-portal-inset);
+  right: var(--door-portal-inset);
+  border-left: 1px solid rgba(244, 214, 167, var(--door-glow-opacity));
+  border-right: 1px solid rgba(244, 214, 167, var(--door-glow-opacity));
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212, 168, 104, 0.08),
+    transparent
+  );
+  box-shadow:
+    -10px 0 35px rgba(212, 168, 104, var(--door-shadow-opacity)),
+    10px 0 35px rgba(212, 168, 104, var(--door-shadow-opacity));
+  opacity: var(--door-glow-opacity);
+}
+
+.door-hero__detail {
+  opacity: var(--door-detail-opacity);
+  transform: translateY(var(--door-detail-y));
+}
+
+.door-hero__veil {
+  z-index: 10;
+  background:
+    linear-gradient(90deg, #050505 0%, rgba(5, 5, 5, 0.94) 36%, rgba(5, 5, 5, 0.28) 66%, transparent 100%),
+    linear-gradient(0deg, rgba(5, 5, 5, 0.52), transparent 45%);
+  pointer-events: none;
+}
+
+.door-hero__copy {
+  transform: translateY(var(--door-copy-offset));
+}
+
+.door-hero__scroll-hint {
+  bottom: calc(112px + 1.25rem);
+  opacity: var(--door-hint-opacity);
+}
+
+.door-hero__progress {
+  width: 100%;
+  box-shadow: 0 0 20px rgba(212, 168, 104, 0.65);
+  transform: scaleX(var(--door-progress));
+  transform-origin: left;
+}
+
+.door-hero[data-active="true"] .door-hero__model {
+  will-change: opacity, transform;
+}
+
+.door-hero[data-active="true"] .door-hero__scene {
+  will-change: clip-path, transform;
+}
+
+.door-hero[data-active="true"] .door-hero__portal-rim {
+  will-change: left, right, opacity;
+}
+
+@media (min-width: 768px) {
+  .door-hero__visual {
+    inset: 0 0 0 40%;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .door-hero__veil {
+    background: linear-gradient(
+      90deg,
+      #050505 0%,
+      #050505 30%,
+      rgba(5, 5, 5, 0.9) 43%,
+      rgba(5, 5, 5, 0.16) 66%,
+      transparent 100%
+    );
   }
 }
 
-@keyframes hero-background-enter {
-  from {
-    opacity: 0;
-    transform: scale(1.08);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
+@media (min-width: 640px) {
+  .door-hero__scroll-hint {
+    bottom: calc(108px + 1.75rem);
   }
 }
 
-.hero-enter {
-  animation: hero-enter 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
-}
+@media (max-width: 767px) {
+  .door-hero__detail {
+    display: none;
+  }
 
-.hero-background-enter {
-  animation: hero-background-enter 1.4s ease-out both;
+  .door-hero__badge {
+    display: none;
+  }
 }
 
 @keyframes partner-marquee-left {
@@ -228,6 +341,42 @@ body {
 
   .partner-logo-group[aria-hidden="true"] {
     display: none;
+  }
+
+  .door-hero {
+    height: calc(100vh - 112px) !important;
+    height: calc(100svh - 112px) !important;
+  }
+
+  .door-hero__frame {
+    position: relative !important;
+    height: 100% !important;
+  }
+
+  .door-hero__model,
+  .door-hero__scroll-hint {
+    display: none;
+  }
+
+  .door-hero__scene {
+    clip-path: none !important;
+    transform: none !important;
+  }
+
+  .door-hero__detail {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .door-hero__progress {
+    transform: scaleX(1) !important;
+  }
+}
+
+@media (min-width: 640px) and (prefers-reduced-motion: reduce) {
+  .door-hero {
+    height: calc(100vh - 108px) !important;
+    height: calc(100svh - 108px) !important;
   }
 }
 

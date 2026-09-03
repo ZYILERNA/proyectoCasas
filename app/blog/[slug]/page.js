@@ -69,7 +69,7 @@ export default function BlogPostPage() {
       viewport={{ once: true }}
       transition={{ delay: (idx % 3) * 0.05 }}
       onClick={() => setLightboxIndex(idx)}
-      className="relative h-48 md:h-60 rounded-xl overflow-hidden border border-white/10 hover:border-[#00C2FF] transition-colors group cursor-zoom-in"
+      className="relative h-48 md:h-60 rounded-xl overflow-hidden border border-white/10 hover:border-[#D4A868] transition-colors group cursor-zoom-in"
     >
       <img
         src={img.src}
@@ -81,18 +81,18 @@ export default function BlogPostPage() {
   );
 
   return (
-    <main className="bg-[#070707] min-h-screen text-white selection:bg-[#00C2FF] selection:text-black">
+    <main className="bg-[#070707] min-h-screen text-white selection:bg-[#D4A868] selection:text-black">
       {/* HERO */}
       <section className="pt-32 pb-10 px-6">
         <div className="container mx-auto max-w-5xl">
           <Link
             href="/blog"
-            className="flex w-fit items-center gap-2 text-sm font-semibold text-gray-400 hover:text-[#00C2FF] transition-colors mb-8"
+            className="flex w-fit items-center gap-2 text-sm font-semibold text-gray-400 hover:text-[#D4A868] transition-colors mb-8"
           >
             <ArrowLeft size={16} /> Volver al blog
           </Link>
 
-          <span className="inline-block text-[10px] font-bold uppercase tracking-widest bg-[#00C2FF] text-black px-3 py-1 rounded-full mb-5">
+          <span className="inline-block text-[10px] font-bold uppercase tracking-widest bg-[#D4A868] text-black px-3 py-1 rounded-full mb-5">
             {post.tipo}
           </span>
 
@@ -100,7 +100,7 @@ export default function BlogPostPage() {
             {post.title}
           </h1>
 
-          <div className="flex items-center gap-2 text-[#00C2FF] text-sm font-bold uppercase tracking-widest mb-6">
+          <div className="flex items-center gap-2 text-[#D4A868] text-sm font-bold uppercase tracking-widest mb-6">
             <MapPin size={16} />
             {post.location}
           </div>
@@ -145,13 +145,13 @@ export default function BlogPostPage() {
                       {afterShots.length > 0 && (
                         <>
                           <div className="flex items-center gap-3 mb-6">
-                            <span className="text-xs font-bold uppercase tracking-[0.25em] bg-[#00C2FF] text-black px-3 py-1.5 rounded-full">
+                            <span className="text-xs font-bold uppercase tracking-[0.25em] bg-[#D4A868] text-black px-3 py-1.5 rounded-full">
                               Después
                             </span>
-                            <h2 className="text-xl md:text-2xl font-bold uppercase tracking-widest text-[#00C2FF]">
+                            <h2 className="text-xl md:text-2xl font-bold uppercase tracking-widest text-[#D4A868]">
                               El resultado
                             </h2>
-                            <div className="h-px bg-[#00C2FF]/30 flex-1" />
+                            <div className="h-px bg-[#D4A868]/30 flex-1" />
                           </div>
                           <div className="grid grid-cols-2 gap-4">
                             {afterShots.map(renderThumb)}
@@ -163,7 +163,7 @@ export default function BlogPostPage() {
                     <>
                       <div className="flex items-center gap-3 mb-6">
                         <div className="h-px bg-white/20 flex-1" />
-                        <h2 className="text-xl md:text-2xl font-bold uppercase tracking-widest text-[#00C2FF]">
+                        <h2 className="text-xl md:text-2xl font-bold uppercase tracking-widest text-[#D4A868]">
                           Galería
                         </h2>
                         <div className="h-px bg-white/20 flex-1" />
@@ -204,7 +204,7 @@ export default function BlogPostPage() {
                   }
                 >
                   <div className="flex items-center gap-3 mb-6">
-                    <PlayCircle className="text-[#00C2FF]" size={22} />
+                    <PlayCircle className="text-[#D4A868]" size={22} />
                     <h2 className="text-xl md:text-2xl font-bold uppercase tracking-widest">
                       Vídeos
                     </h2>
@@ -243,7 +243,7 @@ export default function BlogPostPage() {
                           )
                         }
                         aria-label="Vídeo anterior"
-                        className="w-10 h-10 rounded-full border border-white/15 hover:border-[#00C2FF] hover:bg-[#00C2FF] hover:text-black text-white flex items-center justify-center transition-all"
+                        className="w-10 h-10 rounded-full border border-white/15 hover:border-[#D4A868] hover:bg-[#D4A868] hover:text-black text-white flex items-center justify-center transition-all"
                       >
                         <ChevronLeft size={20} />
                       </button>
@@ -257,7 +257,7 @@ export default function BlogPostPage() {
                             aria-label={`Ir al vídeo ${i + 1}`}
                             className={`h-2 rounded-full transition-all ${
                               i === videoIndex
-                                ? "w-6 bg-[#00C2FF]"
+                                ? "w-6 bg-[#D4A868]"
                                 : "w-2 bg-white/25 hover:bg-white/50"
                             }`}
                           />
@@ -269,7 +269,7 @@ export default function BlogPostPage() {
                           setVideoIndex((i) => (i + 1) % videos.length)
                         }
                         aria-label="Vídeo siguiente"
-                        className="w-10 h-10 rounded-full border border-white/15 hover:border-[#00C2FF] hover:bg-[#00C2FF] hover:text-black text-white flex items-center justify-center transition-all"
+                        className="w-10 h-10 rounded-full border border-white/15 hover:border-[#D4A868] hover:bg-[#D4A868] hover:text-black text-white flex items-center justify-center transition-all"
                       >
                         <ChevronRight size={20} />
                       </button>
@@ -301,10 +301,10 @@ export default function BlogPostPage() {
                       {rel.tipo}
                     </span>
                   </div>
-                  <div className="flex items-center gap-1 text-[#00C2FF] text-[10px] font-bold uppercase mb-1.5">
+                  <div className="flex items-center gap-1 text-[#D4A868] text-[10px] font-bold uppercase mb-1.5">
                     <MapPin size={11} /> {rel.location}
                   </div>
-                  <h3 className="text-base font-bold leading-tight group-hover:text-[#00C2FF] transition-colors">
+                  <h3 className="text-base font-bold leading-tight group-hover:text-[#D4A868] transition-colors">
                     {rel.title}
                   </h3>
                 </Link>
@@ -321,7 +321,7 @@ export default function BlogPostPage() {
         </h2>
         <Link
           href="/contacto"
-          className="inline-block bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-[#00C2FF] hover:text-white transition-all duration-300"
+          className="inline-block bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-[#D4A868] hover:text-black transition-all duration-300"
         >
           PEDIR PRESUPUESTO
         </Link>
@@ -346,7 +346,7 @@ export default function BlogPostPage() {
             <button
               onClick={closeLightbox}
               aria-label="Cerrar"
-              className="absolute top-6 right-6 z-10 text-white hover:text-[#00C2FF] transition-colors"
+              className="absolute top-6 right-6 z-10 text-white hover:text-[#D4A868] transition-colors"
             >
               <X size={32} />
             </button>
@@ -366,7 +366,7 @@ export default function BlogPostPage() {
                   showPrev();
                 }}
                 aria-label="Foto anterior"
-                className="absolute left-3 md:left-8 z-10 w-12 h-12 rounded-full bg-white/10 hover:bg-[#00C2FF] hover:text-black text-white flex items-center justify-center backdrop-blur-sm transition-all"
+                className="absolute left-3 md:left-8 z-10 w-12 h-12 rounded-full bg-white/10 hover:bg-[#D4A868] hover:text-black text-white flex items-center justify-center backdrop-blur-sm transition-all"
               >
                 <ChevronLeft size={28} />
               </button>
@@ -395,7 +395,7 @@ export default function BlogPostPage() {
                   showNext();
                 }}
                 aria-label="Foto siguiente"
-                className="absolute right-3 md:right-8 z-10 w-12 h-12 rounded-full bg-white/10 hover:bg-[#00C2FF] hover:text-black text-white flex items-center justify-center backdrop-blur-sm transition-all"
+                className="absolute right-3 md:right-8 z-10 w-12 h-12 rounded-full bg-white/10 hover:bg-[#D4A868] hover:text-black text-white flex items-center justify-center backdrop-blur-sm transition-all"
               >
                 <ChevronRight size={28} />
               </button>

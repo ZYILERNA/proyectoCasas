@@ -14,11 +14,11 @@ function MediaMeta({ post }) {
   return (
     <div className="flex items-center gap-3 text-xs font-semibold text-gray-400">
       <span className="inline-flex items-center gap-1.5">
-        <Camera size={14} className="text-[#00C2FF]" /> {fotos} fotos
+        <Camera size={14} className="text-[#D4A868]" /> {fotos} fotos
       </span>
       {videos > 0 && (
         <span className="inline-flex items-center gap-1.5">
-          <PlayCircle size={14} className="text-[#00C2FF]" /> {videos} vídeo
+          <PlayCircle size={14} className="text-[#D4A868]" /> {videos} vídeo
           {videos > 1 ? "s" : ""}
         </span>
       )}
@@ -44,14 +44,14 @@ export default function BlogPage() {
     : filtrados;
 
   return (
-    <main className="bg-[#070707] min-h-screen text-white selection:bg-[#00C2FF] selection:text-black">
+    <main className="bg-[#070707] min-h-screen text-white selection:bg-[#D4A868] selection:text-black">
       {/* 1. CABECERA EDITORIAL (alineada a la izquierda) */}
       <section className="pt-36 pb-12 px-6 border-b border-white/10">
         <div className="container mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 text-[#00C2FF] mb-5"
+            className="inline-flex items-center gap-2 text-[#D4A868] mb-5"
           >
             <Newspaper size={18} />
             <span className="uppercase tracking-[0.25em] text-xs font-bold">
@@ -67,7 +67,7 @@ export default function BlogPage() {
               className="text-4xl md:text-6xl font-bold tracking-tight max-w-2xl leading-[1.05]"
             >
               Casos reales, fotos y vídeos de cada{" "}
-              <span className="italic font-light text-[#00C2FF]">
+              <span className="italic font-light text-[#D4A868]">
                 instalación
               </span>
             </motion.h1>
@@ -97,21 +97,21 @@ export default function BlogPage() {
                     alt={destacado.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                   />
-                  <span className="absolute top-5 left-5 text-[11px] font-bold uppercase tracking-widest bg-[#00C2FF] text-black px-3 py-1.5 rounded-full shadow-lg">
+                  <span className="absolute top-5 left-5 text-[11px] font-bold uppercase tracking-widest bg-[#D4A868] text-black px-3 py-1.5 rounded-full shadow-lg">
                     {destacado.tipo}
                   </span>
                 </div>
 
                 {/* Texto */}
                 <div>
-                  <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#00C2FF]">
+                  <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#D4A868]">
                     Caso destacado
                   </span>
-                  <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-4 leading-tight group-hover:text-[#00C2FF] transition-colors">
+                  <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-4 leading-tight group-hover:text-[#D4A868] transition-colors">
                     {destacado.title}
                   </h2>
                   <div className="flex items-center gap-2 text-gray-300 text-sm font-semibold mb-5">
-                    <MapPin size={15} className="text-[#00C2FF]" />
+                    <MapPin size={15} className="text-[#D4A868]" />
                     {destacado.location}
                   </div>
                   <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-6 max-w-xl">
@@ -119,9 +119,9 @@ export default function BlogPage() {
                   </p>
                   <div className="flex items-center justify-between max-w-xl">
                     <MediaMeta post={destacado} />
-                    <span className="inline-flex items-center gap-2 text-sm font-bold text-white group-hover:text-[#00C2FF] transition-colors">
+                    <span className="inline-flex items-center gap-2 text-sm font-bold text-white group-hover:text-[#D4A868] transition-colors">
                       Ver caso
-                      <span className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center group-hover:border-[#00C2FF] group-hover:bg-[#00C2FF] group-hover:text-black transition-all">
+                      <span className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center group-hover:border-[#D4A868] group-hover:bg-[#D4A868] group-hover:text-black transition-all">
                         <ArrowUpRight size={16} />
                       </span>
                     </span>
@@ -185,11 +185,11 @@ export default function BlogPage() {
                   </div>
 
                   {/* Texto */}
-                  <div className="flex items-center gap-2 text-[#00C2FF] text-xs font-bold uppercase tracking-wider mb-2">
+                  <div className="flex items-center gap-2 text-[#D4A868] text-xs font-bold uppercase tracking-wider mb-2">
                     <MapPin size={13} />
                     {post.location}
                   </div>
-                  <h3 className="text-xl font-bold leading-snug mb-2 group-hover:text-[#00C2FF] transition-colors">
+                  <h3 className="text-xl font-bold leading-snug mb-2 group-hover:text-[#D4A868] transition-colors">
                     {post.title}
                   </h3>
                   <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-2">
@@ -201,7 +201,7 @@ export default function BlogPage() {
                     </div>
                     <ArrowUpRight
                       size={18}
-                      className="mt-3 text-gray-500 group-hover:text-[#00C2FF] group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all"
+                      className="mt-3 text-gray-500 group-hover:text-[#D4A868] group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all"
                     />
                   </div>
                 </Link>
@@ -220,7 +220,7 @@ export default function BlogPage() {
       {/* 5. CTA */}
       <section className="relative px-6 py-24 border-t border-white/10 overflow-hidden">
         <div className="absolute inset-0 opacity-20 pointer-events-none">
-          <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[600px] h-[400px] bg-[#00C2FF] blur-[160px] rounded-full" />
+          <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[600px] h-[400px] bg-[#D4A868] blur-[160px] rounded-full" />
         </div>
         <div className="container mx-auto max-w-3xl text-center relative z-10">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
@@ -232,7 +232,7 @@ export default function BlogPage() {
           </p>
           <Link
             href="/contacto"
-            className="inline-flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-[#00C2FF] hover:text-white transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-[#00C2FF]/40"
+            className="inline-flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-[#D4A868] hover:text-black transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-[#D4A868]/40"
           >
             PEDIR PRESUPUESTO
             <ArrowUpRight size={18} />

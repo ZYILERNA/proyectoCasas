@@ -237,8 +237,8 @@ export default function LanguageSwitcher({ variant = "desktop" }) {
         aria-expanded={open}
         className={
           isMobile
-            ? "flex min-h-11 w-full items-center justify-between rounded-full px-3 text-sm font-bold uppercase tracking-widest text-zinc-200 transition hover:text-[#e0c98f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#e0c98f] motion-reduce:transition-none"
-            : "flex min-h-10 items-center gap-1.5 rounded-full px-2 text-xs font-semibold uppercase tracking-[0.12em] text-white transition hover:text-[#e0c98f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#e0c98f] motion-reduce:transition-none"
+            ? "flex min-h-11 w-full items-center justify-between rounded-full px-3 text-sm font-bold uppercase tracking-widest text-zinc-200 transition hover:text-[#D4A868] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#D4A868] motion-reduce:transition-none"
+            : "flex min-h-10 items-center gap-1.5 rounded-full px-2 text-xs font-semibold uppercase tracking-[0.12em] text-white transition hover:text-[#D4A868] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#D4A868] motion-reduce:transition-none"
         }
       >
         <span className="flex items-center gap-2">
@@ -272,9 +272,9 @@ export default function LanguageSwitcher({ variant = "desktop" }) {
                 role="menuitemradio"
                 aria-checked={active}
                 onClick={() => applyLanguage(lang.code)}
-                className={`flex w-full items-center justify-between px-4 py-2.5 text-left text-sm transition focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#e0c98f] ${
+                className={`flex w-full items-center justify-between px-4 py-2.5 text-left text-sm transition focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#D4A868] ${
                   active
-                    ? "bg-white/[0.08] text-[#e0c98f]"
+                    ? "bg-white/[0.08] text-[#D4A868]"
                     : "text-zinc-300 hover:bg-white/[0.07] hover:text-white"
                 }`}
               >

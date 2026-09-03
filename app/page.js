@@ -19,8 +19,10 @@ import {
   Wind,
 } from "lucide-react";
 import CertificateShowcase from "../components/home/CertificateShowcase";
+import DoorHeroExperience from "../components/home/DoorHeroExperience";
 import PartnerMarquee from "../components/home/PartnerMarquee";
 import PatentCarousel from "../components/home/PatentCarousel";
+import { wonlyMilestones } from "../lib/wonly-milestones";
 
 export const metadata = {
   title: "Puertas inteligentes, seguridad y diseño",
@@ -136,28 +138,8 @@ const interiorCollections = [
   },
 ];
 
-const milestones = [
-  {
-    year: "1996",
-    title: "Nace WONLY",
-    text: "Comienza una trayectoria dedicada a la seguridad y la fabricación avanzada.",
-  },
-  {
-    year: "2003",
-    title: "Reto de seguridad",
-    text: "La marca lleva la resistencia de sus sistemas de cierre a una prueba pública.",
-  },
-  {
-    year: "2019",
-    title: "Puertas con IA",
-    text: "La biometría y la automatización pasan a formar parte de la puerta de entrada.",
-  },
-  {
-    year: "2021",
-    title: "Grupo Wangli en bolsa",
-    text: "Wangli Security & Surveillance Product Co., Ltd. cotiza en Shanghái con el código 605268.",
-  },
-];
+// El bloque queda listo para reactivarse sin eliminar contenidos ni enlaces.
+const SHOW_INTERIOR_COLLECTIONS = false;
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -185,69 +167,13 @@ const organizationSchema = {
 
 export default function Home() {
   return (
-    <main className="overflow-hidden bg-[#050505] text-white selection:bg-cyan-300 selection:text-black">
+    <main className="overflow-x-clip bg-[#050505] text-white selection:bg-[#D4A868] selection:text-black">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
 
-      <section
-        aria-labelledby="hero-title"
-        className="relative isolate min-h-[calc(100svh-112px)] overflow-hidden border-b border-white/10 sm:min-h-[calc(100svh-108px)]"
-      >
-        <div className="hero-background-enter absolute inset-0 z-0">
-          <Image
-            src="/images/hero-robot-home.webp"
-            alt="Tecnología de seguridad WONLY"
-            fill
-            priority
-            quality={82}
-            className="object-cover object-[70%_top] md:object-top"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/65 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/20 md:hidden" />
-        </div>
-
-        <div className="container relative z-10 mx-auto flex min-h-[calc(100svh-112px)] items-center px-6 py-20 sm:min-h-[calc(100svh-108px)] md:py-16">
-          <div className="hero-enter max-w-4xl">
-            <p className="text-sm font-bold uppercase tracking-[0.3em] text-cyan-300 md:text-base">
-              Tecnología &amp; Seguridad S.L.
-            </p>
-
-            <h1
-              id="hero-title"
-              className="mt-4 max-w-4xl text-5xl font-bold uppercase leading-tight tracking-tight md:text-8xl"
-            >
-              El futuro
-              <br />
-              <span className="bg-gradient-to-r from-white to-zinc-500 bg-clip-text text-transparent">
-                es seguro
-              </span>
-            </h1>
-
-            <p className="mb-10 mt-6 max-w-xl border-l-2 border-cyan-300 pl-6 text-lg font-light leading-8 text-zinc-300 md:text-xl">
-              Especialistas en puertas de seguridad, cerraduras inteligentes y
-              blindaje de alta tecnología. Protegemos lo que más importa.
-            </p>
-
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/puertas?category=PUERTA%20DE%20SEGURIDAD%20IA"
-                className="inline-flex min-h-14 items-center justify-center bg-cyan-400 px-8 py-4 text-sm font-bold uppercase tracking-widest text-black transition duration-300 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
-              >
-                Ver puertas
-              </Link>
-              <Link
-                href="/contacto"
-                className="inline-flex min-h-14 items-center justify-center border border-white px-8 py-4 text-sm font-bold uppercase tracking-widest text-white transition duration-300 hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
-              >
-                Contactar
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <DoorHeroExperience />
 
       <section
         aria-label="Principales garantías de WONLY"
@@ -260,7 +186,7 @@ export default function Home() {
             [Sparkles, "Diseño integral", "Acabados pensados para convivir con la arquitectura."],
           ].map(([Icon, title, text]) => (
             <div key={title} className="flex gap-4 py-7 sm:px-7 first:pl-0 last:pr-0">
-              <Icon className="mt-0.5 shrink-0 text-cyan-300" size={22} aria-hidden="true" />
+              <Icon className="mt-0.5 shrink-0 text-[#D4A868]" size={22} aria-hidden="true" />
               <div>
                 <h2 className="text-sm font-semibold uppercase tracking-[0.12em]">
                   {title}
@@ -297,11 +223,11 @@ export default function Home() {
 
       <section
         aria-labelledby="windows-title"
-        className="content-auto relative border-y border-white/10 bg-[#0d1115] py-20 md:py-28"
+        className="content-auto relative border-y border-white/10 bg-[#11100E] py-20 md:py-28"
       >
         <div
           aria-hidden="true"
-          className="absolute right-0 top-0 h-full w-1/2 bg-[radial-gradient(circle_at_center,rgba(0,194,255,.1),transparent_60%)]"
+          className="absolute right-0 top-0 h-full w-1/2 bg-[radial-gradient(circle_at_center,rgba(212,168,104,.1),transparent_60%)]"
         />
         <div className="container relative mx-auto grid items-center gap-12 px-6 lg:grid-cols-[1.1fr_.9fr]">
           <div className="group relative min-h-[360px] overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-900 md:min-h-[520px]">
@@ -326,7 +252,7 @@ export default function Home() {
           </div>
 
           <div className="lg:pl-8">
-            <p className="text-xs font-bold uppercase tracking-[0.24em] text-cyan-300">
+            <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#D4A868]">
               Ventanas panorámicas
             </p>
             <h2
@@ -347,7 +273,7 @@ export default function Home() {
                 [Waves, "Confort acústico", "Soluciones pensadas para reducir el ruido exterior."],
               ].map(([Icon, title, text]) => (
                 <div key={title} className="border-t border-white/10 pt-4">
-                  <Icon size={20} className="text-cyan-300" aria-hidden="true" />
+                  <Icon size={20} className="text-[#D4A868]" aria-hidden="true" />
                   <h3 className="mt-3 text-sm font-semibold">{title}</h3>
                   <p className="mt-1 text-sm leading-6 text-zinc-500">{text}</p>
                 </div>
@@ -356,7 +282,7 @@ export default function Home() {
 
             <Link
               href="/ventanas"
-              className="group mt-9 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.14em] text-white hover:text-cyan-300"
+              className="group mt-9 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.14em] text-white hover:text-[#D4A868]"
             >
               Descubrir ventanas
               <ChevronRight
@@ -369,57 +295,59 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        aria-labelledby="interior-title"
-        className="content-auto bg-[#070707] py-20 md:py-28"
-      >
-        <div className="container mx-auto px-6">
-          <SectionHeading
-            eyebrow="Interior WONLY"
-            title="Un mismo criterio, en todo el espacio"
-            description="Colecciones de mobiliario para crear interiores coherentes, funcionales y visualmente serenos."
-            id="interior-title"
-          />
+      {SHOW_INTERIOR_COLLECTIONS && (
+        <section
+          aria-labelledby="interior-title"
+          className="content-auto bg-[#070707] py-20 md:py-28"
+        >
+          <div className="container mx-auto px-6">
+            <SectionHeading
+              eyebrow="Interior WONLY"
+              title="Un mismo criterio, en todo el espacio"
+              description="Colecciones de mobiliario para crear interiores coherentes, funcionales y visualmente serenos."
+              id="interior-title"
+            />
 
-          <div className="mt-12 grid gap-5 md:grid-cols-2">
-            {interiorCollections.map((item) => {
-              const Icon = item.icon;
-              return (
-                <Link
-                  key={item.title}
-                  href={item.href}
-                  className="group relative min-h-[360px] overflow-hidden rounded-[1.75rem] border border-white/10 bg-zinc-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300 md:min-h-[440px]"
-                >
-                  <Image
-                    src={item.image}
-                    alt={item.imageAlt}
-                    fill
-                    className="object-cover transition duration-700 group-hover:scale-[1.035]"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-                  <div className="absolute inset-x-0 bottom-0 p-7 md:p-9">
-                    <div className="flex items-end justify-between gap-6">
-                      <div>
-                        <Icon className="mb-4 text-cyan-300" size={24} aria-hidden="true" />
-                        <h3 className="text-3xl font-semibold tracking-[-0.03em]">
-                          {item.title}
-                        </h3>
-                        <p className="mt-2 max-w-sm text-sm leading-6 text-zinc-300">
-                          {item.text}
-                        </p>
+            <div className="mt-12 grid gap-5 md:grid-cols-2">
+              {interiorCollections.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <Link
+                    key={item.title}
+                    href={item.href}
+                    className="group relative min-h-[360px] overflow-hidden rounded-[1.75rem] border border-white/10 bg-zinc-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A868] md:min-h-[440px]"
+                  >
+                    <Image
+                      src={item.image}
+                      alt={item.imageAlt}
+                      fill
+                      className="object-cover transition duration-700 group-hover:scale-[1.035]"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+                    <div className="absolute inset-x-0 bottom-0 p-7 md:p-9">
+                      <div className="flex items-end justify-between gap-6">
+                        <div>
+                          <Icon className="mb-4 text-[#D4A868]" size={24} aria-hidden="true" />
+                          <h3 className="text-3xl font-semibold tracking-[-0.03em]">
+                            {item.title}
+                          </h3>
+                          <p className="mt-2 max-w-sm text-sm leading-6 text-zinc-300">
+                            {item.text}
+                          </p>
+                        </div>
+                        <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-white/20 bg-black/30 transition group-hover:border-[#D4A868] group-hover:bg-[#D4A868] group-hover:text-black">
+                          <ArrowRight size={18} aria-hidden="true" />
+                        </span>
                       </div>
-                      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-white/20 bg-black/30 transition group-hover:border-cyan-300 group-hover:bg-cyan-300 group-hover:text-black">
-                        <ArrowRight size={18} aria-hidden="true" />
-                      </span>
                     </div>
-                  </div>
-                </Link>
-              );
-            })}
+                  </Link>
+                );
+              })}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <section
         aria-labelledby="certifications-title"
@@ -440,12 +368,12 @@ export default function Home() {
 
       <section
         aria-labelledby="patents-title"
-        className="content-auto border-y border-white/10 bg-[#0b0f13] py-20 md:py-28"
+        className="content-auto border-y border-white/10 bg-[#100F0D] py-20 md:py-28"
       >
         <div className="container mx-auto px-6">
           <div className="grid gap-10 lg:grid-cols-[.75fr_1.25fr] lg:items-start">
             <div className="lg:sticky lg:top-32">
-              <p className="text-xs font-bold uppercase tracking-[0.24em] text-cyan-300">
+              <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#D4A868]">
                 Innovación protegida
               </p>
               <h2
@@ -459,7 +387,7 @@ export default function Home() {
                 español, presentada de forma clara y accesible.
               </p>
               <div className="mt-7 flex items-center gap-3 text-sm text-zinc-400">
-                <Box size={18} className="text-cyan-300" aria-hidden="true" />
+                <Box size={18} className="text-[#D4A868]" aria-hidden="true" />
                 13 documentos de invención disponibles
               </div>
             </div>
@@ -476,7 +404,7 @@ export default function Home() {
       >
         <div
           aria-hidden="true"
-          className="absolute inset-0 opacity-20 [background-image:radial-gradient(circle_at_80%_0%,rgba(103,232,249,.35),transparent_36%)]"
+          className="absolute inset-0 opacity-20 [background-image:radial-gradient(circle_at_80%_0%,rgba(212,168,104,.35),transparent_36%)]"
         />
         <div className="container relative mx-auto flex flex-col items-start justify-between gap-8 px-6 lg:flex-row lg:items-end">
           <div className="max-w-3xl">
@@ -496,7 +424,7 @@ export default function Home() {
           </div>
           <Link
             href="/contacto"
-            className="group inline-flex min-h-14 shrink-0 items-center justify-center gap-3 whitespace-nowrap rounded-full border border-white bg-white/5 px-6 py-4 text-[11px] font-bold uppercase tracking-[0.1em] text-white transition hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300 sm:px-8 sm:text-sm sm:tracking-[0.14em]"
+            className="group inline-flex min-h-14 shrink-0 items-center justify-center gap-3 whitespace-nowrap rounded-full border border-white bg-white/5 px-6 py-4 text-[11px] font-bold uppercase tracking-[0.1em] text-white transition hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A868] sm:px-8 sm:text-sm sm:tracking-[0.14em]"
           >
             Solicitar asesoramiento
             <ArrowRight
@@ -522,39 +450,33 @@ function Timeline() {
           aria-label="Cronología de WONLY"
           className="scrollbar-hide -mx-6 flex snap-x snap-mandatory overflow-x-auto px-6 pb-3 md:mx-0 md:px-0"
         >
-          {milestones.map((item, index) => (
+          {wonlyMilestones.map((item, index) => (
             <li
               key={item.year}
-              className="relative w-[190px] shrink-0 snap-start md:min-w-0 md:flex-1"
-              title={item.text}
-              aria-describedby={`milestone-${item.year}`}
+              className="relative w-[250px] shrink-0 snap-start sm:w-[280px] xl:w-auto xl:min-w-0 xl:flex-1"
             >
+              <div
+                aria-hidden="true"
+                className="relative flex h-3 items-center justify-center"
+              >
+                {index > 0 && (
+                  <span className="absolute left-0 right-1/2 top-1/2 h-px -translate-y-1/2 bg-[#D4A868]/50 shadow-[0_0_8px_rgba(212,168,104,.45)]" />
+                )}
+                {index < wonlyMilestones.length - 1 && (
+                  <span className="absolute left-1/2 right-0 top-1/2 h-px -translate-y-1/2 bg-[#D4A868]/50 shadow-[0_0_8px_rgba(212,168,104,.45)]" />
+                )}
+                <span className="relative h-2.5 w-2.5 rounded-full border-2 border-[#0a0a0a] bg-[#D4A868] shadow-[0_0_12px_rgba(212,168,104,.8)]" />
+              </div>
+
               <time
                 dateTime={item.year}
-                className="mb-3 block text-center font-mono text-2xl font-semibold tracking-tight text-white"
+                className="mt-5 block px-4 font-mono text-3xl font-semibold tracking-tight text-white"
               >
                 {item.year}
               </time>
-
-              <div
-                aria-hidden="true"
-                className="relative mb-3 flex h-3 items-center justify-center"
-              >
-                {index > 0 && (
-                  <span className="absolute left-0 right-1/2 top-1/2 h-px -translate-y-1/2 bg-cyan-300/50 shadow-[0_0_8px_rgba(103,232,249,.45)]" />
-                )}
-                {index < milestones.length - 1 && (
-                  <span className="absolute left-1/2 right-0 top-1/2 h-px -translate-y-1/2 bg-cyan-300/50 shadow-[0_0_8px_rgba(103,232,249,.45)]" />
-                )}
-                <span className="relative h-2.5 w-2.5 rounded-full border-2 border-[#0a0a0a] bg-cyan-300 shadow-[0_0_12px_rgba(103,232,249,.8)]" />
-              </div>
-
-              <h2 className="px-3 text-center text-xs font-bold uppercase tracking-wide text-white md:text-sm">
+              <h2 className="mt-3 px-4 text-sm font-bold uppercase leading-5 tracking-wide text-white">
                 {item.title}
               </h2>
-              <span id={`milestone-${item.year}`} className="sr-only">
-                {item.text}
-              </span>
             </li>
           ))}
         </ol>
@@ -567,7 +489,7 @@ function SectionHeading({ eyebrow, title, description, id, action }) {
   return (
     <div className="flex flex-col justify-between gap-7 md:flex-row md:items-end">
       <div className="max-w-3xl">
-        <p className="text-xs font-bold uppercase tracking-[0.24em] text-cyan-300">
+        <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#D4A868]">
           {eyebrow}
         </p>
         <h2
@@ -583,7 +505,7 @@ function SectionHeading({ eyebrow, title, description, id, action }) {
       {action && (
         <Link
           href={action.href}
-          className="group inline-flex shrink-0 items-center gap-2 text-sm font-bold uppercase tracking-[0.14em] text-zinc-300 hover:text-cyan-300"
+          className="group inline-flex shrink-0 items-center gap-2 text-sm font-bold uppercase tracking-[0.14em] text-zinc-300 hover:text-[#D4A868]"
         >
           {action.label}
           <ChevronRight
@@ -607,7 +529,7 @@ function SecurityCard({ item, index }) {
   return (
     <Link
       href={item.href}
-      className={`group relative min-h-[520px] overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#111] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300 ${desktopPosition}`}
+      className={`group relative min-h-[520px] overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#111] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A868] ${desktopPosition}`}
     >
       <div className="absolute inset-x-0 top-0 h-[64%]">
         <Image
@@ -627,13 +549,13 @@ function SecurityCard({ item, index }) {
         <div
           className={`mb-5 grid h-11 w-11 place-items-center rounded-full border ${
             item.tone === "cyan"
-              ? "border-cyan-300/30 bg-cyan-300 text-black"
+              ? "border-[#D4A868]/30 bg-[#D4A868] text-black"
               : "border-white/15 bg-white/5 text-white"
           }`}
         >
           <Icon size={20} aria-hidden="true" />
         </div>
-        <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-cyan-300">
+        <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#D4A868]">
           {item.eyebrow}
         </p>
         <h3 className="mt-2 text-2xl font-semibold tracking-[-0.025em]">

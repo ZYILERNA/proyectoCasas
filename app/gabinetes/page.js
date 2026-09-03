@@ -73,11 +73,11 @@ const PriceTableModal = memo(({ isOpen, onClose, data, title }) => {
                                     <th className="p-3 text-center bg-emerald-50/50 text-emerald-800 border-b border-emerald-100">Precio Unitario</th>
                                 ) : (
                                     <>
-                                        <th className="p-3 text-center bg-blue-50/50 text-blue-800 border-b border-blue-100">Tela A</th>
-                                        <th className="p-3 text-center bg-blue-50/50 text-blue-800 border-b border-blue-100">Tela B</th>
-                                        <th className="p-3 text-center bg-blue-100/50 text-blue-900 border-b border-blue-200">Tela C</th>
-                                        <th className="p-3 text-center bg-blue-50/50 text-blue-800 border-b border-blue-100">Tela D</th>
-                                        <th className="p-3 text-center bg-blue-50/50 text-blue-800 border-b border-blue-100">Tela E</th>
+                                        <th className="p-3 text-center bg-[#D4A868]/10 text-[#513A29] border-b border-[#D4A868]/20">Tela A</th>
+                                        <th className="p-3 text-center bg-[#D4A868]/10 text-[#513A29] border-b border-[#D4A868]/20">Tela B</th>
+                                        <th className="p-3 text-center bg-[#D4A868]/20 text-[#33251B] border-b border-[#D4A868]/45">Tela C</th>
+                                        <th className="p-3 text-center bg-[#D4A868]/10 text-[#513A29] border-b border-[#D4A868]/20">Tela D</th>
+                                        <th className="p-3 text-center bg-[#D4A868]/10 text-[#513A29] border-b border-[#D4A868]/20">Tela E</th>
                                         <th className="p-3 text-center bg-orange-50/50 text-orange-800 border-b border-orange-100">Piel A</th>
                                         <th className="p-3 text-center bg-orange-50/50 text-orange-800 border-b border-orange-100">Piel B</th>
                                         <th className="p-3 text-center bg-orange-50/50 text-orange-800 border-b border-orange-100">Piel C</th>
@@ -98,7 +98,7 @@ const PriceTableModal = memo(({ isOpen, onClose, data, title }) => {
                                         <>
                                             <td className="p-3 text-center font-medium">{formatPrice(row.prices?.fa)}</td>
                                             <td className="p-3 text-center font-medium">{formatPrice(row.prices?.fb)}</td>
-                                            <td className="p-3 text-center font-bold text-blue-700 bg-blue-50/30">{formatPrice(row.prices?.fc)}</td>
+                                            <td className="p-3 text-center font-bold text-[#6B4F38] bg-[#D4A868]/10">{formatPrice(row.prices?.fc)}</td>
                                             <td className="p-3 text-center font-medium">{formatPrice(row.prices?.fd)}</td>
                                             <td className="p-3 text-center font-medium">{formatPrice(row.prices?.fe)}</td>
                                             <td className="p-3 text-center font-medium text-gray-700 bg-orange-50/10">{formatPrice(row.prices?.la)}</td>
@@ -347,8 +347,8 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
                         <div className="flex-1 overflow-y-auto p-6 md:p-8 pt-6 pb-32 md:pb-48 scrollbar-hide">
                             <div className="space-y-8">
                                 <div className="grid grid-cols-2 gap-4">
-                                    <div className="bg-blue-50 p-3 rounded-lg">
-                                        <div className="flex items-center gap-2 text-blue-600 mb-1"><Ruler size={16} /> <span className="text-[10px] font-bold uppercase">Tamaño</span></div>
+                                    <div className="bg-[#D4A868]/10 p-3 rounded-lg">
+                                        <div className="flex items-center gap-2 text-[#866142] mb-1"><Ruler size={16} /> <span className="text-[10px] font-bold uppercase">Tamaño</span></div>
                                         <div className="text-sm font-bold text-gray-900">{selectedProduct.specs?.dimensions || "N/A"}</div>
                                     </div>
                                     <div className="bg-gray-50 p-3 rounded-lg">
@@ -395,14 +395,14 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
                                     <div className="grid grid-cols-1 gap-3">
                                         {selectedProduct.materials?.map((mat, idx) => (
                                             <div key={idx} className="flex items-center gap-3 p-3 rounded-lg border border-gray-100 bg-white hover:border-gray-300 transition-colors">
-                                                <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 ${mat.detail === 'Interchangeable' ? 'bg-blue-50 text-blue-600 border border-blue-100' : 'bg-gray-100 text-gray-400'}`}>
+                                                <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 ${mat.detail === 'Interchangeable' ? 'bg-[#D4A868]/10 text-[#866142] border border-[#D4A868]/20' : 'bg-gray-100 text-gray-400'}`}>
                                                     {mat.detail === 'Interchangeable' ? <RefreshCw size={14} /> : <Lock size={14} />}
                                                 </div>
                                                 <div className="flex-1 min-w-0">
                                                     <div className="flex justify-between items-baseline mb-0.5">
                                                         <span className="text-[10px] font-bold uppercase text-gray-400 tracking-wide truncate">{mat.part}</span>
                                                         {mat.detail === 'Interchangeable' && (
-                                                            <span className="text-[9px] font-bold bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded ml-2 whitespace-nowrap">Opcional</span>
+                                                            <span className="text-[9px] font-bold bg-[#D4A868]/20 text-[#6B4F38] px-1.5 py-0.5 rounded ml-2 whitespace-nowrap">Opcional</span>
                                                         )}
                                                     </div>
                                                     <div className="text-sm font-bold text-gray-900 truncate">{mat.material}</div>
@@ -436,7 +436,7 @@ const ProductDrawer = memo(({ selectedProduct, onClose }) => {
                                         </h3>
                                         <button
                                             onClick={() => setShowPriceModal(true)}
-                                            className="text-[10px] flex items-center gap-1 text-blue-600 hover:text-blue-800 hover:bg-blue-50 px-2 py-1 rounded transition-all cursor-pointer font-medium"
+                                            className="text-[10px] flex items-center gap-1 text-[#866142] hover:text-[#513A29] hover:bg-[#D4A868]/10 px-2 py-1 rounded transition-all cursor-pointer font-medium"
                                         >
                                             <Maximize2 size={12} />
                                             Ver lista completa
