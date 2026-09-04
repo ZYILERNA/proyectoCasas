@@ -20,6 +20,11 @@ import {
   getDoorWallpaperExtension,
   getLogoFreeDoorImagePath,
 } from "../../lib/door-image-assets";
+import {
+  WONLY_2026_HARDWARE,
+  getWonly2026Wallpaper,
+  isWonly2026CatalogProduct,
+} from "../../lib/wonly-2026-door-assets";
 
 const DOOR_COLORS = [
   { name: "Lacado Negro", hex: "#171717" },
@@ -55,6 +60,7 @@ const normalizeAssetSlug = (value = "") => value
 const getAiVariantPath = (productImagePath, colorHex) => {
   const suffix = VARIANT_SUFFIX_BY_HEX[colorHex];
   const cleanPath = productImagePath?.split("?")[0];
+  if (cleanPath?.includes("/2026/")) return null;
   const lastSlashIndex = cleanPath?.lastIndexOf("/") ?? -1;
   if (!suffix || lastSlashIndex < 0) return null;
 
@@ -114,6 +120,8 @@ const WALLPAPER_OVERRIDES = { chaopu: "chaobu", makailen: "mclaren" };
 
 const getWallpaper = (name) => {
   if (!name) return null;
+  const catalogWallpaper = getWonly2026Wallpaper(name);
+  if (catalogWallpaper) return catalogWallpaper;
   const base = name.toLowerCase().replace(/\s+/g, "");
   const slug = WALLPAPER_OVERRIDES[base] || base;
   return WALLPAPER_SLUGS.has(slug)
@@ -241,6 +249,12 @@ export default function ProductModal({
 
   const { accent, Icon } = getCategoryAppearance(product.category);
   const wallpaper = getWallpaper(product.name);
+  const colorOptions = Array.isArray(product.colors) && product.colors.length > 0
+    ? product.colors
+    : DOOR_COLORS;
+  const showWonly2026Hardware = isWonly2026CatalogProduct(product.name)
+    && !product.img?.includes("/CORREDIZA/");
+  const supportsInteractiveFinishPreview = !product.img?.includes("/2026/");
   const aiVariant = getAiVariantPath(product.img, selectedColor?.hex);
   const activeVariant = aiVariant && failedVariant !== aiVariant
     ? aiVariant
@@ -350,22 +364,42 @@ export default function ProductModal({
                   role="group"
                   aria-label="Seleccionar acabado de la puerta"
                 >
-                  <button
-                    type="button"
-                    onClick={() => setSelectedColor(null)}
-                    aria-pressed={selectedColor === null}
-                    className="group flex flex-col items-center gap-2 text-center"
-                    title="Ver color original"
-                  >
-                    <span className={`grid h-12 w-12 place-items-center rounded-full border-2 bg-white shadow-md transition ${selectedColor === null ? "scale-110 border-black ring-2 ring-black/10" : "border-white group-hover:scale-110"}`}>
-                      <X size={15} className="text-gray-400" aria-hidden="true" />
-                    </span>
-                    <span className={`max-w-[60px] text-[9px] font-bold uppercase leading-tight ${selectedColor === null ? "text-black" : "text-gray-500"}`}>
-                      Original
-                    </span>
-                  </button>
+                  {supportsInteractiveFinishPreview && (
+                    <button
+                      type="button"
+                      onClick={() => setSelectedColor(null)}
+                      aria-pressed={selectedColor === null}
+                      className="group flex flex-col items-center gap-2 text-center"
+                      title="Ver color original"
+                    >
+                      <span className={`grid h-12 w-12 place-items-center rounded-full border-2 bg-white shadow-md transition ${selectedColor === null ? "scale-110 border-black ring-2 ring-black/10" : "border-white group-hover:scale-110"}`}>
+                        <X size={15} className="text-gray-400" aria-hidden="true" />
+                      </span>
+                      <span className={`max-w-[60px] text-[9px] font-bold uppercase leading-tight ${selectedColor === null ? "text-black" : "text-gray-500"}`}>
+                        Original
+                      </span>
+                    </button>
+                  )}
 
-                  {DOOR_COLORS.map((color) => {
+                  {colorOptions.map((color) => {
+                    if (!supportsInteractiveFinishPreview) {
+                      return (
+                        <div
+                          key={`${color.name}-${color.hex}`}
+                          className="flex flex-col items-center gap-2 text-center"
+                          title={color.name}
+                        >
+                          <span
+                            className="h-12 w-12 rounded-full border-2 border-white shadow-md"
+                            style={{ backgroundColor: color.hex }}
+                            aria-hidden="true"
+                          />
+                          <span className="max-w-[64px] text-[9px] font-bold uppercase leading-tight text-gray-500">
+                            {color.name}
+                          </span>
+                        </div>
+                      );
+                    }
                     const isSelected = selectedColor?.hex === color.hex;
                     return (
                       <button
@@ -390,7 +424,9 @@ export default function ProductModal({
                   })}
                 </div>
                 <p className="mb-3 text-[10px] leading-relaxed text-gray-400">
-                  La visualización es orientativa; el acabado puede variar según la pantalla y el material de la puerta.
+                  {supportsInteractiveFinishPreview
+                    ? "La visualización es orientativa; el acabado puede variar según la pantalla y el material de la puerta."
+                    : "Carta de acabados orientativa del catálogo WONLY 2026; confirma disponibilidad y muestra física antes del pedido."}
                 </p>
                 <div className="flex items-start gap-3 rounded-lg border border-gray-200 bg-gray-50 p-3">
                   <Palette size={16} className="mt-0.5 shrink-0 text-gray-400" aria-hidden="true" />
@@ -418,6 +454,10 @@ export default function ProductModal({
                   <AssetGrid title="Accesorios" items={ACCESORIOS_CORREDIZAS} />
                   <AssetGrid title="Vidrios" items={VIDRIOS_CORREDIZAS} objectFit="object-cover" />
                 </>
+              )}
+
+              {showWonly2026Hardware && (
+                <AssetGrid title="Herrajes WONLY 2026" items={WONLY_2026_HARDWARE} />
               )}
             </div>
           )}

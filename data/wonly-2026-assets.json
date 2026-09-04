@@ -1,0 +1,81 @@
+{
+  "catalog": {
+    "name": "WONLY 2026 NEW",
+    "sourceFile": "2026王力木门电子图册NEW.pdf",
+    "spreadSize": [3120, 1576],
+    "note": "Las coordenadas se expresan sobre el JPEG original de cada pliego del PDF."
+  },
+  "hero": {
+    "spread": 14,
+    "crop": [200, 100, 2920, 1065],
+    "output": "/images/PUERTAS/WALLPAPER/2026/collection-2026.webp"
+  },
+  "products": [
+    { "name": "WL-G021", "family": "high-end", "spread": 5, "catalogPage": 7, "finish": "Nogal macizo premium", "imageCrop": [845, 210, 1195, 1195] },
+    { "name": "WL-G023", "family": "high-end", "spread": 5, "catalogPage": 8, "finish": "Madera natural clásica", "imageCrop": [2550, 360, 2900, 1280] },
+    { "name": "WL-G027", "family": "high-end", "spread": 6, "catalogPage": 9, "finish": "Rosa premium n.º 2", "imageCrop": [925, 270, 1238, 1180] },
+    { "name": "WL-G022", "family": "high-end", "spread": 6, "catalogPage": 10, "finish": "Rosa premium n.º 2", "imageCrop": [2275, 325, 2605, 1245] },
+    { "name": "WL-G025", "family": "high-end", "spread": 7, "catalogPage": 11, "finish": "Nogal premium n.º 3", "imageCrop": [785, 170, 1105, 1100] },
+    { "name": "WL-G026", "family": "high-end", "spread": 7, "catalogPage": 12, "finish": "Gris moderno premium", "imageCrop": [2515, 330, 2832, 1240] },
+
+    { "name": "WL-D039", "family": "minimalist", "spread": 12, "catalogPage": 21, "finish": "Nogal norteamericano", "imageCrop": [485, 240, 770, 1120] },
+    { "name": "WL-D050", "family": "minimalist", "spread": 12, "catalogPage": 22, "finish": "Veta nube de sauce rojo", "imageCrop": [2475, 265, 2760, 1185] },
+    { "name": "WL-D051", "family": "minimalist", "spread": 13, "catalogPage": 23, "finish": "Blanco nieve tacto seda", "imageCrop": [370, 175, 675, 1130] },
+    { "name": "WL-D052", "family": "minimalist", "spread": 13, "catalogPage": 24, "finish": "Gris brocado", "imageCrop": [2145, 205, 2432, 1122] },
+    { "name": "WL-D053", "family": "minimalist", "spread": 14, "catalogPage": 25, "finish": "Beige cacao", "imageCrop": [985, 180, 1298, 1140] },
+    { "name": "WL-D055", "family": "minimalist", "spread": 14, "catalogPage": 26, "finish": "Gris ámbar", "imageCrop": [2442, 165, 2710, 1065] },
+    { "name": "WL-D056", "family": "minimalist", "spread": 15, "catalogPage": 27, "finish": "Olmo natural", "imageCrop": [765, 145, 1082, 1142] },
+    { "name": "WL-D057", "family": "minimalist", "spread": 15, "catalogPage": 28, "finish": "Nogal frío", "imageCrop": [2275, 350, 2578, 1285] },
+    { "name": "WL-D059", "family": "minimalist", "spread": 16, "catalogPage": 29, "finish": "Gris Gran tacto seda", "imageCrop": [315, 315, 615, 1248] },
+    { "name": "WL-D058", "family": "minimalist", "spread": 16, "catalogPage": 30, "finish": "Nogal sombra clara", "imageCrop": [1968, 210, 2315, 1285] },
+    { "name": "WL-D061", "family": "minimalist", "spread": 17, "catalogPage": 31, "finish": "Gris Brown", "imageCrop": [520, 335, 820, 1265] },
+    { "name": "WL-D060", "family": "minimalist", "spread": 17, "catalogPage": 32, "finish": "Gris moderno", "imageCrop": [2072, 150, 2400, 1160] },
+    { "name": "WL-D062", "family": "minimalist", "spread": 18, "catalogPage": 33, "finish": "Gris Brown", "imageCrop": [295, 335, 590, 1265] },
+    { "name": "WL-D063", "family": "minimalist", "spread": 18, "catalogPage": 34, "finish": "Nogal Bas", "imageCrop": [2528, 190, 2850, 1168] },
+    { "name": "WL-D101B", "family": "minimalist-glass", "spread": 19, "catalogPage": 35, "finish": "Gris noble premium", "imageCrop": [495, 220, 825, 1242] },
+    { "name": "WL-D102B", "family": "minimalist-glass", "spread": 19, "catalogPage": 36, "finish": "Gris bosque", "imageCrop": [2558, 330, 2862, 1265] },
+    { "name": "WL-J007", "family": "minimalist", "spread": 20, "catalogPage": 37, "finish": "Nogal luz de luna n.º 2", "imageCrop": [585, 335, 890, 1268] },
+
+    { "name": "WL-P012", "family": "pvc", "spread": 24, "catalogPage": 45, "finish": "Impresión tecnológica", "imageCrop": [615, 180, 950, 1212] },
+    { "name": "WL-P013", "family": "pvc", "spread": 24, "catalogPage": 46, "finish": "Madera beige seda", "imageCrop": [2275, 355, 2578, 1285] },
+    { "name": "WL-P017", "family": "pvc", "spread": 25, "catalogPage": 47, "finish": "Roble claro", "imageCrop": [828, 150, 1168, 1165] },
+    { "name": "WL-P019", "family": "pvc", "spread": 25, "catalogPage": 48, "finish": "Olmo claro", "imageCrop": [1840, 250, 2082, 1050] },
+    { "name": "WL-P018", "family": "pvc", "spread": 26, "catalogPage": 49, "finish": "Madera beige seda", "imageCrop": [845, 185, 1185, 1215] },
+    { "name": "WL-P020", "family": "pvc", "spread": 26, "catalogPage": 50, "finish": "Gris claro", "imageCrop": [2375, 350, 2675, 1282] },
+    { "name": "WL-P101B", "family": "pvc-glass", "spread": 27, "catalogPage": 51, "finish": "Blanco marfil", "imageCrop": [480, 155, 792, 1140] },
+    { "name": "WL-P102B", "family": "pvc-glass", "spread": 27, "catalogPage": 51, "finish": "Roble Senna", "imageCrop": [1125, 310, 1342, 975] },
+
+    { "name": "WL-BS022", "family": "solid-wood", "spread": 28, "catalogPage": 54, "finish": "Café con leche", "imageCrop": [2300, 405, 2588, 1255] },
+    { "name": "WL-S006", "family": "solid-wood", "spread": 29, "catalogPage": 55, "finish": "Blanco palacio", "imageCrop": [785, 265, 1150, 1295] },
+    { "name": "WL-S007", "family": "solid-wood", "spread": 30, "catalogPage": 58, "finish": "Beige grisáceo", "imageCrop": [2305, 405, 2598, 1280] },
+    { "name": "WL-C32", "family": "solid-wood", "spread": 34, "catalogPage": 65, "finish": "Nogal italiano n.º 3", "imageCrop": [210, 390, 518, 1232] },
+    { "name": "WL-S211", "family": "solid-wood", "spread": 34, "catalogPage": 66, "finish": "Gris Mino", "imageCrop": [1030, 240, 1402, 1305] },
+    { "name": "WL-C33", "family": "solid-wood", "spread": 34, "catalogPage": 66, "finish": "Café con leche", "imageCrop": [1805, 240, 2158, 1300] },
+    { "name": "WL-S202", "family": "solid-wood", "spread": 35, "catalogPage": 68, "finish": "Nogal oscuro café", "imageCrop": [2298, 320, 2628, 1248] },
+    { "name": "WL-S212", "family": "solid-wood", "spread": 36, "catalogPage": 69, "finish": "Blanco palacio", "imageCrop": [895, 260, 1285, 1350] },
+    { "name": "WL-S212B", "family": "solid-wood-glass", "spread": 36, "catalogPage": 70, "finish": "Blanco elegante", "imageCrop": [2000, 260, 2365, 1350] },
+    { "name": "WL-S213", "family": "solid-wood", "spread": 37, "catalogPage": 71, "finish": "Gris Mino", "imageCrop": [302, 205, 625, 1158] },
+    { "name": "WL-S213B", "family": "solid-wood-glass", "spread": 37, "catalogPage": 72, "finish": "Gris Mino", "imageCrop": [2420, 205, 2748, 1158] },
+
+    { "name": "WL-LHJ001", "family": "aluminium", "spread": 39, "catalogPage": 75, "finish": "Blanco esmalte", "process": "Vidrio ultraclaro de 8 mm, esmerilado a dos caras", "imageCrop": [585, 270, 972, 1255] },
+    { "name": "WL-YT007", "family": "aluminium", "spread": 39, "catalogPage": 76, "finish": "Nogal", "process": "Vidrio cristal ultraclaro de 8 mm / esmerilado", "imageCrop": [2280, 575, 2572, 1342] },
+    { "name": "WL-YT013", "family": "aluminium", "spread": 40, "catalogPage": 77, "finish": "Nogal caqui", "process": "Vidrio ultraclaro acanalado de 8 mm, esmerilado a una cara", "imageCrop": [445, 330, 742, 1268] },
+    { "name": "WL-ZT001", "family": "aluminium", "spread": 40, "catalogPage": 78, "finish": "Negro piel", "process": "Retícula con cámara 5 mm + 15A + 5 mm", "imageCrop": [2120, 340, 2490, 1275] },
+    { "name": "WL-LHJY001", "family": "aluminium-sliding", "spread": 41, "catalogPage": 79, "finish": "Blanco esmalte", "process": "Vidrio ultraclaro de 8 mm, esmerilado a dos caras", "imageCrop": [645, 125, 1160, 800] },
+    { "name": "WL-YT006", "family": "aluminium-folding", "spread": 41, "catalogPage": 80, "finish": "Negro esmalte", "process": "Vidrio Begonia ultraclaro de 8 mm / esmerilado", "imageCrop": [1825, 895, 2580, 1470] },
+    { "name": "WL-FT020", "family": "aluminium-sliding", "spread": 42, "catalogPage": 81, "finish": "Negro piel", "process": "Retícula y vidrio Begonia; cámara 5 mm + 15A + 5 mm", "imageCrop": [405, 200, 1060, 800] },
+    { "name": "WL-FT031", "family": "aluminium-sliding", "spread": 42, "catalogPage": 81, "finish": "Gris metálico", "process": "Retícula; cámara 6 mm + 15A + 5 mm", "imageCrop": [520, 880, 1305, 1480] },
+    { "name": "WL-FT025", "family": "aluminium-sliding", "spread": 42, "catalogPage": 82, "finish": "Negro piel", "process": "Retícula y vidrio Begonia; cámara 5 mm + 15A + 5 mm", "imageCrop": [2075, 200, 2460, 800] },
+    { "name": "WL-FT028", "family": "aluminium-sliding", "spread": 42, "catalogPage": 82, "finish": "Negro piel", "process": "Retícula y vidrio Begonia; cámara 5 mm + 15A + 5 mm", "imageCrop": [2075, 885, 2485, 1480] }
+  ],
+  "hardware": [
+    { "name": "WL-A01", "label": "Cerradura con huella", "spread": 43, "crop": [115, 300, 790, 705] },
+    { "name": "WL-WS001", "label": "Manilla negra", "spread": 43, "crop": [810, 300, 1145, 525] },
+    { "name": "WL-WS003", "label": "Manilla dorada", "spread": 43, "crop": [505, 735, 790, 920] },
+    { "name": "WL-WS005", "label": "Manilla PVD", "spread": 43, "crop": [810, 955, 1145, 1150] },
+    { "name": "WL-WS009", "label": "Manilla oro", "spread": 43, "crop": [2690, 185, 3025, 385] },
+    { "name": "WL-W013", "label": "Manilla gris cañón", "spread": 43, "crop": [1640, 825, 1975, 1025] },
+    { "name": "WL-W016", "label": "Manilla clásica dorada", "spread": 43, "crop": [2340, 825, 2675, 1025] },
+    { "name": "WL-W103", "label": "Manilla minimalista negra", "spread": 43, "crop": [1990, 1255, 2325, 1455] }
+  ]
+}

@@ -164,16 +164,21 @@ export async function GET(request) {
   });
 
   const payload = { results: results.slice(0, 20) };
-  if (cache.size >= MAX_CACHE_ENTRIES) {
-    cache.delete(cache.keys().next().value);
+  const hasResults = payload.results.length > 0;
+  if (hasResults) {
+    if (cache.size >= MAX_CACHE_ENTRIES) {
+      cache.delete(cache.keys().next().value);
+    }
+    cache.set(term, { payload, expiresAt: now + CACHE_TTL });
   }
-  cache.set(term, { payload, expiresAt: now + CACHE_TTL });
 
   return NextResponse.json(
     payload,
     {
       headers: {
-        "Cache-Control": "public, s-maxage=300, stale-while-revalidate=600",
+        "Cache-Control": hasResults
+          ? "public, s-maxage=300, stale-while-revalidate=600"
+          : "no-store",
         "X-Search-Cache": "MISS",
       },
     },

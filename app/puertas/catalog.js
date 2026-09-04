@@ -1,8 +1,14 @@
+import {
+  WONLY_2026_CATEGORY,
+  WONLY_2026_MODEL_NAMES,
+} from "../../lib/wonly-2026-door-assets";
+
 export const PRODUCT_PAGE_SIZE = 24;
 export const PRODUCT_CARD_FIELDS = "id,name,category,img";
 export const CATALOGUE_CACHE_TTL_MS = 5 * 60 * 1000;
 
 export const CATEGORIAS = [
+  WONLY_2026_CATEGORY,
   "PUERTA DE SEGURIDAD IA",
   "PUERTA DE ALUMINIO FUNDIDO",
   "PUERTA DE ACERO FUNDIDO",
@@ -35,7 +41,9 @@ export const sanitizeSearchTerm = (searchTerm = "") => searchTerm
 export const applyProductFilters = (query, category, searchTerm = "") => {
   let filteredQuery = query;
 
-  if (category !== "TODAS") {
+  if (category === WONLY_2026_CATEGORY) {
+    filteredQuery = filteredQuery.in("name", WONLY_2026_MODEL_NAMES);
+  } else if (category !== "TODAS") {
     filteredQuery = filteredQuery.eq("category", category);
   }
 
