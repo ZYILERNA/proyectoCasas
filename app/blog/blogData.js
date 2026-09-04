@@ -28,6 +28,25 @@ export const TIPOS = {
 
 export const blogPosts = [
   {
+    slug: "puerta-cerradura-integrada-lhospitalet",
+    title: "Puerta con Cerradura Inteligente Integrada en L’Hospitalet",
+    location: "L’Hospitalet de Llobregat, Barcelona",
+    tipo: TIPOS.PUERTA,
+    cover: `${BASE}/LHOSPITALET-PUERTA-INTEGRADA/instalacion1.jpg`,
+    excerpt:
+      "Instalación de una puerta de seguridad con cerradura inteligente integrada y acabado personalizado al color de la comunidad.",
+    description:
+      "Instalación completa de una puerta de seguridad WONLY en una vivienda de L’Hospitalet de Llobregat. La cerradura inteligente queda integrada en la propia puerta y el acabado exterior se ha personalizado para respetar el color y la estética de las puertas de la comunidad. Mostramos el resultado desde el rellano y desde el interior, además de tres vídeos de la instalación y su funcionamiento.",
+    media: [
+      { type: "image", src: `${BASE}/LHOSPITALET-PUERTA-INTEGRADA/instalacion1.jpg`, alt: "Puerta de seguridad con cerradura inteligente integrada y acabado personalizado en L’Hospitalet" },
+      { type: "image", src: `${BASE}/LHOSPITALET-PUERTA-INTEGRADA/instalacion2.jpg`, alt: "Vista interior de la puerta con cerradura inteligente integrada" },
+      { type: "image", src: `${BASE}/LHOSPITALET-PUERTA-INTEGRADA/instalacion3.jpg`, alt: "Detalle del grosor y los cierres de la puerta de seguridad WONLY" },
+      { type: "video", src: `${BASE}/LHOSPITALET-PUERTA-INTEGRADA/demostracion1.mp4`, alt: "Vídeo de la puerta personalizada instalada en L’Hospitalet" },
+      { type: "video", src: `${BASE}/LHOSPITALET-PUERTA-INTEGRADA/demostracion2.mp4`, alt: "Demostración de la cerradura inteligente integrada" },
+      { type: "video", src: `${BASE}/LHOSPITALET-PUERTA-INTEGRADA/demostracion3.mp4`, alt: "Funcionamiento de la puerta de seguridad y su cerradura inteligente" },
+    ],
+  },
+  {
     slug: "cerradura-inteligente-premia-de-dalt",
     title: "Instalación de Cerraduras Inteligentes en Premià de Dalt",
     location: "Premià de Dalt, Barcelona",
