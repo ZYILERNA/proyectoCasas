@@ -82,6 +82,15 @@ def fit_on_canvas(source: Image.Image, canvas_size: tuple[int, int], margin: int
     return canvas
 
 
+def fit_product_image(source: Image.Image) -> Image.Image:
+    """Keep the product crop tight so it fills the existing 3:5 catalogue card."""
+    return ImageOps.contain(
+        source.convert("RGB"),
+        (1200, 1400),
+        Image.Resampling.LANCZOS,
+    )
+
+
 def build_wallpaper(source: Image.Image) -> Image.Image:
     """Create a clean, text-free catalogue wallpaper from the model crop."""
     target_size = (900, 1400)
@@ -162,9 +171,7 @@ def run(spreads_dir: Path, qa_dir: Path | None) -> None:
 
         crop_box = validate_crop(product["imageCrop"], spread.size, product["name"])
         cropped = spread.crop(crop_box)
-        ratio = cropped.width / cropped.height
-        canvas_size = (1200, 900) if ratio >= 0.72 else (900, 1200)
-        product_image = fit_on_canvas(cropped, canvas_size)
+        product_image = fit_product_image(cropped)
 
         slug = slugify(product["name"])
         product_path = asset_directory(product["family"]) / f"door-{slug}.webp"

@@ -29,7 +29,6 @@ import { getLogoFreeDoorImagePath } from "../../lib/door-image-assets";
 import { getDedicatedDoorProductPath } from "../../lib/door-product-routes";
 import {
   WONLY_2026_CATEGORY,
-  isWonly2026CatalogProduct,
 } from "../../lib/wonly-2026-door-assets";
 import {
   CATALOGUE_CACHE_TTL_MS,
@@ -184,11 +183,6 @@ const ProductCard = memo(forwardRef(function ProductCard({
       className="group flex h-full w-full appearance-none flex-col bg-transparent text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-4"
     >
       <div className="relative mb-4 aspect-[3/5] overflow-hidden rounded-sm border border-transparent bg-[#FCFCFC] transition-all group-hover:border-gray-100">
-        {isWonly2026CatalogProduct(product.name) && (
-          <span className="absolute left-3 top-3 z-10 rounded-full bg-black px-3 py-1 text-[8px] font-bold uppercase tracking-[0.18em] text-white shadow-sm">
-            Nuevo 2026
-          </span>
-        )}
         <div className="absolute inset-x-[7%] bottom-[6%] top-[7%]">
           <Image
             src={getLogoFreeDoorImagePath(product.img)}
