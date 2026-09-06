@@ -28,6 +28,32 @@ export const TIPOS = {
 
 export const blogPosts = [
   {
+    slug: "puertas-entrada-seminario-castelldefels",
+    title: "Puertas de Entrada del Seminario de Castelldefels",
+    location: "Seminario de Castelldefels, Barcelona",
+    tipo: TIPOS.PUERTA,
+    cover: `${BASE}/SEMINARIO-CASTELLDEFELS/instalacion4.jpg`,
+    excerpt:
+      "Instalación de dos puertas de entrada: una equipada con cerradura inteligente y otra con cerradura mecánica.",
+    description:
+      "Proyecto realizado en la entrada principal del Seminario de Castelldefels. Instalamos dos puertas de seguridad con el mismo diseño y acabado: una incorpora una cerradura inteligente para facilitar el control de acceso, mientras que la otra utiliza una cerradura mecánica. La galería recoge el proceso de montaje, el resultado exterior e interior y dos vídeos de la instalación.",
+    media: [
+      { type: "image", src: `${BASE}/SEMINARIO-CASTELLDEFELS/instalacion4.jpg`, alt: "Dos puertas de entrada del Seminario de Castelldefels" },
+      { type: "image", src: `${BASE}/SEMINARIO-CASTELLDEFELS/instalacion5.jpg`, alt: "Puertas de seguridad instaladas en la entrada principal del seminario" },
+      { type: "image", src: `${BASE}/SEMINARIO-CASTELLDEFELS/instalacion6.jpg`, alt: "Puerta equipada con cerradura inteligente" },
+      { type: "image", src: `${BASE}/SEMINARIO-CASTELLDEFELS/instalacion7.jpg`, alt: "Puerta equipada con cerradura mecánica" },
+      { type: "image", src: `${BASE}/SEMINARIO-CASTELLDEFELS/instalacion8.jpg`, alt: "Vista interior de las dos puertas de entrada" },
+      { type: "image", src: `${BASE}/SEMINARIO-CASTELLDEFELS/instalacion9.jpg`, alt: "Vista interior de la puerta con cerradura mecánica" },
+      { type: "image", src: `${BASE}/SEMINARIO-CASTELLDEFELS/instalacion10.jpg`, alt: "Vista interior de la puerta con cerradura inteligente" },
+      { type: "image", src: `${BASE}/SEMINARIO-CASTELLDEFELS/instalacion11.jpg`, alt: "Puerta de entrada del seminario abierta, vista desde el interior" },
+      { type: "image", src: `${BASE}/SEMINARIO-CASTELLDEFELS/instalacion1.jpg`, alt: "Proceso de montaje de una puerta de seguridad en el seminario" },
+      { type: "image", src: `${BASE}/SEMINARIO-CASTELLDEFELS/instalacion2.jpg`, alt: "Colocación de la puerta durante la instalación" },
+      { type: "image", zona: true, src: `${BASE}/SEMINARIO-CASTELLDEFELS/instalacion3.jpg`, alt: "Exterior del Seminario de Castelldefels" },
+      { type: "video", src: `${BASE}/SEMINARIO-CASTELLDEFELS/demostracion1.mp4`, alt: "Vídeo de la instalación de las puertas del seminario" },
+      { type: "video", src: `${BASE}/SEMINARIO-CASTELLDEFELS/demostracion2.mp4`, alt: "Demostración de las puertas terminadas" },
+    ],
+  },
+  {
     slug: "puerta-cerradura-integrada-lhospitalet",
     title: "Puerta con Cerradura Inteligente Integrada en L’Hospitalet",
     location: "L’Hospitalet de Llobregat, Barcelona",
@@ -405,9 +431,10 @@ export const blogPosts = [
     tipo: TIPOS.MANILLA,
     excerpt: "Instalación de manilla de puerta en una vivienda de Sant Joan Despí.",
     description:
-      "Instalación de una manilla de puerta en una vivienda de Sant Joan Despí. A continuación mostramos la fotografía del resultado.",
+      "Instalación de manillas de puerta en una vivienda de Sant Joan Despí. A continuación mostramos las fotografías del resultado.",
     media: [
       { type: "image", src: `${BASE}/SANJOANDESPI/FOTO1.webp`, alt: "Instalación en Sant Joan Despí" },
+      { type: "image", src: `${BASE}/SANJOANDESPI/FOTO2.jpg`, alt: "Dos puertas con manillas instaladas en Sant Joan Despí" },
     ],
   },
   {
