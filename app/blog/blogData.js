@@ -36,8 +36,9 @@ export const blogPosts = [
     excerpt:
       "Instalación de dos puertas de entrada: una equipada con cerradura inteligente y otra con cerradura mecánica.",
     description:
-      "Proyecto realizado en la entrada principal del Seminario de Castelldefels. Instalamos dos puertas de seguridad con el mismo diseño y acabado: una incorpora una cerradura inteligente para facilitar el control de acceso, mientras que la otra utiliza una cerradura mecánica. La galería recoge el proceso de montaje, el resultado exterior e interior y dos vídeos de la instalación.",
+      "Proyecto realizado en la entrada principal del Seminario de Castelldefels. Instalamos dos puertas de seguridad con el mismo diseño y acabado: una incorpora una cerradura inteligente para facilitar el control de acceso, mientras que la otra utiliza una cerradura mecánica. La galería compara el estado anterior con el resultado final y recoge el proceso de montaje, las vistas exterior e interior y dos vídeos de la instalación.",
     media: [
+      { type: "image", before: true, src: `${BASE}/SEMINARIO-CASTELLDEFELS/antes1.jpg`, alt: "Puertas anteriores de la entrada principal del Seminario de Castelldefels" },
       { type: "image", src: `${BASE}/SEMINARIO-CASTELLDEFELS/instalacion4.jpg`, alt: "Dos puertas de entrada del Seminario de Castelldefels" },
       { type: "image", src: `${BASE}/SEMINARIO-CASTELLDEFELS/instalacion5.jpg`, alt: "Puertas de seguridad instaladas en la entrada principal del seminario" },
       { type: "image", src: `${BASE}/SEMINARIO-CASTELLDEFELS/instalacion6.jpg`, alt: "Puerta equipada con cerradura inteligente" },
@@ -426,15 +427,15 @@ export const blogPosts = [
   },
   {
     slug: "sant-joan-despi",
-    title: "Manilla de Puerta en Sant Joan Despí",
+    title: "Instalación Completa de Puertas de Interior en Sant Joan Despí",
     location: "Sant Joan Despí, Barcelona",
-    tipo: TIPOS.MANILLA,
-    excerpt: "Instalación de manilla de puerta en una vivienda de Sant Joan Despí.",
+    tipo: TIPOS.PUERTA_INTERIOR,
+    excerpt:
+      "Instalación completa de puertas de interior con hojas, manillas, tapetas y marcos en una vivienda de Sant Joan Despí.",
     description:
-      "Instalación de manillas de puerta en una vivienda de Sant Joan Despí. A continuación mostramos las fotografías del resultado.",
+      "Proyecto completo de puertas de interior en una vivienda de Sant Joan Despí. La instalación incluye las hojas, las manillas, las tapetas y los marcos, todo montado y acabado como un conjunto. A continuación mostramos el resultado final.",
     media: [
-      { type: "image", src: `${BASE}/SANJOANDESPI/FOTO1.webp`, alt: "Instalación en Sant Joan Despí" },
-      { type: "image", src: `${BASE}/SANJOANDESPI/FOTO2.jpg`, alt: "Dos puertas con manillas instaladas en Sant Joan Despí" },
+      { type: "image", src: `${BASE}/SANJOANDESPI/FOTO1.webp`, alt: "Puertas de interior completas con manillas, tapetas y marcos en Sant Joan Despí" },
     ],
   },
   {
