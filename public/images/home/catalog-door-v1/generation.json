@@ -1,0 +1,19 @@
+{
+  "tool": "built-in image_gen",
+  "product": "WONLY X60 Pro",
+  "productReference": "public/images/PUERTAS/AI/door-x60-pro.png",
+  "size": {
+    "width": 1672,
+    "height": 941
+  },
+  "leaf": {
+    "x": 638,
+    "y": 103,
+    "width": 395,
+    "height": 727
+  },
+  "prompts": {
+    "exterior": "Use case: compositing. Asset type: photorealistic architectural entrance background for a website door-opening animation, landscape 16:9, 2048x1152 pixels. Input image 1 is the EXACT WONLY X60 Pro catalog product reference, not a style suggestion. Preserve this door's single-leaf tall proportions, narrow vertical ribs in charcoal gray, one vertical brushed champagne bronze band left of center, the two black smart access modules on that band, and its dark beveled metal frame. Do not redesign the door, add hardware or lettering, split it into double doors, or change the product finish. Scene: a luxurious contemporary Mediterranean villa entry hall. A straight warm light-gray limestone wall spans the frame. The referenced closed door is installed perfectly centrally in this wall, viewed exactly front-on, all its edges straight vertical/horizontal and camera not tilted. Frame outer bounds approximately x=37.5% to62.5%, y=5% to95%, preserve catalog aspect ratio. Clean continuous limestone wall on left and right, subtle vertical stone joints, warm recessed architectural wash light at far sides. Bottom 6% foreground is matte limestone floor with realistic contact shadow at the threshold. Camera eye level, architectural photography, elegant quiet natural morning light from off-camera left, soft physically plausible shadows, realistic stone and metal grain, premium editorial finish, neutral warm-gray and bronze palette. The door panel must be perfectly rectangular and uniformly front-facing, its entire leaf and frame visible, no plants, furniture or decoration crossing its outline. No other doors, no windows in this exterior wall, no people, no overlay text, no watermark. Generate a finished photograph, not a webpage, not a mockup or storyboard.",
+    "interior": "Use case: photorealistic-natural. Asset type: panoramic photographic interior background for a luxury smart-door website animation. Generate one finished wide 16:9 architectural photograph, 2048x1152 pixels, no webpage or collage. Primary request: an original premium contemporary Mediterranean villa living room with expansive full-height glazing and a beautiful coastal landscape, similar in architectural spaciousness to a luxury panoramic penthouse but distinctly Mediterranean. Scene: view from the villa entry at standing eye level into a generous living room. Pale warm limestone floor continuous into the foreground, straight clean architectural lines, lightly ribbed warm oak wall at the far right, slim dark-bronze window mullions, beige modular sofa on the far right and low dark wood coffee table kept to the right so the center stays open. Full-height glass spans the left and central background, revealing a turquoise Mediterranean cove, pale limestone cliffs, a distant pine-covered headland, and serene blue sea fading into the horizon. No snow, no Alpine peaks, no skyscrapers. Composition: central walking axis is clear, roomy foreground floor in bottom third, strong realistic perspective towards a central vanishing point, window horizon in upper-middle band; scene must also crop beautifully down the center for a phone screen. Soft Mediterranean morning light falls from upper left, gentle realistic window shadows across the floor, restrained cream, warm gray, pale oak, bronze and sea-blue palette. Photoreal premium architectural editorial photography, natural material texture, no fantasy, believable construction and furniture, no extra decorative clutter. No doors or doorway frame in foreground; camera is already inside the room. Absolutely no people, logos, text, labels or watermark."
+  }
+}

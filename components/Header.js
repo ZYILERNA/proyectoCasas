@@ -62,6 +62,27 @@ export default function Header() {
   const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const [isDoorRevealed, setIsDoorRevealed] = useState(false);
+
+  useEffect(() => {
+    if (!isHome) {
+      setIsDoorRevealed(false);
+      return undefined;
+    }
+    const updateDoorReveal = (event) => {
+      const visible = event?.detail?.visible
+        ?? document.body.dataset.wonlyDoorRevealed === "true";
+      setIsDoorRevealed(visible);
+      if (!visible) {
+        setIsMobileMenuOpen(false);
+        setIsProductsOpen(false);
+        setIsSearchOpen(false);
+      }
+    };
+    updateDoorReveal();
+    window.addEventListener("wonly:door-reveal", updateDoorReveal);
+    return () => window.removeEventListener("wonly:door-reveal", updateDoorReveal);
+  }, [isHome]);
 
   useEffect(() => {
     setIsMounted(true);
@@ -146,7 +167,7 @@ export default function Header() {
         .filter((element) => !element.hasAttribute("hidden"))
         .filter((element) => element.getClientRects().length > 0);
 
-    window.requestAnimationFrame(() => getFocusable()[0]?.focus());
+    const focusFrame = window.requestAnimationFrame(() => getFocusable()[0]?.focus());
 
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
@@ -171,6 +192,7 @@ export default function Header() {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => {
+      window.cancelAnimationFrame(focusFrame);
       document.body.style.overflow = previousOverflow;
       main?.removeAttribute("inert");
       footer?.removeAttribute("inert");
@@ -186,8 +208,10 @@ export default function Header() {
   return (
     <>
       <header
-        className={`${
-          isHome ? "relative" : "absolute inset-x-0 top-0"
+        data-home={isHome ? "true" : undefined}
+        data-door-revealed={!isHome || isDoorRevealed ? "true" : "false"}
+        className={`wonly-header ${
+          isHome ? "fixed inset-x-0 top-0" : "absolute inset-x-0 top-0"
         } z-50 border-b border-transparent bg-gradient-to-b from-black/80 via-black/70 to-black/45 text-white`}
       >
         {isHome && (
@@ -215,7 +239,7 @@ export default function Header() {
 
           <nav
             aria-label="Navegación principal"
-            className="hidden h-full items-center gap-1 xl:flex 2xl:gap-2"
+            className="wonly-header__reveal hidden h-full items-center gap-1 xl:flex 2xl:gap-2"
           >
             <div
               ref={productsRef}
@@ -298,7 +322,7 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="wonly-header__reveal flex items-center gap-2 sm:gap-3">
             <MarketTicker />
 
             <button

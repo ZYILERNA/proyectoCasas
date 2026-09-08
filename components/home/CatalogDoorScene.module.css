@@ -1,0 +1,130 @@
+.scene {
+  --catalog-fit: 1;
+  --catalog-door-angle: 0deg;
+  --catalog-door-shade: 0;
+  --catalog-camera-scale: 1;
+  --catalog-camera-x: 0px;
+  --catalog-camera-y: 0px;
+  --catalog-interior-scale: 1.025;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  isolation: isolate;
+  pointer-events: none;
+  background: #191918;
+}
+
+.interior,
+.fallback,
+.fallback img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.interior {
+  background-size: cover;
+  background-position: center;
+  transform: scale(var(--catalog-interior-scale));
+  transform-origin: center;
+}
+
+.stage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: var(--catalog-source-width);
+  height: var(--catalog-source-height);
+  transform: translate(-50%, -50%) scale(var(--catalog-fit));
+  transform-style: preserve-3d;
+}
+
+.camera {
+  position: absolute;
+  inset: 0;
+  perspective: 1900px;
+  perspective-origin: var(--catalog-origin-x) var(--catalog-origin-y);
+  transform-origin: var(--catalog-origin-x) var(--catalog-origin-y);
+  transform: translate3d(var(--catalog-camera-x), var(--catalog-camera-y), 0) scale(var(--catalog-camera-scale));
+  transform-style: preserve-3d;
+}
+
+.facadeSlice {
+  position: absolute;
+  inset: 0;
+  background-image: var(--catalog-exterior);
+  background-size: var(--catalog-source-width) var(--catalog-source-height);
+  background-repeat: no-repeat;
+}
+
+.door {
+  position: absolute;
+  left: var(--catalog-opening-x);
+  top: var(--catalog-opening-y);
+  width: var(--catalog-opening-width);
+  height: var(--catalog-opening-height);
+  transform: rotateY(var(--catalog-door-angle));
+  transform-origin: right center;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.front {
+  background-image: var(--catalog-exterior);
+  background-size: var(--catalog-source-width) var(--catalog-source-height);
+  background-position: var(--catalog-texture-x) var(--catalog-texture-y);
+  background-repeat: no-repeat;
+}
+
+.front::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, #050505);
+  opacity: var(--catalog-door-shade);
+}
+
+.back {
+  background: linear-gradient(90deg, #242522, #393934 46%, #252622);
+  transform: rotateY(180deg);
+}
+
+.edge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 9px;
+  height: 100%;
+  background: linear-gradient(90deg, #141512, #57564e, #20211e);
+  transform-origin: right center;
+  transform: rotateY(90deg);
+  backface-visibility: hidden;
+}
+
+.fallback {
+  display: block;
+}
+
+.fallback img {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.scene[data-ready="true"]:not([data-closed="true"]) .fallback,
+.scene[data-entered="true"] .stage {
+  visibility: hidden;
+}
+
+.scene[data-ready="true"]:not([data-entered="true"]) .door,
+.scene[data-ready="true"]:not([data-entered="true"]) .camera {
+  will-change: transform;
+}
