@@ -123,6 +123,7 @@ export default function Footer() {
             extraLinks={[
               { href: "/proyectos", label: "Proyectos contract" },
               { href: "/blog", label: "Blog · Instalaciones" },
+              { href: "/tutoriales", label: "Clases gratuitas" },
             ]}
           />
 

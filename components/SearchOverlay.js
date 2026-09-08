@@ -78,6 +78,12 @@ const sections = [
     keywords: "blog noticias articulos instalaciones",
   },
   {
+    label: "Tutoriales",
+    href: "/tutoriales",
+    keywords:
+      "tutoriales clases cursos formacion formación gratis gratuitas aprender puertas cerraduras academia viladecans",
+  },
+  {
     label: "Contacto",
     href: "/contacto",
     keywords: "contacto telefono email presupuesto asesoramiento",

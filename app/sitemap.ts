@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/puertas-interior',
     '/sillas',
     '/sofas',
+    '/tutoriales',
     '/ventanas',
     // Páginas individuales de cada caso del blog
     ...blogPosts.map((post) => `/blog/${post.slug}`),

@@ -26,6 +26,7 @@ const primaryLinks = [
   { href: "/empresa", label: "Empresa" },
   { href: "/proyectos", label: "Proyectos" },
   { href: "/blog", label: "Blog" },
+  { href: "/tutoriales", label: "Tutoriales" },
 ];
 
 const securityLinks = [
