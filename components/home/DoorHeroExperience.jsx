@@ -32,9 +32,6 @@ export default function DoorHeroExperience() {
     let failed = false;
     let raf = 0;
     let previousTime = 0;
-    let introStart = null;
-    let introFinished = false;
-    let intro = 0;
     let progress = 0;
     let travel = 1;
     let revealed = null;
@@ -51,10 +48,9 @@ export default function DoorHeroExperience() {
     revealRef.current = reveal;
 
     const paint = () => {
-      // A small initial opening invites the gesture; leave time to enjoy the interior.
-      const firstPosition = intro * 0.065;
-      const position = firstPosition + (1 - firstPosition) * smoothstep(progress / 0.78);
-      scene.setProgress(staticMode() ? 1 : position);
+      // Keep the door fully closed until the visitor starts scrolling.
+      const position = smoothstep(progress / 0.78);
+      scene.setProgress(staticMode() ? 0 : position);
       frame.dataset.progress = position.toFixed(4);
       frame.style.setProperty("--door-progress", progress.toFixed(4));
       frame.style.setProperty("--door-copy-opacity", (1 - smoothstep(progress / 0.26)).toFixed(4));
@@ -67,15 +63,11 @@ export default function DoorHeroExperience() {
       if (disposed || !visible || document.hidden || staticMode() || !ready) return;
       const elapsed = Math.min(time - (previousTime || time), 64);
       previousTime = time;
-      if (introStart === null) introStart = time;
-      const introTime = clamp((time - introStart) / 1100);
-      intro = 1 - Math.pow(1 - introTime, 3);
-      introFinished = introTime === 1;
       const target = clamp(-section.getBoundingClientRect().top / travel);
       progress += (target - progress) * (1 - Math.exp(-elapsed / 85));
       if (Math.abs(target - progress) < 0.0005) progress = target;
       paint();
-      if (!introFinished || progress !== target) raf = window.requestAnimationFrame(update);
+      if (progress !== target) raf = window.requestAnimationFrame(update);
     };
     const requestUpdate = () => {
       if (!raf && ready && visible && !document.hidden && !staticMode()) {
@@ -112,11 +104,6 @@ export default function DoorHeroExperience() {
     const resizeObserver = new ResizeObserver(measure);
     handlePreference();
     progress = clamp(-section.getBoundingClientRect().top / travel);
-    if (progress > 0.02) {
-      intro = 1;
-      introFinished = true;
-      introStart = performance.now() - 1100;
-    }
     paint();
     Promise.resolve(scene.ready).then((result) => {
       if (disposed) return;
@@ -124,7 +111,7 @@ export default function DoorHeroExperience() {
       failed = !ready;
       frame.dataset.ready = String(ready);
       paint();
-      // A restored position below the intro must retain usable navigation.
+      // A restored position below the hero must retain usable navigation.
       if (section.getBoundingClientRect().bottom <= 0) reveal(true);
       requestUpdate();
     }).catch(() => {

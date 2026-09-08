@@ -11,7 +11,9 @@ import {
 import styles from "./CatalogDoorScene.module.css";
 
 const DEFAULT_SIZE = { width: 1672, height: 941 };
-const DEFAULT_OPENING = { x: 638, y: 103, width: 395, height: 727 };
+// The narrow ribbed panel on the left is fixed. The active leaf starts at the
+// brown access strip and includes the wider right panel, hinged on the right.
+const DEFAULT_OPENING = { x: 735, y: 103, width: 298, height: 727 };
 const clamp = (value) => Math.min(1, Math.max(0, Number(value) || 0));
 const smoothstep = (value) => {
   const progress = clamp(value);
