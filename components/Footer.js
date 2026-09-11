@@ -12,6 +12,7 @@ import {
   Youtube,
 } from "lucide-react";
 import CookieSettingsButton from "./CookieSettingsButton";
+import { SHOW_FURNITURE_NAVIGATION } from "../lib/site-navigation";
 
 const securityLinks = [
   { href: "/puertas", label: "Puertas de seguridad" },
@@ -81,7 +82,7 @@ export default function Footer() {
 
       <div className="container relative z-10 mx-auto px-6">
         <div className="mb-20 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-12 lg:gap-8">
-          <div className="flex flex-col lg:col-span-4">
+          <div className={`flex flex-col ${SHOW_FURNITURE_NAVIGATION ? "lg:col-span-4" : "md:col-span-2 lg:col-span-4"}`}>
             <Link
               href="/"
               aria-label="WONLY España, ir a inicio"
@@ -119,7 +120,7 @@ export default function Footer() {
           <FooterColumn
             title="Seguridad"
             links={securityLinks}
-            className="lg:col-span-3"
+            className={SHOW_FURNITURE_NAVIGATION ? "lg:col-span-3" : "lg:col-span-4"}
             extraLinks={[
               { href: "/proyectos", label: "Proyectos contract" },
               { href: "/blog", label: "Blog · Instalaciones" },
@@ -127,13 +128,15 @@ export default function Footer() {
             ]}
           />
 
-          <FooterColumn
-            title="Mobiliario"
-            links={interiorLinks}
-            className="lg:col-span-2"
-          />
+          {SHOW_FURNITURE_NAVIGATION && (
+            <FooterColumn
+              title="Mobiliario"
+              links={interiorLinks}
+              className="lg:col-span-2"
+            />
+          )}
 
-          <div className="lg:col-span-3">
+          <div className={SHOW_FURNITURE_NAVIGATION ? "lg:col-span-3" : "lg:col-span-4"}>
             <FooterTitle>Contacto</FooterTitle>
 
             <address className="flex flex-col gap-6 not-italic">

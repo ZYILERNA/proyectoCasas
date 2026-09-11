@@ -67,8 +67,12 @@ export const metadata = {
     },
   },
   icons: {
-    icon: [{ url: "/images/favicon-wonly.png", type: "image/png" }],
-    shortcut: "/images/favicon-wonly.png",
+    icon: [
+      { url: "/favicon-64.png", type: "image/png", sizes: "64x64" },
+      { url: "/favicon-256.png", type: "image/png", sizes: "256x256" },
+    ],
+    shortcut: "/favicon-64.png",
+    apple: "/apple-touch-icon.png",
   },
 };
 

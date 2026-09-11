@@ -17,6 +17,7 @@ import {
 import { Suspense, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { SHOW_FURNITURE_NAVIGATION } from "../lib/site-navigation";
 
 const SearchOverlay = dynamic(() => import("./SearchOverlay"), {
   ssr: false,
@@ -47,9 +48,6 @@ const interiorLinks = [
   { href: "/dormitorios", label: "Dormitorios" },
   { href: "/gabinetes", label: "Gabinetes" },
 ];
-
-// Conservamos las rutas para poder reactivar esta línea de producto más adelante.
-const SHOW_INTERIOR_PRODUCTS = false;
 
 export default function Header() {
   const pathname = usePathname();
@@ -244,8 +242,6 @@ export default function Header() {
             <div
               ref={productsRef}
               className="relative flex h-full items-center"
-              onMouseEnter={() => setIsProductsOpen(true)}
-              onMouseLeave={() => setIsProductsOpen(false)}
               onBlur={(event) => {
                 if (!event.currentTarget.contains(event.relatedTarget)) {
                   setIsProductsOpen(false);
@@ -272,7 +268,7 @@ export default function Header() {
               <div
                 id="products-menu"
                 className={`absolute left-1/2 top-full ${
-                  SHOW_INTERIOR_PRODUCTS ? "w-[680px]" : "w-[360px]"
+                  SHOW_FURNITURE_NAVIGATION ? "w-[680px]" : "w-[360px]"
                 } -translate-x-1/2 overflow-hidden rounded-b-3xl border border-white/[0.14] bg-[rgba(13,12,10,.80)] text-white shadow-[0_28px_80px_rgba(0,0,0,.44)] backdrop-blur-2xl backdrop-saturate-[1.15] transition duration-200 motion-reduce:transition-none ${
                   isProductsOpen
                     ? "visible translate-y-0 opacity-100"
@@ -281,17 +277,17 @@ export default function Header() {
               >
                 <div
                   className={`grid ${
-                    SHOW_INTERIOR_PRODUCTS ? "grid-cols-2" : "grid-cols-1"
+                    SHOW_FURNITURE_NAVIGATION ? "grid-cols-2" : "grid-cols-1"
                   }`}
                 >
                   <ProductMenuColumn
                     icon={ShieldCheck}
                     title="Seguridad y exterior"
                     links={securityLinks}
-                    bordered={SHOW_INTERIOR_PRODUCTS}
+                    bordered={SHOW_FURNITURE_NAVIGATION}
                     onNavigate={() => setIsProductsOpen(false)}
                   />
-                  {SHOW_INTERIOR_PRODUCTS && (
+                  {SHOW_FURNITURE_NAVIGATION && (
                     <ProductMenuColumn
                       icon={HomeIcon}
                       title="Interior y mobiliario"
@@ -303,7 +299,7 @@ export default function Header() {
                 <Link
                   href="/contacto"
                   onClick={() => setIsProductsOpen(false)}
-                  className="flex items-center justify-between border-t border-white/10 bg-black/20 px-7 py-4 text-sm text-zinc-300 transition hover:bg-white/[0.07] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#D4A868]"
+                  className={`flex ${SHOW_FURNITURE_NAVIGATION ? "items-center justify-between" : "flex-col items-start gap-2"} border-t border-white/10 bg-black/20 px-7 py-4 text-sm text-zinc-300 transition hover:bg-white/[0.07] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#D4A868]`}
                 >
                   ¿Necesitas ayuda para elegir?
                   <span className="font-semibold text-[#D4A868]">
@@ -429,7 +425,7 @@ export default function Header() {
               </Suspense>
             </div>
 
-            {SHOW_INTERIOR_PRODUCTS && (
+            {SHOW_FURNITURE_NAVIGATION && (
               <>
                 <p className="mb-5 mt-9 text-xs font-bold uppercase tracking-[0.2em] text-[#D4A868]">
                   Interior

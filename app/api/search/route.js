@@ -5,12 +5,14 @@ import {
   getClientIdentifier,
 } from "../../../lib/server-rate-limit";
 import { getLogoFreeDoorImagePath } from "../../../lib/door-image-assets";
+import { getFurnitureCategoryLabel, getFurnitureCategorySearchAliases } from "../../../lib/furniture-labels";
 
 export const dynamic = "force-dynamic";
 
 const cache = new Map();
 const CACHE_TTL = 5 * 60_000;
 const MAX_CACHE_ENTRIES = 100;
+const furnitureTables = new Set(["sofas", "mesas", "sillas", "dormitorios", "gabinetes"]);
 
 const catalogs = [
   {
@@ -116,14 +118,20 @@ export async function GET(request) {
     auth: { persistSession: false, autoRefreshToken: false },
   });
   const like = `%${term}%`;
+  const categoryAliases = getFurnitureCategorySearchAliases(term);
 
-  const queries = catalogs.map((catalog) =>
-    supabase
+  const queries = catalogs.map((catalog) => {
+    const filters = [`name.ilike.${like}`, `category.ilike.${like}`];
+    if (furnitureTables.has(catalog.table)) {
+      // Aliases come exclusively from the controlled category-label map.
+      filters.push(...categoryAliases.map((category) => `category.ilike.${category}`));
+    }
+    return supabase
       .from(catalog.table)
       .select(`name,category,${catalog.imgField}`)
-      .or(`name.ilike.${like},category.ilike.${like}`)
-      .limit(3),
-  );
+      .or(filters.join(","))
+      .limit(3);
+  });
   const settled = await Promise.allSettled(queries);
 
   const results = windows
@@ -141,7 +149,9 @@ export async function GET(request) {
 
     response.value.data.forEach((item) => {
       if (!item?.name) return;
-      const category = item.category || catalog.label;
+      const category = furnitureTables.has(catalog.table)
+        ? getFurnitureCategoryLabel(item.category || catalog.label)
+        : item.category || catalog.label;
       const sourceImage = item[catalog.imgField] || null;
       const displayImage = catalog.table === "products" && sourceImage
         ? getLogoFreeDoorImagePath(sourceImage)

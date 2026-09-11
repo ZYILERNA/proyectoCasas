@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, ArrowRight, CheckCircle, Clock, MessageSquare, AlertCircle } from 'lucide-react';
 import Link from 'next/link';
+import { readFurnitureContactRequest } from '../../lib/furniture-contact';
 import {
   WL_J001_FINISH_OPTIONS,
   WL_J001_OPENING_OPTIONS,
@@ -22,9 +23,19 @@ export default function ContactoPage() {
   const [message, setMessage] = useState('');
   const [hasProductConfiguration, setHasProductConfiguration] = useState(false);
   const [configuredProduct, setConfiguredProduct] = useState('');
+  const [furnitureRequest, setFurnitureRequest] = useState(null);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
+    const furniture = readFurnitureContactRequest(params);
+    if (furniture) {
+      setFurnitureRequest(furniture);
+      setSubject(furniture.product ? 'Producto' : 'Presupuesto');
+      setMessage(furniture.message);
+      setConfiguredProduct(furniture.product || furniture.collection || 'Mobiliario');
+      setHasProductConfiguration(true);
+      return;
+    }
     const readParam = (key, maxLength = 80) => (params.get(key) || '')
       .replace(/[\u0000-\u001F\u007F]/g, ' ')
       .trim()
@@ -96,6 +107,7 @@ export default function ContactoPage() {
             setMessage('');
             setConfiguredProduct('');
             setHasProductConfiguration(false);
+            setFurnitureRequest(null);
         } else {
             setFormStatus('error');
         }
@@ -124,7 +136,7 @@ export default function ContactoPage() {
               transition={{ delay: 0.1 }}
               className="text-5xl md:text-7xl font-bold mb-6 tracking-tight"
             >
-              Hablemos de <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4A868] to-[#866142]">Seguridad</span>
+              Hablemos de <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4A868] to-[#866142]">{furnitureRequest ? 'tu espacio' : 'Seguridad'}</span>
             </motion.h1>
             
             <motion.p 
@@ -133,7 +145,9 @@ export default function ContactoPage() {
               transition={{ delay: 0.2 }}
               className="text-gray-400 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed"
             >
-              Contacta con nuestra sede en Barcelona. Nuestro equipo está listo para asesorarte en tus proyectos de seguridad.
+              {furnitureRequest
+                ? 'Cuéntanos qué necesitas para tu espacio. Revisaremos contigo los modelos, acabados y opciones de mobiliario de nuestro catálogo.'
+                : 'Contacta con nuestra sede en Barcelona. Nuestro equipo está listo para asesorarte en tus proyectos de seguridad.'}
             </motion.p>
          </div>
          {/* Fondo decorativo */}
@@ -298,10 +312,12 @@ export default function ContactoPage() {
                     {hasProductConfiguration && (
                         <div className="mb-6 border border-[#D4A868]/30 bg-[#D4A868]/10 p-4" role="status">
                             <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#D4A868]">
-                                Configuración de producto cargada
+                                {furnitureRequest ? 'Solicitud de mobiliario preparada' : 'Configuración de producto cargada'}
                             </p>
                             <p className="mt-2 text-sm leading-6 text-gray-300">
-                                Hemos trasladado el acabado y las medidas de {configuredProduct} al mensaje. Puedes revisarlos antes de enviarlo.
+                                {furnitureRequest
+                                  ? `Hemos añadido ${furnitureRequest.product ? `el modelo ${configuredProduct}` : `tu consulta sobre ${configuredProduct}`} al mensaje${furnitureRequest.finish ? ` con el acabado ${furnitureRequest.finish}` : ''}. Puedes revisarlo y contarnos más sobre tu espacio antes de enviarlo.`
+                                  : `Hemos trasladado el acabado y las medidas de ${configuredProduct} al mensaje. Puedes revisarlos antes de enviarlo.`}
                             </p>
                         </div>
                     )}
@@ -390,8 +406,8 @@ export default function ContactoPage() {
                       a: "Para garantizar una atención personalizada y asegurarnos de que el producto se adapta perfectamente a su proyecto, las compras no se realizan directamente en la web. Le invitamos a utilizar nuestro formulario de contacto indicando los modelos de su interés, y un asesor le guiará en el proceso." 
                     },
                     { 
-                      q: "¿Los precios mostrados en la web son definitivos?", 
-                      a: "No, los importes que visualiza en nuestro catálogo son precios base de referencia. El presupuesto final puede variar dependiendo de las configuraciones elegidas, materiales, dimensiones, gastos de envío y requerimientos de instalación. Solicite su cotización exacta sin compromiso." 
+                      q: "¿Cómo puedo conocer el precio de un producto?",
+                      a: "Solicite un presupuesto indicando el modelo y los acabados que le interesan. Nuestro equipo revisará las medidas, los materiales y las opciones disponibles para preparar una propuesta personalizada, con los costes de envío e instalación que correspondan."
                     },
                     { 
                       q: "¿Ofrecen servicio de envío e instalación?", 
