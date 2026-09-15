@@ -39,7 +39,7 @@ const INTERIOR_COLLECTIONS = [
 
 const ATMOSPHERES = [
   {
-    image: "/images/PUERTAS/WALLPAPER/wl-d003.png",
+    image: "/images/PUERTAS/WALLPAPER/wl-d003.optimized.webp",
     imageAlt: "Inspiración de puerta de madera en un ambiente gris grafito",
     eyebrow: "Paleta mineral",
     title: "Madera y grafito",
@@ -51,7 +51,7 @@ const ATMOSPHERES = [
     title: "WL-J001 al atardecer",
   },
   {
-    image: "/images/PUERTAS/WALLPAPER/wl-s009.png",
+    image: "/images/PUERTAS/WALLPAPER/wl-s009.optimized.webp",
     imageAlt: "Inspiración de puerta integrada con el revestimiento de pared",
     eyebrow: "Continuidad visual",
     title: "Puerta y revestimiento",

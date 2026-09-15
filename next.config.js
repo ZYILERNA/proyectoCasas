@@ -20,6 +20,15 @@ const nextConfig = {
     minimumCacheTTL: 86400,
     remotePatterns,
   },
+  async rewrites() {
+    // Preserve legacy URLs after checking for PNG assets that are still present.
+    return [
+      {
+        source: "/images/PUERTAS/:path*\\.png",
+        destination: "/images/PUERTAS/:path*.optimized.webp",
+      },
+    ];
+  },
   async headers() {
     return [
       {

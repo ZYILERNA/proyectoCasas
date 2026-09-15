@@ -47,7 +47,7 @@ const securityCollections = [
     description:
       "Reconocimiento biométrico, control conectado y una entrada diseñada como parte de la arquitectura.",
     href: "/puertas?category=PUERTA%20DE%20SEGURIDAD%20IA",
-    image: "/images/PUERTAS/AI/door-x60-pro.png",
+    image: "/images/PUERTAS/AI/door-x60-pro.optimized.webp",
     imageAlt: "Puerta inteligente WONLY X60 Pro",
     icon: ScanFace,
     tone: "cyan",
@@ -59,7 +59,7 @@ const securityCollections = [
     description:
       "Estructuras reforzadas, cierres multipunto y acabados contemporáneos para proyectos exigentes.",
     href: "/puertas?category=PUERTA%20DE%20SEGURIDAD%20ACORAZADA",
-    image: "/images/PUERTAS/ACORAZADA/door-wl001.png",
+    image: "/images/PUERTAS/ACORAZADA/door-wl001.optimized.webp",
     imageAlt: "Puerta acorazada WONLY",
     icon: ShieldCheck,
     tone: "white",
@@ -71,7 +71,7 @@ const securityCollections = [
     description:
       "Construcción robusta, acabados duraderos y soluciones versátiles para viviendas y proyectos profesionales.",
     href: "/puertas?category=PUERTA%20DE%20ACERO%20REFORZADO",
-    image: "/images/PUERTAS/ACERO/door-contemporary.png",
+    image: "/images/PUERTAS/ACERO/door-contemporary.optimized.webp",
     imageAlt: "Puerta de acero reforzado WONLY",
     icon: LockKeyhole,
     tone: "white",

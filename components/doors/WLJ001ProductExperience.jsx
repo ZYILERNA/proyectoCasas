@@ -58,39 +58,39 @@ const BASE_GALLERY = [
 
 const FINISH_VISUALS = {
   negro: {
-    image: `${ASSET_ROOT}/door-wl-j001-negro-ai.png`,
+    image: `${ASSET_ROOT}/door-wl-j001-negro-ai.optimized.webp`,
     surface: "#242424",
   },
   wengue: {
-    image: `${ASSET_ROOT}/door-wl-j001-wengue-ai.png`,
+    image: `${ASSET_ROOT}/door-wl-j001-wengue-ai.optimized.webp`,
     surface: "#4A382E",
   },
   "gris-oscuro": {
-    image: `${ASSET_ROOT}/door-wl-j001-gris-oscuro-ai.png`,
+    image: `${ASSET_ROOT}/door-wl-j001-gris-oscuro-ai.optimized.webp`,
     surface: "#494947",
   },
   antracita: {
-    image: `${ASSET_ROOT}/door-wl-j001-antracita-ai.png`,
+    image: `${ASSET_ROOT}/door-wl-j001-antracita-ai.optimized.webp`,
     surface: "#5A5A57",
   },
   nogal: {
-    image: `${ASSET_ROOT}/door-wl-j001-nogal-ai.png`,
+    image: `${ASSET_ROOT}/door-wl-j001-nogal-ai.optimized.webp`,
     surface: "#7A5A42",
   },
   roble: {
-    image: `${ASSET_ROOT}/door-wl-j001-roble-ai.png`,
+    image: `${ASSET_ROOT}/door-wl-j001-roble-ai.optimized.webp`,
     surface: "#C3A17D",
   },
   "gris-claro": {
-    image: `${ASSET_ROOT}/door-wl-j001-gris-claro-ai.png`,
+    image: `${ASSET_ROOT}/door-wl-j001-gris-claro-ai.optimized.webp`,
     surface: "#AAA7A1",
   },
   natural: {
-    image: `${ASSET_ROOT}/door-wl-j001-natural-ai.png`,
+    image: `${ASSET_ROOT}/door-wl-j001-natural-ai.optimized.webp`,
     surface: "#D7C5AF",
   },
   blanco: {
-    image: `${ASSET_ROOT}/door-wl-j001-blanco-ai.png`,
+    image: `${ASSET_ROOT}/door-wl-j001-blanco-ai.optimized.webp`,
     surface: "#ECE9E2",
   },
 };
