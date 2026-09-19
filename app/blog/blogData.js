@@ -28,6 +28,23 @@ export const TIPOS = {
 
 export const blogPosts = [
   {
+    slug: "puerta-cerradura-inteligente-badalona",
+    title: "Instalación de Puerta y Cerradura Inteligente en Badalona",
+    location: "Badalona, Barcelona",
+    tipo: TIPOS.PUERTA,
+    cover: `${BASE}/BADALONA-PUERTA-CERRADURA/despues1.webp`,
+    excerpt:
+      "Renovación de la puerta de entrada de una vivienda en Badalona, con acabado blanco y cerradura inteligente integrada.",
+    description:
+      "Nueva instalación de puerta de entrada y cerradura inteligente en una vivienda de Badalona. La puerta en acabado blanco incorpora una cerradura inteligente de color negro. Mostramos la puerta anterior retirada y el resultado de la nueva instalación, con dos vistas exteriores y una vista desde el interior de la vivienda.",
+    media: [
+      { type: "image", src: `${BASE}/BADALONA-PUERTA-CERRADURA/despues1.webp`, alt: "Nueva puerta de entrada blanca con cerradura inteligente instalada en Badalona" },
+      { type: "image", src: `${BASE}/BADALONA-PUERTA-CERRADURA/despues2.webp`, alt: "Vista exterior de la puerta y la cerradura inteligente en la fachada de ladrillo" },
+      { type: "image", src: `${BASE}/BADALONA-PUERTA-CERRADURA/despues3.webp`, alt: "Vista interior de la nueva puerta blanca con cerradura inteligente en Badalona" },
+      { type: "image", before: true, src: `${BASE}/BADALONA-PUERTA-CERRADURA/antes1.webp`, alt: "Puerta anterior retirada antes de la nueva instalación en Badalona" },
+    ],
+  },
+  {
     slug: "puertas-entrada-seminario-castelldefels",
     title: "Puertas de Entrada del Seminario de Castelldefels",
     location: "Seminario de Castelldefels, Barcelona",
@@ -47,6 +64,11 @@ export const blogPosts = [
       { type: "image", src: `${BASE}/SEMINARIO-CASTELLDEFELS/instalacion9.jpg`, alt: "Vista interior de la puerta con cerradura mecánica" },
       { type: "image", src: `${BASE}/SEMINARIO-CASTELLDEFELS/instalacion10.jpg`, alt: "Vista interior de la puerta con cerradura inteligente" },
       { type: "image", src: `${BASE}/SEMINARIO-CASTELLDEFELS/instalacion11.jpg`, alt: "Puerta de entrada del seminario abierta, vista desde el interior" },
+      { type: "image", src: `${BASE}/SEMINARIO-CASTELLDEFELS/instalacion12.jpg`, alt: "Vista de conjunto de las puertas de entrada del seminario con iluminación perimetral" },
+      { type: "image", src: `${BASE}/SEMINARIO-CASTELLDEFELS/instalacion13.jpg`, alt: "Vista exterior de la puerta del seminario con cerradura mecánica" },
+      { type: "image", src: `${BASE}/SEMINARIO-CASTELLDEFELS/instalacion14.jpg`, alt: "Vista frontal de las dos puertas de entrada del Seminario de Castelldefels" },
+      { type: "image", src: `${BASE}/SEMINARIO-CASTELLDEFELS/instalacion15.jpg`, alt: "Vista exterior de la puerta del seminario con cerradura inteligente" },
+      { type: "image", src: `${BASE}/SEMINARIO-CASTELLDEFELS/instalacion16.jpg`, alt: "Vista general del acceso principal del seminario con las dos puertas instaladas" },
       { type: "image", src: `${BASE}/SEMINARIO-CASTELLDEFELS/instalacion1.jpg`, alt: "Proceso de montaje de una puerta de seguridad en el seminario" },
       { type: "image", src: `${BASE}/SEMINARIO-CASTELLDEFELS/instalacion2.jpg`, alt: "Colocación de la puerta durante la instalación" },
       { type: "image", zona: true, src: `${BASE}/SEMINARIO-CASTELLDEFELS/instalacion3.jpg`, alt: "Exterior del Seminario de Castelldefels" },
