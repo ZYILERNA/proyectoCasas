@@ -5,6 +5,17 @@ import { ChevronLeft, ChevronRight, ExternalLink, X } from "lucide-react";
 import { useRef, useState } from "react";
 import useAccessibleDialog from "../useAccessibleDialog";
 
+// Official WONLY Global badges; supporting documents are not available locally.
+const additionalCertifications = [
+  { id: "ce", title: "CE", logo: "/images/Asset/CERTIFICADOS/LOGOS/CE.png" },
+  { id: "ul", title: "UL Listed", logo: "/images/Asset/CERTIFICADOS/LOGOS/UL.png" },
+  { id: "saso", title: "SASO", logo: "/images/Asset/CERTIFICADOS/LOGOS/SASO.png" },
+  { id: "rohs", title: "RoHS", logo: "/images/Asset/CERTIFICADOS/LOGOS/RoHS.png" },
+  { id: "esg", title: "ESG", logo: "/images/Asset/CERTIFICADOS/LOGOS/ESG.png" },
+  { id: "etl", title: "ETL Listed", logo: "/images/Asset/CERTIFICADOS/LOGOS/ETL.png" },
+  { id: "iecee", title: "IECEE CB", logo: "/images/Asset/CERTIFICADOS/LOGOS/IECEE.png" },
+];
+
 const certificates = [
   {
     id: "fsc",
@@ -129,6 +140,23 @@ export default function CertificateShowcase() {
         </button>
       </div>
 
+      <ul
+        aria-label="Otras certificaciones y reconocimientos de WONLY"
+        className="mt-8 grid grid-cols-3 gap-3 sm:grid-cols-4 xl:grid-cols-7"
+      >
+        {additionalCertifications.map((certificate) => (
+          <li
+            key={certificate.id}
+            className="flex flex-col items-center rounded-2xl border border-white/10 bg-white/[0.035] px-2 py-5"
+          >
+            <CertificateLogo certificate={certificate} compact />
+            <h3 className="mt-4 text-center text-xs font-semibold text-zinc-300 sm:text-sm">
+              {certificate.title}
+            </h3>
+          </li>
+        ))}
+      </ul>
+
       {selected && (
         <div
           ref={dialogRef}
@@ -181,9 +209,9 @@ export default function CertificateShowcase() {
   );
 }
 
-function CertificateLogo({ certificate }) {
+function CertificateLogo({ certificate, compact = false }) {
   return (
-    <div className="grid h-20 w-20 place-items-center overflow-hidden rounded-2xl bg-white p-3">
+    <div className={`grid place-items-center overflow-hidden rounded-2xl bg-white p-3 ${compact ? "h-16 w-16 sm:h-20 sm:w-20" : "h-20 w-20"}`}>
       <Image
         src={certificate.logo}
         alt=""

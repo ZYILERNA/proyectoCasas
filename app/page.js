@@ -47,8 +47,11 @@ const securityCollections = [
     description:
       "Reconocimiento biométrico, control conectado y una entrada diseñada como parte de la arquitectura.",
     href: "/puertas?category=PUERTA%20DE%20SEGURIDAD%20IA",
-    image: "/images/PUERTAS/AI/door-x60-pro.optimized.webp",
-    imageAlt: "Puerta inteligente WONLY X60 Pro",
+    image: "/images/PUERTAS/AI/door-l5857.optimized.webp",
+    imageAlt: "Puerta inteligente WONLY L5857",
+    imageWidth: 912,
+    imageHeight: 1725,
+    imageClip: "inset(2.3% 4.1% 3.5% 4.5%)",
     icon: ScanFace,
     tone: "cyan",
     imageFit: "contain",
@@ -59,8 +62,11 @@ const securityCollections = [
     description:
       "Estructuras reforzadas, cierres multipunto y acabados contemporáneos para proyectos exigentes.",
     href: "/puertas?category=PUERTA%20DE%20SEGURIDAD%20ACORAZADA",
-    image: "/images/PUERTAS/ACORAZADA/door-wl001.optimized.webp",
-    imageAlt: "Puerta acorazada WONLY",
+    image: "/images/PUERTAS/ACORAZADA/door-wl026.webp",
+    imageAlt: "Puerta acorazada WONLY WL026",
+    imageWidth: 528,
+    imageHeight: 1066,
+    imageClip: "inset(0.6% 1.2% 1.8% 1.2%)",
     icon: ShieldCheck,
     tone: "white",
     imageFit: "contain",
@@ -71,8 +77,11 @@ const securityCollections = [
     description:
       "Construcción robusta, acabados duraderos y soluciones versátiles para viviendas y proyectos profesionales.",
     href: "/puertas?category=PUERTA%20DE%20ACERO%20REFORZADO",
-    image: "/images/PUERTAS/ACERO/door-contemporary.optimized.webp",
-    imageAlt: "Puerta de acero reforzado WONLY",
+    image: "/images/PUERTAS/ACERO/door-gl097-pro.optimized.webp",
+    imageAlt: "Puerta de acero reforzado WONLY GL097 Pro",
+    imageWidth: 921,
+    imageHeight: 1708,
+    imageClip: "inset(1.7% 3% 3.5% 3.5%)",
     icon: LockKeyhole,
     tone: "white",
     imageFit: "contain",
@@ -83,8 +92,8 @@ const securityCollections = [
     description:
       "Colecciones lacadas, de madera, vidriadas y correderas para dar continuidad a cada estancia.",
     href: "/puertas?category=PUERTA%20AC%C3%9ASTICA%20DE%20MADERA",
-    image: "/images/madera.png",
-    imageAlt: "Puerta de interior WONLY instalada en una vivienda",
+    image: "/images/home/security-interior-gold-v1.webp",
+    imageAlt: "Puerta de interior WONLY en un ambiente cálido con detalles dorados",
     icon: Sparkles,
     tone: "white",
     imageFit: "cover",
@@ -95,8 +104,8 @@ const securityCollections = [
     description:
       "Modelos cortafuego, acústicos, de aluminio y colecciones a medida en un catálogo unificado.",
     href: "/puertas?category=TODAS",
-    image: "/images/todas.webp",
-    imageAlt: "Colección de puertas especiales WONLY",
+    image: "/images/home/security-projects-gold-v1.webp",
+    imageAlt: "Puerta WONLY en un entorno tecnológico con iluminación dorada",
     icon: Layers3,
     tone: "white",
     imageFit: "cover",
@@ -140,6 +149,7 @@ const interiorCollections = [
 
 // El bloque queda listo para reactivarse sin eliminar contenidos ni enlaces.
 const SHOW_INTERIOR_COLLECTIONS = false;
+const SHOW_PATENT_SECTION = false;
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -357,7 +367,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="Confianza documentada"
             title="Certificaciones y propiedad intelectual"
-            description="Consulta los documentos que respaldan los procesos, la gestión y la capacidad de innovación de la marca."
+            description="Conoce las certificaciones de la marca y consulta los documentos disponibles sobre gestión, procesos y propiedad intelectual."
             id="certifications-title"
           />
           <div className="mt-12">
@@ -366,35 +376,37 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        aria-labelledby="patents-title"
-        className="content-auto border-y border-white/10 bg-[#100F0D] py-20 md:py-28"
-      >
-        <div className="container mx-auto px-6">
-          <div className="grid gap-10 lg:grid-cols-[.75fr_1.25fr] lg:items-start">
-            <div className="lg:sticky lg:top-32">
-              <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#D4A868]">
-                Innovación protegida
-              </p>
-              <h2
-                id="patents-title"
-                className="mt-4 text-balance text-4xl font-semibold tracking-[-0.04em] md:text-5xl"
-              >
-                Patentes que se pueden consultar
-              </h2>
-              <p className="mt-5 text-lg leading-8 text-zinc-400">
-                Una selección de documentos originales y sus traducciones al
-                español, presentada de forma clara y accesible.
-              </p>
-              <div className="mt-7 flex items-center gap-3 text-sm text-zinc-400">
-                <Box size={18} className="text-[#D4A868]" aria-hidden="true" />
-                13 documentos de invención disponibles
+      {SHOW_PATENT_SECTION && (
+        <section
+          aria-labelledby="patents-title"
+          className="content-auto border-y border-white/10 bg-[#100F0D] py-20 md:py-28"
+        >
+          <div className="container mx-auto px-6">
+            <div className="grid gap-10 lg:grid-cols-[.75fr_1.25fr] lg:items-start">
+              <div className="lg:sticky lg:top-32">
+                <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#D4A868]">
+                  Innovación protegida
+                </p>
+                <h2
+                  id="patents-title"
+                  className="mt-4 text-balance text-4xl font-semibold tracking-[-0.04em] md:text-5xl"
+                >
+                  Patentes que se pueden consultar
+                </h2>
+                <p className="mt-5 text-lg leading-8 text-zinc-400">
+                  Una selección de documentos originales y sus traducciones al
+                  español, presentada de forma clara y accesible.
+                </p>
+                <div className="mt-7 flex items-center gap-3 text-sm text-zinc-400">
+                  <Box size={18} className="text-[#D4A868]" aria-hidden="true" />
+                  13 documentos de invención disponibles
+                </div>
               </div>
+              <PatentCarousel />
             </div>
-            <PatentCarousel />
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <PartnerMarquee />
 
@@ -535,13 +547,17 @@ function SecurityCard({ item, index }) {
         <Image
           src={item.image}
           alt={item.imageAlt}
-          fill
+          fill={item.imageFit !== "contain"}
+          width={item.imageWidth}
+          height={item.imageHeight}
+          loading={item.imageFit === "contain" ? "eager" : "lazy"}
+          style={item.imageClip ? { clipPath: item.imageClip } : undefined}
           className={`transition duration-700 group-hover:scale-[1.035] ${
             item.imageFit === "contain"
-              ? "object-contain object-top"
+              ? "mx-auto h-full w-auto max-w-full object-contain"
               : "object-cover"
           }`}
-          sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
+          sizes={item.imageFit === "contain" ? "180px" : "(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#111] via-transparent to-transparent" />
       </div>

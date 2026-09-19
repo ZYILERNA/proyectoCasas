@@ -35,8 +35,23 @@ export default function DoorHeroExperience() {
     let progress = 0;
     let travel = 1;
     let revealed = null;
+    let introTimer = 0;
+    let copyAdvanced = false;
+    let hasOpened = false;
 
     const staticMode = () => motion.matches || Boolean(connection?.saveData);
+    const advanceCopy = () => {
+      if (disposed || copyAdvanced || staticMode() || failed) return;
+      copyAdvanced = true;
+      section.dataset.copy = "product";
+      window.clearTimeout(introTimer);
+      introTimer = 0;
+    };
+    const queueIntro = () => {
+      if (ready && visible && !document.hidden && !staticMode() && !hasOpened && !copyAdvanced && !introTimer) {
+        introTimer = window.setTimeout(advanceCopy, 4200);
+      }
+    };
     const reveal = (value) => {
       if (disposed || value === revealed) return;
       revealed = value;
@@ -55,7 +70,24 @@ export default function DoorHeroExperience() {
       frame.style.setProperty("--door-progress", progress.toFixed(4));
       frame.style.setProperty("--door-copy-opacity", (1 - smoothstep(progress / 0.26)).toFixed(4));
       frame.style.setProperty("--door-copy-y", String(-progress * 70) + "px");
+      const productExit = smoothstep((progress - 0.62) / 0.16);
+      frame.dataset.productExiting = String(productExit > 0);
+      frame.style.setProperty("--door-product-opacity", (1 - productExit).toFixed(4));
+      frame.style.setProperty("--door-product-y", `${-14 * productExit}px`);
       frame.style.setProperty("--door-shade", (0.25 + 0.16 * smoothstep((progress - 0.6) / 0.18)).toFixed(4));
+      if (ready && !staticMode()) {
+        if (progress > 0 && !hasOpened) {
+          hasOpened = true;
+          window.clearTimeout(introTimer);
+          introTimer = 0;
+        }
+        if (progress > 0.12) advanceCopy();
+        else if (progress === 0 && hasOpened && copyAdvanced) {
+          // Returning to the closed door restores its opening message until the next scroll.
+          copyAdvanced = false;
+          section.dataset.copy = "intro";
+        }
+      }
       reveal(staticMode() || failed || (ready && position >= 0.9999));
     };
     const update = (time) => {
@@ -74,6 +106,16 @@ export default function DoorHeroExperience() {
         raf = window.requestAnimationFrame(update);
       }
     };
+    const handleVisibility = () => {
+      if (document.hidden) {
+        window.clearTimeout(introTimer);
+        introTimer = 0;
+      } else {
+        previousTime = 0;
+        queueIntro();
+        requestUpdate();
+      }
+    };
     const measure = () => {
       const header = document.querySelector("header");
       section.style.setProperty("--door-header-height", String(header?.offsetHeight || 108) + "px");
@@ -85,7 +127,10 @@ export default function DoorHeroExperience() {
       if (staticMode()) {
         if (raf) window.cancelAnimationFrame(raf);
         raf = 0;
+        window.clearTimeout(introTimer);
+        introTimer = 0;
       }
+      queueIntro();
       measure();
       paint();
     };
@@ -94,8 +139,11 @@ export default function DoorHeroExperience() {
       section.dataset.active = String(visible);
       if (visible) {
         previousTime = 0;
+        queueIntro();
         requestUpdate();
       } else {
+        window.clearTimeout(introTimer);
+        introTimer = 0;
         if (raf) window.cancelAnimationFrame(raf);
         raf = 0;
         if (entry.boundingClientRect.bottom <= 0) reveal(true);
@@ -111,6 +159,7 @@ export default function DoorHeroExperience() {
       failed = !ready;
       frame.dataset.ready = String(ready);
       paint();
+      queueIntro();
       // A restored position below the hero must retain usable navigation.
       if (section.getBoundingClientRect().bottom <= 0) reveal(true);
       requestUpdate();
@@ -125,18 +174,19 @@ export default function DoorHeroExperience() {
     if (header) resizeObserver.observe(header);
     window.addEventListener("scroll", requestUpdate, { passive: true });
     window.addEventListener("resize", measure, { passive: true });
-    document.addEventListener("visibilitychange", requestUpdate);
+    document.addEventListener("visibilitychange", handleVisibility);
     motion.addEventListener("change", handlePreference);
     connection?.addEventListener?.("change", handlePreference);
 
     return () => {
       disposed = true;
+      window.clearTimeout(introTimer);
       observer.disconnect();
       resizeObserver.disconnect();
       if (raf) window.cancelAnimationFrame(raf);
       window.removeEventListener("scroll", requestUpdate);
       window.removeEventListener("resize", measure);
-      document.removeEventListener("visibilitychange", requestUpdate);
+      document.removeEventListener("visibilitychange", handleVisibility);
       motion.removeEventListener("change", handlePreference);
       connection?.removeEventListener?.("change", handlePreference);
       revealRef.current = null;
@@ -165,7 +215,7 @@ export default function DoorHeroExperience() {
   };
 
   return (
-    <section ref={sectionRef} aria-labelledby="hero-title" className="door-hero" data-stage="opening" data-revealed="false">
+    <section ref={sectionRef} aria-labelledby="hero-title" className="door-hero" data-stage="opening" data-revealed="false" data-copy="intro">
       <div ref={frameRef} className="door-hero__frame">
         <CatalogDoorScene ref={sceneRef} />
         <div className="door-hero__veil" aria-hidden="true" />
@@ -176,15 +226,17 @@ export default function DoorHeroExperience() {
         </div>
         <div className="door-hero__copy">
           <p className="door-hero__eyebrow">WONLY · Tecnología &amp; Seguridad</p>
-          <h1 id="hero-title">Tu mundo.<br /><span>Más seguro.</span></h1>
-          <p className="door-hero__description">Abre la puerta a una nueva forma de vivir.<br className="hidden sm:block" /> Seguridad inteligente. Diseño sin límites.</p>
+          <h1 id="hero-title">Todo en tu casa es inteligente.<br /><span>Menos la puerta.</span></h1>
+          <p className="door-hero__description">Hasta ahora.</p>
         </div>
-        <div className="door-hero__arrival" aria-hidden="true">
-          <span className="door-hero__eyebrow">Bienvenido a tu tranquilidad</span>
-          <p>Lo que más importa,<br /><span>al otro lado.</span></p>
+        <div className="door-hero__product">
+          <h2>La puerta y la cerradura.<br /><span>Un solo producto.</span></h2>
+        </div>
+        <div className="door-hero__arrival">
+          <h2>Ingeniería de seguridad.<br /><span>Hecha para tu vida.</span></h2>
         </div>
         <div className="door-hero__bottom">
-          <div className="door-hero__signature"><ShieldCheck size={18} aria-hidden="true" /><span>Ingeniería de seguridad.<br /><strong>Hecha para tu vida.</strong></span></div>
+          <div className="door-hero__signature"><ShieldCheck size={18} aria-hidden="true" /><span>WONLY · X60 Pro<br /><strong>Tecnología &amp; Seguridad</strong></span></div>
           <button className="door-hero__enter" type="button" onClick={enter}>
             <span className="door-hero__enter-opening">Desliza para abrir</span>
             <span className="door-hero__enter-inside">Descubre WONLY</span>
