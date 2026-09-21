@@ -367,7 +367,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="Confianza documentada"
             title="Certificaciones y propiedad intelectual"
-            description="Conoce las certificaciones de la marca y consulta los documentos disponibles sobre gestión, procesos y propiedad intelectual."
+            description="Conoce las certificaciones y los premios de diseño de la marca. Consulta los documentos disponibles sobre gestión, procesos y propiedad intelectual."
             id="certifications-title"
           />
           <div className="mt-12">

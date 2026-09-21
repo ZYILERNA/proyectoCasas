@@ -16,6 +16,38 @@ const additionalCertifications = [
   { id: "iecee", title: "IECEE CB", logo: "/images/Asset/CERTIFICADOS/LOGOS/IECEE.png" },
 ];
 
+// Original artwork from wonlyglobal.com/images/awards/; no local award documents.
+const designAwards = [
+  {
+    id: "red-dot",
+    title: "Red Dot · Best of the Best",
+    logo: "/images/Asset/CERTIFICADOS/LOGOS/award-red-dot.png",
+    width: 330,
+    height: 273,
+  },
+  {
+    id: "forbes",
+    title: "Forbes Design Leadership Brand",
+    logo: "/images/Asset/CERTIFICADOS/LOGOS/award-forbes.png",
+    width: 430,
+    height: 238,
+  },
+  {
+    id: "if-design",
+    title: "iF Design Award",
+    logo: "/images/Asset/CERTIFICADOS/LOGOS/award-if-design.png",
+    width: 400,
+    height: 267,
+  },
+  {
+    id: "china-hardware",
+    title: "China Hardware International Industrial Design Gold Award",
+    logo: "/images/Asset/CERTIFICADOS/LOGOS/award-china-hardware.png",
+    width: 715,
+    height: 212,
+  },
+];
+
 const certificates = [
   {
     id: "fsc",
@@ -156,6 +188,35 @@ export default function CertificateShowcase() {
           </li>
         ))}
       </ul>
+
+      <div className="mt-10 border-t border-white/10 pt-8">
+        <h3
+          id="design-awards-title"
+          className="text-xs font-bold uppercase tracking-[0.22em] text-[#D4A868]"
+        >
+          Premios de diseño
+        </h3>
+        <ul
+          aria-labelledby="design-awards-title"
+          className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4"
+        >
+          {designAwards.map((award) => (
+            <li
+              key={award.id}
+              className="flex h-36 items-center justify-center rounded-2xl bg-[#FAF7F2] px-5 py-6"
+            >
+              <Image
+                src={award.logo}
+                alt={award.title}
+                width={award.width}
+                height={award.height}
+                className="h-auto max-h-24 w-auto max-w-full object-contain"
+                sizes="(max-width: 639px) 280px, (max-width: 1023px) 42vw, 260px"
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
 
       {selected && (
         <div

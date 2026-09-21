@@ -229,11 +229,8 @@ export default function DoorHeroExperience() {
           <h1 id="hero-title">Todo en tu casa es inteligente.<br /><span>Menos la puerta.</span></h1>
           <p className="door-hero__description">Hasta ahora.</p>
         </div>
-        <div className="door-hero__product">
-          <h2>La puerta y la cerradura.<br /><span>Un solo producto.</span></h2>
-        </div>
         <div className="door-hero__arrival">
-          <h2>Ingeniería de seguridad.<br /><span>Hecha para tu vida.</span></h2>
+          <h2>La puerta y la cerradura.<br /><span>Un solo producto.</span></h2>
         </div>
         <div className="door-hero__bottom">
           <div className="door-hero__signature"><ShieldCheck size={18} aria-hidden="true" /><span>WONLY · X60 Pro<br /><strong>Tecnología &amp; Seguridad</strong></span></div>
