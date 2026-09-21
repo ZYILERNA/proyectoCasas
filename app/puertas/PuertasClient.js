@@ -182,7 +182,8 @@ const ProductCard = memo(forwardRef(function ProductCard({
       aria-busy={opening}
       className="group flex h-full w-full appearance-none flex-col bg-transparent text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-4"
     >
-      <div className="relative mb-4 aspect-[3/5] overflow-hidden rounded-sm border border-transparent bg-[#FCFCFC] transition-all group-hover:border-gray-100">
+      {/* Percentage padding preserves the image area in Safari flex layouts. */}
+      <div className="relative mb-4 h-0 w-full shrink-0 overflow-hidden rounded-sm border border-transparent bg-[#FCFCFC] pb-[166.6667%] transition-all group-hover:border-gray-100">
         <div className="absolute inset-x-[7%] bottom-[6%] top-[7%]">
           <Image
             src={getLogoFreeDoorImagePath(product.img)}

@@ -48,7 +48,7 @@ export default function WLJ001FeatureCard({ product, href, priority = false }) {
           }}
           className="group block focus-visible:ring-2 focus-visible:ring-[#866142] focus-visible:ring-offset-4"
         >
-          <div className="relative aspect-square overflow-hidden bg-[#E8E1D8]">
+          <div className="relative h-0 w-full overflow-hidden bg-[#E8E1D8] pb-[100%]">
             {SCENES.map((scene, index) => {
               const isActive = activeSceneIndex === index;
 
