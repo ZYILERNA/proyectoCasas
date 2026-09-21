@@ -226,7 +226,8 @@ export default function DoorHeroExperience() {
         </div>
         <div className="door-hero__copy">
           <p className="door-hero__eyebrow">WONLY · Tecnología &amp; Seguridad</p>
-          <h1 id="hero-title">Todo en tu casa es inteligente.<br /><span>Menos la puerta.</span></h1>
+          <h1 id="hero-title">Todo en tu casa es inteligente.</h1>
+          <p className="door-hero__door-line">Menos la puerta.</p>
           <p className="door-hero__description">Hasta ahora.</p>
         </div>
         <div className="door-hero__arrival">

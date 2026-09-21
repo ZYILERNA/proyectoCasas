@@ -149,8 +149,18 @@ textarea {
   letter-spacing: -.065em;
   text-shadow: 0 4px 32px #0004;
 }
-.door-hero__copy h1 span { color: #e5c79e; }
-.door-hero__description { margin-top: 26px; max-width: 440px; font-size: clamp(19px, 1.6vw, 25px); line-height: 1.5; font-weight: 300; color: #f0ece5; }
+.door-hero__door-line {
+  color: #fff;
+  font-size: clamp(40px, 6.6vw, 106px);
+  font-weight: 400;
+  line-height: .99;
+  letter-spacing: -.065em;
+  text-shadow: 0 4px 32px #0004;
+}
+.door-hero__description { margin-top: 26px; max-width: 440px; font-size: clamp(19px, 1.6vw, 25px); line-height: 1.5; font-weight: 300; color: #e5c79e; }
+@media (min-width: 768px) {
+  .door-hero__copy h1 { white-space: nowrap; }
+}
 .door-hero__product { opacity: 0; transform: translateY(14px); transition: opacity .45s ease, transform .45s ease; }
 .door-hero[data-copy="product"] .door-hero__product { opacity: var(--door-product-opacity); transform: translateY(var(--door-product-y)); transition-delay: .3s; }
 .door-hero[data-copy="product"] .door-hero__frame[data-product-exiting="true"] .door-hero__product { transition: none; }
@@ -219,7 +229,8 @@ textarea {
   .door-hero__topline { top: calc(var(--door-header-height) + 12px); font-size: 9px; letter-spacing: .04em; }
   .door-hero__copy { padding-top: calc(var(--door-header-height) + 10px); padding-bottom: 185px; }
   .door-hero__eyebrow { font-size: 8px; letter-spacing: .18em; }
-  .door-hero__copy h1 { font-size: clamp(36px, 10.5vw, 58px); margin-top: 20px; }
+  .door-hero__copy h1 { font-size: clamp(22px, 6.4vw, 28px); line-height: 1.1; white-space: nowrap; margin-top: 20px; }
+  .door-hero__door-line { font-size: clamp(36px, 10.5vw, 58px); }
   .door-hero__description { max-width: 290px; font-size: 18px; line-height: 1.55; margin-top: 23px; }
   .door-hero__bottom { bottom: calc(84px + env(safe-area-inset-bottom)); grid-template-columns: 1fr; gap: 12px; padding-top: 16px; }
   .door-hero__enter { grid-row: 1; justify-self: center; font-size: 9px; }
@@ -236,6 +247,7 @@ textarea {
   .door-hero__topline { top: calc(var(--door-header-height) + 2px); }
   .door-hero__copy { padding-top: 116px; padding-bottom: 136px; }
   .door-hero__copy h1 { font-size: clamp(32px, 11vh, 52px); margin-top: 12px; }
+  .door-hero__door-line { font-size: clamp(32px, 11vh, 52px); }
   .door-hero__description { font-size: 16px; margin-top: 10px; }
   .door-hero__eyebrow { font-size: 8px; }
   .door-hero__product,
