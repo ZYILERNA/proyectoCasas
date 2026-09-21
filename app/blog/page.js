@@ -34,10 +34,10 @@ export default function BlogPage() {
       ? blogPosts
       : blogPosts.filter((p) => p.tipo === filtro);
 
-  // Canovelles es el caso destacado cuando no hay un filtro activo.
+  // Montgat es el caso destacado cuando no hay un filtro activo.
   const destacado =
     filtro === "Todos"
-      ? blogPosts.find((post) => post.slug === "canovelles")
+      ? blogPosts.find((post) => post.slug === "montgat")
       : null;
   const grid = destacado
     ? filtrados.filter((post) => post.slug !== destacado.slug)
