@@ -35,7 +35,6 @@ export default function DoorHeroExperience() {
     let progress = 0;
     let travel = 1;
     let revealed = null;
-    let introTimer = 0;
     let copyAdvanced = false;
     let hasOpened = false;
 
@@ -44,13 +43,6 @@ export default function DoorHeroExperience() {
       if (disposed || copyAdvanced || staticMode() || failed) return;
       copyAdvanced = true;
       section.dataset.copy = "product";
-      window.clearTimeout(introTimer);
-      introTimer = 0;
-    };
-    const queueIntro = () => {
-      if (ready && visible && !document.hidden && !staticMode() && !hasOpened && !copyAdvanced && !introTimer) {
-        introTimer = window.setTimeout(advanceCopy, 4200);
-      }
     };
     const reveal = (value) => {
       if (disposed || value === revealed) return;
@@ -78,8 +70,6 @@ export default function DoorHeroExperience() {
       if (ready && !staticMode()) {
         if (progress > 0 && !hasOpened) {
           hasOpened = true;
-          window.clearTimeout(introTimer);
-          introTimer = 0;
         }
         if (progress > 0.12) advanceCopy();
         else if (progress === 0 && hasOpened && copyAdvanced) {
@@ -107,12 +97,8 @@ export default function DoorHeroExperience() {
       }
     };
     const handleVisibility = () => {
-      if (document.hidden) {
-        window.clearTimeout(introTimer);
-        introTimer = 0;
-      } else {
+      if (!document.hidden) {
         previousTime = 0;
-        queueIntro();
         requestUpdate();
       }
     };
@@ -127,10 +113,7 @@ export default function DoorHeroExperience() {
       if (staticMode()) {
         if (raf) window.cancelAnimationFrame(raf);
         raf = 0;
-        window.clearTimeout(introTimer);
-        introTimer = 0;
       }
-      queueIntro();
       measure();
       paint();
     };
@@ -139,11 +122,8 @@ export default function DoorHeroExperience() {
       section.dataset.active = String(visible);
       if (visible) {
         previousTime = 0;
-        queueIntro();
         requestUpdate();
       } else {
-        window.clearTimeout(introTimer);
-        introTimer = 0;
         if (raf) window.cancelAnimationFrame(raf);
         raf = 0;
         if (entry.boundingClientRect.bottom <= 0) reveal(true);
@@ -159,7 +139,6 @@ export default function DoorHeroExperience() {
       failed = !ready;
       frame.dataset.ready = String(ready);
       paint();
-      queueIntro();
       // A restored position below the hero must retain usable navigation.
       if (section.getBoundingClientRect().bottom <= 0) reveal(true);
       requestUpdate();
@@ -180,7 +159,6 @@ export default function DoorHeroExperience() {
 
     return () => {
       disposed = true;
-      window.clearTimeout(introTimer);
       observer.disconnect();
       resizeObserver.disconnect();
       if (raf) window.cancelAnimationFrame(raf);
