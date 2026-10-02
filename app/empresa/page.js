@@ -16,10 +16,7 @@ import {
   Bot,
   ShieldCheck,
   MapPin,
-  Star,
-  CalendarDays,
-  Store,
-  ArrowRight
+  Star
 } from 'lucide-react';
 import Link from 'next/link';
 import { wonlyMilestones } from '../../lib/wonly-milestones';
@@ -68,20 +65,6 @@ const factoryModules = [
     image: "/images/COMPANY/FACTORY/coating.webp",
     stats: "90% Eficiencia"
   }
-];
-
-// Datos de la campaña: SMART DOORS 2026 (IFEMA Madrid)
-const campaignDetails = [
-  { icon: <CalendarDays size={20} />, label: "Fechas", value: "10 – 13 noviembre 2026" },
-  { icon: <MapPin size={20} />, label: "Lugar", value: "IFEMA Madrid" },
-  { icon: <Store size={20} />, label: "Stand · Pabellón", value: "Próximamente" },
-];
-
-const campaignHighlights = [
-  "Puertas de seguridad",
-  "Cerraduras inteligentes",
-  "Puertas de interior",
-  "Soluciones premium",
 ];
 
 const EmpresaPage = () => {
@@ -144,102 +127,6 @@ const EmpresaPage = () => {
                 <span className="text-[10px] md:text-xs uppercase tracking-widest text-gray-400 mt-2">{s.label}</span>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================================================
-          CAMPAÑA: WONLY EN SMART DOORS 2026 · IFEMA MADRID
-         ========================================================================= */}
-      <section
-        id="campana"
-        aria-labelledby="campana-title"
-        className="py-24 bg-[#050505] relative overflow-hidden scroll-mt-24"
-      >
-        <div className="absolute top-1/3 right-0 w-[600px] h-[600px] bg-[#D4A868] opacity-[0.04] blur-[140px] rounded-full pointer-events-none" />
-
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="mb-12 max-w-3xl">
-            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.25em] text-[#D4A868] mb-4">
-              <span className="w-2 h-2 rounded-full bg-[#D4A868] animate-pulse" aria-hidden="true" />
-              Campaña · Próximo evento
-            </span>
-            <h2 id="campana-title" className="text-3xl md:text-5xl font-bold mb-6">
-              WONLY en <span className="text-[#D4A868]">SMART DOORS 2026</span>
-            </h2>
-            <p className="text-gray-400 text-lg leading-relaxed">
-              Estaremos con stand propio en SMART DOORS, la feria de puertas, accesos y cerramientos
-              de la Semana Internacional de la Construcción en IFEMA Madrid. Ven a conocer de cerca
-              nuestras puertas y cerraduras, resolver dudas con nuestro equipo y descubrir las novedades de la marca.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-            {/* Cartel del evento */}
-            <motion.figure
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="lg:col-span-8 rounded-2xl overflow-hidden border border-white/10 bg-[#111]"
-            >
-              <img
-                src="/images/COMPANY/CAMPANA/smart-doors-2026.webp"
-                alt="Cartel de WONLY en SMART DOORS, Semana Internacional de la Construcción, IFEMA Madrid del 10 al 13 de noviembre de 2026"
-                width={1536}
-                height={1024}
-                loading="lazy"
-                className="w-full h-full object-cover"
-              />
-            </motion.figure>
-
-            {/* Información práctica */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="lg:col-span-4 bg-[#111] border border-[#D4A868]/20 rounded-2xl p-8 flex flex-col"
-            >
-              <h3 className="text-xl font-bold mb-6">Visítanos en la feria</h3>
-
-              <dl className="space-y-5 mb-8">
-                {campaignDetails.map((item) => (
-                  <div key={item.label} className="flex items-start gap-4 border-b border-white/5 pb-4 last:border-b-0">
-                    <div className="p-2 bg-[#D4A868]/10 rounded-lg text-[#D4A868]">{item.icon}</div>
-                    <div>
-                      <dt className="text-xs uppercase tracking-widest text-gray-500 mb-1">{item.label}</dt>
-                      <dd className="text-white font-semibold">{item.value}</dd>
-                    </div>
-                  </div>
-                ))}
-              </dl>
-
-              <p className="text-sm text-gray-400 mb-3">En el stand podrás ver:</p>
-              <ul className="flex flex-wrap gap-2 mb-8">
-                {campaignHighlights.map((h) => (
-                  <li key={h} className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-gray-200">
-                    {h}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-auto flex flex-col gap-3">
-                <Link
-                  href="/contacto"
-                  className="inline-flex items-center justify-center gap-2 bg-[#D4A868] text-black px-6 py-3 rounded-full font-bold hover:bg-white transition-colors duration-300"
-                >
-                  Concertar una reunión <ArrowRight size={18} />
-                </Link>
-                <a
-                  href="https://www.ifema.es/smart-doors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 border border-white/15 text-white px-6 py-3 rounded-full font-semibold hover:border-[#D4A868] hover:text-[#D4A868] transition-colors duration-300"
-                >
-                  Web oficial de la feria
-                </a>
-              </div>
-            </motion.div>
           </div>
         </div>
       </section>

@@ -466,8 +466,11 @@ function TradeFairBanner() {
         className="absolute -left-40 top-1/2 h-[520px] w-[520px] -translate-y-1/2 rounded-full bg-[#D4A868]/10 blur-[140px]"
       />
       <div className="container relative mx-auto grid items-center gap-10 px-6 lg:grid-cols-[1.15fr_.85fr]">
-        <Link
-          href="/empresa#campana"
+        <a
+          href="https://www.ifema.es/smart-doors"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="SMART DOORS 2026 en la web de IFEMA (se abre en una pestaña nueva)"
           className="group relative block overflow-hidden rounded-[1.75rem] border border-white/10 bg-zinc-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A868]"
         >
           <Image
@@ -478,7 +481,7 @@ function TradeFairBanner() {
             className="h-auto w-full transition duration-700 group-hover:scale-[1.02]"
             sizes="(max-width: 1024px) 100vw, 55vw"
           />
-        </Link>
+        </a>
 
         <div>
           <p className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.24em] text-[#D4A868]">
@@ -515,13 +518,15 @@ function TradeFairBanner() {
           </dl>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              href="/empresa#campana"
+            <a
+              href="https://www.ifema.es/smart-doors"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-full bg-[#D4A868] px-6 py-3 text-sm font-bold uppercase tracking-[0.12em] text-black transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A868]"
             >
               Más información
               <ArrowRight size={16} aria-hidden="true" className="transition-transform group-hover:translate-x-1" />
-            </Link>
+            </a>
             <Link
               href="/contacto"
               className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-bold uppercase tracking-[0.12em] text-white transition hover:border-[#D4A868] hover:text-[#D4A868]"
