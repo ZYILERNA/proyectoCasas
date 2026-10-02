@@ -84,21 +84,6 @@ const campaignHighlights = [
   "Soluciones premium",
 ];
 
-const campaignVideos = [
-  {
-    src: "/images/COMPANY/CAMPANA/wonly-nadie-pasa.mp4",
-    poster: "/images/COMPANY/CAMPANA/wonly-nadie-pasa-poster.jpg",
-    title: "Con WONLY, nadie pasa",
-    desc: "Nuestra película de marca: 30 años de tecnología, fábricas inteligentes y la confianza de millones de hogares.",
-  },
-  {
-    src: "/images/COMPANY/CAMPANA/wonly-cerradura-tecnologia.mp4",
-    poster: "/images/COMPANY/CAMPANA/wonly-cerradura-tecnologia-poster.jpg",
-    title: "Dentro de una cerradura WONLY",
-    desc: "Cilindro patentado, pines anti-ganzúa y mecanismo antipalanca: la tecnología que verás de cerca en nuestro stand.",
-  },
-];
-
 const EmpresaPage = () => {
   return (
     <div className="bg-[#050505] text-white overflow-hidden font-sans">
@@ -255,39 +240,6 @@ const EmpresaPage = () => {
                 </a>
               </div>
             </motion.div>
-          </div>
-
-          {/* Vídeos de la campaña */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-            {campaignVideos.map((video, index) => (
-              <motion.div
-                key={video.src}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group bg-[#111] border border-white/10 rounded-2xl overflow-hidden hover:border-[#D4A868]/50 transition-colors duration-300"
-              >
-                <div className="aspect-video w-full bg-black overflow-hidden">
-                  <video
-                    src={video.src}
-                    poster={video.poster}
-                    controls
-                    playsInline
-                    preload="metadata"
-                    className="w-full h-full object-cover"
-                  >
-                    Tu navegador no soporta la reproducción de vídeo.
-                  </video>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-white mb-1 group-hover:text-[#D4A868] transition-colors">
-                    {video.title}
-                  </h3>
-                  <p className="text-gray-400 text-sm">{video.desc}</p>
-                </div>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>

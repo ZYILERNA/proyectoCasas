@@ -4,10 +4,12 @@ import {
   ArrowRight,
   BedDouble,
   Box,
+  CalendarDays,
   ChevronRight,
   Fingerprint,
   Layers3,
   LockKeyhole,
+  MapPin,
   ScanFace,
   ShieldCheck,
   Sofa,
@@ -207,6 +209,8 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <TradeFairBanner />
 
       <Timeline />
 
@@ -448,6 +452,86 @@ export default function Home() {
         </div>
       </section>
     </main>
+  );
+}
+
+function TradeFairBanner() {
+  return (
+    <section
+      aria-labelledby="trade-fair-title"
+      className="relative overflow-hidden border-b border-white/10 bg-[#0b0a08] py-16 md:py-20"
+    >
+      <div
+        aria-hidden="true"
+        className="absolute -left-40 top-1/2 h-[520px] w-[520px] -translate-y-1/2 rounded-full bg-[#D4A868]/10 blur-[140px]"
+      />
+      <div className="container relative mx-auto grid items-center gap-10 px-6 lg:grid-cols-[1.15fr_.85fr]">
+        <Link
+          href="/empresa#campana"
+          className="group relative block overflow-hidden rounded-[1.75rem] border border-white/10 bg-zinc-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A868]"
+        >
+          <Image
+            src="/images/COMPANY/CAMPANA/smart-doors-2026.webp"
+            alt="Cartel de WONLY en SMART DOORS, IFEMA Madrid, del 10 al 13 de noviembre de 2026"
+            width={1536}
+            height={1024}
+            className="h-auto w-full transition duration-700 group-hover:scale-[1.02]"
+            sizes="(max-width: 1024px) 100vw, 55vw"
+          />
+        </Link>
+
+        <div>
+          <p className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.24em] text-[#D4A868]">
+            <span className="h-2 w-2 animate-pulse rounded-full bg-[#D4A868]" aria-hidden="true" />
+            Próximo evento
+          </p>
+          <h2
+            id="trade-fair-title"
+            className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-[-0.04em] md:text-5xl"
+          >
+            Visítanos en SMART DOORS 2026
+          </h2>
+          <p className="mt-5 text-lg leading-8 text-zinc-400">
+            Estaremos con stand propio en la Semana Internacional de la
+            Construcción. Ven a ver nuestras puertas y cerraduras de cerca y
+            habla con nuestro equipo.
+          </p>
+
+          <dl className="mt-7 grid gap-4 sm:grid-cols-2">
+            <div className="flex items-start gap-3 border-t border-white/10 pt-4">
+              <CalendarDays size={20} className="mt-0.5 shrink-0 text-[#D4A868]" aria-hidden="true" />
+              <div>
+                <dt className="text-xs uppercase tracking-[0.14em] text-zinc-500">Fechas</dt>
+                <dd className="mt-1 font-semibold">10 – 13 noviembre 2026</dd>
+              </div>
+            </div>
+            <div className="flex items-start gap-3 border-t border-white/10 pt-4">
+              <MapPin size={20} className="mt-0.5 shrink-0 text-[#D4A868]" aria-hidden="true" />
+              <div>
+                <dt className="text-xs uppercase tracking-[0.14em] text-zinc-500">Lugar</dt>
+                <dd className="mt-1 font-semibold">IFEMA Madrid</dd>
+              </div>
+            </div>
+          </dl>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link
+              href="/empresa#campana"
+              className="group inline-flex items-center gap-2 rounded-full bg-[#D4A868] px-6 py-3 text-sm font-bold uppercase tracking-[0.12em] text-black transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A868]"
+            >
+              Más información
+              <ArrowRight size={16} aria-hidden="true" className="transition-transform group-hover:translate-x-1" />
+            </Link>
+            <Link
+              href="/contacto"
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-bold uppercase tracking-[0.12em] text-white transition hover:border-[#D4A868] hover:text-[#D4A868]"
+            >
+              Concertar reunión
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 

@@ -555,6 +555,56 @@ function CerradurasContent() {
         </div>
       </section>
 
+      {/* ===== 3b. VÍDEO TECNOLOGÍA ===== */}
+      <section className="py-24 bg-[#0a0a0a] border-t border-white/5">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="lg:col-span-4"
+            >
+              <p className="text-[#D4A868] text-xs font-bold uppercase tracking-widest mb-3">En vídeo</p>
+              <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-5">
+                Dentro de una <span className="text-[#D4A868]">cerradura WONLY</span>
+              </h2>
+              <p className="text-gray-400 leading-relaxed mb-6">
+                Cilindro patentado con pines reales y falsos, pines anti-ganzúa y anti-percusión,
+                ganchos antipalanca y cierre automático: así funciona por dentro.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {["Cilindro patentado", "Anti-ganzúa", "Anti-palanca", "Auto-bloqueo"].map(tag => (
+                  <span key={tag} className="text-[10px] text-gray-500 uppercase border border-white/10 rounded-full px-3 py-1 font-medium">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="lg:col-span-8 rounded-2xl overflow-hidden border border-white/8 bg-black aspect-video"
+            >
+              <video
+                src="/images/CERRADURA/wonly-cerradura-tecnologia.mp4"
+                poster="/images/CERRADURA/wonly-cerradura-tecnologia-poster.jpg"
+                controls
+                playsInline
+                preload="metadata"
+                className="w-full h-full object-cover"
+                aria-label="Vídeo: tecnología interior de una cerradura WONLY"
+              >
+                Tu navegador no soporta la reproducción de vídeo.
+              </video>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* ===== 4. COMPARATIVA ===== */}
       <section className="py-24 bg-[#080808] border-y border-white/5">
         <div className="container mx-auto px-6">
