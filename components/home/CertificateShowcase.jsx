@@ -46,6 +46,13 @@ const designAwards = [
     width: 715,
     height: 212,
   },
+  {
+    id: "guinness",
+    title: "Guinness World Records",
+    logo: "/images/Asset/CERTIFICADOS/LOGOS/award-guinness-world-records.png",
+    width: 250,
+    height: 251,
+  },
 ];
 
 const certificates = [
@@ -198,7 +205,7 @@ export default function CertificateShowcase() {
         </h3>
         <ul
           aria-labelledby="design-awards-title"
-          className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4"
+          className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-5"
         >
           {designAwards.map((award) => (
             <li
