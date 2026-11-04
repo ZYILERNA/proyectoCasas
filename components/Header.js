@@ -28,6 +28,7 @@ const primaryLinks = [
   { href: "/proyectos", label: "Proyectos" },
   { href: "/blog", label: "Blog" },
   { href: "/tutoriales", label: "Tutoriales" },
+  { href: "/contacto", label: "Contacto" },
 ];
 
 const securityLinks = [
@@ -341,8 +342,8 @@ export default function Header() {
               href="/contacto"
               className="hidden min-h-10 items-center justify-center rounded-full bg-[#D4A868] px-5 text-xs font-semibold tracking-[0.04em] text-[#221f20] transition hover:bg-[#D4A868] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none sm:flex"
             >
-              <span className="xl:hidden">Contacto</span>
-              <span className="hidden xl:inline">Solicitar asesoramiento</span>
+              <span className="xl:hidden">Presupuesto</span>
+              <span className="hidden xl:inline">Solicitar presupuesto</span>
             </Link>
 
             <button
@@ -469,7 +470,7 @@ export default function Header() {
               onClick={closeMobileMenu}
               className="mt-6 flex min-h-14 items-center justify-center rounded-full bg-[#D4A868] px-7 text-sm font-semibold tracking-[0.06em] text-[#221f20] transition hover:bg-[#D4A868] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
-              Solicitar asesoramiento
+              Solicitar presupuesto
             </Link>
               </div>
             </div>,

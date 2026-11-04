@@ -718,7 +718,7 @@ const productos_ia = MODELOS_IA.map(n => {
   return {
     name: n,
     category: "PUERTA DE SEGURIDAD IA",
-    description: `Flagship IA modelo ${n}.`,
+    description: `Puerta de seguridad inteligente modelo ${n}.`,
     specs: SPECS_IA,
     features: FEATURES_IA,
     unlock: UNLOCK_IA,

@@ -125,7 +125,7 @@ const interiorCollections = [
   },
   {
     title: "Mesas",
-    text: "Piezas escultóricas para espacios residenciales y contract.",
+    text: "Piezas escultóricas para hogares y espacios profesionales.",
     href: "/mesas",
     image: "/images/mesas-home.webp",
     imageAlt: "Mesa de diseño de la colección WONLY",

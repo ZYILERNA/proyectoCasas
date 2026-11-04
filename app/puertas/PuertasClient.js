@@ -536,7 +536,7 @@ export default function PuertasClient({
         />
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center p-6 text-center">
           <h1 className="mb-3 max-w-5xl text-3xl font-bold uppercase tracking-tighter text-white drop-shadow-2xl md:mb-10 md:text-5xl lg:text-6xl">
-            {activeCategory === "TODAS" ? "Wonly Collection" : activeCategory}
+            {activeCategory === "TODAS" ? "Todos los modelos" : activeCategory}
           </h1>
           <p className="mx-auto max-w-2xl text-sm font-light leading-relaxed text-gray-200 drop-shadow-md md:text-base">
             {activeCategory === "TODAS"

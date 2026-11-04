@@ -8,6 +8,7 @@ import { X, ChevronRight, DoorOpen, Palette, Filter, Search, Loader2 } from 'luc
 import { supabase } from '../../lib/supabase';
 import { getLogoFreeDoorImagePath } from '../../lib/door-image-assets';
 import useAccessibleDialog from '../../components/useAccessibleDialog';
+import QuoteRequestCTA from '../../components/QuoteRequestCTA';
 
 // --- CONFIGURACIÓN SUPABASE ---
 
@@ -209,6 +210,7 @@ const ProductModal = ({ product, onClose }) => {
               </div>
             )}
           </div>
+          <QuoteRequestCTA product={product} onNavigate={onClose} />
         </div>
       </motion.div>
     </div>

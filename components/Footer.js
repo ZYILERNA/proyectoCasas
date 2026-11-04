@@ -37,7 +37,7 @@ const contactEmails = [
   { label: "Consultas y contacto", address: "info@wonlyspain.com" },
   { label: "Corporativo", address: "jack@wonlyspain.com" },
   { label: "Marketing", address: "jennyqiu@wonlyspain.com" },
-  { label: "Growth Partner", address: "mpeiret@wonlyspain.com" },
+  { label: "Desarrollo de negocio", address: "mpeiret@wonlyspain.com" },
 ];
 
 const socialLinks = [
@@ -122,7 +122,7 @@ export default function Footer() {
             links={securityLinks}
             className={SHOW_FURNITURE_NAVIGATION ? "lg:col-span-3" : "lg:col-span-4"}
             extraLinks={[
-              { href: "/proyectos", label: "Proyectos contract" },
+              { href: "/proyectos", label: "Proyectos para empresas" },
               { href: "/blog", label: "Blog · Instalaciones" },
               { href: "/tutoriales", label: "Clases gratuitas" },
             ]}
