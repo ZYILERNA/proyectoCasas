@@ -48,11 +48,7 @@ textarea {
   transform: translateY(0);
   transition: opacity .65s ease, transform .65s cubic-bezier(.22, 1, .36, 1), visibility .65s;
 }
-.wonly-header[data-home="true"][data-door-revealed="false"] .wonly-header__reveal {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-}
+/* La navegación se mantiene visible durante la animación de la portada para poder ir a Productos, Contacto o Presupuesto en cualquier momento. */
 @media (scripting: none), (prefers-reduced-motion: reduce) {
   .wonly-header[data-home="true"][data-door-revealed] .wonly-header__reveal {
     opacity: 1;

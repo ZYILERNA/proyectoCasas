@@ -214,7 +214,7 @@ export default function ContactoPage() {
                                         <a href="mailto:mpeiret@wonlyspain.com" className="text-gray-400 hover:text-[#D4A868] transition-colors">
                                             mpeiret@wonlyspain.com
                                         </a>
-                                        <span className="text-gray-600 text-sm ml-2">— Growth Partner</span>
+                                        <span className="text-gray-600 text-sm ml-2">— Desarrollo de negocio</span>
                                     </div>
                                 </div>
                             </div>
@@ -326,11 +326,11 @@ export default function ContactoPage() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-2">
                                 <label htmlFor="contact-name" className="text-sm text-gray-400 ml-1">Nombre</label>
-                                <input id="contact-name" name="nombre" autoComplete="name" required type="text" placeholder="Su nombre" className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#D4A868] transition-colors text-white placeholder-gray-600" />
+                                <input id="contact-name" name="nombre" autoComplete="name" required type="text" placeholder="Tu nombre" className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#D4A868] transition-colors text-white placeholder-gray-600" />
                             </div>
                             <div className="space-y-2">
                                 <label htmlFor="contact-company" className="text-sm text-gray-400 ml-1">Empresa</label>
-                                <input id="contact-company" name="empresa" autoComplete="organization" type="text" placeholder="Su empresa" className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#D4A868] transition-colors text-white placeholder-gray-600" />
+                                <input id="contact-company" name="empresa" autoComplete="organization" type="text" placeholder="Tu empresa (opcional)" className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#D4A868] transition-colors text-white placeholder-gray-600" />
                             </div>
                         </div>
 
@@ -403,23 +403,23 @@ export default function ContactoPage() {
                 {[
                     { 
                       q: "¿Cómo puedo realizar una compra?", 
-                      a: "Para garantizar una atención personalizada y asegurarnos de que el producto se adapta perfectamente a su proyecto, las compras no se realizan directamente en la web. Le invitamos a utilizar nuestro formulario de contacto indicando los modelos de su interés, y un asesor le guiará en el proceso." 
+                      a: "Para asegurarnos de que el producto se adapta a tu proyecto, las compras no se realizan directamente en la web. Escríbenos desde el formulario de contacto indicando los modelos que te interesan y un asesor te guiará en todo el proceso." 
                     },
                     { 
                       q: "¿Cómo puedo conocer el precio de un producto?",
-                      a: "Solicite un presupuesto indicando el modelo y los acabados que le interesan. Nuestro equipo revisará las medidas, los materiales y las opciones disponibles para preparar una propuesta personalizada, con los costes de envío e instalación que correspondan."
+                      a: "Solicita un presupuesto desde la ficha del producto o desde este formulario, indicando el modelo y el acabado que te interesan. Revisaremos las medidas, los materiales y las opciones disponibles y te enviaremos una propuesta personalizada con los costes de envío e instalación que correspondan."
                     },
                     { 
-                      q: "¿Ofrecen servicio de envío e instalación?", 
-                      a: "Sí. Debido a la naturaleza de nuestros productos (puertas de alta seguridad, muebles de gran volumen y losas de piedra), contamos con un equipo técnico especializado. Los costes de transporte e instalación se calcularán y añadirán a su presupuesto final según la ubicación de su proyecto." 
+                      q: "¿Ofrecéis envío e instalación?", 
+                      a: "Sí. Debido a la naturaleza de nuestros productos (puertas de alta seguridad, muebles de gran volumen y losas de piedra), contamos con un equipo técnico especializado. Los costes de transporte e instalación se calculan según la ubicación de tu proyecto y se incluyen en tu presupuesto." 
                     },
                     { 
                       q: "¿Puedo personalizar las medidas o materiales de un producto?", 
-                      a: "Gran parte de nuestro catálogo, como los gabinetes y escritorios de té, permite ciertas configuraciones (intercambio de paneles de piedra sinterizada, colores de piel o diferentes acabados de madera). Indíquenos sus necesidades en el mensaje y evaluaremos la viabilidad de fabricación a medida." 
+                      a: "Gran parte de nuestro catálogo, como los gabinetes y escritorios de té, permite ciertas configuraciones (paneles de piedra sinterizada, colores de piel o distintos acabados de madera). Cuéntanos lo que necesitas en el mensaje y estudiaremos si es viable fabricarlo a medida." 
                     },
                     { 
                       q: "¿Cuáles son los plazos de entrega estimados?", 
-                      a: "El plazo varía según la disponibilidad en nuestra sede de Barcelona y el nivel de personalización de su pedido. Los artículos en stock estándar tienen un proceso rápido, mientras que las piezas fabricadas bajo demanda requieren plazos de logística que le serán detallados en su presupuesto final." 
+                      a: "El plazo depende de la disponibilidad en nuestra sede de Barcelona y del nivel de personalización de tu pedido. Los artículos en stock tienen una entrega rápida; para las piezas fabricadas bajo pedido te indicaremos el plazo en tu presupuesto." 
                     },
                 ].map((item, index) => (
                     <motion.div 

@@ -20,37 +20,37 @@ const cookieSections = [
     id: "que-son",
     title: "1. ¿Qué son las Cookies?",
     icon: <Cookie size={24} className="text-[#D4A868]"/>,
-    content: "Las cookies son pequeños archivos de texto que los sitios web almacenan en su dispositivo (ordenador, smartphone o tablet) a través de su navegador. Su objetivo principal es recordar sus preferencias, mantener la seguridad de la sesión y recopilar datos estadísticos para mejorar la experiencia de navegación."
+    content: "Las cookies son pequeños archivos de texto que los sitios web almacenan en tu dispositivo (ordenador, smartphone o tablet) a través de tu navegador. Su objetivo principal es recordar tus preferencias, mantener la seguridad de la sesión y recopilar datos estadísticos para mejorar la experiencia de navegación."
   },
   {
     id: "tecnicas",
     title: "2. Cookies Técnicas y Estrictamente Necesarias",
     icon: <ShieldCheck size={24} className="text-[#D4A868]"/>,
-    content: "Son necesarias para recordar sus preferencias de privacidad y, cuando usted cambia el idioma, conservar esa elección. No se utilizan para elaborar perfiles publicitarios."
+    content: "Son necesarias para recordar tus preferencias de privacidad y, cuando cambias el idioma, conservar esa elección. No se utilizan para elaborar perfiles publicitarios."
   },
   {
     id: "analiticas",
     title: "3. Cookies de Rendimiento y Análisis",
     icon: <BarChart3 size={24} className="text-[#D4A868]"/>,
-    content: "Si las acepta, activamos Vercel Analytics, Speed Insights y nuestra medición interna de visitas para conocer el uso y el rendimiento del sitio. Permanecen desactivados hasta que usted presta su consentimiento y puede retirarlo en cualquier momento."
+    content: "Si las acepta, activamos Vercel Analytics, Speed Insights y nuestra medición interna de visitas para conocer el uso y el rendimiento del sitio. Permanecen desactivados hasta que das tu consentimiento y puede retirarlo en cualquier momento."
   },
   {
     id: "traduccion",
     title: "4. Traducción Solicitada por el Usuario",
     icon: <Target size={24} className="text-[#D4A868]"/>,
-    content: "El selector de idioma es local hasta que elige traducir a un idioma distinto del español. En ese momento se carga Google Translate y se guarda la cookie googtrans para recordar su elección. Puede volver a español para eliminarla."
+    content: "El selector de idioma es local hasta que elige traducir a un idioma distinto del español. En ese momento se carga Google Translate y se guarda la cookie googtrans para recordar tu elección. Puedes volver a español para eliminarla."
   },
   {
     id: "terceros",
     title: "5. Servicios de Terceros",
     icon: <Globe size={24} className="text-[#D4A868]"/>,
-    content: "Utilizamos Vercel para analítica y rendimiento únicamente con consentimiento, Google Translate cuando usted solicita una traducción y Formspree para entregar las consultas enviadas desde el formulario. Cada proveedor se rige además por su propia política de privacidad."
+    content: "Utilizamos Vercel para analítica y rendimiento únicamente con consentimiento, Google Translate cuando solicita una traducción y Formspree para entregar las consultas enviadas desde el formulario. Cada proveedor se rige además por su propia política de privacidad."
   },
   {
     id: "gestion",
     title: "6. Gestión y Eliminación",
     icon: <Trash2 size={24} className="text-[#D4A868]"/>,
-    content: "Usted puede permitir, bloquear o eliminar las cookies instaladas en su equipo mediante la configuración de las opciones de su navegador (Chrome, Safari, Firefox, Edge). Tenga en cuenta que, si desactiva las cookies, es posible que no pueda acceder a ciertas áreas o funcionalidades de nuestra web."
+    content: "Usted puede permitir, bloquear o eliminar las cookies instaladas en tu equipo mediante la configuración de las opciones de tu navegador (Chrome, Safari, Firefox, Edge). Tenga en cuenta que, si desactiva las cookies, es posible que no puedas acceder a ciertas áreas o funcionalidades de nuestra web."
   }
 ];
 

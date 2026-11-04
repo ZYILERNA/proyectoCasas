@@ -9,7 +9,12 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import { supabase } from '../../lib/supabase';
+
 import useAccessibleDialog from '../../components/useAccessibleDialog';
+
+// Etiquetas visibles en español; el valor de la base de datos no cambia.
+const CATEGORY_LABELS = { Flagship: "Gama alta", "Best Seller": "Más vendida" };
+const categoryLabel = (category) => CATEGORY_LABELS[category] || category;
 
 // --- CONFIGURACIÓN SUPABASE ---
 
@@ -79,7 +84,7 @@ const ProductCard = memo(({ product, onClick, index }) => (
     {/* Info */}
     <div className="p-5 flex-1 flex flex-col gap-2.5">
       <div>
-        <p className="text-[#D4A868] text-[10px] font-bold uppercase tracking-widest mb-0.5">{product.category}</p>
+        <p className="text-[#D4A868] text-[10px] font-bold uppercase tracking-widest mb-0.5">{categoryLabel(product.category)}</p>
         <h3 className="text-white text-lg font-bold leading-tight">{product.name}</h3>
       </div>
       <p className="text-gray-500 text-sm line-clamp-2 flex-1">{product.description}</p>
@@ -158,7 +163,7 @@ const ProductModal = memo(({ product, onClose }) => {
         <div className="sticky top-0 bg-[#080808]/95 backdrop-blur z-30 px-8 py-6 border-b border-white/5 flex justify-between items-start">
           <div>
             <div className="flex items-center gap-2 mb-1">
-              <span className="text-[#D4A868] text-[10px] font-bold uppercase tracking-widest">{product.category}</span>
+              <span className="text-[#D4A868] text-[10px] font-bold uppercase tracking-widest">{categoryLabel(product.category)}</span>
               <span className="text-white/20 text-xs">/</span>
               <span className="text-gray-500 text-[10px] uppercase tracking-wider">{product.type}</span>
             </div>

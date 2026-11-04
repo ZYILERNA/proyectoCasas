@@ -25,6 +25,7 @@ import {
   getWonly2026Wallpaper,
   isWonly2026CatalogProduct,
 } from "../../lib/wonly-2026-door-assets";
+import QuoteRequestCTA from "../../components/QuoteRequestCTA";
 
 const DOOR_COLORS = [
   { name: "Lacado Negro", hex: "#171717" },
@@ -461,6 +462,8 @@ export default function ProductModal({
               )}
             </div>
           )}
+
+          <QuoteRequestCTA product={product} finish={selectedColor?.name} onNavigate={onClose} />
         </div>
       </motion.div>
     </div>

@@ -21,25 +21,25 @@ const privacySections = [
     id: "responsable",
     title: "1. Responsable del Tratamiento",
     icon: <Database size={24} className="text-[#D4A868]"/>,
-    content: "La entidad responsable del tratamiento de sus datos personales es Zhongyuankeji S.L., operando bajo la marca WONLY, con domicilio en Carrer Noi del Sucre, 13, 08840 Viladecans, Barcelona, España. Para cualquier consulta relativa a privacidad puede escribir a info@wonlyspain.com."
+    content: "La entidad responsable del tratamiento de tus datos personales es Zhongyuankeji S.L., operando bajo la marca WONLY, con domicilio en Carrer Noi del Sucre, 13, 08840 Viladecans, Barcelona, España. Para cualquier consulta sobre privacidad puedes escribir a info@wonlyspain.com."
   },
   {
     id: "datos-recopilados",
     title: "2. Datos que Recopilamos",
     icon: <Fingerprint size={24} className="text-[#D4A868]"/>,
-    content: "Recopilamos los datos que usted facilita en el formulario (nombre, empresa, email, asunto y mensaje), los necesarios para prestar un servicio contratado y, solo si acepta la analítica, datos técnicos de navegación como página visitada, referencia, dispositivo y agente de usuario."
+    content: "Recopilamos los datos que nos facilitas en el formulario (nombre, empresa, email, asunto y mensaje), los necesarios para prestar un servicio contratado y, solo si aceptas la analítica, datos técnicos de navegación como página visitada, referencia, dispositivo y agente de usuario."
   },
   {
     id: "finalidad",
     title: "3. Finalidad del Tratamiento",
     icon: <Target size={24} className="text-[#D4A868]"/>,
-    content: "Utilizamos su información para: gestionar la contratación de nuestros productos (puertas de seguridad, cerraduras, gabinetes), responder a consultas de soporte o ventas, mejorar la experiencia de usuario en nuestra plataforma y, si lo ha consentido expresamente, enviarle comunicaciones comerciales sobre innovaciones y ofertas."
+    content: "Utilizamos tu información para: gestionar la contratación de nuestros productos (puertas de seguridad, cerraduras, gabinetes), responder a consultas de soporte o ventas, mejorar la experiencia de usuario en nuestra plataforma y, si lo has consentido expresamente, enviarte comunicaciones comerciales sobre innovaciones y ofertas."
   },
   {
     id: "legitimacion",
     title: "4. Legitimación",
     icon: <ShieldAlert size={24} className="text-[#D4A868]"/>,
-    content: "La base legal depende de cada tratamiento: la aplicación de medidas precontractuales solicitadas por usted al pedir información o presupuesto, la ejecución de un contrato, el consentimiento para las comunicaciones o mediciones que lo requieran, y el interés legítimo en mantener la seguridad del sitio."
+    content: "La base legal depende de cada tratamiento: la aplicación de medidas precontractuales que solicitas al pedir información o presupuesto, la ejecución de un contrato, el consentimiento para las comunicaciones o mediciones que lo requieran, y el interés legítimo en mantener la seguridad del sitio."
   },
   {
     id: "destinatarios",
@@ -51,7 +51,7 @@ const privacySections = [
     id: "derechos",
     title: "6. Derechos del Usuario",
     icon: <UserCheck size={24} className="text-[#D4A868]"/>,
-    content: "Usted puede acceder, rectificar y suprimir sus datos, limitar u oponerse al tratamiento, solicitar la portabilidad y retirar un consentimiento sin afectar a la licitud previa. Puede ejercerlos en info@wonlyspain.com y reclamar ante la Agencia Española de Protección de Datos (www.aepd.es). Solo pediremos la información imprescindible para verificar su identidad."
+    content: "Puedes acceder a tus datos, rectificarlos y suprimirlos, limitar u oponerse al tratamiento, solicitar la portabilidad y retirar un consentimiento sin afectar a la licitud previa. Puedes ejercerlos en info@wonlyspain.com y reclamar ante la Agencia Española de Protección de Datos (www.aepd.es). Solo pediremos la información imprescindible para verificar tu identidad."
   },
   {
     id: "retencion",
