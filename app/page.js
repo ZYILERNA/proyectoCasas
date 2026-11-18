@@ -24,6 +24,7 @@ import CertificateShowcase from "../components/home/CertificateShowcase";
 import DoorHeroExperience from "../components/home/DoorHeroExperience";
 import PartnerMarquee from "../components/home/PartnerMarquee";
 import PatentCarousel from "../components/home/PatentCarousel";
+import TradeFairCarousel from "../components/home/TradeFairCarousel";
 import { wonlyMilestones } from "../lib/wonly-milestones";
 
 export const metadata = {
@@ -466,22 +467,7 @@ function TradeFairBanner() {
         className="absolute -left-40 top-1/2 h-[520px] w-[520px] -translate-y-1/2 rounded-full bg-[#D4A868]/10 blur-[140px]"
       />
       <div className="container relative mx-auto grid items-center gap-10 px-6 lg:grid-cols-[1.15fr_.85fr]">
-        <a
-          href="https://www.ifema.es/smart-doors"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="SMART DOORS 2026 en la web de IFEMA (se abre en una pestaña nueva)"
-          className="group relative block overflow-hidden rounded-[1.75rem] border border-white/10 bg-zinc-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A868]"
-        >
-          <Image
-            src="/images/COMPANY/CAMPANA/smart-doors-2026.webp"
-            alt="Cartel de WONLY en SMART DOORS, IFEMA Madrid, del 10 al 13 de noviembre de 2026"
-            width={1536}
-            height={1024}
-            className="h-auto w-full transition duration-700 group-hover:scale-[1.02]"
-            sizes="(max-width: 1024px) 100vw, 55vw"
-          />
-        </a>
+        <TradeFairCarousel />
 
         <div>
           <p className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.24em] text-[#D4A868]">
