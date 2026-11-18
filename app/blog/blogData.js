@@ -28,6 +28,36 @@ export const TIPOS = {
 
 export const blogPosts = [
   {
+    slug: "tiana",
+    title: "Instalación de Puerta de Seguridad en Tiana",
+    location: "Tiana, Barcelona",
+    tipo: TIPOS.PUERTA,
+    cover: `${BASE}/TIANA/instalacion1.webp`,
+    excerpt: "Este proyecto aún está en desarrollo.",
+    description: "Este proyecto aún está en desarrollo.",
+    media: [
+      { type: "image", src: `${BASE}/TIANA/instalacion1.webp`, alt: "Puerta de seguridad WONLY en color antracita recién instalada en una vivienda de Tiana" },
+      { type: "image", src: `${BASE}/TIANA/instalacion2.webp`, alt: "Puerta de seguridad abierta vista desde el interior durante la obra en Tiana" },
+      { type: "image", src: `${BASE}/TIANA/instalacion3.webp`, alt: "Vista exterior de la puerta de seguridad durante la instalación en Tiana" },
+      { type: "image", zona: true, src: `${BASE}/TIANA/zona1.webp`, alt: "Vivienda unifamiliar en reforma en Tiana" },
+    ],
+  },
+  {
+    slug: "castelldefels",
+    title: "Instalación de Puerta y Cerradura Inteligente en Castelldefels",
+    location: "Castelldefels, Barcelona",
+    tipo: TIPOS.PUERTA,
+    cover: `${BASE}/CASTELLDEFELS-PUERTA-CERRADURA/despues1.webp`,
+    excerpt:
+      "Nueva puerta de entrada con acabado en madera clara y cerradura inteligente negra en una vivienda de Castelldefels.",
+    description:
+      "Instalación de una puerta de entrada y una cerradura inteligente WONLY en una vivienda de Castelldefels. La puerta, con acabado en madera clara, combina con el resto de puertas del rellano, y la cerradura inteligente negra integra la manilla y la apertura sin llave. Mostramos el resultado desde el rellano de la comunidad y desde el recibidor de la vivienda.",
+    media: [
+      { type: "image", src: `${BASE}/CASTELLDEFELS-PUERTA-CERRADURA/despues1.webp`, alt: "Puerta de entrada con acabado en madera clara y cerradura inteligente negra en un rellano de Castelldefels" },
+      { type: "image", src: `${BASE}/CASTELLDEFELS-PUERTA-CERRADURA/despues2.webp`, alt: "Vista interior desde el recibidor de la puerta con cerradura inteligente en Castelldefels" },
+    ],
+  },
+  {
     slug: "puerta-cerradura-inteligente-badalona",
     title: "Instalación de Puerta y Cerradura Inteligente en Badalona",
     location: "Badalona, Barcelona",
