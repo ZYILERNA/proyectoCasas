@@ -28,6 +28,21 @@ export const TIPOS = {
 
 export const blogPosts = [
   {
+    slug: "tiana",
+    title: "Instalación de Puerta de Seguridad en Tiana",
+    location: "Tiana, Barcelona",
+    tipo: TIPOS.PUERTA,
+    cover: `${BASE}/TIANA/instalacion1.webp`,
+    excerpt: "Este proyecto aún está en desarrollo.",
+    description: "Este proyecto aún está en desarrollo.",
+    media: [
+      { type: "image", src: `${BASE}/TIANA/instalacion1.webp`, alt: "Puerta de seguridad WONLY en color antracita recién instalada en una vivienda de Tiana" },
+      { type: "image", src: `${BASE}/TIANA/instalacion2.webp`, alt: "Puerta de seguridad abierta vista desde el interior durante la obra en Tiana" },
+      { type: "image", src: `${BASE}/TIANA/instalacion3.webp`, alt: "Vista exterior de la puerta de seguridad durante la instalación en Tiana" },
+      { type: "image", zona: true, src: `${BASE}/TIANA/zona1.webp`, alt: "Vivienda unifamiliar en reforma en Tiana" },
+    ],
+  },
+  {
     slug: "puerta-cerradura-inteligente-badalona",
     title: "Instalación de Puerta y Cerradura Inteligente en Badalona",
     location: "Badalona, Barcelona",
