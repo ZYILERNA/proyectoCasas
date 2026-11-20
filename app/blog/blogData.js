@@ -187,14 +187,17 @@ export const blogPosts = [
   },
   {
     slug: "canovelles",
-    title: "Instalación en Canovelles",
+    title: "Puerta de Seguridad de Doble Hoja en Canovelles",
     location: "Canovelles, Barcelona",
     tipo: TIPOS.PUERTA,
+    cover: `${BASE}/CANOVELLES/despues1.webp`,
     excerpt:
-      "Proyecto en curso en una nave de Canovelles: documentamos el estado previo antes de la instalación.",
+      "Instalación de una puerta de seguridad WONLY de doble hoja en acabado negro con cerradura inteligente: del estado previo al resultado final.",
     description:
-      "Reportaje del estado inicial de una nave en Canovelles antes de la instalación de la puerta de seguridad WONLY. El trabajo aún está en curso; próximamente añadiremos las fotografías y vídeos del resultado final.",
+      "Instalación de una puerta de seguridad WONLY de doble hoja en Canovelles. La puerta, en acabado negro con textura de líneas verticales, cubre todo el hueco de entrada e incorpora una cerradura inteligente en la hoja principal. Documentamos el estado previo del espacio con fotografías y vídeos, y mostramos el resultado final con la puerta cerrada y abierta.",
     media: [
+      { type: "image", src: `${BASE}/CANOVELLES/despues1.webp`, alt: "Puerta de seguridad WONLY de doble hoja en acabado negro con cerradura inteligente en Canovelles" },
+      { type: "image", src: `${BASE}/CANOVELLES/despues2.webp`, alt: "Puerta de seguridad de doble hoja abierta, con la cerradura inteligente y los cierres visibles, en Canovelles" },
       { type: "image", before: true, src: `${BASE}/CANOVELLES/antes1.webp`, alt: "Estado previo de la nave en Canovelles" },
       { type: "image", before: true, src: `${BASE}/CANOVELLES/antes2.webp`, alt: "Estado previo de la nave en Canovelles" },
       { type: "image", before: true, src: `${BASE}/CANOVELLES/antes3.webp`, alt: "Estado previo de la nave en Canovelles" },
@@ -208,8 +211,8 @@ export const blogPosts = [
       { type: "image", before: true, src: `${BASE}/CANOVELLES/antes11.webp`, alt: "Estado previo de la nave en Canovelles" },
       { type: "image", before: true, src: `${BASE}/CANOVELLES/antes12.webp`, alt: "Estado previo de la nave en Canovelles" },
       { type: "image", before: true, src: `${BASE}/CANOVELLES/antes13.webp`, alt: "Estado previo de la nave en Canovelles" },
-      { type: "video", src: `${BASE}/CANOVELLES/video1.mp4`, alt: "Vídeo del estado previo de la nave en Canovelles" },
-      { type: "video", src: `${BASE}/CANOVELLES/video2.mp4`, alt: "Vídeo del estado previo de la nave en Canovelles" },
+      { type: "video", before: true, src: `${BASE}/CANOVELLES/video1.mp4`, alt: "Vídeo del estado previo de la nave en Canovelles" },
+      { type: "video", before: true, src: `${BASE}/CANOVELLES/video2.mp4`, alt: "Vídeo del estado previo de la nave en Canovelles" },
     ],
   },
   {
