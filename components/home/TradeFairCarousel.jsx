@@ -1,37 +1,28 @@
 "use client";
 
-import Image from "next/image";
-import { ChevronLeft, ChevronRight, Volume2, VolumeX } from "lucide-react";
+import { ChevronLeft, ChevronRight, Pause, Volume2, VolumeX } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 // Carrusel del bloque de la feria SMART DOORS en la página principal.
-// - Avanza solo: las imágenes cada IMAGE_MS; los vídeos al terminar o, como
-//   mucho, a los VIDEO_MAX_MS.
+// - Avanza solo: cada vídeo al terminar o, como mucho, a los VIDEO_MAX_MS.
 // - Se detiene mientras el ratón está encima, mientras se toca con el dedo
 //   (y unos segundos después) o si tiene el foco del teclado.
 // - Solo se reproduce el vídeo visible, siempre en silencio salvo que el
 //   usuario active el sonido.
 
-const IMAGE_MS = 7000;
 const VIDEO_MAX_MS = 30000;
 const TOUCH_RESUME_MS = 5000;
 const SWIPE_PX = 50;
 
 const SLIDES = [
   {
-    type: "image",
-    src: "/images/COMPANY/CAMPANA/smart-doors-2026.webp",
-    alt: "Cartel de WONLY en SMART DOORS, IFEMA Madrid, del 10 al 13 de noviembre de 2026",
-    href: "https://www.ifema.es/smart-doors",
-  },
-  {
-    type: "video",
+    title: "Montaje del stand",
     src: "/videos/smart-doors-2026/stand-montaje.mp4",
     poster: "/videos/smart-doors-2026/stand-montaje-poster.webp",
     label: "Vídeo del montaje del stand de WONLY en SMART DOORS 2026",
   },
   {
-    type: "video",
+    title: "Recorrido por el stand",
     src: "/videos/smart-doors-2026/stand-recorrido.mp4",
     poster: "/videos/smart-doors-2026/stand-recorrido-poster.webp",
     label: "Vídeo del recorrido por el stand de WONLY en SMART DOORS 2026",
@@ -54,7 +45,6 @@ export default function TradeFairCarousel() {
   const [muted, setMuted] = useState(true);
 
   const paused = hovered || touched || focused;
-  const slide = SLIDES[current];
 
   const go = useCallback((direction) => {
     setCurrent((value) => (value + direction + SLIDES.length) % SLIDES.length);
@@ -102,10 +92,9 @@ export default function TradeFairCarousel() {
   // Avance automático
   useEffect(() => {
     if (paused || !inView || reducedMotion) return;
-    const delay = slide.type === "video" ? VIDEO_MAX_MS : IMAGE_MS;
-    const timer = setTimeout(() => go(1), delay);
+    const timer = setTimeout(() => go(1), VIDEO_MAX_MS);
     return () => clearTimeout(timer);
-  }, [current, paused, inView, reducedMotion, slide.type, go]);
+  }, [current, paused, inView, reducedMotion, go]);
 
   const handleVideoEnded = () => {
     if (!paused && !reducedMotion) go(1);
@@ -144,19 +133,22 @@ export default function TradeFairCarousel() {
       ref={rootRef}
       role="region"
       aria-roledescription="carrusel"
-      aria-label="SMART DOORS 2026: cartel y vídeos del stand de WONLY"
+      aria-label="SMART DOORS 2026: vídeos del stand de WONLY"
       className="group relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-zinc-900"
       onPointerEnter={handlePointerEnter}
       onPointerLeave={handlePointerLeave}
       onPointerDown={handlePointerDown}
       onPointerUp={handlePointerUp}
       onPointerCancel={() => (swipeStart.current = null)}
-      onFocus={() => setFocused(true)}
+      onFocus={(event) => {
+        // Solo pausa con el teclado; un clic con el ratón no deja el carrusel parado
+        if (event.target.matches(":focus-visible")) setFocused(true);
+      }}
       onBlur={(event) => {
         if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false);
       }}
     >
-      <div className="relative aspect-[3/2] touch-pan-y">
+      <div className="relative aspect-video touch-pan-y bg-black">
         {SLIDES.map((item, index) => {
           const active = index === current;
           return (
@@ -164,97 +156,104 @@ export default function TradeFairCarousel() {
               key={item.src}
               role="group"
               aria-roledescription="diapositiva"
-              aria-label={`${index + 1} de ${SLIDES.length}`}
+              aria-label={`${index + 1} de ${SLIDES.length}: ${item.title}`}
               aria-hidden={!active}
               className={`absolute inset-0 transition-opacity duration-700 ${
                 active ? "opacity-100" : "pointer-events-none opacity-0"
               }`}
             >
-              {item.type === "image" ? (
-                <a
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  tabIndex={active ? 0 : -1}
-                  aria-label="SMART DOORS 2026 en la web de IFEMA (se abre en una pestaña nueva)"
-                  className="block h-full w-full focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-[#D4A868]"
-                  draggable={false}
-                >
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    fill
-                    priority={index === 0}
-                    draggable={false}
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 55vw"
-                  />
-                </a>
-              ) : (
-                <video
-                  ref={(node) => {
-                    videoRefs.current[index] = node;
-                  }}
-                  src={loadVideos ? item.src : undefined}
-                  poster={item.poster}
-                  muted
-                  playsInline
-                  preload="none"
-                  onEnded={handleVideoEnded}
-                  aria-label={item.label}
-                  className="h-full w-full bg-black object-cover"
-                />
-              )}
+              <video
+                ref={(node) => {
+                  videoRefs.current[index] = node;
+                }}
+                src={loadVideos ? item.src : undefined}
+                poster={item.poster}
+                muted
+                playsInline
+                preload="none"
+                onEnded={handleVideoEnded}
+                aria-label={item.label}
+                className="h-full w-full bg-black object-cover"
+              />
             </div>
           );
         })}
+
+        {/* Flechas grandes a los lados */}
+        <ArrowButton side="left" label="Vídeo anterior" onClick={() => go(-1)}>
+          <ChevronLeft size={28} strokeWidth={2.5} aria-hidden="true" />
+        </ArrowButton>
+        <ArrowButton side="right" label="Vídeo siguiente" onClick={() => go(1)}>
+          <ChevronRight size={28} strokeWidth={2.5} aria-hidden="true" />
+        </ArrowButton>
+
+        {/* Aviso de pausa */}
+        <div
+          aria-hidden="true"
+          className={`pointer-events-none absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-black/70 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.12em] text-white backdrop-blur transition-opacity duration-300 ${
+            paused ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <Pause size={12} fill="currentColor" aria-hidden="true" />
+          En pausa
+        </div>
       </div>
 
-      {/* Controles */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-center justify-between gap-3 bg-gradient-to-t from-black/70 to-transparent p-4">
-        <div className="pointer-events-auto flex gap-2">
-          {SLIDES.map((item, index) => (
-            <button
-              key={item.src}
-              type="button"
-              onClick={() => setCurrent(index)}
-              aria-label={`Ir a la diapositiva ${index + 1}`}
-              aria-current={index === current}
-              className={`h-2 rounded-full transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D4A868] ${
-                index === current ? "w-8 bg-[#D4A868]" : "w-2 bg-white/50 hover:bg-white"
-              }`}
-            />
-          ))}
+      {/* Pestañas de los vídeos y sonido */}
+      <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/10 bg-black/60 p-3 sm:p-4">
+        <div className="flex flex-wrap gap-2">
+          {SLIDES.map((item, index) => {
+            const active = index === current;
+            return (
+              <button
+                key={item.src}
+                type="button"
+                onClick={() => setCurrent(index)}
+                aria-label={`Ver vídeo: ${item.title}`}
+                aria-current={active}
+                className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold uppercase tracking-[0.1em] transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D4A868] sm:text-sm ${
+                  active
+                    ? "bg-[#D4A868] text-black"
+                    : "border border-white/25 text-white hover:border-[#D4A868] hover:text-[#D4A868]"
+                }`}
+              >
+                <span
+                  aria-hidden="true"
+                  className={`grid h-5 w-5 place-items-center rounded-full text-[10px] ${
+                    active ? "bg-black text-[#D4A868]" : "bg-white/15"
+                  }`}
+                >
+                  {index + 1}
+                </span>
+                {item.title}
+              </button>
+            );
+          })}
         </div>
 
-        <div className="pointer-events-auto flex gap-2">
-          {slide.type === "video" && (
-            <ControlButton
-              label={muted ? "Activar sonido" : "Silenciar"}
-              onClick={() => setMuted((value) => !value)}
-            >
-              {muted ? <VolumeX size={18} aria-hidden="true" /> : <Volume2 size={18} aria-hidden="true" />}
-            </ControlButton>
-          )}
-          <ControlButton label="Diapositiva anterior" onClick={() => go(-1)}>
-            <ChevronLeft size={18} aria-hidden="true" />
-          </ControlButton>
-          <ControlButton label="Diapositiva siguiente" onClick={() => go(1)}>
-            <ChevronRight size={18} aria-hidden="true" />
-          </ControlButton>
-        </div>
+        <button
+          type="button"
+          onClick={() => setMuted((value) => !value)}
+          aria-pressed={!muted}
+          className="inline-flex items-center gap-2 rounded-full border border-white/25 px-4 py-2 text-xs font-bold uppercase tracking-[0.1em] text-white transition hover:border-[#D4A868] hover:text-[#D4A868] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D4A868] sm:text-sm"
+        >
+          {muted ? <VolumeX size={18} aria-hidden="true" /> : <Volume2 size={18} aria-hidden="true" />}
+          {muted ? "Activar sonido" : "Silenciar"}
+        </button>
       </div>
     </div>
   );
 }
 
-function ControlButton({ label, onClick, children }) {
+function ArrowButton({ side, label, onClick, children }) {
   return (
     <button
       type="button"
       onClick={onClick}
       aria-label={label}
-      className="grid h-10 w-10 place-items-center rounded-full border border-white/20 bg-black/50 text-white backdrop-blur transition hover:border-[#D4A868] hover:text-[#D4A868] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D4A868]"
+      className={`absolute top-1/2 grid h-12 w-12 -translate-y-1/2 place-items-center rounded-full bg-[#D4A868] text-black shadow-lg shadow-black/40 transition hover:scale-110 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:h-14 sm:w-14 ${
+        side === "left" ? "left-3 sm:left-4" : "right-3 sm:right-4"
+      }`}
     >
       {children}
     </button>

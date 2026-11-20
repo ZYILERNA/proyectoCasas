@@ -471,27 +471,30 @@ function TradeFairBanner() {
 
         <div>
           <p className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.24em] text-[#D4A868]">
-            <span className="h-2 w-2 animate-pulse rounded-full bg-[#D4A868]" aria-hidden="true" />
-            Próximo evento
+            <span className="h-2 w-2 rounded-full bg-[#D4A868]" aria-hidden="true" />
+            Feria celebrada
           </p>
           <h2
             id="trade-fair-title"
             className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-[-0.04em] md:text-5xl"
           >
-            Visítanos en SMART DOORS 2026
+            Así fue nuestro stand en SMART DOORS 2026
           </h2>
           <p className="mt-5 text-lg leading-8 text-zinc-400">
-            Estaremos con stand propio en la Semana Internacional de la
-            Construcción. Ven a ver nuestras puertas y cerraduras de cerca y
-            habla con nuestro equipo.
+            Por primera vez, WONLY expuso en España con stand propio en la
+            Semana Internacional de la Construcción. Durante cuatro días
+            mostramos nuestras puertas de seguridad y cerraduras inteligentes,
+            con demostraciones en directo de funciones como el reconocimiento
+            facial. En los vídeos puedes ver el montaje del stand
+            y un recorrido completo por él.
           </p>
 
           <dl className="mt-7 grid gap-4 sm:grid-cols-2">
             <div className="flex items-start gap-3 border-t border-white/10 pt-4">
               <CalendarDays size={20} className="mt-0.5 shrink-0 text-[#D4A868]" aria-hidden="true" />
               <div>
-                <dt className="text-xs uppercase tracking-[0.14em] text-zinc-500">Fechas</dt>
-                <dd className="mt-1 font-semibold">10 – 13 noviembre 2026</dd>
+                <dt className="text-xs uppercase tracking-[0.14em] text-zinc-500">Se celebró</dt>
+                <dd className="mt-1 font-semibold">Del 10 al 13 de noviembre de 2026</dd>
               </div>
             </div>
             <div className="flex items-start gap-3 border-t border-white/10 pt-4">
@@ -504,20 +507,18 @@ function TradeFairBanner() {
           </dl>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="https://www.ifema.es/smart-doors"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/puertas"
               className="group inline-flex items-center gap-2 rounded-full bg-[#D4A868] px-6 py-3 text-sm font-bold uppercase tracking-[0.12em] text-black transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D4A868]"
             >
-              Más información
+              Ver nuestras puertas
               <ArrowRight size={16} aria-hidden="true" className="transition-transform group-hover:translate-x-1" />
-            </a>
+            </Link>
             <Link
               href="/contacto"
               className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-bold uppercase tracking-[0.12em] text-white transition hover:border-[#D4A868] hover:text-[#D4A868]"
             >
-              Concertar reunión
+              Contactar
             </Link>
           </div>
         </div>
